@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "test_kind": "synthetic_adapter_smoke",
+  "physical_measurements": 0,
+  "no_instrument_data": true,
+  "identity_mismatch_rejected": true,
+  "comparison": {
+    "schema_version": 1,
+    "candidate_id": "SYNTHETIC_ADAPTER_CONTROL",
+    "scalar_deltas_measurement_minus_simulation": {
+      "operating_point": {
+        "current_a": 0.001
+      }
+    },
+    "configuration_must_be_reviewed_for_equivalence": true,
+    "automatic_model_or_qualification_change": false
+  },
+  "adapter_sha256": "717980cd7012e7bf717b54b36076340d8e5987df890007fc9e9824cbd6ea2f08"
+}

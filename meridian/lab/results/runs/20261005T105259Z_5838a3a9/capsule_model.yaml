@@ -1,0 +1,40 @@
+schema_version: 1
+model_revision: electrical-first-order-r1
+identity: {manufacturer: Arienne Audio, product: Flat K47, variant: Cardioid/Omni, reference: K47FRB, source: S01, status: manufacturer_specification}
+known:
+  pattern_options: {value: [cardioid, omni], status: manufacturer_specification, source: S01}
+  tuning: {value: modified_K47_with_restrained_upper_mid_response, status: manufacturer_claim, source: S01}
+  current_manufacturing_revision: {value: reproduced_at_new_facility, status: manufacturer_claim, source: S01}
+parameters:
+  front_capacitance_f: {nominal: 7.0e-11, range: [4.5e-11, 1.0e-10], status: assumed, rationale: Broad exploratory bracket around an uncalibrated historical community estimate; not a production tolerance., context_source: S04}
+  rear_capacitance_f: {nominal: 7.0e-11, range: [4.5e-11, 1.0e-10], status: assumed, rationale: No confirmed current per-side capacitance or correlation; sweep independently and correlated.}
+  historical_combined_capacitance_f: {range: [1.2e-10, 1.5e-10], status: third_party_estimate, source: S04, measured: false}
+  reference_polarization_v: {nominal: 60, status: assumed, rationale: Simulation normalization only; historical K47 practice does not establish this capsule rating.}
+  polarization_simulation_v: {nominal: 40, range: [20, 70], status: assumed, physical_use_authorized_by_model: false}
+  maximum_safe_polarization_v: {value: null, status: unknown, action: Obtain applicable manufacturer limit or qualified characterization before physical bias.}
+  sensitivity_at_reference_v_per_pa: {nominal: 0.020, range: [0.005, 0.040], status: assumed, rationale: Deliberately broad scenario envelope, not measurement or probability distribution.}
+  leakage_resistance_ohm: {nominal: 1.0e12, range: [1.0e9, 1.0e14], status: assumed, rationale: Humidity/contamination stress envelope; measured leakage need not have Johnson-only behavior.}
+  parasitic_to_case_f: {nominal: 2.0e-12, range: [5.0e-13, 1.0e-11], status: assumed, rationale: Lead/mount/layout exploration; no measured drawing.}
+  front_rear_stray_f: {nominal: 5.0e-13, range: [0, 5.0e-12], status: assumed}
+  front_rear_correlation: {value: null, status: unknown}
+  sensitivity_temperature_law: {value: null, status: unknown}
+unknown:
+  - current lead assignments and electrode isolation
+  - diaphragm gap, tension, damping and active diameter
+  - capacitance versus polarization and electrostatic spring softening
+  - mechanical resonance and frequency/angle transfer
+  - intrinsic acoustic/Brownian noise and pressure overload
+  - leakage excess noise, humidity and contamination dependence
+  - production distributions and parameter correlations
+electrical_model:
+  law: Q=C0*(1+k*p)*V_electrode; I=dQ/dt; k=Sref/Vref
+  pressure_port: One volt represents one pascal; distinct front/rear pressure ports, no inferred polar acoustics.
+  linearity_domain: abs(k*p_peak) <= 0.05 is a conservative assumed screening limit, not a capsule mechanical limit.
+  linearized_mode: Q=C0*V_electrode-C0*k*Vpol_dc*p; isolates electronics distortion using the measured simulated DC polarization.
+  limitations: Imposed linear mechanical compliance; no acoustic resistance, diaphragm thermal noise, pull-in, electromechanical back-action or real mechanical distortion. High-SPL claims remain unqualified.
+measurements_to_reduce_uncertainty:
+  - Electrode/lead continuity and isolation without stressing diaphragm.
+  - Front/rear capacitance with known fixture parasitics; frequency and bias dependence where safe.
+  - Sensitivity and spectra at a manufacturer-approved bias with calibrated acoustic pressure and de-embedded fixture.
+  - Leakage after settling at controlled humidity and temperature, and leakage noise spectrum.
+  - Acoustic noise/overload and angular response with the intended headbasket.

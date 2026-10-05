@@ -1,0 +1,18 @@
+# Local agent configuration and operating-system files.
+.agents/
+.aws/
+.codex/
+.DS_Store
+Thumbs.db
+
+# Local credentials must never be committed.
+.env
+.env.*
+!.env.example
+
+# Downloaded runtime packages; bootstrap instructions and checksums are retained.
+/meridian/lab/.tools/
+
+# Temporary synchronization and pytest aliases, not experiment evidence.
+/meridian/lab/results/archive.lock
+/meridian/lab/results/verification/**/raw_tests/*current

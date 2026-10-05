@@ -1,0 +1,29 @@
+id: fixture_0001
+kind: infrastructure_fixture
+family: ideal_voltage_control
+parents: []
+hypothesis: A physical charge-based capsule and loaded P48 interface can be measured by the harness and compared with analytic limits.
+structural_changes: Initial control, no production topology.
+eligible: false
+ideal_devices: true
+device_models: []
+qualification_evidence: []
+parameters:
+  BIAS_R: {default: 1.0e+9, range: [1.0e+8, 1.0e+11], scale: log, provenance: assumed_fixture_value}
+  INPUT_C: {default: 2.0e-12, range: [5.0e-13, 1.0e-11], scale: log, provenance: assumed_fixture_value}
+  GAIN: {default: 1, range: [0.5, 2], scale: linear, provenance: ideal_fixture_control}
+  OUTPUT_R: {default: 75, range: [20, 200], scale: log, provenance: analytic_output_test}
+  OUTPUT_C: {default: 4.7e-5, range: [1.0e-5, 1.0e-4], scale: log, provenance: assumed_fixture_value}
+  HARVEST_R: {default: 100, range: [50, 200], scale: log, provenance: assumed_fixture_value}
+  POWER_R: {default: 14000, range: [7000, 28000], scale: log, provenance: passive_current_test}
+  STORAGE_C: {default: 1.0e-5, range: [1.0e-6, 1.0e-4], scale: log, provenance: assumed_fixture_value}
+  POLAR_R: {default: 1.0e+8, range: [1.0e+7, 1.0e+9], scale: log, provenance: assumed_fixture_value}
+niche: {input_device: ideal, sensing: voltage, reference: single_ended, feedback: none, bias: resistor, active_device_count: 0, servo: false, output: ideal_differential, common_mode: open_loop, bootstrap: false}
+noise_groups:
+  bias: [onoise_r.xdut.rbias]
+  polarization: [onoise_r.xdut.rpolar]
+  power: [onoise_r.xdut.rpower, onoise_r.xdut.rharvest]
+  output: [onoise_r.xdut.rout]
+  capsule_leakage_surrogate: [onoise_r.xcap.rfront, onoise_r.xcap.rrear]
+dc_probes: [v(rail), v(b), v(f), i(vp)]
+loop_probes: []

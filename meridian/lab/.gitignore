@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+tools/cache/
+tools/ngspice/
+tools/downloads/
+tools/config/
+# Keep compact results, decks, logs, parameters, and source/spec snapshots in Git.
+# Raw waveforms remain on disk, including failed experiments; see results/README.md.
+results/**/*.raw
+tools/probe-*.raw

@@ -1,0 +1,11 @@
+# Mandatory patent constraint and separate screening track
+
+The owner requires the repository and project implementations to avoid infringement of third-party patents. Follow the [canonical repository policy](../../../../PATENTS.md). Phase 8 candidate-level screening has not been executed; there is no freedom-to-operate or patent-safety conclusion.
+
+Record early feature flags as candidates become concrete. Before prototype selection, manufacture or publishing implementation/build guidance, search features of promising candidates in DPMA/DEPATISnet, EPO Espacenet/register, WIPO PATENTSCOPE and USPTO sources as applicable. Inspect relevant granted/amended claims, pending applications, earliest priority, family members, rights territory, current official status and term/expiry evidence. Map claim elements to a specific candidate/netlist version and intended activities. Start with Germany and relevant European rights; add territories according to intended use/manufacture/distribution. EP and WO publication coverage is a family-search route, not worldwide clearance.
+
+Record search scope/limits, evidence dates and ambiguous cases for professional review. Place credible unresolved potentially blocking risks on hold for the affected implementation gates, and investigate evidence-backed alternatives or applicable documented resolutions. A schematic redraw or component-value change does not itself resolve a claim risk. Preserve failed experiments, engineering metrics and relevant prior art. No patent-holder contact, licence acceptance or payment is authorized by this task.
+
+Queries to prepare: capsule bootstrapping/guarding, floating/differential capsule sensing, DC bias servos, charge feedback, carrier bridge/demodulation, common-mode power extraction, impedance-balanced output. Dates/status must be freshly verified when screening actually occurs. Keep engineering results even when a feature awaits review.
+
+Use `register.yaml` for the index and candidate-linked reports/claim mappings for evidence. Record exact scoped screening states; do not use “patent safe” or a no-results search as legal clearance. The policy is currently an agent/review requirement, not a legal decision automated by the simulator.

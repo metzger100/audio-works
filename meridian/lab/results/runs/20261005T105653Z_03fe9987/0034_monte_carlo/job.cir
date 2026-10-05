@@ -1,0 +1,74 @@
+Meridian research monte_carlo
+.param CF=7.699902674579117e-11
+.param CR=6.111423019223939e-11
+.param SREF=0.03044640034071765
+.param VREF=60
+.param LEAK=229103957965.6499
+.param PAR=5.232428436314213e-12
+.param CROSS=5e-13
+.param LIN=0
+.param POLDC=60
+.param VS=49.08630149909947
+.param FT=-0.003131281695353622
+.param FM=0.003963593667125745
+.param LEN=87.99828146578929
+.param RW=0.1
+.param RS=0.05
+.param CD=6e-11
+.param CS=8e-11
+.param ZIN=7207.887666841225
+.param ZM=-0.008242799525997269
+.param CC=2.2e-05
+.param CP=2e-10
+.param START=0
+.param CMAC=0
+.param PRESSURE_AC=1
+.param PRESSURE_PEAK=0
+.param FREQ=1000
+.param BIAS_R=1000000000
+.param INPUT_C=2e-12
+.param GAIN=1
+.param OUTPUT_R=75
+.param OUTPUT_C=4.7e-05
+.param HARVEST_R=100
+.param POWER_R=14000
+.param STORAGE_C=1e-05
+.param POLAR_R=100000000
+.temp 7.580077057606079
+.options reltol=1e-6 abstol=1e-15 vntol=1e-9 gmin=1e-15
+.include "/home/leobareth/Dokumente/Audiotech/meridian/lab/models/capsule/flat_k47.cir"
+.include "/home/leobareth/Dokumente/Audiotech/meridian/lab/models/environment/p48.cir"
+VP pressure mic_g DC 0 AC {PRESSURE_AC} SIN(0 {PRESSURE_PEAK} {FREQ})
+VPR pressure_r mic_g DC 0 AC 0
+Xenv p n mic_g pp pn cm P48 VS={VS} FT={FT} FM={FM} LEN={LEN} RW={RW} RS={RS} CD={CD} CS={CS} ZIN={ZIN} ZM={ZM} CC={CC} CP={CP} START={START} CMAC={CMAC}
+Xcap f b rear pressure pressure_r mic_g FLAT_K47 CF={CF} CR={CR} SREF={SREF} VREF={VREF} LEAK={LEAK} PAR={PAR} CROSS={CROSS} LIN={LIN} POLDC={POLDC}
+* Infrastructure control: ideal noiseless voltage buffers, NEVER a microphone candidate.
+.subckt DUT f b rear p n g rail
+Rharvestp p rail {HARVEST_R}
+Rharvestn n rail {HARVEST_R}
+Rpower rail g {POWER_R}
+Cstorage rail g {STORAGE_C}
+Rpolar rail b {POLAR_R}
+Rbias f g {BIAS_R}
+Cinput f g {INPUT_C}
+Rrear rear g 1k
+Edrivep dp g VOL='v(rail,g)/2+GAIN*v(f,g)/2'
+Edriven dn g VOL='v(rail,g)/2-GAIN*v(f,g)/2'
+Routp dp cp {OUTPUT_R}
+Routn dn cn {OUTPUT_R}
+Coutp cp p {OUTPUT_C}
+Coutn cn n {OUTPUT_C}
+.ends DUT
+
+Xdut f b rear p n mic_g rail DUT
+
+.control
+set filetype=ascii
+set numdgt=16
+op
+write op.raw all
+ac dec 32 1 10Meg
+write ac.raw all
+quit
+.endc
+.end

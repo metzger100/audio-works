@@ -1,0 +1,640 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20261005T110607Z_88e36da3",
+  "timestamp_utc": "2026-10-05T11:06:07.271913+00:00",
+  "backend": "ngspice",
+  "candidate_id": "fixture_0001",
+  "parent_candidates": [],
+  "parent_experiments": [],
+  "hypothesis": "A physical charge-based capsule and loaded P48 interface can be measured by the harness and compared with analytic limits.",
+  "structural_changes": "Initial control, no production topology.",
+  "numerical_optimization": {
+    "performed": false
+  },
+  "simulation_configuration": {
+    "CF": 7e-11,
+    "CR": 7e-11,
+    "SREF": 0.02,
+    "VREF": 60,
+    "LEAK": 1000000000000.0,
+    "PAR": 2e-12,
+    "CROSS": 5e-13,
+    "LIN": 0,
+    "POLDC": 60,
+    "VS": 48,
+    "FT": 0,
+    "FM": 0,
+    "LEN": 10,
+    "RW": 0.1,
+    "RS": 0.05,
+    "CD": 6e-11,
+    "CS": 8e-11,
+    "ZIN": 2000,
+    "ZM": 0,
+    "CC": 2.2e-05,
+    "CP": 2e-10,
+    "TEMP": 25,
+    "START": 0,
+    "CMAC": 0,
+    "PRESSURE_AC": 1,
+    "PRESSURE_PEAK": 0,
+    "FREQ": 1000,
+    "BIAS_R": 1000000000.0,
+    "INPUT_C": 2e-12,
+    "GAIN": 1,
+    "OUTPUT_R": 75,
+    "OUTPUT_C": 4.7e-05,
+    "HARVEST_R": 100,
+    "POWER_R": 14000,
+    "STORAGE_C": 1e-05,
+    "POLAR_R": 100000000.0
+  },
+  "rng_seed": 34047,
+  "scenario_samples": 1,
+  "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+  "suite_sha256": "7523e4538d8508686a4453f3914f3d521211e446d1a5d2926e8eba746d3f70aa",
+  "source_manifest": {
+    "models/capsule/flat_k47.cir": "a977702eae58c5345e129bb282ce75f98e4405872e891e603512d37c480758fe",
+    "models/capsule/flat_k47_native_q_r1.cir": "79b97ea73165979525f08aca427d8bfaa42fa8814ae576b140bf97550fb61c18",
+    "models/environment/p48.cir": "8037de103d579dc4923b37e2ae0b2c78a7337b39385f05055d7e08aa94a53d6f",
+    "models/semiconductor/registry.yaml": "d6117176fc098753352fdfbbb2084562c1fe673b008dd06f43253a2be2b642e6",
+    "optimization/optimize_bias.py": "90cf1a61c2aaad14c39c3c6c544bc8bae21fb556303381d44c4ffc8bef498733",
+    "optimization/optimize_values.py": "b68fb67a1e18767b74db432dfed94f50537d47b8edc0332adda5b522ea5b6959",
+    "requirements.txt": "f2162d13822ff575becaab0e43a96dcce42f33a9e3cd4aacbc88d3ae1e4ff3c3",
+    "spec/capsule_model.yaml": "169983f2601ee39a59496e0e4d2d337deb14e7e4ec7bf38a92f6ca89b59bc696",
+    "spec/design_constraints.yaml": "48d03f7b8d6302aeca14efda4de5c12cf491c393e212e6842f04da60c344dc43",
+    "spec/lock.yaml": "0a5ac00e5d73b720b0c0926c6987ab6b8cb2dca6ac3d1513039db9f3a05c8d07",
+    "spec/microphone_spec.yaml": "ea5a6f973f17f907c5b76f9d17a35cfa784903bcfcd8d7f1d08cd538b65636cd",
+    "spec/scoring.yaml": "6aa6b8620a4700220ac952472f150396599ca67a2918f6f114e1b283a158c0af",
+    "src/meridian_lab/__init__.py": "70778163075ec49235b8cf725bce58f9cef39892880a46ccc9fa58a9aeb98f52",
+    "src/meridian_lab/archive.py": "c910df0ac4dfb2b44482bd6985abe127d0cf068c560347db1dd5fdbdec1978c5",
+    "src/meridian_lab/cli.py": "6e7c3b8a8c279c6e65de5460a3acd34044f5305eade966ef99a0c4d6b5cf8336",
+    "src/meridian_lab/core.py": "e23e835f1f51742acb69b76ade095366d10407e881f931c89e09a0256695815b",
+    "src/meridian_lab/metrics.py": "4534af7117fad89bb1af7132e59d8dd909d8010f41fc6bdcce7410c4b145cae4",
+    "src/meridian_lab/qualification.py": "16e01c485561929ad87e5dd54dab3bd36ad833637d8d627135a77add3eccb329",
+    "tests/test_integrity.py": "0146d550c447b9e58c676d66efc56278d45fd1b5a7bc110a00b2c6c930da1dbb",
+    "tests/test_physics.py": "770d36a7b77b17fc5d26453519fe16b5a741719faf71a3aff9f3b1ed8fecac40",
+    "tools/ngspice-run": "00e7fe15ef1c60075238f43644858f26ed131f26fedd5e414fd1c27a427d12e8"
+  },
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.8",
+    "yaml": "6.0.3",
+    "ngspice": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Wed Aug 19 09:38:31 UTC 2026\n******"
+  },
+  "topology": {
+    "id": "fixture_0001",
+    "kind": "infrastructure_fixture",
+    "family": "ideal_voltage_control",
+    "parents": [],
+    "hypothesis": "A physical charge-based capsule and loaded P48 interface can be measured by the harness and compared with analytic limits.",
+    "structural_changes": "Initial control, no production topology.",
+    "eligible": false,
+    "ideal_devices": true,
+    "device_models": [],
+    "qualification_evidence": [],
+    "parameters": {
+      "BIAS_R": {
+        "default": 1000000000.0,
+        "range": [
+          100000000.0,
+          100000000000.0
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      },
+      "INPUT_C": {
+        "default": 2e-12,
+        "range": [
+          5e-13,
+          1e-11
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      },
+      "GAIN": {
+        "default": 1,
+        "range": [
+          0.5,
+          2
+        ],
+        "scale": "linear",
+        "provenance": "ideal_fixture_control"
+      },
+      "OUTPUT_R": {
+        "default": 75,
+        "range": [
+          20,
+          200
+        ],
+        "scale": "log",
+        "provenance": "analytic_output_test"
+      },
+      "OUTPUT_C": {
+        "default": 4.7e-05,
+        "range": [
+          1e-05,
+          0.0001
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      },
+      "HARVEST_R": {
+        "default": 100,
+        "range": [
+          50,
+          200
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      },
+      "POWER_R": {
+        "default": 14000,
+        "range": [
+          7000,
+          28000
+        ],
+        "scale": "log",
+        "provenance": "passive_current_test"
+      },
+      "STORAGE_C": {
+        "default": 1e-05,
+        "range": [
+          1e-06,
+          0.0001
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      },
+      "POLAR_R": {
+        "default": 100000000.0,
+        "range": [
+          10000000.0,
+          1000000000.0
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      }
+    },
+    "niche": {
+      "input_device": "ideal",
+      "sensing": "voltage",
+      "reference": "single_ended",
+      "feedback": "none",
+      "bias": "resistor",
+      "active_device_count": 0,
+      "servo": false,
+      "output": "ideal_differential",
+      "common_mode": "open_loop",
+      "bootstrap": false
+    },
+    "noise_groups": {
+      "bias": [
+        "onoise_r.xdut.rbias"
+      ],
+      "polarization": [
+        "onoise_r.xdut.rpolar"
+      ],
+      "power": [
+        "onoise_r.xdut.rpower",
+        "onoise_r.xdut.rharvest"
+      ],
+      "output": [
+        "onoise_r.xdut.rout"
+      ],
+      "capsule_leakage_surrogate": [
+        "onoise_r.xcap.rfront",
+        "onoise_r.xcap.rrear"
+      ]
+    },
+    "dc_probes": [
+      "v(rail)",
+      "v(b)",
+      "v(f)",
+      "i(vp)"
+    ],
+    "loop_probes": []
+  },
+  "checks": {
+    "operating_point": {
+      "status": "pass",
+      "metrics": {
+        "current_a": 0.002750558768983656,
+        "current_per_leg_a": [
+          0.0013752793844918282,
+          0.0013752793844918282
+        ],
+        "conductor_current_mismatch_fraction": 0.0,
+        "mic_terminal_v": [
+          38.64534962668659,
+          38.64534962668659
+        ],
+        "internal_rail_v": 38.50782168823766,
+        "polarization_dc_v": 38.46166384546057,
+        "supplied_power_w": 0.13202682091121548,
+        "terminal_power_w": 0.10629630529612207,
+        "device_power_qualification": "pending part ratings/SOA; ideal fixture energy not accounted",
+        "safe_capsule_bias": "unknown; simulated voltage is not approved for hardware"
+      },
+      "reason": null,
+      "coverage": "DC feasibility screen; device safe operating area remains a separate evidence gate"
+    },
+    "distortion": {
+      "status": "pass",
+      "metrics": {
+        "cases": [
+          {
+            "frequency_hz": 100,
+            "harmonics_v_rms": [
+              0.006023333191450434,
+              1.455586201417757e-09,
+              7.956483798336347e-10,
+              3.201052622647543e-10,
+              7.809285857526844e-10,
+              1.4493058218271709e-10,
+              7.638114569589149e-10,
+              7.726619957051854e-11,
+              7.437698647958144e-10,
+              4.0431270264966836e-11
+            ],
+            "harmonics_dbc": [
+              0.0,
+              -132.33597915354665,
+              -137.5823140968625,
+              -145.49088147935373,
+              -137.74451134437416,
+              -152.37353701701778,
+              -137.93701438457833,
+              -157.83694672258034,
+              -138.16796618943198,
+              -163.46239002898938
+            ],
+            "h2_percent": 2.4165792513086067e-05,
+            "h3_percent": 1.3209436611658544e-05,
+            "thd_percent": 3.572082697909375e-05,
+            "residual_v_rms": 1.229496644983879e-07,
+            "output_peak_v": 0.008518548943335646,
+            "method": "Settled coherent resampling; least-squares H1-H10; residual reported separately from THD",
+            "pressure_pa_rms": 1.0,
+            "pressure_spl_db": 93.97940008672037,
+            "settling_amplitude_fraction": 4.978182526871322e-06,
+            "capsule_mode": "linearized_at_actual_DC_bias",
+            "status": "pass"
+          },
+          {
+            "frequency_hz": 100,
+            "harmonics_v_rms": [
+              0.6774357934527497,
+              1.9112245440456586e-06,
+              3.2723769586900267e-07,
+              4.584666467298465e-07,
+              3.043773504596804e-07,
+              2.377183371838806e-07,
+              2.745630435270723e-07,
+              1.5722698236177264e-07,
+              2.389860569526946e-07,
+              1.2013605518771632e-07
+            ],
+            "harmonics_dbc": [
+              0.0,
+              -110.99112851159569,
+              -126.32009627048365,
+              -123.39120786378447,
+              -126.94911614627605,
+              -129.09610911679584,
+              -127.84452118494028,
+              -132.6868212089696,
+              -129.0499115146883,
+              -135.02389544655205
+            ],
+            "h2_percent": 0.00028212630075310065,
+            "h3_percent": 4.830534480635279e-05,
+            "thd_percent": 0.0003057765633055345,
+            "residual_v_rms": 1.4049091275606197e-05,
+            "output_peak_v": 0.9580690330194864,
+            "method": "Settled coherent resampling; least-squares H1-H10; residual reported separately from THD",
+            "pressure_pa_rms": 112.46826503806983,
+            "pressure_spl_db": 135.0,
+            "settling_amplitude_fraction": 6.232084609480992e-06,
+            "capsule_mode": "linearized_at_actual_DC_bias",
+            "status": "pass"
+          },
+          {
+            "frequency_hz": 1000,
+            "harmonics_v_rms": [
+              0.006178411201143082,
+              1.7477933194879453e-09,
+              1.2637899303157952e-09,
+              9.210580164805576e-10,
+              6.52742545873651e-10,
+              3.668163388688242e-10,
+              3.030466194180069e-10,
+              4.47255255218466e-10,
+              5.04328081538882e-10,
+              3.891703669790608e-10
+            ],
+            "harmonics_dbc": [
+              0.0,
+              -130.96773468309055,
+              -133.7840383706941,
+              -136.53179644742644,
+              -139.52269776351213,
+              -144.52856274501343,
+              -146.18734731011043,
+              -142.80642713970042,
+              -141.76327316721571,
+              -144.0147409056949
+            ],
+            "h2_percent": 2.8288717966272332e-05,
+            "h3_percent": 2.0454933949394277e-05,
+            "thd_percent": 4.207764683543434e-05,
+            "residual_v_rms": 1.3097197725144066e-07,
+            "output_peak_v": 0.008737924211889195,
+            "method": "Settled coherent resampling; least-squares H1-H10; residual reported separately from THD",
+            "pressure_pa_rms": 1.0,
+            "pressure_spl_db": 93.97940008672037,
+            "settling_amplitude_fraction": 1.3316318068223865e-06,
+            "capsule_mode": "linearized_at_actual_DC_bias",
+            "status": "pass"
+          },
+          {
+            "frequency_hz": 1000,
+            "harmonics_v_rms": [
+              0.6948753926736665,
+              4.226110042687512e-06,
+              4.260600220280988e-08,
+              8.783101001205903e-07,
+              4.494290368201188e-08,
+              3.9754806607651183e-07,
+              4.742846026372855e-08,
+              2.349830184247607e-07,
+              4.9375835751984384e-08,
+              1.5934721334561817e-07
+            ],
+            "harmonics_dbc": [
+              0.0,
+              -104.31932262221252,
+              -144.2487229396002,
+              -117.9651811103833,
+              -143.78491608947076,
+              -124.85034574696952,
+              -143.31735813386294,
+              -129.41740908651977,
+              -142.967849455104,
+              -132.79124919011159
+            ],
+            "h2_percent": 0.0006081824291441294,
+            "h3_percent": 6.131459345376314e-06,
+            "thd_percent": 0.0006252850979189585,
+            "residual_v_rms": 9.001591575792861e-06,
+            "output_peak_v": 0.9827252934154027,
+            "method": "Settled coherent resampling; least-squares H1-H10; residual reported separately from THD",
+            "pressure_pa_rms": 112.46826503806983,
+            "pressure_spl_db": 135.0,
+            "settling_amplitude_fraction": 9.812580762380563e-07,
+            "capsule_mode": "linearized_at_actual_DC_bias",
+            "status": "pass"
+          },
+          {
+            "frequency_hz": 10000,
+            "harmonics_v_rms": [
+              0.006179952666782024,
+              5.281282284709208e-09,
+              3.499711122994604e-10,
+              1.075931844123865e-09,
+              3.4909068738767765e-10,
+              4.741000261956927e-10,
+              3.49647033153726e-10,
+              2.7354660622026193e-10,
+              3.5068601101041427e-10,
+              1.8205421631943633e-10
+            ],
+            "harmonics_dbc": [
+              0.0,
+              -121.3649153521921,
+              -144.93905901911592,
+              -135.18400774695658,
+              -144.9609377075669,
+              -142.3023033891473,
+              -144.94710602565362,
+              -147.07907635475863,
+              -144.92133413413578,
+              -150.6156881452016
+            ],
+            "h2_percent": 8.54582966807614e-05,
+            "h3_percent": 5.6630063557055455e-06,
+            "thd_percent": 8.843948739784645e-05,
+            "residual_v_rms": 1.4282972715103892e-07,
+            "output_peak_v": 0.0087401014465558,
+            "method": "Settled coherent resampling; least-squares H1-H10; residual reported separately from THD",
+            "pressure_pa_rms": 1.0,
+            "pressure_spl_db": 93.97940008672037,
+            "settling_amplitude_fraction": 8.93419589309552e-07,
+            "capsule_mode": "linearized_at_actual_DC_bias",
+            "status": "pass"
+          },
+          {
+            "frequency_hz": 10000,
+            "harmonics_v_rms": [
+              0.6950458168396023,
+              3.5144845491006775e-07,
+              2.0080575444535223e-07,
+              1.487213327542503e-07,
+              1.4503473108560603e-07,
+              7.964441816377181e-08,
+              6.00640145130911e-08,
+              8.332286217984943e-08,
+              9.597191966580608e-08,
+              4.191201713159841e-08
+            ],
+            "harmonics_dbc": [
+              0.0,
+              -125.92303591032554,
+              -130.78474559465096,
+              -133.39280330373705,
+              -133.61082839633218,
+              -138.8171617990951,
+              -141.26798155969215,
+              -138.42498508219444,
+              -137.19738504107573,
+              -144.39349741809474
+            ],
+            "h2_percent": 5.0564789600218894e-05,
+            "h3_percent": 2.8891009711909786e-05,
+            "thd_percent": 6.972436196914911e-05,
+            "residual_v_rms": 1.466268197799311e-05,
+            "output_peak_v": 0.9829887854108216,
+            "method": "Settled coherent resampling; least-squares H1-H10; residual reported separately from THD",
+            "pressure_pa_rms": 112.46826503806983,
+            "pressure_spl_db": 135.0,
+            "settling_amplitude_fraction": 1.7019438508514284e-06,
+            "capsule_mode": "linearized_at_actual_DC_bias",
+            "status": "pass"
+          }
+        ],
+        "thd_percent": 0.0006252850979189585
+      },
+      "reason": null,
+      "coverage": "Electronics under linearized imposed capsule motion; nominal only. Device/environment distortion corners remain pending."
+    },
+    "headroom": {
+      "status": "pass",
+      "metrics": {
+        "headroom_lower_bound_pa_rms": 112.46826503806983,
+        "first_failure_upper_bound_pa_rms": null,
+        "right_censored": true,
+        "headroom_pa_rms": null,
+        "threshold_percent": 0.5,
+        "frequency_hz": 1000,
+        "system_max_spl_verified": false
+      },
+      "reason": null,
+      "coverage": "Bracketed electronics distortion boundary if a failure exists; otherwise lower bound only. Mechanical overload and device power pending."
+    }
+  },
+  "status": "incomplete",
+  "eligible": false,
+  "missing_qualification_evidence": [
+    "device_safe_operating_area",
+    "documented_semiconductor_models",
+    "loop_stability",
+    "model_uncertainty_coverage",
+    "physical_measurements",
+    "validated_noise_models"
+  ],
+  "failure_reasons": {},
+  "jobs": [
+    {
+      "folder": "results/runs/20261005T110607Z_88e36da3/0001_op_ac",
+      "status": "ok",
+      "netlist_sha256": "ad07ab99ed6473683c754033e6156281a3aaeb1bc3f5a788022189c2882397f0",
+      "files": {
+        "op.raw": "d851ba73503a6ccdcac4f232ed36ce00a2521f248d6ea53ce2149dca00b3c665",
+        "ac.raw": "710b9452499284cbd57461cfddf4238551c5f9c1042c601fddf4990ceb350764"
+      }
+    },
+    {
+      "folder": "results/runs/20261005T110607Z_88e36da3/0002_distortion",
+      "status": "ok",
+      "netlist_sha256": "60b25812ccf7cf05a3db295927c965e110d406497ebe6052b858747028a0901f",
+      "files": {
+        "tran.raw": "e1801cfc2bbcfb458c327e55bd7a0b23277b4fee5a0049bcd35d363d30a662cb"
+      }
+    },
+    {
+      "folder": "results/runs/20261005T110607Z_88e36da3/0003_distortion",
+      "status": "ok",
+      "netlist_sha256": "b71cf9d8c8a98ea66079694f490c90614746f17ee257810d95e5e1cf07a69ea8",
+      "files": {
+        "tran.raw": "a5a55c5ddd28aa9ed15e19d7c7ebde02a32bac0af395669bb0d26de44e2e929e"
+      }
+    },
+    {
+      "folder": "results/runs/20261005T110607Z_88e36da3/0004_distortion",
+      "status": "ok",
+      "netlist_sha256": "ca4cf71585612cf93f7817342c2e3a4a0f7b2731b6ccfa8d540120bab572b8e6",
+      "files": {
+        "tran.raw": "92cefb7639946b7fd1a82be9b9c324a18e43466a4b9d2d81afd4302cd0b2210e"
+      }
+    },
+    {
+      "folder": "results/runs/20261005T110607Z_88e36da3/0005_distortion",
+      "status": "ok",
+      "netlist_sha256": "e097999b48b8805a9eaf14a9e9eb1af46967fef70f3e0b60f4cff91dbf5b5ed4",
+      "files": {
+        "tran.raw": "0168772b54c9b55ed9f26c19e4fd0b8444f7c9fc5e89095e9188ed7bd4b97fb9"
+      }
+    },
+    {
+      "folder": "results/runs/20261005T110607Z_88e36da3/0006_distortion",
+      "status": "ok",
+      "netlist_sha256": "8bdc887ffb92bd9a3a7cb5ff8fd0363abc0dfec80d5e8413b6b288f6cd27073c",
+      "files": {
+        "tran.raw": "5b084ad82a50e850db945a735feee6e4ad377df1fdcee298abe66b6c640c16d2"
+      }
+    },
+    {
+      "folder": "results/runs/20261005T110607Z_88e36da3/0007_distortion",
+      "status": "ok",
+      "netlist_sha256": "381849d8736d622cf3acef251cc67b90ef293150c320a5adf0e0fcf510b0e7e1",
+      "files": {
+        "tran.raw": "d6fefd977fcbe2741ca291396f718c9bd020eb0b16c604c4109f56300b51ce17"
+      }
+    }
+  ],
+  "comparison_with_parent": null,
+  "useful_discovery": null,
+  "next_potential_experiment": "Resolve failed checks and missing evidence without changing acceptance thresholds.",
+  "result_file": "results/runs/20261005T110607Z_88e36da3/results.json",
+  "provenance": {
+    "timestamp": "2026-10-05T11:06:07.271913+00:00",
+    "instrument_or_simulator": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Wed Aug 19 09:38:31 UTC 2026\n******",
+    "configuration": {
+      "CF": 7e-11,
+      "CR": 7e-11,
+      "SREF": 0.02,
+      "VREF": 60,
+      "LEAK": 1000000000000.0,
+      "PAR": 2e-12,
+      "CROSS": 5e-13,
+      "LIN": 0,
+      "POLDC": 60,
+      "VS": 48,
+      "FT": 0,
+      "FM": 0,
+      "LEN": 10,
+      "RW": 0.1,
+      "RS": 0.05,
+      "CD": 6e-11,
+      "CS": 8e-11,
+      "ZIN": 2000,
+      "ZM": 0,
+      "CC": 2.2e-05,
+      "CP": 2e-10,
+      "TEMP": 25,
+      "START": 0,
+      "CMAC": 0,
+      "PRESSURE_AC": 1,
+      "PRESSURE_PEAK": 0,
+      "FREQ": 1000,
+      "BIAS_R": 1000000000.0,
+      "INPUT_C": 2e-12,
+      "GAIN": 1,
+      "OUTPUT_R": 75,
+      "OUTPUT_C": 4.7e-05,
+      "HARVEST_R": 100,
+      "POWER_R": 14000,
+      "STORAGE_C": 1e-05,
+      "POLAR_R": 100000000.0
+    },
+    "raw_data_hashes": {
+      "results/runs/20261005T110607Z_88e36da3/0001_op_ac": {
+        "op.raw": "d851ba73503a6ccdcac4f232ed36ce00a2521f248d6ea53ce2149dca00b3c665",
+        "ac.raw": "710b9452499284cbd57461cfddf4238551c5f9c1042c601fddf4990ceb350764"
+      },
+      "results/runs/20261005T110607Z_88e36da3/0002_distortion": {
+        "tran.raw": "e1801cfc2bbcfb458c327e55bd7a0b23277b4fee5a0049bcd35d363d30a662cb"
+      },
+      "results/runs/20261005T110607Z_88e36da3/0003_distortion": {
+        "tran.raw": "a5a55c5ddd28aa9ed15e19d7c7ebde02a32bac0af395669bb0d26de44e2e929e"
+      },
+      "results/runs/20261005T110607Z_88e36da3/0004_distortion": {
+        "tran.raw": "92cefb7639946b7fd1a82be9b9c324a18e43466a4b9d2d81afd4302cd0b2210e"
+      },
+      "results/runs/20261005T110607Z_88e36da3/0005_distortion": {
+        "tran.raw": "0168772b54c9b55ed9f26c19e4fd0b8444f7c9fc5e89095e9188ed7bd4b97fb9"
+      },
+      "results/runs/20261005T110607Z_88e36da3/0006_distortion": {
+        "tran.raw": "5b084ad82a50e850db945a735feee6e4ad377df1fdcee298abe66b6c640c16d2"
+      },
+      "results/runs/20261005T110607Z_88e36da3/0007_distortion": {
+        "tran.raw": "d6fefd977fcbe2741ca291396f718c9bd020eb0b16c604c4109f56300b51ce17"
+      }
+    },
+    "candidate_circuit_sha256": "8ef297bd47e54738c62b095ffa4e7eebc7ed20adae0744ce5573e1c8fe8645e3",
+    "source_snapshot": "source/"
+  }
+}

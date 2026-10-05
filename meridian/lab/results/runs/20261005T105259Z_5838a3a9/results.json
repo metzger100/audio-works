@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20261005T105259Z_5838a3a9",
+  "timestamp_utc": "2026-10-05T10:52:59.180510+00:00",
+  "backend": "ngspice",
+  "candidate_id": "fixture_0001",
+  "parent_candidates": [],
+  "parent_experiments": [],
+  "hypothesis": "A physical charge-based capsule and loaded P48 interface can be measured by the harness and compared with analytic limits.",
+  "structural_changes": "Initial control, no production topology.",
+  "numerical_optimization": {
+    "performed": false
+  },
+  "simulation_configuration": {
+    "CF": 7e-11,
+    "CR": 7e-11,
+    "SREF": 0.02,
+    "VREF": 60,
+    "LEAK": "1.0e12",
+    "PAR": 2e-12,
+    "CROSS": 5e-13,
+    "LIN": 0,
+    "POLDC": 60,
+    "VS": 48,
+    "FT": 0,
+    "FM": 0,
+    "LEN": 10,
+    "RW": 0.1,
+    "RS": 0.05,
+    "CD": 6e-11,
+    "CS": 8e-11,
+    "ZIN": 2000,
+    "ZM": 0,
+    "CC": 2.2e-05,
+    "CP": 2e-10,
+    "TEMP": 25,
+    "START": 0,
+    "CMAC": 0,
+    "PRESSURE_AC": 1,
+    "PRESSURE_PEAK": 0,
+    "FREQ": 1000,
+    "BIAS_R": "1.0e9",
+    "INPUT_C": 2e-12,
+    "GAIN": 1,
+    "OUTPUT_R": 75,
+    "OUTPUT_C": 4.7e-05,
+    "HARVEST_R": 100,
+    "POWER_R": 14000,
+    "STORAGE_C": 1e-05,
+    "POLAR_R": "1.0e8"
+  },
+  "rng_seed": 34047,
+  "scenario_samples": 1,
+  "spec_sha256": "24c916ea3f6c657c1149a5625057d3c77d3f761096e62aabf5bbd9eb9707ca06",
+  "suite_sha256": "9b38e7546204a286aefc305b3742e4b796809bc439af3ee61b63600d5c558499",
+  "source_manifest": {
+    "models/capsule/flat_k47.cir": "79b97ea73165979525f08aca427d8bfaa42fa8814ae576b140bf97550fb61c18",
+    "models/environment/p48.cir": "8037de103d579dc4923b37e2ae0b2c78a7337b39385f05055d7e08aa94a53d6f",
+    "models/semiconductor/registry.yaml": "d6117176fc098753352fdfbbb2084562c1fe673b008dd06f43253a2be2b642e6",
+    "requirements.txt": "f2162d13822ff575becaab0e43a96dcce42f33a9e3cd4aacbc88d3ae1e4ff3c3",
+    "spec/capsule_model.yaml": "3b0c1935362eaecd6f9748b38e59fc53f4acde879d08a4c2a5d0573402d14bd8",
+    "spec/design_constraints.yaml": "48d03f7b8d6302aeca14efda4de5c12cf491c393e212e6842f04da60c344dc43",
+    "spec/lock.yaml": "f92b884dd87b767ac7c6a93d6ec0f3781c57b6454f9a5148b3baf528a8e0a6c7",
+    "spec/microphone_spec.yaml": "ea5a6f973f17f907c5b76f9d17a35cfa784903bcfcd8d7f1d08cd538b65636cd",
+    "spec/scoring.yaml": "6aa6b8620a4700220ac952472f150396599ca67a2918f6f114e1b283a158c0af",
+    "src/meridian_lab/__init__.py": "70778163075ec49235b8cf725bce58f9cef39892880a46ccc9fa58a9aeb98f52",
+    "src/meridian_lab/archive.py": "c910df0ac4dfb2b44482bd6985abe127d0cf068c560347db1dd5fdbdec1978c5",
+    "src/meridian_lab/cli.py": "01443924c886db3b4d869b321c6dfc87040ee88b95e1a87637029635ff4ca4f5",
+    "src/meridian_lab/core.py": "05c376253d85d6a8c1f831ac756596b97abb1d65779c1c6de786b24b2d504240",
+    "src/meridian_lab/metrics.py": "4534af7117fad89bb1af7132e59d8dd909d8010f41fc6bdcce7410c4b145cae4",
+    "src/meridian_lab/qualification.py": "a493dc39cda7cc5c9aa8f57e7f0ddca3da3247ed59d8e78cf8444c9f83cd708a",
+    "tools/ngspice-run": "049efd878cfd2c43aead876843dd99bf3fc34ffea32c5f956643fa8b98bbd294"
+  },
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.8",
+    "yaml": "6.0.3",
+    "ngspice": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Wed Aug 19 09:38:31 UTC 2026\n******"
+  },
+  "topology": {
+    "id": "fixture_0001",
+    "kind": "infrastructure_fixture",
+    "family": "ideal_voltage_control",
+    "parents": [],
+    "hypothesis": "A physical charge-based capsule and loaded P48 interface can be measured by the harness and compared with analytic limits.",
+    "structural_changes": "Initial control, no production topology.",
+    "eligible": false,
+    "ideal_devices": true,
+    "device_models": [],
+    "qualification_evidence": [],
+    "parameters": {
+      "BIAS_R": {
+        "default": "1.0e9",
+        "range": [
+          "1.0e8",
+          "1.0e11"
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      },
+      "INPUT_C": {
+        "default": 2e-12,
+        "range": [
+          5e-13,
+          1e-11
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      },
+      "GAIN": {
+        "default": 1,
+        "range": [
+          0.5,
+          2
+        ],
+        "scale": "linear",
+        "provenance": "ideal_fixture_control"
+      },
+      "OUTPUT_R": {
+        "default": 75,
+        "range": [
+          20,
+          200
+        ],
+        "scale": "log",
+        "provenance": "analytic_output_test"
+      },
+      "OUTPUT_C": {
+        "default": 4.7e-05,
+        "range": [
+          1e-05,
+          0.0001
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      },
+      "HARVEST_R": {
+        "default": 100,
+        "range": [
+          50,
+          200
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      },
+      "POWER_R": {
+        "default": 14000,
+        "range": [
+          7000,
+          28000
+        ],
+        "scale": "log",
+        "provenance": "passive_current_test"
+      },
+      "STORAGE_C": {
+        "default": 1e-05,
+        "range": [
+          1e-06,
+          0.0001
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      },
+      "POLAR_R": {
+        "default": "1.0e8",
+        "range": [
+          "1.0e7",
+          "1.0e9"
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      }
+    },
+    "niche": {
+      "input_device": "ideal",
+      "sensing": "voltage",
+      "reference": "single_ended",
+      "feedback": "none",
+      "bias": "resistor",
+      "active_device_count": 0,
+      "servo": false,
+      "output": "ideal_differential",
+      "common_mode": "open_loop",
+      "bootstrap": false
+    },
+    "noise_groups": {
+      "bias": [
+        "onoise_r.xdut.rbias"
+      ],
+      "polarization": [
+        "onoise_r.xdut.rpolar"
+      ],
+      "power": [
+        "onoise_r.xdut.rpower",
+        "onoise_r.xdut.rharvest"
+      ],
+      "output": [
+        "onoise_r.xdut.rout"
+      ],
+      "capsule_leakage_surrogate": [
+        "onoise_r.xcap.rfront",
+        "onoise_r.xcap.rrear"
+      ]
+    },
+    "dc_probes": [
+      "v(rail)",
+      "v(b)",
+      "v(f)",
+      "i(vp)"
+    ],
+    "loop_probes": []
+  },
+  "checks": {
+    "operating_point": {
+      "status": "error",
+      "metrics": {},
+      "reason": "Unknown format code 'g' for object of type 'str'",
+      "coverage": null
+    },
+    "frequency_response": {
+      "status": "error",
+      "metrics": {},
+      "reason": "Unknown format code 'g' for object of type 'str'",
+      "coverage": null
+    },
+    "noise": {
+      "status": "error",
+      "metrics": {},
+      "reason": "Unknown format code 'g' for object of type 'str'",
+      "coverage": null
+    }
+  },
+  "status": "failed",
+  "eligible": false,
+  "missing_qualification_evidence": [
+    "device_safe_operating_area",
+    "documented_semiconductor_models",
+    "loop_stability",
+    "model_uncertainty_coverage",
+    "physical_measurements",
+    "validated_noise_models"
+  ],
+  "failure_reasons": {
+    "operating_point": "Unknown format code 'g' for object of type 'str'",
+    "frequency_response": "Unknown format code 'g' for object of type 'str'",
+    "noise": "Unknown format code 'g' for object of type 'str'"
+  },
+  "jobs": [],
+  "comparison_with_parent": null,
+  "useful_discovery": null,
+  "next_potential_experiment": "Resolve failed checks and missing evidence without changing acceptance thresholds.",
+  "result_file": "results/runs/20261005T105259Z_5838a3a9/results.json"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20261005T113001Z_optimization_47348f4b",
+  "candidate_id": "fixture_0001",
+  "status": "error",
+  "failure_reason": "Observed scipy ValueError: Some entries in x0 lay outside the specified bounds.",
+  "trials": 8,
+  "hypothesis": "Corner-seeded constrained value search",
+  "structural_changes": null,
+  "numerical_optimization": {
+    "algorithm": "scipy differential_evolution",
+    "seed": 34047,
+    "continuous_parameters": [
+      "BIAS_R",
+      "POLAR_R",
+      "OUTPUT_C"
+    ]
+  },
+  "record_note": "Postmortem backfill from preserved trial/source records and observed terminal traceback; not a new simulation.",
+  "useful_discovery": "Log-endpoint normalization needs an interior initial seed; physical search bounds must remain unchanged.",
+  "next_potential_experiment": "Apply an ULP-safe initial seed and rerun the same declared bounds."
+}

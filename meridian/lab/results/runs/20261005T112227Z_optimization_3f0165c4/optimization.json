@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20261005T112227Z_optimization_3f0165c4",
+  "candidate_id": "fixture_0001",
+  "parent_candidates": [],
+  "parent_experiments": [
+    "20261005T111159Z_39710784"
+  ],
+  "hypothesis": "Numerical value optimization within declared bounds; full suite still decides acceptance.",
+  "structural_changes": null,
+  "algorithm": "scipy differential_evolution with NonlinearConstraint",
+  "objective": "electronics_noise_pa_rms",
+  "constraints": "current and response thresholds from frozen spec",
+  "seed": 34047,
+  "continuous_parameters": [
+    "BIAS_R",
+    "POLAR_R",
+    "OUTPUT_C"
+  ],
+  "bounds": {
+    "BIAS_R": [
+      100000000.0,
+      100000000000.0
+    ],
+    "POLAR_R": [
+      10000000.0,
+      1000000000.0
+    ],
+    "OUTPUT_C": [
+      1e-05,
+      0.0001
+    ]
+  },
+  "trials": 105,
+  "errors": [],
+  "source_manifest": {
+    "models/capsule/flat_k47.cir": "26899d24e6aefa2cfd41b6c13fe1e022e94f2ffec10358ec00dfb74ed0c082b4",
+    "models/capsule/flat_k47_native_q_r1.cir": "79b97ea73165979525f08aca427d8bfaa42fa8814ae576b140bf97550fb61c18",
+    "models/capsule/flat_k47_scaled_observer_r2.cir": "a977702eae58c5345e129bb282ce75f98e4405872e891e603512d37c480758fe",
+    "models/capsule/flat_k47_series_motion_r3.cir": "dcd00a192cfdc6a1744d9a3c2c8ad65b73b4a990697f85f23e756711834d5bb7",
+    "models/environment/p48.cir": "8037de103d579dc4923b37e2ae0b2c78a7337b39385f05055d7e08aa94a53d6f",
+    "models/semiconductor/registry.yaml": "d6117176fc098753352fdfbbb2084562c1fe673b008dd06f43253a2be2b642e6",
+    "optimization/optimize_bias.py": "90cf1a61c2aaad14c39c3c6c544bc8bae21fb556303381d44c4ffc8bef498733",
+    "optimization/optimize_values.py": "5b4a311abb24de97ed8344471fe699bdca857d748e80e0557c59839a56421624",
+    "requirements.txt": "f2162d13822ff575becaab0e43a96dcce42f33a9e3cd4aacbc88d3ae1e4ff3c3",
+    "search/archive.py": "a6540a439fd86d9d0989cc6b75a5656afd15eaeed86adae189debe604a242b58",
+    "search/concepts.yaml": "711693e5c28f1313246c4411926687981b4c0db48a845ab5fa4585dd22002123",
+    "search/families.yaml": "458ea6f4ad64c1244cb8f709ded0313b46c75f4c2ca46066683ea82f41c2ffdf",
+    "search/generate_topology.py": "3b03bd1291e1e757f2d5701e029bf9610a772442a3bfb55bf662b70ede13220b",
+    "search/loop.py": "3322bb6d43b86f9c4e1c472a79d50f80e06783960c880a8be8452ee4b64e1d9f",
+    "search/mutate.py": "8f91ab73f3ffca62922db5346173dd66a61baa6b781141dd9c3ca61f011d9886",
+    "search/novelty.py": "1d0373ee6060f925febf54375a2de2dd42c846b5a1ba6c86570c597d1c1566df",
+    "search/selection.py": "83f62cbb70327ad8e713f05dedcf902ecd395146f4e5b9664080b27915b713a0",
+    "spec/capsule_model.yaml": "169983f2601ee39a59496e0e4d2d337deb14e7e4ec7bf38a92f6ca89b59bc696",
+    "spec/design_constraints.yaml": "48d03f7b8d6302aeca14efda4de5c12cf491c393e212e6842f04da60c344dc43",
+    "spec/lock.yaml": "0a5ac00e5d73b720b0c0926c6987ab6b8cb2dca6ac3d1513039db9f3a05c8d07",
+    "spec/microphone_spec.yaml": "ea5a6f973f17f907c5b76f9d17a35cfa784903bcfcd8d7f1d08cd538b65636cd",
+    "spec/scoring.yaml": "6aa6b8620a4700220ac952472f150396599ca67a2918f6f114e1b283a158c0af",
+    "src/meridian_lab/__init__.py": "70778163075ec49235b8cf725bce58f9cef39892880a46ccc9fa58a9aeb98f52",
+    "src/meridian_lab/archive.py": "56353457cb366e1141d3a82ce5cdd74e1648f6321ae5b1247a7f20019aa44d06",
+    "src/meridian_lab/cli.py": "b9e230b6d533f8f0b5f0a9a3bc9560745b26d0e78daaadf8fbca9e6e73198454",
+    "src/meridian_lab/core.py": "664f4696b6045e8f080c76751549ada8c78b5060f248ac8144d45e905e967bfb",
+    "src/meridian_lab/metrics.py": "4534af7117fad89bb1af7132e59d8dd909d8010f41fc6bdcce7410c4b145cae4",
+    "src/meridian_lab/qualification.py": "16e01c485561929ad87e5dd54dab3bd36ad833637d8d627135a77add3eccb329",
+    "tests/test_integrity.py": "0146d550c447b9e58c676d66efc56278d45fd1b5a7bc110a00b2c6c930da1dbb",
+    "tests/test_physics.py": "770d36a7b77b17fc5d26453519fe16b5a741719faf71a3aff9f3b1ed8fecac40",
+    "tests/test_search_and_numerics.py": "b906730c436811458eb61cfb96799e069c48485ecf2e54ec4b14694f338a761b",
+    "tools/ngspice-run": "3425f18f5719051e42f0bfc6fc3d180a01bc4e5a1868d3a9eadb2694be6a4020"
+  },
+  "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+  "next_potential_experiment": "Inspect the limiting constraint and investigate a structural change or additional declared parameters; keep thresholds fixed.",
+  "status": "no_feasible_proposal",
+  "failure_reason": "No point met frozen current and frequency-response constraints.",
+  "comparison_with_parent": null,
+  "useful_discovery": "The selected parameter subset could not repair the fixture within its declared bounds."
+}

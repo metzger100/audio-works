@@ -1,0 +1,74 @@
+Meridian research monte_carlo
+.param CF=9.97295436115605e-11
+.param CR=8.160827604394108e-11
+.param SREF=0.006927890668293409
+.param VREF=60
+.param LEAK=412974165852.0897
+.param PAR=8.040519910973484e-13
+.param CROSS=5e-13
+.param LIN=0
+.param POLDC=60
+.param VS=51.7834960311224
+.param FT=-0.08366923058516829
+.param FM=0.003897306572420276
+.param LEN=74.0695269389994
+.param RW=0.09304315620498779
+.param RS=0.05
+.param CD=6.657768753813178e-11
+.param CS=6.574602552187583e-11
+.param ZIN=5967.333341884353
+.param ZM=0.04142597921525787
+.param CC=2.2e-05
+.param CP=2e-10
+.param START=0
+.param CMAC=0
+.param PRESSURE_AC=1
+.param PRESSURE_PEAK=0
+.param FREQ=1000
+.param BIAS_R=16317360495.41302
+.param INPUT_C=2e-12
+.param GAIN=1
+.param OUTPUT_R=75
+.param OUTPUT_C=9.928618928311937e-05
+.param HARVEST_R=100
+.param POWER_R=14000
+.param STORAGE_C=1e-05
+.param POLAR_R=24446989.11028415
+.temp 27.74548502266054
+.options reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15
+.include "/home/leobareth/Dokumente/Audiotech/meridian/lab/results/runs/20261005T121440Z_8f1bc311/source/models/capsule/flat_k47.cir"
+.include "/home/leobareth/Dokumente/Audiotech/meridian/lab/results/runs/20261005T121440Z_8f1bc311/source/models/environment/p48.cir"
+VP pressure 0 DC 0 AC {PRESSURE_AC} SIN(0 {PRESSURE_PEAK} {FREQ})
+VPR pressure_r 0 DC 0 AC 0
+Xenv p n mic_g pp pn cm P48 VS={VS} FT={FT} FM={FM} LEN={LEN} RW={RW} RS={RS} CD={CD} CS={CS} ZIN={ZIN} ZM={ZM} CC={CC} CP={CP} START={START} CMAC={CMAC}
+Xcap f b rear pressure pressure_r mic_g FLAT_K47 CF={CF} CR={CR} SREF={SREF} VREF={VREF} LEAK={LEAK} PAR={PAR} CROSS={CROSS} LIN={LIN} POLDC={POLDC}
+* Infrastructure control: ideal noiseless voltage buffers, NEVER a microphone candidate.
+.subckt DUT f b rear p n g rail
+Rharvestp p rail {HARVEST_R}
+Rharvestn n rail {HARVEST_R}
+Rpower rail g {POWER_R}
+Cstorage rail g {STORAGE_C}
+Rpolar rail b {POLAR_R}
+Rbias f g {BIAS_R}
+Cinput f g {INPUT_C}
+Rrear rear g 1k
+Edrivep dp g VOL='v(rail,g)/2+GAIN*v(f,g)/2'
+Edriven dn g VOL='v(rail,g)/2-GAIN*v(f,g)/2'
+Routp dp cp {OUTPUT_R}
+Routn dn cn {OUTPUT_R}
+Coutp cp p {OUTPUT_C}
+Coutn cn n {OUTPUT_C}
+.ends DUT
+
+Xdut f b rear p n mic_g rail DUT
+
+.control
+set filetype=ascii
+set numdgt=16
+op
+write op.raw all
+ac dec 32 1 10Meg
+write ac.raw all
+quit
+.endc
+.end

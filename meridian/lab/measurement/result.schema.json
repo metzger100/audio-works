@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Meridian simulated or physical test result",
+  "type": "object",
+  "required": ["schema_version", "candidate_id", "backend", "spec_sha256", "checks", "provenance"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "candidate_id": {"type": "string"},
+    "backend": {"enum": ["ngspice", "physical_measurement"]},
+    "spec_sha256": {"type": "string"},
+    "checks": {"type": "object", "additionalProperties": {"type": "object", "required": ["status", "metrics"], "properties": {"status": {"enum": ["pass", "fail", "error", "incomplete"]}, "metrics": {"type": "object"}}}},
+    "provenance": {"type": "object", "required": ["timestamp", "instrument_or_simulator", "configuration", "raw_data_hashes"]}
+  }
+}

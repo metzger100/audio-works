@@ -1,0 +1,343 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20261005T110554Z_d4d0b3e8",
+  "timestamp_utc": "2026-10-05T11:05:54.116452+00:00",
+  "backend": "ngspice",
+  "candidate_id": "fixture_0001",
+  "parent_candidates": [],
+  "parent_experiments": [],
+  "hypothesis": "A physical charge-based capsule and loaded P48 interface can be measured by the harness and compared with analytic limits.",
+  "structural_changes": "Initial control, no production topology.",
+  "numerical_optimization": {
+    "performed": false
+  },
+  "simulation_configuration": {
+    "CF": 7e-11,
+    "CR": 7e-11,
+    "SREF": 0.02,
+    "VREF": 60,
+    "LEAK": 1000000000000.0,
+    "PAR": 2e-12,
+    "CROSS": 5e-13,
+    "LIN": 0,
+    "POLDC": 60,
+    "VS": 48,
+    "FT": 0,
+    "FM": 0,
+    "LEN": 10,
+    "RW": 0.1,
+    "RS": 0.05,
+    "CD": 6e-11,
+    "CS": 8e-11,
+    "ZIN": 2000,
+    "ZM": 0,
+    "CC": 2.2e-05,
+    "CP": 2e-10,
+    "TEMP": 25,
+    "START": 0,
+    "CMAC": 0,
+    "PRESSURE_AC": 1,
+    "PRESSURE_PEAK": 0,
+    "FREQ": 1000,
+    "BIAS_R": 1000000000.0,
+    "INPUT_C": 2e-12,
+    "GAIN": 1,
+    "OUTPUT_R": 75,
+    "OUTPUT_C": 4.7e-05,
+    "HARVEST_R": 100,
+    "POWER_R": 14000,
+    "STORAGE_C": 1e-05,
+    "POLAR_R": 100000000.0
+  },
+  "rng_seed": 34047,
+  "scenario_samples": 1,
+  "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+  "suite_sha256": "6b842fc67e6a88b29ad3ab0fe802b9a53f0d40bd58f856e2da4141879fb0374d",
+  "source_manifest": {
+    "models/capsule/flat_k47.cir": "a977702eae58c5345e129bb282ce75f98e4405872e891e603512d37c480758fe",
+    "models/capsule/flat_k47_native_q_r1.cir": "79b97ea73165979525f08aca427d8bfaa42fa8814ae576b140bf97550fb61c18",
+    "models/environment/p48.cir": "8037de103d579dc4923b37e2ae0b2c78a7337b39385f05055d7e08aa94a53d6f",
+    "models/semiconductor/registry.yaml": "d6117176fc098753352fdfbbb2084562c1fe673b008dd06f43253a2be2b642e6",
+    "optimization/optimize_bias.py": "90cf1a61c2aaad14c39c3c6c544bc8bae21fb556303381d44c4ffc8bef498733",
+    "optimization/optimize_values.py": "b68fb67a1e18767b74db432dfed94f50537d47b8edc0332adda5b522ea5b6959",
+    "requirements.txt": "f2162d13822ff575becaab0e43a96dcce42f33a9e3cd4aacbc88d3ae1e4ff3c3",
+    "spec/capsule_model.yaml": "169983f2601ee39a59496e0e4d2d337deb14e7e4ec7bf38a92f6ca89b59bc696",
+    "spec/design_constraints.yaml": "48d03f7b8d6302aeca14efda4de5c12cf491c393e212e6842f04da60c344dc43",
+    "spec/lock.yaml": "0a5ac00e5d73b720b0c0926c6987ab6b8cb2dca6ac3d1513039db9f3a05c8d07",
+    "spec/microphone_spec.yaml": "ea5a6f973f17f907c5b76f9d17a35cfa784903bcfcd8d7f1d08cd538b65636cd",
+    "spec/scoring.yaml": "6aa6b8620a4700220ac952472f150396599ca67a2918f6f114e1b283a158c0af",
+    "src/meridian_lab/__init__.py": "70778163075ec49235b8cf725bce58f9cef39892880a46ccc9fa58a9aeb98f52",
+    "src/meridian_lab/archive.py": "c910df0ac4dfb2b44482bd6985abe127d0cf068c560347db1dd5fdbdec1978c5",
+    "src/meridian_lab/cli.py": "6e7c3b8a8c279c6e65de5460a3acd34044f5305eade966ef99a0c4d6b5cf8336",
+    "src/meridian_lab/core.py": "edc03221a25dae60a3ee77d523344b775aa671668c82b5f1083bef6d1209bcfc",
+    "src/meridian_lab/metrics.py": "4534af7117fad89bb1af7132e59d8dd909d8010f41fc6bdcce7410c4b145cae4",
+    "src/meridian_lab/qualification.py": "16e01c485561929ad87e5dd54dab3bd36ad833637d8d627135a77add3eccb329",
+    "tests/test_integrity.py": "0146d550c447b9e58c676d66efc56278d45fd1b5a7bc110a00b2c6c930da1dbb",
+    "tests/test_physics.py": "770d36a7b77b17fc5d26453519fe16b5a741719faf71a3aff9f3b1ed8fecac40",
+    "tools/ngspice-run": "00e7fe15ef1c60075238f43644858f26ed131f26fedd5e414fd1c27a427d12e8"
+  },
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.8",
+    "yaml": "6.0.3",
+    "ngspice": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Wed Aug 19 09:38:31 UTC 2026\n******"
+  },
+  "topology": {
+    "id": "fixture_0001",
+    "kind": "infrastructure_fixture",
+    "family": "ideal_voltage_control",
+    "parents": [],
+    "hypothesis": "A physical charge-based capsule and loaded P48 interface can be measured by the harness and compared with analytic limits.",
+    "structural_changes": "Initial control, no production topology.",
+    "eligible": false,
+    "ideal_devices": true,
+    "device_models": [],
+    "qualification_evidence": [],
+    "parameters": {
+      "BIAS_R": {
+        "default": 1000000000.0,
+        "range": [
+          100000000.0,
+          100000000000.0
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      },
+      "INPUT_C": {
+        "default": 2e-12,
+        "range": [
+          5e-13,
+          1e-11
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      },
+      "GAIN": {
+        "default": 1,
+        "range": [
+          0.5,
+          2
+        ],
+        "scale": "linear",
+        "provenance": "ideal_fixture_control"
+      },
+      "OUTPUT_R": {
+        "default": 75,
+        "range": [
+          20,
+          200
+        ],
+        "scale": "log",
+        "provenance": "analytic_output_test"
+      },
+      "OUTPUT_C": {
+        "default": 4.7e-05,
+        "range": [
+          1e-05,
+          0.0001
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      },
+      "HARVEST_R": {
+        "default": 100,
+        "range": [
+          50,
+          200
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      },
+      "POWER_R": {
+        "default": 14000,
+        "range": [
+          7000,
+          28000
+        ],
+        "scale": "log",
+        "provenance": "passive_current_test"
+      },
+      "STORAGE_C": {
+        "default": 1e-05,
+        "range": [
+          1e-06,
+          0.0001
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      },
+      "POLAR_R": {
+        "default": 100000000.0,
+        "range": [
+          10000000.0,
+          1000000000.0
+        ],
+        "scale": "log",
+        "provenance": "assumed_fixture_value"
+      }
+    },
+    "niche": {
+      "input_device": "ideal",
+      "sensing": "voltage",
+      "reference": "single_ended",
+      "feedback": "none",
+      "bias": "resistor",
+      "active_device_count": 0,
+      "servo": false,
+      "output": "ideal_differential",
+      "common_mode": "open_loop",
+      "bootstrap": false
+    },
+    "noise_groups": {
+      "bias": [
+        "onoise_r.xdut.rbias"
+      ],
+      "polarization": [
+        "onoise_r.xdut.rpolar"
+      ],
+      "power": [
+        "onoise_r.xdut.rpower",
+        "onoise_r.xdut.rharvest"
+      ],
+      "output": [
+        "onoise_r.xdut.rout"
+      ],
+      "capsule_leakage_surrogate": [
+        "onoise_r.xcap.rfront",
+        "onoise_r.xcap.rrear"
+      ]
+    },
+    "dc_probes": [
+      "v(rail)",
+      "v(b)",
+      "v(f)",
+      "i(vp)"
+    ],
+    "loop_probes": []
+  },
+  "checks": {
+    "operating_point": {
+      "status": "pass",
+      "metrics": {
+        "current_a": 0.002750558768983656,
+        "current_per_leg_a": [
+          0.0013752793844918282,
+          0.0013752793844918282
+        ],
+        "conductor_current_mismatch_fraction": 0.0,
+        "mic_terminal_v": [
+          38.64534962668659,
+          38.64534962668659
+        ],
+        "internal_rail_v": 38.50782168823766,
+        "polarization_dc_v": 38.46166384546057,
+        "supplied_power_w": 0.13202682091121548,
+        "terminal_power_w": 0.10629630529612207,
+        "device_power_qualification": "pending part ratings/SOA; ideal fixture energy not accounted",
+        "safe_capsule_bias": "unknown; simulated voltage is not approved for hardware"
+      },
+      "reason": null,
+      "coverage": "DC feasibility screen; device safe operating area remains a separate evidence gate"
+    },
+    "distortion": {
+      "status": "error",
+      "metrics": {},
+      "reason": "SimulationError: ngspice exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+      "coverage": null
+    },
+    "headroom": {
+      "status": "incomplete",
+      "metrics": {},
+      "reason": "No valid distortion bracket",
+      "coverage": null
+    }
+  },
+  "status": "failed",
+  "eligible": false,
+  "missing_qualification_evidence": [
+    "device_safe_operating_area",
+    "documented_semiconductor_models",
+    "loop_stability",
+    "model_uncertainty_coverage",
+    "physical_measurements",
+    "validated_noise_models"
+  ],
+  "failure_reasons": {
+    "distortion": "SimulationError: ngspice exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+    "headroom": "No valid distortion bracket"
+  },
+  "jobs": [
+    {
+      "folder": "results/runs/20261005T110554Z_d4d0b3e8/0001_op_ac",
+      "status": "ok",
+      "netlist_sha256": "dccc8a00a01afa86bb7eac24624014ec9488e43a02e1a13aaa00933ced90e900",
+      "files": {
+        "op.raw": "960b2e1e413ca03a8c1c49dd74ad48a886714180965ac7d63ae8bb58e8a08ad1",
+        "ac.raw": "edf3e3ab5818c51390721ea5435c512b44e5c3611dfdbe8dd146c58d6f238229"
+      }
+    },
+    {
+      "folder": "results/runs/20261005T110554Z_d4d0b3e8/0002_distortion",
+      "status": "error",
+      "reason": "ngspice exit 0: \ndoAnalyses: TRAN:  Timestep too small"
+    }
+  ],
+  "comparison_with_parent": null,
+  "useful_discovery": null,
+  "next_potential_experiment": "Resolve failed checks and missing evidence without changing acceptance thresholds.",
+  "result_file": "results/runs/20261005T110554Z_d4d0b3e8/results.json",
+  "provenance": {
+    "timestamp": "2026-10-05T11:05:54.116452+00:00",
+    "instrument_or_simulator": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Wed Aug 19 09:38:31 UTC 2026\n******",
+    "configuration": {
+      "CF": 7e-11,
+      "CR": 7e-11,
+      "SREF": 0.02,
+      "VREF": 60,
+      "LEAK": 1000000000000.0,
+      "PAR": 2e-12,
+      "CROSS": 5e-13,
+      "LIN": 0,
+      "POLDC": 60,
+      "VS": 48,
+      "FT": 0,
+      "FM": 0,
+      "LEN": 10,
+      "RW": 0.1,
+      "RS": 0.05,
+      "CD": 6e-11,
+      "CS": 8e-11,
+      "ZIN": 2000,
+      "ZM": 0,
+      "CC": 2.2e-05,
+      "CP": 2e-10,
+      "TEMP": 25,
+      "START": 0,
+      "CMAC": 0,
+      "PRESSURE_AC": 1,
+      "PRESSURE_PEAK": 0,
+      "FREQ": 1000,
+      "BIAS_R": 1000000000.0,
+      "INPUT_C": 2e-12,
+      "GAIN": 1,
+      "OUTPUT_R": 75,
+      "OUTPUT_C": 4.7e-05,
+      "HARVEST_R": 100,
+      "POWER_R": 14000,
+      "STORAGE_C": 1e-05,
+      "POLAR_R": 100000000.0
+    },
+    "raw_data_hashes": {
+      "results/runs/20261005T110554Z_d4d0b3e8/0001_op_ac": {
+        "op.raw": "960b2e1e413ca03a8c1c49dd74ad48a886714180965ac7d63ae8bb58e8a08ad1",
+        "ac.raw": "edf3e3ab5818c51390721ea5435c512b44e5c3611dfdbe8dd146c58d6f238229"
+      },
+      "results/runs/20261005T110554Z_d4d0b3e8/0002_distortion": {}
+    },
+    "candidate_circuit_sha256": "8ef297bd47e54738c62b095ffa4e7eebc7ed20adae0744ce5573e1c8fe8645e3",
+    "source_snapshot": "source/"
+  }
+}

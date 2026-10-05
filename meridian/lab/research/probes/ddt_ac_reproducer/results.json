@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "candidate_id": "model_probe_ddt_ac",
+  "parent_candidates": [],
+  "hypothesis": "Behavioral ddt charge-law implementation must reproduce finite capacitor microphone AC transfer.",
+  "structural_changes": "Derivative behavioral source as capsule realization",
+  "numerical_optimization": {
+    "performed": false
+  },
+  "simulation_configuration": {
+    "capacitance_f": 7e-11,
+    "polarization_v": 60,
+    "bias_r_ohm": 1000000000.0,
+    "leakage_r_ohm": 1000000000000.0,
+    "parasitic_f": 2e-12
+  },
+  "result": "failed_physics_oracle",
+  "ac_v_per_pa_at_1khz": 0.0,
+  "expected_order_v_per_pa": 0.0194,
+  "failure_reason": "Zero AC transfer despite finite predicted sensitivity",
+  "useful_discovery": "An exit-code-only runner would accept a silent modeling failure.",
+  "next_potential_experiment": "Use validated scaled charge law with native-capacitor dynamics.",
+  "note": "Fresh reproducer of the earlier exploratory observation; not the original terminal raw data.",
+  "source_sha256": "69d158168b17eee7290797f23c59a5c69bd4cd22d2998ef5885a37f657103ebf",
+  "raw_sha256": {
+    "op.raw": "0e9c71a087c4312426e2c5aa6d8d6559410b171c2e0ef01cb724718b91a59232",
+    "ac.raw": "3c47329c928085cbcb9cdd13eccc33cb087bf18943056402af79bf1838474064"
+  }
+}

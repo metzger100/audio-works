@@ -1,0 +1,23 @@
+schema_version: 1
+scalar_score: null
+dominance: All compared objectives present and no worse, at least one strictly better; missing evidence forbids dominance.
+eligible: All required tests pass, no ideal-only fixture, no unresolved qualification evidence.
+objectives:
+  electronics_noise_pa_rms: minimize
+  thd_percent: minimize
+  headroom_pa_rms: maximize
+  observed_pass_fraction: maximize
+  sensitivity_to_devices: minimize
+  loading_loss_db: minimize
+  output_impedance_ohm: minimize
+  impedance_mismatch_fraction: minimize
+  current_a: minimize
+  component_count: minimize
+  cost_eur: minimize
+  pcb_sensitivity: minimize
+  complexity: minimize
+niches: [input_device, sensing, reference, feedback, bias, active_device_count, servo, output, common_mode, bootstrap]
+novelty: Separate structural distance; never changes engineering pass/fail or Pareto dominance.
+exploration_allocation: {improve: 0.50, underexplored: 0.25, new_concepts: 0.15, assumption_breaking: 0.10}
+minimum_per_family: 1
+champion_philosophies: [lowest_noise, highest_headroom, no_selection_robustness, minimal_devices, lowest_power, easiest_pcb]

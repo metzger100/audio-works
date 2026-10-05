@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+LAB_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+export LD_LIBRARY_PATH="$LAB_DIR/tools/ngspice/usr/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+mkdir -p "$LAB_DIR/tools/config"
+LAB_INIT_DIR="$(mktemp -d "$LAB_DIR/tools/config/run.XXXXXX")"
+trap 'rm -rf "$LAB_INIT_DIR"' EXIT
+{
+  printf 'set num_threads=1\n'
+  for model in "$LAB_DIR"/tools/ngspice/usr/lib/ngspice/*.cm; do
+    printf 'codemodel %s\n' "$model"
+  done
+} > "$LAB_INIT_DIR/spinit"
+export SPICE_SCRIPTS="$LAB_INIT_DIR"
+"$LAB_DIR/tools/ngspice/usr/bin/ngspice" "$@"

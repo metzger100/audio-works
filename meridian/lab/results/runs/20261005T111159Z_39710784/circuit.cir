@@ -1,0 +1,17 @@
+* Infrastructure control: ideal noiseless voltage buffers, NEVER a microphone candidate.
+.subckt DUT f b rear p n g rail
+Rharvestp p rail {HARVEST_R}
+Rharvestn n rail {HARVEST_R}
+Rpower rail g {POWER_R}
+Cstorage rail g {STORAGE_C}
+Rpolar rail b {POLAR_R}
+Rbias f g {BIAS_R}
+Cinput f g {INPUT_C}
+Rrear rear g 1k
+Edrivep dp g VOL='v(rail,g)/2+GAIN*v(f,g)/2'
+Edriven dn g VOL='v(rail,g)/2-GAIN*v(f,g)/2'
+Routp dp cp {OUTPUT_R}
+Routn dn cn {OUTPUT_R}
+Coutp cp p {OUTPUT_C}
+Coutn cn n {OUTPUT_C}
+.ends DUT

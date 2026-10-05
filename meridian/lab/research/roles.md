@@ -1,0 +1,11 @@
+# Inventor / Engineer protocol
+
+**Inventor:** create concepts in `search/concepts.yaml`, state all nine physical questions, assign at least one architectural family and structural novelty descriptors. Do not declare goodness or tweak only the current winner. The periodic challenge must propose at least 20 concepts, at least 10 without a conventional JFET voltage-buffer input, and at least 5 mechanisms from scientific instrumentation. Invert one dominant assumption and preserve the result as an explicit experiment hypothesis.
+
+**Engineer:** implement the defining conversion principle in a plain DUT SPICE subcircuit. Establish DC, power extraction, bias, device protection and output drive without concealing selection/trimming. Define physically defensible numerical bounds and evidence-backed device populations. Add support circuitry, but if the conversion principle changes, create a child candidate and record why. Numerical optimization proposes values. The complete suite decides what passed, failed or remains unknown.
+
+**Judge:** the simulator and automated numerical tests. A converged run is data, not qualification. Production eligibility also requires evidence and physical measurement gates. Proposals and failures remain in the quality-diversity archive. Neither role may edit the frozen acceptance specification to rescue a candidate.
+
+**Patent constraint:** both roles follow the [repository non-infringement policy](../../../PATENTS.md). The Inventor records potentially relevant prior art and feature-level patent flags; the Engineer links the actual implementation/version to claim-screening evidence and rechecks structural alternatives. Neither role, nor SPICE, can provide legal clearance. Credible unresolved potentially blocking risks hold the affected implementation at prototype/manufacture/publication gates without erasing engineering results.
+
+The roles are persistent workflow roles, not a claim that unsupervised AI models or a background service are currently running. The bounded search runner executes only implemented candidates. New topologies still require an Inventor/Engineer agent to supply their netlists; the workspace then evaluates them reproducibly.

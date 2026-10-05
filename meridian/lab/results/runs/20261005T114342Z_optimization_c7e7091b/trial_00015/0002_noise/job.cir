@@ -1,0 +1,73 @@
+Meridian research noise
+.param CF=7e-11
+.param CR=7e-11
+.param SREF=0.02
+.param VREF=60
+.param LEAK=1000000000000
+.param PAR=2e-12
+.param CROSS=5e-13
+.param LIN=0
+.param POLDC=60
+.param VS=48
+.param FT=0
+.param FM=0
+.param LEN=10
+.param RW=0.1
+.param RS=0.05
+.param CD=6e-11
+.param CS=8e-11
+.param ZIN=2000
+.param ZM=0
+.param CC=2.2e-05
+.param CP=2e-10
+.param START=0
+.param CMAC=0
+.param PRESSURE_AC=1
+.param PRESSURE_PEAK=0
+.param FREQ=1000
+.param BIAS_R=122350997.331793
+.param INPUT_C=2e-12
+.param GAIN=1
+.param OUTPUT_R=75
+.param OUTPUT_C=6.80333747835652e-05
+.param HARVEST_R=100
+.param POWER_R=14000
+.param STORAGE_C=1e-05
+.param POLAR_R=86272591.91124532
+.temp 25
+.options reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15
+.include "/home/leobareth/Dokumente/Audiotech/meridian/lab/results/runs/20261005T114342Z_optimization_c7e7091b/source/models/capsule/flat_k47.cir"
+.include "/home/leobareth/Dokumente/Audiotech/meridian/lab/results/runs/20261005T114342Z_optimization_c7e7091b/source/models/environment/p48.cir"
+VP pressure 0 DC 0 AC {PRESSURE_AC} SIN(0 {PRESSURE_PEAK} {FREQ})
+VPR pressure_r 0 DC 0 AC 0
+Xenv p n mic_g pp pn cm P48 VS={VS} FT={FT} FM={FM} LEN={LEN} RW={RW} RS={RS} CD={CD} CS={CS} ZIN={ZIN} ZM={ZM} CC={CC} CP={CP} START={START} CMAC={CMAC}
+Xcap f b rear pressure pressure_r mic_g FLAT_K47 CF={CF} CR={CR} SREF={SREF} VREF={VREF} LEAK={LEAK} PAR={PAR} CROSS={CROSS} LIN={LIN} POLDC={POLDC}
+* Infrastructure control: ideal noiseless voltage buffers, NEVER a microphone candidate.
+.subckt DUT f b rear p n g rail
+Rharvestp p rail {HARVEST_R}
+Rharvestn n rail {HARVEST_R}
+Rpower rail g {POWER_R}
+Cstorage rail g {STORAGE_C}
+Rpolar rail b {POLAR_R}
+Rbias f g {BIAS_R}
+Cinput f g {INPUT_C}
+Rrear rear g 1k
+Edrivep dp g VOL='v(rail,g)/2+GAIN*v(f,g)/2'
+Edriven dn g VOL='v(rail,g)/2-GAIN*v(f,g)/2'
+Routp dp cp {OUTPUT_R}
+Routn dn cn {OUTPUT_R}
+Coutp cp p {OUTPUT_C}
+Coutn cn n {OUTPUT_C}
+.ends DUT
+
+Xdut f b rear p n mic_g rail DUT
+
+.control
+set filetype=ascii
+set numdgt=16
+noise v(pp,pn) VP dec 64 20 20k 1
+setplot noise1
+write noise.raw all
+quit
+.endc
+.end

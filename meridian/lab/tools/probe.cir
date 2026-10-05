@@ -1,0 +1,20 @@
+Capsule derivative probe
+Vpol b 0 60
+VP p 0 dc 0 ac 1 sin(0 1 1000)
+.param c0=70p k=0.0003333333333
+Cmem f b Q='c0*(1+k*v(p))*v(f,b)'
+Rleak f b 1e12
+Rbias f 0 1e9
+Cpar f 0 2p
+.control
+set filetype=ascii
+op
+write tools/probe-op.raw all
+ac dec 10 10 100000
+write tools/probe-ac.raw all
+noise v(f) VP dec 10 20 20000 1
+setplot noise1
+write tools/probe-noise.raw all
+quit
+.endc
+.end

@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20261005T114342Z_optimization_c7e7091b",
+  "candidate_id": "fixture_0001",
+  "parent_candidates": [],
+  "parent_experiments": [
+    "20261005T114150Z_816f3e4b"
+  ],
+  "hypothesis": "Numerical value optimization within declared bounds; full suite still decides acceptance.",
+  "structural_changes": null,
+  "algorithm": "scipy differential_evolution with NonlinearConstraint",
+  "objective": "electronics_noise_pa_rms",
+  "constraints": "current and response thresholds from frozen spec",
+  "seed": 34047,
+  "continuous_parameters": [
+    "BIAS_R",
+    "POLAR_R",
+    "OUTPUT_C"
+  ],
+  "bounds": {
+    "BIAS_R": [
+      100000000.0,
+      100000000000.0
+    ],
+    "POLAR_R": [
+      10000000.0,
+      1000000000.0
+    ],
+    "OUTPUT_C": [
+      1e-05,
+      0.0001
+    ]
+  },
+  "trials": 202,
+  "errors": [],
+  "source_manifest": {
+    "models/capsule/flat_k47.cir": "26899d24e6aefa2cfd41b6c13fe1e022e94f2ffec10358ec00dfb74ed0c082b4",
+    "models/capsule/flat_k47_native_q_r1.cir": "79b97ea73165979525f08aca427d8bfaa42fa8814ae576b140bf97550fb61c18",
+    "models/capsule/flat_k47_scaled_observer_r2.cir": "a977702eae58c5345e129bb282ce75f98e4405872e891e603512d37c480758fe",
+    "models/capsule/flat_k47_series_motion_r3.cir": "dcd00a192cfdc6a1744d9a3c2c8ad65b73b4a990697f85f23e756711834d5bb7",
+    "models/environment/p48.cir": "8037de103d579dc4923b37e2ae0b2c78a7337b39385f05055d7e08aa94a53d6f",
+    "models/semiconductor/registry.yaml": "d6117176fc098753352fdfbbb2084562c1fe673b008dd06f43253a2be2b642e6",
+    "optimization/optimize_bias.py": "90cf1a61c2aaad14c39c3c6c544bc8bae21fb556303381d44c4ffc8bef498733",
+    "optimization/optimize_values.py": "b8c02dcf89b84cdb507659a3afc88a48d4b792e86d4a35ba7173cfc5e2ff794c",
+    "requirements.txt": "f2162d13822ff575becaab0e43a96dcce42f33a9e3cd4aacbc88d3ae1e4ff3c3",
+    "search/archive.py": "a6540a439fd86d9d0989cc6b75a5656afd15eaeed86adae189debe604a242b58",
+    "search/concepts.yaml": "711693e5c28f1313246c4411926687981b4c0db48a845ab5fa4585dd22002123",
+    "search/families.yaml": "458ea6f4ad64c1244cb8f709ded0313b46c75f4c2ca46066683ea82f41c2ffdf",
+    "search/generate_topology.py": "3b03bd1291e1e757f2d5701e029bf9610a772442a3bfb55bf662b70ede13220b",
+    "search/loop.py": "3322bb6d43b86f9c4e1c472a79d50f80e06783960c880a8be8452ee4b64e1d9f",
+    "search/mutate.py": "8f91ab73f3ffca62922db5346173dd66a61baa6b781141dd9c3ca61f011d9886",
+    "search/novelty.py": "1d0373ee6060f925febf54375a2de2dd42c846b5a1ba6c86570c597d1c1566df",
+    "search/selection.py": "83f62cbb70327ad8e713f05dedcf902ecd395146f4e5b9664080b27915b713a0",
+    "spec/capsule_model.yaml": "169983f2601ee39a59496e0e4d2d337deb14e7e4ec7bf38a92f6ca89b59bc696",
+    "spec/design_constraints.yaml": "48d03f7b8d6302aeca14efda4de5c12cf491c393e212e6842f04da60c344dc43",
+    "spec/lock.yaml": "0a5ac00e5d73b720b0c0926c6987ab6b8cb2dca6ac3d1513039db9f3a05c8d07",
+    "spec/microphone_spec.yaml": "ea5a6f973f17f907c5b76f9d17a35cfa784903bcfcd8d7f1d08cd538b65636cd",
+    "spec/scoring.yaml": "6aa6b8620a4700220ac952472f150396599ca67a2918f6f114e1b283a158c0af",
+    "src/meridian_lab/__init__.py": "70778163075ec49235b8cf725bce58f9cef39892880a46ccc9fa58a9aeb98f52",
+    "src/meridian_lab/archive.py": "56353457cb366e1141d3a82ce5cdd74e1648f6321ae5b1247a7f20019aa44d06",
+    "src/meridian_lab/cli.py": "607df997933a25411de7e04539d5f61e436261d78d42069dc1a1f2e4caecafdc",
+    "src/meridian_lab/core.py": "664f4696b6045e8f080c76751549ada8c78b5060f248ac8144d45e905e967bfb",
+    "src/meridian_lab/metrics.py": "8eefe9dd3654ae926517b5a8d321201c3e37fd5999d6c100675f7cfa28dd02a0",
+    "src/meridian_lab/qualification.py": "859c520c71bc6df38bd8e809aa74631b7dd5ca15c12d23986756d817e0837077",
+    "tests/test_integrity.py": "0146d550c447b9e58c676d66efc56278d45fd1b5a7bc110a00b2c6c930da1dbb",
+    "tests/test_physics.py": "4cffb4617d81ee327b32883f7fafc88905c76126f567d77b5d79a39f22560e59",
+    "tests/test_search_and_numerics.py": "b906730c436811458eb61cfb96799e069c48485ecf2e54ec4b14694f338a761b",
+    "tools/ngspice-run": "3425f18f5719051e42f0bfc6fc3d180a01bc4e5a1868d3a9eadb2694be6a4020"
+  },
+  "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.8",
+    "yaml": "6.0.3",
+    "ngspice": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Wed Aug 19 09:38:31 UTC 2026\n******"
+  },
+  "next_potential_experiment": "Inspect the limiting constraint and investigate a structural change or additional declared parameters; keep thresholds fixed.",
+  "status": "proposal_requires_full_suite",
+  "scipy_success": false,
+  "message": "Maximum number of iterations has been exceeded.",
+  "best": {
+    "parameters": {
+      "BIAS_R": 16317360495.413025,
+      "POLAR_R": 24446989.110284146,
+      "OUTPUT_C": 9.928618928311937e-05
+    },
+    "noise_pa_rms": 0.0005690716583909439,
+    "current_a": 0.002750558768527882,
+    "response_deviation_db": 0.9940559872981061,
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "checks": {
+      "operating_point": "pass",
+      "frequency_response": "pass",
+      "noise": "fail"
+    },
+    "jobs": [
+      {
+        "folder": "results/runs/20261005T114342Z_optimization_c7e7091b/trial_00179/0001_op_ac",
+        "status": "ok",
+        "netlist_sha256": "f188e9be11ade4b904f40d9205ee57776061002ed0ea81141be72fce361ec21c",
+        "files": {
+          "op.raw": "ebdffb4b77296757e462fcc886b00ee56c964fa283155d41ddfaddc043d3cb56",
+          "ac.raw": "ea1f52809cb86cbf73a174ee37e68325b0dbe90578200f017dcd10141ff8718a"
+        }
+      },
+      {
+        "folder": "results/runs/20261005T114342Z_optimization_c7e7091b/trial_00179/0002_noise",
+        "status": "ok",
+        "netlist_sha256": "e39d58afb3d5238eecaa3f17b2b73d693f7b572be8d69772e12737c5fef94162",
+        "files": {
+          "noise.raw": "c1798ae4b37c2e5d21aa398c25eb60200eaebc99cbe5b95f90581dbe09401b11"
+        }
+      }
+    ]
+  },
+  "full_suite_experiment": "20261005T114408Z_213dac42",
+  "full_suite_status": "failed",
+  "eligible": false
+}
