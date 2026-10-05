@@ -1,51 +1,19 @@
 # METZGER100 AUDIO WORKS
 
-[![M100 primary logo — mountain, wordmark and copper beard](branding/design/qc/m100-primary-256.png)](branding/design/m100-primary.svg)
+[![M100 primary logo](branding/design/qc/m100-primary-256.png)](branding/design/m100-primary.svg)
 
-> **Audio equipment with precision and purpose.**
+**Audio electronics & acoustics.** Independent development of microphones, preamps, amplifiers and loudspeakers, guided by documented decisions and serviceability.
 
-**Audio electronics & acoustics** — independent DIY development of microphones, preamps, amplifiers, loudspeakers and other audio equipment.
+[Current state](CURRENT.md) · [Project register](project.json) · [Module index](docs/INDEX.md) · [Evidence index](docs/EVIDENCE.md)
 
-Purposeful engineering, documented decisions and serviceability guide each design, from the signal path to the sound in the room.
+The active [Meridian project](meridian/README.md) studies a Flat K47 condenser microphone under P48. No production circuit or prototype is selected. Engineering, procurement, patent screening and physical evidence have separate readiness states.
 
-**Core principle:** use standard, documented, currently obtainable parts, with verified private-customer sourcing in small quantities for delivery to Germany. Realize optimized values as an actual BOM and recheck performance with its production tolerances. See the [standard parts and availability policy](COMPONENTS.md).
+[Standard parts policy](COMPONENTS.md) and [patent policy](PATENTS.md) are mandatory. Use documented obtainable components, verified small-quantity Germany sourcing and realized-BOM requalification. Resolve affected patent holds before prototype/manufacture/build-publication gates; no clearance is asserted.
 
-**Repository requirement:** project implementations must avoid infringement of third-party patents. Candidate features require documented claim, territory and current-status screening before prototype selection, manufacture or publication of implementation/build guidance. Unresolved potentially blocking risks hold the affected implementation. See [patent policy](PATENTS.md); no legal clearance is currently asserted.
+[Brand guide](branding/README.md) · [Artwork](branding/design/README.md) · [Artwork preview](branding/design/preview.html)
 
-[Current project](meridian/README.md) · [Brand guide](branding/README.md) · [Artwork](branding/design/preview.html)
+## Working here
 
-**Active research:** the [Meridian analog laboratory](meridian/lab/README.md) contains executable capsule/P48 models, automated simulation checks, numerical optimization, experiment records and a persistent architecture-diversity archive. The owner authorized this research mission on 5 October 2026; no production circuit or physical prototype is selected.
+Read [contributor instructions](CONTRIBUTING.md) and the [quality contract](QUALITY.md). Choose a reading route with `python3 tools/project.py context orientation`. Install the local gate with `python3 tools/project.py hooks install`.
 
-## In development: M100 Meridian
-
-Meridian is an original condenser microphone project for private DIY use in Germany. Its recording brief covers accordion, ukulele and other acoustic instruments, professional voice-over, and distant concert recording of a male choir.
-
-**Reference condenser microphone.** Design aims: low noise, accurate transients, natural detail, smooth off-axis response and restrained warmth. Electrical brief: balanced XLR, 48 V phantom power, low distortion and resistance to RF interference.
-
-Capsule behaviour guides the electronics and acoustic construction. The [project brief and research](meridian/README.md) track design decisions, targets and evidence.
-
-## Build and contribute
-
-Work spans acoustics, analogue electronics, simulation, measurement and mechanical design.
-
-- **Evidence:** Record sources, exact variants, operating conditions and measurement uncertainty; distinguish claims, inferences and results.
-- **Patent compliance:** Follow the [non-infringement requirement](PATENTS.md), preserve candidate-linked claim reviews and resolve patent holds before advancing an affected implementation. Originality or an open-source licence alone is not clearance.
-- **Standard parts and availability:** Follow the [component policy](COMPONENTS.md); use obtainable, documented production parts and realizable nominal values, verify Germany sourcing and delivered costs, and test actual tolerances and substitutions.
-- **Practical construction:** Source parts for the finished equipment; document the realized BOM, bias settings and construction details.
-- **Serviceability:** Design for repair, access and continued use.
-- **Intentional sound:** Assess sonic choices through recordings and measurements; explain changes in the [decision log](meridian/DECISIONS.md).
-
-## Documentation
-
-| Start here | Contents |
-| --- | --- |
-| [Meridian](meridian/README.md) | Recording brief, requirements and development status |
-| [Engineering decisions](meridian/DECISIONS.md) | Design rationale, constraints and evidence |
-| [Component policy](COMPONENTS.md) | Core standard-parts principle, Germany availability, realized BOMs and cost evidence |
-| [Patent policy](PATENTS.md) | Mandatory non-infringement requirement, screening evidence and implementation/release gates |
-| [Capsule research](meridian/research/) | Component comparisons and investigations |
-| [Reference archive](meridian/research/reference-datasheets/README.md) | Source documents, provenance and checksums |
-| [Brand guide](branding/README.md) | Families, model naming and identity |
-| [Artwork and tools](branding/design/README.md) | SVG masters, previews and rebuild instructions |
-
-Reference documents retain their publishers' copyrights. The artwork documentation records the separate [Source Serif font licence](branding/design/tools/SourceSerif-LICENSE.md).
+Reference documents retain their publishers' copyrights. See the [font licence](branding/design/tools/SourceSerif-LICENSE.md) and laboratory licence for their respective material.

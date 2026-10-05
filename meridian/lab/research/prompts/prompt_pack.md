@@ -1,6 +1,5 @@
-# M100 Meridian — five execution prompts
-
-Revision 4: core standard-parts and availability policy, realized-BOM requalification, Germany procurement/delivered-cost evidence, and the mandatory patent constraint are explicit throughout. Use the prompts sequentially in the existing workspace; these writing artifacts do not execute the engineering tasks.
+<!-- Generated from individual phase prompts by tools/project.py refresh. Load one representation. -->
+# Phase prompt pack
 
 # Prompt 1 — Validate semiconductor models
 

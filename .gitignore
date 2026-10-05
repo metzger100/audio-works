@@ -16,3 +16,8 @@ Thumbs.db
 # Temporary synchronization and pytest aliases, not experiment evidence.
 /meridian/lab/results/archive.lock
 /meridian/lab/results/verification/**/raw_tests/*current
+
+# Private preservation attestations and root tooling caches.
+.project-local/
+/tests/**/__pycache__/
+/tools/__pycache__/

@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-05",
+  "phase": "Phase 3 semiconductor prerequisite — partial",
+  "readiness": {
+    "software": "Final recorded verification: 31 tests pass; original failed verification retained.",
+    "engineering": "Behavior-specific grounded small-signal model agreement; complete production/noise/P48 coverage unresolved.",
+    "procurement": "No build-ready BOM; confirmed delivered costs remain unknown.",
+    "patents": "Early feature flags only; candidate claim/status screening incomplete.",
+    "physical": "No physical measurements or selected prototype.",
+    "preservation": "Available waveforms intact; 89 legacy source files absent. Independent backup/restore pending owner destination."
+  },
+  "blockers": [
+    "Unknown capsule safe polarization, mechanics and noise.",
+    "Device-model/nonlinear/production coverage remains incomplete.",
+    "Procurement and candidate patent screening remain unresolved."
+  ],
+  "next_action": "Strengthen qualification/evidence states while resolving unsupported device behaviors; preserve all 14 architecture families.",
+  "evidence": [
+    "meridian/lab/research/device_model_validation.md",
+    "meridian/lab/results/verification/20261005T190817Z_17885439/verification.json",
+    "meridian/lab/research/procurement/semiconductors_2026-10-05.yaml",
+    "meridian/lab/research/patents/register.yaml"
+  ],
+  "stages": [
+    {
+      "id": "device-models",
+      "state": "partial",
+      "evidence": "meridian/lab/research/device_model_validation.md"
+    },
+    {
+      "id": "qualification",
+      "state": "planned"
+    },
+    {
+      "id": "topology",
+      "state": "planned"
+    },
+    {
+      "id": "optimization",
+      "state": "planned"
+    },
+    {
+      "id": "reporting",
+      "state": "planned"
+    }
+  ],
+  "common": [
+    "AGENTS.md",
+    "README.md",
+    "COMPONENTS.md",
+    "PATENTS.md",
+    "CURRENT.md",
+    "meridian/README.md",
+    "meridian/DECISIONS.md",
+    "meridian/lab/AGENTS.md"
+  ],
+  "routes": {
+    "orientation": [],
+    "documentation": [
+      "CONTRIBUTING.md",
+      "QUALITY.md"
+    ],
+    "branding": [
+      "branding/README.md",
+      "branding/design/README.md",
+      "QUALITY.md"
+    ],
+    "device-models": [
+      "meridian/lab/CONTRACT.md",
+      "meridian/lab/README.md",
+      "meridian/lab/spec/microphone_spec.yaml",
+      "meridian/lab/spec/capsule_model.yaml",
+      "meridian/lab/spec/design_constraints.yaml",
+      "meridian/lab/spec/scoring.yaml",
+      "meridian/lab/spec/lock.yaml",
+      "meridian/lab/research/sources.yaml",
+      "meridian/lab/research/roles.md",
+      "meridian/lab/research/discoveries.md",
+      "meridian/lab/research/rejected_ideas.md",
+      "meridian/lab/research/procurement_germany.md",
+      "meridian/lab/research/patents/README.md",
+      "meridian/lab/models/semiconductor/README.md",
+      "meridian/lab/research/device_model_validation.md",
+      "QUALITY.md"
+    ],
+    "qualification": [
+      "meridian/lab/CONTRACT.md",
+      "meridian/lab/README.md",
+      "meridian/lab/spec/microphone_spec.yaml",
+      "meridian/lab/spec/capsule_model.yaml",
+      "meridian/lab/spec/design_constraints.yaml",
+      "meridian/lab/spec/scoring.yaml",
+      "meridian/lab/spec/lock.yaml",
+      "meridian/lab/research/sources.yaml",
+      "meridian/lab/research/roles.md",
+      "meridian/lab/research/discoveries.md",
+      "meridian/lab/research/rejected_ideas.md",
+      "meridian/lab/research/procurement_germany.md",
+      "meridian/lab/research/patents/README.md",
+      "meridian/lab/research/prompts/02_qualification.md",
+      "QUALITY.md"
+    ],
+    "topology": [
+      "meridian/lab/CONTRACT.md",
+      "meridian/lab/README.md",
+      "meridian/lab/spec/microphone_spec.yaml",
+      "meridian/lab/spec/capsule_model.yaml",
+      "meridian/lab/spec/design_constraints.yaml",
+      "meridian/lab/spec/scoring.yaml",
+      "meridian/lab/spec/lock.yaml",
+      "meridian/lab/research/sources.yaml",
+      "meridian/lab/research/roles.md",
+      "meridian/lab/research/discoveries.md",
+      "meridian/lab/research/rejected_ideas.md",
+      "meridian/lab/research/procurement_germany.md",
+      "meridian/lab/research/patents/README.md",
+      "meridian/lab/search/families.yaml",
+      "meridian/lab/search/concepts.yaml",
+      "meridian/lab/research/prompts/03_architectures.md",
+      "QUALITY.md"
+    ],
+    "optimization": [
+      "meridian/lab/CONTRACT.md",
+      "meridian/lab/README.md",
+      "meridian/lab/spec/microphone_spec.yaml",
+      "meridian/lab/spec/capsule_model.yaml",
+      "meridian/lab/spec/design_constraints.yaml",
+      "meridian/lab/spec/scoring.yaml",
+      "meridian/lab/spec/lock.yaml",
+      "meridian/lab/research/sources.yaml",
+      "meridian/lab/research/roles.md",
+      "meridian/lab/research/discoveries.md",
+      "meridian/lab/research/rejected_ideas.md",
+      "meridian/lab/research/procurement_germany.md",
+      "meridian/lab/research/patents/README.md",
+      "meridian/lab/research/prompts/04_robust_optimization.md",
+      "QUALITY.md"
+    ],
+    "reporting": [
+      "meridian/lab/CONTRACT.md",
+      "meridian/lab/README.md",
+      "meridian/lab/spec/microphone_spec.yaml",
+      "meridian/lab/spec/capsule_model.yaml",
+      "meridian/lab/spec/design_constraints.yaml",
+      "meridian/lab/spec/scoring.yaml",
+      "meridian/lab/spec/lock.yaml",
+      "meridian/lab/research/sources.yaml",
+      "meridian/lab/research/roles.md",
+      "meridian/lab/research/discoveries.md",
+      "meridian/lab/research/rejected_ideas.md",
+      "meridian/lab/research/procurement_germany.md",
+      "meridian/lab/research/patents/README.md",
+      "meridian/lab/research/prompts/05_comparative_report.md",
+      "meridian/lab/results/README.md",
+      "QUALITY.md"
+    ]
+  },
+  "modules": [
+    {
+      "prefix": "docs/",
+      "name": "Project navigation",
+      "purpose": "Generated navigation and evidence discovery."
+    },
+    {
+      "prefix": "tools/",
+      "name": "Project tooling",
+      "purpose": "Local repository checks and preservation tools."
+    },
+    {
+      "prefix": "tests/",
+      "name": "Tooling tests",
+      "purpose": "Meaningful gate and recovery regression cases."
+    },
+    {
+      "prefix": ".githooks/",
+      "name": "Commit gate",
+      "purpose": "Staged-content quality enforcement."
+    },
+    {
+      "prefix": "branding/",
+      "name": "Branding",
+      "purpose": "Current identity, artwork, proposals and captured history."
+    },
+    {
+      "prefix": "meridian/",
+      "name": "Meridian",
+      "purpose": "Project brief, decisions and original capsule research."
+    },
+    {
+      "prefix": "meridian/lab/",
+      "name": "Meridian laboratory",
+      "purpose": "Specifications, scientific code, models and evidence."
+    }
+  ],
+  "classifications": [
+    {
+      "prefix": "branding/archive/",
+      "role": "historical"
+    },
+    {
+      "prefix": "meridian/lab/results/",
+      "role": "evidence"
+    },
+    {
+      "prefix": "meridian/research/",
+      "role": "historical"
+    },
+    {
+      "prefix": "branding/design/qc/",
+      "role": "generated"
+    },
+    {
+      "prefix": "branding/proposals/",
+      "role": "proposal"
+    },
+    {
+      "prefix": "meridian/lab/search/proposals/",
+      "role": "proposal"
+    },
+    {
+      "prefix": "meridian/lab/models/semiconductor/proposals/",
+      "role": "proposal"
+    }
+  ],
+  "root_files": [
+    ".gitignore",
+    "AGENTS.md",
+    "README.md",
+    "COMPONENTS.md",
+    "PATENTS.md",
+    "QUALITY.md",
+    "CONTRIBUTING.md",
+    "CURRENT.md",
+    "project.json"
+  ],
+  "generated": [
+    "CURRENT.md",
+    "docs/INDEX.md",
+    "docs/EVIDENCE.md",
+    "docs/evidence-index.json",
+    "meridian/lab/research/prompts/prompt_pack.md"
+  ],
+  "immutable_prefixes": [
+    "branding/archive/",
+    "meridian/lab/results/runs/",
+    "meridian/lab/results/device_models/",
+    "meridian/lab/results/verification/"
+  ],
+  "immutable_files": [
+    "meridian/lab/results/raw-data.sha256",
+    "meridian/lab/results/device-model-raw-data.sha256",
+    "meridian/lab/results/device-model-csv-data.sha256",
+    "docs/legacy-source-gaps.json"
+  ],
+  "backup_evidence_prefixes": [
+    "meridian/lab/models/semiconductor/vendor/",
+    "meridian/lab/research/device_sources/local/"
+  ],
+  "inventory_prefix": "meridian/lab/results/",
+  "local_directory": ".project-local"
+}

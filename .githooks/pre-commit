@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+"""Run the staged checker, including when its working copy differs."""
+import os
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
+
+root = subprocess.check_output(["git", "rev-parse", "--show-toplevel"], text=True).strip()
+try:
+    checker = subprocess.check_output(["git", "show", ":tools/project.py"], cwd=root)
+except subprocess.CalledProcessError:
+    print("Quality gate: stage tools/project.py with the quality infrastructure.", file=sys.stderr)
+    raise SystemExit(1)
+with tempfile.TemporaryDirectory(prefix="audiotech-staged-check-") as folder:
+    script = Path(folder) / "project.py"
+    script.write_bytes(checker)
+    env = os.environ.copy()
+    # Git hook index variables remain intact for partial-staging correctness.
+    completed = subprocess.run([sys.executable, str(script), "--root", root, "check", "--staged"], env=env)
+    raise SystemExit(completed.returncode)

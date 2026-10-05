@@ -1,6 +1,8 @@
 # M100 Meridian — Engineering decision log
 
-Log started: 2026-10-04. Status: capsule research completed; owner decision pending.
+Log started: 2026-10-04. Historical opening status: capsule research completed; owner decision pending.
+
+**Current annotations:** D002’s simulation stop gate and D012’s pending simulation-input selection are superseded by D014. Original row wording is retained. Physical procurement/characterization gates remain unresolved. D018 records partial model evidence; see [current state](../CURRENT.md).
 
 **Status update, 2026-10-05:** the owner has specified Flat K47 Cardioid/Omni for an autonomous simulation research mission and authorized the laboratory infrastructure. G1's earlier prohibition on starting modeled electronics is superseded for this research. Purchasing, physical safety limits and production/prototype selection remain separate unresolved matters. The historical entries below are retained.
 
