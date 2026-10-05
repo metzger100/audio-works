@@ -2,6 +2,8 @@
 
 M100 Meridian is an original, high-performance condenser microphone research and development project for private DIY use in Germany. It is not a commercial product at this stage.
 
+**Core parts constraint:** use standard, documented, currently obtainable components, privately orderable in small quantities for delivery to Germany. Follow the [repository component policy](../COMPONENTS.md). Numerical proposals must become actual BOMs and pass requalification with obtainable values, tolerances and device variants; sourcing gaps remain explicit.
+
 **Mandatory patent constraint:** the design and its published implementations must avoid third-party patent infringement. Follow the [repository patent policy](../PATENTS.md): examine candidate features against relevant claims, territories and official status; resolve credible potentially blocking risks before selecting a prototype, manufacturing or publishing implementation/build guidance. Open-hardware publication remains subject to this requirement. Patent clearance has not been established.
 
 **Active mission, 2026-10-05:** build a reproducible, simulator-driven analog research environment for the Arienne Audio Flat K47 Cardioid/Omni K47FRB, with open-hardware publication as a future objective. [Run the laboratory](lab/README.md) · [Formal specification](lab/spec/microphone_spec.yaml) · [Phase 0 report](lab/research/phase0_report.md). Earlier capsule-choice/design gates below are historical; the owner's new mission authorizes modeled electronics research across explicitly uncertain parameters. It does not authorize a purchase or select a production topology.
@@ -23,6 +25,8 @@ The microphone should serve accordion, ukulele and other acoustic instruments, p
 These are system targets, not assumed capsule specifications. They may be revised when measurements reveal a better tradeoff.
 
 ## Availability and implementation principles
+
+The [standard-parts policy](../COMPONENTS.md) is a mandatory implementation principle, alongside patent non-infringement. Prefer ordinary passives and current documented semiconductors; unavailable, obsolete, selected or undocumented parts must not become build prerequisites. Preserve theoretical concepts while investigating obtainable implementations.
 
 Parts must be purchasable by a private individual in small quantities with reasonable delivery to Germany. German and European distributors, microphone DIY and repair shops, eBay, AliExpress, and other international retail sources are all eligible. Provenance, documentation, repeatability, shipping, tax, and returns matter more than country of manufacture.
 

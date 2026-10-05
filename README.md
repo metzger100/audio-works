@@ -8,6 +8,8 @@
 
 Purposeful engineering, documented decisions and serviceability guide each design, from the signal path to the sound in the room.
 
+**Core principle:** use standard, documented, currently obtainable parts, with verified private-customer sourcing in small quantities for delivery to Germany. Realize optimized values as an actual BOM and recheck performance with its production tolerances. See the [standard parts and availability policy](COMPONENTS.md).
+
 **Repository requirement:** project implementations must avoid infringement of third-party patents. Candidate features require documented claim, territory and current-status screening before prototype selection, manufacture or publication of implementation/build guidance. Unresolved potentially blocking risks hold the affected implementation. See [patent policy](PATENTS.md); no legal clearance is currently asserted.
 
 [Current project](meridian/README.md) · [Brand guide](branding/README.md) · [Artwork](branding/design/preview.html)
@@ -28,7 +30,8 @@ Work spans acoustics, analogue electronics, simulation, measurement and mechanic
 
 - **Evidence:** Record sources, exact variants, operating conditions and measurement uncertainty; distinguish claims, inferences and results.
 - **Patent compliance:** Follow the [non-infringement requirement](PATENTS.md), preserve candidate-linked claim reviews and resolve patent holds before advancing an affected implementation. Originality or an open-source licence alone is not clearance.
-- **Practical construction:** Source identifiable parts in small quantities for the finished equipment; document substitutions, bias settings and construction details.
+- **Standard parts and availability:** Follow the [component policy](COMPONENTS.md); use obtainable, documented production parts and realizable nominal values, verify Germany sourcing and delivered costs, and test actual tolerances and substitutions.
+- **Practical construction:** Source parts for the finished equipment; document the realized BOM, bias settings and construction details.
 - **Serviceability:** Design for repair, access and continued use.
 - **Intentional sound:** Assess sonic choices through recordings and measurements; explain changes in the [decision log](meridian/DECISIONS.md).
 
@@ -38,6 +41,7 @@ Work spans acoustics, analogue electronics, simulation, measurement and mechanic
 | --- | --- |
 | [Meridian](meridian/README.md) | Recording brief, requirements and development status |
 | [Engineering decisions](meridian/DECISIONS.md) | Design rationale, constraints and evidence |
+| [Component policy](COMPONENTS.md) | Core standard-parts principle, Germany availability, realized BOMs and cost evidence |
 | [Patent policy](PATENTS.md) | Mandatory non-infringement requirement, screening evidence and implementation/release gates |
 | [Capsule research](meridian/research/) | Component comparisons and investigations |
 | [Reference archive](meridian/research/reference-datasheets/README.md) | Source documents, provenance and checksums |

@@ -1,6 +1,12 @@
 # Germany procurement and cost contract
 
-This document makes the existing owner requirements in `meridian/README.md` and `meridian/DECISIONS.md` D001, D008, D010 and D011 explicit for laboratory work. It adds no numerical spending ceiling and authorizes no purchase or supplier contact.
+This document applies the mandatory [repository standard-parts policy](../../../COMPONENTS.md) and makes the owner requirements in `meridian/README.md` and `meridian/DECISIONS.md` D001, D008, D010, D011 and D017 explicit for laboratory work. It adds no numerical spending ceiling and authorizes no purchase or supplier contact.
+
+## Standard parts and realized implementations
+
+Use ordinary documented production components, obtainable nominal values and practical packages. Prefer supported parts and inexpensive precision passives where useful. Do not depend on NOS, obsolete or undocumented parts, selected specimens or hidden trimming. Specialist low-leakage or precision parts require a documented function and verified sourcing. The specified capsule remains the research input.
+
+Translate continuous optimizer proposals into actual BOMs, preserving their parents. Re-run the complete applicable suite with obtainable nominal values, actual tolerances and relevant noise, leakage, temperature and parasitic behavior. Validate substitutions and series/parallel combinations rather than treating them as equivalent. Preserve unsourced concepts as research, but resolve implementation dependencies before prototype selection or build recommendations.
 
 ## Orderability and sourcing
 

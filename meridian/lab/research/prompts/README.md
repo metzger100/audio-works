@@ -14,6 +14,8 @@ Revision 2 makes [Germany procurement and delivered-cost requirements](../procur
 
 Revision 3 adds the mandatory [patent non-infringement requirement](../../../../PATENTS.md) to every prompt: early feature flags, dated claim/territory/status evidence, unresolved-risk holds at affected implementation gates and no unsupported legal-clearance claim.
 
+Revision 4 makes [standard, documented and currently obtainable parts](../../../../COMPONENTS.md) a core principle in every prompt. Optimized values must be realized as an actual BOM and requalified with documented tolerances and substitutes; unsourced concepts retain research value without becoming build recommendations.
+
 The prompts do not assume that all devices, mechanisms or candidates will succeed. Their deliverables are executable work, preserved failures and honest evidence coverage. Physical measurements and an unknown safe capsule bias remain separate gates. The complete mission and project agent contract continue to apply.
 
 These prompts were prepared as writing artifacts; none of their engineering tasks has been launched by creating this pack.

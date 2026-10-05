@@ -6,6 +6,8 @@
 
 **Judge:** the simulator and automated numerical tests. A converged run is data, not qualification. Production eligibility also requires evidence and physical measurement gates. Proposals and failures remain in the quality-diversity archive. Neither role may edit the frozen acceptance specification to rescue a candidate.
 
+**Standard-parts constraint:** both roles follow the [repository component policy](../../../COMPONENTS.md). The Inventor may preserve idealized or unsourced mechanism experiments with explicit limits. The Engineer seeks documented, obtainable implementations, records the actual BOM and dated Germany sourcing/cost evidence, and requalifies realized values, tolerances and substitutes. Neither role may promote theoretical values or unverified parts into a build recommendation. Preserve architecture diversity while investigating alternative parts.
+
 **Patent constraint:** both roles follow the [repository non-infringement policy](../../../PATENTS.md). The Inventor records potentially relevant prior art and feature-level patent flags; the Engineer links the actual implementation/version to claim-screening evidence and rechecks structural alternatives. Neither role, nor SPICE, can provide legal clearance. Credible unresolved potentially blocking risks hold the affected implementation at prototype/manufacture/publication gates without erasing engineering results.
 
 The roles are persistent workflow roles, not a claim that unsupervised AI models or a background service are currently running. The bounded search runner executes only implemented candidates. New topologies still require an Inventor/Engineer agent to supply their netlists; the workspace then evaluates them reproducibly.

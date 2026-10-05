@@ -2,6 +2,8 @@
 
 An executable, evidence-first workspace for **Arienne Audio Flat K47 Cardioid/Omni K47FRB** under realistic P48. Current work is the Phase 0–2 foundation. No production microphone architecture is selected, and no circuit is qualified for prototyping.
 
+**Standard parts and availability are a core project constraint.** Follow the [repository component policy](../../COMPONENTS.md) and [Germany procurement contract](research/procurement_germany.md). Implement candidates with documented, currently obtainable parts and actual nominal values, qualify their tolerances, and retain dated small-quantity Germany sourcing and delivered-cost evidence. Ideal-value results and unsourced concepts remain research evidence until their concrete implementations are verified. The current laboratory does not certify a build-ready BOM or implement an automatic availability gate.
+
 **Patent non-infringement is a mandatory project constraint.** Follow the [repository policy](../../PATENTS.md) and [patent track](research/patents/README.md). Track candidate-linked claims, territory, current status and unresolved risks. A credible unresolved potentially blocking claim holds the affected implementation from prototype selection, manufacture or publication of implementation/build guidance. Patent review is separate from numerical engineering qualification; the current workspace has no candidate-level legal clearance.
 
 Start with [the formal specification](spec/microphone_spec.yaml), [capsule uncertainty](spec/capsule_model.yaml), [P48/environment constraints](spec/design_constraints.yaml), [source register](research/sources.yaml) and [Phase 0 report](research/phase0_report.md). Existing capsule research and purchase history remain in the parent `meridian/` project.
