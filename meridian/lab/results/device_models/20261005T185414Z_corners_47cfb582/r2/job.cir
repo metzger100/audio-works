@@ -1,0 +1,51 @@
+* Independent native DC checks, r2; no device qualification
+.include "/home/leobareth/Dokumente/Audiotech/meridian/lab/results/device_models/20261005T185414Z_corners_47cfb582/source/models/semiconductor/dc_bound_controls.cir"
+.temp 25
+.options tnom=25 reltol=1e-8 abstol=1e-16 gmin=1e-15
+Vd0_zero d0_zero 0 10
+Vg0_zero g0_zero 0 DC 0 AC 1
+Jq0_zero d0_zero g0_zero 0 DC_BOUND_0
+Vd0_2ma d0_2ma 0 10
+Vg0_2ma g0_2ma 0 DC -0.7460612809618953 AC 1
+Jq0_2ma d0_2ma g0_2ma 0 DC_BOUND_0
+Vd0_100ua d0_100ua 0 10
+Vg0_100ua g0_100ua 0 DC -0.9573338162520674 AC 1
+Jq0_100ua d0_100ua g0_100ua 0 DC_BOUND_0
+Vd0_100na d0_100na 0 10
+Vg0_100na g0_100na 0 DC -1.016257635410135 AC 1
+Jq0_100na d0_100na g0_100na 0 DC_BOUND_0
+Vd1_zero d1_zero 0 10
+Vg1_zero g1_zero 0 DC 0 AC 1
+Jq1_zero d1_zero g1_zero 0 DC_BOUND_1
+Vd1_2ma d1_2ma 0 10
+Vg1_2ma g1_2ma 0 DC -0.7833352863135074 AC 1
+Jq1_2ma d1_2ma g1_2ma 0 DC_BOUND_1
+Vd1_100ua d1_100ua 0 10
+Vg1_100ua g1_100ua 0 DC -0.9743873913709716 AC 1
+Jq1_100ua d1_100ua g1_100ua 0 DC_BOUND_1
+Vd1_100na d1_100na 0 10
+Vg1_100na g1_100na 0 DC -1.027671741240265 AC 1
+Jq1_100na d1_100na g1_100na 0 DC_BOUND_1
+Vd2_zero d2_zero 0 10
+Vg2_zero g2_zero 0 DC 0 AC 1
+Jq2_zero d2_zero g2_zero 0 DC_BOUND_2
+Vd2_2ma d2_2ma 0 10
+Vg2_2ma g2_2ma 0 DC -0.910208423834364 AC 1
+Jq2_2ma d2_2ma g2_2ma 0 DC_BOUND_2
+Vd2_100ua d2_100ua 0 10
+Vg2_100ua g2_100ua 0 DC -1.096380973526182 AC 1
+Jq2_100ua d2_100ua g2_100ua 0 DC_BOUND_2
+Vd2_100na d2_100na 0 10
+Vg2_100na g2_100na 0 DC -1.148304417504219 AC 1
+Jq2_100na d2_100na g2_100na 0 DC_BOUND_2
+
+.control
+set filetype=ascii
+set numdgt=16
+op
+write op.raw all
+ac lin 1 1000 1000
+write ac.raw all
+quit
+.endc
+.end

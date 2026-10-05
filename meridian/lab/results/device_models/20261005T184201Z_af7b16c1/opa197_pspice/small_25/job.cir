@@ -1,0 +1,24 @@
+Meridian isolated opa197_pspice small_25
+.include "/home/leobareth/Dokumente/Audiotech/meridian/lab/results/device_models/20261005T184201Z_af7b16c1/source/models/semiconductor/vendor/opa197.lib"
+.temp 25
+.options reltol=1e-06 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+Vp p 0 18
+Vn n 0 -18
+Vin src 0 DC 0 AC 1 SIN(0 20.0 1000)
+Vlink src inp 0
+Xu inp out p n out OPAx197
+Rload out 0 10000
+
+.control
+set filetype=ascii
+set numdgt=16
+op
+write op.raw v(out) i(vp) i(vn) i(vin)
+ac dec 64 1 100Meg
+write ac.raw v(out) i(vin)
+noise v(out) Vin dec 64 1 100k 1
+setplot noise1
+write noise.raw all
+quit
+.endc
+.end

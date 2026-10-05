@@ -6,6 +6,21 @@ tools/ngspice/
 tools/downloads/
 tools/config/
 # Keep compact results, decks, logs, parameters, and source/spec snapshots in Git.
-# Raw waveforms remain on disk, including failed experiments; see results/README.md.
+# Raw waveforms and their CSV exports remain on disk, including failures.
+# See results/README.md and the tracked checksum inventories.
 results/**/*.raw
+results/**/*.raw.csv
 tools/probe-*.raw
+# Synthetic model/provenance fixtures are scratch files, not experiment evidence.
+# Keep real physics-control decks, logs and failure records under raw_tests/.
+results/verification/**/raw_tests/test_vendor_version_and_hash_*/
+results/verification/**/raw_tests/test_html_and_missing_vendor_*/
+results/verification/**/raw_tests/test_external_candidate_includ*/
+results/verification/**/raw_tests/test_duplicate_vendor_subcircu*/
+results/verification/**/raw_tests/test_local_model_definitions_*/
+results/verification/**/raw_tests/test_source_manifest_includes_*/
+# Vendor copyright/redistribution terms are not established. Preserve locally.
+models/semiconductor/vendor/
+results/**/source/models/semiconductor/vendor/
+research/device_sources/local/
+results/**/source/research/device_sources/local/

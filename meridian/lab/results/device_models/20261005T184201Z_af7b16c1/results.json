@@ -1,0 +1,4246 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20261005T184201Z_af7b16c1",
+  "timestamp_utc": "2026-10-05T18:43:48.186132+00:00",
+  "rng_seed": null,
+  "sampling": "deterministic grids; no manufacturing probabilities",
+  "parent_experiments": [
+    "20261005T183611Z_5b4724a8"
+  ],
+  "source_manifest": {
+    "models/capsule/flat_k47.cir": "26899d24e6aefa2cfd41b6c13fe1e022e94f2ffec10358ec00dfb74ed0c082b4",
+    "models/capsule/flat_k47_native_q_r1.cir": "79b97ea73165979525f08aca427d8bfaa42fa8814ae576b140bf97550fb61c18",
+    "models/capsule/flat_k47_scaled_observer_r2.cir": "a977702eae58c5345e129bb282ce75f98e4405872e891e603512d37c480758fe",
+    "models/capsule/flat_k47_series_motion_r3.cir": "dcd00a192cfdc6a1744d9a3c2c8ad65b73b4a990697f85f23e756711834d5bb7",
+    "models/environment/p48.cir": "8037de103d579dc4923b37e2ae0b2c78a7337b39385f05055d7e08aa94a53d6f",
+    "models/semiconductor/acquire.py": "d86441ffc7b0c5c1b3371444275deca27826f136feb022d459a281fadc85bac5",
+    "models/semiconductor/acquisition.yaml": "8423936e4c0d64879b356c4db9f35b0f1729d352008ccd5fd792b990d7f51a9b",
+    "models/semiconductor/characterize.py": "b9ac0bc373c0b6ce414a317d705b8ad615f60b149b1026f00a19ebc56c3cd375",
+    "models/semiconductor/corners.yaml": "07cba7e177d59fbda19e4e1fecc8d1e045c28b7126e942122f32994a974ada17",
+    "models/semiconductor/dc_bound_controls.cir": "4aec8ca3bf32d3ee0ac921b407d0b86b73acfef6de1db7a0b313e10e19b00c4d",
+    "models/semiconductor/prepare.py": "bd2aca3425ebaa7eb7d9048e3856640990a46c60b56f1093da1e87073e5457ea",
+    "models/semiconductor/references.yaml": "538c66f7587ba18610aa5c5300e4248395d6fe02c950ec741f1cff3c3de55328",
+    "models/semiconductor/registry.yaml": "ec242ebc783cd75f95e123c99162890c4d31c798206e7780e04360af6dd994b5",
+    "models/semiconductor/vendor/2n7002.lib": "4a2a3f7fb1725f12fcfe3f7fef5cc082be2ac58eeb30ee4fdb693398e74abbf5",
+    "models/semiconductor/vendor/bc846b.lib": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+    "models/semiconductor/vendor/bc846b_emitter_r1.lib": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+    "models/semiconductor/vendor/bc856b.lib": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+    "models/semiconductor/vendor/downloads/sboma34d.zip": "9e55fcaa23d54cee025dda3fa9872b11c41c531f82e0802c2b93d51e943666e5",
+    "models/semiconductor/vendor/downloads/slpm349i.zip": "6358de546c957c142c321f30431fa816610a22599a0a3f980646ac6bbe6eace0",
+    "models/semiconductor/vendor/downloads/slpm366.zip": "1fd7c2ff8ef1c2b1354c98e35537f4d0db56ebb0eea614702bff7610c25e46a1",
+    "models/semiconductor/vendor/evidence/2n7002.pdf": "cc9c275457670c3cbbf2e56f5a75c800d3b5f0b396fabc798cf18cb639646475",
+    "models/semiconductor/vendor/evidence/bc846.pdf": "045a6cc21de93ac634aad910567e882926bd6ef154cbd8c59d13201134642a97",
+    "models/semiconductor/vendor/evidence/bc856.pdf": "d9a836e40dd8f1e788d7dadbfcbe8cf4836ed5debe789c84b8fa574132f84943",
+    "models/semiconductor/vendor/evidence/jfe150.pdf": "925d58a8f0cf7db307325ece12fb2f61a736b2c1440f63928b5e6c1312f39365",
+    "models/semiconductor/vendor/evidence/opa197.pdf": "27653a7d5e965cbb2d23f7998919ebd774efd5cd3e126b8f0881469ae91166fd",
+    "models/semiconductor/vendor/jfe150_generic.lib": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+    "models/semiconductor/vendor/jfe150_pspice.lib": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+    "models/semiconductor/vendor/jfe150_strong.lib": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+    "models/semiconductor/vendor/jfe150_weak.lib": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+    "models/semiconductor/vendor/opa197.lib": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+    "optimization/optimize_bias.py": "90cf1a61c2aaad14c39c3c6c544bc8bae21fb556303381d44c4ffc8bef498733",
+    "optimization/optimize_values.py": "6c332b7758d61cf92aad716781ee81ee0401156965543673f9438d2d8e5e85f4",
+    "requirements.txt": "f2162d13822ff575becaab0e43a96dcce42f33a9e3cd4aacbc88d3ae1e4ff3c3",
+    "research/device_sources/README.md": "f5950aa76d4a5813bc3a1fbfe9f74b553c9fee8559982c17899ae893923676eb",
+    "research/device_sources/local/web_observations.json": "82eba24adf2a815360d34ad69a3dc98feb4aba101e5431a6340ee11bc585b498",
+    "research/procurement/semiconductors_2026-10-05.yaml": "f09abdec07694398de770ed4f784325d2210c0cc2169aa53675771332716fe21",
+    "search/archive.py": "a6540a439fd86d9d0989cc6b75a5656afd15eaeed86adae189debe604a242b58",
+    "search/concepts.yaml": "711693e5c28f1313246c4411926687981b4c0db48a845ab5fa4585dd22002123",
+    "search/families.yaml": "458ea6f4ad64c1244cb8f709ded0313b46c75f4c2ca46066683ea82f41c2ffdf",
+    "search/generate_topology.py": "3b03bd1291e1e757f2d5701e029bf9610a772442a3bfb55bf662b70ede13220b",
+    "search/loop.py": "3322bb6d43b86f9c4e1c472a79d50f80e06783960c880a8be8452ee4b64e1d9f",
+    "search/mutate.py": "8f91ab73f3ffca62922db5346173dd66a61baa6b781141dd9c3ca61f011d9886",
+    "search/novelty.py": "1d0373ee6060f925febf54375a2de2dd42c846b5a1ba6c86570c597d1c1566df",
+    "search/proposals/concept_0010/proposal.yaml": "4829f158162cbc7c3290a3655c87e50dc3d9648a6497bcc5e6bfa99e841592b0",
+    "search/selection.py": "83f62cbb70327ad8e713f05dedcf902ecd395146f4e5b9664080b27915b713a0",
+    "spec/capsule_model.yaml": "169983f2601ee39a59496e0e4d2d337deb14e7e4ec7bf38a92f6ca89b59bc696",
+    "spec/design_constraints.yaml": "48d03f7b8d6302aeca14efda4de5c12cf491c393e212e6842f04da60c344dc43",
+    "spec/lock.yaml": "0a5ac00e5d73b720b0c0926c6987ab6b8cb2dca6ac3d1513039db9f3a05c8d07",
+    "spec/microphone_spec.yaml": "ea5a6f973f17f907c5b76f9d17a35cfa784903bcfcd8d7f1d08cd538b65636cd",
+    "spec/scoring.yaml": "6aa6b8620a4700220ac952472f150396599ca67a2918f6f114e1b283a158c0af",
+    "src/meridian_lab/__init__.py": "70778163075ec49235b8cf725bce58f9cef39892880a46ccc9fa58a9aeb98f52",
+    "src/meridian_lab/archive.py": "56353457cb366e1141d3a82ce5cdd74e1648f6321ae5b1247a7f20019aa44d06",
+    "src/meridian_lab/cli.py": "8bd9d564d2dfe329c75a4403be77aeceda6cd5b8395d7322a9f3729b6e923bdf",
+    "src/meridian_lab/core.py": "1e5712da3ec7f57b00e329b3525afcd19a1756c184473f419d43d5c1a924c354",
+    "src/meridian_lab/device_models.py": "9e8a1642efbd38886548adfa892b56fc0b798c58036defc2af15344b151a50be",
+    "src/meridian_lab/metrics.py": "37827dfc57123f2fbfb5398f4f0a6e0be147cae9e2f2ae5b46fc35d61d08c9c8",
+    "src/meridian_lab/qualification.py": "859c520c71bc6df38bd8e809aa74631b7dd5ca15c12d23986756d817e0837077",
+    "tests/test_device_models.py": "7d35c9a30683a2b4c0daabf95436b7aa251006f549b4574bb50cdab7ba28be5e",
+    "tests/test_integrity.py": "9f6a90bee69c5327216c42e29f11a6f4fd00b8359a42a42e72de90b7f1128c2d",
+    "tests/test_physics.py": "4cffb4617d81ee327b32883f7fafc88905c76126f567d77b5d79a39f22560e59",
+    "tests/test_search_and_numerics.py": "b906730c436811458eb61cfb96799e069c48485ecf2e54ec4b14694f338a761b",
+    "tools/ngspice-run": "52cc8315fd7b1dc8dc7757658407dbd4a0b21e1f73bbbdf8a183e04487fa26fd"
+  },
+  "source_unchanged": true,
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.8",
+    "yaml": "6.0.3",
+    "ngspice": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Wed Aug 19 09:38:31 UTC 2026\n******"
+  },
+  "results": {
+    "jfe150_generic": {
+      "comparisons": [
+        {
+          "name": "typical_transfer_vgs_-0.7",
+          "value": 0.0024232549427012215,
+          "status": "pass",
+          "lower": 0.0018,
+          "upper": 0.0028,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-1,VDS5V,25C"
+        },
+        {
+          "name": "typical_transfer_vgs_-0.4",
+          "value": 0.009674587658280626,
+          "status": "pass",
+          "lower": 0.009,
+          "upper": 0.011,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-1,VDS5V,25C"
+        },
+        {
+          "name": "typical_transfer_vgs_0",
+          "value": 0.025332262563979288,
+          "status": "fail",
+          "lower": 0.027,
+          "upper": 0.029,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-1,VDS5V,25C"
+        },
+        {
+          "name": "idss_-40",
+          "value": 0.02734920533911733,
+          "status": "pass",
+          "lower": 0.022,
+          "upper": 0.057,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,VGS0"
+        },
+        {
+          "name": "idss_25",
+          "value": 0.02690199894477896,
+          "status": "pass",
+          "lower": 0.024,
+          "upper": 0.046,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,VGS0"
+        },
+        {
+          "name": "gfs_25",
+          "value": 0.04910919755363801,
+          "status": "fail",
+          "lower": 0.055,
+          "upper": 0.08,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,VGS0"
+        },
+        {
+          "name": "idss_125",
+          "value": 0.02347428551379815,
+          "status": "pass",
+          "lower": 0.022,
+          "upper": 0.057,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,VGS0"
+        },
+        {
+          "name": "en_0.0001_10",
+          "value": 2.349049335430046e-09,
+          "status": "fail",
+          "lower": 2.4e-09,
+          "upper": 3.6e-09,
+          "typical": 3e-09,
+          "relative_disagreement": -0.21698355485665127,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C"
+        },
+        {
+          "name": "en_0.0001_1000",
+          "value": 1.761263790829714e-09,
+          "status": "pass",
+          "lower": 1.6000000000000003e-09,
+          "upper": 2.4e-09,
+          "typical": 2e-09,
+          "relative_disagreement": -0.11936810458514308,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C"
+        },
+        {
+          "name": "en_0.002_10",
+          "value": 1.78411029095511e-09,
+          "status": "pass",
+          "lower": 1.2800000000000001e-09,
+          "upper": 1.92e-09,
+          "typical": 1.6e-09,
+          "relative_disagreement": 0.11506893184694376,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C"
+        },
+        {
+          "name": "en_0.002_1000",
+          "value": 8.755081102887646e-10,
+          "status": "pass",
+          "lower": 7.2e-10,
+          "upper": 1.08e-09,
+          "typical": 9e-10,
+          "relative_disagreement": -0.02721321079026157,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C"
+        },
+        {
+          "name": "ciss_2ma",
+          "value": 1.550625484137212e-11,
+          "status": "condition_unresolved",
+          "lower": 1.9200000000000002e-11,
+          "upper": 2.88e-11,
+          "typical": 2.4e-11,
+          "relative_disagreement": -0.35390604827616173,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V; unspecified capacitance bias follows table default",
+          "note": "Table capacitance gate bias unspecified; off/operating bias both retained. No confirmed device failure from this comparison."
+        },
+        {
+          "name": "in_2ma_1k",
+          "value": 4.878865866688575e-16,
+          "status": "fail",
+          "lower": 1.4400000000000001e-15,
+          "upper": 2.16e-15,
+          "typical": 1.8e-15,
+          "relative_disagreement": -0.7289518962950792,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5; Hgate1ohm noiseless observer"
+        },
+        {
+          "name": "en_0.005_10",
+          "value": 1.713744539854659e-09,
+          "status": "pass",
+          "lower": 1.44e-09,
+          "upper": 2.16e-09,
+          "typical": 1.8e-09,
+          "relative_disagreement": -0.047919700080744955,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C"
+        },
+        {
+          "name": "en_0.005_1000",
+          "value": 7.207721455378009e-10,
+          "status": "pass",
+          "lower": 6.400000000000001e-10,
+          "upper": 9.6e-10,
+          "typical": 8e-10,
+          "relative_disagreement": -0.0990348180777489,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C"
+        },
+        {
+          "name": "vgs_at_1e-07",
+          "value": -0.9784042006996403,
+          "status": "pass",
+          "lower": -1.5,
+          "upper": -0.9,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,25C"
+        },
+        {
+          "name": "vgs_at_0.0001",
+          "value": -0.9267999176381758,
+          "status": "pass",
+          "lower": -1.3,
+          "upper": -0.7,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,25C"
+        },
+        {
+          "name": "vgs_at_0.002",
+          "value": -0.735529156649447,
+          "status": "pass",
+          "lower": -1.1,
+          "upper": -0.5,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,25C"
+        },
+        {
+          "name": "output_vds_5",
+          "value": 0.0024232549275627234,
+          "status": "fail",
+          "lower": 0.0035,
+          "upper": 0.0043,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-3,VGS=-.7,25C"
+        },
+        {
+          "name": "output_vds_20",
+          "value": 0.002941673778798837,
+          "status": "fail",
+          "lower": 0.0048,
+          "upper": 0.0056,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-3,VGS=-.7,25C"
+        },
+        {
+          "name": "gate_leakage",
+          "value": 3.549072792983838e-12,
+          "status": "pass",
+          "lower": null,
+          "upper": 1e-11,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS2V,VGS-.7V,VCH5V,VCL-5V"
+        },
+        {
+          "name": "noise_refinement",
+          "value": 0.0,
+          "status": "pass",
+          "lower": null,
+          "upper": 0.01,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "numerical_refinement",
+          "condition": ""
+        },
+        {
+          "name": "large_signal_refinement",
+          "value": 1.295909407525692e-05,
+          "status": "pass",
+          "lower": null,
+          "upper": 0.01,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "numerical_refinement",
+          "condition": "range-normalized maximum difference on common grid"
+        }
+      ],
+      "measurements": {
+        "transfer_-40": {
+          "idss_at_5v_a": 0.02570774507491635
+        },
+        "transfer_-10": {
+          "idss_at_5v_a": 0.02568131354952929
+        },
+        "transfer_25": {
+          "idss_at_5v_a": 0.02533226256397936
+        },
+        "transfer_50": {
+          "idss_at_5v_a": 0.02485364688165359
+        },
+        "transfer_125": {
+          "idss_at_5v_a": 0.02215576077783132
+        },
+        "idss_gfs_-40": {
+          "idss_a": 0.02734920533911733,
+          "gfs_s": 0.04339377822746931
+        },
+        "idss_gfs_25": {
+          "idss_a": 0.02690199894477896,
+          "gfs_s": 0.04910919755363801
+        },
+        "idss_gfs_125": {
+          "idss_a": 0.02347428551379815,
+          "gfs_s": 0.05654728871107716
+        },
+        "bias_0.0001": {
+          "vgs_v": -0.924783754917511,
+          "id_a": 9.99696767438607e-05,
+          "gm_s": 0.0035936551878295734,
+          "ciss_f": 1.5244349536342252e-11,
+          "gate_current_a": 4.445488152746486e-11,
+          "gate_current_noise_1k_a_sqrt_hz": 4.879152189173737e-16,
+          "voltage_noise_10hz": 2.349049335430046e-09,
+          "voltage_noise_1khz": 1.761263790829714e-09
+        },
+        "bias_0.002": {
+          "vgs_v": -0.7264793131891707,
+          "id_a": 0.001999980131499601,
+          "gm_s": 0.015268212759995356,
+          "ciss_f": 1.550625484137212e-11,
+          "gate_current_a": 4.366107005412992e-11,
+          "gate_current_noise_1k_a_sqrt_hz": 4.878865866688575e-16,
+          "voltage_noise_10hz": 1.78411029095511e-09,
+          "voltage_noise_1khz": 8.755081102887646e-10
+        },
+        "bias_0.005": {
+          "vgs_v": -0.5713590364365708,
+          "id_a": 0.004999978775295233,
+          "gm_s": 0.023262520154000148,
+          "ciss_f": 1.5801100537441085e-11,
+          "gate_current_a": 4.304012546922194e-11,
+          "gate_current_noise_1k_a_sqrt_hz": 4.878723604633504e-16,
+          "voltage_noise_10hz": 1.713744539854659e-09,
+          "voltage_noise_1khz": 7.207721455378009e-10
+        },
+        "off_bias_cap_0": {
+          "ciss_f": 2.661662903985931e-11,
+          "vgs_v": 0,
+          "vds_v": 0,
+          "condition_status": "explicit_exploratory_off_bias; manufacturer capacitance gate-bias clarification required"
+        },
+        "off_bias_cap_5": {
+          "ciss_f": 1.781778397752331e-11,
+          "vgs_v": 0,
+          "vds_v": 5,
+          "condition_status": "explicit_exploratory_off_bias; manufacturer capacitance gate-bias clarification required"
+        }
+      },
+      "scope": "DC/caps/terminal noise/large-signal screen; no production noise/yield/SOA qualification",
+      "status": "disagreement"
+    },
+    "jfe150_weak": {
+      "comparisons": [
+        {
+          "name": "typical_transfer_vgs_-0.7",
+          "value": 0.0009752517758394503,
+          "status": "reference_only",
+          "lower": 0.0018,
+          "upper": 0.0028,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-1,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "typical_transfer_vgs_-0.4",
+          "value": 0.005598433666283072,
+          "status": "reference_only",
+          "lower": 0.009,
+          "upper": 0.011,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-1,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "typical_transfer_vgs_0",
+          "value": 0.016793163969749787,
+          "status": "reference_only",
+          "lower": 0.027,
+          "upper": 0.029,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-1,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "idss_-40",
+          "value": 0.01844282838785416,
+          "status": "fail",
+          "lower": 0.022,
+          "upper": 0.057,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,VGS0"
+        },
+        {
+          "name": "idss_25",
+          "value": 0.01790375241647713,
+          "status": "fail",
+          "lower": 0.024,
+          "upper": 0.046,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,VGS0"
+        },
+        {
+          "name": "gfs_25",
+          "value": 0.036469162591305344,
+          "status": "fail",
+          "lower": 0.055,
+          "upper": 0.08,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,VGS0"
+        },
+        {
+          "name": "idss_125",
+          "value": 0.01499311313352347,
+          "status": "fail",
+          "lower": 0.022,
+          "upper": 0.057,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,VGS0"
+        },
+        {
+          "name": "en_0.0001_10",
+          "value": 2.638644030425004e-09,
+          "status": "reference_only",
+          "lower": 2.4e-09,
+          "upper": 3.6e-09,
+          "typical": 3e-09,
+          "relative_disagreement": -0.12045198985833198,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "en_0.0001_1000",
+          "value": 1.906241096823985e-09,
+          "status": "reference_only",
+          "lower": 1.6000000000000003e-09,
+          "upper": 2.4e-09,
+          "typical": 2e-09,
+          "relative_disagreement": -0.04687945158800746,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "en_0.002_10",
+          "value": 2.054783359832495e-09,
+          "status": "reference_only",
+          "lower": 1.2800000000000001e-09,
+          "upper": 1.92e-09,
+          "typical": 1.6e-09,
+          "relative_disagreement": 0.28423959989530934,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "en_0.002_1000",
+          "value": 9.448207897286337e-10,
+          "status": "reference_only",
+          "lower": 7.2e-10,
+          "upper": 1.08e-09,
+          "typical": 9e-10,
+          "relative_disagreement": 0.04980087747625971,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "ciss_2ma",
+          "value": 1.6219910490509272e-11,
+          "status": "condition_unresolved",
+          "lower": 1.9200000000000002e-11,
+          "upper": 2.88e-11,
+          "typical": 2.4e-11,
+          "relative_disagreement": -0.32417039622878036,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V; unspecified capacitance bias follows table default",
+          "note": "Table capacitance gate bias unspecified; off/operating bias both retained. No confirmed device failure from this comparison."
+        },
+        {
+          "name": "in_2ma_1k",
+          "value": 4.879039053460518e-16,
+          "status": "reference_only",
+          "lower": 1.4400000000000001e-15,
+          "upper": 2.16e-15,
+          "typical": 1.8e-15,
+          "relative_disagreement": -0.728942274807749,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5; Hgate1ohm noiseless observer",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "en_0.005_10",
+          "value": 1.983282892631522e-09,
+          "status": "reference_only",
+          "lower": 1.44e-09,
+          "upper": 2.16e-09,
+          "typical": 1.8e-09,
+          "relative_disagreement": 0.10182382923973453,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "en_0.005_1000",
+          "value": 7.763763255524626e-10,
+          "status": "reference_only",
+          "lower": 6.400000000000001e-10,
+          "upper": 9.6e-10,
+          "typical": 8e-10,
+          "relative_disagreement": -0.0295295930594218,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "vgs_at_1e-07",
+          "value": -0.9030533544992638,
+          "status": "pass",
+          "lower": -1.5,
+          "upper": -0.9,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,25C"
+        },
+        {
+          "name": "vgs_at_0.0001",
+          "value": -0.8426274959075731,
+          "status": "pass",
+          "lower": -1.3,
+          "upper": -0.7,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,25C"
+        },
+        {
+          "name": "vgs_at_0.002",
+          "value": -0.6195027875961225,
+          "status": "pass",
+          "lower": -1.1,
+          "upper": -0.5,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,25C"
+        },
+        {
+          "name": "output_vds_5",
+          "value": 0.0009752517723013999,
+          "status": "reference_only",
+          "lower": 0.0035,
+          "upper": 0.0043,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-3,VGS=-.7,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "output_vds_20",
+          "value": 0.001192332563389797,
+          "status": "reference_only",
+          "lower": 0.0048,
+          "upper": 0.0056,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-3,VGS=-.7,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "gate_leakage",
+          "value": 3.549071816566056e-12,
+          "status": "pass",
+          "lower": null,
+          "upper": 1e-11,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS2V,VGS-.7V,VCH5V,VCL-5V"
+        },
+        {
+          "name": "noise_refinement",
+          "value": 0.0,
+          "status": "pass",
+          "lower": null,
+          "upper": 0.01,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "numerical_refinement",
+          "condition": ""
+        },
+        {
+          "name": "large_signal_refinement",
+          "value": 9.448091296043498e-06,
+          "status": "pass",
+          "lower": null,
+          "upper": 0.01,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "numerical_refinement",
+          "condition": "range-normalized maximum difference on common grid"
+        }
+      ],
+      "measurements": {
+        "transfer_-40": {
+          "idss_at_5v_a": 0.01727578411291741
+        },
+        "transfer_-10": {
+          "idss_at_5v_a": 0.01716448567614171
+        },
+        "transfer_25": {
+          "idss_at_5v_a": 0.01679316396974984
+        },
+        "transfer_50": {
+          "idss_at_5v_a": 0.01635402729128899
+        },
+        "transfer_125": {
+          "idss_at_5v_a": 0.01408589329644561
+        },
+        "idss_gfs_-40": {
+          "idss_a": 0.01844282838785416,
+          "gfs_s": 0.032158325572693124
+        },
+        "idss_gfs_25": {
+          "idss_a": 0.01790375241647713,
+          "gfs_s": 0.036469162591305344
+        },
+        "idss_gfs_125": {
+          "idss_a": 0.01499311313352347,
+          "gfs_s": 0.04170735845794262
+        },
+        "bias_0.0001": {
+          "vgs_v": -0.8402542958485706,
+          "id_a": 9.998967962010497e-05,
+          "gm_s": 0.003068748481386303,
+          "ciss_f": 1.5637662668174415e-11,
+          "gate_current_a": 4.411651005999338e-11,
+          "gate_current_noise_1k_a_sqrt_hz": 4.879177435443669e-16,
+          "voltage_noise_10hz": 2.638644030425004e-09,
+          "voltage_noise_1khz": 1.906241096823985e-09
+        },
+        "bias_0.002": {
+          "vgs_v": -0.6088803308872266,
+          "id_a": 0.001999979936867291,
+          "gm_s": 0.013132326043700366,
+          "ciss_f": 1.6219910490509272e-11,
+          "gate_current_a": 4.319032116414741e-11,
+          "gate_current_noise_1k_a_sqrt_hz": 4.879039053460518e-16,
+          "voltage_noise_10hz": 2.054783359832495e-09,
+          "voltage_noise_1khz": 9.448207897286337e-10
+        },
+        "bias_0.005": {
+          "vgs_v": -0.4289916176356581,
+          "id_a": 0.004999981523229113,
+          "gm_s": 0.020109232022260653,
+          "ciss_f": 1.6817909773629238e-11,
+          "gate_current_a": 4.247022812132375e-11,
+          "gate_current_noise_1k_a_sqrt_hz": 4.879085456316393e-16,
+          "voltage_noise_10hz": 1.983282892631522e-09,
+          "voltage_noise_1khz": 7.763763255524626e-10
+        },
+        "off_bias_cap_0": {
+          "ciss_f": 2.6616628743460315e-11,
+          "vgs_v": 0,
+          "vds_v": 0,
+          "condition_status": "explicit_exploratory_off_bias; manufacturer capacitance gate-bias clarification required"
+        },
+        "off_bias_cap_5": {
+          "ciss_f": 1.9046772917541243e-11,
+          "vgs_v": 0,
+          "vds_v": 5,
+          "condition_status": "explicit_exploratory_off_bias; manufacturer capacitance gate-bias clarification required"
+        }
+      },
+      "scope": "DC/caps/terminal noise/large-signal screen; no production noise/yield/SOA qualification",
+      "status": "disagreement"
+    },
+    "jfe150_strong": {
+      "comparisons": [
+        {
+          "name": "typical_transfer_vgs_-0.7",
+          "value": 0.015473258196678774,
+          "status": "reference_only",
+          "lower": 0.0018,
+          "upper": 0.0028,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-1,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "typical_transfer_vgs_-0.4",
+          "value": 0.02487210083149942,
+          "status": "reference_only",
+          "lower": 0.009,
+          "upper": 0.011,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-1,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "typical_transfer_vgs_0",
+          "value": 0.038795955076420086,
+          "status": "reference_only",
+          "lower": 0.027,
+          "upper": 0.029,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-1,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "idss_-40",
+          "value": 0.04035127153259116,
+          "status": "pass",
+          "lower": 0.022,
+          "upper": 0.057,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,VGS0"
+        },
+        {
+          "name": "idss_25",
+          "value": 0.04004854891804221,
+          "status": "pass",
+          "lower": 0.024,
+          "upper": 0.046,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,VGS0"
+        },
+        {
+          "name": "gfs_25",
+          "value": 0.03721459216662196,
+          "status": "fail",
+          "lower": 0.055,
+          "upper": 0.08,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,VGS0"
+        },
+        {
+          "name": "idss_125",
+          "value": 0.0377242241846209,
+          "status": "pass",
+          "lower": 0.022,
+          "upper": 0.057,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,VGS0"
+        },
+        {
+          "name": "en_0.0001_10",
+          "value": 2.091192226371629e-09,
+          "status": "reference_only",
+          "lower": 2.4e-09,
+          "upper": 3.6e-09,
+          "typical": 3e-09,
+          "relative_disagreement": -0.3029359245427904,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "en_0.0001_1000",
+          "value": 1.656759335032891e-09,
+          "status": "reference_only",
+          "lower": 1.6000000000000003e-09,
+          "upper": 2.4e-09,
+          "typical": 2e-09,
+          "relative_disagreement": -0.17162033248355457,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "en_0.002_10",
+          "value": 1.567868869716714e-09,
+          "status": "reference_only",
+          "lower": 1.2800000000000001e-09,
+          "upper": 1.92e-09,
+          "typical": 1.6e-09,
+          "relative_disagreement": -0.02008195642705377,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "en_0.002_1000",
+          "value": 9.100833278238024e-10,
+          "status": "reference_only",
+          "lower": 7.2e-10,
+          "upper": 1.08e-09,
+          "typical": 9e-10,
+          "relative_disagreement": 0.011203697582002726,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "ciss_2ma",
+          "value": 1.1808271964515992e-11,
+          "status": "condition_unresolved",
+          "lower": 1.9200000000000002e-11,
+          "upper": 2.88e-11,
+          "typical": 2.4e-11,
+          "relative_disagreement": -0.507988668145167,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V; unspecified capacitance bias follows table default",
+          "note": "Table capacitance gate bias unspecified; off/operating bias both retained. No confirmed device failure from this comparison."
+        },
+        {
+          "name": "in_2ma_1k",
+          "value": 4.886891444045232e-16,
+          "status": "reference_only",
+          "lower": 1.4400000000000001e-15,
+          "upper": 2.16e-15,
+          "typical": 1.8e-15,
+          "relative_disagreement": -0.728506030886376,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5; Hgate1ohm noiseless observer",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "en_0.005_10",
+          "value": 1.502894651198349e-09,
+          "status": "reference_only",
+          "lower": 1.44e-09,
+          "upper": 2.16e-09,
+          "typical": 1.8e-09,
+          "relative_disagreement": -0.16505852711202834,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "en_0.005_1000",
+          "value": 7.91198965078817e-10,
+          "status": "reference_only",
+          "lower": 6.400000000000001e-10,
+          "upper": 9.6e-10,
+          "typical": 8e-10,
+          "relative_disagreement": -0.011001293651478743,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "vgs_at_1e-07",
+          "value": -1.5037058290264702,
+          "status": "fail",
+          "lower": -1.5,
+          "upper": -0.9,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,25C"
+        },
+        {
+          "name": "vgs_at_0.0001",
+          "value": -1.4601004883761206,
+          "status": "fail",
+          "lower": -1.3,
+          "upper": -0.7,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,25C"
+        },
+        {
+          "name": "vgs_at_0.002",
+          "value": -1.2797254387327845,
+          "status": "fail",
+          "lower": -1.1,
+          "upper": -0.5,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,25C"
+        },
+        {
+          "name": "output_vds_5",
+          "value": 0.015473257863264518,
+          "status": "reference_only",
+          "lower": 0.0035,
+          "upper": 0.0043,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-3,VGS=-.7,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "output_vds_20",
+          "value": 0.01725342893291593,
+          "status": "reference_only",
+          "lower": 0.0048,
+          "upper": 0.0056,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-3,VGS=-.7,25C",
+          "note": "Typical curves/noise are not guaranteed corner limits; disagreement remains quantified."
+        },
+        {
+          "name": "gate_leakage",
+          "value": 3.549006491935432e-12,
+          "status": "pass",
+          "lower": null,
+          "upper": 1e-11,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS2V,VGS-.7V,VCH5V,VCL-5V"
+        },
+        {
+          "name": "noise_refinement",
+          "value": 0.0,
+          "status": "pass",
+          "lower": null,
+          "upper": 0.01,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "numerical_refinement",
+          "condition": ""
+        },
+        {
+          "name": "large_signal_refinement",
+          "value": 1.798324575669383e-05,
+          "status": "pass",
+          "lower": null,
+          "upper": 0.01,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "numerical_refinement",
+          "condition": "range-normalized maximum difference on common grid"
+        }
+      ],
+      "measurements": {
+        "transfer_-40": {
+          "idss_at_5v_a": 0.03897423724011043
+        },
+        "transfer_-10": {
+          "idss_at_5v_a": 0.03900609572924482
+        },
+        "transfer_25": {
+          "idss_at_5v_a": 0.03879595507642014
+        },
+        "transfer_50": {
+          "idss_at_5v_a": 0.03847962443430081
+        },
+        "transfer_125": {
+          "idss_at_5v_a": 0.03669019821859854
+        },
+        "idss_gfs_-40": {
+          "idss_a": 0.04035127153259116,
+          "gfs_s": 0.03473971155546597
+        },
+        "idss_gfs_25": {
+          "idss_a": 0.04004854891804221,
+          "gfs_s": 0.03721459216662196
+        },
+        "idss_gfs_125": {
+          "idss_a": 0.0377242241846209,
+          "gfs_s": 0.040553506119524366
+        },
+        "bias_0.0001": {
+          "vgs_v": -1.4584453747302302,
+          "id_a": 9.997202762573876e-05,
+          "gm_s": 0.004154536117075175,
+          "ciss_f": 1.299062621678885e-11,
+          "gate_current_a": 4.659112859612974e-11,
+          "gate_current_noise_1k_a_sqrt_hz": 4.889269824011449e-16,
+          "voltage_noise_10hz": 2.091192226371629e-09,
+          "voltage_noise_1khz": 1.656759335032891e-09
+        },
+        "bias_0.002": {
+          "vgs_v": -1.2722865371980814,
+          "id_a": 0.001999989308002631,
+          "gm_s": 0.01513205232952044,
+          "ciss_f": 1.1808271964515992e-11,
+          "gate_current_a": 4.584592657999932e-11,
+          "gate_current_noise_1k_a_sqrt_hz": 4.886891444045232e-16,
+          "voltage_noise_10hz": 1.567868869716714e-09,
+          "voltage_noise_1khz": 9.100833278238024e-10
+        },
+        "bias_0.005": {
+          "vgs_v": -1.1079274706636741,
+          "id_a": 0.004999997955680208,
+          "gm_s": 0.020987956189423212,
+          "ciss_f": 1.1232143529414012e-11,
+          "gate_current_a": 4.518798431902049e-11,
+          "gate_current_noise_1k_a_sqrt_hz": 4.885574078602396e-16,
+          "voltage_noise_10hz": 1.502894651198349e-09,
+          "voltage_noise_1khz": 7.91198965078817e-10
+        },
+        "off_bias_cap_0": {
+          "ciss_f": 2.661657323895382e-11,
+          "vgs_v": 0,
+          "vds_v": 0,
+          "condition_status": "explicit_exploratory_off_bias; manufacturer capacitance gate-bias clarification required"
+        },
+        "off_bias_cap_5": {
+          "ciss_f": 1.0521580456568398e-11,
+          "vgs_v": 0,
+          "vds_v": 5,
+          "condition_status": "explicit_exploratory_off_bias; manufacturer capacitance gate-bias clarification required"
+        }
+      },
+      "scope": "DC/caps/terminal noise/large-signal screen; no production noise/yield/SOA qualification",
+      "status": "disagreement"
+    },
+    "jfe150_pspice": {
+      "comparisons": [
+        {
+          "name": "typical_transfer_vgs_-0.7",
+          "value": 0.0024232549427012215,
+          "status": "pass",
+          "lower": 0.0018,
+          "upper": 0.0028,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-1,VDS5V,25C"
+        },
+        {
+          "name": "typical_transfer_vgs_-0.4",
+          "value": 0.009674587658280626,
+          "status": "pass",
+          "lower": 0.009,
+          "upper": 0.011,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-1,VDS5V,25C"
+        },
+        {
+          "name": "typical_transfer_vgs_0",
+          "value": 0.025332262563979288,
+          "status": "fail",
+          "lower": 0.027,
+          "upper": 0.029,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-1,VDS5V,25C"
+        },
+        {
+          "name": "idss_-40",
+          "value": 0.02734920533911733,
+          "status": "pass",
+          "lower": 0.022,
+          "upper": 0.057,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,VGS0"
+        },
+        {
+          "name": "idss_25",
+          "value": 0.02690199894477896,
+          "status": "pass",
+          "lower": 0.024,
+          "upper": 0.046,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,VGS0"
+        },
+        {
+          "name": "gfs_25",
+          "value": 0.04910919755363801,
+          "status": "fail",
+          "lower": 0.055,
+          "upper": 0.08,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,VGS0"
+        },
+        {
+          "name": "idss_125",
+          "value": 0.02347428551379815,
+          "status": "pass",
+          "lower": 0.022,
+          "upper": 0.057,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,VGS0"
+        },
+        {
+          "name": "en_0.0001_10",
+          "value": 2.349049335430046e-09,
+          "status": "fail",
+          "lower": 2.4e-09,
+          "upper": 3.6e-09,
+          "typical": 3e-09,
+          "relative_disagreement": -0.21698355485665127,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C"
+        },
+        {
+          "name": "en_0.0001_1000",
+          "value": 1.761263790829714e-09,
+          "status": "pass",
+          "lower": 1.6000000000000003e-09,
+          "upper": 2.4e-09,
+          "typical": 2e-09,
+          "relative_disagreement": -0.11936810458514308,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C"
+        },
+        {
+          "name": "en_0.002_10",
+          "value": 1.78411029095511e-09,
+          "status": "pass",
+          "lower": 1.2800000000000001e-09,
+          "upper": 1.92e-09,
+          "typical": 1.6e-09,
+          "relative_disagreement": 0.11506893184694376,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C"
+        },
+        {
+          "name": "en_0.002_1000",
+          "value": 8.755081102887646e-10,
+          "status": "pass",
+          "lower": 7.2e-10,
+          "upper": 1.08e-09,
+          "typical": 9e-10,
+          "relative_disagreement": -0.02721321079026157,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C"
+        },
+        {
+          "name": "ciss_2ma",
+          "value": 1.550625484137212e-11,
+          "status": "condition_unresolved",
+          "lower": 1.9200000000000002e-11,
+          "upper": 2.88e-11,
+          "typical": 2.4e-11,
+          "relative_disagreement": -0.35390604827616173,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V; unspecified capacitance bias follows table default",
+          "note": "Table capacitance gate bias unspecified; off/operating bias both retained. No confirmed device failure from this comparison."
+        },
+        {
+          "name": "in_2ma_1k",
+          "value": 4.878865866688575e-16,
+          "status": "fail",
+          "lower": 1.4400000000000001e-15,
+          "upper": 2.16e-15,
+          "typical": 1.8e-15,
+          "relative_disagreement": -0.7289518962950792,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5; Hgate1ohm noiseless observer"
+        },
+        {
+          "name": "en_0.005_10",
+          "value": 1.713744539854659e-09,
+          "status": "pass",
+          "lower": 1.44e-09,
+          "upper": 2.16e-09,
+          "typical": 1.8e-09,
+          "relative_disagreement": -0.047919700080744955,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C"
+        },
+        {
+          "name": "en_0.005_1000",
+          "value": 7.207721455378009e-10,
+          "status": "pass",
+          "lower": 6.400000000000001e-10,
+          "upper": 9.6e-10,
+          "typical": 8e-10,
+          "relative_disagreement": -0.0990348180777489,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.5,VDS5V,25C"
+        },
+        {
+          "name": "vgs_at_1e-07",
+          "value": -0.9784042006996403,
+          "status": "pass",
+          "lower": -1.5,
+          "upper": -0.9,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,25C"
+        },
+        {
+          "name": "vgs_at_0.0001",
+          "value": -0.9267999176381758,
+          "status": "pass",
+          "lower": -1.3,
+          "upper": -0.7,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,25C"
+        },
+        {
+          "name": "vgs_at_0.002",
+          "value": -0.735529156649447,
+          "status": "pass",
+          "lower": -1.1,
+          "upper": -0.5,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS10V,25C"
+        },
+        {
+          "name": "output_vds_5",
+          "value": 0.0024232549275627234,
+          "status": "fail",
+          "lower": 0.0035,
+          "upper": 0.0043,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-3,VGS=-.7,25C"
+        },
+        {
+          "name": "output_vds_20",
+          "value": 0.002941673778798837,
+          "status": "fail",
+          "lower": 0.0048,
+          "upper": 0.0056,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_curve_reading_interval",
+          "condition": "Fig6-3,VGS=-.7,25C"
+        },
+        {
+          "name": "gate_leakage",
+          "value": 3.549072792983838e-12,
+          "status": "pass",
+          "lower": null,
+          "upper": 1e-11,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.5,VDS2V,VGS-.7V,VCH5V,VCL-5V"
+        },
+        {
+          "name": "noise_refinement",
+          "value": 0.0,
+          "status": "pass",
+          "lower": null,
+          "upper": 0.01,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "numerical_refinement",
+          "condition": ""
+        },
+        {
+          "name": "large_signal_refinement",
+          "value": 1.295909407525692e-05,
+          "status": "pass",
+          "lower": null,
+          "upper": 0.01,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "numerical_refinement",
+          "condition": "range-normalized maximum difference on common grid"
+        }
+      ],
+      "measurements": {
+        "transfer_-40": {
+          "idss_at_5v_a": 0.02570774507491635
+        },
+        "transfer_-10": {
+          "idss_at_5v_a": 0.02568131354952929
+        },
+        "transfer_25": {
+          "idss_at_5v_a": 0.02533226256397936
+        },
+        "transfer_50": {
+          "idss_at_5v_a": 0.02485364688165359
+        },
+        "transfer_125": {
+          "idss_at_5v_a": 0.02215576077783132
+        },
+        "idss_gfs_-40": {
+          "idss_a": 0.02734920533911733,
+          "gfs_s": 0.04339377822746931
+        },
+        "idss_gfs_25": {
+          "idss_a": 0.02690199894477896,
+          "gfs_s": 0.04910919755363801
+        },
+        "idss_gfs_125": {
+          "idss_a": 0.02347428551379815,
+          "gfs_s": 0.05654728871107716
+        },
+        "bias_0.0001": {
+          "vgs_v": -0.924783754917511,
+          "id_a": 9.99696767438607e-05,
+          "gm_s": 0.0035936551878295734,
+          "ciss_f": 1.5244349536342252e-11,
+          "gate_current_a": 4.445488152746486e-11,
+          "gate_current_noise_1k_a_sqrt_hz": 4.879152189173737e-16,
+          "voltage_noise_10hz": 2.349049335430046e-09,
+          "voltage_noise_1khz": 1.761263790829714e-09
+        },
+        "bias_0.002": {
+          "vgs_v": -0.7264793131891707,
+          "id_a": 0.001999980131499601,
+          "gm_s": 0.015268212759995356,
+          "ciss_f": 1.550625484137212e-11,
+          "gate_current_a": 4.366107005412992e-11,
+          "gate_current_noise_1k_a_sqrt_hz": 4.878865866688575e-16,
+          "voltage_noise_10hz": 1.78411029095511e-09,
+          "voltage_noise_1khz": 8.755081102887646e-10
+        },
+        "bias_0.005": {
+          "vgs_v": -0.5713590364365708,
+          "id_a": 0.004999978775295233,
+          "gm_s": 0.023262520154000148,
+          "ciss_f": 1.5801100537441085e-11,
+          "gate_current_a": 4.304012546922194e-11,
+          "gate_current_noise_1k_a_sqrt_hz": 4.878723604633504e-16,
+          "voltage_noise_10hz": 1.713744539854659e-09,
+          "voltage_noise_1khz": 7.207721455378009e-10
+        },
+        "off_bias_cap_0": {
+          "ciss_f": 2.661662903985931e-11,
+          "vgs_v": 0,
+          "vds_v": 0,
+          "condition_status": "explicit_exploratory_off_bias; manufacturer capacitance gate-bias clarification required"
+        },
+        "off_bias_cap_5": {
+          "ciss_f": 1.781778397752331e-11,
+          "vgs_v": 0,
+          "vds_v": 5,
+          "condition_status": "explicit_exploratory_off_bias; manufacturer capacitance gate-bias clarification required"
+        }
+      },
+      "scope": "DC/caps/terminal noise/large-signal screen; no production noise/yield/SOA qualification",
+      "status": "disagreement"
+    },
+    "bc846b_vendor": {
+      "comparisons": [],
+      "measurements": {
+        "bias_-55": {
+          "vbe_v": 0.8298613396962005,
+          "base_current_a": 1.0612422914873389e-05,
+          "hfe": 188.45837713430976
+        },
+        "bias_50": {
+          "vbe_v": 0.618368663279965,
+          "base_current_a": 6.059790187788239e-06,
+          "hfe": 330.0444302560877
+        },
+        "bias_150": {
+          "vbe_v": 0.3964222143704717,
+          "base_current_a": 4.096445213683673e-06,
+          "hfe": 488.2281821612664
+        }
+      },
+      "scope": "failed DC prevents further meaningful characterization",
+      "status": "error",
+      "failed_jobs": 2
+    },
+    "bc846b_emitter_r1": {
+      "comparisons": [
+        {
+          "name": "hfe",
+          "value": 294.88519010092443,
+          "status": "pass",
+          "lower": 200,
+          "upper": 450,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table8,VCE5V,IC2mA,25C"
+        },
+        {
+          "name": "vbe",
+          "value": 0.6667733605147436,
+          "status": "pass",
+          "lower": 0.58,
+          "upper": 0.7,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table8,VCE5V,IC2mA,25C"
+        },
+        {
+          "name": "bias_refinement",
+          "value": 2.6406292908264974e-06,
+          "status": "pass",
+          "lower": null,
+          "upper": 0.01,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "numerical_refinement",
+          "condition": ""
+        },
+        {
+          "name": "ft_100MHz_test",
+          "value": 216965910.88778886,
+          "status": "pass",
+          "lower": 100000000.0,
+          "upper": null,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "manufacturer fT test at100MHz,VCE5V,IC10mA"
+        },
+        {
+          "name": "cc_typical",
+          "value": 1.1952112792517193e-12,
+          "status": "fail",
+          "lower": 1.6e-12,
+          "upper": 2.4e-12,
+          "typical": 2e-12,
+          "relative_disagreement": -0.40239436037414034,
+          "evidence": "typical_accuracy_screen",
+          "condition": "VCB magnitude10 V,emitter open,f1MHz"
+        },
+        {
+          "name": "cc_guaranteed_max",
+          "value": 1.1952112792517193e-12,
+          "status": "pass",
+          "lower": null,
+          "upper": 3e-12,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": ""
+        },
+        {
+          "name": "collector_cap_return_refinement",
+          "value": 3.8036240823657863e-13,
+          "status": "pass",
+          "lower": null,
+          "upper": 0.01,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "numerical_refinement",
+          "condition": "1T versus1G explicit emitter return; approximate open emitter"
+        },
+        {
+          "name": "vcesat",
+          "value": 0.05939763682410696,
+          "status": "pass",
+          "lower": null,
+          "upper": 0.2,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "IC magnitude10mA,IB magnitude0.5mA,25C"
+        },
+        {
+          "name": "noise_figure_max",
+          "value": 0.5705155645059422,
+          "status": "pass",
+          "lower": null,
+          "upper": 10,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": {
+            "typical_db": 2,
+            "max_db": 10,
+            "ic_a": 0.0002,
+            "vce_v": 5,
+            "rs_ohm": 2000,
+            "f_hz": 1000,
+            "bandwidth_hz": 200
+          }
+        },
+        {
+          "name": "noise_figure_typical",
+          "value": 0.5705155645059422,
+          "status": "fail",
+          "lower": 1.6,
+          "upper": 2.4,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_accuracy_screen",
+          "condition": "2 dB typical; +/-0.4dB research screen"
+        }
+      ],
+      "measurements": {
+        "bias_-55": {
+          "vbe_v": 0.8265854009762709,
+          "base_current_a": 1.0581710607423815e-05,
+          "hfe": 189.00535784798907
+        },
+        "bias_-10": {
+          "vbe_v": 0.7385978683023195,
+          "base_current_a": 8.107224840351431e-06,
+          "hfe": 246.69354056218629
+        },
+        "bias_25": {
+          "vbe_v": 0.6667733605147436,
+          "base_current_a": 6.782300594056624e-06,
+          "hfe": 294.88519010092443
+        },
+        "bias_50": {
+          "vbe_v": 0.6138589948738057,
+          "base_current_a": 6.041947172781752e-06,
+          "hfe": 331.0191140051274
+        },
+        "bias_150": {
+          "vbe_v": 0.3906808649990893,
+          "base_current_a": 4.08421764093932e-06,
+          "hfe": 489.6898686182709
+        },
+        "bandwidth": {
+          "unity_current_gain_hz": 217177545.96477002,
+          "hfe_at100MHz": 2.1696591088778887,
+          "bias_ic_a": 0.009999819700198032
+        },
+        "cc_f": 1.1952112792517193e-12,
+        "noise": {
+          "nf_1khz_db": 0.5705155645059422,
+          "en_total_source_referred_1khz": 6.128156107494048e-09,
+          "actual_ic_a": 0.0001999649108448409,
+          "flicker_present": false
+        }
+      },
+      "scope": "nominal DC/AC/NF only; KF omitted; no qualified low-noise input/population/SOA",
+      "status": "disagreement"
+    },
+    "bc856b_vendor": {
+      "comparisons": [
+        {
+          "name": "hfe",
+          "value": 299.01333953860154,
+          "status": "pass",
+          "lower": 220,
+          "upper": 475,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table8,VCE5V,IC2mA,25C"
+        },
+        {
+          "name": "vbe",
+          "value": 0.675900901040046,
+          "status": "pass",
+          "lower": 0.6,
+          "upper": 0.75,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table8,VCE5V,IC2mA,25C"
+        },
+        {
+          "name": "bias_refinement",
+          "value": 1.1199000289467962e-06,
+          "status": "pass",
+          "lower": null,
+          "upper": 0.01,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "numerical_refinement",
+          "condition": ""
+        },
+        {
+          "name": "ft_100MHz_test",
+          "value": 118904311.89687343,
+          "status": "pass",
+          "lower": 100000000.0,
+          "upper": null,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "manufacturer fT test at100MHz,VCE5V,IC10mA"
+        },
+        {
+          "name": "cc_typical",
+          "value": 1.848016775079878e-12,
+          "status": "fail",
+          "lower": 3.6e-12,
+          "upper": 5.4e-12,
+          "typical": 4.5e-12,
+          "relative_disagreement": -0.5893296055378049,
+          "evidence": "typical_accuracy_screen",
+          "condition": "VCB magnitude10 V,emitter open,f1MHz"
+        },
+        {
+          "name": "collector_cap_return_refinement",
+          "value": 2.504663143554353e-13,
+          "status": "pass",
+          "lower": null,
+          "upper": 0.01,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "numerical_refinement",
+          "condition": "1T versus1G explicit emitter return; approximate open emitter"
+        },
+        {
+          "name": "vcesat",
+          "value": 0.05348121007740547,
+          "status": "pass",
+          "lower": null,
+          "upper": 0.3,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "IC magnitude10mA,IB magnitude0.5mA,25C"
+        },
+        {
+          "name": "noise_figure_max",
+          "value": 0.6968458559796209,
+          "status": "pass",
+          "lower": null,
+          "upper": 10,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": {
+            "typical_db": 2,
+            "max_db": 10,
+            "ic_a": 0.0002,
+            "vce_v": 5,
+            "rs_ohm": 2000,
+            "f_hz": 1000,
+            "bandwidth_hz": 200
+          }
+        },
+        {
+          "name": "noise_figure_typical",
+          "value": 0.6968458559796209,
+          "status": "fail",
+          "lower": 1.6,
+          "upper": 2.4,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "typical_accuracy_screen",
+          "condition": "2 dB typical; +/-0.4dB research screen"
+        }
+      ],
+      "measurements": {
+        "bias_-55": {
+          "vbe_v": 0.818075118361017,
+          "base_current_a": 1.0159237316085446e-05,
+          "hfe": 196.86517184054122
+        },
+        "bias_-10": {
+          "vbe_v": 0.7388831234890993,
+          "base_current_a": 7.905526835799685e-06,
+          "hfe": 252.98756699466568
+        },
+        "bias_25": {
+          "vbe_v": 0.675900901040046,
+          "base_current_a": 6.6886648036710995e-06,
+          "hfe": 299.01333953860154
+        },
+        "bias_50": {
+          "vbe_v": 0.6302498309735287,
+          "base_current_a": 6.004202188330615e-06,
+          "hfe": 333.1000418152261
+        },
+        "bias_150": {
+          "vbe_v": 0.44289870057204567,
+          "base_current_a": 4.173624780127345e-06,
+          "hfe": 479.1997616850876
+        },
+        "bandwidth": {
+          "unity_current_gain_hz": 123105581.15017691,
+          "hfe_at100MHz": 1.1890431189687343,
+          "bias_ic_a": 0.009999552129510647
+        },
+        "cc_f": 1.848016775079878e-12,
+        "noise": {
+          "nf_1khz_db": 0.6968458559796209,
+          "en_total_source_referred_1khz": 6.21793724350281e-09,
+          "actual_ic_a": 0.000199997996343626,
+          "flicker_present": false
+        }
+      },
+      "scope": "nominal DC/AC/NF only; KF omitted; no qualified low-noise input/population/SOA",
+      "status": "disagreement"
+    },
+    "opa197_pspice": {
+      "comparisons": [
+        {
+          "name": "iq_max",
+          "value": 0.00100000251093547,
+          "status": "pass",
+          "lower": null,
+          "upper": 0.0013,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.7,VS36V,VCM0,RL10k"
+        },
+        {
+          "name": "ib_max",
+          "value": 5.01000257430742e-12,
+          "status": "pass",
+          "lower": null,
+          "upper": 2e-11,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "table6.7,25C,mid-supply"
+        },
+        {
+          "name": "ciss",
+          "value": 6.400159250113851e-12,
+          "status": "pass",
+          "lower": 5.120000000000001e-12,
+          "upper": 7.68e-12,
+          "typical": 6.4e-12,
+          "relative_disagreement": 2.4882830289230334e-05,
+          "evidence": "typical_accuracy_screen",
+          "condition": "common-mode Cin; follower bootstraps differential Cin"
+        },
+        {
+          "name": "en_100",
+          "value": 1.0285310800295814e-08,
+          "status": "pass",
+          "lower": 8.4e-09,
+          "upper": 1.2599999999999999e-08,
+          "typical": 1.05e-08,
+          "relative_disagreement": -0.020446590448017724,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.7,VS36V,VCM0"
+        },
+        {
+          "name": "en_1000",
+          "value": 6.091441801988466e-09,
+          "status": "pass",
+          "lower": 4.4e-09,
+          "upper": 6.5999999999999995e-09,
+          "typical": 5.5e-09,
+          "relative_disagreement": 0.10753487308881209,
+          "evidence": "typical_accuracy_screen",
+          "condition": "table6.7,VS36V,VCM0"
+        },
+        {
+          "name": "current_noise_1k",
+          "value": 1.483469057733598e-15,
+          "status": "pass",
+          "lower": 1.2e-15,
+          "upper": 1.7999999999999997e-15,
+          "typical": 1.5e-15,
+          "relative_disagreement": -0.011020628177601228,
+          "evidence": "typical_accuracy_screen",
+          "condition": "input-current observer,clamped input,unity follower"
+        },
+        {
+          "name": "noise_refinement",
+          "value": 2.220446049250313e-16,
+          "status": "pass",
+          "lower": null,
+          "upper": 0.01,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "numerical_refinement",
+          "condition": ""
+        }
+      ],
+      "measurements": {
+        "bias_-40": {
+          "iq_a": 0.001000000108000034,
+          "ib_a": -5.335004260264534e-12,
+          "offset_v": -8.5006050640631e-06,
+          "follower_bandwidth_hz": 17488522.80195978,
+          "ciss_f": 6.400159250113851e-12,
+          "en_1k": 5.26451138734706e-09
+        },
+        "bias_-10": {
+          "iq_a": 0.001000000760757227,
+          "ib_a": -5.185003482120871e-12,
+          "offset_v": 6.499421967428657e-06,
+          "follower_bandwidth_hz": 17488522.801959775,
+          "ciss_f": 6.400159250113851e-12,
+          "en_1k": 5.653233217575119e-09
+        },
+        "bias_25": {
+          "iq_a": 0.00100000251093547,
+          "ib_a": -5.01000257430742e-12,
+          "offset_v": 2.3999453504169e-05,
+          "follower_bandwidth_hz": 17488522.801959775,
+          "ciss_f": 6.400159250113851e-12,
+          "en_1k": 6.091441801988466e-09
+        },
+        "bias_50": {
+          "iq_a": 0.001000003761062786,
+          "ib_a": -4.885001925878014e-12,
+          "offset_v": 3.649947603041213e-05,
+          "follower_bandwidth_hz": 17488522.80195978,
+          "ciss_f": 6.400159250113851e-12,
+          "en_1k": 6.396139747528604e-09
+        },
+        "bias_125": {
+          "iq_a": 0.001000007511444736,
+          "ib_a": -4.509999980488152e-12,
+          "offset_v": 7.399954360914149e-05,
+          "follower_bandwidth_hz": 17488522.801959787,
+          "ciss_f": 6.400159250113851e-12,
+          "en_1k": 7.278004582814406e-09
+        },
+        "in_1k_a_sqrt_hz": 1.483469057733598e-15
+      },
+      "scope": "tested nominal CMOS macro DC/AC/noise/clipping and supply; no THD/process/thermal/crossover qualification",
+      "status": "error",
+      "failed_jobs": 6
+    },
+    "2n7002_failed_download": {
+      "status": "error",
+      "reason": "Model 2n7002_failed_download has no valid acquired SPICE file"
+    }
+  },
+  "jobs": [
+    {
+      "model_id": "jfe150_generic",
+      "label": "transfer_-40",
+      "temperature_c": -40,
+      "refinement": false,
+      "netlist_sha256": "27f65d91c2482e05736d97f13719546bad24e65c537de267dce78af6f4998355",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/transfer_-40",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "e86565407d61b93bfed11cdcc152c40a84c5d3a0bd21dbd86e35af92119990dd"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "aa1a5293b91636498db1cb48502a29b3109716185b30b233766e83cf87df8b6d"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "transfer_-10",
+      "temperature_c": -10,
+      "refinement": false,
+      "netlist_sha256": "2030aff5ae9521af081fd5aee1170e8aaec6daaff1af6054b90f617bb96a23d7",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/transfer_-10",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "72c96f0dce48105e51975a1d96bb9adaf399e430bb3702c5752ac50f71b23189"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "135a61446c5e822284a0b8e495126a892f31d93a63d244910150543889d37ba7"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "transfer_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "01641d840fd6c8eb39e17e10fe597403cc863c52b73f56b7a7acb6b27a9a7f94",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/transfer_25",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "ab1de93248d3df6b30ca21701e2d55e3a49834d327c0f95e580746b353063454"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "db1905c4f943973d806988a6b3d364bbfcca5d7cb92a50dcd1366a8393b5c8b0"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "transfer_50",
+      "temperature_c": 50,
+      "refinement": false,
+      "netlist_sha256": "5f26ef4bce6674dc69aa49d9774aabb71a410b5a82df86f8ea15349c830e8d2e",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/transfer_50",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "33a167c697f5f9406d2a59bc5cb839653836c605387801990c71d335e0448601"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "466a41b3e318d23f2599ade112d382f5142be64fcca0e14e4a7d9305c315e051"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "transfer_125",
+      "temperature_c": 125,
+      "refinement": false,
+      "netlist_sha256": "f6d319a54f74210bae56b674eeb5ff9b11d028f24075299cb12b0241725f689a",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/transfer_125",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "51663bfab2e6a20836c1791245a2bc3b8969598870c0731a1f83695f1e924964"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "76cd1f2ac37109078f380c4b43e3da6595491bc0af2fd4d0b3e4cfdc9aacb8f8"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "idss_gfs_-40",
+      "temperature_c": -40,
+      "refinement": false,
+      "netlist_sha256": "c7bb432c41609b8940e415b9e48cfdb5e354c88a0f2a3db5055dd238f9531701",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/idss_gfs_-40",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "c8097a45317d10e4084dc74378f20c59c04ca338397199c18a8633465e5b3ee4",
+        "ac.raw": "b74f8019aceb9730261ba29ea1619bc475efa6f207fe3077e5a46cc957dc1002"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "90ba0f7c1ffd5104fde171405ba36fae1a62886f8d370916b6b58b37be5c72bc",
+        "ac.raw.csv": "78465c3d0be5ffe4d805ca24f3dd70bafdaedf5739de5568212c4eab5416df63"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "idss_gfs_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "e3ea0b11e0b2b17d1b0edd32a03090a9450a988afe78c032e19c1c5a223375b0",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/idss_gfs_25",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "6a4d79d577f2d306b28c3e6b6f699a02d44420b72771bb4d61bc8f3e0dee6e39",
+        "ac.raw": "ee86aad7a170c15acf5ee02b049e360125b2fc42b11240a10307b8bd1e522b9b"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "7ecf87ccacb8d79a4d2776ad209a76b31c39334d7274911e80b53694df90fdc9",
+        "ac.raw.csv": "90d3eb4b5c3253986cbd736c831aba8d785fc71fa67e8bc86eb51d3a3b9f87d9"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "idss_gfs_125",
+      "temperature_c": 125,
+      "refinement": false,
+      "netlist_sha256": "ec463297053c11c5d631e822895a4819b9140b5df1c31d3c47715b1bbe3bc097",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/idss_gfs_125",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "59a699816860e9adb922ffde4e23226de2bb4b1e5cb0dd0ad80cdd59b652014f",
+        "ac.raw": "bc5c436d65e5168bfd4691e036c03ec2038e6fc2e2bb850e91b6aecbace4e41f"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "287f358e66964b73357e891563e64409ee0d8cc804e65e4a7d819190b3989fbc",
+        "ac.raw.csv": "c57c3fd06f05135430192ce9715d3d19665f1001bfd117fe0f94e4824f358688"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "small_noise_0.0001",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "ff3e71cc6defe755c781d2de40bca0c2259d58c4a50a918403e6a8192f93058c",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/small_noise_0.0001",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "2c9c69e05f89fde47acb45979167d8b23d7703f1fcf659a307adb00024cda27d",
+        "ac.raw": "a35412c32d6195e375b91e5033584b955fdc6870a3669d1dfee23740b07767cb",
+        "noise.raw": "698dc34bd4558654fb013afad2bbce3b2fabc9f17781d3b58cafc2adfa40068e",
+        "gate_noise.raw": "7b0b49aeb722a1b4fa20a6adc8c0ab4bf0fb4124c25710ef6e91808a18fa414f"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "7c9da08225887d1a9dbf890129c7727e83018d67bb3c7cbf01bf125eff9979cd",
+        "ac.raw.csv": "2aac44ce2ebbffa8ce7d45d79a25b183ab897cca35468671cdf1391131adcf42",
+        "noise.raw.csv": "6ca5d1aa99cbca869a209f77f89e9f27269613ed042407957ded78f501ceee81",
+        "gate_noise.raw.csv": "d608bc0c39eeae1953f6da1cd5077c3cc8806eb867eb2991d303285d5fad1f8b"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "small_noise_0.002",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "b39c933b7b6e85ede43b44d16ba7de21396882b612ffb13aa0badef108fd38f2",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/small_noise_0.002",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "45d7c0268324a820fc67786f6e876b4d9ba9eafc978bf1d0083ab684b08adf45",
+        "ac.raw": "aec41e2d17fc4873327367a3921aba43ef76a025f1cbe6f55c5adef49fb3104e",
+        "noise.raw": "3989d64d38128baf3e7520b2cae1b19948ce3e8d327e8dc29c9f6b897d9edd18",
+        "gate_noise.raw": "2f885ae54d0aa3ce4662452b7a3d05927934354164a0584f7cad7e668d25a916"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "6b213f91ccfb93b618347f51618b7a2c1c4b5560c1f9f3771742f326decf3b5f",
+        "ac.raw.csv": "1ab09204659a2ab74aef2d862f392d2c9b1c1e49310a3eba80235ff02c9daddc",
+        "noise.raw.csv": "462642c10a4227d17616f789a7ca6f6f94783a36a0505813212539895454e958",
+        "gate_noise.raw.csv": "bd187f0eebb5cd00dbf185ee3b1a213ca5be546ffb42138f850a613158d13ac5"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "small_noise_0.005",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "f9d7547b278d821c542f1896505fdfedab9c7ac297876b8166b263563d422e76",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/small_noise_0.005",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "6f0a0d8b41d74ccb31ab6833e86afe83d31e61cab31ce3b3bb46be1fc20f60b9",
+        "ac.raw": "4d64a2845a8fb7625f99a52db72017c13b535acc2a026b82b1f80d226fdb0656",
+        "noise.raw": "378686ca2db0112efe7ab040576d1b27c958cf9e086d57ab58302ac67324e188",
+        "gate_noise.raw": "88f052f499e5cd2731f5573356de0f89b10cad30f16e358b649e94959593cb22"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "a4120d65e1c3aed5f23c4a335717ef27f10e1937ac34128ad3d0fac1f74982d1",
+        "ac.raw.csv": "aee7621b31d11a4afe24944de39debf5ac09b32e1fd0051a8f984c82eeb4b6d4",
+        "noise.raw.csv": "4c1c22ab68138397e6004da566732478cf3a5a083a592dd6a68d6940af6f670e",
+        "gate_noise.raw.csv": "ea509b96ec39d8ca95a262ffdf1995ab5be96865a0c579dce9cde500a55a992e"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "vgs_limits_10v",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "6e60d1696cb6e56fc86df684c9c2ab514f9f57b49288eec97bf2ca488312a59c",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/vgs_limits_10v",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "3ca8f4e50de35cd7425e3ff87bbd21aa5c5cb6ee3139894e245e05b0b2c6f87f"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "250d6492cf522f5961def07662a0d0692d45a23da292ec6ab809229ec3ed3c55"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "output_curve_minus_0p7",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "5724e626382c083eb04b23ce350a7f81f1281c0c198ba2581d1c12f8f1397996",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/output_curve_minus_0p7",
+      "status": "ok",
+      "raw_data_hashes": {
+        "output.raw": "0da596fb06621502ccf8b782baaab5dd0238f0f4de1225485ea81bf631305e61"
+      },
+      "csv_hashes": {
+        "output.raw.csv": "0fc2d5502b8074598e4ee72d839efa4ffbee4d34f8f66432ebc215293635ca18"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "leakage",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "01f746ebc27799e44aa6d2b4eaf8ddd804208dab67ee6214785942af9351f8a7",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/leakage",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "9b07ba88a18568c615af4aa6608e6b22204173120fdc724052a0a72d1f24118d"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "6cef112fdde23a6f96c539eef16110110856770db284e06399394b66272a3d27"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "off_bias_cap_0",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "70e6601ad58810b65732ebd033f4ea2b354b1cd59fc4d8d251525d91b8766020",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/off_bias_cap_0",
+      "status": "ok",
+      "raw_data_hashes": {
+        "ac.raw": "9c0da4e9c25a9aa1d87004506be92d5611c30bc785029251cc646d9cede40c53"
+      },
+      "csv_hashes": {
+        "ac.raw.csv": "4a859419c04569d2ecca7ad549801e8f634217255f703c94cda33c3774a7aea2"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "off_bias_cap_5",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "bfa8b6a367ae057f6e01ebaddfa5acba094aa6461525eb6ef10881d4e21e3396",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/off_bias_cap_5",
+      "status": "ok",
+      "raw_data_hashes": {
+        "ac.raw": "e9454158362494cbdf5e758ec12cf4285acdd3b2f55e870d4c4a42221b045311"
+      },
+      "csv_hashes": {
+        "ac.raw.csv": "6be605062150c68424f29886b4650c1361068193566580cb67b6f39ad30be74e"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "noise_ac_refined",
+      "temperature_c": 25,
+      "refinement": true,
+      "netlist_sha256": "f80b470b79ad9a7fcd41dd8c1b6629fad10a3bd7b6616a0a9fbb0515ec713132",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/noise_ac_refined",
+      "status": "ok",
+      "raw_data_hashes": {
+        "ac.raw": "ae95f8f147c9fa6a5e638800dd021bd56e5b00cc9dad7c5b9ca549e34cabd133",
+        "noise.raw": "cfd580a43f1ee27dea8e92344184ed521868312399fc3078b04f70769bbc0607"
+      },
+      "csv_hashes": {
+        "ac.raw.csv": "d9a3eb775af6430366610e46715033b4c74c109981d3e063fed0aba60e42a9b4",
+        "noise.raw.csv": "77ce35401f5954e0eef1d4a447daa886f23955848616a5ac36b51cacd6b8c920"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "large_signal_2e-06",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "1c4e6576fac12036371379cd9c7308e604abea2dffbe54d3c14a88b939a92986",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/large_signal_2e-06",
+      "status": "ok",
+      "raw_data_hashes": {
+        "tran.raw": "6c5216e507b32dc0e8d19a75ad2ef948cdcc8069051a9220f2905349b8d08611"
+      },
+      "csv_hashes": {
+        "tran.raw.csv": "1f5d24c1bd75cfe9b3a99ef17a9cfb1792aef0b8d0d5ceaeca185b6ad278e3a4"
+      }
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "large_signal_1e-06",
+      "temperature_c": 25,
+      "refinement": true,
+      "netlist_sha256": "43d3230c237ef23e961350f9a43f1068f7dc5cd42593d4eaa0871eaf2544e2cf",
+      "model_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "model_version": "Final 1.2; 26SEP2024; SLPM366",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "jfe150_generic/large_signal_1e-06",
+      "status": "ok",
+      "raw_data_hashes": {
+        "tran.raw": "c5c333bf114d5c4a8bf02d4622223494e05319de7456c96cfe8a63a10a7b16c4"
+      },
+      "csv_hashes": {
+        "tran.raw.csv": "c64814db441f18cb0e8af9a1a3bd9094e04bc1148a59478184c232a0a0c98f20"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "transfer_-40",
+      "temperature_c": -40,
+      "refinement": false,
+      "netlist_sha256": "63410ef3e13112956b85dc9e8e01ec876d15bfae51d4811e9106494c06389476",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/transfer_-40",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "0cf8225a663079d00c4ea0db8c1982415c8ec35a23c42c410013e6bb729107da"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "56cd21beabb82ae678ed890d52baf0c99471767e93738d1c0e3edf1e5a32b57b"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "transfer_-10",
+      "temperature_c": -10,
+      "refinement": false,
+      "netlist_sha256": "e76c23fed31b49b726f3c7bba6e99d69e8949e2df7b1138d570161c23cd4adb6",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/transfer_-10",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "5840b2f5c4f447a56e7b91f3aa9464004a777e861d3ce280bf4997044da074d1"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "3de04b7c74260a394852598e95823f1027d0f806004cbb58148c98a23be565ac"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "transfer_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "6e8380ca4f3da2735c4f532b729a8b1fb3238c07b8f667d573832bea12352cb5",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/transfer_25",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "117003f83e134e3a4777d417e9d4f593bdc5fbc73478abb50a8582a60cf1832d"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "ece17b1e6beca5310d3406aeab21973ae6e20b125661e67165684994cc3fd518"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "transfer_50",
+      "temperature_c": 50,
+      "refinement": false,
+      "netlist_sha256": "66fa1dbf35a3268fc8425e5057318fa437f773bb3763ca41dd1b11fd97204462",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/transfer_50",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "a8a074e66c88040fdf6bd72e1e9cffbe2ca8c9df7e805d8334b41f0f5299d44f"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "ba35f6a1fc7b8570b5dc8d52ce8167631e80e90d7216f402db2472be8294136e"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "transfer_125",
+      "temperature_c": 125,
+      "refinement": false,
+      "netlist_sha256": "a2f73484fcfbce714abeb736fbadff1f251fb4635fef6b4618572b53f7fbd6ba",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/transfer_125",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "415554e67296b1106e4383b62e2aada94195b2c16451a68e98d4f701764fb77e"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "a712edab6db77a69d83598c8b87555e0c9b2da02769a443fa012a235867af010"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "idss_gfs_-40",
+      "temperature_c": -40,
+      "refinement": false,
+      "netlist_sha256": "69632b635745deef9190920a61bb95ef4785fb1e7f1d38737667fe13905af8b3",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/idss_gfs_-40",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "2516567f4b82d956d83b457a7c2d65f49c7a1507eed15e34e9370196071dc2da",
+        "ac.raw": "424b1d9f03d26ba7156dfe30f644e59c07b467c06471d6a3bea62fc03b819d5f"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "aea3465f4331871ca076657a93b2fa6b902ef356ca2ccc05210d9dc7b9dc1109",
+        "ac.raw.csv": "69ccffaaec386c37a3bc9c0a929967e038aa489d354ab4d132ff82732b901810"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "idss_gfs_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "2e5ca7b96fa36616f93f25e148778a77099336af88ab5722a4f22cc56f38952a",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/idss_gfs_25",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "7e9150b3c46ec09f53f3ae4c8f3dc0789dcf59ae019c902a7b2a9d4dc5d63db3",
+        "ac.raw": "4a3e9475436695e26afaa35cfabb5dee8a1d38233cc8569bd4248dd5b9249a98"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "b38eb10cef4ae31976a52bb6b42e35d021d12e9377979a3b4508a1c629e6761a",
+        "ac.raw.csv": "ea48be3e9c98bd2afb65c668dea6fa176be7694f2ab7dc84006c6f55be4b1dec"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "idss_gfs_125",
+      "temperature_c": 125,
+      "refinement": false,
+      "netlist_sha256": "5a95cc06593df5f2e71c33471549e2adef7e0f5d1ae96b36e5c86bd98f4438a4",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/idss_gfs_125",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "c9f2ff8492b55e975c94139dee842c7510a09387b9920bd319b4eb039a952480",
+        "ac.raw": "fa991972d777ad2b3acb5536fc6d90686cb26385bcc66be51ea974ea5aa90d62"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "19460b082e4a112146cd2292474e8fff8a272c2c68802ae71816c8e18635960c",
+        "ac.raw.csv": "476bf792854adc3f4881cab4671169e72f1eef1c689eee6744b141073bc14191"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "small_noise_0.0001",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "710ba0a54860438b9c73af608b78bbe1611319b1ca333f6749aec3639f709d0b",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/small_noise_0.0001",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "51b1d3bbcaf1faf7f746049b01e9e815f02ada1bc2d5efa1410e0f4d16a8c892",
+        "ac.raw": "efcd9d22c9c5b467f96f5df0a4f8f3be87501118cc5f5700cad518199707ce4f",
+        "noise.raw": "e6601ab41c2ff66e0f50be0252078fc8785be70809b45a19889a84d9a4ee9765",
+        "gate_noise.raw": "bdcbb8a558a7155e599156c870e0592d08f72ef41470d66cbe1b18c03a81644b"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "3165b084e48648a2aed89e82c9c22338c0aebec36091ed83145edb504a847858",
+        "ac.raw.csv": "518c70000bb7289f08acbb8d0e4741cacb329eb4cf99805f7645a654092bc6e3",
+        "noise.raw.csv": "7836054e0007fabf39471f4dce268a08aedc7d7e9e60d4744c0f340438afe783",
+        "gate_noise.raw.csv": "fc0e04ecbe59e6b9d4887b458a2f16d93de1d8beb4eb8523b41cf7d8266fca29"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "small_noise_0.002",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "7bb246d69f8122c18783f0b0c291ebba5c18c1dcadef7acf55dc9059a8146dae",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/small_noise_0.002",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "e2ebe91c980d7b876139049cd56c8ed06edc70bd9dc2b963d915151509b1d7ca",
+        "ac.raw": "efc0554e81176cd062a53410edb19d205b41281ad5ae8b430e032559682e66c6",
+        "noise.raw": "241d56474e0b16c516b03e2cacf24081eddf1253fdf3f6f8ae362d77f44b99b5",
+        "gate_noise.raw": "61fe662fc0fb9b9f4904ab7af0c762443e3eb89db67b00084ed460109f3440b1"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "1b46dbfce36e7690e655d8abb935d641400c68b2a26fdc98be1d6bf323477b51",
+        "ac.raw.csv": "328a661e00397b0fd7197082f04e6b267d1e8bb411143f6e6e184447cb25a1a2",
+        "noise.raw.csv": "2fa7349a8797326174137a4408b0d944fd8f9db4f445c7cf72c8e22f0fcdc1b1",
+        "gate_noise.raw.csv": "8a3155a5455f771cd3abc6fb222a048c0dec933cba7b1f5de9f6f6534af62f7e"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "small_noise_0.005",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "5c4a9c19bb8c1d35b8515c6d26fb82675cdcc8f8c26d54151d02ae5458fa259d",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/small_noise_0.005",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "5f5bd08dd5ca6c6fada0fcd0df007579a25c1997b97a64652293c944abe7cc55",
+        "ac.raw": "7c2eee0905378d8c1a4053629613f50a05c43cd756cfcb2ca14c9ec9fceb66e9",
+        "noise.raw": "c38d49c77e6a584b5e53af646770fd8da8fb4bc5e0a272d42a3230b5a41e70c1",
+        "gate_noise.raw": "9b098a622bbc03cf9bb70d944a8a091c8f0ede437fc703dab237897d3e474ea1"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "71a1e7b57019738ef8f07eb49001c33ba33a7dbb9a5ce8bfac6ac76b7e063f9f",
+        "ac.raw.csv": "6f0150a85ae0d6b88688e3715ed2dc9bf55d349c9500859dfc87c443fa1c4130",
+        "noise.raw.csv": "81e7e84a4673448bf9fb350d1e13390fc3115794101eb07be605711d11e8341d",
+        "gate_noise.raw.csv": "32e4a649cea7e0a3fcfc1f42e22f9f23b1db0535d77c6923693665ce5f0cedd0"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "vgs_limits_10v",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "638d13441e4221e6ecbdb06a7d6eff88a67bed468784f4a6541d4947e2ce2acd",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/vgs_limits_10v",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "51cf2859d4f9ff08c5784931156cc40ff28d7d1ce3871f9eaf4204426df5212c"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "5e369c0f3a0d4cd587d74706391e0ece12592b0fcc2731a403548d848d52686b"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "output_curve_minus_0p7",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "9254c4a614221d7f152305235428346c02a33754e07f04a5bdce6d2f2d45689a",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/output_curve_minus_0p7",
+      "status": "ok",
+      "raw_data_hashes": {
+        "output.raw": "9ac5008dd529911e10b809bd53be1c993f12b9ac06e6015844257764d363c8d2"
+      },
+      "csv_hashes": {
+        "output.raw.csv": "fa15e8c062d2dbb71a14b3ba7e548080234cbd44b6135b44de43c362ab87e991"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "leakage",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "445ea05dc5b3e96e96914dcfb32b22f3abcf59e2718b7670f12a936750d0f16f",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/leakage",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "f167b741decbe178312b85c956260c3fa34da0a480c042a0fb14bf12dae1d929"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "1905b29f2678a999e63be65b498db09719452f001a28238d855d91aa8c809f1a"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "off_bias_cap_0",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "aff5b4562ab94dc94ddb6ccfa9e9fd2f8585fab97585e37d7f7c8932085083fe",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/off_bias_cap_0",
+      "status": "ok",
+      "raw_data_hashes": {
+        "ac.raw": "f1a04abc981604231e1a9bd986e7930742848d7c8eb507b0af56f23006a04504"
+      },
+      "csv_hashes": {
+        "ac.raw.csv": "91e55e9375341c6ef306ca5c06f9e79023e300a5ffc6094abcc523bd14ccc28b"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "off_bias_cap_5",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "f4ae37efebd4f128e31de9e28fc4f14d7cf5c1310fb9f7eb054cfc31e329ae99",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/off_bias_cap_5",
+      "status": "ok",
+      "raw_data_hashes": {
+        "ac.raw": "0d72dd61d9bcd4cabc20fc65b2d466e0201e72611a59941937bd916dc5ab75fd"
+      },
+      "csv_hashes": {
+        "ac.raw.csv": "1465f276831ae00ad52c55ffa2f821a82598137893568c58590a84bc3ae5247c"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "noise_ac_refined",
+      "temperature_c": 25,
+      "refinement": true,
+      "netlist_sha256": "9f98351e6febf519cc923ecad22ea3572259e1a5a263d8a2bde98d0ee4ead44d",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/noise_ac_refined",
+      "status": "ok",
+      "raw_data_hashes": {
+        "ac.raw": "50f91a14e62ab4c7f537e43322ba508cc0edf80aa2ffc631037710a41583100c",
+        "noise.raw": "16d3b721c1113c0ba7b823f804dbb7b9801615b4fd6efaf9b9ccb405914e7b50"
+      },
+      "csv_hashes": {
+        "ac.raw.csv": "b17cd67ca9ed2384c6570bbb43de4ec9fe21262807f24baac4c905285013b056",
+        "noise.raw.csv": "37cf9ed16e2745504f702ae8befcbf7384ccb954e39e3b79601d93e04f82ee20"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "large_signal_2e-06",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "ee90733046eb8b4f966c17576df5d1ee5113e316c61f3aa64105cc8c5d6d902c",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/large_signal_2e-06",
+      "status": "ok",
+      "raw_data_hashes": {
+        "tran.raw": "c16f49793fc3f9b0054eb73838ba5ff80212d78c0a37a6b265e0cb5ad8b04db7"
+      },
+      "csv_hashes": {
+        "tran.raw.csv": "ac6b4a8cdbdbe5e57090a804b8b423ceb069514918d96c73754476d64f47602f"
+      }
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "large_signal_1e-06",
+      "temperature_c": 25,
+      "refinement": true,
+      "netlist_sha256": "7c897f25a13a0cc4ff0fb875565463c445fcdf5d5b9781fb2a130cb7a6f556e4",
+      "model_sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+      "model_version": "Final 1.2 vendor weak",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_weak/large_signal_1e-06",
+      "status": "ok",
+      "raw_data_hashes": {
+        "tran.raw": "aeb7a12824fd29b81d385160d720ad24a0c6d29f1d4ba865f9059ac1e24b8a74"
+      },
+      "csv_hashes": {
+        "tran.raw.csv": "a5d8f433a063c3100eab9adc3e7fdf03570b94a2cab76c560dc834229211c112"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "transfer_-40",
+      "temperature_c": -40,
+      "refinement": false,
+      "netlist_sha256": "72898243eed73fd09225b5405b4fc560d7fb6ee6069aa12f365fb35c642bbcd5",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/transfer_-40",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "182da11d1ab111537b10134882b025a062c5430026cf9d7c5162630550c780b1"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "13c6f6c5de5d99a8fb311e5c3ce623b7af9c389387f043fafe1a680f40a49ed8"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "transfer_-10",
+      "temperature_c": -10,
+      "refinement": false,
+      "netlist_sha256": "9b2df3b7d49f662872937c22c8d621dd240dd1f60b6c3ddb566728821c8cc083",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/transfer_-10",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "9046f2af16552fec9cb5734fa7f2b689c83ae8da0d5fad34bded3ae3a6a98c01"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "c0bbcc12d57d9531b9631f18e8e33792bafba11f65ef6a7589221ced33f82281"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "transfer_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "d1d4b7744e9d2968e66228dda2c295251d8c748ae5e269ad34a86ca06360a286",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/transfer_25",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "1d4811be255d8c17addd3ab909eaff9ac7ee39328d5ec73f5839d8f11b03a674"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "6205a923155eed171ba2c4e6777670e9f5e382cb84a096b06ab65ced45b48b39"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "transfer_50",
+      "temperature_c": 50,
+      "refinement": false,
+      "netlist_sha256": "76ee2d0cb20bf63cbf2e0f422206ae9c8ca9c7121cf150ad1121631ac42aa633",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/transfer_50",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "eca521114e7ebe536088906cfdd028e73665641a34e9b20494bcb8340d90b16d"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "30043c3467a2f034e474a7a5b46524e94bd25a8cce0ca14cae2a9f4efe491be5"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "transfer_125",
+      "temperature_c": 125,
+      "refinement": false,
+      "netlist_sha256": "2f3698fa7f01e22204ffaa315dfa50ec24023d87f4d141f1dd29e1db8adbd302",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/transfer_125",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "1182fbd6c9a47441fd7ee08d9779610e216d89b37a1df12178faa0bae69586d6"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "bd3c491da91f18845ff75bfb9142aa0678f2bdfedf98b60af84dacd32d9b4f20"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "idss_gfs_-40",
+      "temperature_c": -40,
+      "refinement": false,
+      "netlist_sha256": "ebacef1a7f1b5671524d06e7d5c78d91451a63979b3510427248a1cadb13c75d",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/idss_gfs_-40",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "0a29810b7632e10d9da30bf4bd2fdb7a3447eb779bda2b735e99e4414c8984cc",
+        "ac.raw": "debad1ffd4842a5e6ec718995ebe703fcc61687fa8b1040e6b900fedc0a5ff4b"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "e18d1ae48029117c1445e5935f826e6921976c812176011e258006d9187e7a6a",
+        "ac.raw.csv": "a93684c96d4de651410e7103f7a1a43c77c23a75c33a30ed64f00c4df50483fa"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "idss_gfs_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "06ed0d973507777565b83ff43f547b10fe5b7b8115f34bfef76d58148a19e209",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/idss_gfs_25",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "c123b49f4cc971af6b3f87e71185ec4f9f6b790f5047e58f4e34aad50369673b",
+        "ac.raw": "c0b3bd24969c0988928c5e5381f0f36a27e1d478a0ebcf1af8b2ecb77024b52c"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "01c18c4a8fa0c7444668f24d203aea249db07f256a4c9a34186c530c77384266",
+        "ac.raw.csv": "0918a4b30a952ac24d2ee2144dc5ea8be5f82880518425255c9947828e6e87ad"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "idss_gfs_125",
+      "temperature_c": 125,
+      "refinement": false,
+      "netlist_sha256": "6deb9a9dab73bac498c8e8e99ad376756e36de0dd2aa2845caed040f91e77d63",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/idss_gfs_125",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "19e4e41e94133c79492abafe3efb3d3a3283963695f0b4440a59f181b671ac84",
+        "ac.raw": "7d159bf1924a77b210c899eaa9942d0f7d2ce4ee9ad16c7d472358b07348d45b"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "b01d27f85f5b5d76ef5ae6e11c2c95d7f68696b0b7d2a89439d2579d3a6eb7f6",
+        "ac.raw.csv": "36c75063260ae58356da492283b1fb7105ffc0f81c93d4fe6c1b3a8a9c88da4b"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "small_noise_0.0001",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "792988d44e16c05e16f258045443cc2b4724dec66fba6217793977295c1995cf",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/small_noise_0.0001",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "45e8b660ecc40876247b5a6342cd36a0f77eb452d78b0f7dde37396327221909",
+        "ac.raw": "14d2a3bc445f20026c992185fdc4f2b783500d99dae7807d0828b321777d65c9",
+        "noise.raw": "65ffc33d6adf550511a4be818371d2378e2141779b61e36f08d84d2eeed6df69",
+        "gate_noise.raw": "37ed72d394cf7a69d2e2ce038c1b60cfb368de9aea95e5d0f0e9b76b69e20e16"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "dc9fa891a613a9c49cdd9ff4528d382aa36f44d5bcac9176dfebad01c332f04d",
+        "ac.raw.csv": "7247f0a94eb7c83c85c31e27bd4aac04cf17ee1f85c1ed8ff0bcaffbca639e36",
+        "noise.raw.csv": "e00fa3f1f1bb3f3ce43114fd6fa708629400adcc98e78183699fe7458e81d87a",
+        "gate_noise.raw.csv": "c0cf835f771e949ea0b7455f4aeaf4f0ba3c57eced9bf1c7015dd766ea8fb08f"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "small_noise_0.002",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "315d38d8d7a8f63e03229726b042b1de80dfb92ab703550b961dcdee81330548",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/small_noise_0.002",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "5dd4bc61e843054e361839a9837f91596b47d6e1b3540fc936f055505d5402c0",
+        "ac.raw": "c6f89f5ffba81edd4040436826a907479357998b1d0505aa50c66260353c8f0d",
+        "noise.raw": "cb525652de30579de467f41f748fba0b7f74ba50bfabd9a65f8ba8b89472d4d9",
+        "gate_noise.raw": "6f3aabc2c1dfaf0d0498ea9636fca042de87735dbfb0b905c74dda01ab17d9ae"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "e9dc22ea361285691a8cd31b0506ddec9e96bd37fd75732779576cdfb8adfa67",
+        "ac.raw.csv": "d39e22d9b851857cb7e57f0b9cf278552d74b169b65940892809057c28896b1d",
+        "noise.raw.csv": "926f8029bb799960856fb729ee7a6ede60cc032a53e3b533e3c0de732855a15d",
+        "gate_noise.raw.csv": "09be7e5c210e9f130147c9f935e0f1458f9100a3c5928a47696ef4a38289e5cd"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "small_noise_0.005",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "b5f27cd7016a9ced5754dd439a31b6c5cbc19a9ec0000cb93751688dc610cb07",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/small_noise_0.005",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "e84d5b1608f06d0887e335fd03d663669b4e44b235d945f2d2bb784b2a917130",
+        "ac.raw": "f78226ed314a0a58d397d0b4d20abbbb41e06e55d6ede96b082dd8515d51e919",
+        "noise.raw": "65f629ff32630a44d16ae3b3949a512ff8112ebab87774ae57902c40225c0c34",
+        "gate_noise.raw": "091a2571400629e4fa5f7a838622590fad0be4720ee652d57e1be015f5ac7e6d"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "8bb63f497e6b8c6334c31e28a2fee04d121882f3f65ac19e4dd53d6d24447ea2",
+        "ac.raw.csv": "3d1c96668642e695b1e9bdc5ddccc700540ef0fcac450eb3a8e6f29abcfbfc7a",
+        "noise.raw.csv": "292e19d98b435345ac7c913ecdae12314b36ca7c9803cd948efb49d68202f5d9",
+        "gate_noise.raw.csv": "724886e80a0bfb94114d869f7774aabe2b11ccfce01daced4d2aeb0501e106e6"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "vgs_limits_10v",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "56aa771bf3c9d77b1f7a3fd2b08d7858a18a7aada13acdd3ef3f21eb42df67ac",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/vgs_limits_10v",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "6e8f060b55d27ef9dc6860af55cecebf7bcfedb5a532e0920cf02c8889f28e66"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "a9c17ae208ad9935abe3c1d4c95b236488d55416e2d1caff80f77f7a6c1ac5e4"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "output_curve_minus_0p7",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "c92009d48819e57f64bdf362844617dfcc6731c0e5ec1418fc8ab427c140a29d",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/output_curve_minus_0p7",
+      "status": "ok",
+      "raw_data_hashes": {
+        "output.raw": "8d19bbd46356402043db624bb8efc589b6e12ac013b0bebae127689748ec2764"
+      },
+      "csv_hashes": {
+        "output.raw.csv": "17b290b9762f57910230c6df73849563865a150dbc2eca9814045ee3f3c765fb"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "leakage",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "ae64b998c4a41a935d67d66ad467bb0920e1a8a4ce15cea3ceaf1228fcd1a5a2",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/leakage",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "0b36255807dd5d85a09c0745bc98d3a4e9e9093469cac6fad8afb7b7c9dcf705"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "d92a89aaeb9982a241292f1056be4d6e5ff9b746aec1a56bc990dc1eba5dd5b8"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "off_bias_cap_0",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "417f9619393348456c633b3fbf2ecd06e4260faca405e2275f2b555ee9fdd4e9",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/off_bias_cap_0",
+      "status": "ok",
+      "raw_data_hashes": {
+        "ac.raw": "e192432aa47a56b7f3b92c612e2f1609c615270525b62ce06652a1f8053cacf4"
+      },
+      "csv_hashes": {
+        "ac.raw.csv": "07ad7bc11d3a600ab64f02072c20dac413bcc33affcc3a2226fec2b29595618c"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "off_bias_cap_5",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "9c325fc92893f6ab494ec4bfc65a671bb43d168caac3945cc4afbf7406fbcc2f",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/off_bias_cap_5",
+      "status": "ok",
+      "raw_data_hashes": {
+        "ac.raw": "8e769fb1d4ac68d52f5a852543c4cb52a9c3f729c735d95a485575cf7b231ed5"
+      },
+      "csv_hashes": {
+        "ac.raw.csv": "666efbede6b2c1a053d13695bf8dad8ca814e07ee18c7b90d00e29c5aaafe2f8"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "noise_ac_refined",
+      "temperature_c": 25,
+      "refinement": true,
+      "netlist_sha256": "9e16c99b4f34b8583af9a87b5237a5e63c10aa497b1c28a5288ed8a0d7d92851",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/noise_ac_refined",
+      "status": "ok",
+      "raw_data_hashes": {
+        "ac.raw": "6598be64cd147e2c202078bd0e4dc6695cdb4e0ddfe3997b2e1643c59b51d9df",
+        "noise.raw": "6283178f837c93f2dca5cf499ce4eba1aefd37487ba740c43ab9a5b6368785a0"
+      },
+      "csv_hashes": {
+        "ac.raw.csv": "6066522b73ae88e3d76922b533eb06b8fd70abe153ca5687f2182f6f2ec917da",
+        "noise.raw.csv": "584406c5da95a0dd95f8a9947bb8b82903cd20547310eb036c23968d4afc47a3"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "large_signal_2e-06",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "ad435b132edbe7db4a569bdaa5c81e2f36bc42c0acdca3b5738111522bc26ea1",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/large_signal_2e-06",
+      "status": "ok",
+      "raw_data_hashes": {
+        "tran.raw": "58ea076943e83ce526f4c56605ed50fc01cc6fd74b7e2a8a090fd1a6ce876a3c"
+      },
+      "csv_hashes": {
+        "tran.raw.csv": "ea75d1bf96667ab674e0f1095a14f672727df4062ca4af27446f262d8fefd24c"
+      }
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "large_signal_1e-06",
+      "temperature_c": 25,
+      "refinement": true,
+      "netlist_sha256": "e0a61915fe6edf5e1b886f791dc971979c7c3f0b85d28d78766da9d5ad12a262",
+      "model_sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+      "model_version": "Final 1.2 vendor strong",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_strong/large_signal_1e-06",
+      "status": "ok",
+      "raw_data_hashes": {
+        "tran.raw": "0f8a712c23f9e1d9fee49845be6e540a47c12f13d86cae0558e809d2c199290e"
+      },
+      "csv_hashes": {
+        "tran.raw.csv": "0cbda23a0dab581e66858352c67c6a504402d6a9765f3dfa6edf06b3ab6ab798"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "transfer_-40",
+      "temperature_c": -40,
+      "refinement": false,
+      "netlist_sha256": "3d7d71d3a7468bfe7b21c2220b7219fd90e504f5f75b0aaf65ee1d672558340c",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/transfer_-40",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "8b716f415ff0af1b57b5c9d36afe603447d90c7e0726673f049a6b328aa22a56"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "aa1a5293b91636498db1cb48502a29b3109716185b30b233766e83cf87df8b6d"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "transfer_-10",
+      "temperature_c": -10,
+      "refinement": false,
+      "netlist_sha256": "4550a3ea239cffb1425cb79f47299ec7eb638c21b129e21789a8286690509d4e",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/transfer_-10",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "f6d827a0b117bb16bc72fb19ba2c856a53eeafb6a5a559956da0644843ee9705"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "135a61446c5e822284a0b8e495126a892f31d93a63d244910150543889d37ba7"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "transfer_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "551594cb00477fe6810c867db68a5b46c937feace03b8c4a5a17b92cf6f014a6",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/transfer_25",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "763a95173aa83e9928f4d78436659aaea38c8bbc3fd29fdd82bd80c041ae0329"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "db1905c4f943973d806988a6b3d364bbfcca5d7cb92a50dcd1366a8393b5c8b0"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "transfer_50",
+      "temperature_c": 50,
+      "refinement": false,
+      "netlist_sha256": "aa82a8c189fc05fc413b1f82af7b08305b451263b7e97f5e519509a9877df9dc",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/transfer_50",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "98e3783f1753ccee82dfd090daa7f3dd4d1ccfe0370074aacb444a76b9311f3e"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "466a41b3e318d23f2599ade112d382f5142be64fcca0e14e4a7d9305c315e051"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "transfer_125",
+      "temperature_c": 125,
+      "refinement": false,
+      "netlist_sha256": "d5229ff2a7170b9d723e0e90a5767b26d35259aa374d7594e5dece2334ed5a20",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/transfer_125",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "3bfe49e1e534d3aff34ec968bbf575a0eba67a2da3f435c2e45a514b85258ca6"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "76cd1f2ac37109078f380c4b43e3da6595491bc0af2fd4d0b3e4cfdc9aacb8f8"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "idss_gfs_-40",
+      "temperature_c": -40,
+      "refinement": false,
+      "netlist_sha256": "821c50aa09c06d7ef9423ca06457b60b76528ca5d643fed2375214164597f226",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/idss_gfs_-40",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "ae429ad048be46073078ef504d57a2e85ccfb15a4f3d33eda13bfa8c5f7657db",
+        "ac.raw": "c18012f97be15b257f33c9b9a468c0d9837952e91faf95ebce5e757af4c8d2f0"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "90ba0f7c1ffd5104fde171405ba36fae1a62886f8d370916b6b58b37be5c72bc",
+        "ac.raw.csv": "78465c3d0be5ffe4d805ca24f3dd70bafdaedf5739de5568212c4eab5416df63"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "idss_gfs_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "cebf303dcfd3dab92a3c4f9bddd981eead50f8e0a244fc2b4d2b07deb3665314",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/idss_gfs_25",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "f0d8b5c7acb3f3226e921659568f11f86322bd376a7218cdf867315ef6629d8b",
+        "ac.raw": "220f02a7dfb1165641fbea59900688da717407480b7f8b5748d6a0dae366b7e6"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "7ecf87ccacb8d79a4d2776ad209a76b31c39334d7274911e80b53694df90fdc9",
+        "ac.raw.csv": "90d3eb4b5c3253986cbd736c831aba8d785fc71fa67e8bc86eb51d3a3b9f87d9"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "idss_gfs_125",
+      "temperature_c": 125,
+      "refinement": false,
+      "netlist_sha256": "f285b9563074ce6c7a827901d085101ee3016f597b60b08646025c77f44f37fa",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/idss_gfs_125",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "8d45fa941a9bfedd9fbd2d3d6dc05fdf7b445133eb729e1ef0122c0b5849fedd",
+        "ac.raw": "a95cc61c4bc197146fbbb5912cd546ebfcd7f973f830b5b13d0394460630688c"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "287f358e66964b73357e891563e64409ee0d8cc804e65e4a7d819190b3989fbc",
+        "ac.raw.csv": "c57c3fd06f05135430192ce9715d3d19665f1001bfd117fe0f94e4824f358688"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "small_noise_0.0001",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "58844d98c88e9b07e90b734d9ecd7a44e2ecdc78c89ccb712ce52c881a76358f",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/small_noise_0.0001",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "f09d0eb4e689f8f1fdf6b0956d8835777bb5fd06985f0b2bf059b215e9472703",
+        "ac.raw": "c1ddf5ed1a922ff1e896913012047e382dbd0074ee928c5f003d07bd2915ba79",
+        "noise.raw": "3009d9378fddb5a7e6abeddd75d0febf13d3ace187d9553ac225dddbf333b987",
+        "gate_noise.raw": "9def7a033a0dd7e89d11d39e4a39efd8cd4d235516e4220872152400cae0ee71"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "7c9da08225887d1a9dbf890129c7727e83018d67bb3c7cbf01bf125eff9979cd",
+        "ac.raw.csv": "2aac44ce2ebbffa8ce7d45d79a25b183ab897cca35468671cdf1391131adcf42",
+        "noise.raw.csv": "6ca5d1aa99cbca869a209f77f89e9f27269613ed042407957ded78f501ceee81",
+        "gate_noise.raw.csv": "d608bc0c39eeae1953f6da1cd5077c3cc8806eb867eb2991d303285d5fad1f8b"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "small_noise_0.002",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "4dc36c16ecbfaed1a4a5cbacafa8383abc58c661ec45f07f05bf85963883ac87",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/small_noise_0.002",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "1957b389d3bcb1798b78ee84add7f0b5c39051b99440353c51654bd52f5edeb3",
+        "ac.raw": "2a4d9cefac59a4132482c9fd284d591b91f61674e9e800f47c0779f57194fd63",
+        "noise.raw": "53e6541c01b87c23a087a0d7a300f25868b592d23a877d44679d878344b2b588",
+        "gate_noise.raw": "7a7479ef29aa1c98a200c9629bccb5ddf6696845146794231a74e765513b80d1"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "6b213f91ccfb93b618347f51618b7a2c1c4b5560c1f9f3771742f326decf3b5f",
+        "ac.raw.csv": "1ab09204659a2ab74aef2d862f392d2c9b1c1e49310a3eba80235ff02c9daddc",
+        "noise.raw.csv": "462642c10a4227d17616f789a7ca6f6f94783a36a0505813212539895454e958",
+        "gate_noise.raw.csv": "bd187f0eebb5cd00dbf185ee3b1a213ca5be546ffb42138f850a613158d13ac5"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "small_noise_0.005",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "c4747b65ee217bf6efc6c042d2f0507b8ef3a8b6a22fc5594b691cc16fd3c6cb",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/small_noise_0.005",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "f18726b07153a9ee59394d8b0c5c8467334820605415ed314e1b82a03d8465ed",
+        "ac.raw": "3ff033e54a356fd1ddefdb3dde29711bd59e3e7f8303ff4deca95f4ea1ab6bdb",
+        "noise.raw": "0c635489b0cf7031f9d9ea97b05cd583fd41f37e63e5d14238a928bef5af6a22",
+        "gate_noise.raw": "ccb7ae087df5fdc9d6d01ed4e0711d49eae2181f7ce1bc46cde65ddaa1961a72"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "a4120d65e1c3aed5f23c4a335717ef27f10e1937ac34128ad3d0fac1f74982d1",
+        "ac.raw.csv": "aee7621b31d11a4afe24944de39debf5ac09b32e1fd0051a8f984c82eeb4b6d4",
+        "noise.raw.csv": "4c1c22ab68138397e6004da566732478cf3a5a083a592dd6a68d6940af6f670e",
+        "gate_noise.raw.csv": "ea509b96ec39d8ca95a262ffdf1995ab5be96865a0c579dce9cde500a55a992e"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "vgs_limits_10v",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "bfc9ce608fcd1bf46284321d448cf8b0433fa6e8519a4ef0a87fa1730d2a20fa",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/vgs_limits_10v",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "a617582fcf203b8a475d75c8f6667bc9295605c20a19c0200cc89c28fef6e657"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "250d6492cf522f5961def07662a0d0692d45a23da292ec6ab809229ec3ed3c55"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "output_curve_minus_0p7",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "f5cb5bdd54db871ab4633c4d3e4da5c74be18c096814d64acc0dcb24414e3bf3",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/output_curve_minus_0p7",
+      "status": "ok",
+      "raw_data_hashes": {
+        "output.raw": "04dc540dda8dec5ad350e47009cb0f671b393940079c3fdd78ae18c4f2c7938f"
+      },
+      "csv_hashes": {
+        "output.raw.csv": "0fc2d5502b8074598e4ee72d839efa4ffbee4d34f8f66432ebc215293635ca18"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "leakage",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "b8d28a3ae8a631075c4f57a7a536c40ff464796d02f6cdac6a5c3ee381b77702",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/leakage",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "1115dbb4c768b7253608fe24f2a876e23a9676b41582f0587221ffbe7a4e648f"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "6cef112fdde23a6f96c539eef16110110856770db284e06399394b66272a3d27"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "off_bias_cap_0",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "f69a0f861d2d3f3cdf56484e58cb6f93a7be3ef1baa8efd4e70ddf0b2c6dff8d",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/off_bias_cap_0",
+      "status": "ok",
+      "raw_data_hashes": {
+        "ac.raw": "e0d07e76ac0be4c7035f96e80c461eca59ef77ed637239eaa5867e564bcb3b5d"
+      },
+      "csv_hashes": {
+        "ac.raw.csv": "4a859419c04569d2ecca7ad549801e8f634217255f703c94cda33c3774a7aea2"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "off_bias_cap_5",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "0cf1c5c68b2fd8365ee4c7c47cb83423baf5955f953b04a4166e5710c08fa204",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/off_bias_cap_5",
+      "status": "ok",
+      "raw_data_hashes": {
+        "ac.raw": "a35a26a6a39670ddb3556127254dc2d1c2d4ad480954c08cb3722ab28ade28b6"
+      },
+      "csv_hashes": {
+        "ac.raw.csv": "6be605062150c68424f29886b4650c1361068193566580cb67b6f39ad30be74e"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "noise_ac_refined",
+      "temperature_c": 25,
+      "refinement": true,
+      "netlist_sha256": "e63255677bfb8e521e677450abb35178155e14262b7e6e6f270c1e3a725286fb",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/noise_ac_refined",
+      "status": "ok",
+      "raw_data_hashes": {
+        "ac.raw": "bb4a235fc8860014f4957fdbb5c599d6f80b03eccafcda2e8c3b3385c276db7f",
+        "noise.raw": "a28a09e797476d90e62dbe086c5ea65b6458c1f1ee488f1e4f92f0ddf7aa541c"
+      },
+      "csv_hashes": {
+        "ac.raw.csv": "d9a3eb775af6430366610e46715033b4c74c109981d3e063fed0aba60e42a9b4",
+        "noise.raw.csv": "77ce35401f5954e0eef1d4a447daa886f23955848616a5ac36b51cacd6b8c920"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "large_signal_2e-06",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "a2851646b13ea11f24afded1b3c95026e3e4289f5337eaaf314a69285dfbf7fe",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/large_signal_2e-06",
+      "status": "ok",
+      "raw_data_hashes": {
+        "tran.raw": "4ddb70abf0187d7c7a1c74c9cd67b90bbc5bb5a8db1e0b38917ea151c211742b"
+      },
+      "csv_hashes": {
+        "tran.raw.csv": "1f5d24c1bd75cfe9b3a99ef17a9cfb1792aef0b8d0d5ceaeca185b6ad278e3a4"
+      }
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "large_signal_1e-06",
+      "temperature_c": 25,
+      "refinement": true,
+      "netlist_sha256": "b2df89369fb2157ca3fc76cc0a5ca39012f09c7ae2a2f80b9d28676fbc543659",
+      "model_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "model_version": "Final 1.2; SLPM349I",
+      "parent_model_id": "jfe150_generic",
+      "compatibility": "ps",
+      "directory": "jfe150_pspice/large_signal_1e-06",
+      "status": "ok",
+      "raw_data_hashes": {
+        "tran.raw": "fa73167c5c806c23a4df2b273340a10cfacd2656d52a6e3fe3dde561d6f1b95e"
+      },
+      "csv_hashes": {
+        "tran.raw.csv": "c64814db441f18cb0e8af9a1a3bd9094e04bc1148a59478184c232a0a0c98f20"
+      }
+    },
+    {
+      "model_id": "bc846b_vendor",
+      "label": "transfer_-55",
+      "temperature_c": -55,
+      "refinement": false,
+      "netlist_sha256": "5a2b97df769eb703a388db36e4ff05fc651fc00bac1482f3f954a7ec68ff3e9f",
+      "model_sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+      "model_version": "extraction week 24/2021",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc846b_vendor/transfer_-55",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "f349fa9175059956c80acc5949a23fb8ff68447e432b99d45a1ee332fe7a236a"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "181e234ea92d142d3bc6afa5307a472930a7742eb8f88977f2c72c8f7d0b1ee8"
+      }
+    },
+    {
+      "model_id": "bc846b_vendor",
+      "label": "transfer_-10",
+      "temperature_c": -10,
+      "refinement": false,
+      "netlist_sha256": "6b8395b70fcf6da2f0a730805656a476851ec950f9598d7ebe57479e128a3656",
+      "model_sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+      "model_version": "extraction week 24/2021",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc846b_vendor/transfer_-10",
+      "status": "error",
+      "reason": "Simulator process-group timeout after15s; partial diagnostic output preserved"
+    },
+    {
+      "model_id": "bc846b_vendor",
+      "label": "transfer_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "0f2919d2cc9c0584b09f410aa331612dcfc159a5233f2a5277e048d964073ffc",
+      "model_sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+      "model_version": "extraction week 24/2021",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc846b_vendor/transfer_25",
+      "status": "error",
+      "reason": "Simulator process-group timeout after15s; partial diagnostic output preserved"
+    },
+    {
+      "model_id": "bc846b_vendor",
+      "label": "transfer_50",
+      "temperature_c": 50,
+      "refinement": false,
+      "netlist_sha256": "bfa448d4d3e8413beb23664d8c24967a4c2d2925c98cf84ac3e675a71d2b0512",
+      "model_sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+      "model_version": "extraction week 24/2021",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc846b_vendor/transfer_50",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "964481d065501b1f3e4a195221bc660738ac57cf38b157642adc036c283b2d2d"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "a5e777dbb21c8379da15045b29d66abf684a369b90a8fc4b969e3971136fa74e"
+      }
+    },
+    {
+      "model_id": "bc846b_vendor",
+      "label": "transfer_150",
+      "temperature_c": 150,
+      "refinement": false,
+      "netlist_sha256": "ba41b618a71007dcd11d70585f7ed8f651ab9e5407ee958e99789bd9e091ed5b",
+      "model_sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+      "model_version": "extraction week 24/2021",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc846b_vendor/transfer_150",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "b9f63bc1a09347bcd2ed92250d5ce61abb986104f4ed267a6258ff0e3a2fab93"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "e30c2bb11a8850c6ddbf0a41b6aa84b4d4a62ae890b0332ccb3bda67f20342cd"
+      }
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "transfer_-55",
+      "temperature_c": -55,
+      "refinement": false,
+      "netlist_sha256": "ba296fd4e4d5c26ad7b60358fcf6730a15b6aad33c63c0bd4d74d25265a44362",
+      "model_sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "model_version": "project structural child r1; Q2 emitter 33 -> 3",
+      "parent_model_id": "bc846b_vendor",
+      "compatibility": "",
+      "directory": "bc846b_emitter_r1/transfer_-55",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "42b5458592e880687f9f72a253afd289da98ca8049af8b3f8281241326bc3943"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "7074b5b9ba8f2f0f620824d7269e1dd0115519df71a05a11c229db3c0624890c"
+      }
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "transfer_-10",
+      "temperature_c": -10,
+      "refinement": false,
+      "netlist_sha256": "bc60c1edc6c9cc3242e59bd8540ab9f8d8d1533f0df02d69b2b5310fecf7dad9",
+      "model_sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "model_version": "project structural child r1; Q2 emitter 33 -> 3",
+      "parent_model_id": "bc846b_vendor",
+      "compatibility": "",
+      "directory": "bc846b_emitter_r1/transfer_-10",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "363b4ca1867e07aec662e05a4e6d1151cb302ab4531f344a65d82d24d46769f9"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "f596310b057a0df5b2c6bc57b39d79490bb2a1d6242a30d7839346c6a5099e3b"
+      }
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "transfer_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "00739bb4d989d1bfc574eed0bfb37d98566762a32cd1752f51430f358202b9c7",
+      "model_sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "model_version": "project structural child r1; Q2 emitter 33 -> 3",
+      "parent_model_id": "bc846b_vendor",
+      "compatibility": "",
+      "directory": "bc846b_emitter_r1/transfer_25",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "dc6356d399fe4046b0d32693be02ab76cdccdbaca1c3d46ca3ae249bc8ea51cd"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "9452262d570ede076e87b54123e7a84e5125b9b16c044fe3d59901eeab20e163"
+      }
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "transfer_50",
+      "temperature_c": 50,
+      "refinement": false,
+      "netlist_sha256": "0b1942a8b1caed4c15d2820afb2cec0b04130275a2e492f1c19243297edbb1a3",
+      "model_sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "model_version": "project structural child r1; Q2 emitter 33 -> 3",
+      "parent_model_id": "bc846b_vendor",
+      "compatibility": "",
+      "directory": "bc846b_emitter_r1/transfer_50",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "da67208102898d8b2595beab5b93eebd913e0907e9dbc1a07f00f165edc6fe0a"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "95ba5f961c253e152d71924f9f1f2333abd363d2fe182c41ab2a0029f946a06c"
+      }
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "transfer_150",
+      "temperature_c": 150,
+      "refinement": false,
+      "netlist_sha256": "7acadb71500c6853ba1751f13b11ec9b24f4d3556046ec3bbbfc3ad9994f1384",
+      "model_sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "model_version": "project structural child r1; Q2 emitter 33 -> 3",
+      "parent_model_id": "bc846b_vendor",
+      "compatibility": "",
+      "directory": "bc846b_emitter_r1/transfer_150",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "0b376a547d6555c43b2513b46b311c02d828f867965966e7c98ea86cc5e52293"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "dfadc9189881da49b1a0fa47bf02fec147475c7b3c18e65663a3e00d904ba19b"
+      }
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "output",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "5d3c602ac1f252c4808fbc1ce6639520420ba0b64ddec8cd4fd041ec1284d559",
+      "model_sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "model_version": "project structural child r1; Q2 emitter 33 -> 3",
+      "parent_model_id": "bc846b_vendor",
+      "compatibility": "",
+      "directory": "bc846b_emitter_r1/output",
+      "status": "ok",
+      "raw_data_hashes": {
+        "output.raw": "56059bd688686c8408bdd2fa055520f140a1fc3d1217359f2aa48ee2fbeda38b"
+      },
+      "csv_hashes": {
+        "output.raw.csv": "0ca3e2d954381c069f902d629a87314a3ae4ac48cddbc4951809627fb744129b"
+      }
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "transfer_refined",
+      "temperature_c": 25,
+      "refinement": true,
+      "netlist_sha256": "0671ddd2caa136729aa6ca0a824bb8a976283ec09aec0bb7e87a4008804f15ca",
+      "model_sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "model_version": "project structural child r1; Q2 emitter 33 -> 3",
+      "parent_model_id": "bc846b_vendor",
+      "compatibility": "",
+      "directory": "bc846b_emitter_r1/transfer_refined",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "97db52659d9c754678ea34a954d9f7f1bf2a4f385db4c7f1908b3f806c67eba4"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "88ac4373b0e48527e1646e18a78adc3bfeec1448669df71c62a042ab63f6d4e4"
+      }
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "bandwidth",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "8d3afc7a53b75effbd4ac484d52e4f238a6bfdbfa33b55ab0609bf6114620d8c",
+      "model_sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "model_version": "project structural child r1; Q2 emitter 33 -> 3",
+      "parent_model_id": "bc846b_vendor",
+      "compatibility": "",
+      "directory": "bc846b_emitter_r1/bandwidth",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "aba1d6d6848b02a2fb7e0523481b684e8eb2c38ec2a2ee7d31d9c527cc7098c7",
+        "ac.raw": "4419c3684bfa59334bfc19404bd14ec33c0a61c9447761dc1b3787785cafdab9"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "08e8d2c2133eb4bd5cdefbd561a838f55af70db64fb8f70cac79c5ee31c6ac11",
+        "ac.raw.csv": "ad9b4580e5458ea0cf068581fd315388698efc87b93fa994392b4df388d7cdcd"
+      }
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "collector_capacitance",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "033a655a62ce04f90ccdc7a0a93f1553cf3658763e1a0e2e2928e18e24c7b9c2",
+      "model_sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "model_version": "project structural child r1; Q2 emitter 33 -> 3",
+      "parent_model_id": "bc846b_vendor",
+      "compatibility": "",
+      "directory": "bc846b_emitter_r1/collector_capacitance",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "dae80174219fd25530a1c979197c559487a4052a13ff18f577f1399aab73eb49",
+        "ac.raw": "5ec4564700306efd2d51f75e2200b82572787f2cab91701241303c5f2e6a7c83"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "b21211164a40483a9142a91fe626546947892f3acddba804c40133d231643351",
+        "ac.raw.csv": "77caba4ba84d696186c353b805fdc55a4ade74139bdd1bacf3579f7981ee92ec"
+      }
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "collector_cap_return_refinement",
+      "temperature_c": 25,
+      "refinement": true,
+      "netlist_sha256": "3927b3e6ee9a608e88930fccc2894ae444781256b76d96da4ee80d72813945c8",
+      "model_sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "model_version": "project structural child r1; Q2 emitter 33 -> 3",
+      "parent_model_id": "bc846b_vendor",
+      "compatibility": "",
+      "directory": "bc846b_emitter_r1/collector_cap_return_refinement",
+      "status": "ok",
+      "raw_data_hashes": {
+        "ac.raw": "34639be97d014762d99b6017634639b34ac12476308cfa794fe60864712e85c7"
+      },
+      "csv_hashes": {
+        "ac.raw.csv": "76f42ed0509ac75eafffefef7d10ab1d36e1826f8481dd324414d8f01147d7b8"
+      }
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "saturation",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "b8417daca9afb3cbae63212be44b63d0325a2eae321ee81f1924088e6ed92e83",
+      "model_sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "model_version": "project structural child r1; Q2 emitter 33 -> 3",
+      "parent_model_id": "bc846b_vendor",
+      "compatibility": "",
+      "directory": "bc846b_emitter_r1/saturation",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "ed489a4f736fdfff1ee53e59f1852e7a22099deefaf0b7bd06f3ec3f5acd545a"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "690985c916f121093b24e9c593c845c23c413ba81a00ca1c06430d1f00d8cff4"
+      }
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "noise_figure",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "a4d8ade6a2bedce0d13e66c8d2600dfba68bb9c44951b659347d939fd5b1b09c",
+      "model_sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "model_version": "project structural child r1; Q2 emitter 33 -> 3",
+      "parent_model_id": "bc846b_vendor",
+      "compatibility": "",
+      "directory": "bc846b_emitter_r1/noise_figure",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "7de3bec80570d86b58c28c60351389693441fcc0d612dfee84c1c0aa4fd5f945",
+        "noise.raw": "7db3ff8067b80a8d1b93641a2913b2b3f61f2c8fb6db2fa7a0ad159b16fd7128"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "66c3b393682b07d727dce0c9cb1a5026156de4b25c04c1d2fead80ffb874660a",
+        "noise.raw.csv": "3af8d8204e2fc8fe82ff4e1ee3d8e9409fd4534b93c726fc80e144414f25bef0"
+      }
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "transfer_-55",
+      "temperature_c": -55,
+      "refinement": false,
+      "netlist_sha256": "7d1daa262a05d4d2bd6ed2c9216d71f7198c97e1428f3e35454d5595f247f0ed",
+      "model_sha256": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+      "model_version": "extraction week 19/2020",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc856b_vendor/transfer_-55",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "76c279298b90e50eb6e32f6389a990b7558933377567f2b2f14fdc8402dfee7f"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "09ee691649f53eae865c29e09db6d73f52b4ec33ee63b16bbec4b3770b417d74"
+      }
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "transfer_-10",
+      "temperature_c": -10,
+      "refinement": false,
+      "netlist_sha256": "84931f43bbfb62f7d67f5363bedb878e1bd853331e9dc5c6569d6128c639c68f",
+      "model_sha256": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+      "model_version": "extraction week 19/2020",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc856b_vendor/transfer_-10",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "477f48f4177d926815a853287f1d34b6f29dfafa884fcb3f59f491fe4d99e5fb"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "2f2df32ac2c9c6c8970f044b1afb836569dbe8f8e9fbaf8eb214faebba83292d"
+      }
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "transfer_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "dbcae3791369cf14408e4651fe1c702057c1d459ff3ffc30462d9d733df07b65",
+      "model_sha256": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+      "model_version": "extraction week 19/2020",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc856b_vendor/transfer_25",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "7ccdcc24b9464c28d7615238d6b367c9e970822a6e5038471866f9d9cb65a1ad"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "6470b9049cc3e2fe963b4ed9d677c3921a072a194ebdebf59e1f019049b41716"
+      }
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "transfer_50",
+      "temperature_c": 50,
+      "refinement": false,
+      "netlist_sha256": "87e6ff89e1d59c78e28f4ea932f11393f80b60b23fccf433e57911078d3852fe",
+      "model_sha256": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+      "model_version": "extraction week 19/2020",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc856b_vendor/transfer_50",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "b8680a43b69f4e5b8b228a2735e4f9cdb48e8a733a5e7558fb695a7f03ae2fc1"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "a7fbcea57151e1b09e8ae825c10a018235ee650150be827d1173b709c9e4acd3"
+      }
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "transfer_150",
+      "temperature_c": 150,
+      "refinement": false,
+      "netlist_sha256": "ea9af786683984ccf4b5dacc35b8cf33683fa49d4619be0b324ecb3bfb628bec",
+      "model_sha256": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+      "model_version": "extraction week 19/2020",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc856b_vendor/transfer_150",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "bb2171840fdfb5bd4ac88fcc7dc860eab9e64bab0466ea41e308daa22acaa4c4"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "fa99c0e3365d8faafd0b4c232a2c9897a80e05ee3e308a4ca66f3c02b6614e27"
+      }
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "output",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "52556d4dba7544634bea155d4aff0b5bd8d6e7097d00aa0597d363c6a6e32e04",
+      "model_sha256": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+      "model_version": "extraction week 19/2020",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc856b_vendor/output",
+      "status": "ok",
+      "raw_data_hashes": {
+        "output.raw": "da9f0ec6cb798daf917aa3d04be1fa7ddfa6ad2eb64b30064e252041219c8a30"
+      },
+      "csv_hashes": {
+        "output.raw.csv": "c6a79d167abe91ea0625f2df044a5842107b9f3b13e355859d6f52209aca08f4"
+      }
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "transfer_refined",
+      "temperature_c": 25,
+      "refinement": true,
+      "netlist_sha256": "b606b40597b94aa4ab70e3629619edcd24ae23fb7326d23808185f5175c98d7f",
+      "model_sha256": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+      "model_version": "extraction week 19/2020",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc856b_vendor/transfer_refined",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "7a18ddd5a1200fb7030d954cbaebdc01a8440f9ecde242d6e2c703ff2db0d9c7"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "1765f90fe041140e9eaef95b33456d0b1548a87d5a97e159dc1a3ba771ca480c"
+      }
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "bandwidth",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "f4659f89660b5acefdcc4e047ce01e1aff28b134f6f9cb2a053939aa20613501",
+      "model_sha256": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+      "model_version": "extraction week 19/2020",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc856b_vendor/bandwidth",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "9624f5087f5601de184af81806b1db2ab1e387663fc149d601e9bb5f53149c46",
+        "ac.raw": "b825d2470753d1268637c0f456d8df84197df9668fddc5b4357aa7bd9e29267b"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "004e889bfc701092e36ae7e0e5fc66ead8e3b7cb1b396b7c19ea84de1455b4f8",
+        "ac.raw.csv": "a2a2736ffdfb54f13e37d8e6a77dfd882fa68dd9a4866a09f8577b93146a5a88"
+      }
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "collector_capacitance",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "a3513bbfd81db40ea92041542bbe80be626df93262ced4e32188abc91a3dd199",
+      "model_sha256": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+      "model_version": "extraction week 19/2020",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc856b_vendor/collector_capacitance",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "414c8268e9ca3ba39c15c5618cf709a6075303e4350f4b5167b060e610558d28",
+        "ac.raw": "e0ff1750fed44e5cfc5e06c23ed36a3f3c1d93faa9d2797fc66f27b3d9dd00d2"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "88b8e3c0b977b552dd0d8f3fbf253d088e2d9dd4a6c43ed2b1ab2bfb7926112e",
+        "ac.raw.csv": "0efeab58cce63f67aae8bcf56dbc6633a45c5b7f64bd4acbd020bbe9c83d7419"
+      }
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "collector_cap_return_refinement",
+      "temperature_c": 25,
+      "refinement": true,
+      "netlist_sha256": "93e0d8b53c855daea0fb24615d262692a97d4a567b66be5b4fe9f4147699fd05",
+      "model_sha256": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+      "model_version": "extraction week 19/2020",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc856b_vendor/collector_cap_return_refinement",
+      "status": "ok",
+      "raw_data_hashes": {
+        "ac.raw": "e0f3e78cc2dc5098d2102fc9c184d99bea9a5ee59bc6c86328935c20ca0c29f6"
+      },
+      "csv_hashes": {
+        "ac.raw.csv": "1ba4d22e8bc6076b73fb8ca725ea44832c5962d4f43f8733c1b62daa06e4e401"
+      }
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "saturation",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "f80429f1c66afc3f4a6289230fcf74c8537259b04608abd084c0692d4c0c2414",
+      "model_sha256": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+      "model_version": "extraction week 19/2020",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc856b_vendor/saturation",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "f555f81777c33488e9b957838b5c656a31daa0206d4dc449bd7639c036627f2d"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "b413194b8d1632910b49ff6da4c7a693085d018b71751efda7593a6c6e68d388"
+      }
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "noise_figure",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "414f38dae8ba5d982306fad9a7a882d3f36466b23dc71bff5e711d2abc3069da",
+      "model_sha256": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+      "model_version": "extraction week 19/2020",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc856b_vendor/noise_figure",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "3d927c77bcffb6382cae104b1cda7d5adcdfc14f266533bf72d9fc0c5939ea83",
+        "noise.raw": "89a7dadfe02a543fddf82f6ae90b4d7b616c69f578000a4d2159439801119ca8"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "e48ff4bf8f1266f4d2b45cd607a2432b5fc13f57600638a076fcb3d069a041a6",
+        "noise.raw.csv": "134dc66ddd23e791cfa49d86dc1d22382f54b84187b4277412c31adcd3d46e1f"
+      }
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "small_-40",
+      "temperature_c": -40,
+      "refinement": false,
+      "netlist_sha256": "f17355c50a5d65100df8b9c3b910e18eda7febe6a0a205314f9ca3a0f22bd0ab",
+      "model_sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "model_version": "Final 1.3; 23JUN2022; SBOMA34D",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "opa197_pspice/small_-40",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "6c69707963445315f0abdabe09deb047bf82b1492f61d772247c90deabc21cce",
+        "ac.raw": "668e01ca4d54fa43f9ea3973155472909e9a7bcdcd10911fafbaaf91ffb788e8",
+        "noise.raw": "1ab289a5112f57149cf2bdcac42cf64bf9498e4db0fab4391acfec4747449820"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "23e78723829606ec7f09e0167ab56c4a4b0ff6a37482ed54ade38cca7e0cc9a2",
+        "ac.raw.csv": "0ead54d5ce3b35eecc9b462b1888d2786df271a88a8f7acaebe24142a4c83a34",
+        "noise.raw.csv": "9573793e4dc1cf36f9e5a09a66ee7b7492fad841d62d0f35ec2acd9456952248"
+      }
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "small_-10",
+      "temperature_c": -10,
+      "refinement": false,
+      "netlist_sha256": "7be3aaab24573d3003a2624a0064de7ffb53e17405c7d766c6a2e0d206272a24",
+      "model_sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "model_version": "Final 1.3; 23JUN2022; SBOMA34D",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "opa197_pspice/small_-10",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "ed5776042adc1500edc52d791acaac0e7a7c887a45ede556127c7fdc9505618e",
+        "ac.raw": "06c06768146fa3a2cc7593d8cca2f38f198606471ff5ede0c0c5437799247381",
+        "noise.raw": "39f4b1dbf1191d9f399410c764e3a946227ab997cf72d67ae1822f3897d0db92"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "5c58f63409085c645f4addbff289857bfe2af2c454f9e7710dff1f219698546b",
+        "ac.raw.csv": "12b43060c2d39b919e73ce2504ed87b91fd5b2444ddea60527618b91c30c25c7",
+        "noise.raw.csv": "7be9e563b7c3b52f5b9a0ea748dd139a4f971b29cea992abb6390a8274032611"
+      }
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "small_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "b3d15483a5eb15af214328a66384f8750b2380cb7552cb46b25c7c307eb5c731",
+      "model_sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "model_version": "Final 1.3; 23JUN2022; SBOMA34D",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "opa197_pspice/small_25",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "85efae7461d6afb371922cc62a1ca848bc6f5bbf9ffafa2a0d6ed46b6b9c48e1",
+        "ac.raw": "3b881a48750b75f91dba28abad0d497f0e3fc544adfede7c7d92f572f1aef93a",
+        "noise.raw": "74dcd0e800f993095502c8781430ccaf600848c228fe4992e274346ba6469f6f"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "e7d1710ba24dce495a0e9646453fcad5a80b2dd1d34f9323bf6d26ccab029fda",
+        "ac.raw.csv": "0ead54d5ce3b35eecc9b462b1888d2786df271a88a8f7acaebe24142a4c83a34",
+        "noise.raw.csv": "396894aa13d82425bb5c806038ab571a9b7564d74fb3d7867c57fb72699c599d"
+      }
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "small_50",
+      "temperature_c": 50,
+      "refinement": false,
+      "netlist_sha256": "1ed15f0ad4dd642954d17fa9902be70294ef6d28144bbb5804b1fb5706dd3b5f",
+      "model_sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "model_version": "Final 1.3; 23JUN2022; SBOMA34D",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "opa197_pspice/small_50",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "19e3e3adf4b6009d1e21cde27a521fbe576f7bd904f644f2894e9b1a0b8a80ba",
+        "ac.raw": "bc8e64879960068967c24137fb55159c78f099d96107a11487ba73cb2a68344e",
+        "noise.raw": "24368b49b0d29162428042b6d3b890b1a8e2ee644c91bca74e5b2c1180ec0a44"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "d78aa34a97ee3a5cea1bc877457055d2466a70f4680266334e34077af5c3cae9",
+        "ac.raw.csv": "e94e5a427542466b2f06ce95f9116b40078dde765c775e5ab1bb6f7295978517",
+        "noise.raw.csv": "357a9b909fcb21c5a0a3cfc93bef3fbf9f02eddff323d65ba09fc58c1e11c9bf"
+      }
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "small_125",
+      "temperature_c": 125,
+      "refinement": false,
+      "netlist_sha256": "2b7e6a096387243a9c929aacaa0eebd8644faf998b7591e48cdc9811146b96e3",
+      "model_sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "model_version": "Final 1.3; 23JUN2022; SBOMA34D",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "opa197_pspice/small_125",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "ecc8a73215ce0bfc527eee665ec5526cebdefdf35f415f8d1032e742ae696fdf",
+        "ac.raw": "5c354276e1bfa8f70ec9a0810f66b6834f8a563c727e2025d0686c8fc50d526c",
+        "noise.raw": "1b76571dbfdfb81f48e1d35e55718ce099bebcb57daaed0b83bb02671b30c67e"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "9607802fc54693a82cb55953e1ea48b8af55270b7ecab9e5554f730bb4193ef9",
+        "ac.raw.csv": "348d53377ca9301d3d9e85ff55998d7ea284be54de014908ecb9a88663785fef",
+        "noise.raw.csv": "22f649706ec52a02f381bd19be17cb7642510c7c84f1ec0e4404a6689bb6a0cb"
+      }
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "current_noise",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "84d40f09493f87113413c78f8a8c713a9a7bc5f1d371f5784cd334e9b67a702d",
+      "model_sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "model_version": "Final 1.3; 23JUN2022; SBOMA34D",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "opa197_pspice/current_noise",
+      "status": "ok",
+      "raw_data_hashes": {
+        "noise.raw": "80c0dfd614a4d98b6e9fbb4898dd25de00f74f68d17af8b715dd827dc59328a4"
+      },
+      "csv_hashes": {
+        "noise.raw.csv": "8a520a180bfc1bb77d980c5dfbb054234e52f6940e7b2f939f3428787ddcc4b7"
+      }
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "open_loop_bandwidth",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "a7e1dbed3baf5edb7beab6a6931b1bf8b09da669d087d4689999792cedd24ce4",
+      "model_sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "model_version": "Final 1.3; 23JUN2022; SBOMA34D",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "opa197_pspice/open_loop_bandwidth",
+      "status": "error",
+      "reason": "exit 1: \n\nError"
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "dc_clipping_branch_1",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "5b3edba14cce49fe27852c6bcd63d5640d27fdb3c7194783e9f7320f6a71f334",
+      "model_sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "model_version": "Final 1.3; 23JUN2022; SBOMA34D",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "opa197_pspice/dc_clipping_branch_1",
+      "status": "error",
+      "reason": "Simulator process-group timeout after15s; partial diagnostic output preserved"
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "dc_clipping_branch_-1",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "60a26e8389e0bfbde577117f9848d95a0eb3cc56e90125e7b26ba1a05a11d81a",
+      "model_sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "model_version": "Final 1.3; 23JUN2022; SBOMA34D",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "opa197_pspice/dc_clipping_branch_-1",
+      "status": "error",
+      "reason": "Simulator process-group timeout after15s; partial diagnostic output preserved"
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "loaded_supply_ramp",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "f95f0d682aaf43495887fc6effd6fee4442dfd1a51240c30a03059446084faea",
+      "model_sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "model_version": "Final 1.3; 23JUN2022; SBOMA34D",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "opa197_pspice/loaded_supply_ramp",
+      "status": "error",
+      "reason": "Simulator process-group timeout after15s; partial diagnostic output preserved"
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "noise_refined",
+      "temperature_c": 25,
+      "refinement": true,
+      "netlist_sha256": "82a059bab44a9a6a8142db4b53ade0f340cf61007992fa5ba1440c966efef2e2",
+      "model_sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "model_version": "Final 1.3; 23JUN2022; SBOMA34D",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "opa197_pspice/noise_refined",
+      "status": "ok",
+      "raw_data_hashes": {
+        "noise.raw": "372507b29f6653a1f8fc142a59ac63ac21c274d2cb687314357726e037a68243"
+      },
+      "csv_hashes": {
+        "noise.raw.csv": "493c263705daf21e3b6a52ded97b654e41bfa2db717f426296b83448b7324d75"
+      }
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "clipping_tran_1e-06",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "4b8fa47d59f64c69e18ac7a2782f505b31dc37d3d19d2842c9329b256a6a869f",
+      "model_sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "model_version": "Final 1.3; 23JUN2022; SBOMA34D",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "opa197_pspice/clipping_tran_1e-06",
+      "status": "error",
+      "reason": "Simulator process-group timeout after15s; partial diagnostic output preserved"
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "clipping_tran_5e-07",
+      "temperature_c": 25,
+      "refinement": true,
+      "netlist_sha256": "2f81b1cf6c35565a9fba4857e9476ee12d842eea6ccc6ba7a268a636a324bb40",
+      "model_sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "model_version": "Final 1.3; 23JUN2022; SBOMA34D",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "opa197_pspice/clipping_tran_5e-07",
+      "status": "error",
+      "reason": "exit 0: doAnalyses: TRAN:  Timestep too small"
+    }
+  ],
+  "eligible_for_production": false,
+  "status": "recorded_unqualified",
+  "unresolved": "Behavior-specific scope; failures preserved; no model receives a blanket low-noise/production qualification"
+}

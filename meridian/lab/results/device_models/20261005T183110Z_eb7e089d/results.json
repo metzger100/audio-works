@@ -1,0 +1,1566 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20261005T183110Z_eb7e089d",
+  "status": "agent_interrupted_invalid_fixture_batch",
+  "reason": "JFET clamps5V corrupted drain sweeps above5V; OPA follower overdrive exceeded input common-mode range; agent interrupted during second failed transient after timeout. Partial files and original models retained. No engineering credit.",
+  "source_manifest": {
+    "requirements.txt": "f2162d13822ff575becaab0e43a96dcce42f33a9e3cd4aacbc88d3ae1e4ff3c3",
+    "optimization/optimize_bias.py": "90cf1a61c2aaad14c39c3c6c544bc8bae21fb556303381d44c4ffc8bef498733",
+    "optimization/optimize_values.py": "6c332b7758d61cf92aad716781ee81ee0401156965543673f9438d2d8e5e85f4",
+    "search/archive.py": "a6540a439fd86d9d0989cc6b75a5656afd15eaeed86adae189debe604a242b58",
+    "search/concepts.yaml": "711693e5c28f1313246c4411926687981b4c0db48a845ab5fa4585dd22002123",
+    "search/families.yaml": "458ea6f4ad64c1244cb8f709ded0313b46c75f4c2ca46066683ea82f41c2ffdf",
+    "search/generate_topology.py": "3b03bd1291e1e757f2d5701e029bf9610a772442a3bfb55bf662b70ede13220b",
+    "search/loop.py": "3322bb6d43b86f9c4e1c472a79d50f80e06783960c880a8be8452ee4b64e1d9f",
+    "search/mutate.py": "8f91ab73f3ffca62922db5346173dd66a61baa6b781141dd9c3ca61f011d9886",
+    "search/novelty.py": "1d0373ee6060f925febf54375a2de2dd42c846b5a1ba6c86570c597d1c1566df",
+    "search/selection.py": "83f62cbb70327ad8e713f05dedcf902ecd395146f4e5b9664080b27915b713a0",
+    "spec/capsule_model.yaml": "169983f2601ee39a59496e0e4d2d337deb14e7e4ec7bf38a92f6ca89b59bc696",
+    "spec/design_constraints.yaml": "48d03f7b8d6302aeca14efda4de5c12cf491c393e212e6842f04da60c344dc43",
+    "spec/lock.yaml": "0a5ac00e5d73b720b0c0926c6987ab6b8cb2dca6ac3d1513039db9f3a05c8d07",
+    "spec/microphone_spec.yaml": "ea5a6f973f17f907c5b76f9d17a35cfa784903bcfcd8d7f1d08cd538b65636cd",
+    "spec/scoring.yaml": "6aa6b8620a4700220ac952472f150396599ca67a2918f6f114e1b283a158c0af",
+    "tests/test_device_models.py": "a9f085071430aa48870818bf78c9bfbe3247c8469ecaf9f47fb3ee00d5d7e695",
+    "tests/test_integrity.py": "9f6a90bee69c5327216c42e29f11a6f4fd00b8359a42a42e72de90b7f1128c2d",
+    "tests/test_physics.py": "4cffb4617d81ee327b32883f7fafc88905c76126f567d77b5d79a39f22560e59",
+    "tests/test_search_and_numerics.py": "b906730c436811458eb61cfb96799e069c48485ecf2e54ec4b14694f338a761b",
+    "tools/ngspice-run": "52cc8315fd7b1dc8dc7757658407dbd4a0b21e1f73bbbdf8a183e04487fa26fd",
+    "models/capsule/flat_k47.cir": "26899d24e6aefa2cfd41b6c13fe1e022e94f2ffec10358ec00dfb74ed0c082b4",
+    "models/capsule/flat_k47_native_q_r1.cir": "79b97ea73165979525f08aca427d8bfaa42fa8814ae576b140bf97550fb61c18",
+    "models/capsule/flat_k47_scaled_observer_r2.cir": "a977702eae58c5345e129bb282ce75f98e4405872e891e603512d37c480758fe",
+    "models/capsule/flat_k47_series_motion_r3.cir": "dcd00a192cfdc6a1744d9a3c2c8ad65b73b4a990697f85f23e756711834d5bb7",
+    "models/environment/p48.cir": "8037de103d579dc4923b37e2ae0b2c78a7337b39385f05055d7e08aa94a53d6f",
+    "models/semiconductor/acquire.py": "d86441ffc7b0c5c1b3371444275deca27826f136feb022d459a281fadc85bac5",
+    "models/semiconductor/acquisition.yaml": "8423936e4c0d64879b356c4db9f35b0f1729d352008ccd5fd792b990d7f51a9b",
+    "models/semiconductor/characterize.py": "bb8a7c3bf751def75808c6f8a8971d1c05261f94db89575e5d1c1985d4fbc81d",
+    "models/semiconductor/corners.yaml": "07cba7e177d59fbda19e4e1fecc8d1e045c28b7126e942122f32994a974ada17",
+    "models/semiconductor/dc_bound_controls.cir": "4aec8ca3bf32d3ee0ac921b407d0b86b73acfef6de1db7a0b313e10e19b00c4d",
+    "models/semiconductor/prepare.py": "bd2aca3425ebaa7eb7d9048e3856640990a46c60b56f1093da1e87073e5457ea",
+    "models/semiconductor/references.yaml": "538c66f7587ba18610aa5c5300e4248395d6fe02c950ec741f1cff3c3de55328",
+    "models/semiconductor/registry.yaml": "70acd01087037e7663e114340885bbd0397829a99d86b046c3ae57684723ab28",
+    "models/semiconductor/vendor/2n7002.lib": "4a2a3f7fb1725f12fcfe3f7fef5cc082be2ac58eeb30ee4fdb693398e74abbf5",
+    "models/semiconductor/vendor/bc846b.lib": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+    "models/semiconductor/vendor/bc846b_emitter_r1.lib": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+    "models/semiconductor/vendor/bc856b.lib": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+    "models/semiconductor/vendor/jfe150_generic.lib": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+    "models/semiconductor/vendor/jfe150_pspice.lib": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+    "models/semiconductor/vendor/jfe150_strong.lib": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+    "models/semiconductor/vendor/jfe150_weak.lib": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+    "models/semiconductor/vendor/opa197.lib": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+    "models/semiconductor/vendor/downloads/sboma34d.zip": "9e55fcaa23d54cee025dda3fa9872b11c41c531f82e0802c2b93d51e943666e5",
+    "models/semiconductor/vendor/downloads/slpm349i.zip": "6358de546c957c142c321f30431fa816610a22599a0a3f980646ac6bbe6eace0",
+    "models/semiconductor/vendor/downloads/slpm366.zip": "1fd7c2ff8ef1c2b1354c98e35537f4d0db56ebb0eea614702bff7610c25e46a1",
+    "models/semiconductor/vendor/evidence/2n7002.pdf": "cc9c275457670c3cbbf2e56f5a75c800d3b5f0b396fabc798cf18cb639646475",
+    "models/semiconductor/vendor/evidence/bc846.pdf": "045a6cc21de93ac634aad910567e882926bd6ef154cbd8c59d13201134642a97",
+    "models/semiconductor/vendor/evidence/bc856.pdf": "d9a836e40dd8f1e788d7dadbfcbe8cf4836ed5debe789c84b8fa574132f84943",
+    "models/semiconductor/vendor/evidence/jfe150.pdf": "925d58a8f0cf7db307325ece12fb2f61a736b2c1440f63928b5e6c1312f39365",
+    "models/semiconductor/vendor/evidence/opa197.pdf": "27653a7d5e965cbb2d23f7998919ebd774efd5cd3e126b8f0881469ae91166fd",
+    "research/device_sources/README.md": "f5950aa76d4a5813bc3a1fbfe9f74b553c9fee8559982c17899ae893923676eb",
+    "research/procurement/semiconductors_2026-10-05.yaml": "f09abdec07694398de770ed4f784325d2210c0cc2169aa53675771332716fe21",
+    "research/device_sources/local/web_observations.json": "82eba24adf2a815360d34ad69a3dc98feb4aba101e5431a6340ee11bc585b498",
+    "search/proposals/concept_0010/proposal.yaml": "4829f158162cbc7c3290a3655c87e50dc3d9648a6497bcc5e6bfa99e841592b0",
+    "src/meridian_lab/__init__.py": "70778163075ec49235b8cf725bce58f9cef39892880a46ccc9fa58a9aeb98f52",
+    "src/meridian_lab/archive.py": "56353457cb366e1141d3a82ce5cdd74e1648f6321ae5b1247a7f20019aa44d06",
+    "src/meridian_lab/cli.py": "8bd9d564d2dfe329c75a4403be77aeceda6cd5b8395d7322a9f3729b6e923bdf",
+    "src/meridian_lab/core.py": "1e5712da3ec7f57b00e329b3525afcd19a1756c184473f419d43d5c1a924c354",
+    "src/meridian_lab/device_models.py": "9e8a1642efbd38886548adfa892b56fc0b798c58036defc2af15344b151a50be",
+    "src/meridian_lab/metrics.py": "37827dfc57123f2fbfb5398f4f0a6e0be147cae9e2f2ae5b46fc35d61d08c9c8",
+    "src/meridian_lab/qualification.py": "859c520c71bc6df38bd8e809aa74631b7dd5ca15c12d23986756d817e0837077"
+  },
+  "source_unchanged": null,
+  "jobs": [
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "bandwidth",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "66815992158673b43d69b28619da41ba1c42463e5fd759316c1f157328b21793",
+        "ac.raw": "c50422540eee5d30b4fcb7f0c5c72dd89ba30c4aad2c8de1b56e47c45bc7cee1"
+      },
+      "netlist_sha256": "44e7acefbe35e3f6d5d9b689f757b6d61aef2697434cbc21057c79ada9c21ad0",
+      "directory": "bc846b_emitter_r1/bandwidth"
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "collector_capacitance",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "7f9e4ca35faa05a17adc72cc8c5a0afd757e822776389d0307712466ee2c6a44",
+      "model_sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "model_version": "project structural child r1; Q2 emitter 33 -> 3",
+      "parent_model_id": "bc846b_vendor",
+      "compatibility": "",
+      "directory": "bc846b_emitter_r1/collector_capacitance",
+      "status": "error",
+      "reason": "exit 0: Warning",
+      "raw_data_hashes": {
+        "op.raw": "8cd5ee763281b871e8e119ef1d32c8bd6f56bfd5249298e0236d7430cf444f3e",
+        "ac.raw": "5e1993b7f28d1d681a026daec3c050b09b21dc482e43954d3ff9d6e85977a3f1"
+      }
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "noise_figure",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "7b17ff9ab03e8438f455640daccf0b7685a4eff8deffc9ed2ae88d9c85bdb2b9",
+        "noise.raw": "e6fd7d91982ff971247ed46e06b22bf7f74c9f5d1a59540087bc0efe412a506f"
+      },
+      "netlist_sha256": "a49ff0fb50bd3f024ce2c5dadd2c37b3aacd60bc29b2c9b1a57668e6e5c28e81",
+      "directory": "bc846b_emitter_r1/noise_figure"
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "output",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "output.raw": "03c380512e58bfe376d90341e9a0e8a23d8211f3a7bf84d168eb0a64791b2720"
+      },
+      "netlist_sha256": "6c60514824a28af9b23c5fe98b2809e9182e1e9354230b8874d73b7227c1a683",
+      "directory": "bc846b_emitter_r1/output"
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "saturation",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "eff61e0fdd0db58a5a87b383abb9d0ef6cc99b50336daba5e38fe2c8c867a1d2"
+      },
+      "netlist_sha256": "ac4a8e0545525338715b44e8859f3db8716fbdbee143ae76153cfc4f3ab59ace",
+      "directory": "bc846b_emitter_r1/saturation"
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "transfer_-10",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "2e1950fc83c09ce1949f9727c4fc53d26896f7e9091fd8e2877bfdba740fcedb"
+      },
+      "netlist_sha256": "13dca87e905796b2f8b8f92e80b76cbd8bf1f94aedec7e41c978c7f9464cb998",
+      "directory": "bc846b_emitter_r1/transfer_-10"
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "transfer_-55",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "b0c89e0ac091101e426cd4361fac9f424a6e8985613a76ac22c42934ace83dfe"
+      },
+      "netlist_sha256": "97a529c4d076c99f66a05cc0e24b2fddb85fad36f21e35fc5b12e292d3f8b093",
+      "directory": "bc846b_emitter_r1/transfer_-55"
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "transfer_150",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "e5e7237a777dadad0d6489ba0233b73241e90e1c8271efa4cca2a38efd52c805"
+      },
+      "netlist_sha256": "e1bd879bee2fe83d34d307a25c6dcf4ed138c13e479140ba871e4347176b3cfe",
+      "directory": "bc846b_emitter_r1/transfer_150"
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "transfer_25",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "44148c99d8d79483accd559ab086e288e255278e06120ab1c39dfb0b02852c11"
+      },
+      "netlist_sha256": "d4e256d621893a33b280e80625649858707255f8c43abd35ff04a6f0e388ac5a",
+      "directory": "bc846b_emitter_r1/transfer_25"
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "transfer_50",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "017c99c0369193fd1237b9f1b64df276146a9a1ac3c5cd3306563bb44234b128"
+      },
+      "netlist_sha256": "33387eeefabc89de39fa988d5ab4fbfe77aa80930805bdcd12d6e9f6ea0162a4",
+      "directory": "bc846b_emitter_r1/transfer_50"
+    },
+    {
+      "model_id": "bc846b_emitter_r1",
+      "label": "transfer_refined",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "6895530e2b6c6da8fb4dea0188f59e310b5a88d70cd756a027a236979e7aae04"
+      },
+      "netlist_sha256": "a905bd8c6b17b81907829f662b4127fd66f65db07712e894bad518736130d2e0",
+      "directory": "bc846b_emitter_r1/transfer_refined"
+    },
+    {
+      "model_id": "bc846b_vendor",
+      "label": "transfer_-10",
+      "temperature_c": -10,
+      "refinement": false,
+      "netlist_sha256": "8a671b8c7a7e0c4d337ac72ae91a2b883ba69125db1fbfe9f6e53fb705ff83ff",
+      "model_sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+      "model_version": "extraction week 24/2021",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc846b_vendor/transfer_-10",
+      "status": "error",
+      "reason": "Command '['/home/leobareth/Dokumente/Audiotech/meridian/lab/tools/ngspice-run', '-n', '-b', 'job.cir']' timed out after 45 seconds",
+      "raw_data_hashes": {}
+    },
+    {
+      "model_id": "bc846b_vendor",
+      "label": "transfer_-55",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "04c182984636416fdc706eb5ae467f6827e00a307342d0bf231105b8b85b9c6b"
+      },
+      "netlist_sha256": "0c72b6e36549fd5fe6f1024f4f015c69e6028a8b5008c8e3fcda30bbff4699b7",
+      "directory": "bc846b_vendor/transfer_-55"
+    },
+    {
+      "model_id": "bc846b_vendor",
+      "label": "transfer_150",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "418fa09a93e2ef832a42601a66a4763d46b1e246aea19970880280fc822b64ec"
+      },
+      "netlist_sha256": "898420487b1798a01da7466014b3ed874cb8b25ef68b60755ad4894736df8276",
+      "directory": "bc846b_vendor/transfer_150"
+    },
+    {
+      "model_id": "bc846b_vendor",
+      "label": "transfer_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "0de7172927fd2d7c5a2ef335c1adf64ce169a77980e51b59720ac71bb7c3c887",
+      "model_sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+      "model_version": "extraction week 24/2021",
+      "parent_model_id": null,
+      "compatibility": "",
+      "directory": "bc846b_vendor/transfer_25",
+      "status": "error",
+      "reason": "exit 0: Warning",
+      "raw_data_hashes": {
+        "transfer.raw": "57e58262373b4d074d01c2693144868dd69aca12365399a507326b739bfb745b"
+      }
+    },
+    {
+      "model_id": "bc846b_vendor",
+      "label": "transfer_50",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "df51d9f510166e09299465abcdce79f1644739627bc4ce38d5fd526ec1ef9d9f"
+      },
+      "netlist_sha256": "3c68b8ec433e28f914039bae1594f92991a9936d59fc227da0b2cccd7d97fe4f",
+      "directory": "bc846b_vendor/transfer_50"
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "bandwidth",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "79545a3bca411d20c8758d0e864a3818bbfcc17d9b47f0e4809dd366c0b26910",
+        "ac.raw": "916ffbe7fec3bee5e4eefccbffc6857397c37a789cce1f87c8cdef6931a1f7cf"
+      },
+      "netlist_sha256": "a3ac61e4ba681e6cabeed3031e86f576af2331cbd085884ab23a89f70d492bfc",
+      "directory": "bc856b_vendor/bandwidth"
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "collector_capacitance",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "d21f15d5b0faf94b1a51d55a50ce12450f4c2552f632fef007969e662b60eb93",
+        "ac.raw": "808da1f9950303d5900f5aa1c9bd2f8163ee92af55557140254efa5cdb2c43d1"
+      },
+      "netlist_sha256": "60918b1d55fd1bc60cab53fa1e57e635506395b777c7f8f663ef5fc8ab466130",
+      "directory": "bc856b_vendor/collector_capacitance"
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "noise_figure",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "0d42daeb11f67a803fbb13da1c643e48f473f3330442c701cc1f4d5d81c29e53",
+        "noise.raw": "be797035bd8b0a873cd2ae09a7da772fae3e9998c1b422fc6b2bdf02fe9410d6"
+      },
+      "netlist_sha256": "132f8dda230244a720bf63d9d18b7b2e29a91438c11b41e4ed8f1369dda937fc",
+      "directory": "bc856b_vendor/noise_figure"
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "output",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "output.raw": "3d1468ef39c03c2b94cbddd5c521eb466298e331f574860c9bf848df3ec11e4d"
+      },
+      "netlist_sha256": "04cf40d8ab97dbb76988754ce81d8656f21b7f8981db23a8f536de127cde027e",
+      "directory": "bc856b_vendor/output"
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "saturation",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "525706d8e93b87552539218d85dbeea5f2944dabb8ec1c4ea8b5849facc40c23"
+      },
+      "netlist_sha256": "189ea4a12bfa179d7bf8851f89431f619ccfd76f67a47b5311539d2b5f12d699",
+      "directory": "bc856b_vendor/saturation"
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "transfer_-10",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "7eac418daf28c37ff52104dc39ef8488ee03b2627cd64d6ecb9fa2ac1cb0afce"
+      },
+      "netlist_sha256": "1b193edfecc116f4ae26c34ac35462f6ce9b8761fb10b221a7abd3e37fd64328",
+      "directory": "bc856b_vendor/transfer_-10"
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "transfer_-55",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "292ccd74c9c54fd9f4a2b2a4b2ed4079b5a4c352b0413d9d4f94f40a7e10d6b6"
+      },
+      "netlist_sha256": "c9894feb5bf7a2c3c546c718513a6e2ad74accc7e740bbdc23743cab2840781d",
+      "directory": "bc856b_vendor/transfer_-55"
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "transfer_150",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "638e7bff35eb2e83179dc8a049a65c7f4416f6d0cbf086cc077be84d12b0ce36"
+      },
+      "netlist_sha256": "558e5834a6dacbd01f8cef6115388df1a871ba969455f51b3e3d1700977706a9",
+      "directory": "bc856b_vendor/transfer_150"
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "transfer_25",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "3eb7816aa08f1710c0e32610d2eecad7f611e2b2b03ead924ae81da71e2651e1"
+      },
+      "netlist_sha256": "ea1ea1f2c2b9e8f29c85fb25d86ec64e01f5ea6cc4b03cff554b5419ef422d47",
+      "directory": "bc856b_vendor/transfer_25"
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "transfer_50",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "1a857d3eab1a6d8c37577cda63f93f3e2473d9fd1cddab14ab4e2463b8214ed0"
+      },
+      "netlist_sha256": "f3b4b8d56986477b0709599ab0c4f41251ce1a26d939755f3e42f4d85606034a",
+      "directory": "bc856b_vendor/transfer_50"
+    },
+    {
+      "model_id": "bc856b_vendor",
+      "label": "transfer_refined",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "34e6c860572848673f27700bc71c8dc1e275c69125a3a48e5c666210b92c1951"
+      },
+      "netlist_sha256": "066b51ef7e188fe0cd1bfe4a05bf2bec1ab4d6fb11fa7e6797efe05ae4fa8036",
+      "directory": "bc856b_vendor/transfer_refined"
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "idss_gfs_-40",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "1fd029e40472eba6005222279215f21cb6168ff7de52c3d11bec5e0174bf2f76",
+        "ac.raw": "5fd8f02005c7602c5efc92bd101ad34c4dd0c3ccdf07d998fdc0c0ad29c514ba"
+      },
+      "netlist_sha256": "5ad3ea2a2ce80d9e68e573c929b613776e09abca102c04f89943fd1d54fad15c",
+      "directory": "jfe150_generic/idss_gfs_-40"
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "idss_gfs_125",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "cd7c0b05048fa6bd0b907f6e66719a2d417e12943aa504201ab55520f425e562",
+        "ac.raw": "65aba5f53958343c11763b199633dd71233173e2fe80fe0e7ebd3ae814b43704"
+      },
+      "netlist_sha256": "c72f96cf19b8e7f6baf56f7bf48984649c1ff4741d419e269f753f6362a76b9a",
+      "directory": "jfe150_generic/idss_gfs_125"
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "idss_gfs_25",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "78d033fca5a56e34d5ba48f961b6b793f1bde9bf69c8cd793093d6407e7c638d",
+        "ac.raw": "97186e4ecffddb538e7fbd4a2fc1f24cc24223990d4dc981dce07c7ac88959f2"
+      },
+      "netlist_sha256": "9e10bbd0e2a887f3f7a28764405c76a7ff4be06efc0d427d45b3a845e2437df2",
+      "directory": "jfe150_generic/idss_gfs_25"
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "small_noise_0.0001",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "4f06d747199e2b6e08efd26dbc9c4ae18aa2904fc29c8fb7f3670ca0a1bf938a",
+        "ac.raw": "e7e347cab95ee19c9f2958765bc2a16faff1ee4ec76ee8477a37dca284faf8d9",
+        "noise.raw": "6af229ee6d7dc5908212b9e93f12f5eba9be7cdfce3f332110460517dbbfe20f",
+        "gate_noise.raw": "a212011959ffb6ec9be94386f7433b0fe20f28d13169b8cc26110ed09b36f90a"
+      },
+      "netlist_sha256": "7cea450564a122112406c58fa61b150ad138e93e7eff6825a1f1c2b75e5ad3e2",
+      "directory": "jfe150_generic/small_noise_0.0001"
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "small_noise_0.002",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "1907a711e0f7956f29f3da44fa59fef8703c0480cd0f9df7582c8bf1667c3044",
+        "ac.raw": "403a9e58ca093a7260320a96a2536f3d1441223ba0ea6d0167e091d9323fa8f3",
+        "noise.raw": "7a4c6879f3055cb3f8bb8801032b623cd82e56bd84fc0b98120c2d289e5a22a7",
+        "gate_noise.raw": "d5d87333283f609671bd7297a9d0991984a9d55cb6e0d30e91f515e9586aa788"
+      },
+      "netlist_sha256": "f676c5db77e4843f8136434b46089e80cc5653ef7a074db996e8fc1d46fdd6f2",
+      "directory": "jfe150_generic/small_noise_0.002"
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "small_noise_0.005",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "e951dac67fc3e1199aac723caf1d8478a562beed274faa89553ccf23c9098557",
+        "ac.raw": "a30913121af9fa34c9341bd6897073de4245645373b301d9d6931c3de9824537",
+        "noise.raw": "898493eccee77387409e417464d4287aa2273d33e1bfe2817f347f2c30497dcc",
+        "gate_noise.raw": "7a3537485a392bb429e81310e93cfee164979b4ca4b60bc2080bd8deefe2175f"
+      },
+      "netlist_sha256": "52b0cce0591ad34d36d254b50acead88a509acf0402308c81fa46a622443ff68",
+      "directory": "jfe150_generic/small_noise_0.005"
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "transfer_-10",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "0d1dcbb399e49dae7800d5accc027b8ec478f941525b5d8e9ad3b3f2dc23c9c6"
+      },
+      "netlist_sha256": "eafcfb9ac761738955043fbbe4198bbcc9e5a14f02c9c9f29d56b21aaa20058a",
+      "directory": "jfe150_generic/transfer_-10"
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "transfer_-40",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "2c6c5d2cbb54051fb0df7c16706fc6cf6b541e6dfe85558c42aa416edbf50a60"
+      },
+      "netlist_sha256": "e57b9814bd24ccd0c016d2fe14ea057e841c717a40ab75b580c344568d555eb5",
+      "directory": "jfe150_generic/transfer_-40"
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "transfer_125",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "70de923589024f5986394e41593917a5a9aaed26456e1b6fea0c3d939526b18e"
+      },
+      "netlist_sha256": "ce471db4ae1ca61444b49b81a879f118024f272a0fa8a1b6425707c64174fff8",
+      "directory": "jfe150_generic/transfer_125"
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "transfer_25",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "fa5fd7ae3e924a0a98df3da2e69cd54761df0de6e9e6833e94568293442acf65"
+      },
+      "netlist_sha256": "705ea47f0a672943daf664a0863959e313b76428d1ef8c1cc266aede87801761",
+      "directory": "jfe150_generic/transfer_25"
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "transfer_50",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "ee6693ac8244259aa9e18e71cb35792526df0dbde6be8e4142c248acff2730e2"
+      },
+      "netlist_sha256": "e9df7d6e150432419ef623fe628404949d0d0c904198ff00bf134774cd5ad254",
+      "directory": "jfe150_generic/transfer_50"
+    },
+    {
+      "model_id": "jfe150_generic",
+      "label": "vgs_limits_10v",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "52f216476f6c22c3a92b499e09aaf77526e3a6f3e0294ddb09e9d42d3235f8d1"
+      },
+      "netlist_sha256": "2bc36081443c6795f7690777de6961342707cc089ba0e807c56a43429c20ce1c",
+      "directory": "jfe150_generic/vgs_limits_10v"
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "idss_gfs_-40",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "757a72b630bcc20f9c627e59824aa0c72ec20c949e3b23d11ac06ab623179dd0",
+        "ac.raw": "a20b1bf5f1d8cdaedb8254f66d17a7de512c60bc3fc05f09833aff39c8b13fe5"
+      },
+      "netlist_sha256": "c6b1d150e536dd47378ef6480a4701c71e240947d3f755aee220a6c8eabf9414",
+      "directory": "jfe150_pspice/idss_gfs_-40"
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "idss_gfs_125",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "94937a5e1aa568f3c9c407070f4c4084e27636c753f3c92bdef60cedfe1abb33",
+        "ac.raw": "4802d145bd0a95524557685a1c7757bbb7529968ee211f2ab31fcc86ce849187"
+      },
+      "netlist_sha256": "c286a77fe8fbbdd43232f32444c03d597be58c5bd9160411790b1cce8b33574b",
+      "directory": "jfe150_pspice/idss_gfs_125"
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "idss_gfs_25",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "ae78c8a6363512e1be930e57d9a4a384067ea561bbd9f3050af7468d4b5e108b",
+        "ac.raw": "e082d004c7e54e5b54004377bfa6d4a5917d4bed82cb57d447149d26487a78cd"
+      },
+      "netlist_sha256": "66adfb388c5e3372375d3a405ff75dc5efbbab8834b93edf8dc8aa388b1ef244",
+      "directory": "jfe150_pspice/idss_gfs_25"
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "small_noise_0.0001",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "40d26daa10c2f5348769ab57cd53ec5b4cd017cff70532b8d68ab6d4b472d5fb",
+        "ac.raw": "b6fc0cbe00f62f6d5377d9eca37cd5f33f79b3101be5bdc5d46dcb6dc3c2bd82",
+        "noise.raw": "638d14a6f48f74b7aa30fad217058d9e33ec5619053b2c4ac0b47b151de0d086",
+        "gate_noise.raw": "5312c124bbd27b1ed0ec88fc1bb977a1d8c38dd3778cd7345d0df9ab88aed012"
+      },
+      "netlist_sha256": "239cbbb5ba01fe117a47badee38e697faf6f641ae8dad53e9dcc3ba2b24f3550",
+      "directory": "jfe150_pspice/small_noise_0.0001"
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "small_noise_0.002",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "72c57ca3b4121ff0c7a8ed4eb0425ee85a6ad740df62e2c024d8d436b51143ad",
+        "ac.raw": "2774465216529bcafa8a6a8e6be9389f70e4a9913ae64e724c680c5c2ca8fff6",
+        "noise.raw": "c059a52bde9af48e053d41f1b0a7fa4ce451c6acc2e02cedfa99f45e7d55e7dd",
+        "gate_noise.raw": "3fa7a6915ab92a95dc0121f0ba56123a20eef53b37fc141e38c4ca987d427cdd"
+      },
+      "netlist_sha256": "c8bca91235ec9105700fc7123325984cdbe08e49269803d9f9e70c506aa4dcfb",
+      "directory": "jfe150_pspice/small_noise_0.002"
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "small_noise_0.005",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "c82153b32b18a917f5f4e089427bdac3a2b284deb3e5a6781d22faf5d7456d40",
+        "ac.raw": "ed755b368bce9c05426f7f53e265114872976a052fec23df63277d6a04ee99ac",
+        "noise.raw": "60a7287338ed142171c2b04f2a52b97e06ffaf56d3d7daded44e52128e820b9b",
+        "gate_noise.raw": "0dbed2d11e6a255947e4122236a5bf92c579a84fb06f3918694b29964a0d5b55"
+      },
+      "netlist_sha256": "a9f0f3fa71591f9a4587b1e7679ccd0109559eaea29fcb4715c0aed633459559",
+      "directory": "jfe150_pspice/small_noise_0.005"
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "transfer_-10",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "c309b34e75e081f972d3a966e6090344cd7aa7a6837df4f6a3259a69e5adc880"
+      },
+      "netlist_sha256": "73eb0ddebf8f3540617fce435deddcd5110632d6eb1f7026a081cb0700b04be2",
+      "directory": "jfe150_pspice/transfer_-10"
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "transfer_-40",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "738d3a56bb5c5e4efe507835bdcebefe94b471d3f768b49ce9554870e3ae6809"
+      },
+      "netlist_sha256": "4ef5ea57ba4db014b7e2761f2d6e3ab9fa96da1a6defc61af1e6082d06901f4b",
+      "directory": "jfe150_pspice/transfer_-40"
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "transfer_125",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "ce6a2f8215bafa2d80da67c8d328172b048c573a377a4cb1715f15251af8f9f6"
+      },
+      "netlist_sha256": "8a3fd04aafd2caa30d0756e2026222ec8cac3afde83000d05500b6f8d19103df",
+      "directory": "jfe150_pspice/transfer_125"
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "transfer_25",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "132239f19c9c67951d29a119f7a0d135f76a094f211533d932c9c3f1d7628d5a"
+      },
+      "netlist_sha256": "817818eb760961db5d7ee784765b8cf6525a980ca2c844a945e203b837076942",
+      "directory": "jfe150_pspice/transfer_25"
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "transfer_50",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "a9f7465372bbe2b191110a1b97c3d16522c47ee4ca0b326d406804b7d49f2c77"
+      },
+      "netlist_sha256": "d3cb8ab39687c2eadfec3e33a490e4c878632b8836b7607630f4fdc616ada104",
+      "directory": "jfe150_pspice/transfer_50"
+    },
+    {
+      "model_id": "jfe150_pspice",
+      "label": "vgs_limits_10v",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "ef83b4e6980e52b9cf7bd4a2cb51fdc35282476c86acf6b0657cae1b6855047c"
+      },
+      "netlist_sha256": "e8942358a1605704a8051a4f79447ae144af6e5f63319818bee09393a6b0183d",
+      "directory": "jfe150_pspice/vgs_limits_10v"
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "idss_gfs_-40",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "f82bfb2e985dfe3e1247fe5f6408f7913db5592d274c4369ec900525d3f32e97",
+        "ac.raw": "0f1b8b15f6b9aa5984784e29e294d518739a3ca76f8cb0c29f91a6ef96ecdf15"
+      },
+      "netlist_sha256": "c6d861dd080b16ace1713cc31fc21b7e43499b0f685518cfc1c7197785bbdf4b",
+      "directory": "jfe150_strong/idss_gfs_-40"
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "idss_gfs_125",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "8d7d2fe6a34df88b45afe546c0dd059476654653c4397c8034f300d2df7ee8fc",
+        "ac.raw": "62e45756dc3f72c68c0f367d8c103afb2bc4dfce022692c91c227ae2e7e18aae"
+      },
+      "netlist_sha256": "3f060b8e6c14ce950048cae92c2b8a179fa121de2c6ee7cff93bfe8134aef324",
+      "directory": "jfe150_strong/idss_gfs_125"
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "idss_gfs_25",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "29137851ab110e4e8effc5727f588816d0589dc29c12c4b22951a954d3a772ff",
+        "ac.raw": "a0cce303d149f9c1bb9087476872eefaf9eccf505acaadf4feafb8d56b95ac48"
+      },
+      "netlist_sha256": "697872e34ab2102749d2fb17a6cec42992ec65b2b74cc341aa97a0e3285abfea",
+      "directory": "jfe150_strong/idss_gfs_25"
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "small_noise_0.0001",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "ecfc23c0328ce4323f463d8c8ce5f2e348c7b3544480375c0fba9847e3484900",
+        "ac.raw": "dcc516d1075819f71083291358474fb353ab57308ffb5908395c605fd9874391",
+        "noise.raw": "2fd5d35a5ae9545253db998edff4ce43e7e2ed73e62723b6770171c392836f9e",
+        "gate_noise.raw": "6fb124d3ec1d9abf557f49fc85b290fcee0997e3f427c1ee99f464218d175c58"
+      },
+      "netlist_sha256": "e6896f3c1e875f2ffdaeec3dd0cc76dfea38b5ee4a63b12147fcb45824f362dd",
+      "directory": "jfe150_strong/small_noise_0.0001"
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "small_noise_0.002",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "29d68b0214abe08a31bae2f7f183096be8f5185cade6a77e84485e55abfc748f",
+        "ac.raw": "88f1457788ea07df3b45175effb7af1af3e8393e90fc88deadb17e3374fe2c94",
+        "noise.raw": "cde102b88d47d1e35df5617b5d26b8264d52fee0225fa0f264caf7a8e27c588c",
+        "gate_noise.raw": "8fc1488c2d7ee02ea0c3b01452f750f70d0be2b2a75cf725732e54b53601c195"
+      },
+      "netlist_sha256": "b7f87da6a14fe6cdd23da81f63ecd9443160cd98a3d95ff522d166d2a24a21a0",
+      "directory": "jfe150_strong/small_noise_0.002"
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "small_noise_0.005",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "fff7221c7be3a17d532a15192f818028e7409756a6e747f419fbafc6e22e6b4b",
+        "ac.raw": "95ca96324c9a723d8bf044709b4e282f01739b555cea5bc6097c47b88fa413b6",
+        "noise.raw": "56f71332d9c4a61bc33e5c1806ae3624e22dcf6fce5ee5485667248cc5124411",
+        "gate_noise.raw": "637c3213ae7ef3d4cb828dc7d85aef687cec21849cf5ca6820754627acd65ffc"
+      },
+      "netlist_sha256": "2e942683e03765e684400d281487c298c5ae108152e5dad779f9c9eebf8e5d2c",
+      "directory": "jfe150_strong/small_noise_0.005"
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "transfer_-10",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "e359ee077ec62a311f39bda3e5ada8913fc1dff015588dacc91476c59209938b"
+      },
+      "netlist_sha256": "e7d83757d5b88f5b1a4f7c0bcf809bc5693ec0d59770d414beb5bddac701ec85",
+      "directory": "jfe150_strong/transfer_-10"
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "transfer_-40",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "08d1c760892993805d4c1937f66e1d42eebd8eb134c467be92ba5c7544fcadf2"
+      },
+      "netlist_sha256": "9ed59fa1c3d696ac3cdd58e508252b14a3a4239b0a499b020f8f31af074fae28",
+      "directory": "jfe150_strong/transfer_-40"
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "transfer_125",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "2e8b6ebe96859f9273455bed3c4801c3e8ce2cd7a323657ed31d3372c945f83a"
+      },
+      "netlist_sha256": "3843ca9d7299dd3095580ad986a22aa12eba620a18053623dd94e84d621df1f0",
+      "directory": "jfe150_strong/transfer_125"
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "transfer_25",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "3e00911dffdbe24c2bd10694bdec7480282c980203b73b672c76a631ff49b1a4"
+      },
+      "netlist_sha256": "9e662d0c0e922dc4ffda5632c5d84ff2bd6ae9be99e48f1aca74df498e877ae8",
+      "directory": "jfe150_strong/transfer_25"
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "transfer_50",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "60977197673ed9857fa36589700ac8d0e724ceb7945a3045161f0700036afccd"
+      },
+      "netlist_sha256": "77ce9fd508b724e59867527db57b768f35686abfa5b62042b0755578db3e1bf0",
+      "directory": "jfe150_strong/transfer_50"
+    },
+    {
+      "model_id": "jfe150_strong",
+      "label": "vgs_limits_10v",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "4394451993e155a4d63b9d572d9e85fe93a61afd4e5ce9a300cd7650a3cbbd64"
+      },
+      "netlist_sha256": "0b545a8d7b899144425811143ce81d3cc7853dbc84ba8275e3e441ab29203a71",
+      "directory": "jfe150_strong/vgs_limits_10v"
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "idss_gfs_-40",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "0affabdcca301353fdd6be132f44ccd24e582580e927f6f59d5c931dc132e049",
+        "ac.raw": "4d73f619e27b00ee5d749dd12e54206c64cf200ceae36e2286cf4590ba02b6e6"
+      },
+      "netlist_sha256": "c889456e6d22099154740bb9e4528d55b3c7796578d204d5c1fffa255cc7e8fb",
+      "directory": "jfe150_weak/idss_gfs_-40"
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "idss_gfs_125",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "222ccddfe89ff54a5d8d0534914ad9ebd275646502dc15c3474f3daf1fae3399",
+        "ac.raw": "f1776f3d7763a1589ae96a07d3565b034d739e78873229337c29b9473a6da41e"
+      },
+      "netlist_sha256": "dfd9a3a3a9c19c5c046a828869e22a2390b995f87a29c5b532ad21b4f3842784",
+      "directory": "jfe150_weak/idss_gfs_125"
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "idss_gfs_25",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "6186bd27dd0b2c77b81495ca82b83883fd6bfea411e7c1608b5c99e400cb4844",
+        "ac.raw": "1f584e33e5775a8dc24210139f6b8e1cc6ce0f7ea0f6fb56417c09223f4cc5c7"
+      },
+      "netlist_sha256": "256141aaeaa8e419c6994190c4fa58c421b2d91b3cca17cae042f3c68fb114b2",
+      "directory": "jfe150_weak/idss_gfs_25"
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "small_noise_0.0001",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "6480dd016fb9faea2f8f9c12c914167bbea1664cd2c8cf8c9c9ea4748f787202",
+        "ac.raw": "c3a5a4b8dce680f4b6ed3ee3a03c52b5e08f0f168fc2c7007f85f99ce12afb7c",
+        "noise.raw": "9b987459b67d0fd301e1e0d225b5c189b179302a79ed8ac01e32b625d1afc20b",
+        "gate_noise.raw": "feea0f2a9be972e2e1e3b561dd7fb87c47740629dc10dc2a872d91f8eb274a35"
+      },
+      "netlist_sha256": "17bc879dfb04ef1fcab490d41b02212504efd3ff0bb952da789b699874f4c070",
+      "directory": "jfe150_weak/small_noise_0.0001"
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "small_noise_0.002",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "c3c434d9c4ff6570b82615505d2465202aa93f73e78dbca10baba7024b6cd311",
+        "ac.raw": "d3cbe5c192617d7aef15197c09bccad0f2ea83a86790a0c2739b23ecb7cad5e9",
+        "noise.raw": "086dab4dd1f0fd5ed5b7b69ea37f7b0c06dc85a0e1d8880bb1334f2f3b9c1789",
+        "gate_noise.raw": "6fbd28980c4c3840bb3c04f03c1abc501a03be0b70bf4d74dea347e826026e21"
+      },
+      "netlist_sha256": "b78ec3a78508c5aba4099cdea3cac25cecc2e657c40878ab35a04cd533f72be2",
+      "directory": "jfe150_weak/small_noise_0.002"
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "small_noise_0.005",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "8e672136fb716c93d27be17fa1e8ac7a3215ddfa8b4ba3ba93dc5c7c4af5a125",
+        "ac.raw": "136586f04599fa14df4e2c152ddaae60823c1fdf8b19a5d38a6467d1a46062a4",
+        "noise.raw": "3cd5d04b00f37a9dc43eccf03616b8851569cd0384b845a1357f566c765db783",
+        "gate_noise.raw": "5bc129f168db721ddd3ef87cb3c5eb2fc32829bb9224c0f8b855aa25cb56bd43"
+      },
+      "netlist_sha256": "c9b42c587088556d0d6db87e450148be6e264900b7abfba5192db4d7f8c1bd10",
+      "directory": "jfe150_weak/small_noise_0.005"
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "transfer_-10",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "7d96549c89142b3133a6e0577e11bf48cc81b70ecb84e82afb9207e7e6759b81"
+      },
+      "netlist_sha256": "7452ffc41a63ae4064a6595f350b3d9165fa205ef487c520498f36f0ce1a13b8",
+      "directory": "jfe150_weak/transfer_-10"
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "transfer_-40",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "dd3349b187d188d0378b9354022882331d4b5ea4cdc372a678eddeb351674f37"
+      },
+      "netlist_sha256": "d9639258a24eda361abb9a7b35f836e7d4b7736eefc6e47d5333ed93829bae08",
+      "directory": "jfe150_weak/transfer_-40"
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "transfer_125",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "061e002e0eaab679fc5d8c2ea0c3a94613a6c9518dcde4fe79bcb35c66f6a365"
+      },
+      "netlist_sha256": "e4f955d58505304130c2b6087af669b2e5ce004f4ec13aaceb0ffcb592fee13c",
+      "directory": "jfe150_weak/transfer_125"
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "transfer_25",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "0d7bd020af64dc53c681f4b01f2dac0c0e636dd7b479a566c2623df149ca0cde"
+      },
+      "netlist_sha256": "08c576706e8fa1ebd1c737f697bca6ac1dcb0a520ea3e97554638f55443517f6",
+      "directory": "jfe150_weak/transfer_25"
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "transfer_50",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "e048ca55c370fee8537ae1a197ab35d0f1c50538ab481dabe582c4c65bf69754"
+      },
+      "netlist_sha256": "bf2f2d9bdbeb98e92f9b6610a65fe277f5d98f7fe6ba2d955b21440e3f7ef0cc",
+      "directory": "jfe150_weak/transfer_50"
+    },
+    {
+      "model_id": "jfe150_weak",
+      "label": "vgs_limits_10v",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "transfer.raw": "473243099464b868706901638b8f815a93aa3e6111beaf2584c9f8b7cf724463"
+      },
+      "netlist_sha256": "d10ee20fc07ff0b46db9aa459d49358db462e566624e7c604f5b0bc2ec1cbdf2",
+      "directory": "jfe150_weak/vgs_limits_10v"
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "clipping_tran_1e-06",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "05493d528b15a8dccfd3c425a69248150a7b5f10f818bb576eca8855a4643a39",
+      "model_sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "model_version": "Final 1.3; 23JUN2022; SBOMA34D",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "opa197_pspice/clipping_tran_1e-06",
+      "status": "error",
+      "reason": "Command '['/home/leobareth/Dokumente/Audiotech/meridian/lab/tools/ngspice-run', '-n', '-b', 'job.cir']' timed out after 45 seconds",
+      "raw_data_hashes": {}
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "clipping_tran_5e-07",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {},
+      "netlist_sha256": "71ddb965b6f117f3101d3be2f7e6d24e04b124c476fab8ecc3e8e55f6292f790",
+      "directory": "opa197_pspice/clipping_tran_5e-07"
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "current_noise",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "noise.raw": "6dafd2311fbe4cda3dc83896ef43a9ada2c523a163f37a7c16f897271f942bdc"
+      },
+      "netlist_sha256": "034d012c13cd9139a83b9de1515574acd1a37b87203b4d4622c53084a9cc4b3c",
+      "directory": "opa197_pspice/current_noise"
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "dc_clipping_2k",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "b3173398dc8ec0a77ff012e2d2b0905703a03201a5c366235590bede6fc89b77",
+      "model_sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "model_version": "Final 1.3; 23JUN2022; SBOMA34D",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "opa197_pspice/dc_clipping_2k",
+      "status": "error",
+      "reason": "exit 0: Warning",
+      "raw_data_hashes": {
+        "dc.raw": "fc8ae9c8d11dbeffec530312f937b5e14548a64cfc2d8f646d383c59c0492f33"
+      }
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "loaded_supply",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "92545f4e4295b8d1351894d0ce6f5b5b8690f2055e2c1f3bacde38ac87d78877",
+      "model_sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "model_version": "Final 1.3; 23JUN2022; SBOMA34D",
+      "parent_model_id": null,
+      "compatibility": "ps",
+      "directory": "opa197_pspice/loaded_supply",
+      "status": "error",
+      "reason": "Command '['/home/leobareth/Dokumente/Audiotech/meridian/lab/tools/ngspice-run', '-n', '-b', 'job.cir']' timed out after 45 seconds",
+      "raw_data_hashes": {}
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "small_-10",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "6beb01baebc6a806ca57ec28954423beaf5aa8b0d5ccd4bb3b33dcb836c4be75",
+        "ac.raw": "33699a2451be723be375b99862cf2426de028ba6b1bdc650b563093562bcca0e",
+        "noise.raw": "66c5c9431b7c9ea94b6d09bd19cf350210941f20e55e39a410dd720e72bcac7c"
+      },
+      "netlist_sha256": "4159f4c49080394fe31d6ae090a1377889b960b7e9652bf24754c46500ebe69a",
+      "directory": "opa197_pspice/small_-10"
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "small_-40",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "32de9d4cf8996d7ba4bb8f8cc088d7c48af660854ce37d8ee355cd720eee4542",
+        "ac.raw": "9a863778ba7e7a2c0ac5343790e06f1340c20ef8fbf808ae5dcab5676832b34b",
+        "noise.raw": "ae0838edeebea0ace5294568fa8b800df46f83e5826aa90705c786cfaaf1e749"
+      },
+      "netlist_sha256": "8556caf7dc55f58e67d92081ed6e77289fd5d5c722d9f06ca07f31d2a893dcf0",
+      "directory": "opa197_pspice/small_-40"
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "small_125",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "742967f2416b051fdd2726e96bebb0f998a6cdd369e6284a89902e014af78156",
+        "ac.raw": "3c7c774580f536e2b9ddb0286d884f84f31daca96a4c19f79f30cc7ba7037cef",
+        "noise.raw": "f76e6e64fbca47d64117b35f3d3ca70426c2d9bf5642b7e77ec7256376bab0c4"
+      },
+      "netlist_sha256": "f6931758b737011a25a3fdaae12ec62217fd824b107727b019cd8e4a3d1b3646",
+      "directory": "opa197_pspice/small_125"
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "small_25",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "863f0378dedbe49a07cce4f3e4c601de17e8349bbb8534206135b9a08f1915dd",
+        "ac.raw": "cae304acc52278aed309b698b895c0a79eda8cd8fabbcc3c0f510b0aca56c687",
+        "noise.raw": "0a3b54a50fbb0bd299556272c44c4b62cc14f14b61a5415c574276158c6bb767"
+      },
+      "netlist_sha256": "8360e8fe6024a9464e9531806f4f07c6d5084e45d93e2e57f3a1571936194866",
+      "directory": "opa197_pspice/small_25"
+    },
+    {
+      "model_id": "opa197_pspice",
+      "label": "small_50",
+      "status": "partial_unreviewed",
+      "raw_data_hashes": {
+        "op.raw": "b0c8e21f3844e59cf0044eb8e72aa9e6d00ef67bb210bbca5dd964f461b365b7",
+        "ac.raw": "401166256d367070b777a6d5907254f6474a1e865a1b9c0d67f86937030f3b07",
+        "noise.raw": "e65d4b7d1dbf6d0be2f6d781be9ae0d1a88605559a759f43efc368f10dd5899b"
+      },
+      "netlist_sha256": "90ad3ca198c92caebef8cc5fe6ccc02bad8900eead5d7742b056401afd1ce767",
+      "directory": "opa197_pspice/small_50"
+    }
+  ],
+  "model_registry": {
+    "schema_version": 2,
+    "revision": "phase3-device-library-r1",
+    "date": "2026-10-05",
+    "status": "behavior_specific_characterization_no_production_qualification",
+    "qualification_policy": "Typical agreement is not a production guarantee; unknown != zero; see device_model_validation.md",
+    "devices": [
+      {
+        "id": "jfe150",
+        "manufacturer": "Texas Instruments",
+        "exact_variant": "JFE150DBVR",
+        "family": "discrete_n_jfet",
+        "package": "SOT-23-5 DBV",
+        "lifecycle": {
+          "status": "active",
+          "checked_date": "2026-10-05",
+          "source_url": "https://www.ti.com/product/JFE150"
+        },
+        "datasheet": {
+          "url": "https://www.ti.com/lit/ds/symlink/jfe150.pdf",
+          "retrieved_date": "2026-10-05",
+          "version": "SLPS732B April 2023",
+          "local_path": "models/semiconductor/vendor/evidence/jfe150.pdf",
+          "sha256": "925d58a8f0cf7db307325ece12fb2f61a736b2c1440f63928b5e6c1312f39365"
+        },
+        "ratings": {
+          "abs_vds_v": [
+            -40,
+            40
+          ],
+          "abs_vgs_v": [
+            -40,
+            0.9
+          ],
+          "abs_id_a": 0.05,
+          "recommended_temp_c": [
+            -40,
+            125
+          ],
+          "idss_25c_a": [
+            0.024,
+            0.046
+          ],
+          "idss_full_temperature_a": [
+            0.022,
+            0.057
+          ],
+          "gfs_25c_s": [
+            0.055,
+            0.08
+          ],
+          "conditions": "Idss/GFS at VDS=10 V,VGS=0; ratings are not enforced by SPICE."
+        },
+        "models": [
+          {
+            "id": "jfe150_generic",
+            "path": "semiconductor/vendor/jfe150_generic.lib",
+            "sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+            "version": "Final 1.2; 26SEP2024; SLPM366",
+            "source_url": "https://www.ti.com/lit/zip/slpm366",
+            "retrieved_date": "2026-10-05",
+            "acquisition_status": "valid_spice",
+            "redistribution": {
+              "status": "not_established_do_not_redistribute",
+              "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+              "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+            },
+            "syntax": "SPICE3 subcircuit with PSpice extensions",
+            "ngspice_behavior": "ps",
+            "subcircuit": "JFE150",
+            "parent_model_id": null
+          },
+          {
+            "id": "jfe150_weak",
+            "path": "semiconductor/vendor/jfe150_weak.lib",
+            "sha256": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+            "version": "Final 1.2 vendor weak",
+            "source_url": "https://www.ti.com/lit/zip/slpm366",
+            "retrieved_date": "2026-10-05",
+            "acquisition_status": "valid_spice",
+            "redistribution": {
+              "status": "not_established_do_not_redistribute",
+              "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+              "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+            },
+            "syntax": "SPICE3 subcircuit with PSpice extensions",
+            "ngspice_behavior": "ps",
+            "subcircuit": "JFE150_WEAK",
+            "parent_model_id": "jfe150_generic"
+          },
+          {
+            "id": "jfe150_strong",
+            "path": "semiconductor/vendor/jfe150_strong.lib",
+            "sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+            "version": "Final 1.2 vendor strong",
+            "source_url": "https://www.ti.com/lit/zip/slpm366",
+            "retrieved_date": "2026-10-05",
+            "acquisition_status": "valid_spice",
+            "redistribution": {
+              "status": "not_established_do_not_redistribute",
+              "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+              "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+            },
+            "syntax": "SPICE3 subcircuit with PSpice extensions",
+            "ngspice_behavior": "ps",
+            "subcircuit": "JFE150_STRONG",
+            "parent_model_id": "jfe150_generic"
+          },
+          {
+            "id": "jfe150_pspice",
+            "path": "semiconductor/vendor/jfe150_pspice.lib",
+            "sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+            "version": "Final 1.2; SLPM349I",
+            "source_url": "https://www.ti.com/lit/zip/slpm349i",
+            "retrieved_date": "2026-10-05",
+            "acquisition_status": "valid_spice",
+            "redistribution": {
+              "status": "not_established_do_not_redistribute",
+              "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+              "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+            },
+            "syntax": "SPICE3 subcircuit with PSpice extensions",
+            "ngspice_behavior": "ps",
+            "subcircuit": "JFE150",
+            "parent_model_id": "jfe150_generic"
+          }
+        ],
+        "represented_behavior": {
+          "dc": "Shichman-Hodges + series resistances/channel modulation",
+          "capacitance": "bias-dependent CGS/CGD + diode CJO",
+          "temperature": "BETATCE, VTOTC, junction equations",
+          "leakage": "IS + gate-drain diode + clamp ROFF; lacks measured high-VDS rise",
+          "noise": "native channel thermal, junction shot and KF/AF flicker; must test actual spectra",
+          "clipping": "pinch-off/saturation; ideal VSWITCH clamp approximation",
+          "supply_current": "native terminal currents, no external bias/power circuit"
+        },
+        "unqualified_behavior": [
+          "production noise maxima/distributions",
+          "clamp noise/physical protection fidelity",
+          "high-field gate leakage",
+          "breakdown/SOA/self-heating",
+          "full correlated production corners"
+        ],
+        "substitutes": [
+          {
+            "part": "onsemi MMBFJ113",
+            "state": "investigated_not_equivalent_unqualified"
+          },
+          {
+            "part": "TI JFE2140",
+            "state": "dual_investigation_only_no_matching_requirement_or_model_validation"
+          }
+        ],
+        "procurement_register": "research/procurement/semiconductors_2026-10-05.yaml",
+        "readiness": "characterization_required_behavior_specific",
+        "patent_status": "isolated_device_research_only_no_architecture_claim_screen_no_clearance"
+      },
+      {
+        "id": "bc846b",
+        "manufacturer": "Nexperia",
+        "exact_variant": "BC846B,215",
+        "family": "discrete_npn",
+        "package": "SOT-23",
+        "lifecycle": {
+          "status": "production",
+          "checked_date": "2026-10-05",
+          "source_url": "https://www.nexperia.com/product/BC846B"
+        },
+        "datasheet": {
+          "url": "https://assets.nexperia.com/documents/data-sheet/BC846_SER.pdf",
+          "retrieved_date": "2026-10-05",
+          "version": "Rev 9; 25 September 2012",
+          "local_path": "models/semiconductor/vendor/evidence/bc846.pdf",
+          "sha256": "045a6cc21de93ac634aad910567e882926bd6ef154cbd8c59d13201134642a97"
+        },
+        "ratings": {
+          "abs_vce_v": 65,
+          "abs_vcb_v": 80,
+          "abs_veb_v": 6,
+          "abs_ic_a": 0.1,
+          "abs_power_w": 0.25,
+          "thermal_rthja_k_per_w": 500,
+          "thermal_condition": "manufacturer standard FR4 footprint at 25 C; derate",
+          "temp_c": [
+            -65,
+            150
+          ],
+          "hfe_grade": [
+            200,
+            450
+          ],
+          "hfe_condition": "VCE magnitude=5 V, IC magnitude=2 mA,25 C"
+        },
+        "models": [
+          {
+            "id": "bc846b_vendor",
+            "path": "semiconductor/vendor/bc846b.lib",
+            "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+            "version": "extraction week 24/2021",
+            "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+            "retrieved_date": "2026-10-05",
+            "acquisition_status": "valid_spice",
+            "redistribution": {
+              "status": "not_established_do_not_redistribute",
+              "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+              "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+            },
+            "syntax": "SPICE3 subcircuit",
+            "ngspice_behavior": "",
+            "subcircuit": "BC846B",
+            "parent_model_id": null
+          },
+          {
+            "id": "bc846b_emitter_r1",
+            "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+            "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+            "version": "project structural child r1; Q2 emitter 33 -> 3",
+            "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+            "retrieved_date": "2026-10-05",
+            "acquisition_status": "valid_spice",
+            "redistribution": {
+              "status": "not_established_do_not_redistribute",
+              "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+              "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+            },
+            "syntax": "SPICE3 subcircuit",
+            "ngspice_behavior": "",
+            "subcircuit": "BC846B",
+            "parent_model_id": "bc846b_vendor"
+          }
+        ],
+        "represented_behavior": {
+          "dc": "Gummel-Poon + quasi-saturation network",
+          "capacitance": "CJE/CJC voltage laws and TF/TR",
+          "temperature": "XTI, XTB, EG junction equations",
+          "leakage": "junction saturation currents only",
+          "noise": "native shot and resistor thermal; KF absent so 1/f absent",
+          "clipping": "saturation/reverse network",
+          "supply_current": "native collector/base/emitter currents"
+        },
+        "unqualified_behavior": [
+          "1/f noise and separate voltage/current spectra",
+          "manufacturing correlations",
+          "self-heating/SOA/avalanche",
+          "full temperature and leakage validation",
+          "vendor floating Q2 emitter node 33; child hypothesis not vendor-approved"
+        ],
+        "substitutes": [
+          {
+            "part": "BC846BLT1G",
+            "manufacturer": "onsemi",
+            "state": "supplier-listed_available_unvalidated_model_not_interchangeable"
+          }
+        ],
+        "procurement_register": "research/procurement/semiconductors_2026-10-05.yaml",
+        "readiness": "characterization_required_behavior_specific",
+        "patent_status": "isolated_device_research_only_no_architecture_claim_screen_no_clearance"
+      },
+      {
+        "id": "bc856b",
+        "manufacturer": "Nexperia",
+        "exact_variant": "BC856B,215",
+        "family": "discrete_pnp",
+        "package": "SOT-23",
+        "lifecycle": {
+          "status": "production",
+          "checked_date": "2026-10-05",
+          "source_url": "https://www.nexperia.com/product/BC856B"
+        },
+        "datasheet": {
+          "url": "https://assets.nexperia.com/documents/data-sheet/BC856_BC857_BC858.pdf",
+          "retrieved_date": "2026-10-05",
+          "version": "Rev 9; 1 July 2022",
+          "local_path": "models/semiconductor/vendor/evidence/bc856.pdf",
+          "sha256": "d9a836e40dd8f1e788d7dadbfcbe8cf4836ed5debe789c84b8fa574132f84943"
+        },
+        "ratings": {
+          "abs_vce_v": 65,
+          "abs_vcb_v": 80,
+          "abs_veb_v": 5,
+          "abs_ic_a": 0.1,
+          "abs_power_w": 0.25,
+          "thermal_rthja_k_per_w": 500,
+          "thermal_condition": "manufacturer standard FR4 footprint at 25 C; derate",
+          "temp_c": [
+            -65,
+            150
+          ],
+          "hfe_grade": [
+            220,
+            475
+          ],
+          "hfe_condition": "VCE magnitude=5 V, IC magnitude=2 mA,25 C"
+        },
+        "models": [
+          {
+            "id": "bc856b_vendor",
+            "path": "semiconductor/vendor/bc856b.lib",
+            "sha256": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+            "version": "extraction week 19/2020",
+            "source_url": "https://assets.nexperia.com/documents/spice-model/BC856B.txt?download=1",
+            "retrieved_date": "2026-10-05",
+            "acquisition_status": "valid_spice",
+            "redistribution": {
+              "status": "not_established_do_not_redistribute",
+              "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+              "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+            },
+            "syntax": "SPICE3 subcircuit",
+            "ngspice_behavior": "",
+            "subcircuit": "BC856B",
+            "parent_model_id": null
+          }
+        ],
+        "represented_behavior": {
+          "dc": "Gummel-Poon + quasi-saturation network",
+          "capacitance": "CJE/CJC voltage laws and TF/TR",
+          "temperature": "XTI, XTB, EG junction equations",
+          "leakage": "junction saturation currents only",
+          "noise": "native shot and resistor thermal; KF absent so 1/f absent",
+          "clipping": "saturation/reverse network",
+          "supply_current": "native collector/base/emitter currents"
+        },
+        "unqualified_behavior": [
+          "1/f noise and separate voltage/current spectra",
+          "manufacturing correlations",
+          "self-heating/SOA/avalanche",
+          "full temperature and leakage validation",
+          "model header hFE 125-250 contradicts B-grade datasheet 220-475"
+        ],
+        "substitutes": [
+          {
+            "part": "BC856BLT1G",
+            "manufacturer": "onsemi",
+            "state": "supplier-listed_available_unvalidated_model_not_interchangeable"
+          }
+        ],
+        "procurement_register": "research/procurement/semiconductors_2026-10-05.yaml",
+        "readiness": "characterization_required_behavior_specific",
+        "patent_status": "isolated_device_research_only_no_architecture_claim_screen_no_clearance"
+      },
+      {
+        "id": "opa197",
+        "manufacturer": "Texas Instruments",
+        "exact_variant": "OPA197IDBVR",
+        "family": "cmos_opamp",
+        "package": "SOT-23-5 DBV",
+        "lifecycle": {
+          "status": "active",
+          "checked_date": "2026-10-05",
+          "source_url": "https://www.ti.com/product/OPA197"
+        },
+        "datasheet": {
+          "url": "https://www.ti.com/lit/ds/symlink/opa197.pdf",
+          "retrieved_date": "2026-10-05",
+          "version": "SBOS737C March 2018",
+          "local_path": "models/semiconductor/vendor/evidence/opa197.pdf",
+          "sha256": "27653a7d5e965cbb2d23f7998919ebd774efd5cd3e126b8f0881469ae91166fd"
+        },
+        "ratings": {
+          "recommended_supply_v": [
+            4.5,
+            36
+          ],
+          "abs_supply_v": 40,
+          "operating_temp_c": [
+            -40,
+            125
+          ],
+          "iq_25c_max_a": 0.0015,
+          "input_bias_25c_max_a": 2e-11,
+          "thermal_rthja_k_per_w": 158.8,
+          "condition": "SBOS737C; do not connect directly to unloaded P48"
+        },
+        "models": [
+          {
+            "id": "opa197_pspice",
+            "path": "semiconductor/vendor/opa197.lib",
+            "sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+            "version": "Final 1.3; 23JUN2022; SBOMA34D",
+            "source_url": "https://www.ti.com/lit/zip/sboma34d",
+            "retrieved_date": "2026-10-05",
+            "acquisition_status": "valid_spice",
+            "redistribution": {
+              "status": "not_established_do_not_redistribute",
+              "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+              "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+            },
+            "syntax": "SPICE3 subcircuit with PSpice extensions",
+            "ngspice_behavior": "ps",
+            "subcircuit": "OPAx197",
+            "parent_model_id": null
+          }
+        ],
+        "represented_behavior": {
+          "dc": "Green-Williams-Lis macro; fixed bias/offset/current",
+          "capacitance": "common/differential RC input impedances",
+          "temperature": "offset drift block; bias and noise temperature fidelity unproven",
+          "leakage": "fixed input bias + input/ESD resistance; no realistic temperature population",
+          "noise": "explicit voltage flicker/white and current white sources",
+          "clipping": "output swing/current/slew/overload blocks",
+          "supply_current": "fixed Iq plus output supply-current blocks"
+        },
+        "unqualified_behavior": [
+          "THD transistor physics",
+          "production noise maxima",
+          "bias/Iq temperature and distribution",
+          "thermal shutdown/SOA",
+          "full common-mode crossover noise"
+        ],
+        "substitutes": [
+          {
+            "part": "OPA197ID",
+            "state": "same_die_SOIC8_package_requires_layout_thermal_requalification"
+          },
+          {
+            "part": "OPA140",
+            "state": "JFET_input_alternative_not_validated"
+          }
+        ],
+        "procurement_register": "research/procurement/semiconductors_2026-10-05.yaml",
+        "readiness": "characterization_required_behavior_specific",
+        "patent_status": "isolated_device_research_only_no_architecture_claim_screen_no_clearance"
+      },
+      {
+        "id": "2n7002",
+        "manufacturer": "Nexperia",
+        "exact_variant": "2N7002,215",
+        "family": "discrete_n_mosfet",
+        "package": "SOT-23",
+        "lifecycle": {
+          "status": "production",
+          "checked_date": "2026-10-05",
+          "source_url": "https://www.nexperia.com/product/2N7002"
+        },
+        "datasheet": {
+          "url": "https://assets.nexperia.com/documents/data-sheet/2N7002.pdf",
+          "retrieved_date": "2026-10-05",
+          "version": "Rev 7; 8 September 2011",
+          "local_path": "models/semiconductor/vendor/evidence/2n7002.pdf",
+          "sha256": "cc9c275457670c3cbbf2e56f5a75c800d3b5f0b396fabc798cf18cb639646475"
+        },
+        "ratings": {
+          "abs_vds_v": 60,
+          "abs_vgs_v": [
+            -30,
+            30
+          ],
+          "abs_id_a": 0.3,
+          "abs_power_w": 0.83,
+          "condition": "current/power at solder point 25 C; not free-air power; see derating/SOA"
+        },
+        "models": [
+          {
+            "id": "2n7002_failed_download",
+            "path": "semiconductor/vendor/2n7002.lib",
+            "sha256": "4a2a3f7fb1725f12fcfe3f7fef5cc082be2ac58eeb30ee4fdb693398e74abbf5",
+            "version": "not_a_model",
+            "source_url": "https://assets.nexperia.com/documents/spice-model/2N7002.txt?download=1",
+            "retrieved_date": "2026-10-05",
+            "acquisition_status": "invalid_html_challenge",
+            "redistribution": {
+              "status": "not_established_do_not_redistribute",
+              "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+              "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+            },
+            "syntax": "SPICE3 subcircuit",
+            "ngspice_behavior": "",
+            "subcircuit": "unavailable",
+            "parent_model_id": null
+          }
+        ],
+        "represented_behavior": {
+          "dc": "not_acquired",
+          "capacitance": "not_acquired",
+          "temperature": "not_acquired",
+          "leakage": "not_acquired",
+          "noise": "not_acquired",
+          "clipping": "not_acquired",
+          "supply_current": "not_acquired"
+        },
+        "unqualified_behavior": [
+          "vendor model acquisition",
+          "low-current transfer",
+          "all noise including 1/f",
+          "low-current production corners"
+        ],
+        "substitutes": [
+          {
+            "part": "2N7002ET1G",
+            "manufacturer": "onsemi",
+            "state": "available_supplier_listing_not_model_validated"
+          },
+          {
+            "part": "2N7002-7-F",
+            "manufacturer": "Diodes Incorporated",
+            "state": "available_supplier_listing_not_model_validated"
+          }
+        ],
+        "procurement_register": "research/procurement/semiconductors_2026-10-05.yaml",
+        "readiness": "characterization_required_behavior_specific",
+        "patent_status": "isolated_device_research_only_no_architecture_claim_screen_no_clearance"
+      },
+      {
+        "id": "mmbfj113",
+        "manufacturer": "onsemi",
+        "exact_variant": "MMBFJ113",
+        "family": "discrete_n_jfet",
+        "package": "SOT-23",
+        "lifecycle": {
+          "status": "unverified_exact_order_code",
+          "checked_date": "2026-10-05",
+          "source_url": "https://www.onsemi.com/design/tools-software/product-recommendation-tools-plus/jfet/products"
+        },
+        "datasheet": {
+          "url": "https://www.onsemi.com/download/data-sheet/pdf/mmbfj113-d.pdf",
+          "retrieved_date": "2026-10-05",
+          "local_path": null,
+          "sha256": null
+        },
+        "ratings": {
+          "gate_breakdown_min_v": 35,
+          "idss_min_a": 0.002,
+          "vgs_off_magnitude_v": [
+            0.5,
+            3
+          ],
+          "condition": "manufacturer sheet at25C; no Idss upper/noise spectrum established here"
+        },
+        "models": [],
+        "represented_behavior": {},
+        "unqualified_behavior": [
+          "all device model behaviors",
+          "exact active small-quantity variant"
+        ],
+        "procurement_register": "research/procurement/semiconductors_2026-10-05.yaml",
+        "readiness": "unsupported_alternative_investigation",
+        "substitutes": [],
+        "patent_status": "no_implementation_selected"
+      }
+    ]
+  },
+  "parent_experiments": [],
+  "rng_seed": null,
+  "eligible_for_production": false
+}

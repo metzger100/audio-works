@@ -139,3 +139,9 @@ Result: **failed**, qualified: False. Seed: 34047. [Full record](../results/runs
 Failures/incomplete: {"noise": "Numerical acceptance requirement failed", "balance": "Numerical acceptance requirement failed", "semiconductor_corners": "No manufacturer-bounded semiconductor corners; ideal fixtures cannot demonstrate no-selection yield", "monte_carlo": "Initial Monte Carlo runs DC/AC screens only; all-requirement manufacturing yield is not established", "loading": "Numerical acceptance requirement failed", "stability": "Numerical acceptance requirement failed"}
 
 Next: Resolve failed checks and missing evidence without changing acceptance thresholds.
+
+## Phase 3 device-library prerequisite — 2026-10-05
+
+[Corrected isolated batch](../results/device_models/20261005T185102Z_95a6dda5/results.json): 118 jobs, seven numerical errors, additional invalid-MOS acquisition rejection, stable frozen sources. Deterministic grids, no random population/seed. Parent chain: 183110Z_eb7e089d → 183611Z_5b4724a8 → 184201Z_af7b16c1 → 185102Z_95a6dda5 (all date prefix 20261005T). No device is fully production-qualified. [Coupled controls](../results/device_models/20261005T185438Z_corners_0b8875db/results.json) preserve failed r1, scoped r2 and corrected parent evidence. [Report](device_model_validation.md) separates engineering, procurement and patent scope. No candidate, optimization, topology/PCB selection or purchase occurred.
+
+Final Phase3 prerequisite checks: doctor succeeds; [verification](../results/verification/20261005T190817Z_17885439/verification.json) passes31 with stable sources/spec. The retained 190717Z verification exposed the metadata alias; [corrected controls](../results/device_models/20261005T190815Z_corners_851e1161/results.json) preserve original r1/r2 values and corrected ancestry. Waveform inventory covers857 files with zero declared-hash mismatches. No device-model disagreement was converted into a production pass.

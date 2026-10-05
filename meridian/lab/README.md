@@ -1,6 +1,6 @@
 # M100 Meridian analog research laboratory
 
-An executable, evidence-first workspace for **Arienne Audio Flat K47 Cardioid/Omni K47FRB** under realistic P48. Current work is the Phase 0–2 foundation. No production microphone architecture is selected, and no circuit is qualified for prototyping.
+An executable, evidence-first workspace for **Arienne Audio Flat K47 Cardioid/Omni K47FRB** under realistic P48. The Phase 0–2 foundation now has a [Phase 3 semiconductor-model prerequisite report](research/device_model_validation.md), with scoped agreement and preserved failures. No production microphone architecture is selected, and no circuit is qualified for prototyping.
 
 **Standard parts and availability are a core project constraint.** Follow the [repository component policy](../../COMPONENTS.md) and [Germany procurement contract](research/procurement_germany.md). Implement candidates with documented, currently obtainable parts and actual nominal values, qualify their tolerances, and retain dated small-quantity Germany sourcing and delivered-cost evidence. Ideal-value results and unsourced concepts remain research evidence until their concrete implementations are verified. The current laboratory does not certify a build-ready BOM or implement an automatic availability gate.
 
@@ -46,7 +46,7 @@ The harness attaches the capsule, pressure stimuli, actual phantom feeds, cable,
 
 Every run creates a unique directory with candidate/source/spec snapshots, parameter values, exact rendered decks, complete raw data, simulator logs, versions, hashes and JSON results. The compact `candidates/*/results.json` points to the latest immutable experiment. Failed experiments remain. The initial debugging runs predate full source snapshots; their failed model implementations and result records are retained. Later experiments freeze the model files and check for source changes during execution.
 
-Git retains compact results, decks, logs, parameter records, plots and source/spec snapshots. Bulky `.raw` waveforms are preserved locally and excluded from Git; a fresh clone does not include them. The [results storage record](results/README.md) explains the boundary and links their dated checksum inventory. Ignoring raw files does not authorize deleting experiment evidence.
+Git retains compact results, decks, logs, parameter records, plots and source/spec snapshots. Bulky `.raw` waveforms and `.raw.csv` exports are preserved locally and excluded from Git; a fresh clone does not include them. The [results storage record](results/README.md) explains the boundary and links their dated checksum inventories. Ignoring waveform files does not authorize deleting experiment evidence.
 
 `spec/lock.yaml` guards thresholds/ranges against silent edits. A specification amendment must be documented separately in `research/specification_amendments.md`. Optimizers never edit this lock, specification or canonical circuit.
 

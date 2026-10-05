@@ -1,0 +1,163 @@
+{
+  "proposal": "r2",
+  "parent_proposal": "r1",
+  "netlist_sha256": "4d14198c76d8357ae18369cc8fbc32baa0cb7058c4c95912a7b9d4b0cb4f98b9",
+  "metadata_sha256": "93a10f0107612f2e72c778df43628fac7ff67206f68955e577ede3ab6fe9db5b",
+  "model_sha256": "fb9288ccf32775bfa3c2192a1314bde022f963fc5a7923ab71f5999671a1d120",
+  "rows": [
+    {
+      "control_id": "jfe150_dc_bound_0",
+      "metric": "id_zero",
+      "value_a": 0.02800000000001999,
+      "target_a": 0.028,
+      "relative_error": 7.138734048339757e-13,
+      "pass_physics": true
+    },
+    {
+      "control_id": "jfe150_dc_bound_0",
+      "metric": "id_2ma",
+      "value_a": 0.002000000000020743,
+      "target_a": 0.002,
+      "relative_error": 1.0371481451443287e-11,
+      "pass_physics": true
+    },
+    {
+      "control_id": "jfe150_dc_bound_0",
+      "metric": "id_100ua",
+      "value_a": 0.0001000000000209563,
+      "target_a": 0.0001,
+      "relative_error": 2.0956303359298545e-10,
+      "pass_physics": true
+    },
+    {
+      "control_id": "jfe150_dc_bound_0",
+      "metric": "id_100na",
+      "value_a": 1.000000210162288e-07,
+      "target_a": 1e-07,
+      "relative_error": 2.1016228801684633e-07,
+      "pass_physics": true
+    },
+    {
+      "control_id": "jfe150_dc_bound_0",
+      "metric": "gfs",
+      "value_s": 0.05499999999999899,
+      "target_s": 0.055,
+      "pass_physics": true
+    },
+    {
+      "control_id": "jfe150_dc_bound_0",
+      "metric": "vgs_at_100na",
+      "value_v": -1.016257635410135,
+      "guaranteed_range_v": [
+        -1.5,
+        -0.9
+      ],
+      "pass_manufacturer_limit": true
+    },
+    {
+      "control_id": "jfe150_dc_bound_1",
+      "metric": "id_zero",
+      "value_a": 0.03500000000001998,
+      "target_a": 0.035,
+      "relative_error": 5.708766792622555e-13,
+      "pass_physics": true
+    },
+    {
+      "control_id": "jfe150_dc_bound_1",
+      "metric": "id_2ma",
+      "value_a": 0.002000000000020776,
+      "target_a": 0.002,
+      "relative_error": 1.038791275220774e-11,
+      "pass_physics": true
+    },
+    {
+      "control_id": "jfe150_dc_bound_1",
+      "metric": "id_100ua",
+      "value_a": 0.0001000000000209724,
+      "target_a": 0.0001,
+      "relative_error": 2.097240159315561e-10,
+      "pass_physics": true
+    },
+    {
+      "control_id": "jfe150_dc_bound_1",
+      "metric": "id_100na",
+      "value_a": 1.000000210275994e-07,
+      "target_a": 1e-07,
+      "relative_error": 2.1027599395040397e-07,
+      "pass_physics": true
+    },
+    {
+      "control_id": "jfe150_dc_bound_1",
+      "metric": "gfs",
+      "value_s": 0.06799999999999899,
+      "target_s": 0.068,
+      "pass_physics": true
+    },
+    {
+      "control_id": "jfe150_dc_bound_1",
+      "metric": "vgs_at_100na",
+      "value_v": -1.027671741240265,
+      "guaranteed_range_v": [
+        -1.5,
+        -0.9
+      ],
+      "pass_manufacturer_limit": true
+    },
+    {
+      "control_id": "jfe150_dc_bound_2",
+      "metric": "id_zero",
+      "value_a": 0.04600000000002,
+      "target_a": 0.046,
+      "relative_error": 4.347633364432113e-13,
+      "pass_physics": true
+    },
+    {
+      "control_id": "jfe150_dc_bound_2",
+      "metric": "id_2ma",
+      "value_a": 0.00200000000002091,
+      "target_a": 0.002,
+      "relative_error": 1.0454970222895099e-11,
+      "pass_physics": true
+    },
+    {
+      "control_id": "jfe150_dc_bound_2",
+      "metric": "id_100ua",
+      "value_a": 0.0001000000000210973,
+      "target_a": 0.0001,
+      "relative_error": 2.109730168342594e-10,
+      "pass_physics": true
+    },
+    {
+      "control_id": "jfe150_dc_bound_2",
+      "metric": "id_100na",
+      "value_a": 1.000000211482575e-07,
+      "target_a": 1e-07,
+      "relative_error": 2.1148257500769319e-07,
+      "pass_physics": true
+    },
+    {
+      "control_id": "jfe150_dc_bound_2",
+      "metric": "gfs",
+      "value_s": 0.07999999999999902,
+      "target_s": 0.08,
+      "pass_physics": true
+    },
+    {
+      "control_id": "jfe150_dc_bound_2",
+      "metric": "vgs_at_100na",
+      "value_v": -1.1483044175042187,
+      "guaranteed_range_v": [
+        -1.5,
+        -0.9
+      ],
+      "pass_manufacturer_limit": true
+    }
+  ],
+  "raw_hashes": {
+    "op.raw": "3011703b18486ddd8899985a5f15a61ab2074b66383494b4a75c7852dcb723bb",
+    "ac.raw": "174e05a19056ffaf838e677489e67b7c0903b9c97ae772655a958e20558b8198"
+  },
+  "physics_agreement": true,
+  "guaranteed_subset_agreement": true,
+  "production_corner_qualified": false
+}

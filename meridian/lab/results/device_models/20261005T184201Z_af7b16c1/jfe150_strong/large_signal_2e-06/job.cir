@@ -1,0 +1,18 @@
+Meridian isolated jfe150_strong large_signal_2e-06
+.include "/home/leobareth/Dokumente/Audiotech/meridian/lab/results/device_models/20261005T184201Z_af7b16c1/source/models/semiconductor/vendor/jfe150_strong.lib"
+.temp 25
+.options reltol=1e-06 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+Vs rail 0 12
+Rd rail d 2k
+Vg g 0 DC -1.2722865371980814 SIN(-1.2722865371980814 .5 1000)
+Vh h 0 12
+Vl l 0 -5
+Xq d g 0 h l JFE150_STRONG
+.control
+set filetype=ascii
+set numdgt=16
+tran 2e-06 .02 .01 2e-06
+write tran.raw v(d) v(g) i(vs)
+quit
+.endc
+.end

@@ -5,75 +5,168 @@ sources:
     title: Arienne Audio Flat K47 Cardioid/Omni K47FRB product page
     url: https://store.arienneaudio.com/microphone-capsules/20-26-arienne-audio-flat-k47-microphone-capsule.html#/12-options-cardioid_omni
     kind: primary_manufacturer
-    supports: Exact variant, product reference, modified tuning, changed manufacturing facility, included mount.
-    does_not_supply: Current capacitance, sensitivity, safe bias, leakage, noise, diaphragm mechanics, production statistics.
+    supports: Exact variant, product reference, modified tuning, changed manufacturing
+      facility, included mount.
+    does_not_supply: Current capacitance, sensitivity, safe bias, leakage, noise,
+      diaphragm mechanics, production statistics.
   S02:
     title: IEC 61938:2018 edition 3 official catalogue
     url: https://webstore.iec.ch/en/publication/30762
     kind: primary_standard_catalogue
-    supports: Edition/date/scope; interoperability guidance, not a microphone performance standard. Catalogue stability date 2030.
-    limitation: Full controlled standard not obtained. Public official/distributor preview does not include section 9.4/Table 6.
+    supports: Edition/date/scope; interoperability guidance, not a microphone performance
+      standard. Catalogue stability date 2030.
+    limitation: Full controlled standard not obtained. Public official/distributor
+      preview does not include section 9.4/Table 6.
   S03:
     title: SCHOEPS V4 U manufacturer manual, 2014, pp. 11, 12, 15
     url: https://schoeps.de/fileadmin/user_upload/user_upload/Downloads/Bedienungsanleitungen/Schoeps_Manual_V4_U_DE_1388740809.pdf
     kind: primary_manufacturer_standard_summary
     inspected_url: https://schoeps.de/produkte/v4/sets/v4-usm-set.html?tx_igproducts_product%5Baction%5D=downloadFile&tx_igproducts_product%5Bcontroller%5D=Product&tx_igproducts_product%5Burl%5D=%2Ffileadmin%2Fuser_upload%2Fuser_upload%2FDownloads%2FBedienungsanleitungen%2FSchoeps_Manual_V4_U_DE_1388740809.pdf
-    supports: P48 44–52 V, feed-pair match below 0.4%, maximum microphone current 10 mA. Older manual permits 20% feed absolute tolerance; cable example 100 pF/m between conductors.
-    limitation: Predates 2018 edition; cannot alone authenticate its updated feed tolerance or rated-current clause.
+    supports: P48 44–52 V, feed-pair match below 0.4%, maximum microphone current
+      10 mA. Older manual permits 20% feed absolute tolerance; cable example 100 pF/m
+      between conductors.
+    limitation: Predates 2018 edition; cannot alone authenticate its updated feed
+      tolerance or rated-current clause.
   S04:
     title: DIY RF Condenser Mics community estimate, page 21, April 2024
     url: https://groupdiy.com/threads/diy-rf-condenser-mics.71586/page-21
     kind: third_party_unmeasured_estimate
-    supports: Historical suggestion of 120–150 pF for combined sides; not a calibration or current batch guarantee.
+    supports: Historical suggestion of 120–150 pF for combined sides; not a calibration
+      or current batch guarantee.
     use: Context for a wider assumed capacitance bracket only.
   S05:
     title: TI SLOA033A, Signal Conditioning Piezoelectric Sensors, James Karki, 2000
     url: https://www.ti.com/lit/an/sloa033a/sloa033a.pdf
     kind: primary_application_report
-    mechanism: Charge-to-voltage feedback reduces dependence on sensor/interconnect capacitance; bleed path prevents DC saturation.
+    mechanism: Charge-to-voltage feedback reduces dependence on sensor/interconnect
+      capacitance; bleed path prevents DC saturation.
   S06:
     title: Analog Devices ADA4530-1 Rev C datasheet
     url: https://www.analog.com/media/en/technical-documentation/data-sheets/ADA4530-1.pdf
     kind: primary_datasheet
-    mechanism: Low bias current and a driven guard isolate leakage at high-impedance sensor nodes. Voltage noise, current, supply and layout must still be evaluated for audio use.
+    mechanism: Low bias current and a driven guard isolate leakage at high-impedance
+      sensor nodes. Voltage noise, current, supply and layout must still be evaluated
+      for audio use.
   S07:
     title: Analog Devices, Transimpedance Amplifier Noise Considerations, 2015
     url: https://www.analog.com/en/resources/technical-articles/transimpedance-amplifier-noise-considerations.html
     kind: primary_manufacturer_application_article
-    mechanism: Voltage/current noise, total input capacitance and feedback impedance jointly determine TIA noise and stability.
+    mechanism: Voltage/current noise, total input capacitance and feedback impedance
+      jointly determine TIA noise and stability.
   S08:
-    title: Fast low-noise transimpedance amplifier for scanning tunneling microscopy and beyond, 2020
+    title: Fast low-noise transimpedance amplifier for scanning tunneling microscopy
+      and beyond, 2020
     url: https://arxiv.org/abs/2007.00615
     kind: primary_research_paper
-    mechanism: High-resistance feedback with low-current sensing; evaluate Johnson noise, capacitance, bandwidth and dynamic range together.
+    mechanism: High-resistance feedback with low-current sensing; evaluate Johnson
+      noise, capacitance, bandwidth and dynamic range together.
   S09:
     title: Analog Devices AD7745/AD7746 datasheet Rev 0
     url: https://www.analog.com/media/en/technical-documentation/data-sheets/AD7745_7746.pdf
     kind: primary_datasheet
-    mechanism: Excitation and differential floating capacitance sensing reject some parasitic effects.
-    limitation: This particular CDC has insufficient audio sample rate and capacitance range; borrow the sensing mechanism, not the chip as the audio signal path.
+    mechanism: Excitation and differential floating capacitance sensing reject some
+      parasitic effects.
+    limitation: This particular CDC has insufficient audio sample rate and capacitance
+      range; borrow the sensing mechanism, not the chip as the audio signal path.
   S10:
     title: ngspice official documentation
     url: https://ngspice.sourceforge.io/docs.html
     kind: primary_software_documentation
     use: Batch analysis, AC, transient and noise protocols; raw files retained.
   S11:
-    title: ngspice issue 848, reported native behavioral-Q capacitor/rshunt timestep problem
+    title: ngspice issue 848, reported native behavioral-Q capacitor/rshunt timestep
+      problem
     url: https://sourceforge.net/p/ngspice/bugs/848/
     kind: primary_issue_report
-    limitation: Report concerns ngspice 46 XSPICE. Relevance to 47 is uncertain; rshunt is excluded conservatively and numerical convergence is tested.
+    limitation: Report concerns ngspice 46 XSPICE. Relevance to 47 is uncertain; rshunt
+      is excluded conservatively and numerical convergence is tested.
   S12:
     title: Arch Linux ngspice 47-1 package metadata
     url: https://archlinux.org/packages/extra/x86_64/ngspice/
     kind: primary_distributor
-    use: Local simulator package version and dependency provenance; archive hashes checked against installed repository metadata.
+    use: Local simulator package version and dependency provenance; archive hashes
+      checked against installed repository metadata.
   S13:
     title: IEC 61938:2018 public distributor preview
     url: https://preview.sist.si/sist-preview/23000/0bdf681f3b4f45bc83637433f30b63ac/IEC-61938-2018.pdf
     kind: primary_standard_preview
     limitation: Inspected 12 pages; full P48 clauses are outside preview.
+  S14:
+    title: TI JFE150 SLPS732B April2023
+    url: https://www.ti.com/lit/ds/symlink/jfe150.pdf
+    kind: primary_manufacturer_datasheet
+    evidence_date: '2026-10-05'
+    use: Guaranteed DC/bias limits; typical curves/capacitance/noise and ratings
+    limitation: Capacitance gate bias ambiguous; transfer/output figures conflict;
+      no production noise maxima or joint distribution
+  S15:
+    title: TI JFE150 Generic SLPM366 and PSpice SLPM349I Final1.2
+    urls:
+    - https://www.ti.com/lit/zip/slpm366
+    - https://www.ti.com/lit/zip/slpm349i
+    kind: primary_vendor_models
+    evidence_date: '2026-10-05'
+    hashes_and_terms: ../models/semiconductor/registry.yaml
+    limitation: Same nominal electrical parameters; tested corners fail guaranteed
+      limits; redistribution not established
+  S16:
+    title: TI OPA197 SBOS737C and PSpice SBOMA34D Final1.3
+    urls:
+    - https://www.ti.com/lit/ds/symlink/opa197.pdf
+    - https://www.ti.com/lit/zip/sboma34d
+    kind: primary_datasheet_and_vendor_model
+    evidence_date: '2026-10-05'
+    limitation: Tested mid-common-mode small-signal agreement; nonlinear/floating/production
+      behavior unqualified; redistribution not established
+  S17:
+    title: Nexperia BC846/BC856 Rev9 datasheets and models
+    urls:
+    - https://assets.nexperia.com/documents/data-sheet/BC846_SER.pdf
+    - https://assets.nexperia.com/documents/data-sheet/BC856_BC857_BC858.pdf
+    - https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1
+    - https://assets.nexperia.com/documents/spice-model/BC856B.txt?download=1
+    kind: primary_datasheets_and_vendor_models
+    evidence_date: '2026-10-05'
+    limitation: NPN floating emitter node; child not vendor-approved; typical capacitance/NF
+      mismatch; KF absent; PNP header grade conflict; redistribution not established
+  S18:
+    title: Nexperia 2N7002 Rev7 and failed model response
+    urls:
+    - https://assets.nexperia.com/documents/data-sheet/2N7002.pdf
+    - https://assets.nexperia.com/documents/spice-model/2N7002.txt?download=1
+    kind: primary_datasheet_and_acquisition_failure
+    evidence_date: '2026-10-05'
+    limitation: HTTP-success HTML is not SPICE; model behavior unsupported
+  S19:
+    title: onsemi J113/MMBFJ113 alternative investigation
+    url: https://www.onsemi.com/download/data-sheet/pdf/mmbfj113-d.pdf
+    kind: primary_datasheet
+    evidence_date: '2026-10-05'
+    limitation: No audited model/exact active retail code/upper Idss/noise production
+      coverage or qualified substitute
+  S20:
+    title: Germany semiconductor retail and delivery investigation
+    register: procurement/semiconductors_2026-10-05.yaml
+    snapshots: device_sources/local/web_observations.json
+    kind: primary_supplier_terms_and_indexed_catalogue_observations
+    evidence_date: '2026-10-05'
+    limitation: Indexed stock/price freshness and delivery/fees unresolved; confirmed
+      delivered costs null; no orders
+  S21:
+    title: Vishay MOSFET model and variant investigation
+    urls:
+    - https://www.vishay.com/en/product/70860/tab/designtools-ppg/
+    - https://www.vishay.com/en/product/71333/tab/quality/
+    - https://www.vishay.com/zh/product/71333/tab/designtools-ppg/
+    kind: primary_manufacturer_listings
+    evidence_date: '2026-10-05'
+    limitation: 2N7002E E3/GE3 retailer-listed obsolete; 2N7002K-T1-GE3 further unacquired/unvalidated
+      research route
 pending_clause_checks:
-  - Obtain controlled full section 9.4/Table 6; verify absolute feed tolerance, rated current 7 mA and 0.8% conductor-current condition.
-  - An uncontrolled transcription suggests 10% feed tolerance and 7 mA rated current. These are provisional, not authenticated normative claims; no copy is redistributed.
+- Obtain controlled full section 9.4/Table 6; verify absolute feed tolerance, rated
+  current 7 mA and 0.8% conductor-current condition.
+- An uncontrolled transcription suggests 10% feed tolerance and 7 mA rated current.
+  These are provisional, not authenticated normative claims; no copy is redistributed.
 rejected_transfer:
-  - Arienne regular K47 page lists 70 pF; that is a different product and is not assigned to Flat K47.
+- Arienne regular K47 page lists 70 pF; that is a different product and is not assigned
+  to Flat K47.

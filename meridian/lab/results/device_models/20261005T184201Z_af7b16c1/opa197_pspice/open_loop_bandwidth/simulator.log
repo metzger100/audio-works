@@ -1,0 +1,16 @@
+Note: gnd in a subcircuit is not set to 0 automatically
+
+Note: Compatibility modes selected: ps
+
+
+Circuit: meridian isolated opa197_pspice open_loop_bandwidth
+
+
+Error on line 7 or its substitute:
+  vin inp 0 dc0 ac1
+  unknown parameter (dc0) 
+    Simulation interrupted due to error!
+
+Error: incomplete or empty netlist
+       or no ".plot", ".print", or ".fourier" lines in batch mode;
+no simulations run!

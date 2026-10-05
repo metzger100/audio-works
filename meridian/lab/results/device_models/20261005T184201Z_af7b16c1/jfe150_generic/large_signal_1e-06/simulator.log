@@ -1,0 +1,33 @@
+Note: gnd in a subcircuit is not set to 0 automatically
+
+Note: Compatibility modes selected: ps
+
+
+Circuit: meridian isolated jfe150_generic large_signal_1e-06
+
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+rail                                        12
+d                                      7.83469
+g                                    -0.726479
+h                                           12
+l                                           -5
+vl#branch                          4.42164e-11
+vh#branch                         -5.77836e-11
+vg#branch                          1.76667e-11
+vs#branch                          -0.00208266
+
+ Reference value :  1.00002e-02
+ Reference value :  1.64337e-02
+No. of Data Rows : 13202
+ASCII raw file "tran.raw"
+ngspice-47 done
+

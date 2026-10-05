@@ -1,0 +1,416 @@
+{
+  "experiment_id": "20261005T185438Z_corners_0b8875db",
+  "timestamp_utc": "2026-10-05T18:54:39.019136+00:00",
+  "rng_seed": null,
+  "parent_experiments": [
+    "20261005T185348Z_corners_85090b81",
+    "20261005T185414Z_corners_47cfb582"
+  ],
+  "source_manifest": {
+    "models/capsule/flat_k47.cir": "26899d24e6aefa2cfd41b6c13fe1e022e94f2ffec10358ec00dfb74ed0c082b4",
+    "models/capsule/flat_k47_native_q_r1.cir": "79b97ea73165979525f08aca427d8bfaa42fa8814ae576b140bf97550fb61c18",
+    "models/capsule/flat_k47_scaled_observer_r2.cir": "a977702eae58c5345e129bb282ce75f98e4405872e891e603512d37c480758fe",
+    "models/capsule/flat_k47_series_motion_r3.cir": "dcd00a192cfdc6a1744d9a3c2c8ad65b73b4a990697f85f23e756711834d5bb7",
+    "models/environment/p48.cir": "8037de103d579dc4923b37e2ae0b2c78a7337b39385f05055d7e08aa94a53d6f",
+    "models/semiconductor/acquire.py": "d86441ffc7b0c5c1b3371444275deca27826f136feb022d459a281fadc85bac5",
+    "models/semiconductor/acquisition.yaml": "8423936e4c0d64879b356c4db9f35b0f1729d352008ccd5fd792b990d7f51a9b",
+    "models/semiconductor/characterize.py": "740e4c1e8bf1d0b97355c77e7f556e145405df88e09b2dbd1b6f4c5cfaadfe07",
+    "models/semiconductor/corners.yaml": "f472170740b18517edac85f112cd6388294a833bc558be156e641e4b7681fc63",
+    "models/semiconductor/dc_bound_controls.cir": "fb9288ccf32775bfa3c2192a1314bde022f963fc5a7923ab71f5999671a1d120",
+    "models/semiconductor/prepare.py": "bd2aca3425ebaa7eb7d9048e3856640990a46c60b56f1093da1e87073e5457ea",
+    "models/semiconductor/proposals/corners_r1.yaml": "07cba7e177d59fbda19e4e1fecc8d1e045c28b7126e942122f32994a974ada17",
+    "models/semiconductor/proposals/dc_bound_controls_r1.cir": "4aec8ca3bf32d3ee0ac921b407d0b86b73acfef6de1db7a0b313e10e19b00c4d",
+    "models/semiconductor/references.yaml": "90326266c6fdc313f7ca0dfb54ec8085720139016e73a7b958daadd869d80a1b",
+    "models/semiconductor/registry.yaml": "ec242ebc783cd75f95e123c99162890c4d31c798206e7780e04360af6dd994b5",
+    "models/semiconductor/validate_corners.py": "42eb7c2d41bb6570b71949ce9476bb31c24cdb4795187c763f1dc5bde62f3357",
+    "models/semiconductor/vendor/2n7002.lib": "4a2a3f7fb1725f12fcfe3f7fef5cc082be2ac58eeb30ee4fdb693398e74abbf5",
+    "models/semiconductor/vendor/bc846b.lib": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+    "models/semiconductor/vendor/bc846b_emitter_r1.lib": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+    "models/semiconductor/vendor/bc856b.lib": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+    "models/semiconductor/vendor/downloads/sboma34d.zip": "9e55fcaa23d54cee025dda3fa9872b11c41c531f82e0802c2b93d51e943666e5",
+    "models/semiconductor/vendor/downloads/slpm349i.zip": "6358de546c957c142c321f30431fa816610a22599a0a3f980646ac6bbe6eace0",
+    "models/semiconductor/vendor/downloads/slpm366.zip": "1fd7c2ff8ef1c2b1354c98e35537f4d0db56ebb0eea614702bff7610c25e46a1",
+    "models/semiconductor/vendor/evidence/2n7002.pdf": "cc9c275457670c3cbbf2e56f5a75c800d3b5f0b396fabc798cf18cb639646475",
+    "models/semiconductor/vendor/evidence/bc846.pdf": "045a6cc21de93ac634aad910567e882926bd6ef154cbd8c59d13201134642a97",
+    "models/semiconductor/vendor/evidence/bc856.pdf": "d9a836e40dd8f1e788d7dadbfcbe8cf4836ed5debe789c84b8fa574132f84943",
+    "models/semiconductor/vendor/evidence/jfe150.pdf": "925d58a8f0cf7db307325ece12fb2f61a736b2c1440f63928b5e6c1312f39365",
+    "models/semiconductor/vendor/evidence/opa197.pdf": "27653a7d5e965cbb2d23f7998919ebd774efd5cd3e126b8f0881469ae91166fd",
+    "models/semiconductor/vendor/jfe150_generic.lib": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+    "models/semiconductor/vendor/jfe150_pspice.lib": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+    "models/semiconductor/vendor/jfe150_strong.lib": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+    "models/semiconductor/vendor/jfe150_weak.lib": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+    "models/semiconductor/vendor/opa197.lib": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+    "optimization/optimize_bias.py": "90cf1a61c2aaad14c39c3c6c544bc8bae21fb556303381d44c4ffc8bef498733",
+    "optimization/optimize_values.py": "6c332b7758d61cf92aad716781ee81ee0401156965543673f9438d2d8e5e85f4",
+    "requirements.txt": "f2162d13822ff575becaab0e43a96dcce42f33a9e3cd4aacbc88d3ae1e4ff3c3",
+    "research/device_sources/README.md": "f5950aa76d4a5813bc3a1fbfe9f74b553c9fee8559982c17899ae893923676eb",
+    "research/device_sources/local/web_observations.json": "82eba24adf2a815360d34ad69a3dc98feb4aba101e5431a6340ee11bc585b498",
+    "research/procurement/semiconductors_2026-10-05.yaml": "f09abdec07694398de770ed4f784325d2210c0cc2169aa53675771332716fe21",
+    "search/archive.py": "a6540a439fd86d9d0989cc6b75a5656afd15eaeed86adae189debe604a242b58",
+    "search/concepts.yaml": "711693e5c28f1313246c4411926687981b4c0db48a845ab5fa4585dd22002123",
+    "search/families.yaml": "458ea6f4ad64c1244cb8f709ded0313b46c75f4c2ca46066683ea82f41c2ffdf",
+    "search/generate_topology.py": "3b03bd1291e1e757f2d5701e029bf9610a772442a3bfb55bf662b70ede13220b",
+    "search/loop.py": "3322bb6d43b86f9c4e1c472a79d50f80e06783960c880a8be8452ee4b64e1d9f",
+    "search/mutate.py": "8f91ab73f3ffca62922db5346173dd66a61baa6b781141dd9c3ca61f011d9886",
+    "search/novelty.py": "1d0373ee6060f925febf54375a2de2dd42c846b5a1ba6c86570c597d1c1566df",
+    "search/proposals/concept_0010/proposal.yaml": "4829f158162cbc7c3290a3655c87e50dc3d9648a6497bcc5e6bfa99e841592b0",
+    "search/selection.py": "83f62cbb70327ad8e713f05dedcf902ecd395146f4e5b9664080b27915b713a0",
+    "spec/capsule_model.yaml": "169983f2601ee39a59496e0e4d2d337deb14e7e4ec7bf38a92f6ca89b59bc696",
+    "spec/design_constraints.yaml": "48d03f7b8d6302aeca14efda4de5c12cf491c393e212e6842f04da60c344dc43",
+    "spec/lock.yaml": "0a5ac00e5d73b720b0c0926c6987ab6b8cb2dca6ac3d1513039db9f3a05c8d07",
+    "spec/microphone_spec.yaml": "ea5a6f973f17f907c5b76f9d17a35cfa784903bcfcd8d7f1d08cd538b65636cd",
+    "spec/scoring.yaml": "6aa6b8620a4700220ac952472f150396599ca67a2918f6f114e1b283a158c0af",
+    "src/meridian_lab/__init__.py": "70778163075ec49235b8cf725bce58f9cef39892880a46ccc9fa58a9aeb98f52",
+    "src/meridian_lab/archive.py": "56353457cb366e1141d3a82ce5cdd74e1648f6321ae5b1247a7f20019aa44d06",
+    "src/meridian_lab/cli.py": "8bd9d564d2dfe329c75a4403be77aeceda6cd5b8395d7322a9f3729b6e923bdf",
+    "src/meridian_lab/core.py": "7adf2c56ebfcc8eb9af8584d5744a9b5b4380358d4b4e927975bc6c0e23ab126",
+    "src/meridian_lab/device_models.py": "802396ed52e558670f177f2c3e7e209ca5075e97ecd878c7054b4673feabbfa0",
+    "src/meridian_lab/metrics.py": "37827dfc57123f2fbfb5398f4f0a6e0be147cae9e2f2ae5b46fc35d61d08c9c8",
+    "src/meridian_lab/qualification.py": "859c520c71bc6df38bd8e809aa74631b7dd5ca15c12d23986756d817e0837077",
+    "tests/test_device_models.py": "16ef861ac99f6fbd145cc67f184d06e1142283ba147edd21c380ddd5b3f837a4",
+    "tests/test_integrity.py": "9f6a90bee69c5327216c42e29f11a6f4fd00b8359a42a42e72de90b7f1128c2d",
+    "tests/test_physics.py": "4cffb4617d81ee327b32883f7fafc88905c76126f567d77b5d79a39f22560e59",
+    "tests/test_search_and_numerics.py": "b906730c436811458eb61cfb96799e069c48485ecf2e54ec4b14694f338a761b",
+    "tools/ngspice-run": "52cc8315fd7b1dc8dc7757658407dbd4a0b21e1f73bbbdf8a183e04487fa26fd"
+  },
+  "source_unchanged": true,
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.8",
+    "yaml": "6.0.3",
+    "ngspice": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Wed Aug 19 09:38:31 UTC 2026\n******"
+  },
+  "jobs": [
+    {
+      "proposal": "r1",
+      "parent_proposal": null,
+      "netlist_sha256": "a1a39a2a4112a4dcc282c4b68ed097e0aab69413c66079c0ced8eec057c7ac21",
+      "metadata_sha256": "07cba7e177d59fbda19e4e1fecc8d1e045c28b7126e942122f32994a974ada17",
+      "model_sha256": "4aec8ca3bf32d3ee0ac921b407d0b86b73acfef6de1db7a0b313e10e19b00c4d",
+      "rows": [
+        {
+          "control_id": "jfe150_dc_bound_0",
+          "metric": "id_zero",
+          "value_a": 0.02400000000002001,
+          "target_a": 0.024,
+          "relative_error": 8.337774914934926e-13,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_0",
+          "metric": "id_2ma",
+          "value_a": 0.00200000000002062,
+          "target_a": 0.002,
+          "relative_error": 1.0309975095879054e-11,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_0",
+          "metric": "id_100ua",
+          "value_a": 0.0001000000000208158,
+          "target_a": 0.0001,
+          "relative_error": 2.0815793533301985e-10,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_0",
+          "metric": "id_100na",
+          "value_a": 1.000000208709457e-07,
+          "target_a": 1e-07,
+          "relative_error": 2.087094570502046e-07,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_0",
+          "metric": "gfs",
+          "value_s": 0.05499999999999901,
+          "target_s": 0.055,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_0",
+          "metric": "vgs_at_100na",
+          "value_v": -0.8709458256416123,
+          "guaranteed_range_v": [
+            -1.5,
+            -0.9
+          ],
+          "pass_manufacturer_limit": false
+        },
+        {
+          "control_id": "jfe150_dc_bound_1",
+          "metric": "id_zero",
+          "value_a": 0.03500000000001998,
+          "target_a": 0.035,
+          "relative_error": 5.708766792622555e-13,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_1",
+          "metric": "id_2ma",
+          "value_a": 0.002000000000020776,
+          "target_a": 0.002,
+          "relative_error": 1.038791275220774e-11,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_1",
+          "metric": "id_100ua",
+          "value_a": 0.0001000000000209724,
+          "target_a": 0.0001,
+          "relative_error": 2.097240159315561e-10,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_1",
+          "metric": "id_100na",
+          "value_a": 1.000000210275994e-07,
+          "target_a": 1e-07,
+          "relative_error": 2.1027599395040397e-07,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_1",
+          "metric": "gfs",
+          "value_s": 0.06799999999999899,
+          "target_s": 0.068,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_1",
+          "metric": "vgs_at_100na",
+          "value_v": -1.027671741240265,
+          "guaranteed_range_v": [
+            -1.5,
+            -0.9
+          ],
+          "pass_manufacturer_limit": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_2",
+          "metric": "id_zero",
+          "value_a": 0.04600000000002,
+          "target_a": 0.046,
+          "relative_error": 4.347633364432113e-13,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_2",
+          "metric": "id_2ma",
+          "value_a": 0.00200000000002091,
+          "target_a": 0.002,
+          "relative_error": 1.0454970222895099e-11,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_2",
+          "metric": "id_100ua",
+          "value_a": 0.0001000000000210973,
+          "target_a": 0.0001,
+          "relative_error": 2.109730168342594e-10,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_2",
+          "metric": "id_100na",
+          "value_a": 1.000000211482575e-07,
+          "target_a": 1e-07,
+          "relative_error": 2.1148257500769319e-07,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_2",
+          "metric": "gfs",
+          "value_s": 0.07999999999999902,
+          "target_s": 0.08,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_2",
+          "metric": "vgs_at_100na",
+          "value_v": -1.1483044175042187,
+          "guaranteed_range_v": [
+            -1.5,
+            -0.9
+          ],
+          "pass_manufacturer_limit": true
+        }
+      ],
+      "raw_hashes": {
+        "op.raw": "495e3507951230d8c51eb79bab57c694cc21d9c6203b8ac67655c8e2e9691b87",
+        "ac.raw": "2ac1060ba0a94cdeb4684703d153f2e45bc15571d4b9cfc52a641409e310915e"
+      },
+      "physics_agreement": true,
+      "guaranteed_subset_agreement": false,
+      "production_corner_qualified": false
+    },
+    {
+      "proposal": "r2",
+      "parent_proposal": "r1",
+      "netlist_sha256": "a803170815e7368f8e14154d56a36f310de7b4e43f4af9e212cbb1f1914c8ebd",
+      "metadata_sha256": "f472170740b18517edac85f112cd6388294a833bc558be156e641e4b7681fc63",
+      "model_sha256": "fb9288ccf32775bfa3c2192a1314bde022f963fc5a7923ab71f5999671a1d120",
+      "rows": [
+        {
+          "control_id": "jfe150_dc_bound_0",
+          "metric": "id_zero",
+          "value_a": 0.02800000000001999,
+          "target_a": 0.028,
+          "relative_error": 7.138734048339757e-13,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_0",
+          "metric": "id_2ma",
+          "value_a": 0.002000000000020743,
+          "target_a": 0.002,
+          "relative_error": 1.0371481451443287e-11,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_0",
+          "metric": "id_100ua",
+          "value_a": 0.0001000000000209563,
+          "target_a": 0.0001,
+          "relative_error": 2.0956303359298545e-10,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_0",
+          "metric": "id_100na",
+          "value_a": 1.000000210162288e-07,
+          "target_a": 1e-07,
+          "relative_error": 2.1016228801684633e-07,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_0",
+          "metric": "gfs",
+          "value_s": 0.05499999999999899,
+          "target_s": 0.055,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_0",
+          "metric": "vgs_at_100na",
+          "value_v": -1.016257635410135,
+          "guaranteed_range_v": [
+            -1.5,
+            -0.9
+          ],
+          "pass_manufacturer_limit": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_1",
+          "metric": "id_zero",
+          "value_a": 0.03500000000001998,
+          "target_a": 0.035,
+          "relative_error": 5.708766792622555e-13,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_1",
+          "metric": "id_2ma",
+          "value_a": 0.002000000000020776,
+          "target_a": 0.002,
+          "relative_error": 1.038791275220774e-11,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_1",
+          "metric": "id_100ua",
+          "value_a": 0.0001000000000209724,
+          "target_a": 0.0001,
+          "relative_error": 2.097240159315561e-10,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_1",
+          "metric": "id_100na",
+          "value_a": 1.000000210275994e-07,
+          "target_a": 1e-07,
+          "relative_error": 2.1027599395040397e-07,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_1",
+          "metric": "gfs",
+          "value_s": 0.06799999999999899,
+          "target_s": 0.068,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_1",
+          "metric": "vgs_at_100na",
+          "value_v": -1.027671741240265,
+          "guaranteed_range_v": [
+            -1.5,
+            -0.9
+          ],
+          "pass_manufacturer_limit": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_2",
+          "metric": "id_zero",
+          "value_a": 0.04600000000002,
+          "target_a": 0.046,
+          "relative_error": 4.347633364432113e-13,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_2",
+          "metric": "id_2ma",
+          "value_a": 0.00200000000002091,
+          "target_a": 0.002,
+          "relative_error": 1.0454970222895099e-11,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_2",
+          "metric": "id_100ua",
+          "value_a": 0.0001000000000210973,
+          "target_a": 0.0001,
+          "relative_error": 2.109730168342594e-10,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_2",
+          "metric": "id_100na",
+          "value_a": 1.000000211482575e-07,
+          "target_a": 1e-07,
+          "relative_error": 2.1148257500769319e-07,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_2",
+          "metric": "gfs",
+          "value_s": 0.07999999999999902,
+          "target_s": 0.08,
+          "pass_physics": true
+        },
+        {
+          "control_id": "jfe150_dc_bound_2",
+          "metric": "vgs_at_100na",
+          "value_v": -1.1483044175042187,
+          "guaranteed_range_v": [
+            -1.5,
+            -0.9
+          ],
+          "pass_manufacturer_limit": true
+        }
+      ],
+      "raw_hashes": {
+        "op.raw": "1172c70422ba92e4bfc5bde7e3c201473040337437da5ec3116d36d34fd7d38d",
+        "ac.raw": "fe895926da96cca6b84efa3855c16675a2c192079fad80784b8ef341e9dbab79"
+      },
+      "physics_agreement": true,
+      "guaranteed_subset_agreement": true,
+      "production_corner_qualified": false
+    }
+  ],
+  "status": "failed_parent_and_scoped_subset_preserved",
+  "eligible_for_production": false
+}

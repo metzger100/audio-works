@@ -1,0 +1,57 @@
+schema_version: 1
+retrieved_date: '2026-10-05'
+redistribution: Not established; all downloaded bytes and local model derivatives
+  remain ignored, local research evidence.
+downloads:
+- id: jfe150_generic
+  url: https://www.ti.com/lit/zip/slpm366
+  target: vendor/downloads/slpm366.zip
+  members:
+    jfe150.lib: vendor/jfe150_generic.lib
+    jfe150_weak.lib: vendor/jfe150_weak.lib
+    jfe150_strong.lib: vendor/jfe150_strong.lib
+  sha256: 1fd7c2ff8ef1c2b1354c98e35537f4d0db56ebb0eea614702bff7610c25e46a1
+- id: jfe150_pspice
+  url: https://www.ti.com/lit/zip/slpm349i
+  target: vendor/downloads/slpm349i.zip
+  members:
+    jfe150.lib: vendor/jfe150_pspice.lib
+  sha256: 6358de546c957c142c321f30431fa816610a22599a0a3f980646ac6bbe6eace0
+- id: opa197
+  url: https://www.ti.com/lit/zip/sboma34d
+  target: vendor/downloads/sboma34d.zip
+  members:
+    OPAx197.LIB: vendor/opa197.lib
+  sha256: 9e55fcaa23d54cee025dda3fa9872b11c41c531f82e0802c2b93d51e943666e5
+- id: bc846b
+  url: https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1
+  target: vendor/bc846b.lib
+  sha256: 4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed
+- id: bc856b
+  url: https://assets.nexperia.com/documents/spice-model/BC856B.txt?download=1
+  target: vendor/bc856b.lib
+  sha256: 580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33
+- id: 2n7002
+  url: https://assets.nexperia.com/documents/spice-model/2N7002.txt?download=1
+  target: vendor/2n7002.lib
+  sha256: 4a2a3f7fb1725f12fcfe3f7fef5cc082be2ac58eeb30ee4fdb693398e74abbf5
+- id: jfe150_datasheet
+  url: https://www.ti.com/lit/ds/symlink/jfe150.pdf
+  target: vendor/evidence/jfe150.pdf
+  sha256: 925d58a8f0cf7db307325ece12fb2f61a736b2c1440f63928b5e6c1312f39365
+- id: opa197_datasheet
+  url: https://www.ti.com/lit/ds/symlink/opa197.pdf
+  target: vendor/evidence/opa197.pdf
+  sha256: 27653a7d5e965cbb2d23f7998919ebd774efd5cd3e126b8f0881469ae91166fd
+- id: bc846_datasheet
+  url: https://assets.nexperia.com/documents/data-sheet/BC846_SER.pdf?download=1
+  target: vendor/evidence/bc846.pdf
+  sha256: 045a6cc21de93ac634aad910567e882926bd6ef154cbd8c59d13201134642a97
+- id: bc856_datasheet
+  url: https://assets.nexperia.com/documents/data-sheet/BC856_BC857_BC858.pdf?download=1
+  target: vendor/evidence/bc856.pdf
+  sha256: d9a836e40dd8f1e788d7dadbfcbe8cf4836ed5debe789c84b8fa574132f84943
+- id: 2n7002_datasheet
+  url: https://assets.nexperia.com/documents/data-sheet/2N7002.pdf?download=1
+  target: vendor/evidence/2n7002.pdf
+  sha256: cc9c275457670c3cbbf2e56f5a75c800d3b5f0b396fabc798cf18cb639646475

@@ -1,0 +1,212 @@
+schema_version: 1
+checked_date: '2026-10-05'
+timezone: Europe/Berlin
+scope: Model-library research; potential quantities per functional slot for one finished microphone, no selected architecture or purchasing basket.
+purchase_authorized: false
+budget_ceiling_eur: null
+capsule_quantity: 1
+evidence_limit: Distributor search/indexed pages retain their crawl dates. Direct product retrieval failed for some routes. Indexed stock is not confirmed live stock; refresh before prototype/build/purchase decisions.
+snapshots: research/device_sources/local/web_observations.json
+seller_contracts:
+  digikey:
+    private_customer_state: Public individual/maker ordering route supported; no account/order submitted.
+    evidence_urls:
+      - https://www.digikey.de/en/terms-and-conditions
+      - https://www.digikey.de/en/help-support/delivery-information/delivery-time-and-cost
+    germany_delivery: Typically 48 hours transit from US distribution centre; customs may affect time.
+    shipping_eur_under_75: 25
+    shipping_tax_basis: Not established by public shipping text; scenarios only.
+    incoterms: UPS/FedEx prepaid DDP (duty/customs paid); DHL CPT adds unknown import VAT/fees. Do not assume identical routes.
+    vat_basis: EUR product pages distinguish net and 19-percent VAT-inclusive shelf prices. No checkout-specific tax quote.
+    import_and_handling_fees_eur: null
+    payment_fx_fees_eur: null
+    no_reeling_fee_condition: Select cut tape or bulk, not Digi-Reel (EUR5.50).
+  tme:
+    private_customer_state: German consumer terms published; public ordering route evidenced.
+    evidence_urls:
+      - https://static.cs.tme.eu/2025/01/677d16e64f859/de.pdf
+      - https://www.tme.eu/de/details/bc846b.215/npn-smd-transistoren/nexperia/bc846b-215/
+    shipping_eur: null
+    germany_delivery: German storefront/TME Germany consumer terms; dispatch time and checkout shipping not established here.
+    tax_basis: Page exposes net/gross rounded prices; precision of actual order quote unknown.
+    fees_eur: null
+  mouser:
+    private_customer_state: Not independently verified here; alternative retail investigation only.
+    germany_delivery: German storefront; final route/tax/shipping quote missing.
+    shipping_eur: null
+    fees_eur: null
+parts:
+  - id: jfe150
+    manufacturer: Texas Instruments
+    exact_mpn: JFE150DBVR
+    package: SOT-23-5 DBV
+    lifecycle: Active/Production in manufacturer ordering addendum; retailer description PROTOTYPE conflicts and must be resolved for supplied variant.
+    intended_quantity_if_used: 1
+    sourcing_state: Retail route found; indexed stock/price freshness and seller description unresolved.
+    manufacturer_single_source: true
+    routes:
+      - seller: DigiKey Germany
+        url: https://www.digikey.de/de/products/detail/texas-instruments/JFE150DBVR/18185049
+        observation_kind: Indexed page retrieved2026-10-05; crawl approximately2months old; direct retrieval failed.
+        stock_observed: 2201
+        live_stock: null
+        moq: 1
+        pack_size: 1
+        packaging: Retail bulk; conflicts with manufacturer3000reel and description PROTOTYPE; verify exact supplied production variant.
+        factory_pack: 3000
+        purchase_quantity_if_used: 1
+        unavoidable_excess: 0
+        manufacturer_lead_time_weeks_observed: 9
+        transit_time: See seller_contracts.digikey; actual dispatch unknown.
+        unit_price_net_eur_observed: 1.82
+        unit_price_vat_inclusive_eur_observed: 2.1658
+        delivered_cost_eur: null
+      - seller: Mouser Germany
+        url: https://www.mouser.de/ProductDetail/Texas-Instruments/JFE150DBVR?qs=ulEaXIWI0c%2FtvFEQb8qApg%3D%3D
+        observation_kind: Product listing found; direct page inaccessible.
+        stock_observed: null
+        moq: null
+        pack_size: null
+        unit_price_eur: null
+        delivered_cost_eur: null
+    substitutes:
+      - {mpn: JFE150DCKR, state: Same die SC70 package; pinout/thermal/layout requalification and procurement refresh required.}
+      - {mpn: JFE2140DR, state: Dual alternative; no selection/matching service permitted; no validated substitution.}
+      - {mpn: MMBFJ113, state: Different chopper JFET; noise/variation/model sourcing inadequate; unsupported.}
+  - id: bc846b
+    manufacturer: Nexperia
+    exact_mpn: 'BC846B,215'
+    package: SOT-23
+    lifecycle: Manufacturer series Production; exact inventory current state unresolved.
+    intended_quantity_if_used: 1
+    sourcing_state: TME retail small-quantity route evidenced by indexed public page; live freshness/shipping unknown.
+    routes:
+      - seller: TME Germany
+        url: https://www.tme.eu/de/details/bc846b.215/npn-smd-transistoren/nexperia/bc846b-215/
+        observation_kind: Indexed public page; last crawl1-2months; not checkout quote.
+        stock_observed: 178360
+        live_stock: null
+        moq: 1
+        order_multiple: 1
+        pack_size: 1
+        factory_pack: 3000
+        packaging: Cut tape from reel
+        purchase_quantity_if_used: 1
+        unavoidable_excess: 0
+        dispatch_lead_time: null
+        unit_price_net_eur_observed_rounded: 0.08
+        unit_price_gross_eur_observed_rounded: 0.09
+        delivered_cost_eur: null
+      - seller: DigiKey Germany
+        url: https://www.digikey.de/en/products/detail/nexperia-usa-inc/BC846B-215/763236
+        stock_observed: 0
+        moq: 1
+        pack_size: 1
+        factory_pack: 3000
+        manufacturer_lead_time_weeks_observed: 30
+        unit_price_net_eur_observed: 0.10
+        delivered_cost_eur: null
+        state: Backorder listing; not a verified in-stock alternative.
+    substitutes:
+      - mpn: BC846BLT1G
+        manufacturer: onsemi
+        evidence_url: https://www.digikey.de/en/products/detail/nexperia-usa-inc/BC846B-215/763236
+        stock_indexed: 1063437
+        unit_price_net_eur_indexed: 0.11
+        state: Supplier substitute table only; manufacturer model/electrical combination unvalidated.
+  - id: bc856b
+    manufacturer: Nexperia
+    exact_mpn: 'BC856B,215'
+    package: SOT-23
+    lifecycle: Series Production; exact current factory orderability uncertain.
+    intended_quantity_if_used: 1
+    sourcing_state: Hold for current exact-variant in-stock small-quantity route.
+    routes:
+      - seller: DigiKey Germany
+        url: https://www.digikey.de/en/products/detail/nexperia-usa-inc/BC856B-215/763241
+        stock_observed: 0
+        observation_kind: Indexed page approximately3weeks old.
+        moq: 1
+        pack_size: 1
+        factory_pack: 3000
+        purchase_quantity_if_used: 1
+        unavoidable_excess: 0
+        manufacturer_lead_time_weeks_observed: 30
+        incoming_estimates: 1128 on2026-10-19;1872 on2026-11-17; not reserved stock.
+        unit_price_net_eur_observed: 0.10
+        unit_price_vat_inclusive_eur_observed: 0.119
+        delivered_cost_eur: null
+      - seller: Mouser Germany
+        url: https://www.mouser.de/de/ProductDetail/Nexperia/BC856B215?qs=me8TqzrmIYV4nfvivgLtHg%3D%3D
+        stock_observed: 0
+        moq: 1
+        pack_size: 1
+        manufacturer_lead_time_weeks_observed: 53
+        unit_price_eur_observed_tax_basis_unknown: 0.163
+        delivered_cost_eur: null
+        state: Backorder; incoming 2027 estimates conflict with DigiKey; do not claim a resolved lead time.
+    substitutes:
+      - {mpn: 'BC856B-QR', manufacturer: Nexperia, stock_indexed_mouser: 16, price_eur_tax_basis_unknown: 0.232, url: 'https://www.mouser.de/de/ProductDetail/Nexperia/BC856B-QR?qs=e8oIoAS2J1RWqE9pZNLMug%3D%3D', state: Automotive grade not model/package substitution-qualified; factory not accepting orders and53week leadtime; marginal route.}
+      - {mpn: BC856BLT1G, manufacturer: onsemi, stock_indexed: 81466, unit_price_net_eur_indexed: 0.10, url: 'https://www.digikey.de/en/products/detail/nexperia-usa-inc/BC856B-215/763241', state: Supplier substitute listing only; validation required.}
+  - id: opa197
+    manufacturer: Texas Instruments
+    exact_mpn: OPA197IDBVR
+    package: SOT-23-5 DBV
+    lifecycle: Manufacturer Active
+    intended_quantity_if_used: 1
+    manufacturer_single_source: true
+    sourcing_state: Retail route evidenced; indexed prices/stock conflict; live refresh needed.
+    routes:
+      - seller: DigiKey Germany
+        url: https://www.digikey.de/en/products/detail/texas-instruments/OPA197IDBVR/5962128
+        observation_kind: Indexed product query; direct retrieval failed; cached variants have different dates.
+        stock_observed_range: [9996, 29522]
+        live_stock: null
+        moq: 1
+        pack_size: 1
+        packaging: Cut tape
+        factory_pack: 3000
+        purchase_quantity_if_used: 1
+        unavoidable_excess: 0
+        dispatch_lead_time: null
+        unit_price_net_eur_observed: 1.51
+        unit_price_vat_inclusive_eur_observed: 1.7969
+        price_freshness: Price-bearing snapshot about5months old; recent snapshots do not establish same price.
+        delivered_cost_eur: null
+      - {seller: TI store, url: 'https://www.ti.com/product/OPA197', state: Official ordering route; login-dependent inventory/price/private Germany checkout not verified., stock_observed: null, moq: null, pack_size: null, unit_price_eur: null, delivered_cost_eur: null}
+    substitutes:
+      - {mpn: OPA197ID, state: Same die SOIC8; new thermal/package/ordering evidence required.}
+  - id: 2n7002
+    manufacturer: Nexperia
+    exact_mpn: '2N7002,215'
+    package: SOT-23
+    lifecycle: Manufacturer Production
+    intended_quantity_if_used: 1
+    sourcing_state: Exact variant stock route unresolved; vendor model acquisition failed.
+    routes:
+      - {seller: DigiKey Germany, url: 'https://www.digikey.de/en/products/detail/nexperia-usa-inc/2N7002-215/762973', stock_observed: 0, moq: 1, pack_size: 1, factory_pack: 3000, purchase_quantity_if_used: 1, unavoidable_excess: 0, manufacturer_lead_time_weeks_observed: 30, incoming_estimate: 3000 on2027-06-15, unit_price_net_eur_observed: 0.15, unit_price_vat_inclusive_eur_observed: 0.1785, delivered_cost_eur: null}
+      - {seller: TME, url: 'https://www.tme.eu/en/details/2n7002.215/smd-n-channel-transistors/nexperia/2n7002-215/', state: Catalogue identity only; current stock/quantity/price unverified., stock_observed: null, moq: null, pack_size: null, unit_price_eur: null, delivered_cost_eur: null}
+    substitutes:
+      - {mpn: 2N7002ET1G, manufacturer: onsemi, stock_indexed: 299449, unit_price_net_eur_indexed: 0.20, url: 'https://www.digikey.de/en/products/detail/nexperia-usa-inc/2N7002-215/762973', state: Model/noise/low-current substitution unvalidated.}
+      - {mpn: 2N7002-7-F, manufacturer: Diodes Incorporated, stock_indexed: 430876, unit_price_net_eur_indexed: 0.18, url: 'https://www.digikey.de/en/products/detail/nexperia-usa-inc/2N7002-215/762973', state: Model/noise/low-current substitution unvalidated.}
+  - id: mmbfj113
+    manufacturer: onsemi
+    exact_mpn: MMBFJ113
+    package: SOT-23
+    intended_quantity_if_used: 1
+    sourcing_state: Exact active order-code route not established; alternative investigation, no model qualification.
+    routes:
+      - {seller: DigiKey Germany, exact_mpn: J113, package: TO-92, url: 'https://www.digikey.de/en/products/detail/onsemi/J113/1048989', stock_observed: 0, unit_price_net_eur_indexed: 0.43, moq: 1, pack_size: 1, delivered_cost_eur: null, state: Different through-hole variant; not MMBFJ113 supply proof.}
+      - {seller: onsemi, url: 'https://www.onsemi.com/download/data-sheet/pdf/mmbfj113-d.pdf', state: Manufacturer electrical source; no current supply quote., stock_observed: null, moq: null, pack_size: null, delivered_cost_eur: null}
+delivered_cost_scenarios:
+  - id: conditional_same_design_digikey_two_slots
+    state: Illustration only; applies only if a later finished design uses one JFE150 and one OPA197 together. No selected BOM or comparison purchase.
+    quantities: {JFE150DBVR: 1, OPA197IDBVR: 1}
+    parts_net_eur_from_stale_indexed_observations: 3.33
+    parts_vat_inclusive_eur_scenario: 3.9627
+    shipping_once_eur: 25
+    shipping_if_tax_inclusive_delivered_eur_scenario: 28.9627
+    shipping_if_tax_exclusive_delivered_eur_scenario: 33.7127
+    assumptions: 19-percent product VAT from seller shelf-price ratio; shipping VAT ambiguous; prepaid DDP UPS/FedEx route; no separate handling/FX fee assumed only in illustration. Actual fees and current prices unknown.
+    confirmed_delivered_cost_eur: null
+    excluded: Capsule, passives, connectors, protection, body/headbasket, PCB, mounting, and all unpriced items. This is not a microphone cost.
