@@ -59,12 +59,14 @@
     "orientation": [],
     "documentation": [
       "CONTRIBUTING.md",
-      "QUALITY.md"
+      "QUALITY.md",
+      "LICENSE"
     ],
     "branding": [
       "branding/README.md",
       "branding/design/README.md",
-      "QUALITY.md"
+      "QUALITY.md",
+      "LICENSE"
     ],
     "device-models": [
       "meridian/lab/CONTRACT.md",
@@ -82,7 +84,8 @@
       "meridian/lab/research/patents/README.md",
       "meridian/lab/models/semiconductor/README.md",
       "meridian/lab/research/device_model_validation.md",
-      "QUALITY.md"
+      "QUALITY.md",
+      "LICENSE"
     ],
     "qualification": [
       "meridian/lab/CONTRACT.md",
@@ -99,7 +102,8 @@
       "meridian/lab/research/procurement_germany.md",
       "meridian/lab/research/patents/README.md",
       "meridian/lab/research/prompts/02_qualification.md",
-      "QUALITY.md"
+      "QUALITY.md",
+      "LICENSE"
     ],
     "topology": [
       "meridian/lab/CONTRACT.md",
@@ -118,7 +122,8 @@
       "meridian/lab/search/families.yaml",
       "meridian/lab/search/concepts.yaml",
       "meridian/lab/research/prompts/03_architectures.md",
-      "QUALITY.md"
+      "QUALITY.md",
+      "LICENSE"
     ],
     "optimization": [
       "meridian/lab/CONTRACT.md",
@@ -135,7 +140,8 @@
       "meridian/lab/research/procurement_germany.md",
       "meridian/lab/research/patents/README.md",
       "meridian/lab/research/prompts/04_robust_optimization.md",
-      "QUALITY.md"
+      "QUALITY.md",
+      "LICENSE"
     ],
     "reporting": [
       "meridian/lab/CONTRACT.md",
@@ -153,10 +159,16 @@
       "meridian/lab/research/patents/README.md",
       "meridian/lab/research/prompts/05_comparative_report.md",
       "meridian/lab/results/README.md",
-      "QUALITY.md"
+      "QUALITY.md",
+      "LICENSE"
     ]
   },
   "modules": [
+    {
+      "prefix": "LICENSES/",
+      "name": "Licence texts",
+      "purpose": "Unmodified GPL-3.0-or-later and CERN-OHL-S-2.0 texts; scope is defined in the root LICENSE."
+    },
     {
       "prefix": "docs/",
       "name": "Project navigation",
@@ -232,7 +244,8 @@
     "QUALITY.md",
     "CONTRIBUTING.md",
     "CURRENT.md",
-    "project.json"
+    "project.json",
+    "LICENSE"
   ],
   "generated": [
     "CURRENT.md",
@@ -258,5 +271,12 @@
     "meridian/lab/research/device_sources/local/"
   ],
   "inventory_prefix": "meridian/lab/results/",
-  "local_directory": ".project-local"
+  "local_directory": ".project-local",
+  "licensing": {
+    "software_and_default": "GPL-3.0-or-later",
+    "hardware_sources": "CERN-OHL-S-2.0",
+    "scope": "LICENSE",
+    "decision": "D019 / 2026-10-05",
+    "third_party": "Original terms preserved; no redistribution permission inferred."
+  }
 }

@@ -1,0 +1,31 @@
+# Audiotech licensing
+
+Copyright (c) 2026 Metzger100 and project contributors. Existing authorship and copyright notices remain applicable.
+
+Owner decision: 2026-10-05. This policy covers all project-authored material in this repository, including every module, generated output and preserved project-authored snapshot. The licences apply by the purpose of the material as described below; they are not alternative licences from which a recipient may choose.
+
+## Software and other project-authored material
+
+**SPDX-License-Identifier: GPL-3.0-or-later**
+
+Software, scripts, tests, build and simulation tooling, software schemas, repository policies, general research reports, indexes, project-authored artwork and other project-authored material outside the hardware-source scope are licensed under the GNU General Public License, version 3 or, at your option, any later version published by the Free Software Foundation. This includes copyrightable project-authored data compilations; the licence does not create copyright in facts.
+
+You may redistribute and/or modify this material under those terms. It is distributed without any warranty, including the implied warranties of merchantability or fitness for a particular purpose. See the [complete GPL text](LICENSES/GPL-3.0-or-later.txt).
+
+## Hardware design sources
+
+**SPDX-License-Identifier: CERN-OHL-S-2.0**
+
+Project-authored hardware design sources are licensed under the CERN Open Hardware Licence Version 2, Strongly Reciprocal. This covers circuit netlists and electrical design models (including project-authored SPICE `.cir`, `.spice`, `.sp` and `.subckt` files), candidate `topology.yaml` files, hardware proposal descriptions, design specifications, schematics, PCB/layout files, mechanical design files, BOMs and documentation needed to make or modify the hardware. Simulator programs that generate or evaluate these sources remain software under GPL-3.0-or-later. The same distinction applies to copies in experiment snapshots and generated design outputs.
+
+You may redistribute and modify this Covered Source and make products using it under the terms of CERN-OHL-S-2.0. This Covered Source is distributed without any warranty, including the implied warranties of merchantability or fitness for a particular purpose. See the [complete CERN licence text](LICENSES/CERN-OHL-S-2.0.txt).
+
+Source Location: [the Audiotech repository](https://github.com/metzger100/audiotech). Design publication does not establish hardware qualification or third-party patent clearance; the [patent policy](PATENTS.md) and engineering evidence requirements remain applicable.
+
+## Third-party material and historical notices
+
+These grants cover only rights held by the project authors. Original third-party datasheets, photographs, measurements, quoted material, vendor models and derivatives, downloaded packages, fonts and licence texts retain their own copyrights, notices and terms. In particular, reference material in `meridian/research/reference-datasheets/`, acquired vendor/source evidence and embedded third-party portions of snapshots are excluded from the project grants. Project-authored acquisition metadata and commentary retain the applicable project licence. The [Source Serif font notice](branding/design/tools/SourceSerif-LICENSE.md) remains intact. Where redistribution permission is unresolved, no permission is supplied by this policy.
+
+The former current MIT notice at `meridian/lab/LICENSE` has been removed. Previously distributed MIT copies retain their existing permissions; this decision does not revoke those grants or rewrite Git history. Frozen historical notices describe their original capture and are preserved as provenance. Current project-authored material is offered under the scope above, with required third-party notices preserved.
+
+The complete licence texts are unmodified copies from the [SPDX GPL record](https://spdx.org/licenses/GPL-3.0-or-later.html) and [SPDX CERN record](https://spdx.org/licenses/CERN-OHL-S-2.0.html), retrieved on 2026-10-05. Adding these licences does not publish private backups or authorize purchases, contacts, payments or release of an unqualified implementation.

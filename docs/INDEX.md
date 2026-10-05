@@ -14,10 +14,18 @@ Canonical policies, current facts and maintenance instructions.
 - [COMPONENTS.md](../COMPONENTS.md) — active
 - [CONTRIBUTING.md](../CONTRIBUTING.md) — active
 - [CURRENT.md](../CURRENT.md) — generated
+- [LICENSE](../LICENSE) — active
 - [PATENTS.md](../PATENTS.md) — active
 - [QUALITY.md](../QUALITY.md) — active
 - [README.md](../README.md) — active
 - [project.json](../project.json) — active
+
+## Licence texts
+
+Unmodified GPL-3.0-or-later and CERN-OHL-S-2.0 texts; scope is defined in the root LICENSE.
+
+- [LICENSES/CERN-OHL-S-2.0.txt](../LICENSES/CERN-OHL-S-2.0.txt) — active
+- [LICENSES/GPL-3.0-or-later.txt](../LICENSES/GPL-3.0-or-later.txt) — active
 
 ## Project navigation
 
@@ -146,7 +154,6 @@ Specifications, scientific code, models and evidence.
 - [meridian/lab/.gitignore](../meridian/lab/.gitignore) — active
 - [meridian/lab/AGENTS.md](../meridian/lab/AGENTS.md) — active
 - [meridian/lab/CONTRACT.md](../meridian/lab/CONTRACT.md) — active
-- [meridian/lab/LICENSE](../meridian/lab/LICENSE) — active
 - [meridian/lab/README.md](../meridian/lab/README.md) — active
 - [meridian/lab/candidates/fixture_0001/circuit.cir](../meridian/lab/candidates/fixture_0001/circuit.cir) — active
 - [meridian/lab/candidates/fixture_0001/hypothesis.md](../meridian/lab/candidates/fixture_0001/hypothesis.md) — active

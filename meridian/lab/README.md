@@ -84,4 +84,4 @@ Phase 3: obtain current, documented semiconductor models/limits and build a stro
 
 The [measurement interchange](measurement/result.schema.json) shares check names, units, statuses and provenance with simulation. `measurement/compare.py` imports physical records and reports differences without changing models or thresholds. No physical measurements have been made.
 
-Software and project-authored electrical models are provided under [MIT](LICENSE). Third-party documents, packages and future vendor models retain their own terms. A hardware publication licence and model redistribution audit should be resolved before publishing a mature circuit.
+Project-authored software is GPL-3.0-or-later; hardware design sources and electrical netlists/models are CERN-OHL-S-2.0. The [root licensing scope](../../LICENSE) applies throughout the laboratory, including snapshots. Third-party material retains its own terms; vendor-model redistribution permission and engineering/patent release gates remain separate unresolved matters.

@@ -16,4 +16,4 @@ The active [Meridian project](meridian/README.md) studies a Flat K47 condenser m
 
 Read [contributor instructions](CONTRIBUTING.md) and the [quality contract](QUALITY.md). Choose a reading route with `python3 tools/project.py context orientation`. Install the local gate with `python3 tools/project.py hooks install`.
 
-Reference documents retain their publishers' copyrights. See the [font licence](branding/design/tools/SourceSerif-LICENSE.md) and laboratory licence for their respective material.
+Project licences: **GPL-3.0-or-later** for software; **CERN-OHL-S-2.0** for hardware sources. See [scope and third-party terms](LICENSE).

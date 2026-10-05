@@ -37,3 +37,7 @@ Record the intended capsule/variant and finished-project use, quantity, German d
 ## D018 / 2026-10-05 — scoped semiconductor evidence
 
 The Phase 3 [device-model library](lab/research/device_model_validation.md) records manufacturer sources, exact versions, failures and Germany procurement separately. Tested OPA197 small-signal agreement permits restricted numerical controls, not a microphone/prototype selection. JFE production corners, bipolar flicker/capacitance and MOS/P48 power coverage remain unresolved. The BC846B one-node child is a documented structural hypothesis, not a vendor-approved replacement. Feasible analytic DC tuples do not narrow manufacturer bounds or establish a population. All 14 architecture families remain alive; no build-ready BOM or patent clearance is asserted. Revisit with independent measurements, improved validated models, current exact sourcing and candidate-linked claim/status screening.
+
+## D019 / 2026-10-05 — repository licences
+
+Owner-directed: GPL-3.0-or-later for software; CERN-OHL-S-2.0 for hardware sources. [Scope](../LICENSE) replaces the current lab MIT notice; third-party terms and earlier grants remain. Revisit only by owner decision.

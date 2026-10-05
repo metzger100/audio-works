@@ -24,6 +24,8 @@ The installer preserves unrelated hook configurations and reports conflicts. Fre
 
 The hook does not rewrite/stage files, run simulations or require local waveform archives. A passing repository gate does not establish scientific, sourcing, legal or backup readiness.
 
+Apply the [repository licences](LICENSE) to new project-authored material: GPL-3.0-or-later for software and general material, CERN-OHL-S-2.0 for hardware sources and their design documentation. Retain third-party notices and record origin/redistribution terms before adding external material. Use the applicable SPDX identifier for new source files; preserve frozen snapshots. Licence changes require an owner decision and updated scope/reading routes.
+
 ## Private evidence
 
 Read [storage boundaries](meridian/lab/results/README.md). A clone contains metadata, not all original waveform/vendor bytes. Check them with `python3 tools/project.py evidence verify`. Private backups require idle evaluators:
