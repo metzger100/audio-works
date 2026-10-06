@@ -1,8 +1,5 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="branding/design/qc/m100-lockup-inverse-1024.png">
-    <img src="branding/design/qc/m100-lockup-1024.png" alt="M100 / METZGER100 AUDIO WORKS" width="320">
-  </picture>
+  <img src="branding/design/m100-readme-banner.svg" alt="M100 / METZGER100 AUDIO WORKS" width="960">
 </p>
 
 # M100 Audio Works

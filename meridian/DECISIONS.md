@@ -61,3 +61,7 @@ Owner-directed: remove the public maturity states. List projects as released or 
 ## D024 / 2026-10-06 — current work and goals
 
 Owner-directed: describe the wider audio-hardware range as a goal. Current work is condenser-microphone research; no released portfolio exists.
+
+## D025 / 2026-10-06 — README banner
+
+Owner-directed: show the standard logo on an ivory banner in both GitHub themes. Generate it from the shared lockup geometry; preserve the existing masters.

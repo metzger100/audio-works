@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild the five SVG masters and raster QC from shared geometric sources."""
+"""Rebuild the SVG masters, README banner and raster QC from shared geometry."""
 from pathlib import Path
 import json
 import subprocess
@@ -108,9 +108,14 @@ subline, tracking = outlined_text(BRAND_NAME,20,SUBLINE_WIDTH,250,183,GREEN,'out
 divider = (path('M8 141 H230 V143 H8 Z M270 141 H492 V143 H270 Z',GREEN,'divider-rules')+'\n'+
            path('M250 131 L261 142 L250 153 L239 142 Z M250 134 L242 142 L250 150 L258 142 Z',GREEN,'diamond-outline',extra=' fill-rule="evenodd"')+'\n'+
            polygon([(250,138),(254,142),(250,146),(246,142)],GREEN,'diamond-centre'))
+LOCKUP = f'<g transform="translate(18 12)">{WORDMARK}</g>\n{divider}\n{subline}'
 svg('m100-lockup.svg',500,198,f'M100 with {BRAND_NAME} subline',
     f'Shared M100 wordmark with thin Art Deco divider and centre diamond. {BRAND_NAME} is outlined, centred and tracked across {SUBLINE_WIDTH} units. Selected brand identity for microphones and other audio equipment.',
-    f'<g transform="translate(18 12)">{WORDMARK}</g>\n{divider}\n{subline}')
+    LOCKUP)
+svg('m100-readme-banner.svg',1200,240,f'M100 / {BRAND_NAME}',
+    'Standard forest-green and brass M100 lockup on a fixed ivory background for README display in light and dark themes.',
+    f'<rect width="1200" height="240" fill="{IVORY}"/>\n'
+    f'<g transform="translate(380 32.88) scale(0.88)">\n{LOCKUP}\n</g>')
 
 outer=[(152,10),(236,94),(236,114),(268,146),(268,164),(292,188),(292,336),(268,360),(268,378),
        (152,494),(36,378),(36,360),(12,336),(12,188),(36,164),(36,146),(68,114),(68,94)]
@@ -259,7 +264,7 @@ def asset_name(name,dark=False):
 def validate_and_render():
     report={}
     banned={'image','filter','linearGradient','radialGradient','pattern','mask','clipPath','text','use','foreignObject','script'}
-    for name in ['primary','monogram','wordmark','lockup','palette']+[n+'-inverse' for n in INVERSE_ASSETS]+MONO_ASSETS:
+    for name in ['primary','monogram','wordmark','lockup','palette','readme-banner']+[n+'-inverse' for n in INVERSE_ASSETS]+MONO_ASSETS:
         file=ROOT/f'm100-{name}.svg'
         root=ET.parse(file).getroot()
         tags=[]
@@ -277,7 +282,7 @@ def validate_and_render():
                 assert key not in {'opacity','fill-opacity','stroke-opacity'}, (file,key)
         sizes=[]
         w,h=map(float,root.attrib['viewBox'].split()[2:])
-        for size in [24,64,256,1024]:
+        for size in ([] if name=='readme-banner' else [24,64,256,1024]):
             out=ROOT/'qc'/f'm100-{name}-{size}.png'
             args=['rsvg-convert','-w' if w>=h else '-h',str(size),'-o',str(out),str(file)]
             subprocess.run(args,check=True)
@@ -289,6 +294,7 @@ def validate_and_render():
     # Wordmark geometry is byte-identical, including fills, in all three files.
     for name in ['primary','wordmark','lockup']:
         assert WORDMARK in (ROOT/f'm100-{name}.svg').read_text()
+    assert LOCKUP in (ROOT/'m100-readme-banner.svg').read_text()
     assert WORDMARK.count(f'd="{ZERO}"')==2
     # Inverse files change paint only: every shape, counter, position and size matches.
     for name in INVERSE_ASSETS:
@@ -385,4 +391,4 @@ if __name__=='__main__':
     validate_and_render()
     contact_sheet()
     preview()
-    print('Built and validated five standard masters, four inverse variants and two monochrome wordmarks; rendered all 44 PNG sizes.')
+    print('Built and validated five standard masters, the README banner, four inverse variants and two monochrome wordmarks; rendered all 44 PNG sizes.')

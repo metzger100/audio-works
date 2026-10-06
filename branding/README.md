@@ -1,10 +1,7 @@
 # METZGER100 AUDIO WORKS
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="design/qc/m100-lockup-inverse-1024.png">
-    <img src="design/qc/m100-lockup-1024.png" alt="M100 / METZGER100 AUDIO WORKS manufacturer lockup" width="320">
-  </picture>
+  <img src="design/m100-readme-banner.svg" alt="M100 / METZGER100 AUDIO WORKS manufacturer lockup" width="960">
 </p>
 
 **Audio electronics & acoustics.** Audio equipment with precision and purpose.

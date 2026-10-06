@@ -16,6 +16,8 @@ Artwork reconstructed from the original brand concept. **Selected identity, 5 Oc
 
 The five core files are independent standalone SVGs. They have no fixed width or height and scale through their viewBox. The SVG masters contain editable vector shapes and outlined lettering; the raster QC files are previews only.
 
+The [README banner](m100-readme-banner.svg) places the unchanged standard lockup on an Ivory Beige background. Its `0 0 1200 240` viewBox gives the repository and brand READMEs the same appearance in GitHub's light and dark themes. It is generated from the shared lockup geometry by the existing artwork builder; no separate raster copy is needed.
+
 For Forest Green substrates, use the additional standalone variants below. Graphite Black uses the standard masters, as requested. Their viewBoxes and geometry match the corresponding standard masters exactly.
 
 | Filename | Dark-background treatment |

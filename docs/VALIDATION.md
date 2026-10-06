@@ -40,3 +40,9 @@ Public laboratory/prompt instructions now use repository-relative paths. Dedicat
 Follow-up, 2026-10-06: [D023](../meridian/DECISIONS.md#d023--2026-10-06--release-status) removes the added public maturity table. Project overviews now say released or not released; the added documentation-readiness entry was removed from the register. Existing scientific records and release requirements are retained.
 
 Follow-up, 2026-10-06: [D024](../meridian/DECISIONS.md#d024--2026-10-06--current-work-and-goals) makes the wider product range an explicit goal. The README identifies condenser-microphone research as the current work; branding describes an intended scope rather than an existing range.
+
+## README banner review — 2026-10-06
+
+[D025](../meridian/DECISIONS.md#d025--2026-10-06--readme-banner) uses the standard lockup on a fixed ivory background in both README headers. The existing artwork builder generates the banner and verifies exact reuse of the lockup, allowed colours and absence of external resources or live text. The original masters, all 44 raster previews and contact sheets remain byte-for-byte unchanged.
+
+The root README was inspected with GitHub's light and dark styles; the banner loaded in both with no horizontal overflow. Modified Markdown links, repository refresh/check and all 22 tooling tests passed. Hardware status and the existing independent-backup gap are unchanged.

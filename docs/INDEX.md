@@ -71,6 +71,7 @@ Current identity, artwork, proposals and captured history.
 - [branding/design/m100-palette.svg](../branding/design/m100-palette.svg) — active
 - [branding/design/m100-primary-inverse.svg](../branding/design/m100-primary-inverse.svg) — active
 - [branding/design/m100-primary.svg](../branding/design/m100-primary.svg) — active
+- [branding/design/m100-readme-banner.svg](../branding/design/m100-readme-banner.svg) — generated
 - [branding/design/m100-wordmark-inverse.svg](../branding/design/m100-wordmark-inverse.svg) — active
 - [branding/design/m100-wordmark-mono-inverse.svg](../branding/design/m100-wordmark-mono-inverse.svg) — active
 - [branding/design/m100-wordmark-mono.svg](../branding/design/m100-wordmark-mono.svg) — active
