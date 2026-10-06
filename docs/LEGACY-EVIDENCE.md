@@ -6,4 +6,6 @@ The original laboratory documentation states that early debugging runs predate f
 
 [Exact missing paths and expected hashes](legacy-source-gaps.json) retain the dated observation. Do not manufacture replacement snapshots from current code, rerun experiments as recovery, or remove the declarations to obtain a passing score. Exact bytes from an independently retained original source may be restored with dated provenance and hash verification.
 
+The project folder became `meridian-microphone/` on 2026-10-06. The ledger retains its original `meridian/` paths and hashes; backup checks map those paths to the renamed folder. Earlier backups restore their original layout.
+
 Private capture may protect all **available** evidence despite these known gaps. Its manifest records the missing declarations; restore verification proves the captured bytes, not the existence of missing originals. Full original-evidence preservation remains incomplete while the gaps remain. New or changed gaps are not silently accepted. An independent backup and restoration are separate remaining requirements.

@@ -21,7 +21,7 @@ from urllib.parse import quote, unquote, urlsplit
 MAX_COMMON = 32000
 MANDATORY = {
     "AGENTS.md", "README.md", "COMPONENTS.md", "PATENTS.md", "CURRENT.md",
-    "meridian/README.md", "meridian/DECISIONS.md", "meridian/lab/AGENTS.md",
+    "meridian-microphone/README.md", "meridian-microphone/DECISIONS.md", "meridian-microphone/lab/AGENTS.md",
 }
 ENGINEERING = {"device-models", "qualification", "topology", "optimization", "reporting"}
 ROUTES = ENGINEERING | {"orientation", "documentation", "branding"}
@@ -29,9 +29,9 @@ ROLES = {"active", "historical", "evidence", "generated", "proposal"}
 RECORD_NAMES = {"results.json", "optimization.json", "verification.json", "failure.json",
                 "checkpoint.json", "provenance_correction.json"}
 GENERATED = {"CURRENT.md", "docs/INDEX.md", "docs/EVIDENCE.md", "docs/evidence-index.json",
-             "meridian/lab/research/prompts/prompt_pack.md"}
-PROTECTED_PREFIXES = ("branding/archive/", "meridian/lab/results/runs/",
-                      "meridian/lab/results/device_models/", "meridian/lab/results/verification/")
+             "meridian-microphone/lab/research/prompts/prompt_pack.md"}
+PROTECTED_PREFIXES = ("branding/archive/", "meridian-microphone/lab/results/runs/",
+                      "meridian-microphone/lab/results/device_models/", "meridian-microphone/lab/results/verification/")
 PRIVATE_PARTS = {".git", ".aws", ".codex", ".agents", ".project-local", ".venv", "__pycache__"}
 
 
@@ -56,6 +56,13 @@ def safe_name(name):
     if not name or p.is_absolute() or any(s in {"", ".", ".."} for s in name.split("/")) or "\\" in name:
         raise ValueError(f"Unsafe relative path: {name!r}")
     return name
+
+
+def current_path(path):
+    """Resolve the owner's folder rename without rewriting original records."""
+    if path.startswith("meridian/"):
+        return "meridian-microphone/" + path[len("meridian/"):]
+    return path
 
 
 def private(name):
@@ -163,7 +170,7 @@ def load_register(view):
     if set(r["routes"]) != ROUTES:
         raise ValueError("Register must retain all eight reading routes")
     for name, paths in r["routes"].items():
-        if name in ENGINEERING and "meridian/lab/CONTRACT.md" not in paths:
+        if name in ENGINEERING and "meridian-microphone/lab/CONTRACT.md" not in paths:
             raise ValueError(f"Engineering route {name} omits the scientific contract")
     for module in r["modules"]:
         prefix = module["prefix"]
@@ -204,7 +211,7 @@ def link(path, origin="docs/INDEX.md"):
 def record_index(view):
     rows = []
     for p in sorted(view.paths):
-        m = re.fullmatch(r"meridian/lab/results/(runs|device_models|verification)/([^/]+)/([^/]+\.json)", p)
+        m = re.fullmatch(r"meridian-microphone/lab/results/(runs|device_models|verification)/([^/]+)/([^/]+\.json)", current_path(p))
         if not m or m[3] not in RECORD_NAMES:
             continue
         d = json.loads(view.text(p))
@@ -227,7 +234,7 @@ def render(view, r):
         current.append(f"- **{category.capitalize()}:** {state}")
     current += ["", "**Blockers:** " + " ".join(r["blockers"]), "", "**Next:** " + r["next_action"], "", "Evidence:", ""]
     current += [f"- [{Path(p).name}]({link(p, 'CURRENT.md')})" for p in r["evidence"]]
-    current += ["", "[Decisions](meridian/DECISIONS.md) · [Navigation](docs/INDEX.md) · [Quality contract](QUALITY.md)", ""]
+    current += ["", "[Decisions](meridian-microphone/DECISIONS.md) · [Navigation](docs/INDEX.md) · [Quality contract](QUALITY.md)", ""]
     catalog = ["<!-- Generated; edit project.json and source files. -->", "# Project module index", "",
                "Active means maintained source; proposal means unqualified work; generated means rebuildable output; historical/evidence material retains its original context.", "",
                "[Current state](../CURRENT.md) · [Quality contract](../QUALITY.md) · [Experiment index](EVIDENCE.md)", ""]
@@ -247,24 +254,24 @@ def render(view, r):
         purpose = next((m["purpose"] for m in r["modules"] if m["name"] == name), "Canonical policies, current facts and maintenance instructions.")
         catalog += [purpose, ""] + entries + [""]
     catalog += ["## Evidence and historical collections", "",
-                "- [Simulation storage](../meridian/lab/results/README.md); original runs, device experiments and verification snapshots remain at their existing paths.",
-                "- [Capsule reference archive](../meridian/research/reference-datasheets/README.md).",
+                "- [Simulation storage](../meridian-microphone/lab/results/README.md); original runs, device experiments and verification snapshots retain their bytes and relative laboratory layout.",
+                "- [Capsule reference archive](../meridian-microphone/research/reference-datasheets/README.md).",
                 "- [Historical microphone identity](../branding/archive/2026-10-04-microphones/README.md).",
                 "- [Historical AUDIO proposal](../branding/archive/2026-10-05-audio-proposal/README.md).", ""]
     index = record_index(view)
     evidence = ["<!-- Generated from original records; never edit experiments to fix this view. -->", "# Experiment evidence index", "",
                 "Each row links original metadata, including failures, interruptions and corrections. Statuses are preserved verbatim; unknown means absent legacy metadata. Numerical verification is separate from production, procurement, patent and physical qualification.", "",
-                "[Machine-readable index](evidence-index.json) · [Storage/restoration boundary](../meridian/lab/results/README.md)", "",
+                "[Machine-readable index](evidence-index.json) · [Storage/restoration boundary](../meridian-microphone/lab/results/README.md)", "",
                 "| Kind / record | Experiment | Original status |", "| --- | --- | --- |"]
     for e in index["records"]:
         status = str(e["status"] if e["status"] is not None else "unknown").replace("|", "\\|")
         evidence.append(f"| {e['kind']} / {e['record_type']} | [{e['experiment_id']}]({link(e['path'], 'docs/EVIDENCE.md')}) | {status} |")
     evidence += ["", "Original parent fields, cohorts and missing metadata are retained in the JSON index. Leaf job evidence remains reachable from each original experiment directory.", ""]
-    prompts = [p for p in sorted(view.paths) if re.fullmatch(r"meridian/lab/research/prompts/\d\d_[^/]+\.md", p)]
+    prompts = [p for p in sorted(view.paths) if re.fullmatch(r"meridian-microphone/lab/research/prompts/\d\d_[^/]+\.md", p)]
     pack = "<!-- Generated from individual phase prompts by tools/project.py refresh. Load one representation. -->\n# Phase prompt pack\n\n" + "\n\n---\n\n".join(view.text(p).strip() for p in prompts) + "\n"
     return {"CURRENT.md": ("\n".join(current)).encode(), "docs/INDEX.md": ("\n".join(catalog)).encode(),
             "docs/EVIDENCE.md": ("\n".join(evidence)).encode(), "docs/evidence-index.json": canonical(index),
-            "meridian/lab/research/prompts/prompt_pack.md": pack.encode()}
+            "meridian-microphone/lab/research/prompts/prompt_pack.md": pack.encode()}
 
 
 def headings(text):
@@ -279,7 +286,8 @@ def headings(text):
 
 
 def immutable(path, r):
-    return path == "docs/legacy-source-gaps.json" or path.startswith(PROTECTED_PREFIXES) or path.startswith(tuple(r.get("immutable_prefixes", []))) or path in r.get("immutable_files", []) or path.startswith("meridian/lab/results/") and path.endswith(".sha256")
+    path = current_path(path)
+    return path == "docs/legacy-source-gaps.json" or path.startswith(PROTECTED_PREFIXES) or path.startswith(tuple(r.get("immutable_prefixes", []))) or path in r.get("immutable_files", []) or path.startswith("meridian-microphone/lab/results/") and path.endswith(".sha256")
 
 
 def check(view, r):
@@ -331,13 +339,14 @@ def check(view, r):
     for p, (mode, oid) in tree(view.root).items():
         if not immutable(p, r):
             continue
-        if p not in view.paths:
+        destination = current_path(p)
+        if destination not in view.paths:
             errors.append(f"Deleted immutable evidence/history: {p}")
         elif view.staged:
-            if view.index[p] != (mode, oid):
+            if view.index[destination] != (mode, oid):
                 errors.append(f"Changed immutable evidence/history: {p}; create a descendant/correction")
         else:
-            data = view.read(p)
+            data = view.read(destination)
             actual = hashlib.new(algorithm, f"blob {len(data)}\0".encode() + data).hexdigest()
             if actual != oid:
                 errors.append(f"Changed immutable evidence/history: {p}; create a descendant/correction")
@@ -377,7 +386,7 @@ def install_hook(root):
 def inventory(view):
     hashes = {}
     for p in sorted(view.paths):
-        if not p.startswith("meridian/lab/results/") or not p.endswith(".sha256"):
+        if not current_path(p).startswith("meridian-microphone/lab/results/") or not p.endswith(".sha256"):
             continue
         for line in view.text(p).splitlines():
             if not line.strip() or line.startswith("#"):
@@ -387,7 +396,7 @@ def inventory(view):
             safe_name(relative)
             if not re.fullmatch(r"[0-9a-f]{64}", h):
                 raise ValueError(f"Invalid SHA256 in {p}")
-            path = "meridian/lab/" + relative
+            path = posixpath.dirname(posixpath.dirname(p)) + "/" + relative
             if path in hashes and hashes[path] != h:
                 raise ValueError(f"Conflicting immutable inventory declarations: {path}")
             hashes[path] = h
@@ -395,15 +404,15 @@ def inventory(view):
 
 
 def original_waveforms(root):
-    folder = root / "meridian/lab/results"
-    return {p.relative_to(root).as_posix() for p in folder.rglob("*")
+    folders = [root / name / "lab/results" for name in ("meridian-microphone", "meridian")]
+    return {p.relative_to(root).as_posix() for folder in folders for p in folder.rglob("*")
             if p.is_file() and not p.is_symlink() and p.name.endswith((".raw", ".raw.csv"))}
 
 
 def snapshot_hashes(view):
     expected = {}
     for p in sorted(view.paths):
-        if not re.fullmatch(r"meridian/lab/results/(runs|device_models|verification)/[^/]+/[^/]+\.json", p) or Path(p).name not in RECORD_NAMES:
+        if not re.fullmatch(r"meridian-microphone/lab/results/(runs|device_models|verification)/[^/]+/[^/]+\.json", current_path(p)) or Path(p).name not in RECORD_NAMES:
             continue
         d = json.loads(view.text(p))
         for relative, h in d.get("source_manifest", {}).items():
@@ -455,7 +464,7 @@ def backup_paths(root, view, r):
         safe_name(prefix.rstrip("/"))
         paths.update(p.relative_to(root).as_posix() for p in (root / prefix).rglob("*") if p.is_file())
     paths.update(original_waveforms(root))
-    for p in (root / "meridian/lab/results").rglob("*"):
+    for p in (root / "meridian-microphone/lab/results").rglob("*"):
         relative = p.relative_to(root).as_posix()
         if p.is_file() and ("/source/models/semiconductor/vendor/" in relative or "/source/research/device_sources/local/" in relative):
             paths.add(relative)
@@ -475,7 +484,7 @@ def file_manifest(root, paths):
 
 def evidence_fingerprint(view):
     # Coverage of declared original evidence, independent of generated navigation.
-    paths = [p for p in view.paths if p.startswith("meridian/lab/results/") or p.startswith("branding/archive/")]
+    paths = [p for p in view.paths if current_path(p).startswith("meridian-microphone/lab/results/") or p.startswith("branding/archive/")]
     hashes = {p: hashlib.sha256(view.read(p)).hexdigest() for p in sorted(paths)}
     return hashlib.sha256(canonical(hashes)).hexdigest()
 
@@ -532,7 +541,7 @@ def create_backup(root, destination, independent=False):
     verification = verify_evidence(root, view)
     legacy = {}
     if "docs/legacy-source-gaps.json" in view.paths:
-        legacy = json.loads(view.text("docs/legacy-source-gaps.json"))["missing_sources"]
+        legacy = {current_path(p): h for p, h in json.loads(view.text("docs/legacy-source-gaps.json"))["missing_sources"].items()}
     declarations = snapshot_hashes(view)
     known_missing = all(p in legacy and legacy[p] == declarations.get(p) for p in verification["missing"])
     if verification["damaged"] or verification["uninventoried"] or not known_missing:
@@ -688,9 +697,9 @@ def new_inventory(root, view):
     new = sorted(original_waveforms(root) - declared.keys())
     if not new:
         return {"status": "pass", "new_files": 0, "note": "All existing original waveforms already inventoried."}
-    lines = [sha(root / p) + "  " + p.removeprefix("meridian/lab/") for p in new]
+    lines = [sha(root / p) + "  " + p.removeprefix("meridian-microphone/lab/") for p in new]
     name = "evidence-" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + "-" + uuid.uuid4().hex[:8] + ".sha256"
-    destination = root / "meridian/lab/results" / name
+    destination = root / "meridian-microphone/lab/results" / name
     # Retain the observation only if the new evidence remained stable during hashing.
     ensure_idle(root)
     if sorted(original_waveforms(root) - declared.keys()) != new:

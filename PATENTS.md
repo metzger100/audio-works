@@ -36,7 +36,7 @@ For each promising implementation, before advancing through the gates below:
 
 ## Project records and reporting
 
-Meridian's [patent track](meridian/lab/research/patents/README.md) and [register](meridian/lab/research/patents/register.yaml) retain candidate-linked searches, mappings, sources, review dates, unresolved cases and resolutions. Include status/scope in comparisons and prototype/release decisions.
+Meridian's [patent track](meridian-microphone/lab/research/patents/README.md) and [register](meridian-microphone/lab/research/patents/register.yaml) retain candidate-linked searches, mappings, sources, review dates, unresolved cases and resolutions. Include status/scope in comparisons and prototype/release decisions.
 
 Agents record evidence/risks, not legal non-infringement opinions or global “patent safe” labels. Material interpretation, coverage or status uncertainty needs appropriate professional review before held releases. Finding no patents does not prove none apply.
 

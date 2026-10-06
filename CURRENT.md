@@ -16,9 +16,9 @@ As of 2026-10-06: **Phase 3 semiconductor prerequisite — partial**.
 
 Evidence:
 
-- [device_model_validation.md](meridian/lab/research/device_model_validation.md)
-- [verification.json](meridian/lab/results/verification/20261005T190817Z_17885439/verification.json)
-- [semiconductors_2026-10-05.yaml](meridian/lab/research/procurement/semiconductors_2026-10-05.yaml)
-- [register.yaml](meridian/lab/research/patents/register.yaml)
+- [device_model_validation.md](meridian-microphone/lab/research/device_model_validation.md)
+- [verification.json](meridian-microphone/lab/results/verification/20261005T190817Z_17885439/verification.json)
+- [semiconductors_2026-10-05.yaml](meridian-microphone/lab/research/procurement/semiconductors_2026-10-05.yaml)
+- [register.yaml](meridian-microphone/lab/research/patents/register.yaml)
 
-[Decisions](meridian/DECISIONS.md) · [Navigation](docs/INDEX.md) · [Quality contract](QUALITY.md)
+[Decisions](meridian-microphone/DECISIONS.md) · [Navigation](docs/INDEX.md) · [Quality contract](QUALITY.md)

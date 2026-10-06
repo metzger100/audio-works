@@ -29,7 +29,7 @@ After each completed research batch, update inventories/indexes, verify declared
 
 ## Backup and compatibility
 
-Use explicit evidence allowlists and retain notices/acquisition records. Exclude credentials, caches and runtime installations. Capture a Git-history bundle, tracked working files, author-selected project files and allowlisted ignored evidence. Reject changing inputs, unsafe paths and existing restore contents. Private local attestations retain destinations outside Git. Reacquisition/reruns are not recovery of original evidence. Keep existing scientific CLI, paths, record formats, original snapshots and Git history compatible.
+Use explicit evidence allowlists and retain notices/acquisition records. Exclude credentials, caches and runtime installations. Capture a Git-history bundle, tracked working files, author-selected project files and allowlisted ignored evidence. Reject changing inputs, unsafe paths and existing restore contents. Private local attestations retain destinations outside Git. Reacquisition/reruns are not recovery of original evidence. Keep existing scientific CLI, record formats, original snapshots and Git history compatible. Owner-authorized project-folder renames must preserve frozen bytes and relative laboratory paths, retain original provenance and support restoration of earlier backups.
 
 Pre-existing source gaps are documented in [the dated ledger](docs/LEGACY-EVIDENCE.md). Protect available bytes with an explicit incomplete capture; retain missing declarations and report preservation as incomplete. Never invent snapshots or silently accept newly missing files.
 

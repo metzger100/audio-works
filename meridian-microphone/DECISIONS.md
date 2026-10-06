@@ -65,3 +65,7 @@ Owner-directed: describe the wider audio-hardware range as a goal. Current work 
 ## D025 / 2026-10-06 — README banner
 
 Owner-directed: show the standard logo on an ivory banner in both GitHub themes. Generate it from the shared lockup geometry; preserve the existing masters.
+
+## D026 / 2026-10-06 — project folder
+
+Owner-directed: rename `meridian/` to `meridian-microphone/`; use family and device in project folders. Supersedes D009. Preserve frozen bytes, hashes and legacy-backup restoration.

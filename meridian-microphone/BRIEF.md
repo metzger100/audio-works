@@ -61,4 +61,4 @@ Record patent flags when concrete features emerge; complete the separate claim/s
 
 Separate verified observations, manufacturer/seller claims, community reports, and unknowns. Published complete-microphone or test-fixture specifications must not be silently assigned to a bare capsule. Record exact variants, batches, measurement conditions, and assumptions. Preserve original data alongside later measurements and keep the decision log current.
 
-The existing lowercase `meridian/` directory is used consistently for the project, including `meridian/research/`.
+The existing lowercase `meridian-microphone/` directory is used consistently for the project, including `meridian-microphone/research/`.

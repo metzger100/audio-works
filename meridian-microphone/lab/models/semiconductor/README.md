@@ -4,7 +4,7 @@ Read [the validation report](../../research/device_model_validation.md), [regist
 
 ## Reproduce acquisition and characterization
 
-From `meridian/lab`, with the documented runtime installed:
+From `meridian-microphone/lab`, with the documented runtime installed:
 
 ```sh
 .venv/bin/python models/semiconductor/acquire.py

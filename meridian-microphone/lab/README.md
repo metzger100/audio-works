@@ -10,14 +10,14 @@ An executable, evidence-first workspace for **Arienne Audio Flat K47 Cardioid/Om
 
 **Patent non-infringement is a mandatory project constraint.** Follow the [repository policy](../../PATENTS.md) and [patent track](research/patents/README.md). Track candidate-linked claims, territory, current status and unresolved risks. A credible unresolved potentially blocking claim holds the affected implementation from prototype selection, manufacture or publication of implementation/build guidance. Patent review is separate from numerical engineering qualification; the current workspace has no candidate-level legal clearance.
 
-Start with [the formal specification](spec/microphone_spec.yaml), [capsule uncertainty](spec/capsule_model.yaml), [P48/environment constraints](spec/design_constraints.yaml), [source register](research/sources.yaml) and [Phase 0 report](research/phase0_report.md). Existing capsule research and purchase history remain in the parent `meridian/` project.
+Start with [the formal specification](spec/microphone_spec.yaml), [capsule uncertainty](spec/capsule_model.yaml), [P48/environment constraints](spec/design_constraints.yaml), [source register](research/sources.yaml) and [Phase 0 report](research/phase0_report.md). Existing capsule research and purchase history remain in the parent `meridian-microphone/` project.
 
 ## Run the lab
 
 From the repository root, using an installed laboratory environment:
 
 ```sh
-cd meridian/lab
+cd meridian-microphone/lab
 ./run doctor
 ./run verify
 ./run evaluate fixture_0001 --samples 16 --seed 34047

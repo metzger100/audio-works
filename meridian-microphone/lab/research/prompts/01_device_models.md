@@ -1,6 +1,6 @@
 # Prompt 1 — Validate semiconductor models
 
-Work in `meridian/lab`, relative to the repository root, on the M100 Meridian MIC-34-M/MIC-34-C research project using the Arienne Audio Flat K47 Cardioid/Omni K47FRB under P48.
+Work in `meridian-microphone/lab`, relative to the repository root, on the M100 Meridian MIC-34-M/MIC-34-C research project using the Arienne Audio Flat K47 Cardioid/Omni K47FRB under P48.
 
 Read `AGENTS.md`, `README.md`, the parent `../README.md` and `../DECISIONS.md`, `spec/*.yaml`, `research/phase0_report.md`, `research/sources.yaml`, `research/roles.md`, `research/rejected_ideas.md`, `research/discoveries.md`, `research/procurement_germany.md`, the repository `../../COMPONENTS.md`, `../../PATENTS.md` and `research/patents/README.md`. Inspect the current files and results before changing anything; later work may already have completed part of this task.
 

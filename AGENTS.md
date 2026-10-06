@@ -1,6 +1,6 @@
 # Repository agent instructions
 
-Read the relevant project description and decision log before changes. Use `python3 tools/project.py context <route>` to choose the required reading; Meridian work follows `meridian/lab/AGENTS.md` and its scientific contract.
+Read the relevant project description and decision log before changes. Use `python3 tools/project.py context <route>` to choose the required reading; Meridian work follows `meridian-microphone/lab/AGENTS.md` and its scientific contract.
 
 Always read [COMPONENTS.md](COMPONENTS.md) and [PATENTS.md](PATENTS.md). Standard, documented, currently obtainable production parts and dated private small-quantity sourcing/delivered costs to Germany are mandatory. Realize optimizer proposals as actual BOMs and requalify values, tolerances and substitutes. Preserve unsourced concepts as research; never invent availability or prices.
 

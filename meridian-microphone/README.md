@@ -1,4 +1,4 @@
-# M100 Meridian
+# M100 Meridian microphone
 
 Condenser-microphone research for private DIY use in Germany: acoustic instruments, accordion, ukulele, voice-over and distant male choir. Goals: low noise, accurate transients, natural detail, smooth off-axis response and restrained warmth; transparency before added distortion.
 

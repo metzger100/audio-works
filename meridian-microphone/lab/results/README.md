@@ -4,9 +4,11 @@ Storage decision: 2026-10-05, following the owner's request to keep the importan
 
 Git retains all compact experiment records, including failures: JSON results and optimization trials, simulator decks, parameter records, logs, source/specification snapshots, verification summaries, archive indexes and report plots. Research conclusions and evidence boundaries are unchanged.
 
-Bulky ngspice `.raw` files and their `.raw.csv` waveform exports remain at their original local paths and are excluded from Git. They have not been deleted, uploaded or moved to an external artifact store. A fresh clone therefore includes the experiment metadata but not the complete original waveform evidence. References to waveform files in immutable experiment records still describe the original local archive. Other CSVs, such as compact archive and procurement summaries, are not excluded by this rule.
+Bulky ngspice `.raw` files and their `.raw.csv` waveform exports remain local and are excluded from Git. They have not been deleted, uploaded or moved to an external artifact store. A fresh clone therefore includes the experiment metadata but not the complete original waveform evidence. Other CSVs, such as compact archive and procurement summaries, are not excluded by this rule.
 
-[`raw-data.sha256`](raw-data.sha256) inventories the retained experiment waveforms as of 2026-10-05. Paths are relative to `meridian/lab/`; with the original archive available, verify them from that directory using:
+On 2026-10-06 the owner renamed the project folder to `meridian-microphone/`. All retained files moved together with the same relative laboratory paths. Frozen experiment records and environment observations retain their original recorded paths; their bytes and hashes are unchanged. Earlier private backups restore the layout they captured.
+
+[`raw-data.sha256`](raw-data.sha256) inventories the retained experiment waveforms as of 2026-10-05. Paths are relative to the laboratory directory, now `meridian-microphone/lab/`; with the original archive available, verify them from that directory using:
 
 ```sh
 sha256sum -c results/raw-data.sha256

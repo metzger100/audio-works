@@ -81,6 +81,6 @@ Capsule diameter and active diaphragm diameter are distinct; state the size conv
 
 Write precisely, calmly and confidently. Explain purposeful sonic choices; support performance claims with measurements and distinguish design aims from results.
 
-Current research: [M100 Meridian condenser microphone](../meridian/README.md). The family descriptions and model examples define the architecture; actual configurations follow each project's design decisions.
+Current research: [M100 Meridian condenser microphone](../meridian-microphone/README.md). The family descriptions and model examples define the architecture; actual configurations follow each project's design decisions.
 
 [Artwork specifications](design/README.md) · [Artwork preview](design/preview.html) · [Naming details](proposals/product-naming.md)

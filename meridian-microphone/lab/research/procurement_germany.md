@@ -1,6 +1,6 @@
 # Germany procurement and cost contract
 
-This document applies the mandatory [repository standard-parts policy](../../../COMPONENTS.md) and makes the owner requirements in `meridian/README.md` and `meridian/DECISIONS.md` D001, D008, D010, D011 and D017 explicit for laboratory work. It adds no numerical spending ceiling and authorizes no purchase or supplier contact.
+This document applies the mandatory [repository standard-parts policy](../../../COMPONENTS.md) and makes the owner requirements in `meridian-microphone/README.md` and `meridian-microphone/DECISIONS.md` D001, D008, D010, D011 and D017 explicit for laboratory work. It adds no numerical spending ceiling and authorizes no purchase or supplier contact.
 
 ## Standard parts and realized implementations
 

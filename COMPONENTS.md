@@ -29,7 +29,7 @@ Preserve the continuous parent and traceable implementation revision. Repeat the
 
 Compare intended-equipment quantities in EUR: actual packs/MOQs, basket shipping, applicable taxes/import costs and fees. Expose unknown charges; avoid bulk-price assumptions. Seek inexpensive precision parts while preserving performance/reproducibility. Cost is separate from merit; no numerical spending ceiling is set.
 
-Follow Meridian's [Germany procurement contract](meridian/lab/research/procurement_germany.md). Purchases must serve finished equipment; unused comparison parts, selection batches or extra capsules need a concrete planned use and owner decision. Research/documentation authorize no purchase, supplier contact or payment.
+Follow Meridian's [Germany procurement contract](meridian-microphone/lab/research/procurement_germany.md). Purchases must serve finished equipment; unused comparison parts, selection batches or extra capsules need a concrete planned use and owner decision. Research/documentation authorize no purchase, supplier contact or payment.
 
 ## Evidence states and other gates
 

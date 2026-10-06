@@ -8,6 +8,8 @@ For a reading list, run `python3 tools/project.py context <route>` from the repo
 
 ## Documenting a hardware project
 
+Name project folders by family and device, such as `meridian-microphone/` or `meridian-preamp/`. Create a folder when work on that device begins; each project owns its documentation and build files.
+
 A project's README is its builder landing page. Begin with an overview and say whether the project has been released, then describe design goals and known limitations. Link authoritative specifications, decisions and evidence instead of copying them. Separate goals, simulation results, qualified implementations and physical measurements.
 
 As useful material becomes available, add sections in the order a builder needs them: specifications and variants; what you need and BOM; PCB fabrication; assembly; setup/calibration; testing and measurements; troubleshooting; revisions; design documentation and license. Include only sections with useful content. Research projects need no empty build headings or placeholder files.
@@ -57,7 +59,7 @@ python3 tools/project.py hooks install
 python3 tools/project.py check
 ```
 
-The installer preserves unrelated hook configurations and reports conflicts. Fresh clones and restored checkouts need installation again. Scientific work separately follows the laboratory bootstrap, model acquisition and [contract](meridian/lab/CONTRACT.md); the repository gate needs no vendor bytes or simulator.
+The installer preserves unrelated hook configurations and reports conflicts. Fresh clones and restored checkouts need installation again. Scientific work separately follows the laboratory bootstrap, model acquisition and [contract](meridian-microphone/lab/CONTRACT.md); the repository gate needs no vendor bytes or simulator.
 
 ## Complete a change
 
@@ -74,7 +76,7 @@ Apply the [repository licences](LICENSE) to new project-authored material: GPL-3
 
 ## Private evidence
 
-Read [storage boundaries](meridian/lab/results/README.md). A clone contains metadata, not all original waveform/vendor bytes. Check them with `python3 tools/project.py evidence verify`. Private backups require idle evaluators:
+Read [storage boundaries](meridian-microphone/lab/results/README.md). A clone contains metadata, not all original waveform/vendor bytes. Check them with `python3 tools/project.py evidence verify`. Private backups require idle evaluators:
 
 ```sh
 python3 tools/project.py evidence backup --destination /owner/chosen/storage

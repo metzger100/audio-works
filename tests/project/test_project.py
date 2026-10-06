@@ -33,16 +33,16 @@ class ProjectTests(unittest.TestCase):
         paths = set(self.register["common"] + self.register["evidence"])
         for values in self.register["routes"].values():
             paths.update(values)
-        paths.update({"meridian/lab/results/README.md", "meridian/research/reference-datasheets/README.md",
+        paths.update({"meridian-microphone/lab/results/README.md", "meridian-microphone/research/reference-datasheets/README.md",
                       "branding/archive/2026-10-04-microphones/README.md", "branding/archive/2026-10-05-audio-proposal/README.md",
                       "QUALITY.md", "CONTRIBUTING.md"})
         for name in paths - project.GENERATED:
             self.put(name, "# Fixture\n\nRetained fixture content.\n")
-        self.put(".gitignore", ".project-local/\n/meridian/lab/results/**/*.raw\n/meridian/lab/results/**/*.raw.csv\n/tools/__pycache__/\n")
+        self.put(".gitignore", ".project-local/\n/meridian-microphone/lab/results/**/*.raw\n/meridian-microphone/lab/results/**/*.raw.csv\n/tools/__pycache__/\n")
         for name in ["tools/project.py", ".githooks/pre-commit"]:
             self.put(name, (REPO / name).read_text())
         for i, name in enumerate(["device_models", "qualification", "architectures", "robust_optimization", "comparative_report"], 1):
-            self.put(f"meridian/lab/research/prompts/{i:02d}_{name}.md", f"# Prompt {i}\n\nPreserve the original evidence.\n")
+            self.put(f"meridian-microphone/lab/research/prompts/{i:02d}_{name}.md", f"# Prompt {i}\n\nPreserve the original evidence.\n")
         self.put(self.register["evidence"][1], json.dumps({"status": "pass", "source_manifest": {}}))
         self.save_register()
         self.refresh()
@@ -72,9 +72,9 @@ class ProjectTests(unittest.TestCase):
         return project.check(view, project.load_register(view))
 
     def add_wave(self):
-        path = "meridian/lab/results/runs/new_batch/job/ac.raw"
+        path = "meridian-microphone/lab/results/runs/new_batch/job/ac.raw"
         self.put(path, "original failed waveform\n")
-        self.put("meridian/lab/results/new-wave.sha256", hashlib.sha256((self.root / path).read_bytes()).hexdigest() + "  " + path.removeprefix("meridian/lab/") + "\n")
+        self.put("meridian-microphone/lab/results/new-wave.sha256", hashlib.sha256((self.root / path).read_bytes()).hexdigest() + "  " + path.removeprefix("meridian-microphone/lab/") + "\n")
         self.refresh()
         return path
 
@@ -89,7 +89,7 @@ class ProjectTests(unittest.TestCase):
         self.refresh()
         self.assertEqual(first, {p: (self.root / p).read_bytes() for p in project.GENERATED})
         self.assertEqual(self.check()["status"], "pass")
-        self.register["routes"]["topology"].remove("meridian/lab/CONTRACT.md")
+        self.register["routes"]["topology"].remove("meridian-microphone/lab/CONTRACT.md")
         self.save_register()
         with self.assertRaisesRegex(ValueError, "scientific contract"):
             project.load_register(project.View(self.root))
@@ -116,10 +116,10 @@ class ProjectTests(unittest.TestCase):
             project.load_register(project.View(self.root))
 
     def test_failed_and_interrupted_records_keep_status_and_parents(self):
-        self.put("meridian/lab/results/device_models/failed_child/results.json", json.dumps({
+        self.put("meridian-microphone/lab/results/device_models/failed_child/results.json", json.dumps({
             "status": "failed_parent_and_scoped_subset_preserved", "parent_experiments": ["original_parent"],
             "eligible_for_production": False}))
-        self.put("meridian/lab/results/device_models/interrupted/checkpoint.json", json.dumps({"complete": False}))
+        self.put("meridian-microphone/lab/results/device_models/interrupted/checkpoint.json", json.dumps({"complete": False}))
         rows = project.record_index(project.View(self.root))["records"]
         child = next(r for r in rows if r["experiment_id"] == "failed_child")
         self.assertEqual(child["parent_experiments"], ["original_parent"])
@@ -133,6 +133,31 @@ class ProjectTests(unittest.TestCase):
         path = "branding/archive/2026-10-04-microphones/README.md"
         self.put(path, "# Rewritten historical data\n")
         self.assertTrue(any("Changed immutable" in e for e in self.check()["errors"]))
+        (self.root / path).unlink()
+        self.assertTrue(any("Deleted immutable" in e for e in self.check()["errors"]))
+
+    def test_folder_rename_preserves_immutable_bytes_and_staged_modes(self):
+        path = "meridian-microphone/lab/results/runs/frozen/source/control.py"
+        original = "# Original frozen source\n"
+        self.put(path, original)
+        self.run_git("add", ".")
+        self.run_git("-c", "core.hooksPath=/dev/null", "commit", "--quiet", "-m", "Frozen source")
+        (self.root / "meridian-microphone").rename(self.root / "meridian")
+        self.run_git("add", "-A")
+        self.run_git("-c", "core.hooksPath=/dev/null", "commit", "--quiet", "-m", "Legacy folder fixture")
+        (self.root / "meridian").rename(self.root / "meridian-microphone")
+        self.assertEqual(self.check()["status"], "pass")
+        self.run_git("add", "-A")
+        self.assertEqual(self.check(staged=True)["status"], "pass")
+        self.put(path, "# Rewritten frozen source\n")
+        self.assertTrue(any("Changed immutable" in e for e in self.check()["errors"]))
+        self.run_git("add", path)
+        self.put(path, original)
+        self.assertTrue(any("Changed immutable" in e for e in self.check(staged=True)["errors"]))
+        self.run_git("add", path)
+        (self.root / path).chmod(0o755)
+        self.run_git("add", path)
+        self.assertTrue(any("Changed immutable" in e for e in self.check(staged=True)["errors"]))
         (self.root / path).unlink()
         self.assertTrue(any("Deleted immutable" in e for e in self.check()["errors"]))
 
@@ -177,17 +202,17 @@ class ProjectTests(unittest.TestCase):
         report = project.verify_evidence(self.root, project.View(self.root))
         self.assertEqual(report["status"], "incomplete")
         self.assertEqual(report["missing"], [path])
-        self.put("meridian/lab/results/runs/unregistered/job/new.raw", "new evidence")
+        self.put("meridian-microphone/lab/results/runs/unregistered/job/new.raw", "new evidence")
         self.assertTrue(project.verify_evidence(self.root, project.View(self.root))["uninventoried"])
 
     def test_new_inventory_preserves_old_inventory(self):
         self.add_wave()
-        old = (self.root / "meridian/lab/results/new-wave.sha256").read_bytes()
-        self.put("meridian/lab/results/runs/newer/job/new.raw.csv", "time,value\n0,1\n")
+        old = (self.root / "meridian-microphone/lab/results/new-wave.sha256").read_bytes()
+        self.put("meridian-microphone/lab/results/runs/newer/job/new.raw.csv", "time,value\n0,1\n")
         with patch.object(project, "ensure_idle"):
             result = project.new_inventory(self.root, project.View(self.root))
         self.assertEqual(result["new_files"], 1)
-        self.assertEqual(old, (self.root / "meridian/lab/results/new-wave.sha256").read_bytes())
+        self.assertEqual(old, (self.root / "meridian-microphone/lab/results/new-wave.sha256").read_bytes())
         self.assertEqual(project.verify_evidence(self.root, project.View(self.root))["status"], "pass")
 
     def test_backup_restores_working_changes_ignored_evidence_and_git_history(self):
@@ -197,7 +222,7 @@ class ProjectTests(unittest.TestCase):
         result = project.restore_backup(self.root, source, destination)
         self.assertFalse(result["independent"])
         self.assertEqual((destination / "README.md").read_bytes(), (self.root / "README.md").read_bytes())
-        self.assertTrue((destination / "meridian/lab/results/runs/new_batch/job/ac.raw").exists())
+        self.assertTrue((destination / "meridian-microphone/lab/results/runs/new_batch/job/ac.raw").exists())
         self.assertEqual(project.git(destination, "rev-parse", "HEAD"), self.run_git("rev-parse", "HEAD").stdout)
         report = project.verify_evidence(destination, project.View(destination))
         self.assertEqual(report["status"], "pass")
@@ -249,10 +274,11 @@ class ProjectTests(unittest.TestCase):
         self.assertFalse(list(self.parent.glob("audiotech-*")))
 
     def test_known_legacy_gap_is_captured_as_incomplete_and_new_gaps_block(self):
-        missing = "meridian/lab/results/runs/legacy/source/src/old.py"
+        missing = "meridian-microphone/lab/results/runs/legacy/source/src/old.py"
         expected = hashlib.sha256(b"unavailable original code").hexdigest()
-        self.put("meridian/lab/results/runs/legacy/results.json", json.dumps({"status": "failed", "source_manifest": {"src/old.py": expected}}))
-        self.put("docs/legacy-source-gaps.json", json.dumps({"schema_version": 1, "missing_sources": {missing: expected}}))
+        self.put("meridian-microphone/lab/results/runs/legacy/results.json", json.dumps({"status": "failed", "source_manifest": {"src/old.py": expected}}))
+        legacy_missing = missing.replace("meridian-microphone/", "meridian/", 1)
+        self.put("docs/legacy-source-gaps.json", json.dumps({"schema_version": 1, "missing_sources": {legacy_missing: expected}}))
         self.refresh()
         with patch.object(project, "ensure_idle"):
             result = project.create_backup(self.root, self.parent)
@@ -261,7 +287,7 @@ class ProjectTests(unittest.TestCase):
         manifest = json.loads((Path(result["source"]) / "manifest.json").read_text())
         self.assertFalse(manifest["original_evidence_complete"])
         self.assertEqual(manifest["missing_original_sources"], {missing: expected})
-        self.put("meridian/lab/results/runs/new_gap/results.json", json.dumps({"source_manifest": {"src/new.py": expected}}))
+        self.put("meridian-microphone/lab/results/runs/new_gap/results.json", json.dumps({"source_manifest": {"src/new.py": expected}}))
         with patch.object(project, "ensure_idle"):
             with self.assertRaisesRegex(ValueError, "new missing"):
                 project.create_backup(self.root, self.parent)
@@ -273,6 +299,23 @@ class ProjectTests(unittest.TestCase):
         (source / "manifest.json").write_text(json.dumps(manifest))
         with self.assertRaisesRegex(ValueError, "locally recorded"):
             project.restore_backup(self.root, source, self.parent / "must-remain-absent")
+
+    def test_backup_from_original_folder_remains_restorable(self):
+        wave = self.add_wave().replace("meridian-microphone/", "meridian/", 1)
+        (self.root / "meridian-microphone").rename(self.root / "meridian")
+        legacy_register = json.loads(json.dumps(self.register).replace("meridian-microphone/", "meridian/"))
+        self.put("project.json", json.dumps(legacy_register))
+        # Capture a pre-rename fixture using its original register contract.
+        with patch.object(project, "ensure_idle"), patch.object(project, "load_register", return_value=legacy_register):
+            source = Path(project.create_backup(self.root, self.parent)["source"])
+        destination = self.parent / "legacy-restore"
+        with patch.object(project, "ensure_idle"):
+            result = project.restore_backup(self.root, source, destination)
+        self.assertEqual(result["status"], "pass")
+        self.assertTrue((destination / wave).is_file())
+        verification = project.verify_evidence(destination, project.View(destination))
+        self.assertEqual(verification["status"], "pass")
+        self.assertEqual(verification["declared_waveforms"], 1)
 
     def test_backup_identifier_cannot_escape_private_attestation_directory(self):
         with self.assertRaisesRegex(ValueError, "identifier"):
@@ -311,7 +354,7 @@ class ProjectTests(unittest.TestCase):
     def test_search_scopes_keep_explicit_history_and_evidence_options(self):
         self.put("README.md", "# NEEDLE-active\n")
         self.put("branding/archive/2026-10-04-microphones/README.md", "# NEEDLE-history\n")
-        self.put("meridian/lab/results/runs/new/notes.md", "# NEEDLE-evidence\n")
+        self.put("meridian-microphone/lab/results/runs/new/notes.md", "# NEEDLE-evidence\n")
         cmd = ["python3", str(REPO / "tools/project.py"), "--root", str(self.root), "search", "NEEDLE"]
         default = subprocess.run(cmd, text=True, capture_output=True, check=True).stdout
         self.assertIn("NEEDLE-active", default)

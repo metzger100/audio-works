@@ -3,7 +3,7 @@
 
 # Prompt 1 — Validate semiconductor models
 
-Work in `meridian/lab`, relative to the repository root, on the M100 Meridian MIC-34-M/MIC-34-C research project using the Arienne Audio Flat K47 Cardioid/Omni K47FRB under P48.
+Work in `meridian-microphone/lab`, relative to the repository root, on the M100 Meridian MIC-34-M/MIC-34-C research project using the Arienne Audio Flat K47 Cardioid/Omni K47FRB under P48.
 
 Read `AGENTS.md`, `README.md`, the parent `../README.md` and `../DECISIONS.md`, `spec/*.yaml`, `research/phase0_report.md`, `research/sources.yaml`, `research/roles.md`, `research/rejected_ideas.md`, `research/discoveries.md`, `research/procurement_germany.md`, the repository `../../COMPONENTS.md`, `../../PATENTS.md` and `research/patents/README.md`. Inspect the current files and results before changing anything; later work may already have completed part of this task.
 
@@ -31,7 +31,7 @@ Run `./run doctor` and `./run verify` after relevant changes. Re-run affected ph
 
 # Prompt 2 — Strengthen qualification and evidence states
 
-Work in `meridian/lab`, relative to the repository root, on the M100 Meridian MIC-34-M/MIC-34-C research project using the Arienne Audio Flat K47 Cardioid/Omni K47FRB under P48.
+Work in `meridian-microphone/lab`, relative to the repository root, on the M100 Meridian MIC-34-M/MIC-34-C research project using the Arienne Audio Flat K47 Cardioid/Omni K47FRB under P48.
 
 Read `AGENTS.md`, `README.md`, the parent `../README.md` and `../DECISIONS.md`, `spec/*.yaml`, `research/phase0_report.md`, `research/sources.yaml`, `research/roles.md`, `research/rejected_ideas.md`, `research/discoveries.md`, `research/procurement_germany.md`, the repository `../../COMPONENTS.md`, `../../PATENTS.md` and `research/patents/README.md`. Inspect the current files and results before changing anything; later work may already have completed part of this task.
 
@@ -60,7 +60,7 @@ Run `./run verify` and repeat the nominal and numerically proposed infrastructur
 
 # Prompt 3 — Implement the first diverse architectural batch
 
-Work in `meridian/lab`, relative to the repository root, on the M100 Meridian MIC-34-M/MIC-34-C research project using the Arienne Audio Flat K47 Cardioid/Omni K47FRB under P48.
+Work in `meridian-microphone/lab`, relative to the repository root, on the M100 Meridian MIC-34-M/MIC-34-C research project using the Arienne Audio Flat K47 Cardioid/Omni K47FRB under P48.
 
 Read `AGENTS.md`, `README.md`, the parent `../README.md` and `../DECISIONS.md`, `spec/*.yaml`, `research/phase0_report.md`, `research/sources.yaml`, `research/roles.md`, `research/rejected_ideas.md`, `research/discoveries.md`, `research/procurement_germany.md`, the repository `../../COMPONENTS.md`, `../../PATENTS.md` and `research/patents/README.md`. Inspect the current files and results before changing anything; later work may already have completed part of this task.
 
@@ -103,7 +103,7 @@ Deliver the six engineering attempts, preserved simulations and `research/first_
 
 # Prompt 4 — Optimize independently and test robustness
 
-Work in `meridian/lab`, relative to the repository root, on the M100 Meridian MIC-34-M/MIC-34-C research project using the Arienne Audio Flat K47 Cardioid/Omni K47FRB under P48.
+Work in `meridian-microphone/lab`, relative to the repository root, on the M100 Meridian MIC-34-M/MIC-34-C research project using the Arienne Audio Flat K47 Cardioid/Omni K47FRB under P48.
 
 Read `AGENTS.md`, `README.md`, the parent `../README.md` and `../DECISIONS.md`, `spec/*.yaml`, `research/phase0_report.md`, `research/sources.yaml`, `research/roles.md`, `research/rejected_ideas.md`, `research/discoveries.md`, `research/procurement_germany.md`, the repository `../../COMPONENTS.md`, `../../PATENTS.md` and `research/patents/README.md`. Inspect the current files and results before changing anything; later work may already have completed part of this task.
 
@@ -140,7 +140,7 @@ Run meaningful optimizer/robustness regressions and `./run verify` after impleme
 
 # Prompt 5 — Produce the first architecture comparison and measurement priorities
 
-Work in `meridian/lab`, relative to the repository root, on the M100 Meridian MIC-34-M/MIC-34-C research project using the Arienne Audio Flat K47 Cardioid/Omni K47FRB under P48.
+Work in `meridian-microphone/lab`, relative to the repository root, on the M100 Meridian MIC-34-M/MIC-34-C research project using the Arienne Audio Flat K47 Cardioid/Omni K47FRB under P48.
 
 Read `AGENTS.md`, `README.md`, the parent `../README.md` and `../DECISIONS.md`, `spec/*.yaml`, `research/phase0_report.md`, `research/sources.yaml`, `research/roles.md`, `research/rejected_ideas.md`, `research/discoveries.md`, `research/procurement_germany.md`, the repository `../../COMPONENTS.md`, `../../PATENTS.md` and `research/patents/README.md`. Inspect the current files and results before changing anything; later work may already have completed part of this task.
 

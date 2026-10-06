@@ -23,7 +23,7 @@ Repeat the [contributor completion gate](../CONTRIBUTING.md) after relevant chan
 
 ## Public documentation review — 2026-10-06
 
-Documentation polish follows [D021](../meridian/DECISIONS.md#d021--2026-10-06--public-documentation). The root README now introduces the workshop, projects and build readiness; the contributor guide defines future revision-matched build packages. No new repository files, dependencies, automation or empty hardware directories were added.
+Documentation polish follows [D021](../meridian-microphone/DECISIONS.md#d021--2026-10-06--public-documentation). The root README now introduces the workshop, projects and build readiness; the contributor guide defines future revision-matched build packages. No new repository files, dependencies, automation or empty hardware directories were added.
 
 | Check | Recorded result |
 | --- | --- |
@@ -37,12 +37,20 @@ Documentation polish follows [D021](../meridian/DECISIONS.md#d021--2026-10-06--p
 
 Public laboratory/prompt instructions now use repository-relative paths. Dedicated environment records, frozen evidence, old decisions and archived artwork retain their original provenance. No simulator/model/code change was made, so no new scientific verification or measurement is claimed.
 
-Follow-up, 2026-10-06: [D023](../meridian/DECISIONS.md#d023--2026-10-06--release-status) removes the added public maturity table. Project overviews now say released or not released; the added documentation-readiness entry was removed from the register. Existing scientific records and release requirements are retained.
+Follow-up, 2026-10-06: [D023](../meridian-microphone/DECISIONS.md#d023--2026-10-06--release-status) removes the added public maturity table. Project overviews now say released or not released; the added documentation-readiness entry was removed from the register. Existing scientific records and release requirements are retained.
 
-Follow-up, 2026-10-06: [D024](../meridian/DECISIONS.md#d024--2026-10-06--current-work-and-goals) makes the wider product range an explicit goal. The README identifies condenser-microphone research as the current work; branding describes an intended scope rather than an existing range.
+Follow-up, 2026-10-06: [D024](../meridian-microphone/DECISIONS.md#d024--2026-10-06--current-work-and-goals) makes the wider product range an explicit goal. The README identifies condenser-microphone research as the current work; branding describes an intended scope rather than an existing range.
 
 ## README banner review — 2026-10-06
 
-[D025](../meridian/DECISIONS.md#d025--2026-10-06--readme-banner) uses the standard lockup on a fixed ivory background in both README headers. The existing artwork builder generates the banner and verifies exact reuse of the lockup, allowed colours and absence of external resources or live text. The original masters, all 44 raster previews and contact sheets remain byte-for-byte unchanged.
+[D025](../meridian-microphone/DECISIONS.md#d025--2026-10-06--readme-banner) uses the standard lockup on a fixed ivory background in both README headers. The existing artwork builder generates the banner and verifies exact reuse of the lockup, allowed colours and absence of external resources or live text. The original masters, all 44 raster previews and contact sheets remain byte-for-byte unchanged.
 
 The root README was inspected with GitHub's light and dark styles; the banner loaded in both with no horizontal overflow. Modified Markdown links, repository refresh/check and all 22 tooling tests passed. Hardware status and the existing independent-backup gap are unchanged.
+
+## Project folder rename — 2026-10-06
+
+[D026](../meridian-microphone/DECISIONS.md#d026--2026-10-06--project-folder) renames the existing microphone project to `meridian-microphone/`. Maintained links, reading routes, licence scope, ignore rules and generated indexes use that path. Future folders include the device type; no preamp folder was created.
+
+An available-file manifest before and after the move found all 11,516 files retained, with 11,268 frozen files unchanged in bytes and executable flags. All 3,902 inventoried waveforms/exports and surviving source snapshots retain their hashes. The same 89 source gaps and independent-backup requirement remain; the original gap ledger and dated environment records are unchanged. No research batch or hardware-status change was introduced.
+
+Repository refresh/check and Markdown links pass. All 24 tooling tests pass, including rejection of changed, deleted or mode-changed frozen files during relocation, recognition of the original gap ledger and restoration of a backup with the earlier layout. The laboratory's `doctor` command and all 31 existing tests pass from the new folder; test scratch files were kept outside the repository. Shorter README wording keeps common reading within the unchanged 32,000-character limit.
