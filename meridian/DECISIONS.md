@@ -41,3 +41,7 @@ The Phase 3 [device-model library](lab/research/device_model_validation.md) reco
 ## D019 / 2026-10-05 — repository licences
 
 Owner-directed: GPL-3.0-or-later for software; CERN-OHL-S-2.0 for hardware sources. [Scope](../LICENSE) replaces the current lab MIT notice; third-party terms and earlier grants remain. Revisit only by owner decision.
+
+## D020 / 2026-10-06 — repository rename
+
+Owner renamed the GitHub repository to `audio-works`. Update the local remote and current source-location link.
