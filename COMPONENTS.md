@@ -1,38 +1,38 @@
 # Standard parts and availability policy
 
-**Core repository principle — owner requirement, 2026-10-05:** implement designs with standard, documented, currently obtainable parts. Performance and reproducibility must survive ordinary production variation. A design whose performance depends on an unavailable, selected or undocumented specimen is not a reproducible build.
+**Owner requirement, 2026-10-05:** use standard, documented, currently obtainable parts. Performance and reproducibility must survive ordinary production variation, without unavailable, selected or undocumented specimens.
 
-This principle applies across Audiotech projects, including Meridian, and to agent instructions, topology engineering, optimization, comparison reports and future build guidance. Project-specific requirements may strengthen it; agents must not silently relax it.
+Applies across M100 Audio Works, including Meridian, to instructions, topology, optimization, comparisons and build guidance. Project requirements may strengthen it; never silently relax it.
 
 ## Standard components and repeatable construction
 
-- Use ordinary off-the-shelf passives, documented current-production semiconductors and practical packages. State actual manufacturer/part number, nominal value, technology, rating, tolerance and package where they affect behavior. Prefer supported parts with dependable supply and practical substitutes or additional sources.
-- Do not make NOS, discontinued stock, unidentified marketplace parts, custom-selected specimens, hand-matched transistors or undocumented individual characteristics prerequisites of an intended build. Historical parts and ideal components may remain explicitly labelled research controls.
-- Establish performance through topology, feedback, resistor ratios, controlled bias and tolerance to documented device variation. Meridian prohibits individual device selection, matching and hidden per-unit trimming. Buying a batch to select a few favorable specimens is not an acceptable sourcing strategy.
-- Precision, low-leakage or other specialist components remain possible when their measurable function justifies them. Document the need, realistic production variation, price and obtainable exact variant; a boutique label is not evidence of benefit. The specified Arienne capsule remains Meridian's research input. A custom PCB, enclosure or acoustic structure is a separate documented fabrication decision; it does not excuse an inaccessible electronics BOM.
+- Use off-the-shelf passives, documented current-production semiconductors and practical packages. Specify manufacturer/part number, value, technology, rating, tolerance and package where behavior depends on them. Prefer supported parts, dependable supply and substitutes/additional sources.
+- Builds must not require NOS/discontinued stock, unidentified marketplace parts, selected specimens, hand-matched transistors or undocumented individual characteristics. Label historical/ideal parts as research controls.
+- Determine performance through topology, feedback, resistor ratios, controlled bias and tolerance to documented device variation. Meridian forbids individual selection, matching and hidden per-unit trimming, including batches bought for selection.
+- Specialist precision/low-leakage parts need a measurable function, documented need, realistic production variation, price and obtainable exact variant; a boutique label is not evidence of benefit. Arienne remains Meridian's research capsule. Custom PCBs/enclosures/acoustics need separate fabrication decisions and do not excuse inaccessible electronics BOMs.
 
 ## Evidence of availability
 
-For current private DIY projects, intended build parts must be orderable by a private individual in the required small quantities with delivery to Germany. German/EU and international retail routes remain eligible; country of manufacture alone does not determine suitability.
+Build parts must be privately orderable in required small quantities for Germany delivery. German/EU and international retail routes remain eligible regardless of manufacturing country.
 
-Record dated evidence for exact part/variant/package, supplier URL, lifecycle, stock/orderability, private-customer access, Germany delivery, minimum order quantity, pack size and lead time. A catalogue listing or a typical SPICE model is insufficient. Identify another independent source or a practical substitute where feasible. Expose single-source dependence and unknowns; a similarly named part is not an electrically validated substitute.
+Record dated evidence: exact variant/package, supplier URL, lifecycle, stock/orderability, private-customer access, Germany delivery, MOQ, pack size and lead time. Catalogue listings/typical SPICE models are insufficient. Seek independent sources or practical substitutes where feasible; expose single-source risks/unknowns. Similar names do not validate substitution.
 
-Availability is a dated observation, not a promise of future stock. Refresh evidence before a purchase recommendation or build release. Preserve scientifically interesting architectures with sourcing gaps, but mark their implementations unverified for procurement. Resolve unavailable, obsolete or undocumented implementation dependencies before prototype selection or recommending their construction. Preserve the family while investigating an obtainable implementation.
+Refresh availability before purchase recommendations/build release; stock may change. Preserve sourcing-gap architectures as research with procurement unverified. Resolve unavailable, obsolete or undocumented dependencies before prototype selection/build recommendations; retain the family while seeking obtainable implementations.
 
 ## From optimized values to a buildable BOM
 
-Continuous numerical optimization may identify useful value regions. Before presenting an implementation as buildable, translate them into actual obtainable nominal values and component combinations. Use standard preferred-value series where practical; the specific tolerance, voltage rating, package and technology must also be obtainable. An arbitrary high-precision simulator value is not a parts specification.
+Translate continuous proposals into obtainable nominal parts/combinations before calling them buildable. Prefer standard value series where practical; tolerance, voltage rating, package and technology must be obtainable. Simulator precision is not a parts specification.
 
-Preserve the continuous proposal, create a traceable implementation revision, and re-run the complete applicable qualification suite with the actual nominal values, documented tolerances and relevant parasitics, leakage, noise and temperature behavior. Recheck substitutions and series/parallel combinations, including changed component count, cost and layout effects. Do not retain an ideal-value performance claim as if it described the realized BOM. Keep missing behavior explicitly unqualified.
+Preserve the continuous parent and traceable implementation revision. Repeat the complete applicable suite with actual values, documented tolerances and relevant parasitics, leakage, noise and temperature behavior. Requalify substitutes/series/parallel combinations, including component count, cost and layout effects. Ideal-value claims cannot describe an untested BOM; missing behavior stays unqualified.
 
 ## German delivered cost and purchasing
 
-Compare EUR costs at the quantities needed for the intended finished equipment. Include actual pack/MOQ quantities, basket-level shipping, applicable taxes/import costs and fees; expose unknown charges and avoid bulk-price assumptions. Seek inexpensive precision parts where useful, while preserving performance and reproducibility. No numerical spending ceiling is established; show cost separately from engineering merit.
+Compare intended-equipment quantities in EUR: actual packs/MOQs, basket shipping, applicable taxes/import costs and fees. Expose unknown charges; avoid bulk-price assumptions. Seek inexpensive precision parts while preserving performance/reproducibility. Cost is separate from merit; no numerical spending ceiling is set.
 
-Meridian's [Germany procurement contract](meridian/lab/research/procurement_germany.md) supplies the detailed evidence rules. Parts purchases must serve the finished project; unused comparison parts, selection batches or extra capsules need a concrete planned use and owner decision. Research and documentation authorize no purchase, supplier contact or payment.
+Follow Meridian's [Germany procurement contract](meridian/lab/research/procurement_germany.md). Purchases must serve finished equipment; unused comparison parts, selection batches or extra capsules need a concrete planned use and owner decision. Research/documentation authorize no purchase, supplier contact or payment.
 
 ## Evidence states and other gates
 
-Keep simulation merit, procurement readiness, patent screening and physical qualification separate. Standard parts and good availability do not establish patent clearance; the [mandatory patent policy](PATENTS.md) also applies. Neither affordability nor an attractive simulation result can override a missing implementation prerequisite.
+Keep simulation, procurement, [patent screening](PATENTS.md) and physical qualification separate. Availability, affordability and simulation cannot override prerequisites or establish patent clearance.
 
-This policy adds repository instructions and review requirements. It does not implement an automatic stock checker or certify any current BOM. Availability, price and realized-part qualification must be established through dated candidate-linked evidence in subsequent research.
+This review policy neither automates stock checks nor certifies any BOM. Establish availability, price and realized-part qualification through dated candidate-linked evidence.

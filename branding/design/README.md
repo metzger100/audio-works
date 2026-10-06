@@ -1,5 +1,7 @@
 # M100 / METZGER100 AUDIO WORKS SVG masters
 
+[Brand guide](../README.md) · [Masters](#master-files) · [Reproduction limits](#backgrounds-and-reproduction-limits) · [Rebuilding](#rebuilding)
+
 Artwork reconstructed from the original brand concept. **Selected identity, 5 October 2026:** the manufacturer subline now reads METZGER100 AUDIO WORKS, and two single-colour wordmarks support other equipment categories. See the [naming decision and comparison](../proposals/README.md). Brand strategy and usage rules are maintained in the [brand guide](../README.md). The concept's flat silhouette and hierarchy are preserved; its lighting, material simulation and incidental asymmetries are omitted.
 
 ## Master files

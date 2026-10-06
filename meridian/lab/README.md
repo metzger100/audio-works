@@ -1,6 +1,10 @@
 # M100 Meridian analog research laboratory
 
+[Project overview](../README.md) · [Current state](../../CURRENT.md) · [Run the lab](#run-the-lab) · [Scientific contract](CONTRACT.md) · [Evidence](results/README.md)
+
 An executable, evidence-first workspace for **Arienne Audio Flat K47 Cardioid/Omni K47FRB** under realistic P48. The Phase 0–2 foundation now has a [Phase 3 semiconductor-model prerequisite report](research/device_model_validation.md), with scoped agreement and preserved failures. No production microphone architecture is selected, and no circuit is qualified for prototyping.
+
+## Implementation constraints
 
 **Standard parts and availability are a core project constraint.** Follow the [repository component policy](../../COMPONENTS.md) and [Germany procurement contract](research/procurement_germany.md). Implement candidates with documented, currently obtainable parts and actual nominal values, qualify their tolerances, and retain dated small-quantity Germany sourcing and delivered-cost evidence. Ideal-value results and unsourced concepts remain research evidence until their concrete implementations are verified. The current laboratory does not certify a build-ready BOM or implement an automatic availability gate.
 
@@ -8,10 +12,12 @@ An executable, evidence-first workspace for **Arienne Audio Flat K47 Cardioid/Om
 
 Start with [the formal specification](spec/microphone_spec.yaml), [capsule uncertainty](spec/capsule_model.yaml), [P48/environment constraints](spec/design_constraints.yaml), [source register](research/sources.yaml) and [Phase 0 report](research/phase0_report.md). Existing capsule research and purchase history remain in the parent `meridian/` project.
 
-## Run in this workspace
+## Run the lab
+
+From the repository root, using an installed laboratory environment:
 
 ```sh
-cd /home/leobareth/Dokumente/Audiotech/meridian/lab
+cd meridian/lab
 ./run doctor
 ./run verify
 ./run evaluate fixture_0001 --samples 16 --seed 34047
@@ -19,7 +25,9 @@ cd /home/leobareth/Dokumente/Audiotech/meridian/lab
 
 `verify` runs independent physics and software-integrity regressions. `evaluate` runs the initial engineering suite. **Exit 2 is expected for the ideal fixture:** it fails requirements and has incomplete qualification evidence. It must never become a microphone champion.
 
-The current local environment uses ngspice 47, Python 3.12.14, NumPy 2.4.2, SciPy 1.17.1, pandas 3.0.1, Matplotlib 3.10.8, PyYAML 6.0.3 and pytest 9.0.2. The simulator and missing runtime library were extracted inside `tools/`; no system installation or PCB package is required. `tools/packages.sha256` pins their archive integrity. Original package licence files remain in the extracted distribution; ignored binaries are not project-authored hardware.
+### Environment and bootstrap
+
+The recorded local environment uses ngspice 47, Python 3.12.14, NumPy 2.4.2, SciPy 1.17.1, pandas 3.0.1, Matplotlib 3.10.8, PyYAML 6.0.3 and pytest 9.0.2. The simulator and missing runtime library were extracted inside `tools/`; no system installation or PCB package is required. `tools/packages.sha256` pins their archive integrity. Original package licence files remain in the extracted distribution; ignored binaries are not project-authored hardware.
 
 For a fresh environment with internet access and Python 3.12:
 
@@ -83,5 +91,7 @@ The initial [results report](research/phase0_report.md) and its response/noise p
 Phase 3: obtain current, documented semiconductor models/limits and build a strong conventional JFET reference plus fundamentally different controls. Optimize them fairly under the same environment and no-selection requirement. Phase 4–7: implement diverse concepts, perform structural search and broaden robust qualification, with early patent-feature flags. Phase 8: separate claim/territory/status screening and resolution of implementation patent holds; no legal conclusion is asserted by the agent. Phase 9–10: only then advance eligible prototype implementations and close the measurement/model-correction loop.
 
 The [measurement interchange](measurement/result.schema.json) shares check names, units, statuses and provenance with simulation. `measurement/compare.py` imports physical records and reports differences without changing models or thresholds. No physical measurements have been made.
+
+## License
 
 Project-authored software is GPL-3.0-or-later; hardware design sources and electrical netlists/models are CERN-OHL-S-2.0. The [root licensing scope](../../LICENSE) applies throughout the laboratory, including snapshots. Third-party material retains its own terms; vendor-model redistribution permission and engineering/patent release gates remain separate unresolved matters.

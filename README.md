@@ -1,19 +1,65 @@
-# METZGER100 AUDIO WORKS
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="branding/design/qc/m100-lockup-inverse-1024.png">
+    <img src="branding/design/qc/m100-lockup-1024.png" alt="M100 / METZGER100 AUDIO WORKS" width="320">
+  </picture>
+</p>
 
-[![M100 primary logo](branding/design/qc/m100-primary-256.png)](branding/design/m100-primary.svg)
+# M100 Audio Works
 
-**Audio electronics & acoustics.** Independent development of microphones, preamps, amplifiers and loudspeakers, guided by documented decisions and serviceability.
+Working toward open audio hardware for DIY builders.
 
-[Current state](CURRENT.md) · [Project register](project.json) · [Module index](docs/INDEX.md) · [Evidence index](docs/EVIDENCE.md)
+[Projects](#projects) · [For builders](#for-builders) · [Current state](CURRENT.md) · [Repository guide](#repository-guide)
 
-The active [Meridian project](meridian/README.md) studies a Flat K47 condenser microphone under P48. No production circuit or prototype is selected. Engineering, procurement, patent screening and physical evidence have separate readiness states.
+M100 Audio Works is an independent audio hardware workshop. The goal is to publish designs for microphones, preamps, amplifiers and loudspeakers that others can build and repair. Current work focuses on condenser-microphone research.
 
-[Standard parts policy](COMPONENTS.md) and [patent policy](PATENTS.md) are mandatory. Use documented obtainable components, verified small-quantity Germany sourcing and realized-BOM requalification. Resolve affected patent holds before prototype/manufacture/build-publication gates; no clearance is asserted.
+Before releasing a design, we will verify the parts supply and assembly instructions, and test the finished hardware.
 
-[Brand guide](branding/README.md) · [Artwork](branding/design/README.md) · [Artwork preview](branding/design/preview.html)
+## Can I build anything yet?
 
-## Working here
+> **No project has been released yet.** Meridian is still being researched, and no prototype has been selected. See [current state](CURRENT.md) for what remains to be done.
 
-Read [contributor instructions](CONTRIBUTING.md) and the [quality contract](QUALITY.md). Choose a reading route with `python3 tools/project.py context orientation`. Install the local gate with `python3 tools/project.py hooks install`.
+## Projects
 
-Project licences: **GPL-3.0-or-later** for software; **CERN-OHL-S-2.0** for hardware sources. See [scope and third-party terms](LICENSE).
+| Project | Device | Development focus | Status |
+| --- | --- | --- | --- |
+| [M100 Meridian](meridian/README.md) | Condenser microphone | Flat K47/P48 research for acoustic recording | Not released |
+
+## For builders
+
+Each released project's README links to its build files. These should include:
+
+- **Circuit and parts:** schematic, editable design files and a BOM with manufacturer part numbers, tested substitutes and dated sourcing notes.
+- **Boards and assembly:** Gerbers, drill files and assembly drawings; mechanical drawings and pick-and-place/CPL data where needed.
+- **Instructions:** PCB ordering, assembly, setup, calibration, testing, expected measurements and troubleshooting; firmware if required.
+
+See the [build documentation guide](CONTRIBUTING.md#documenting-a-hardware-project) for file locations and ordering boards from services such as JLCPCB. All files should refer to the same hardware revision.
+
+## Engineering principles
+
+Use [documented, obtainable parts](COMPONENTS.md) that work across normal production variation, without hand selection or hidden trimming. Test the actual values, tolerances and substitutes.
+
+Keep failed experiments and unanswered questions in the record. Performance claims need measurements from real hardware. See [QUALITY.md](QUALITY.md) and [PATENTS.md](PATENTS.md) for the detailed requirements.
+
+## Repository guide
+
+| Location | Purpose |
+| --- | --- |
+| [CURRENT.md](CURRENT.md) | Readiness, blockers and evidence |
+| Project directories, e.g. [meridian/](meridian/README.md) | Designs and their build/research documentation |
+| [docs/](docs/INDEX.md) | Navigation and [experiment evidence](docs/EVIDENCE.md) |
+| [branding/](branding/README.md) | M100 identity and existing artwork |
+| [COMPONENTS.md](COMPONENTS.md) / [PATENTS.md](PATENTS.md) | Parts, sourcing and implementation constraints |
+| [CONTRIBUTING.md](CONTRIBUTING.md) / [QUALITY.md](QUALITY.md) | Engineering and documentation requirements |
+
+## Contributing
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) and [QUALITY.md](QUALITY.md) before engineering work. From the repository root:
+
+```sh
+python3 tools/project.py context orientation
+```
+
+## Licensing
+
+Software and general material use **GPL-3.0-or-later**. Hardware sources and design documentation use **CERN-OHL-S-2.0**. See [LICENSE](LICENSE) for scope and third-party terms.

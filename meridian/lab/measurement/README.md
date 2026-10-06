@@ -1,5 +1,9 @@
 # Physical measurement handoff
 
+[Project status](../../README.md#status) · [Laboratory](../README.md) · [Result schema](result.schema.json)
+
+No physical measurements have been made. This document defines the future measurement records and comparison boundary.
+
 Measurement adapters must emit the same check names, metric units and four states (`pass`, `fail`, `error`, `incomplete`) as simulation. Retain raw instrument records, serial/batch IDs, fixture calibration, uncertainty, bandwidth/weighting, ambient temperature/humidity, bias, P48/loading, instrument/software versions and checksums. `result.schema.json` is the interchange contract.
 
 Measurements can be compared to simulations only at corresponding stimulus and configuration. Never pool different backends into one asserted manufacturing yield. Add measured capsule/device parameters through a separately versioned model change and rerun controls/regressions. Keep original measurements and simulation records.

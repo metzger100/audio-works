@@ -1,5 +1,7 @@
 # Project quality and maintenance contract
 
+[Repository](README.md) · [Current state](CURRENT.md) · [Contributing](CONTRIBUTING.md) · [Validation record](docs/VALIDATION.md)
+
 Owner-directed quality plan: 2026-10-05. This contract applies to contributors and agents. The mandatory completion gate lives in the agent instructions. [Current facts](project.json), [generated status](CURRENT.md), [navigation](docs/INDEX.md) and [evidence index](docs/EVIDENCE.md) have distinct roles.
 
 ## Source of truth

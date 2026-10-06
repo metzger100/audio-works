@@ -29,7 +29,7 @@ Unmodified GPL-3.0-or-later and CERN-OHL-S-2.0 texts; scope is defined in the ro
 
 ## Project navigation
 
-Generated navigation and evidence discovery.
+Navigation, evidence indexes and dated validation/preservation records.
 
 - [docs/EVIDENCE.md](EVIDENCE.md) — generated
 - [docs/INDEX.md](INDEX.md) — generated
@@ -140,7 +140,7 @@ Current identity, artwork, proposals and captured history.
 
 ## Meridian
 
-Project brief, decisions and original capsule research.
+Microphone project overview, brief, decisions and original capsule research.
 
 - [meridian/BRIEF.md](../meridian/BRIEF.md) — active
 - [meridian/DECISIONS.md](../meridian/DECISIONS.md) — active

@@ -20,3 +20,23 @@ The original onboarding audit measured 92,943 characters. The new common entry s
 The complete available archive test was captured at `20261005T201139Z_6848c405`; its private path and attestations remain outside Git. The temporary restored copy verifies recovery mechanics, not independent durability. See [legacy gaps](LEGACY-EVIDENCE.md): unavailable originals have not been fabricated or removed from their experiment manifests.
 
 Repeat the [contributor completion gate](../CONTRIBUTING.md) after relevant changes. Keep future dated audits explicit; current quality comes from running the checks, not this historical result. [Quality contract](../QUALITY.md) and [current project state](../CURRENT.md) remain the entry points.
+
+## Public documentation review — 2026-10-06
+
+Documentation polish follows [D021](../meridian/DECISIONS.md#d021--2026-10-06--public-documentation). The root README now introduces the workshop, projects and build readiness; the contributor guide defines future revision-matched build packages. No new repository files, dependencies, automation or empty hardware directories were added.
+
+| Check | Recorded result |
+| --- | --- |
+| Repository gate | Refresh/check pass; generated pages rebuilt from sources; common context remains below the unchanged 32,000-character limit |
+| Documentation links | Modified Markdown and LICENSE local links, heading anchors and HTML image sources checked; six external URLs verified |
+| Tooling regressions | All 22 existing repository tests pass |
+| Presentation | Local Markdown preview inspected with GitHub's current light/dark styles and existing artwork; status is visible on the first screen, with projects/build guidance directly below |
+| Engineering boundaries | Original phase, technical readiness, blockers, stages, evidence pointers, specifications and thresholds retained; sourcing/patent policies checked for preserved requirements |
+| Evidence integrity | 3,902 declared waveforms and 1,357 snapshot-file declarations checked: no damaged or uninventoried files; the same 89 pre-existing source gaps remain |
+| Independent preservation | Still incomplete; no independent restored backup attestation. No research batch was created by this documentation change |
+
+Public laboratory/prompt instructions now use repository-relative paths. Dedicated environment records, frozen evidence, old decisions and archived artwork retain their original provenance. No simulator/model/code change was made, so no new scientific verification or measurement is claimed.
+
+Follow-up, 2026-10-06: [D023](../meridian/DECISIONS.md#d023--2026-10-06--release-status) removes the added public maturity table. Project overviews now say released or not released; the added documentation-readiness entry was removed from the register. Existing scientific records and release requirements are retained.
+
+Follow-up, 2026-10-06: [D024](../meridian/DECISIONS.md#d024--2026-10-06--current-work-and-goals) makes the wider product range an explicit goal. The README identifies condenser-microphone research as the current work; branding describes an intended scope rather than an existing range.

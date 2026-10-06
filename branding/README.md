@@ -1,6 +1,11 @@
 # METZGER100 AUDIO WORKS
 
-[![M100 / METZGER100 AUDIO WORKS manufacturer lockup](design/qc/m100-lockup-256.png)](design/m100-lockup.svg)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="design/qc/m100-lockup-inverse-1024.png">
+    <img src="design/qc/m100-lockup-1024.png" alt="M100 / METZGER100 AUDIO WORKS manufacturer lockup" width="320">
+  </picture>
+</p>
 
 **Audio electronics & acoustics.** Audio equipment with precision and purpose.
 
@@ -8,15 +13,15 @@
 
 Purposeful engineering, documented decisions and serviceability guide each design, from the signal path to the sound in the room.
 
-[Families](#brand-architecture) · [Model naming](#model-designations) · [Visual identity](#visual-identity)
+[Repository](../README.md) · [Families](#brand-architecture) · [Model naming](#model-designations) · [Visual identity](#visual-identity) · [Artwork](design/README.md)
 
 ## Brand architecture
 
 - **Manufacturer:** METZGER100 AUDIO WORKS
 - **Signet / product brand:** M100
-- **Range:** Microphones, preamps, amplifiers, loudspeakers and other audio equipment.
+- **Intended scope:** Microphones, preamps, amplifiers, loudspeakers and other audio equipment.
 
-Families express design intent across equipment types.
+Families express design intent across equipment types. Family descriptions and model examples are naming guidance, not released hardware; see [current projects](../README.md#projects) for actual readiness.
 
 | Family | Character and application | Family line |
 | --- | --- | --- |
@@ -79,6 +84,6 @@ Capsule diameter and active diaphragm diameter are distinct; state the size conv
 
 Write precisely, calmly and confidently. Explain purposeful sonic choices; support performance claims with measurements and distinguish design aims from results.
 
-Current development: [M100 Meridian condenser microphone](../meridian/README.md). The family descriptions and model examples define the architecture; actual configurations follow each project's design decisions.
+Current research: [M100 Meridian condenser microphone](../meridian/README.md). The family descriptions and model examples define the architecture; actual configurations follow each project's design decisions.
 
 [Artwork specifications](design/README.md) · [Artwork preview](design/preview.html) · [Naming details](proposals/product-naming.md)

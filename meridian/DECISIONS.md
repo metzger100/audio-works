@@ -45,3 +45,19 @@ Owner-directed: GPL-3.0-or-later for software; CERN-OHL-S-2.0 for hardware sourc
 ## D020 / 2026-10-06 — repository rename
 
 Owner renamed the GitHub repository to `audio-works`. Update the local remote and current source-location link.
+
+## D021 / 2026-10-06 — public documentation
+
+Owner-directed: lead with M100 Audio Works and builder readiness. Keep release conventions in [CONTRIBUTING.md](../CONTRIBUTING.md#documenting-a-hardware-project). Tighten entry wording within the unchanged context limit; preserve requirements, evidence and readiness. No build is released.
+
+## D022 / 2026-10-06 — writing
+
+Owner-directed: use plain English. Remove the status slogan and explain build readiness without process jargon.
+
+## D023 / 2026-10-06 — release status
+
+Owner-directed: remove the public maturity states. List projects as released or not released. Keep engineering evidence and release requirements in the detailed documentation.
+
+## D024 / 2026-10-06 — current work and goals
+
+Owner-directed: describe the wider audio-hardware range as a goal. Current work is condenser-microphone research; no released portfolio exists.
