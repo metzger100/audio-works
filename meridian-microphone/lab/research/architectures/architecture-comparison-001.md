@@ -1,91 +1,34 @@
-<!-- SPDX-License-Identifier: CERN-OHL-S-2.0 -->
-# Meridian architecture comparison 001 — 9 October 2026
+# Architecture comparison 001 — 9 October 2026
 
-**No tested implementation is compelling enough for a prototype selection.** The filtered fixed-bias JFET and discrete servo JFET provide useful, different nominal response results, but miss noise/output or adverse-case requirements and lack validated device populations and nonlinear evidence. The BJT-only charge implementation has a demonstrated conversion/bandwidth problem. Guarded CMOS and CMOS charge integrations fail numerically. The carrier family has an isolated conversion control, but its integrated DUT and periodic noise/power remain unsupported.
+**No tested implementation supports prototype selection.** Compare model-conditional niches and failures, preserving all 14 families. There are no physical measurements, valid acoustic-pattern ratings or qualified production fronts.
 
-This is an intermediate comparison for M100 Meridian MIC-34-M/MIC-34-C with **Arienne Audio Flat K47 Cardioid/Omni K47FRB under P48**. No topology, PCB, physical prototype or production winner is selected. There are no physical measurements. Nominal rear pressure is zero; neither microphone variant's acoustic pattern is qualified. Physics/measurements → SPICE → automated tests → numerical optimization → engineering reasoning → LLM intuition remains the evidence hierarchy.
+[Plan/cohort](architecture-comparison-001.yaml) · [derived tables](../../results/reports/architecture-comparison-001/tables.md) · [machine-readable comparison](../../results/reports/architecture-comparison-001/architecture-comparison-001.json) · [decisions](architecture-comparison-001-decisions.md)
 
-[Contract](../../CONTRACT.md) · [unchanged specification](../../spec/microphone-spec.yaml) · [capsule assumptions](../../spec/capsule-model.yaml) · [components](../../../../COMPONENTS.md) · [patents](../../../../PATENTS.md) · [measurement priorities](../../measurement/priority-plan.md) · [dated comparison plan](architecture-comparison-001.yaml).
+## Representatives
 
-## Audit, comparison scope and reproducibility
+| Candidate | Mechanism | Finding / blocker |
+| --- | --- | --- |
+|0019|Filtered fixed-bias JFET|Useful nominal response; adverse endpoints,noise/output and nonlinear evidence fail/incomplete |
+|0023|Discrete servo JFET|Flatter nominal response; unfiltered backplate noise,startup and adverse-case failures |
+|0012|BJT charge feedback|DC/energy accounting works; finite-loop conversion/bandwidth/output noise fail |
+|0010|Guarded CMOS|Macro integration/convergence failure; no mechanism-level rejection |
+|0014|CMOS charge|Same unsupported numerical integration; no fabricated ideal substitute |
+|0013|Carrier bridge|Isolated conversion control only; integrated transient,periodic noise and total power unsupported |
 
+Representatives are scoped to niches, not equally qualified or globally optimal. Exact netlists/BOMs, lower-count children, statuses and raw noise contributions remain in the derived evidence.
 
+## Physical interpretation
 
-The [device validation audit](../devices/device-model-validation.md), [first batch](first-architecture-batch.md), [optimization report](optimization/robust-optimization-report.md), original optimizer trials and full-suite/withheld records were inspected before reporting. Later work already supplies six implemented mechanisms, fifteen first-batch implementations, nine robust children and six budgeted optimization records. Catalogue-only concepts are retained as proposals, not populated with invented metrics. All fourteen families remain in [the family register](../../search/families.yaml).
+At1kHz,0019/0023 voltage-loading ratios are0.93743/0.91998 (0.5612/0.7244dB loss), with modeled input capacitance2.17/2.67pF and conductance≈1nS. A charge input's electrode-voltage ratio alone is not a conversion-loss metric. Conditional20Hz–20kHz electronics noise requires validated spectra and capsule transfer; it is not acoustic self-noise/SPL.
 
-## Representatives and exact identities
+Servo0023 is flatter nominally, but0019 is flatter at shared low-rear-capacitance/high-parasitic/long-cable/high-preamp-impedance endpoints. Both fail retained1GΩ leakage stress. First random samples are unpaired across passive counts and cannot rank family yield. Sensitivity rescaling alone does not reverse normalized linear response; physical parameter correlations remain unknown.
 
+Noise root-vector integration closes numerical power: unfiltered servo backplate noise dominates; fixed-bias filtering exposes bias/degeneration/output contributions. Closure does not validate missing semiconductor spectra.0019 startup passes the supported screen;0023's5s observation edge is not achieved settling. Unsettled/failed transients supply no harmonic/headroom estimates.
 
+## Gates and next action
 
-“Representative” means the strongest supported result for a stated niche or the most complete tested implementation of a held mechanism. It does not assert globally optimal or equally qualified architectures. Lower-count alternatives remain visible.
+Exact ordinary-part costs remain incomplete catalogue scenarios; all delivered totals are unknown. K47FBSB Cardioid-only EUR pricing cannot price K47FRB. Carrier0013 has ideal outputs despite older patent-feature wording; a dated correction retains that original error. Candidate claims, territory and current official status remain missing; affected implementation gates stay held.
 
-## Power, sensing and no-selection strategy
+Reproduce with [comparison tool](../../tools/reporting/compare_architectures.py) using original private waveforms. [Provenance](../../results/reports/architecture-comparison-001/provenance.json) identifies checked sources/cohort and outputs. Follow [measurement priorities](../../measurement/priority-plan.md), repair independent behavior prerequisites, then recompute a shared cohort without weakening bounds.89 legacy sources and independent preservation remain incomplete.
 
-
-
-The common power network harvests both microphone XLR legs through 2.2 kΩ resistors into a raw node, with 47 µF storage and a 100 kΩ/100 kΩ base divider driving a BC846B emitter-follower rail. A separate midrail divider/filter supplies signal references. Ten series ordinary 1 MΩ resistors realize the 10 MΩ polarization filter; a final 1 MΩ feeds the backplate. Loaded rail and electrode voltages are computed with P48 feeds, cable and preamp attached. Device terminal-current/KCL and energy-closure records support nominal power accounting; they do not establish thermal/SOA or hot-plug safety. Output branches use 47 Ω and real coupling capacitors, plus finite preamp/cable loading. No protection-complete implementation exists.
-
-## Nominal performance, contributions and missing nonlinear evidence
-
-
-
-All numerical noise entries below are **electronics-only, conditional on the assumed capsule transfer and unvalidated semiconductor spectra**. Mechanical/acoustic capsule noise and overload are absent. Noise band is 20 Hz–20 kHz; output sensitivity is at 1 kHz. “Unknown” denotes failed/unsupported analyses, not zero.
-
-## Loading, interface, startup and adverse evidence
-
-
-
-0019/0023 front voltage ratios at 1 kHz are 0.93743/0.91998; nominal loading losses 0.5612/0.7244 dB. Three-port capsule deembedding gives clamped-electrode input C near 2.17/2.67 pF, with approximately 1 nS conductance; raw Y matrices preserve dynamic coupling. BJT's ratio is 0.00065545, but a voltage-buffer loading-loss metric is explicitly null for charge sensing: virtual-ground electrode voltage is not itself lost charge sensitivity. Its failed pressure transfer/response, rather than that ratio alone, is the meaningful rejection of this implementation.
-
-## Where capsule assumptions change the response order
-
-
-
-The generator pairs equal named deterministic scenarios and verifies their external parameter dictionaries, rather than pairing random draws or implementation-specific correlated passive cases. Within those finite observations:
-
-## Optimization realization, tolerances and substitutes
-
-
-
-Six mechanisms received a declared 12-vector/three-scenario budget, seed 34047. Conventional/servo/BJT consumed all twelve without convergence; CMOS each stopped after one vector/three errors; carrier retained unused budget on periodic prerequisites. No training, solver, threshold or uncertainty budget changed. BJT's best tested infeasible proposal near 7.088 nF/8.457 dB is not a qualified continuous optimum or realized performance claim.
-
-## Procurement, intended quantities and separate costs
-
-
-
-Exact variants, per-reference values/grades/ratings/packages and purchasing quantities are reproduced in [the generated BOM tables](../../results/reports/architecture-comparison-001/tables.md), linked to dated supplier records. Ordinary RC/AC 0603 resistors, HVA12JA1G00 axial 1 GΩ, R82 PET film, FR-A radial electrolytics, C0G 0603, JFE150DBVR/OPA197IDBVR SOT-23-5 and BC846B,215 SOT-23 remain documented production research choices. Obtaining every exact part privately in small quantities for Germany is **not yet verified**.
-
-## Separate patent review and affected holds
-
-
-
-[The candidate-linked comparison review](../patents/architecture_comparison_001_2026-10-09.yaml) preserves netlist hashes, ancestry, exact feature flags, territorial questions, alternative mechanisms and prototype/manufacture/build-publication holds. **Phase 8 is incomplete. No patent is recorded as screened.** Existing [register](../patents/register.yaml) and earlier feature records contain no actual publication/grant IDs, claim-element mapping or current official territorial status evidence. Prepared queries, technical source reading and this comparison cannot replace that missing research.
-
-## Research fronts and continued investigation
-
-
-
-![Scoped research Pareto view](../../results/reports/architecture-comparison-001/research-pareto.png)
-
-## Validation and preservation
-
-
-
-The generator checks reported metrics against original raw spectra, reproduces quadrature power closure, rejects mismatched cohorts and preserves all unknown/error states. New meaningful regressions exercise disjoint noise roots, independent 3–4–12 quadrature, missing-axis dominance rejection, source/backend/spec/suite separation and exact macro/ideal pin connectivity. Laboratory and repository completion results are recorded in [the dated validation receipt](architecture-comparison-001-validation.json).
-
-
-## Reading and evidence
-
-
-
-This compact view retains findings and limits. Consult the [complete original report](../../../../docs/history/2026-10-09/meridian-microphone/lab/research/architecture_comparison_001.md) for all tables, conditions, failures and contemporaneous decisions. [Current evidence hub](../../../../docs/evidence.md) and [scientific contract](../../CONTRACT.md) govern further work. Historical test counts describe the original batch. Current verification is in [repository validation](../../../../docs/validation.md).
-
-
-## Reading and evidence
-
-
-This compact view retains findings and limits. Consult the [complete original report](../../../../docs/history/2026-10-09/meridian-microphone/lab/research/architecture_comparison_001.md) for all tables, conditions, failures and contemporaneous decisions. [Current evidence hub](../../../../docs/evidence.md) and [scientific contract](../../CONTRACT.md) govern further work. Historical test counts describe the original batch. Current verification is in [repository validation](../../../../docs/validation.md).
-
-## Reading and evidence
-
-This compact view retains findings and limits. Consult the [complete original report](../../../../docs/history/2026-10-09/meridian-microphone/lab/research/architecture_comparison_001.md) for all tables, conditions, failures and contemporaneous decisions. [Current evidence hub](../../../../docs/evidence.md) and [scientific contract](../../CONTRACT.md) govern further work. Historical test counts describe the original batch. Current verification is in [repository validation](../../../../docs/validation.md).
+[Complete dated original](../../../../docs/history/2026-10-09/meridian-microphone/lab/research/architecture_comparison_001.md) · [Current verification](../../../../docs/validation.md). Original tables, failures, conditions and decisions remain authoritative.

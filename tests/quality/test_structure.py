@@ -30,6 +30,18 @@ def report(content):
 
 
 class StructureTests(unittest.TestCase):
+    def test_empty_sections_and_repeated_prose_are_rejected(self):
+        from repo_quality.structure import markdown_health
+
+        prose = (
+            "Evidence retains the original conditions, failures, hashes and parent relationships. "
+            * 3
+        )
+        errors = markdown_health(f"# Findings\n\n{prose}\n\n{prose}\n\n## Next actions\n")
+        self.assertIn("Repeated substantial paragraph", errors)
+        self.assertIn("Empty Markdown section: Next actions", errors)
+        self.assertEqual(markdown_health("# Hub\n\n## Child\n\nUseful material.\n"), [])
+
     def test_exact_character_boundary(self):
         for length, passes in [(15000, True), (15001, False)]:
             result = report(

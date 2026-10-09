@@ -8,7 +8,7 @@ import numpy as np
 import pytest
 
 SPEC = importlib.util.spec_from_file_location(
-    "comparison", Path(__file__).resolve().parents[1] / "research/compare_architectures.py"
+    "comparison", Path(__file__).resolve().parents[1] / "tools/reporting/compare_architectures.py"
 )
 comparison = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(comparison)

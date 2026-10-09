@@ -1,5 +1,4 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
-# SPDX-License-Identifier: GPL-3.0-or-later
 """One-time registration of six reviewed mechanisms; refuses existing identities.
 
 The generator is provenance, not an optimizer or performance declaration.

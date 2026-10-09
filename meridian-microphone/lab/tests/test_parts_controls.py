@@ -5,7 +5,7 @@ import numpy as np
 import pytest
 
 spec = importlib.util.spec_from_file_location(
-    "parts_controls", Path(__file__).resolve().parents[1] / "research/parts_controls_001.py"
+    "parts_controls", Path(__file__).resolve().parents[1] / "tools/controls/parts_controls_001.py"
 )
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)

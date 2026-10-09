@@ -3,7 +3,7 @@
 
 As of 2026-10-10: **Parts evidence strengthened — research**.
 
-- **Software:** 70 lab tests; 28 Git/recovery and 12 fast regressions pass.
+- **Software:** 75 lab tests; 28 Git/recovery and 13 fast regressions pass.
 - **Engineering:** 20 devices/27 model files; scoped PNP controls; no selection.
 - **Procurement:** Realized BOMs; Germany private orderability/costs unresolved.
 - **Patents:** Phase 8 claims/status missing; affected gates held.

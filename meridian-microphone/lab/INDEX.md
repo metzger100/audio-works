@@ -10,6 +10,7 @@ Specifications, scientific code, models and evidence.
 - [requirements.txt](requirements.txt) — active
 - [run](run) — active
 - [candidates/](candidates/INDEX.md)
+- [docs/](docs/INDEX.md)
 - [measurement/](measurement/INDEX.md)
 - [models/](models/INDEX.md)
 - [optimization/](optimization/INDEX.md)

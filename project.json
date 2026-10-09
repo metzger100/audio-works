@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
   "as_of": "2026-10-10",
-  "phase": "Parts evidence strengthened — research",
+  "phase": "Parts evidence strengthened \u2014 research",
   "readiness": {
-    "software": "70 lab tests; 28 Git/recovery and 12 fast regressions pass.",
+    "software": "75 lab tests; 28 Git/recovery and 13 fast regressions pass.",
     "engineering": "20 devices/27 model files; scoped PNP controls; no selection.",
     "procurement": "Realized BOMs; Germany private orderability/costs unresolved.",
     "patents": "Phase 8 claims/status missing; affected gates held.",
@@ -15,7 +15,7 @@
     "Device/nonlinear/production coverage incomplete.",
     "Procurement and candidate patent screening unresolved."
   ],
-  "next_action": "Resolve08 behavior and11–12 sourcing/patent/preservation prerequisites.",
+  "next_action": "Resolve08 behavior and11\u201312 sourcing/patent/preservation prerequisites.",
   "evidence": [
     "meridian-microphone/lab/research/devices/parts-database-expansion-002.md",
     "meridian-microphone/lab/research/architectures/architecture-comparison-001.md",
@@ -129,11 +129,13 @@
   },
   "quality_change": {
     "date": "2026-10-10",
-    "decision": "docs/decisions/2026-10-09-repository-structure.md",
+    "decision": "docs/decisions/2026-10-10-meridian-cleanup.md",
     "tests": [
-      "tests/quality/test_data.py",
       "tests/quality/test_structure.py",
-      "tests/project/test_hooks.py"
+      "tests/project/test_hooks.py",
+      "meridian-microphone/lab/tests/test_reporting.py",
+      "meridian-microphone/lab/tests/test_device_models.py",
+      "meridian-microphone/lab/tests/test_parts_database.py"
     ]
   },
   "original_revision": "20c039a5323964520f80da2a3e9c07bd097b5e79"

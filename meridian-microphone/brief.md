@@ -1,64 +1,25 @@
-# M100 Meridian
+# Meridian design brief
 
-M100 Meridian is an original, high-performance condenser microphone research and development project for private DIY use in Germany. It is not a commercial product at this stage.
+Original condenser-microphone research for private DIY use in Germany. Intended uses: accordion, ukulele/acoustic instruments, professional voice-over and distant male-choir recording. Priorities are low noise, accurate transients, detail, smooth off-axis response and natural warmth from acoustics/voicing; transparency takes precedence over added distortion.
 
-**Core parts constraint:** use standard, documented, currently obtainable components, privately orderable in small quantities for delivery to Germany. Follow the [repository component policy](../COMPONENTS.md). Numerical proposals must become actual BOMs and pass requalification with obtainable values, tolerances and device variants; sourcing gaps remain explicit.
+## Mission and targets
 
-**Mandatory patent constraint:** the design and its published implementations must avoid third-party patent infringement. Follow the [repository patent policy](../PATENTS.md): examine candidate features against relevant claims, territories and official status; resolve credible potentially blocking risks before selecting a prototype, manufacturing or publishing implementation/build guidance. Open-hardware publication remains subject to this requirement. Patent clearance has not been established.
+D014 authorizes simulator-driven research using Arienne Audio Flat K47 Cardioid/Omni **K47FRB**. The mission supersedes the earlier stop on modeled electronics. No capsule purchase, physical measurement, topology, PCB or prototype is selected.
 
-**Active mission, 2026-10-05:** build a reproducible, simulator-driven analog research environment for the Arienne Audio Flat K47 Cardioid/Omni K47FRB, with open-hardware publication as a future objective. [Run the laboratory](lab/README.md) · [Formal specification](lab/spec/microphone-spec.yaml) · [Phase 0 report](lab/research/architectures/initial/phase0-report.md). Earlier capsule-choice/design gates below are historical; the owner's new mission authorizes modeled electronics research across explicitly uncertain parameters. It does not authorize a purchase or select a production topology.
+Balanced XLR/P48, ideally ≤7dBA system noise and approximately ≥135dB SPL are aspirations. Formal electronics screens and uncertainty live in the [specification](lab/spec/INDEX.md). These do not establish capsule ratings: safe polarization, intrinsic noise, overload and current-batch angular behavior remain unknown. A related capsule or complete-microphone measurement cannot supply those missing facts.
 
-The microphone should serve accordion, ukulele and other acoustic instruments, professional voice-over, and distant concert recording of a male choir. The priorities are low noise, accurate transients, detail, smooth off-axis response, and a natural, slightly warm balance. Warmth should come from acoustic response and restrained voicing; transparency takes precedence over added distortion.
+## Implementation and spending
 
-## Engineering targets
+Use [standard documented production parts](../COMPONENTS.md), actual obtainable values and requalified tolerances/substitutes. No individual device selection, beta matching or hidden trimming. Keep all 14 architecture families alive; qualify implementations against manufacturer variation and physical evidence.
 
-| Property | Initial target |
-| --- | --- |
-| Self-noise | Ideally ≤7 dBA, lower where physically realistic |
-| Sensitivity | Sufficient for quiet instruments and distant choir recording; exact value pending capsule selection |
-| Maximum SPL | Approximately ≥135 dB SPL, with a stated distortion criterion |
-| Distortion | Low throughout the useful operating range |
-| Output and supply | Balanced XLR, 48 V phantom power |
-| Interference rejection | Excellent RF immunity and common-mode rejection |
-| Acoustics | Smooth frequency response and consistent polar behavior across frequency |
+[Private Germany sourcing](lab/research/procurement/germany.md) must retain dated exact variants, intended quantities and delivered EUR costs with shipping/tax/import assumptions. International retail is eligible. Unknown costs stay unknown; no numerical spending cap is established.
 
-These are system targets, not assumed capsule specifications. They may be revised when measurements reveal a better tradeoff.
+D010 limits purchases to finished-project uses: default one capsule for one microphone; a pair requires an intended two-microphone use. No comparison capsules, unused reference parts, surplus selection stock or shipping top-ups without a concrete use and owner decision. Purchase/contact/payment/licence acceptance are outside current authorization.
 
-## Availability and implementation principles
+## Evidence and progression
 
-The [standard-parts policy](../COMPONENTS.md) is a mandatory implementation principle, alongside patent non-infringement. Prefer ordinary passives and current documented semiconductors; unavailable, obsolete, selected or undocumented parts must not become build prerequisites. Preserve theoretical concepts while investigating obtainable implementations.
+[Capsule research](research/README.md) retains the single-capsule recommendation and dated originals. Its noise/SPL risks remain unresolved. Online evidence supports research while measurement access is deferred; physical gates remain open.
 
-Parts must be purchasable by a private individual in small quantities with reasonable delivery to Germany. German and European distributors, microphone DIY and repair shops, eBay, AliExpress, and other international retail sources are all eligible. Provenance, documentation, repeatability, shipping, tax, and returns matter more than country of manufacture.
+Formal model/framework → fair conventional benchmarks and diverse mechanisms → bounded value/structural search → robust actual-BOM qualification → candidate-linked [patent screening](../PATENTS.md) → eligible prototype/measurement/model correction. Flag claims early; unresolved credible blocking risks hold affected prototype/manufacture/build-publication gates. No legal clearance is asserted.
 
-**Owner clarification, 2026-10-04: purchases must serve the finished project.** Do the comparison primarily through online evidence. Do not buy competing capsules, reference parts, or surplus specimens merely for experimentation or self-selection when they would subsequently sit unused. The default capsule quantity is one for the intended M100; a pair requires an intended two-microphone use. Any additional part needs a concrete planned use and an owner decision. Low price alone does not justify an experimental purchase.
-
-Complete information may be unobtainable. Explicitly separate uncertainties that can be measured on the chosen part and accommodated during development from intrinsic performance risks that later electronics cannot reliably remedy. A purchase may proceed with acknowledged unknowns, but it must be a reasoned choice of the intended final component, not a comparison program funded by spare parts.
-
-Performance should come primarily from topology, acoustics, layout, controlled bias, feedback and measurement. Prefer ordinary passives, current documented semiconductors and designs tolerant of manufacturer variation. **The new mission prohibits individual device selection, matching and hidden per-device trimming.** Initial tolerance/scenario analysis now explicitly brackets unknown capsule/device parameters; measured populations must replace assumptions before yield claims.
-
-## Current milestone and decision gate
-
-**Capsule mission input confirmed for simulation:** Arienne Audio Flat K47, Cardioid/Omni K47FRB. The prior recommendation and procurement research remain below. No purchase or physical measurement has occurred.
-
-- [M100 Capsule Recommendation — Revision 2](research/M100 Capsule Recommendation — Revision 2.md): current single-capsule recommendation, additional measured and listening evidence, medium electret alternatives, procurement uncertainties, and remaining performance risks. This is the current decision document.
-- [M100 Capsule Survey — Revision 1](research/M100 Capsule Survey — Revision 1.md): broad market survey, eight candidates, three alternatives, evidence gaps, procurement costs, and characterization of the chosen capsule. The purchasing recommendation was amended on 2026-10-04 to remove comparison purchases.
-- [Engineering decision log](DECISIONS.md): decisions, provisional recommendations, and unresolved gates.
-- [Reference archive](research/reference-datasheets/README.md): original public datasheets used in the survey, with source URLs and hashes.
-
-Availability and prices were researched on **4 October 2026**, Europe/Berlin. Website stock statements are observations, not reservations. No capsules have been ordered and no physical measurements have been performed by this project.
-
-The recommended capsule's intrinsic noise, acoustic overload limit, and current-batch angular response remain insufficiently documented. Its restrained voicing, pattern options, retail availability and price support the recommendation; they do not prove the ≤7 dBA or approximately ≥135 dB SPL system targets. Any purchase is of the intended final component, with acknowledged residual risks.
-
-**The earlier stop gate is superseded for simulation research by the owner's 2026-10-05 mission.** Begin with formal specification, executable capsule/P48 models and tested research infrastructure; investigate architectures only after that works. Capsule safety/mechanics, procurement and physical characterization remain unresolved. No production topology, PCB or prototype is selected.
-
-## Planned stages
-
-Formal research specification → capsule/P48 environment → automated framework → strong conventional benchmarks → diverse topology generation → numerical optimization → quality-diversity search → manufacturing robustness → separate prior-art/patent screening → prototype candidates → physical measurement/model correction. Physical capsule characterization can replace modeled assumptions as it becomes available. PCB implementation follows topology maturity.
-
-Record patent flags when concrete features emerge; complete the separate claim/status review before an implementation advances to the affected prototype or publication gate. Patent holds do not change electrical test thresholds or erase scientifically useful experiments.
-
-## Research conventions
-
-Separate verified observations, manufacturer/seller claims, community reports, and unknowns. Published complete-microphone or test-fixture specifications must not be silently assigned to a bare capsule. Record exact variants, batches, measurement conditions, and assumptions. Preserve original data alongside later measurements and keep the decision log current.
-
-The existing lowercase `meridian-microphone/` directory is used consistently for the project, including `meridian-microphone/research/`.
+[Decisions](DECISIONS.md) retain rationale/supersessions. Reports distinguish observations, manufacturer/seller claims, assumptions and unknowns; preserve original failures, conditions, variants, parents and hashes.

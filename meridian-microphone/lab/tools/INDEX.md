@@ -8,3 +8,5 @@ Immediate contents and child hubs.
 - [ngspice-run](ngspice-run) — active
 - [packages.sha256](packages.sha256) — active
 - [probe.cir](probe.cir) — active
+- [controls/](controls/INDEX.md)
+- [reporting/](reporting/INDEX.md)

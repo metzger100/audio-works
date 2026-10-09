@@ -1,4 +1,8 @@
-# Repository structure validation — 2026-10-10
+# Repository quality validation — 2026-10-10
+
+The Meridian cleanup below is the current completion record. The preceding receipt validates the first restructuring at commit `684ea41b`.
+
+## First repository restructuring
 
 Local implementation of the [owner-directed decision](decisions/2026-10-09-repository-structure.md). This receipt establishes software/structure evidence; engineering, procurement, patent and physical gates remain held.
 
@@ -33,3 +37,29 @@ Preservation verification caught refresh treating source-snapshot indexes as gen
 Local hooks are bypassable. Remote settings/publication were not changed. Require `repository-quality` in GitHub branch protection when the owner authorizes those settings. [Git hooks](https://git-scm.com/docs/githooks) define the distinct integration points; selected hygiene patterns come from [CPython](https://github.com/python/cpython/blob/main/.pre-commit-config.yaml) and [Canonical documentation workflows](https://github.com/canonical/documentation-workflows). [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches) describes the server-side requirement.
 
 A fresh clone can run repository checks after installing pinned dependencies, but cannot reconstruct missing private originals by rerunning simulations. [Storage boundaries](../meridian-microphone/lab/results/README.md) and [legacy gaps](legacy-evidence.md) remain authoritative. The [pre-migration validation receipt](history/2026-10-09/docs/VALIDATION.md) retains its original figures and conditions.
+
+## Meridian cleanup — current completion
+
+[Owner-directed cleanup](decisions/2026-10-10-meridian-cleanup.md) replaces repeated background, empty report stubs and literal-fragment templates with concise findings and scoped evidence. No engineering/procurement/patent/physical readiness is promoted.
+
+| Check | Before → after / result |
+| --- | --- |
+| Seven current findings reports | 61,571 → 24,136 characters (60.8% smaller); complete dated originals retained |
+| Lab entry page | 14,464 → 2,267 characters; setup/interface loaded on demand |
+| Reporting route | 86,250 → approximately 70,200 characters (19% smaller), including complete scientific contract and required evidence |
+| Research layout | 23 controls/reporting modules moved to tools; 40 unused literal fragments removed; subject/capsule hubs retained |
+| Mechanical documentation checks | Empty sections and repeated substantial paragraphs rejected; required paths parsed as Markdown links |
+| Data and originals | 77 resolved records, 951 table rows and 33,620 baseline frozen files unchanged; exact derived source names/hashes checked against frozen originals |
+| Repository regressions | 28 Git/recovery and 13 fast tests pass; pinned lint/format checks pass |
+| Scientific verification |[75 tests pass](../meridian-microphone/lab/results/verification/20261009T230340Z_bbdcf67e/verification.json); source unchanged true; all 859 captured sources still match current code/data |
+| Rendering | 598 files reproduce identically across repeated renders; current findings/originals are never overwritten |
+| Organization | 1,838/1,838 maintained files reachable; zero oversized/unreachable/stale maintained material; 362 generated navigation/evidence files |
+| Shared onboarding | 14,707 characters; 15,000-character ceiling unchanged |
+| Gate runtime | Working gate 11.66 s; selected-tree gates run again at final handoff/commit |
+| Private recovery | Capture 20261009T230638Z_0b426c9f restored 73,283 files with matching bytes/modes; local hooks installed in restored checkout |
+
+The documented parts-search/count/audit command now works from another directory without inherited Python paths and uses the correct laboratory registry. Its direct command regression catches the relocation error. Initial rendering chooses the successful verification from its original source cohort; current verification stays separate. Derived comparison metadata retains original snapshot-relative names, rather than replacing them with today's authored paths.
+
+Both the 74-test intermediate verification and 75-test successor remain frozen. Their two additional 71-file inventories preserve all new waveforms/exports; old declarations remain unchanged. Available-byte verification reports zero damaged/uninventoried files. 89 pre-existing missing source copies and independent persistent backup remain incomplete. Final documentation/receipts are privately copied and restore-checked separately after the full capture.
+
+No specification, uncertainty envelope, evaluation budget, candidate identity, parent, original failure or frozen source bytes change. All implementations remain unqualified. Remote publication/settings remain outside this local completion; hooks remain bypassable without the required server status check.

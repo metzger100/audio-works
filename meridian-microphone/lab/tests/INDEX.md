@@ -10,5 +10,6 @@ Immediate contents and child hubs.
 - [test_parts_controls.py](test_parts_controls.py) — active
 - [test_parts_database.py](test_parts_database.py) — active
 - [test_physics.py](test_physics.py) — active
+- [test_reporting.py](test_reporting.py) — active
 - [test_robust.py](test_robust.py) — active
 - [test_search_and_numerics.py](test_search_and_numerics.py) — active

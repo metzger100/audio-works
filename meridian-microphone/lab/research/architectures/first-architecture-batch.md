@@ -1,54 +1,27 @@
-# First six-mechanism architecture batch — 2026-10-09
+# First six-mechanism batch — 9 October 2026
 
-Internal M100 Meridian MIC-34-M/MIC-34-C research under P48, using the **Arienne Audio Flat K47 Cardioid/Omni K47FRB** assumption envelope. This milestone records engineering attempts, not six passing designs. No production topology, prototype or PCB is selected. No purchases, supplier contacts, matching services, licence acceptance or external publication occurred. All implementations remain unqualified and all prototype/manufacture/build-publication gates remain held.
+Six original DUT attempts plus nine preserved engineering children test distinct sensing mechanisms under the unchanged K47FRB/P48 envelope. **All are unqualified; no topology, PCB or prototype is selected.**
 
-[Specification](../../spec/microphone-spec.yaml) · [Capsule uncertainty](../../spec/capsule-model.yaml) · [Environment](../../spec/design-constraints.yaml) · [Source register](../sources.yaml) · [Model limits](../devices/device-model-validation.md) · [Persistent roles](../memory/roles.md) · [Concept catalogue](../../search/concepts.yaml) · [All 14 families](../../search/families.yaml) · [Carrier protocol](carrier-protocol.md) · [Dated rationale](first-architecture-decisions.md).
+[Comparison with exact records](architecture-comparison-001.md) · [decisions](first-architecture-decisions.md) · [families](../../search/families.yaml) · [primary observations](../architecture_sources/observations_2026-10-09.json)
 
+## Findings and failures
 
+| Mechanism | Evidence |
+| --- | --- |
+| Conventional JFET | DC/energy works; final1MΩ backplate noise dominates. Separate100nF filter child reduces conditional electronics noise32.34→18.34dBA; other qualification failures remain |
+| Discrete servo JFET |0.913dB nominal response; noise/output/startup/loading fail. No selection or favorable population fitting |
+| BJT charge | Valid DC; large feedback capacitance/finite loop and output noise miss budgets.1MΩ→500kΩ reset child retains authority/sensitivity tradeoff |
+| Guarded CMOS / CMOS charge | OPA-containing parents and NPN-output children retain convergence failures, including preserved nodeset probe. Grounded small-signal agreement does not validate floating integration |
+| Carrier | Isolated bridge/demodulator recovers deterministic signal after local-reference/nuisance-tone extraction repairs. Integrated timestep,periodic noise and oscillator/mixer power remain unsupported |
 
-## Inventor and Engineer record
+Common power uses both P48 legs through2.2kΩ, divider-fed NPN rail and real divider current. Ten ordinary1MΩ parts realize10MΩ polarization filtering;47Ω/47µF output legs face actual cable/preamp loading. Ideal output blocks remain explicit where present; do not score partial carrier current as total power.
 
+## Evidence and next action
 
+Original cohorts preserve source/model/spec hashes, seed 34047,16 envelope scenarios where supported, errors and every parent. [Integrity](../first_architecture_integrity_2026-10-09.json) covers62 new records, including failed/repaired controls; [inventory](../../results/evidence-20261009T082728Z-78caabc6.sha256) adds1981 waveforms/exports. Original45-test verification is historical.
 
-The Inventor uses conversion physics and falsifiable hypotheses from the existing catalogue and [primary cross-domain observations](../architecture_sources/observations_2026-10-09.json). The Engineer supplies bias, power, finite loading, impedance transformation and balanced output without replacing a failed mechanism silently. The persistent roles are the documented workflow, not separate background services. Known microphone/JFET references and the semiconductor datasheets inform fair feasibility checks; no copied production microphone netlist seeded this search.
+[Dated sourcing](../procurement/architecture_parts_2026-10-09.yaml) and per-candidate BOMs retain exact variants, technology/tolerance/package, installed/intended quantities and conditional costs. Alternative BOMs are not a purchase basket. [Patent flags](../patents/first_architecture_batch_2026-10-09.yaml) lack completed claims/current-status screening.
 
-## Implementation and backend limits
+Next: address each mechanism's fastest independent falsification, retain CMOS/carrier prerequisites and validate actual device/loss/leakage/production behavior before ranking. Unknown capsule safety/noise/polarization/overload, live sourcing/delivered totals,89 legacy sources and independent backup remain open.
 
-
-
-All six initial attempts use actual nominal parts. The power path takes both P48 legs through2.2kΩ resistors, then a divider-fed NPN emitter-follower rail, real divider current and filtered polarization. Ten series1MΩ production resistors realize the10MΩ polarization filter; no unavailable ideal10MΩ value is claimed.47Ω/47µF legs drive the actual cable/preamp fixture. Real models include their output-driver current and stationary noise when that analysis is supported. Different NPN output structures are preserved as children instead of forcing failed CMOS macros onto every mechanism.
-
-## Failures, physical implications and unknowns
-
-
-
-Initial OPA-containing attempts0001–0004/0006 failed the operating-point convergence screen. A [preserved initialization probe](../probes/opa_initialization_2026-10-09/results.json) tried explicit nodesets without altering device models/specification; it also failed to produce valid operating-point data. Those are implementation/model failures, not proven impossibility of the input families. The CMOS-with-NPN-output children preserve the CMOS mechanisms long enough to expose the same unresolved macro compatibility. It would be inappropriate to replace the input devices by ideals and report an architecture advantage.
-
-
-## Procurement and legal gates
-
-
-
-[Dated ordinary-part/private Germany sourcing](../procurement/architecture_parts_2026-10-09.yaml) records exact variants, tolerance/technology/rating/package, observed stock/crawl age, MOQ/retail and factory packs, lead times, price and unresolved delivery terms. Each candidate's BOM provides installed and intended purchasing quantities, unavoidable excess (zero only where MOQ1 is evidenced), and an electronics-only cost calculation. Default is one capsule for one finished microphone. Six comparison BOMs are research alternatives, never a purchase basket.
-
-## Qualification records and preservation
-
-
-
-The final record tables below are generated from immutable results, including errors and unsupported tests.45 regressions pass after backend/model-framework changes. Evaluation uses seed34047 and16 original-envelope scenarios where the supported suite can reach them; no manufacturing-yield claim follows. All 14 families remain available, with minimal-active-device research still awaiting its own implementation. Final evaluations freeze the same shared source cohort; failure to reach an analysis is recorded rather than assigning a fabricated metric.
-
-## Reading and evidence
-
-
-
-This compact view retains findings and limits. Consult the [complete original report](../../../../docs/history/2026-10-09/meridian-microphone/lab/research/first_architecture_batch.md) for all tables, conditions, failures and contemporaneous decisions. [Current evidence hub](../../../../docs/evidence.md) and [scientific contract](../../CONTRACT.md) govern further work. Historical test counts describe the original batch. Current verification is in [repository validation](../../../../docs/validation.md).
-
-
-## Reading and evidence
-
-
-This compact view retains findings and limits. Consult the [complete original report](../../../../docs/history/2026-10-09/meridian-microphone/lab/research/first_architecture_batch.md) for all tables, conditions, failures and contemporaneous decisions. [Current evidence hub](../../../../docs/evidence.md) and [scientific contract](../../CONTRACT.md) govern further work. Historical test counts describe the original batch. Current verification is in [repository validation](../../../../docs/validation.md).
-
-## Reading and evidence
-
-This compact view retains findings and limits. Consult the [complete original report](../../../../docs/history/2026-10-09/meridian-microphone/lab/research/first_architecture_batch.md) for all tables, conditions, failures and contemporaneous decisions. [Current evidence hub](../../../../docs/evidence.md) and [scientific contract](../../CONTRACT.md) govern further work. Historical test counts describe the original batch. Current verification is in [repository validation](../../../../docs/validation.md).
+[Complete dated original](../../../../docs/history/2026-10-09/meridian-microphone/lab/research/first_architecture_batch.md) · [Current verification](../../../../docs/validation.md). Original tables, failures, conditions and decisions remain authoritative.

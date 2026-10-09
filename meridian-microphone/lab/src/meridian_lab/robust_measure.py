@@ -1,5 +1,4 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
-# SPDX-License-Identifier: GPL-3.0-or-later
 """Budgeted, single-axis optimization of explicitly scoped SPICE scenarios.
 
 No probabilistic interpretation is assigned to guaranteed bounds. A scenario

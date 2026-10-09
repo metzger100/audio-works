@@ -117,6 +117,36 @@ def markdown(text):
     return links + parser.links, anchors | parser.anchors
 
 
+def markdown_health(text):
+    """Reject empty outline stubs and substantial copy-pasted paragraphs."""
+    tokens = MD.parse(text)
+    errors = []
+    paragraphs = set()
+    for index, token in enumerate(tokens):
+        if token.type == "paragraph_open":
+            content = re.sub(r"\s+", " ", tokens[index + 1].content).strip()
+            if len(content) >= 180:
+                if content in paragraphs:
+                    errors.append("Repeated substantial paragraph")
+                paragraphs.add(content)
+        if token.type != "heading_open":
+            continue
+        title = tokens[index + 1].content
+        rank = int(token.tag[1:])
+        body = False
+        for following in range(index + 2, len(tokens)):
+            item = tokens[following]
+            if item.type == "heading_open" and int(item.tag[1:]) <= rank:
+                break
+            if item.type == "inline" and tokens[following - 1].type != "heading_open":
+                body |= bool(item.content.strip())
+            elif item.type in {"fence", "code_block", "html_block"}:
+                body |= bool(re.sub(r"<!--.*?-->", "", item.content, flags=re.S).strip())
+        if not body:
+            errors.append(f"Empty Markdown section: {title}")
+    return errors
+
+
 def destination(origin, raw):
     parsed = urlsplit(raw)
     if parsed.scheme or parsed.netloc:
@@ -216,6 +246,8 @@ def validate(view, register):
             errors.append(f"Malformed structured/source file: {path}: {error}")
         if suffix == ".md" or path == "LICENSE":
             graphs[path], anchors[path] = markdown(text)
+            if suffix == ".md":
+                errors.extend(f"{error} in {path}" for error in markdown_health(text))
     edges = {}
     for origin, links in graphs.items():
         edges[origin] = set()

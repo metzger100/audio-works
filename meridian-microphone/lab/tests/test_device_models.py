@@ -104,6 +104,9 @@ def test_source_manifest_includes_vendor_bytes_and_public_evidence(tmp_path, mon
         "models/semiconductor/vendor/acquisition/observation.json",
         "requirements.txt",
         "tools/ngspice-run",
+        "tools/controls/control.py",
+        "tools/controls/imported_helper.py",
+        "tools/reporting/report.py",
     ]:
         p = tmp_path / relative
         p.parent.mkdir(parents=True, exist_ok=True)
@@ -113,6 +116,15 @@ def test_source_manifest_includes_vendor_bytes_and_public_evidence(tmp_path, mon
     assert "models/semiconductor/vendor/a.LIB" in manifest
     assert "research/device_sources/local/evidence.json" in manifest
     assert "models/semiconductor/vendor/acquisition/observation.json" in manifest
+    for relative in [
+        "tools/controls/control.py",
+        "tools/controls/imported_helper.py",
+        "tools/reporting/report.py",
+    ]:
+        assert relative in manifest
+    # A relocated imported helper must invalidate the next scientific source cohort.
+    (tmp_path / "tools/controls/imported_helper.py").write_text("changed")
+    assert core.source_manifest() != manifest
 
 
 def test_failed_acquisition_and_missing_flicker_are_explicit_in_registry():

@@ -2,7 +2,7 @@
 
 Work in `meridian-microphone/lab`, relative to the repository root, on the M100 Meridian MIC-34-M/MIC-34-C research project using the Arienne Audio Flat K47 Cardioid/Omni K47FRB under P48.
 
-Read `AGENTS.md`, `README.md`, the parent `../README.md` and `../DECISIONS.md`, `spec/*.yaml`, `research/architectures/initial/phase0-report.md`, `research/sources.yaml`, `research/memory/memory/roles.md`, `research/memory/rejected-ideas.md`, `research/memory/memory/discoveries.md`, `research/procurement/germany.md`, the repository `../../COMPONENTS.md`, `../../PATENTS.md` and `research/patents/README.md`. Inspect the current files and results before changing anything; later work may already have completed part of this task.
+Read [the shared execution contract](research-workflow.md) and use the `topology` context route. Inspect current reports and original evidence before extending work; later stages may already have supplied outputs or preserved corrections.
 
 Preserve the hierarchy: physics/measurements → SPICE → automated tests → numerical optimization → engineering reasoning → LLM intuition. Work autonomously, create files and run applicable checks. Preserve failed experiments, raw data, source snapshots, seeds and parent relationships. Do not relax thresholds, silently narrow uncertainty ranges, hand-select devices, conceal trimming, purchase parts or contact suppliers. Unknown safe capsule polarization is not a simulated hardware rating. Freeze shared sources before running evaluations. No production topology or PCB is to be selected in this task.
 

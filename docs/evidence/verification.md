@@ -29,3 +29,5 @@ Original conditions, statuses, failures and parents remain authoritative. [Struc
 - [20261009T195559Z_007ef138 / verification.json](../../meridian-microphone/lab/results/verification/20261009T195559Z_007ef138/verification.json) — pass
 - [20261009T195814Z_2452823b / verification.json](../../meridian-microphone/lab/results/verification/20261009T195814Z_2452823b/verification.json) — pass
 - [20261009T201251Z_55f494ca / verification.json](../../meridian-microphone/lab/results/verification/20261009T201251Z_55f494ca/verification.json) — pass
+- [20261009T230035Z_b1f60245 / verification.json](../../meridian-microphone/lab/results/verification/20261009T230035Z_b1f60245/verification.json) — pass
+- [20261009T230340Z_bbdcf67e / verification.json](../../meridian-microphone/lab/results/verification/20261009T230340Z_bbdcf67e/verification.json) — pass

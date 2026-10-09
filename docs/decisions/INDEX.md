@@ -4,3 +4,4 @@
 Dated owner instructions and mechanical regression coverage.
 
 - [2026-10-09-repository-structure.md](2026-10-09-repository-structure.md) — active
+- [2026-10-10-meridian-cleanup.md](2026-10-10-meridian-cleanup.md) — active

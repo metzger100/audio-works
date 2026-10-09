@@ -105,7 +105,8 @@ class RepositoryFixture(unittest.TestCase):
             "tests": ["tests/quality/test_data.py", "tests/quality/test_structure.py"],
         }
         self.put(
-            self.register["quality_change"]["decision"], "# Dated fixture decision, 2026-10-10\n"
+            self.register["quality_change"]["decision"],
+            "# Dated fixture decision, 2026-10-10\n\nPreserve gate regression coverage.\n",
         )
         self.put("tests/project/test_hooks.py", "# Fixture regression pointer\n")
         local = self.root / ".project-local"

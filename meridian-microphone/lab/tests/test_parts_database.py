@@ -1,13 +1,30 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 from pathlib import Path
-import importlib.util, copy, subprocess, os
+import importlib.util, copy, subprocess, os, json, sys
 import pytest, re
 
 spec = importlib.util.spec_from_file_location(
-    "parts_db", Path(__file__).resolve().parents[1] / "research/parts_database.py"
+    "parts_db", Path(__file__).resolve().parents[1] / "tools/controls/parts_database.py"
 )
 db = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(db)
+
+
+def test_documented_search_entry_point_works_without_pythonpath(tmp_path):
+    environment = dict(os.environ)
+    environment.pop("PYTHONPATH", None)
+    script = Path(db.__file__)
+    for arguments in [["--counts"], ["--audit"], ["5551"]]:
+        result = subprocess.run(
+            [sys.executable, str(script), *arguments],
+            cwd=tmp_path,
+            env=environment,
+            capture_output=True,
+            text=True,
+            timeout=15,
+        )
+        assert result.returncode == 0, result.stderr
+        assert json.loads(result.stdout)
 
 
 def fixture():

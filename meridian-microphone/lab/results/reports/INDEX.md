@@ -6,5 +6,7 @@ Immediate contents and child hubs.
 - [initial-environment.json](initial-environment.json) — generated
 - [initial-fixture-comparison.png](initial-fixture-comparison.png) — generated
 - [initial-fixture-comparison.svg](initial-fixture-comparison.svg) — generated
+- [initial-summary.md](initial-summary.md) — generated
 - [measurement-adapter-smoke.json](measurement-adapter-smoke.json) — generated
 - [architecture-comparison-001/](architecture-comparison-001/INDEX.md)
+- [robust-optimization/](robust-optimization/INDEX.md)

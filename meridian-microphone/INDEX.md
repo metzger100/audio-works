@@ -7,3 +7,4 @@ Microphone project overview, brief, decisions and original capsule research.
 - [README.md](README.md) — active
 - [brief.md](brief.md) — active
 - [lab/](lab/INDEX.md)
+- [research/](research/INDEX.md)

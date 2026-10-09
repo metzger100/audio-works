@@ -62,7 +62,17 @@ def digest(path):
 
 def source_manifest():
     files = []
-    for folder in ["spec", "models", "src", "tests", "optimization", "search", "research"]:
+    for folder in [
+        "spec",
+        "models",
+        "src",
+        "tests",
+        "optimization",
+        "search",
+        "research",
+        "tools/controls",
+        "tools/reporting",
+    ]:
         files.extend(
             p
             for p in (ROOT / folder).rglob("*")

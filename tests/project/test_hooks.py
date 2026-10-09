@@ -74,7 +74,7 @@ class TestHooks(RepositoryFixture):
 
     def test_successful_commit_partial_staging_and_selected_tools(self):
         project.install_hook(self.root)
-        self.put("README.md", "# Valid staged content\n")
+        self.put("README.md", "# Valid staged content\n\nUseful staged content.\n")
         self.run_git("add", "README.md")
         self.put("README.md", "# Broken working content\n[bad](missing.md)\n")
         self.put("tools/project.py", "raise SystemExit(0)\n")
