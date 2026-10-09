@@ -10,7 +10,7 @@
 
 Purposeful engineering, documented decisions and serviceability guide each design, from the signal path to the sound in the room.
 
-[Repository](../README.md) · [Families](#brand-architecture) · [Model naming](#model-designations) · [Visual identity](#visual-identity) · [Artwork](design/README.md)
+[Repository](../README.md) · [Families](README.md#brand-architecture) · [Model naming](README.md#model-designations) · [Visual identity](README.md#visual-identity) · [Artwork](design/README.md)
 
 ## Brand architecture
 

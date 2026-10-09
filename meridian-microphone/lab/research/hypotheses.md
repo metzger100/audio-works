@@ -1,6 +1,6 @@
 # Hypotheses
 
-The [catalogue](../search/concepts.yaml) is a queue of falsifiable physical proposals, not a measured population or qualified design. The [first batch](first_architecture_batch.md) now records six implemented mechanisms and preserved children.
+The [catalogue](../search/concepts.yaml) is a queue of falsifiable physical proposals, not a measured population or qualified design. The [first batch](architectures/first-architecture-batch.md) now records six implemented mechanisms and preserved children.
 
 H0: physics identities and deliberate bad-netlist cases can distinguish valid simulations from plausible-looking failures.
 

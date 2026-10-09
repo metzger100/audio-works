@@ -1,0 +1,184 @@
+[
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "candidate_0001",
+    "eligible": false,
+    "experiment_id": "20261009T080529Z_bcae5f2f",
+    "failure_reasons": {
+      "balance": "ngspice exit 0: Warning",
+      "distortion": "ngspice exit 0: Warning",
+      "frequency_response": "ngspice exit 0: Warning",
+      "headroom": "ngspice exit 0: Warning",
+      "loading": "ngspice exit 0: Warning",
+      "monte_carlo": "ngspice exit 0: Warning",
+      "noise": "ngspice exit 0: Warning",
+      "operating_point": "ngspice exit 0: Warning",
+      "output_impedance": "ngspice exit 0: Warning",
+      "phantom_supply": "ngspice exit 0: Warning",
+      "semiconductor_corners": "ngspice exit 0: Warning",
+      "stability": "ngspice exit 0: Warning",
+      "startup": "ngspice exit 0: Warning",
+      "temperature": "ngspice exit 0: Warning"
+    },
+    "family": "conventional_jfet",
+    "graph": {
+      "device_histogram": {
+        "C": 10,
+        "R": 29,
+        "V": 18
+      },
+      "graph_nodes": 105,
+      "graph_signature": "0170de5646c2637f3543cc23db15df3dc133b61c910c837d3de8fc5d8bb5de88"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "research_candidate",
+    "metrics": {
+      "component_count": 42
+    },
+    "niche": {
+      "active_device_count": 4,
+      "bias": "fixed_parts",
+      "bootstrap": false,
+      "common_mode": "divider",
+      "feedback": "source_degeneration",
+      "input_device": "JFET",
+      "output": "differential_real_devices",
+      "reference": "single_ended",
+      "sensing": "voltage",
+      "servo": false
+    },
+    "novelty_nearest": 0.0,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unscreened_no_clearance",
+    "procurement_cost": {
+      "confirmed_delivered_eur": null,
+      "digikey_shipping_eur_observed": 25,
+      "digikey_shipping_tax_basis": "unknown: EUR25 gross or EUR29.75 if net under19% VAT",
+      "formula": "1.19*(DigiKey net basket including unknown part prices) + DigiKey shipping gross + TME gross basket + TME shipping gross + applicable import/payment/fees; not a confirmed quote",
+      "import_payment_fees_eur": null,
+      "priced_items_net_eur_scenario": 10.89,
+      "priced_items_vat_inclusive_eur_scenario": 12.9591,
+      "scope": "Electronics only. Mixed-age catalogue scenarios; unavailable parents not presently purchasable. All six comparison BOMs must never be bought. No unused specimens/matching services.",
+      "tme_shipping_eur": null,
+      "unpriced_items": [
+        {
+          "mpn": "R82EC3100DQ70J",
+          "quantity": 1
+        },
+        {
+          "mpn": "JFE150DBVR",
+          "quantity": 1
+        }
+      ]
+    },
+    "procurement_state": "research_BOM_live_orderability_and_delivered_quote_unverified",
+    "result_file": "results/runs/20261009T080529Z_bcae5f2f/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "failed",
+    "suite_sha256": "2851ab2b2b44bacfe015988511eff383338bbc8adea61a1c0dd7c1584f8f0ddb"
+  },
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "candidate_0002",
+    "eligible": false,
+    "experiment_id": "20261009T080530Z_be15abf9",
+    "failure_reasons": {
+      "balance": "ngspice exit 0: Warning",
+      "distortion": "ngspice exit 0: Warning",
+      "frequency_response": "ngspice exit 0: Warning",
+      "headroom": "ngspice exit 0: Warning",
+      "loading": "ngspice exit 0: Warning",
+      "monte_carlo": "ngspice exit 0: Warning",
+      "noise": "ngspice exit 0: Warning",
+      "operating_point": "ngspice exit 0: Warning",
+      "output_impedance": "ngspice exit 0: Warning",
+      "phantom_supply": "ngspice exit 0: Warning",
+      "semiconductor_corners": "ngspice exit 0: Warning",
+      "stability": "ngspice exit 0: Warning",
+      "startup": "ngspice exit 0: Warning",
+      "temperature": "ngspice exit 0: Warning"
+    },
+    "family": "unconventional_jfet",
+    "graph": {
+      "device_histogram": {
+        "C": 11,
+        "R": 36,
+        "V": 23
+      },
+      "graph_nodes": 131,
+      "graph_signature": "1261c7e149f7cc7e4c86b6e33a9917479bc6b92dd87793abf476671292d0b1a7"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "research_candidate",
+    "metrics": {
+      "component_count": 51
+    },
+    "niche": {
+      "active_device_count": 5,
+      "bias": "source_servo",
+      "bootstrap": false,
+      "common_mode": "divider",
+      "feedback": "slow_source_current_servo",
+      "input_device": "JFET",
+      "output": "differential_real_devices",
+      "reference": "single_ended",
+      "sensing": "voltage",
+      "servo": true
+    },
+    "novelty_nearest": 0.0,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unscreened_no_clearance",
+    "procurement_cost": {
+      "confirmed_delivered_eur": null,
+      "digikey_shipping_eur_observed": 25,
+      "digikey_shipping_tax_basis": "unknown: EUR25 gross or EUR29.75 if net under19% VAT",
+      "formula": "1.19*(DigiKey net basket including unknown part prices) + DigiKey shipping gross + TME gross basket + TME shipping gross + applicable import/payment/fees; not a confirmed quote",
+      "import_payment_fees_eur": null,
+      "priced_items_net_eur_scenario": 14.1,
+      "priced_items_vat_inclusive_eur_scenario": 16.779,
+      "scope": "Electronics only. Mixed-age catalogue scenarios; unavailable parents not presently purchasable. All six comparison BOMs must never be bought. No unused specimens/matching services.",
+      "tme_shipping_eur": null,
+      "unpriced_items": [
+        {
+          "mpn": "R82EC3100DQ70J",
+          "quantity": 1
+        },
+        {
+          "mpn": "JFE150DBVR",
+          "quantity": 1
+        }
+      ]
+    },
+    "procurement_state": "research_BOM_live_orderability_and_delivered_quote_unverified",
+    "result_file": "results/runs/20261009T080530Z_be15abf9/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "failed",
+    "suite_sha256": "2851ab2b2b44bacfe015988511eff383338bbc8adea61a1c0dd7c1584f8f0ddb"
+  }
+]

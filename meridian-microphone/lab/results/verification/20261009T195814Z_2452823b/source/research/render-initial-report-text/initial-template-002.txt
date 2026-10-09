@@ -1,0 +1,50 @@
+ independent regression checks pass.** Both final fixture evaluations finish all their SPICE jobs successfully; both fail engineering qualification. The eligible Pareto front and champion registers are correctly empty.
+
+## What is executable
+
+- First-order two-diaphragm electrical capsule model, nonlinear charge law and a linearized electronics-distortion mode.
+- Loaded P48 supply, separate feed resistors and mismatches, cable/shield resistance and capacitance, AC-coupled preamp impedance and mismatch.
+- Fourteen named engineering checks: operating point, response, noise, distortion, headroom, output impedance, balance, P48, temperature, semiconductor corners, Monte Carlo, loading, startup and stability. Some remain explicit incomplete screens, as detailed below.
+- Noise integration with unweighted and A-weighted results and separate bias, polarization, power, output and capsule-leakage-surrogate contributions; H2–H10 spectra and coherent settling checks.
+- SciPy differential evolution, parameter bounds and numerical constraints, raw trial preservation, full-suite re-evaluation and controlled parent comparisons.
+- Experiment snapshots, source/specification hashes, exact simulator decks, raw files, failure logs, software versions, seeded uncertainty scenarios and strict result status handling.
+- A quality-diversity archive, separate novelty descriptors, structural child registration, exploration allocation and a bounded evaluator for supplied Engineer netlists.
+- A measurement interchange contract and comparison adapter, with a [synthetic adapter smoke check](../results/reports/measurement-adapter-smoke.json). No physical data have been collected.
+
+The local runtime is ngspice 47 and Python 3.12.14 with pinned NumPy/SciPy/pandas/Matplotlib/PyYAML/pytest. It is installed within the workspace. The [README](../README.md) contains commands, bootstrap details, platform dependencies and evidence contracts. No system package, PCB tool or background AI service is required.
+
+## Capsule evidence and uncertainty
+
+The [current manufacturer page](https://store.arienneaudio.com/microphone-capsules/20-26-arienne-audio-flat-k47-microphone-capsule.html#/12-options-cardioid_omni) identifies the Flat K47 Cardioid/Omni K47FRB, modified tuning and changed manufacturing facility. It does not supply the electrical/mechanical data needed to qualify this microphone. A different regular K47's advertised capacitance is not transferred to this model.
+
+| Property | Model entry | Evidence status |
+| --- | --- | --- |
+| Product and cardioid/omni options | Flat K47 K47FRB | Manufacturer specification |
+| Historical combined capacitance | 120–150 pF | Unmeasured community estimate; no current-batch guarantee |
+| Front and rear capacitance | 70 pF nominal per side; 45–100 pF each | Assumed exploratory brackets; independent/correlated behavior unresolved |
+| Sensitivity at 60 V normalization | 20 mV/Pa nominal; 5–40 mV/Pa | Assumed, not measured |
+| Polarization normalization | 60 V | Mathematical reference only |
+| Polarization simulation envelope | 20–70 V | Assumed numerical exploration, not a hardware rating |
+| Maximum safe polarization | Unknown | Requires applicable manufacturer data or qualified characterization |
+| Leakage | 1 TΩ nominal; 1 GΩ–100 TΩ | Assumed humidity/contamination envelope; not a production distribution |
+| Electrode/case parasitic | 2 pF nominal; 0.5–10 pF | Assumed |
+| Front/rear stray | 0.5 pF nominal; 0–5 pF | Assumed |
+| Mechanical noise, overload and angular response | Unknown | Not established by this electrical model |
+
+The [capsule specification](../spec/capsule-model.yaml) explicitly distinguishes manufacturer information, third-party estimates, assumptions and unknowns. The [source register](sources.yaml) links the historical estimate and records limits of applicability. Nominal values are scenario anchors, not probability means inferred from production samples.
+
+The charge law is `Q=C0(1+k·p)V`, with `k=Sref/Vref`, imposed linear compliance and current `I=dQ/dt`. A scaled observer using a native capacitor realizes this law. Gear-2 integration passes analytical AC/transient agreement and timestep-refinement regressions. Pressure is a separate virtual port; no capsule acoustic polar pattern is inferred. Linearized mode uses the actual simulated DC polarization for electronics THD. Mechanical distortion, acoustic thermal noise, electrostatic softening, pull-in and pressure overload are absent. No system self-noise or maximum-SPL claim follows from these runs.
+
+## P48 evidence and environment
+
+The [IEC official catalogue](https://webstore.iec.ch/en/publication/30762) identifies IEC 61938:2018 edition 3; its catalogue stability date is 2030. The public preview does not include the full phantom-power clauses. The [SCHOEPS manufacturer manual](https://schoeps.de/fileadmin/user_upload/user_upload/Downloads/Bedienungsanleitungen/Schoeps_Manual_V4_U_DE_1388740809.pdf) supports the public P48 summary of 44–52 V, nominal 6.8 kΩ feeds, pair matching below 0.4% and maximum total microphone current 10 mA.
+
+Absolute feed tolerance deliberately retains ±20% legacy coverage from that manual. An uncontrolled transcription of the newer standard suggests ±10%; this is not treated as authenticated. The 7 mA preferred-current target and 0.8% conductor-current condition are provisional pending controlled section 9.4/Table 6 verification. The model therefore supports research screening, **not an IEC compliance declaration**. These distinctions are recorded in [design constraints](../spec/design-constraints.yaml).
+
+Nominal cable length is 10 m, with 0–100 m application scenarios and a separately recorded 300 m stress envelope. Nominal effective differential capacitance is 100 pF/m, while its direct and shield components are assumed. Preamp differential impedance is 2 kΩ nominal, 1–10 kΩ application scenarios, with 600 Ω stress cases and ±5% leg mismatch. Temperature screens span −10 to +50 °C. A lumped cable model cannot establish RF behavior.
+
+## Frozen provisional requirements
+
+Electronics targets are ±1 dB from 20 Hz to 20 kHz, unweighted EIN ≤1 µV RMS, conditional electronics noise ≤4 dBA, THD ≤0.01% at 1 Pa and ≤0.5% at the 135 dB pressure stimulus, output impedance ≤200 Ω, impedance mismatch ≤1%, HF peaking ≤3 dB and cold-start settling ≤5 s. Total current is limited to 10 mA. Inherited 7 dBA system noise and 135 dB SPL aspirations remain contingent on capsule measurements.
+
+These are research requirements, not manufacturer promises. No threshold or uncertainty range was relaxed to accommodate failures. The sole specification amendment corrected YAML scientific-exponent typing without changing numeric values; [amendment record](memory/specification-amendments.md). The frozen specification hash is `

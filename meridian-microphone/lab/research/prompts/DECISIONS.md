@@ -15,4 +15,4 @@ Candidate-linked claims/status screening, exact private-customer Germany sourcin
 
 The final recomparison depends on actually executed, compatible evidence. Missing behavior stays incomplete, old failures and source snapshots remain intact, and the stricter production/physical front retains its gates. No thresholds, uncertainty ranges, budgets, frozen scientific files or prior reports are changed by this prompt-authoring task.
 
-Revisit this plan after actual outputs arrive, new owner constraints, approved capsule data or a changed implementation. Audit later work before repeating tasks. [Prompt index](README.md) · [Shared execution contract](RESEARCH_WORKFLOW.md).
+Revisit this plan after actual outputs arrive, new owner constraints, approved capsule data or a changed implementation. Audit later work before repeating tasks. [Prompt index](README.md) · [Shared execution contract](research-workflow.md).

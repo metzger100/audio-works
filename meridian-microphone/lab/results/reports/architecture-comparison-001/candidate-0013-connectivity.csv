@@ -1,0 +1,53 @@
+reference,kind,nodes,value_or_model,source_line
+Rharvestp,R,"[""p"", ""raw""]",2200,Rharvestp p raw {RHARVESTP_VALUE}
+Rharvestn,R,"[""n"", ""raw""]",2200,Rharvestn n raw {RHARVESTN_VALUE}
+Craw,C,"[""raw"", ""g""]",4.7e-05,Craw raw g {CRAW_VALUE}
+Rregtop,R,"[""raw"", ""regbase""]",100000,Rregtop raw regbase {RREGTOP_VALUE}
+Rregbottom,R,"[""regbase"", ""g""]",100000,Rregbottom regbase g {RREGBOTTOM_VALUE}
+Cregbase,C,"[""regbase"", ""g""]",1e-06,Cregbase regbase g {CREGBASE_VALUE}
+VQreg_0,V,"[""raw"", ""Qreg_t0""]",0,VQreg_0 raw Qreg_t0 0
+VQreg_1,V,"[""regbase"", ""Qreg_t1""]",0,VQreg_1 regbase Qreg_t1 0
+VQreg_2,V,"[""rail"", ""Qreg_t2""]",0,VQreg_2 rail Qreg_t2 0
+XQreg,X,"[""Qreg_t0"", ""Qreg_t1"", ""Qreg_t2""]",BC846B,XQreg Qreg_t0 Qreg_t1 Qreg_t2 BC846B
+Crail,C,"[""rail"", ""g""]",4.7e-05,Crail rail g {CRAIL_VALUE}
+Rmidtop,R,"[""rail"", ""mid""]",10000,Rmidtop rail mid {RMIDTOP_VALUE}
+Rmidbottom,R,"[""mid"", ""g""]",10000,Rmidbottom mid g {RMIDBOTTOM_VALUE}
+Cmid,C,"[""mid"", ""g""]",4.7e-05,Cmid mid g {CMID_VALUE}
+Rpolar0,R,"[""raw"", ""pol_0""]",1000000,Rpolar0 raw pol_0 {RPOLAR0_VALUE}
+Rpolar1,R,"[""pol_0"", ""pol_1""]",1000000,Rpolar1 pol_0 pol_1 {RPOLAR1_VALUE}
+Rpolar2,R,"[""pol_1"", ""pol_2""]",1000000,Rpolar2 pol_1 pol_2 {RPOLAR2_VALUE}
+Rpolar3,R,"[""pol_2"", ""pol_3""]",1000000,Rpolar3 pol_2 pol_3 {RPOLAR3_VALUE}
+Rpolar4,R,"[""pol_3"", ""pol_4""]",1000000,Rpolar4 pol_3 pol_4 {RPOLAR4_VALUE}
+Rpolar5,R,"[""pol_4"", ""pol_5""]",1000000,Rpolar5 pol_4 pol_5 {RPOLAR5_VALUE}
+Rpolar6,R,"[""pol_5"", ""pol_6""]",1000000,Rpolar6 pol_5 pol_6 {RPOLAR6_VALUE}
+Rpolar7,R,"[""pol_6"", ""pol_7""]",1000000,Rpolar7 pol_6 pol_7 {RPOLAR7_VALUE}
+Rpolar8,R,"[""pol_7"", ""pol_8""]",1000000,Rpolar8 pol_7 pol_8 {RPOLAR8_VALUE}
+Rpolar9,R,"[""pol_8"", ""pol""]",1000000,Rpolar9 pol_8 pol {RPOLAR9_VALUE}
+Cpol,C,"[""pol"", ""g""]",1e-07,Cpol pol g {CPOL_VALUE}
+Rback,R,"[""pol"", ""b""]",1000000,Rback pol b {RBACK_VALUE}
+Bcarrier,B,"[""excite"", ""pol""]",V={CARRIER_PEAK*sin(2*PI*CARRIER_HZ*time)},Bcarrier excite pol V={CARRIER_PEAK*sin(2*PI*CARRIER_HZ*time)}
+Banti,B,"[""anti"", ""pol""]",V={-CARRIER_PEAK*sin(2*PI*CARRIER_HZ*time)},Banti anti pol V={-CARRIER_PEAK*sin(2*PI*CARRIER_HZ*time)}
+Cexcite,C,"[""excite"", ""b""]",1e-07,Cexcite excite b {CEXCITE_VALUE}
+Cbridgef,C,"[""cbridgef_loss"", ""anti""]",1e-10,Cbridgef cbridgef_loss anti {CBRIDGEF_VALUE}
+Cbridger,C,"[""cbridger_loss"", ""anti""]",1e-10,Cbridger cbridger_loss anti {CBRIDGER_VALUE}
+Rbias,R,"[""f"", ""mid""]",1000000000.0,Rbias f mid {RBIAS_VALUE}
+Cbiasstray,C,"[""f"", ""mid""]",2e-13,Cbiasstray f mid {CBIASSTRAY_VALUE}
+Rrearbias,R,"[""rear"", ""mid""]",1000000000.0,Rrearbias rear mid {RREARBIAS_VALUE}
+Crearbiasstray,C,"[""rear"", ""mid""]",2e-13,Crearbiasstray rear mid {CREARBIASSTRAY_VALUE}
+Bdemod,B,"[""demod"", ""mid""]","V={(v(frontbuf,rearbuf))*2*sin(2*PI*CARRIER_HZ*time)}","Bdemod demod mid V={(v(frontbuf,rearbuf))*2*sin(2*PI*CARRIER_HZ*time)}"
+Rfilter1,R,"[""demod"", ""lp1""]",1000,Rfilter1 demod lp1 {RFILTER1_VALUE}
+Cfilter1,C,"[""lp1"", ""mid""]",1e-07,Cfilter1 lp1 mid {CFILTER1_VALUE}
+Rfilter2,R,"[""lp1"", ""audio""]",1000,Rfilter2 lp1 audio {RFILTER2_VALUE}
+Cfilter2,C,"[""audio"", ""mid""]",1e-07,Cfilter2 audio mid {CFILTER2_VALUE}
+Routp,R,"[""outp"", ""cp""]",47,Routp outp cp {ROUTP_VALUE}
+Routn,R,"[""outn"", ""cn""]",47,Routn outn cn {ROUTN_VALUE}
+Coutp,C,"[""p"", ""cp""]",4.7e-05,Coutp p cp {COUTP_VALUE}
+Coutn,C,"[""n"", ""cn""]",4.7e-05,Coutn n cn {COUTN_VALUE}
+Efront,E,"[""frontbuf"", ""g"", ""f"", ""g""]",1,Efront frontbuf g f g 1
+Erear,E,"[""rearbuf"", ""g"", ""rear"", ""g""]",1,Erear rearbuf g rear g 1
+Eoutp,E,"[""outp"", ""g"", ""audio"", ""g""]",1,Eoutp outp g audio g 1
+Eoutn,E,"[""outn"", ""g""]","VOL='2*v(mid,g)-v(audio,g)'","Eoutn outn g VOL='2*v(mid,g)-v(audio,g)'"
+RCbridgefloss,R,"[""f"", ""cbridgef_loss""]",1.5915494309,RCbridgefloss f cbridgef_loss {RCBRIDGEFLOSS_VALUE}
+RCbridgefinsulation,R,"[""f"", ""anti""]",10000000000.0,RCbridgefinsulation f anti {RCBRIDGEFINSULATION_VALUE}
+RCbridgerloss,R,"[""rear"", ""cbridger_loss""]",1.5915494309,RCbridgerloss rear cbridger_loss {RCBRIDGERLOSS_VALUE}
+RCbridgerinsulation,R,"[""rear"", ""anti""]",10000000000.0,RCbridgerinsulation rear anti {RCBRIDGERINSULATION_VALUE}

@@ -1,0 +1,192 @@
+[
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "fixture_0001",
+    "eligible": false,
+    "experiment_id": "20261005T105259Z_5838a3a9",
+    "failure_reasons": {
+      "frequency_response": "Unknown format code 'g' for object of type 'str'",
+      "noise": "Unknown format code 'g' for object of type 'str'",
+      "operating_point": "Unknown format code 'g' for object of type 'str'"
+    },
+    "family": "ideal_voltage_control",
+    "graph": {
+      "device_histogram": {
+        "C": 4,
+        "E": 2,
+        "R": 8
+      },
+      "graph_nodes": 25,
+      "graph_signature": "4075f24959a04f823ea9eb1466f3fa458422cc48c35cb109262a0155d66b9651"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "infrastructure_fixture",
+    "metrics": {},
+    "niche": {
+      "active_device_count": 0,
+      "bias": "resistor",
+      "bootstrap": false,
+      "common_mode": "open_loop",
+      "feedback": "none",
+      "input_device": "ideal",
+      "output": "ideal_differential",
+      "reference": "single_ended",
+      "sensing": "voltage",
+      "servo": false
+    },
+    "novelty_nearest": 1.0,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unknown_unscreened",
+    "procurement_state": "unknown",
+    "result_file": "results/runs/20261005T105259Z_5838a3a9/results.json",
+    "spec_sha256": "24c916ea3f6c657c1149a5625057d3c77d3f761096e62aabf5bbd9eb9707ca06",
+    "status": "failed",
+    "suite_sha256": "9b38e7546204a286aefc305b3742e4b796809bc439af3ee61b63600d5c558499"
+  },
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "fixture_0001",
+    "eligible": false,
+    "experiment_id": "20261005T105336Z_887ca146",
+    "failure_reasons": {
+      "frequency_response": "ngspice exit 0: \nError",
+      "noise": "ngspice exit 0: \nError",
+      "operating_point": "ngspice exit 0: \nError"
+    },
+    "family": "ideal_voltage_control",
+    "graph": {
+      "device_histogram": {
+        "C": 4,
+        "E": 2,
+        "R": 8
+      },
+      "graph_nodes": 25,
+      "graph_signature": "4075f24959a04f823ea9eb1466f3fa458422cc48c35cb109262a0155d66b9651"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "infrastructure_fixture",
+    "metrics": {},
+    "niche": {
+      "active_device_count": 0,
+      "bias": "resistor",
+      "bootstrap": false,
+      "common_mode": "open_loop",
+      "feedback": "none",
+      "input_device": "ideal",
+      "output": "ideal_differential",
+      "reference": "single_ended",
+      "sensing": "voltage",
+      "servo": false
+    },
+    "novelty_nearest": 0.0,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unknown_unscreened",
+    "procurement_state": "unknown",
+    "result_file": "results/runs/20261005T105336Z_887ca146/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "failed",
+    "suite_sha256": "67ebd62b0c5dd59bb21924a3235d5a643bd01db4eeacd744898bda9f7cb748c0"
+  },
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "fixture_0001",
+    "eligible": false,
+    "experiment_id": "20261005T105400Z_4bd46f4c",
+    "failure_reasons": {
+      "frequency_response": "Numerical acceptance requirement failed",
+      "noise": "Numerical acceptance requirement failed"
+    },
+    "family": "ideal_voltage_control",
+    "graph": {
+      "device_histogram": {
+        "C": 4,
+        "E": 2,
+        "R": 8
+      },
+      "graph_nodes": 25,
+      "graph_signature": "4075f24959a04f823ea9eb1466f3fa458422cc48c35cb109262a0155d66b9651"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "infrastructure_fixture",
+    "metrics": {
+      "conductor_current_mismatch_fraction": 0.0,
+      "current_a": 0.002750558768983654,
+      "electronics_ein_v_rms_conditional": 6.7837981496571656e-06,
+      "electronics_noise_a_pa_rms": 0.00014396393066554427,
+      "electronics_noise_dba_conditional": 17.144474001527033,
+      "electronics_noise_pa_rms": 0.0005291345307042264,
+      "electronics_output_v_rms": 2.890762017402804e-06,
+      "environment_output_v_rms": 4.4816391565647674e-08,
+      "full_fixture_output_v_rms": 2.8913355050987226e-06,
+      "hf_db": 0.0017120212140183178,
+      "internal_rail_v": 38.50782168823766,
+      "lf_db": -3.881675121811769,
+      "noise_power_closure_relative_error": 6.580265602163224e-16,
+      "phase_1khz_deg": 1.6975607961759849,
+      "polarization_dc_v": 38.46166384546058,
+      "response_deviation_db": 3.881675121811769,
+      "sensitivity_v_per_pa_at_1khz": 0.006178738782427308,
+      "supplied_power_w": 0.13202682091121537,
+      "terminal_power_w": 0.10629630529612194
+    },
+    "niche": {
+      "active_device_count": 0,
+      "bias": "resistor",
+      "bootstrap": false,
+      "common_mode": "open_loop",
+      "feedback": "none",
+      "input_device": "ideal",
+      "output": "ideal_differential",
+      "reference": "single_ended",
+      "sensing": "voltage",
+      "servo": false
+    },
+    "novelty_nearest": 0.0,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unknown_unscreened",
+    "procurement_state": "unknown",
+    "result_file": "results/runs/20261005T105400Z_4bd46f4c/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "failed",
+    "suite_sha256": "f934d61048e861fc94b45c338f729309751599678e4d7eb44e974537c28424dd"
+  }
+]

@@ -1,0 +1,91 @@
+# M100 Meridian — Engineering decision log
+
+Log started: 2026-10-04. Historical opening status: capsule research completed; owner decision pending.
+
+**Current annotations:** D002’s simulation stop gate and D012’s pending simulation-input selection are superseded by D014. Original row wording is retained. Physical procurement/characterization gates remain unresolved. D018 records partial model evidence; see [current state](../CURRENT.md).
+
+**Status update, 2026-10-05:** the owner has specified Flat K47 Cardioid/Omni for an autonomous simulation research mission and authorized the laboratory infrastructure. G1's earlier prohibition on starting modeled electronics is superseded for this research. Purchasing, physical safety limits and production/prototype selection remain separate unresolved matters. The historical entries below are retained.
+
+| ID / date | Decision or recommendation | Status | Reason and evidence | Revisit trigger |
+| --- | --- | --- | --- | --- |
+| D001 / 2026-10-04 | Develop an original microphone for private DIY use in Germany. | Owner requirement | Availability in small quantities and practical substitution are core constraints. | Change of intended use or commercial scope. |
+| D002 / 2026-10-04 | Research the real capsule market before designing any electronics or body. | Owner requirement; gate active | Capsule acoustic and electrical behavior determines the useful architecture. | Owner authorizes evaluation and a capsule is characterized. |
+| D003 / 2026-10-04 | Keep medium, small, and large diaphragm architectures open; do not equate outer capsule diameter with active diaphragm diameter. | Accepted research principle | The survey includes medium electrets, modular small capsule heads, and large true condensers. | Measured polar response, noise, and sensitivity. |
+| D004 / 2026-10-04 | Retain ≤7 dBA and approximately ≥135 dB SPL as aspirational system targets, not a filter that discards better choir acoustics. | Provisional target interpretation | No shortlisted bare capsule is independently demonstrated to satisfy all targets. Haun system documentation indicates a meaningful noise/SPL tradeoff. | Measured system noise, capsule overload, and real recording priorities. |
+| D005 / 2026-10-04 | Treat test-amplifier noise/SPL and complete-microphone sensitivity as system measurements, not bare-capsule specifications. | Accepted research principle | JLI datasheets expose external fixtures; Haun catalog values vary with the amplifier. | Better manufacturer data or de-embedded measurements. |
+| D006 / 2026-10-04 | Originally proposed purchasing Arienne Flat K47, Haun KA 200 N, and Transound TSB-2555B/JLI-2555BXZ3-GP for physical comparison. | **Purchase recommendation superseded by D010** | The three remain documentary alternatives, representing the low-noise large-diaphragm hypothesis, German small-head route, and medium electret route. The owner does not want unused comparison hardware. | Further online evidence may change the final choice. |
+| D007 / 2026-10-04 | Do not use generic marketplace capsules as established OEM equivalents without evidence. | Accepted research principle | Named Transound/JLI equivalence has a seller statement; visually similar AliExpress/eBay products lack demonstrated identity and batch control. Import sources remain eligible. | Traceable model documentation and independent measurements. |
+| D008 / 2026-10-04 | Use current import rules and explicit shipping assumptions in procurement estimates. | Accepted research principle | EU low-value customs treatment changed on 2026-07-01. Germany-specific checkout quotes remain missing for most non-EU routes. | Actual order date, customs classification, or tax-inclusive checkout quote. |
+| D009 / 2026-10-04 | Keep the existing lowercase `meridian/` project directory. | Administrative choice | Avoid duplicate case-sensitive project roots. | Owner preference. |
+| D010 / 2026-10-04 | Buy only parts with an intended use in the finished project. Default to one chosen capsule; do not purchase comparison capsules, acoustic references, or surplus units for self-selection without a concrete planned use and an owner decision. | **Owner requirement; active** | Owner clarification: avoid money spent on experimental parts that remain unused. A low unit price is not sufficient justification. | Owner explicitly changes the intended hardware use. |
+| D011 / 2026-10-04 | Resolve gaps through online evidence where possible; document and accept residual risks before purchasing the intended final capsule. Characterize that purchased capsule to guide implementation. | Accepted research method | Distinguish measurable/adaptable interface variation from intrinsic noise, overload and angular-response risks. Do not assume later circuitry will fix missing capsule performance. | New documentation or measurements of the chosen capsule. |
+| D012 / 2026-10-04 | Recommend **one Arienne Audio Flat K47, normal Cardioid/Omni K47FRB**, intended to remain in the finished M100. | **Engineering recommendation; owner selection pending** | Additional internet research supports a practical compromise of restrained voicing, two pattern options, current retail availability and price. The recommendation is not proof of target noise, acoustic overload or off-axis performance. See [Revision 2](research/M100%20Capsule%20Recommendation%20%E2%80%94%20Revision%202.md). | Owner preference; actual German delivered quote; current-batch specifications or measurements. |
+| D013 / 2026-10-04 | Keep current-batch noise, overload, safe polarization and angular behavior explicitly unresolved; do not assume a later circuit can correct intrinsic capsule limits. | Accepted evidence boundary | Community polar measurements concern complete microphones and have unresolved integration confounds. Historical capacitance/bias estimates and listening comparisons do not establish acceptance specifications for a 2026 unit. | Controlled measurements or applicable current manufacturer documentation. |
+| D014 / 2026-10-05 | Use Flat K47 Cardioid/Omni K47FRB as the explicit capsule input for a simulator-driven research laboratory; create executable environment, tests, optimization and diversity archive before designing a production circuit. | **Owner mission; active** | The new instruction expressly authorizes research across parameter assumptions and supersedes the earlier simulation stop gate. See [laboratory](lab/README.md). | New measured capsule data; later phase qualification gates. |
+| D015 / 2026-10-05 | Prohibit individual semiconductor selection, beta matching and concealed unit trimming; qualify manufacturer variation and retain multiple architecture families. | **Owner requirement; active** | Feedback/topology/current/voltage control should determine production behavior. A JFET must win by evidence rather than assumption. Earlier allowance for JFET selection is superseded. | Explicit owner requirement change supported by documented evidence. |
+| D016 / 2026-10-05 | The repository and project implementations must avoid third-party patent infringement; require dated claim/territory/status screening and hold affected implementations with credible unresolved potentially blocking risks before prototype selection, manufacture or implementation publication. | **Owner requirement; active** | Owner explicitly added patent non-infringement as a repository constraint. See [patent policy](../PATENTS.md). Originality, open licensing and simulation success do not establish legal clearance; professional review resolves material legal uncertainty. | New candidate features, claim/status evidence, territories or an applicable documented resolution. |
+| D017 / 2026-10-05 | Make standard, documented, currently obtainable parts a core repository principle. Verify private small-quantity Germany sourcing and delivered costs; realize optimized values with actual parts and requalify their tolerances and substitutions. | **Owner requirement; active** | Owner explicitly requires standard and available parts throughout the repository. See [component policy](../COMPONENTS.md). Preserve unsourced architectures as research, but resolve implementation dependencies before prototype selection or build recommendations. No purchase or invented spending cap is authorized. | New parts, supply evidence, implementation revisions or explicit owner requirement changes. |
+
+## Gate G1 — historical capsule purchase and residual-risk gate
+
+The following was the status on 2026-10-04 and is retained as history: **the engineering recommendation was one Flat K47 Cardioid/Omni K47FRB; the owner had not yet selected it.** Other capsules remained documentary alternatives, not a bundle to buy for comparison. The multi-capsule evaluation purchase recommendation had been withdrawn. No order or supplier message had been sent, and no modeled electronics had been started.
+
+On 2026-10-05 D014 explicitly establishes this capsule for simulation research and authorizes the laboratory. The purchase and physical-characterization matters below remain unresolved; they do not block the authorized numerical research.
+
+Record the intended capsule/variant and finished-project use, quantity, German delivered quote, essential interface information, evidence confidence, unresolved risks, and whether each risk can be accommodated or may require accepting a performance compromise. Default quantity is one; a second is for an intended second microphone, not a sacrificial comparator. After purchase, record serial/batch identifiers and measurements before closing the architecture-selection gate.
+
+## D018 / 2026-10-05 — scoped semiconductor evidence
+
+The Phase 3 [device-model library](lab/research/device_model_validation.md) records manufacturer sources, exact versions, failures and Germany procurement separately. Tested OPA197 small-signal agreement permits restricted numerical controls, not a microphone/prototype selection. JFE production corners, bipolar flicker/capacitance and MOS/P48 power coverage remain unresolved. The BC846B one-node child is a documented structural hypothesis, not a vendor-approved replacement. Feasible analytic DC tuples do not narrow manufacturer bounds or establish a population. All 14 architecture families remain alive; no build-ready BOM or patent clearance is asserted. Revisit with independent measurements, improved validated models, current exact sourcing and candidate-linked claim/status screening.
+
+## D019 / 2026-10-05 — repository licences
+
+Owner-directed: GPL-3.0-or-later for software; CERN-OHL-S-2.0 for hardware sources. [Scope](../LICENSE) replaces the current lab MIT notice; third-party terms and earlier grants remain. Revisit only by owner decision.
+
+## D020 / 2026-10-06 — repository rename
+
+Owner renamed the GitHub repository to `audio-works`. Update the local remote and current source-location link.
+
+## D021 / 2026-10-06 — public documentation
+
+Owner-directed: lead with M100 Audio Works and builder readiness. Keep release conventions in [CONTRIBUTING.md](../CONTRIBUTING.md#documenting-a-hardware-project). Tighten entry wording within the unchanged context limit; preserve requirements, evidence and readiness. No build is released.
+
+## D022 / 2026-10-06 — writing
+
+Owner-directed: use plain English. Remove the status slogan and explain build readiness without process jargon.
+
+## D023 / 2026-10-06 — release status
+
+Owner-directed: remove the public maturity states. List projects as released or not released. Keep engineering evidence and release requirements in the detailed documentation.
+
+## D024 / 2026-10-06 — current work and goals
+
+Owner-directed: describe the wider audio-hardware range as a goal. Current work is condenser-microphone research; no released portfolio exists.
+
+## D025 / 2026-10-06 — README banner
+
+Owner-directed: show the standard logo on an ivory banner in both GitHub themes. Generate it from the shared lockup geometry; preserve the existing masters.
+
+## D026 / 2026-10-06 — project folder
+
+Owner-directed: rename `meridian/` to `meridian-microphone/`; use family and device in project folders. Supersedes D009. Preserve frozen bytes, hashes and legacy-backup restoration.
+
+## D027 / 2026-10-09 — first architecture attempts
+
+Owner-directed six-mechanism research; no topology/PCB selection. Preserve failures and children, all14 families and separate qualification gates. [Rationale](lab/research/first_architecture_decisions.md).
+
+## D028 / 2026-10-09 — scoped optimization
+
+[Results and holds](lab/research/robust_optimization_decisions.md). No production selection.
+
+## D029 / 2026-10-09 — intermediate comparison
+
+[Rationale](lab/research/architecture_comparison_001_decisions.md); all gates retained, no selection.
+
+## D030 / 2026-10-09 — continuation
+
+[Plan](lab/research/prompts/DECISIONS.md). Measurements deferred; gates retained.
+
+## D031 / 2026-10-09 — parts
+
+[Rationale](lab/research/parts_database_expansion_002_decisions.md). Owner authorized GitHub push; qualification gates retained.

@@ -1,0 +1,7 @@
+#!/bin/sh
+# SPDX-License-Identifier: GPL-3.0-or-later
+set -eu
+bootstrap=$(mktemp)
+trap 'rm -f "$bootstrap"' EXIT HUP INT TERM
+git show :tools/hook_gate.py > "$bootstrap"
+python3 "$bootstrap" commit

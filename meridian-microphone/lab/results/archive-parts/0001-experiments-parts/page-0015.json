@@ -1,0 +1,184 @@
+[
+  {
+    "analysis_domain": "periodic_mechanism_control",
+    "backend": "ngspice",
+    "candidate_id": "candidate_0009",
+    "eligible": false,
+    "experiment_id": "20261009T075833Z_d772fead",
+    "failure_reasons": {
+      "balance": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "carrier_mechanism": "SimulationError: Missing required vector v(mic_g); never treated as a pass",
+      "distortion": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "frequency_response": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "headroom": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "loading": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "monte_carlo": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "noise": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "output_impedance": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "phantom_supply": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "semiconductor_corners": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "stability": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "startup": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "temperature": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior"
+    },
+    "family": "floating",
+    "graph": {
+      "device_histogram": {
+        "B": 3,
+        "C": 14,
+        "E": 4,
+        "R": 23,
+        "V": 3
+      },
+      "graph_nodes": 81,
+      "graph_signature": "80d7fd503e6b2c6219fb89bcd12a0a225e5c29845a57edc97defab145bbd368e"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "research_candidate",
+    "metrics": {
+      "component_count": 36,
+      "conductor_current_mismatch_fraction": 0.0,
+      "current_a": 0.0012342512135386,
+      "internal_rail_v": 20.464388532832338,
+      "polarization_dc_v": 32.17955319629263,
+      "supplied_power_w": 0.0592440582498528,
+      "terminal_power_w": 0.054063056276181645
+    },
+    "niche": {
+      "active_device_count": 1,
+      "bias": "fixed_parts",
+      "bootstrap": false,
+      "common_mode": "divider",
+      "feedback": "synchronous_demodulation_control",
+      "input_device": "ideal_bridge_control",
+      "output": "ideal_differential_control",
+      "reference": "floating_bridge",
+      "sensing": "carrier_capacitance",
+      "servo": false
+    },
+    "novelty_nearest": 0.0,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unscreened_no_clearance",
+    "procurement_cost": {
+      "confirmed_delivered_eur": null,
+      "digikey_shipping_eur_observed": 25,
+      "digikey_shipping_tax_basis": "unknown: EUR25 gross or EUR29.75 if net under19% VAT",
+      "formula": "1.19*(DigiKey net basket including unknown part prices) + DigiKey shipping gross + TME gross basket + TME shipping gross + applicable import/payment/fees; not a confirmed quote",
+      "import_payment_fees_eur": null,
+      "priced_items_net_eur_scenario": 6.39,
+      "priced_items_vat_inclusive_eur_scenario": 7.6041,
+      "scope": "Electronics only. Mixed-age catalogue scenarios; unavailable parents not presently purchasable. All six comparison BOMs must never be bought. No unused specimens/matching services.",
+      "tme_shipping_eur": null,
+      "unpriced_items": [
+        {
+          "mpn": "R82EC3100DQ70J",
+          "quantity": 4
+        }
+      ]
+    },
+    "procurement_state": "research_BOM_live_orderability_and_delivered_quote_unverified",
+    "result_file": "results/runs/20261009T075833Z_d772fead/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "failed",
+    "suite_sha256": "b16f6f18ab22091be2b56a813f403d77a3c3d0e524c883225ad75b234898e91c"
+  },
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "candidate_0010",
+    "eligible": false,
+    "experiment_id": "20261009T075914Z_8810416a",
+    "failure_reasons": {
+      "balance": "ngspice exit 0: Warning",
+      "distortion": "ngspice exit 0: Warning",
+      "frequency_response": "ngspice exit 0: Warning",
+      "headroom": "ngspice exit 0: Warning",
+      "loading": "ngspice exit 0: Warning",
+      "monte_carlo": "ngspice exit 0: Warning",
+      "noise": "ngspice exit 0: Warning",
+      "operating_point": "ngspice exit 0: Warning",
+      "output_impedance": "ngspice exit 0: Warning",
+      "phantom_supply": "ngspice exit 0: Warning",
+      "semiconductor_corners": "ngspice exit 0: Warning",
+      "stability": "ngspice exit 0: Warning",
+      "startup": "ngspice exit 0: Warning",
+      "temperature": "ngspice exit 0: Warning"
+    },
+    "family": "bootstrap",
+    "graph": {
+      "device_histogram": {
+        "C": 10,
+        "R": 27,
+        "V": 22
+      },
+      "graph_nodes": 110,
+      "graph_signature": "cd86fc34f7f3e203e739db833614f09def05ded9e50e76b6afc841c1b9cdc38b"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "research_candidate",
+    "metrics": {
+      "component_count": 40
+    },
+    "niche": {
+      "active_device_count": 6,
+      "bias": "fixed_parts",
+      "bootstrap": true,
+      "common_mode": "divider",
+      "feedback": "unity_voltage_guard",
+      "input_device": "CMOS",
+      "output": "discrete_NPN_differential_fixed_degeneration",
+      "reference": "single_ended",
+      "sensing": "voltage",
+      "servo": false
+    },
+    "novelty_nearest": 0.0,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unscreened_no_clearance",
+    "procurement_cost": {
+      "confirmed_delivered_eur": null,
+      "digikey_shipping_eur_observed": 25,
+      "digikey_shipping_tax_basis": "unknown: EUR25 gross or EUR29.75 if net under19% VAT",
+      "formula": "1.19*(DigiKey net basket including unknown part prices) + DigiKey shipping gross + TME gross basket + TME shipping gross + applicable import/payment/fees; not a confirmed quote",
+      "import_payment_fees_eur": null,
+      "priced_items_net_eur_scenario": 10.46,
+      "priced_items_vat_inclusive_eur_scenario": 12.4474,
+      "scope": "Electronics only. Mixed-age catalogue scenarios; unavailable parents not presently purchasable. All six comparison BOMs must never be bought. No unused specimens/matching services.",
+      "tme_shipping_eur": null,
+      "unpriced_items": [
+        {
+          "mpn": "R82EC3100DQ70J",
+          "quantity": 1
+        }
+      ]
+    },
+    "procurement_state": "research_BOM_live_orderability_and_delivered_quote_unverified",
+    "result_file": "results/runs/20261009T075914Z_8810416a/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "failed",
+    "suite_sha256": "b16f6f18ab22091be2b56a813f403d77a3c3d0e524c883225ad75b234898e91c"
+  }
+]

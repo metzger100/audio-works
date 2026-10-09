@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
+"""Use the outgoing dispatcher; unstaged tooling cannot substitute push checks."""
+
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
+
+root = subprocess.check_output(["git", "rev-parse", "--show-toplevel"], text=True).strip()
+updates = sys.stdin.read()
+try:
+    for line in updates.splitlines():
+        fields = line.split()
+        if len(fields) != 4:
+            raise ValueError("Malformed outgoing Git ref")
+        if set(fields[1]) == {"0"}:
+            continue
+        revision = subprocess.check_output(
+            ["git", "rev-parse", fields[1] + "^{commit}"], text=True
+        ).strip()
+        dispatcher = subprocess.check_output(["git", "show", revision + ":tools/hook_gate.py"])
+        with tempfile.TemporaryDirectory(prefix="audio-works-push-") as folder:
+            script = Path(folder) / "gate.py"
+            script.write_bytes(dispatcher)
+            result = subprocess.run(
+                [sys.executable, str(script), "push"], input=updates, text=True, check=False
+            )
+            raise SystemExit(result.returncode)
+except (OSError, ValueError, subprocess.CalledProcessError) as error:
+    print(f"Quality gate: {error}", file=sys.stderr)
+    raise SystemExit(1) from error

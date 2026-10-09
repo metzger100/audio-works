@@ -1,0 +1,295 @@
+[
+  {
+    "analysis_domain": "periodic_mechanism_control",
+    "backend": "ngspice",
+    "candidate_id": "candidate_0006",
+    "eligible": false,
+    "experiment_id": "20261009T073519Z_7e3ec6c2",
+    "failure_reasons": {
+      "operating_point": "ngspice exit 0: Warning"
+    },
+    "family": "floating",
+    "graph": {
+      "device_histogram": {
+        "B": 3,
+        "C": 14,
+        "R": 25,
+        "V": 23
+      },
+      "graph_nodes": 120,
+      "graph_signature": "5532c6eabd99ba6a04cc22db159aaf090e4ba7dd0520968a4e9dfa48be0d65a4"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "research_candidate",
+    "metrics": {},
+    "niche": {
+      "active_device_count": 5,
+      "bias": "fixed_parts",
+      "bootstrap": false,
+      "common_mode": "divider",
+      "feedback": "synchronous_demodulation_control",
+      "input_device": "CMOS",
+      "output": "differential_real_devices",
+      "reference": "floating_bridge",
+      "sensing": "carrier_capacitance",
+      "servo": false
+    },
+    "novelty_nearest": 0.49411764705882355,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unscreened_no_clearance",
+    "procurement_state": "research_BOM_live_orderability_and_delivered_quote_unverified",
+    "result_file": "results/runs/20261009T073519Z_7e3ec6c2/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "failed",
+    "suite_sha256": "13e16b75b18d79b18b8e5fed967056f792772b22161253e0ec281e6140e8bd51"
+  },
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "candidate_0007",
+    "eligible": false,
+    "experiment_id": "20261009T074905Z_eed9e3eb",
+    "failure_reasons": {},
+    "family": "conventional_jfet",
+    "graph": {
+      "device_histogram": {
+        "C": 10,
+        "R": 31,
+        "V": 17
+      },
+      "graph_nodes": 106,
+      "graph_signature": "b4b89dc8cb35bbf49c0857a59614d934cb155314ca58306af91d3bbc65b309de"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "research_candidate",
+    "metrics": {
+      "conductor_current_mismatch_fraction": 0.0,
+      "current_a": 0.00410354597735262,
+      "internal_rail_v": 13.55577961387623,
+      "polarization_dc_v": 26.100123548895706,
+      "supplied_power_w": 0.19697020691292577,
+      "terminal_power_w": 0.1397004632232984
+    },
+    "niche": {
+      "active_device_count": 5,
+      "bias": "fixed_parts",
+      "bootstrap": false,
+      "common_mode": "divider",
+      "feedback": "source_degeneration",
+      "input_device": "JFET",
+      "output": "discrete_NPN_differential_fixed_degeneration",
+      "reference": "single_ended",
+      "sensing": "voltage",
+      "servo": false
+    },
+    "novelty_nearest": 0.3565217391304348,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unscreened_no_clearance",
+    "procurement_state": "research_BOM_live_orderability_and_delivered_quote_unverified",
+    "result_file": "results/runs/20261009T074905Z_eed9e3eb/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "incomplete",
+    "suite_sha256": "5fa8a2080f9a4fd62140e0e558a618092b4fdb87c52408bbb86500c14ebe60aa"
+  },
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "candidate_0008",
+    "eligible": false,
+    "experiment_id": "20261009T074906Z_cf107ee3",
+    "failure_reasons": {},
+    "family": "unconventional_jfet",
+    "graph": {
+      "device_histogram": {
+        "C": 11,
+        "R": 49,
+        "V": 23
+      },
+      "graph_nodes": 154,
+      "graph_signature": "f5e417ff02f8aa58302bf8f9cd923de67dc43a4b50766f1bc266f8c2db796753"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "research_candidate",
+    "metrics": {
+      "conductor_current_mismatch_fraction": 0.0,
+      "current_a": 0.005150433655753722,
+      "internal_rail_v": 11.010303405703981,
+      "polarization_dc_v": 22.546161868843356,
+      "supplied_power_w": 0.2472208154761787,
+      "terminal_power_w": 0.15700260124544657
+    },
+    "niche": {
+      "active_device_count": 7,
+      "bias": "source_servo",
+      "bootstrap": false,
+      "common_mode": "divider",
+      "feedback": "slow_source_current_servo",
+      "input_device": "JFET",
+      "output": "discrete_NPN_differential_fixed_degeneration",
+      "reference": "single_ended",
+      "sensing": "voltage",
+      "servo": true
+    },
+    "novelty_nearest": 0.3712418300653595,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unscreened_no_clearance",
+    "procurement_state": "research_BOM_live_orderability_and_delivered_quote_unverified",
+    "result_file": "results/runs/20261009T074906Z_cf107ee3/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "incomplete",
+    "suite_sha256": "5fa8a2080f9a4fd62140e0e558a618092b4fdb87c52408bbb86500c14ebe60aa"
+  },
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "candidate_0010",
+    "eligible": false,
+    "experiment_id": "20261009T074907Z_1697b862",
+    "failure_reasons": {
+      "operating_point": "ngspice exit 0: Warning"
+    },
+    "family": "bootstrap",
+    "graph": {
+      "device_histogram": {
+        "C": 10,
+        "R": 27,
+        "V": 22
+      },
+      "graph_nodes": 110,
+      "graph_signature": "cd86fc34f7f3e203e739db833614f09def05ded9e50e76b6afc841c1b9cdc38b"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "research_candidate",
+    "metrics": {},
+    "niche": {
+      "active_device_count": 6,
+      "bias": "fixed_parts",
+      "bootstrap": true,
+      "common_mode": "divider",
+      "feedback": "unity_voltage_guard",
+      "input_device": "CMOS",
+      "output": "discrete_NPN_differential_fixed_degeneration",
+      "reference": "single_ended",
+      "sensing": "voltage",
+      "servo": false
+    },
+    "novelty_nearest": 0.36339285714285713,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unscreened_no_clearance",
+    "procurement_state": "research_BOM_live_orderability_and_delivered_quote_unverified",
+    "result_file": "results/runs/20261009T074907Z_1697b862/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "failed",
+    "suite_sha256": "5fa8a2080f9a4fd62140e0e558a618092b4fdb87c52408bbb86500c14ebe60aa"
+  },
+  {
+    "analysis_domain": "periodic_mechanism_control",
+    "backend": "ngspice",
+    "candidate_id": "candidate_0009",
+    "eligible": false,
+    "experiment_id": "20261009T074907Z_7f820c8b",
+    "failure_reasons": {},
+    "family": "floating",
+    "graph": {
+      "device_histogram": {
+        "B": 3,
+        "C": 14,
+        "E": 4,
+        "R": 23,
+        "V": 3
+      },
+      "graph_nodes": 81,
+      "graph_signature": "80d7fd503e6b2c6219fb89bcd12a0a225e5c29845a57edc97defab145bbd368e"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "research_candidate",
+    "metrics": {
+      "conductor_current_mismatch_fraction": 0.0,
+      "current_a": 0.0012342512135386,
+      "internal_rail_v": 20.464388532832338,
+      "polarization_dc_v": 32.17955319629263,
+      "supplied_power_w": 0.0592440582498528,
+      "terminal_power_w": 0.054063056276181645
+    },
+    "niche": {
+      "active_device_count": 1,
+      "bias": "fixed_parts",
+      "bootstrap": false,
+      "common_mode": "divider",
+      "feedback": "synchronous_demodulation_control",
+      "input_device": "ideal_bridge_control",
+      "output": "ideal_differential_control",
+      "reference": "floating_bridge",
+      "sensing": "carrier_capacitance",
+      "servo": false
+    },
+    "novelty_nearest": 0.45803571428571427,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unscreened_no_clearance",
+    "procurement_state": "research_BOM_live_orderability_and_delivered_quote_unverified",
+    "result_file": "results/runs/20261009T074907Z_7f820c8b/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "incomplete",
+    "suite_sha256": "5fa8a2080f9a4fd62140e0e558a618092b4fdb87c52408bbb86500c14ebe60aa"
+  }
+]

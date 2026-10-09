@@ -1,0 +1,212 @@
+- id: lsk170a
+  manufacturer: Linear Systems
+  exact_variant: LSK170A TO-92 3L ROHS
+  family: discrete_n_jfet
+  package: TO-92 3L
+  circuit_roles:
+  - high_impedance
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.linearsystems.com/jfetamplifierssingles/lsk170-series
+  models:
+  - id: lsk170a_vendor
+    path: semiconductor/vendor/lsk170a.lib
+    sha256: 6eadbfe9c86ef69795852f3f7be8f66fbe25ef8caa4de1fa942f8a4af6347409
+    version: 03/16/2026
+    source_url: https://www.linearsystems.com/_files/ugd/4be30b_c1ab091e16024893879338ec7c8c1db4.pdf
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: native .model
+    subcircuit: LSK170A
+    primitive: J
+    parent_model_id: null
+    ngspice_behavior: null
+    pin_order: native J D G S; physical TO92 D1 G2 S3; other packages differ
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: not_yet_tested
+    behavior_validation: not_yet_characterized
+    document_ancestor_sha256: 1d384f4ee3510906a80798188a8a35bd8208ab053b81190c6896a329a1ef62a1
+  - id: lsk170a_syntax_r1
+    path: semiconductor/vendor/lsk170a_metadata_r1.lib
+    sha256: aaa2de4916c05f6a03b343df26e8f4dc0ae1363226595d886e3b62b6b1f94e99
+    version: 03/16/2026; authored metadata r1
+    source_url: https://www.linearsystems.com/_files/ugd/4be30b_c1ab091e16024893879338ec7c8c1db4.pdf
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: native .model
+    subcircuit: LSK170A
+    primitive: J
+    parent_model_id: lsk170a_vendor
+    ngspice_behavior: null
+    pin_order: native J D G S; physical TO92 D1 G2 S3; other packages differ
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: all_planned_jobs_run
+    behavior_validation: disagreement
+    document_ancestor_sha256: 1d384f4ee3510906a80798188a8a35bd8208ab053b81190c6896a329a1ef62a1
+    validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      lsk170a_syntax_r1:
+      - behavior: idss_25c
+        status: pass
+        evidence: guaranteed_limit
+        condition: Doc201110 A22 table2 VDS10V VGS0 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_10
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; Doc201110 A22 table2
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_1000
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; Doc201110 A22 table2
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: ciss
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: LSK170 table2 VDS15V ID100uA f1MHz
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: reverse_gate_leak
+        status: pass
+        evidence: guaranteed_limit
+        condition: 25C VDS0 VGS-30V TI or -10V Linear; bound includes fixture GMIN
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  procurement_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  readiness: research_only_no_blanket_behavior_qualification
+  patent_status: technical_feature_flags_only_exact_claim_status_screen_incomplete
+  validation_report: research/parts_database_expansion_001.md
+  unqualified_behavior:
+  - production correlated variation
+  - model omissions are not zero
+  - candidate combination
+  - physical P48 implementation
+  - capsule coupling
+  represented_behavior:
+    scope: model equations/header inspected; behavior evidence is independent from
+      loading
+  datasheet:
+    url: https://www.linearsystems.com/_files/ugd/7e8069_a086ff7323054b5da3b91e364c90b3d4.pdf
+    version: Doc201110 A22 19Nov2019
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_lsk170a.pdf
+    sha256: a1657555b571914568504f5e90efb1868ef76ec63b4a0e5d1560d710482e0cf3
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+- id: lsk389a
+  manufacturer: Linear Systems
+  exact_variant: LSK389A SOIC 8L ROHS
+  family: integrated_dual_n_jfet
+  package: SOIC-8
+  circuit_roles:
+  - high_impedance
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.linearsystems.com/jfet-amplifiers-duals/lsk389-series
+  models:
+  - id: lsk389a_vendor
+    path: semiconductor/vendor/lsk389a.lib
+    sha256: c458cc0648f4c017d13bbb8454894b06927c934f431d02bb68505f94e8eea8dd
+    version: Rev2 18May2026
+    source_url: https://www.linearsystems.com/_files/ugd/4be30b_3b75f40e1a364550ac5a47dd56b4eff6.pdf
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: native .model
+    subcircuit: LSK389A_UPDATED
+    primitive: J
+    parent_model_id: null
+    ngspice_behavior: null
+    pin_order: native J D G S one half; verify physical substrate pins before candidate
+      integration
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: failed_isolated_load_check
+    behavior_validation: uncharacterized_load_failed
+    document_ancestor_sha256: 66eb1b112b6fc8751e63b59ab0871e81981479aa40f1ba490a498908301d04ce
+    load_record: results/device_models/20261009T135500Z_partsload_551b10d1/results.json
+  - id: lsk389a_syntax_r1
+    path: semiconductor/vendor/lsk389a_metadata_r1.lib
+    sha256: f81f63ea5975db8cce4183711db8beaa80deb36d067e482c92dedf27763ee271
+    version: Rev2 18May2026 metadata-r1
+    source_url: https://www.linearsystems.com/_files/ugd/4be30b_3b75f40e1a364550ac5a47dd56b4eff6.pdf
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: native .model
+    subcircuit: LSK389A_UPDATED
+    primitive: J
+    parent_model_id: lsk389a_vendor
+    ngspice_behavior: null
+    pin_order: native J D G S one half; verify physical substrate pins before candidate
+      integration
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: failed_strict_control
+    behavior_validation: only conditioned accepted rows; omissions unresolved
+    document_ancestor_sha256: 66eb1b112b6fc8751e63b59ab0871e81981479aa40f1ba490a498908301d04ce
+    load_record: results/device_models/20261009T145346Z_parts2_742caaa3/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  procurement_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  readiness: research_only_no_blanket_behavior_qualification
+  patent_status: technical_feature_flags_only_exact_claim_status_screen_incomplete
+  validation_report: research/parts_database_expansion_001.md
+  unqualified_behavior:
+  - production correlated variation
+  - model omissions are not zero
+  - candidate combination
+  - physical P48 implementation
+  - capsule coupling
+  represented_behavior:
+    scope: model equations/header inspected; behavior evidence is independent from
+      loading
+  datasheet:
+    url: https://www.linearsystems.com/_files/ugd/7e8069_c90834b817214602abcbf263293295f2.pdf
+    version: Doc201122 A27 23Jun2023
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_lsk389a.pdf
+    sha256: da78812493368ad6d54396693d05aa7561b7959e636c5bd52f164a2991b7d7a0

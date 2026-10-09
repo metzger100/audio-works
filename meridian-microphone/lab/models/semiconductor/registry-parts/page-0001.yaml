@@ -1,0 +1,11 @@
+schema_version: 2
+revision: parts-expansion-002-r1
+date: '2026-10-09'
+previous_revision: parts-expansion-001-r1
+procurement_refresh: research/procurement/semiconductors_2026-10-09.yaml
+status: behavior_specific_characterization_no_production_qualification
+qualification_policy: Typical agreement is not a production guarantee; unknown !=
+  zero; see device_model_validation.md
+devices:
+  $include: 0007-devices.yaml
+parts_evidence_matrix: research/parts_database_expansion_001.yaml

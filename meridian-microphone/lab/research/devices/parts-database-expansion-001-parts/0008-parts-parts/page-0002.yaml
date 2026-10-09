@@ -1,0 +1,223 @@
+- device_id: mmbfj113
+  manufacturer: onsemi
+  exact_mpn: MMBFJ113
+  package: SOT-23
+  roles:
+  - high_impedance
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: unverified_exact_order_code
+    checked_date: '2026-10-05'
+    source_url: https://www.onsemi.com/design/tools-software/product-recommendation-tools-plus/jfet/products
+  model_ids: []
+  models: []
+  datasheet:
+    url: https://www.onsemi.com/download/data-sheet/pdf/mmbfj113-d.pdf
+    retrieved_date: '2026-10-05'
+    local_path: null
+    sha256: null
+  sourcing_register: research/procurement/semiconductors_2026-10-05.yaml
+  validation_record: null
+  candidate_combination_qualified: false
+- device_id: jfe2140
+  manufacturer: Texas Instruments
+  exact_mpn: JFE2140DR
+  package: SOIC-8 D
+  roles:
+  - high_impedance
+  - protection
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      jfe2140_vendor:
+      - behavior: idss_25c
+        status: pass
+        evidence: guaranteed_limit
+        condition: SLPS730B table6.5 VDS10V VGS0 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.0001_10
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.0001_1000
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_10
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_1000
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: current_noise_1khz
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: JFE2140 table6.5 VDS5V ID2mA 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: reverse_gate_leak
+        status: fail
+        evidence: guaranteed_limit
+        condition: 25C VDS0 VGS-30V TI or -10V Linear; bound includes fixture GMIN
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://www.ti.com/product/JFE2140
+  model_ids:
+  - jfe2140_vendor
+  models:
+  - id: jfe2140_vendor
+    path: semiconductor/vendor/jfe2140.lib
+    sha256: b872775746e2be5b00347664128b41c86c1483be224be8bc3780dc533c5fc2e0
+    version: Final 1.0 16AUG2021
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: disagreement
+    primitive: X
+    runnability: all_planned_jobs_run
+    load_record: null
+    pin_order: D G S VCH VCL; one half, physical pins 2 4 1 3 7; second half 6 8 5
+      3 7
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/jfe2140.pdf
+    version: SLPS730B August 2023
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_jfe2140.pdf
+    sha256: baeb38d1596ab468e9c8d0443afc5286e90fe3074001a81c660258767deb46a3
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  candidate_combination_qualified: false
+- device_id: lsk170a
+  manufacturer: Linear Systems
+  exact_mpn: LSK170A TO-92 3L ROHS
+  package: TO-92 3L
+  roles:
+  - high_impedance
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      lsk170a_syntax_r1:
+      - behavior: idss_25c
+        status: pass
+        evidence: guaranteed_limit
+        condition: Doc201110 A22 table2 VDS10V VGS0 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_10
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; Doc201110 A22 table2
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_1000
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; Doc201110 A22 table2
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: ciss
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: LSK170 table2 VDS15V ID100uA f1MHz
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: reverse_gate_leak
+        status: pass
+        evidence: guaranteed_limit
+        condition: 25C VDS0 VGS-30V TI or -10V Linear; bound includes fixture GMIN
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.linearsystems.com/jfetamplifierssingles/lsk170-series
+  model_ids:
+  - lsk170a_vendor
+  - lsk170a_syntax_r1
+  models:
+  - id: lsk170a_vendor
+    path: semiconductor/vendor/lsk170a.lib
+    sha256: 6eadbfe9c86ef69795852f3f7be8f66fbe25ef8caa4de1fa942f8a4af6347409
+    version: 03/16/2026
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: not_yet_characterized
+    primitive: J
+    runnability: not_yet_tested
+    load_record: null
+    pin_order: native J D G S; physical TO92 D1 G2 S3; other packages differ
+  - id: lsk170a_syntax_r1
+    path: semiconductor/vendor/lsk170a_metadata_r1.lib
+    sha256: aaa2de4916c05f6a03b343df26e8f4dc0ae1363226595d886e3b62b6b1f94e99
+    version: 03/16/2026; authored metadata r1
+    parent_model_id: lsk170a_vendor
+    acquisition: valid_spice
+    behavior: disagreement
+    primitive: J
+    runnability: all_planned_jobs_run
+    load_record: null
+    pin_order: native J D G S; physical TO92 D1 G2 S3; other packages differ
+  datasheet:
+    url: https://www.linearsystems.com/_files/ugd/7e8069_a086ff7323054b5da3b91e364c90b3d4.pdf
+    version: Doc201110 A22 19Nov2019
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_lsk170a.pdf
+    sha256: a1657555b571914568504f5e90efb1868ef76ec63b4a0e5d1560d710482e0cf3
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  candidate_combination_qualified: false

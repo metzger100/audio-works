@@ -1,0 +1,33 @@
+{
+  "all_requirements_pass_fraction": null,
+  "binomial_95_interval": [
+    0.6165237631507364,
+    0.9844863961845861
+  ],
+  "cases": {
+    "$include": "0019-cases.json"
+  },
+  "distributions": "Independent uniform scenario ranges; leakage log-uniform; not manufacturer distributions",
+  "failures": 2,
+  "median": 0.3026504000955612,
+  "metric": "response_deviation_db",
+  "metric_sample_count": 16,
+  "missing_metric_count": 0,
+  "observed_pass_fraction": 0.875,
+  "p95": 1.3580936864737663,
+  "p99": 1.680883717592328,
+  "passing": 14,
+  "reason": "Assumed scenario distributions and screening coverage; real production statistics unknown.",
+  "samples": 16,
+  "screened_requirements": [
+    "current",
+    "positive_polarization",
+    "frequency_response"
+  ],
+  "seed": 94047,
+  "simulation_error_count": 0,
+  "statistics_conditioned_on_successful_simulation": true,
+  "statistics_include_requirement_failures": true,
+  "worst_observed": 1.7615812253719685,
+  "yield_claim": false
+}

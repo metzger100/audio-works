@@ -1,0 +1,282 @@
+[
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "candidate_0001",
+    "eligible": false,
+    "experiment_id": "20261009T073506Z_1cda48d6",
+    "failure_reasons": {
+      "operating_point": "ngspice exit 0: Warning"
+    },
+    "family": "conventional_jfet",
+    "graph": {
+      "device_histogram": {
+        "C": 10,
+        "R": 29,
+        "V": 18
+      },
+      "graph_nodes": 105,
+      "graph_signature": "0170de5646c2637f3543cc23db15df3dc133b61c910c837d3de8fc5d8bb5de88"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "research_candidate",
+    "metrics": {},
+    "niche": {
+      "active_device_count": 4,
+      "bias": "fixed_parts",
+      "bootstrap": false,
+      "common_mode": "divider",
+      "feedback": "source_degeneration",
+      "input_device": "JFET",
+      "output": "differential_real_devices",
+      "reference": "single_ended",
+      "sensing": "voltage",
+      "servo": false
+    },
+    "novelty_nearest": 0.7154929577464788,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unscreened_no_clearance",
+    "procurement_state": "research_BOM_live_orderability_and_delivered_quote_unverified",
+    "result_file": "results/runs/20261009T073506Z_1cda48d6/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "failed",
+    "suite_sha256": "13e16b75b18d79b18b8e5fed967056f792772b22161253e0ec281e6140e8bd51"
+  },
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "candidate_0002",
+    "eligible": false,
+    "experiment_id": "20261009T073508Z_e9040470",
+    "failure_reasons": {
+      "operating_point": "ngspice exit 0: Warning"
+    },
+    "family": "unconventional_jfet",
+    "graph": {
+      "device_histogram": {
+        "C": 11,
+        "R": 36,
+        "V": 23
+      },
+      "graph_nodes": 131,
+      "graph_signature": "1261c7e149f7cc7e4c86b6e33a9917479bc6b92dd87793abf476671292d0b1a7"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "research_candidate",
+    "metrics": {},
+    "niche": {
+      "active_device_count": 5,
+      "bias": "source_servo",
+      "bootstrap": false,
+      "common_mode": "divider",
+      "feedback": "slow_source_current_servo",
+      "input_device": "JFET",
+      "output": "differential_real_devices",
+      "reference": "single_ended",
+      "sensing": "voltage",
+      "servo": true
+    },
+    "novelty_nearest": 0.4755905511811024,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unscreened_no_clearance",
+    "procurement_state": "research_BOM_live_orderability_and_delivered_quote_unverified",
+    "result_file": "results/runs/20261009T073508Z_e9040470/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "failed",
+    "suite_sha256": "13e16b75b18d79b18b8e5fed967056f792772b22161253e0ec281e6140e8bd51"
+  },
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "candidate_0003",
+    "eligible": false,
+    "experiment_id": "20261009T073513Z_e3db0296",
+    "failure_reasons": {
+      "operating_point": "ngspice exit 0: Warning"
+    },
+    "family": "bootstrap",
+    "graph": {
+      "device_histogram": {
+        "C": 10,
+        "R": 25,
+        "V": 18
+      },
+      "graph_nodes": 98,
+      "graph_signature": "ce42ae310881df93a6e00a31c021a4373b897b4d1f29a26612ea547207e50e22"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "research_candidate",
+    "metrics": {},
+    "niche": {
+      "active_device_count": 4,
+      "bias": "fixed_parts",
+      "bootstrap": true,
+      "common_mode": "divider",
+      "feedback": "unity_voltage_guard",
+      "input_device": "CMOS",
+      "output": "differential_real_devices",
+      "reference": "single_ended",
+      "sensing": "voltage",
+      "servo": false
+    },
+    "novelty_nearest": 0.40909090909090906,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unscreened_no_clearance",
+    "procurement_state": "research_BOM_live_orderability_and_delivered_quote_unverified",
+    "result_file": "results/runs/20261009T073513Z_e3db0296/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "failed",
+    "suite_sha256": "13e16b75b18d79b18b8e5fed967056f792772b22161253e0ec281e6140e8bd51"
+  },
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "candidate_0004",
+    "eligible": false,
+    "experiment_id": "20261009T073515Z_03f66e3e",
+    "failure_reasons": {
+      "operating_point": "ngspice exit 0: Warning"
+    },
+    "family": "charge",
+    "graph": {
+      "device_histogram": {
+        "C": 9,
+        "R": 23,
+        "V": 13
+      },
+      "graph_nodes": 83,
+      "graph_signature": "401d70610650458c2cc32d713985274ee17eb9a71353363c58a51a6675c0a447"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "research_candidate",
+    "metrics": {},
+    "niche": {
+      "active_device_count": 3,
+      "bias": "fixed_parts",
+      "bootstrap": false,
+      "common_mode": "divider",
+      "feedback": "capacitive_feedback",
+      "input_device": "CMOS",
+      "output": "differential_real_devices",
+      "reference": "single_ended",
+      "sensing": "charge",
+      "servo": false
+    },
+    "novelty_nearest": 0.4704081632653061,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unscreened_no_clearance",
+    "procurement_state": "research_BOM_live_orderability_and_delivered_quote_unverified",
+    "result_file": "results/runs/20261009T073515Z_03f66e3e/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "failed",
+    "suite_sha256": "13e16b75b18d79b18b8e5fed967056f792772b22161253e0ec281e6140e8bd51"
+  },
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "candidate_0005",
+    "eligible": false,
+    "experiment_id": "20261009T073518Z_30ec6d70",
+    "failure_reasons": {},
+    "family": "no_fet",
+    "graph": {
+      "device_histogram": {
+        "C": 9,
+        "R": 30,
+        "V": 15
+      },
+      "graph_nodes": 99,
+      "graph_signature": "c05d34e2d4d85509927f382bd608120632f7e1bf9b8264a25aac3e9cdfd75937"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "research_candidate",
+    "metrics": {
+      "conductor_current_mismatch_fraction": 0.0,
+      "current_a": 0.0040860226913956,
+      "internal_rail_v": 13.598239831847888,
+      "polarization_dc_v": 22.439521203255307,
+      "supplied_power_w": 0.19612908918698882,
+      "terminal_power_w": 0.1393474167279154
+    },
+    "niche": {
+      "active_device_count": 5,
+      "bias": "fixed_parts",
+      "bootstrap": false,
+      "common_mode": "divider",
+      "feedback": "bipolar_capacitive_feedback",
+      "input_device": "BJT",
+      "output": "differential_real_devices",
+      "reference": "single_ended",
+      "sensing": "charge",
+      "servo": false
+    },
+    "novelty_nearest": 0.42272727272727273,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unscreened_no_clearance",
+    "procurement_state": "research_BOM_live_orderability_and_delivered_quote_unverified",
+    "result_file": "results/runs/20261009T073518Z_30ec6d70/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "incomplete",
+    "suite_sha256": "13e16b75b18d79b18b8e5fed967056f792772b22161253e0ec281e6140e8bd51"
+  }
+]

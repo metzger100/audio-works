@@ -1,10 +1,10 @@
 # Semiconductor evidence library
 
-Current role/part/state view: [expansion002](../../research/parts_database_expansion_002.md). Search with `research/parts_database.py`; its audit compares the view with this canonical registry. Historical TI revisions and unsupported Diotec/LSK389 controls retain independent states; public model bytes remain private.
+Current role/part/state view: [expansion002](../../research/devices/parts-database-expansion-002.md). Search with `research/parts_database.py`; its audit compares the view with this canonical registry. Historical TI revisions and unsupported Diotec/LSK389 controls retain independent states; public model bytes remain private.
 
-Read [the validation report](../../research/device_model_validation.md), [registry](registry.yaml), [reference conditions](references.yaml) and [coupled controls](corners.yaml) together. No complete production device set is qualified. Scoped agreement does not establish production noise, manufacturing yield, floating P48 operation or a build-ready BOM.
+Read [the validation report](../../research/devices/device-model-validation.md), [registry](registry.yaml), [reference conditions](references.yaml) and [coupled controls](corners.yaml) together. No complete production device set is qualified. Scoped agreement does not establish production noise, manufacturing yield, floating P48 operation or a build-ready BOM.
 
-The [2026-10-09 follow-up](../../research/device_model_validation.md#current-additions-and-coverage) adds the unmodified Vishay 2N7002K Rev. B model and retains output/capacitance/temperature disagreement and missing noise/leakage/process behavior. [Dated procurement](../../research/procurement/semiconductors_2026-10-09.yaml) and [decisions](../../research/device_model_decisions.md) preserve the separate sourcing and readiness limits.
+The [2026-10-09 follow-up](../../research/devices/device-model-validation.md#current-additions-and-coverage) adds the unmodified Vishay 2N7002K Rev. B model and retains output/capacitance/temperature disagreement and missing noise/leakage/process behavior. [Dated procurement](../../research/procurement/semiconductors_2026-10-09.yaml) and [decisions](../../research/devices/device-model-decisions.md) preserve the separate sourcing and readiness limits.
 
 To reproduce only the MOS follow-up, first acquire its pinned public archive and references, then characterize with a preserved parent:
 
@@ -53,4 +53,4 @@ Both bipolar files omit KF/1/f. A converged white-noise-only device cannot quali
 
 ## Parts expansion 001
 
-[Role evidence and scoped results](../../research/parts_database_expansion_001.md) · [searchable matrix](../../research/parts_database_expansion_001.yaml) · [sourcing](../../research/procurement/parts_expansion_001_2026-10-09.yaml).17 exact devices/21 acquired SPICE files across15 types; six new isolated controls, no blanket qualification. Acquisition now checks literal/syntax derivatives and their immutable ancestors. The final finite control uses research/parts_controls_001.py and its frozen plan. Native JFET/diode models describe one half of a dual package where documented. Original metadata/ENDS failures remain alongside authored children; never include parent and child together.
+[Role evidence and scoped results](../../research/devices/parts-database-expansion-001.md) · [searchable matrix](../../research/devices/parts-database-expansion-001.yaml) · [sourcing](../../research/procurement/parts_expansion_001_2026-10-09.yaml).17 exact devices/21 acquired SPICE files across15 types; six new isolated controls, no blanket qualification. Acquisition now checks literal/syntax derivatives and their immutable ancestors. The final finite control uses research/parts_controls_001.py and its frozen plan. Native JFET/diode models describe one half of a dual package where documented. Original metadata/ENDS failures remain alongside authored children; never include parent and child together.

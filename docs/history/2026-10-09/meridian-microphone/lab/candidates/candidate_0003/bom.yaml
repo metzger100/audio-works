@@ -1,0 +1,648 @@
+schema_version: 1
+candidate: candidate_0003
+intended_equipment: one possible finished microphone; alternatives are not a shopping
+  list
+capsule:
+  mpn: K47FRB
+  quantity: 1
+  safe_polarization: unknown
+  included_in_electronics_cost: false
+procurement_register: ../../research/procurement/architecture_parts_2026-10-09.yaml
+physical_parts:
+- reference: Rharvestp
+  part_id: RC0603FR-072K2L
+  quantity: 1
+  value: 2200
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: &id001
+    power_w_at_70C: 0.1
+    working_voltage_v: 75
+    tcr_ppm_per_C: 100
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-072K2L
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-072K2L
+- reference: Rharvestn
+  part_id: RC0603FR-072K2L
+  quantity: 1
+  value: 2200
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: *id001
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-072K2L
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-072K2L
+- reference: Craw
+  part_id: EEU-FR1J470
+  quantity: 1
+  value: 4.7e-05
+  unit: F
+  tolerance_fraction: 0.2
+  technology: Polar aluminium electrolytic FR-A
+  package: Radial 6.3 x 12.7mm; 2.5mm pitch
+  ratings: &id003
+    voltage_v: 63
+    temperature_C: 105
+    life_hours_at_105C: 5000
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/EEU-FR1J470
+  source_date: '2026-10-09'
+  manufacturer_document: null
+- reference: Rregtop
+  part_id: RC0603FR-07100KL
+  quantity: 1
+  value: 100000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: &id002
+    power_w_at_70C: 0.1
+    working_voltage_v: 75
+    tcr_ppm_per_C: 100
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-07100KL
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL
+- reference: Rregbottom
+  part_id: RC0603FR-07100KL
+  quantity: 1
+  value: 100000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: *id002
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-07100KL
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL
+- reference: Cregbase
+  part_id: R82EC4100DQ70J
+  quantity: 1
+  value: 1.0e-06
+  unit: F
+  tolerance_fraction: 0.05
+  technology: Metallized PET film R82
+  package: Radial 7.2 x 6 x 11.1mm; 5mm pitch
+  ratings: &id007
+    voltage_dc_v: 100
+    voltage_ac_v: 63
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/R82EC4100DQ70J
+  source_date: '2026-10-09'
+  manufacturer_document: https://www.digikey.com/htmldatasheets/production/3447437/0/0/1/r82dc3680dq60j.pdf
+- reference: Qreg
+  part_id: BC846B,215
+  quantity: 1
+  value: BC846B
+  unit: device
+  tolerance_fraction: null
+  technology: NPN bipolar
+  package: SOT-23
+  ratings:
+    vceo_v: 65
+    ic_a: 0.1
+    note: Package power/SOA and maximum temperature require mounting-specific evaluation
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/BC846B,215
+  source_date: '2026-10-09'
+  manufacturer_document: https://assets.nexperia.com/documents/data-sheet/BC846_SER.pdf
+- reference: Crail
+  part_id: EEU-FR1J470
+  quantity: 1
+  value: 4.7e-05
+  unit: F
+  tolerance_fraction: 0.2
+  technology: Polar aluminium electrolytic FR-A
+  package: Radial 6.3 x 12.7mm; 2.5mm pitch
+  ratings: *id003
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/EEU-FR1J470
+  source_date: '2026-10-09'
+  manufacturer_document: null
+- reference: Rmidtop
+  part_id: RC0603FR-0710KL
+  quantity: 1
+  value: 10000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: &id004
+    power_w_at_70C: 0.1
+    working_voltage_v: 75
+    tcr_ppm_per_C: 100
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-0710KL
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL
+- reference: Rmidbottom
+  part_id: RC0603FR-0710KL
+  quantity: 1
+  value: 10000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: *id004
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-0710KL
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL
+- reference: Cmid
+  part_id: EEU-FR1J470
+  quantity: 1
+  value: 4.7e-05
+  unit: F
+  tolerance_fraction: 0.2
+  technology: Polar aluminium electrolytic FR-A
+  package: Radial 6.3 x 12.7mm; 2.5mm pitch
+  ratings: *id003
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/EEU-FR1J470
+  source_date: '2026-10-09'
+  manufacturer_document: null
+- reference: Rpolar0
+  part_id: RC0603FR-071ML
+  quantity: 1
+  value: 1000000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: &id005
+    power_w_at_70C: 0.1
+    working_voltage_v: 75
+    tcr_ppm_per_C: 100
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-071ML
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071ML
+- reference: Rpolar1
+  part_id: RC0603FR-071ML
+  quantity: 1
+  value: 1000000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: *id005
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-071ML
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071ML
+- reference: Rpolar2
+  part_id: RC0603FR-071ML
+  quantity: 1
+  value: 1000000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: *id005
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-071ML
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071ML
+- reference: Rpolar3
+  part_id: RC0603FR-071ML
+  quantity: 1
+  value: 1000000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: *id005
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-071ML
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071ML
+- reference: Rpolar4
+  part_id: RC0603FR-071ML
+  quantity: 1
+  value: 1000000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: *id005
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-071ML
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071ML
+- reference: Rpolar5
+  part_id: RC0603FR-071ML
+  quantity: 1
+  value: 1000000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: *id005
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-071ML
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071ML
+- reference: Rpolar6
+  part_id: RC0603FR-071ML
+  quantity: 1
+  value: 1000000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: *id005
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-071ML
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071ML
+- reference: Rpolar7
+  part_id: RC0603FR-071ML
+  quantity: 1
+  value: 1000000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: *id005
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-071ML
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071ML
+- reference: Rpolar8
+  part_id: RC0603FR-071ML
+  quantity: 1
+  value: 1000000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: *id005
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-071ML
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071ML
+- reference: Rpolar9
+  part_id: RC0603FR-071ML
+  quantity: 1
+  value: 1000000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: *id005
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-071ML
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071ML
+- reference: Cpol
+  part_id: R82EC3100DQ70J
+  quantity: 1
+  value: 1.0e-07
+  unit: F
+  tolerance_fraction: 0.05
+  technology: Metallized PET film R82
+  package: Radial 7.2 x 2.5 x 6.6mm; 5mm pitch
+  ratings:
+    voltage_dc_v: 100
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/R82EC3100DQ70J
+  source_date: '2026-10-09'
+  manufacturer_document: https://www.digikey.com/htmldatasheets/production/3447437/0/0/1/r82dc3680dq60j.pdf
+- reference: Rback
+  part_id: RC0603FR-071ML
+  quantity: 1
+  value: 1000000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: *id005
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-071ML
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071ML
+- reference: Rbias
+  part_id: HVA12JA1G00
+  quantity: 1
+  value: 1000000000.0
+  unit: ohm
+  tolerance_fraction: 0.05
+  technology: High-voltage metal film
+  package: Axial 4 x 11mm
+  ratings:
+    power_w: 1.2
+    voltage_limit_v: 8000
+    power_limited_voltage_v: 34641
+    tcr_ppm_per_C: 200
+    vcr_ppm_per_v_max: 20
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/HVA12JA1G00
+  source_date: '2026-10-09'
+  manufacturer_document: https://www.mouser.com/datasheet/2/385/SEI_HVA-3077810.pdf
+- reference: Rbootdc
+  part_id: RC0603FR-071ML
+  quantity: 1
+  value: 1000000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: *id005
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-071ML
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071ML
+- reference: Uinput
+  part_id: OPA197IDBVR
+  quantity: 1
+  value: OPAx197
+  unit: device
+  tolerance_fraction: null
+  technology: CMOS opamp; vendor macro behavioral
+  package: DBV SOT-23-5
+  ratings: &id006
+    recommended_supply_total_v:
+    - 4.5
+    - 36
+    note: No safety/SOA rating inferred from macro convergence
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/OPA197IDBVR
+  source_date: '2026-10-09'
+  manufacturer_document: https://www.ti.com/lit/ds/symlink/opa197.pdf
+- reference: Uguard
+  part_id: OPA197IDBVR
+  quantity: 1
+  value: OPAx197
+  unit: device
+  tolerance_fraction: null
+  technology: CMOS opamp; vendor macro behavioral
+  package: DBV SOT-23-5
+  ratings: *id006
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/OPA197IDBVR
+  source_date: '2026-10-09'
+  manufacturer_document: https://www.ti.com/lit/ds/symlink/opa197.pdf
+- reference: Cboot
+  part_id: R82EC4100DQ70J
+  quantity: 1
+  value: 1.0e-06
+  unit: F
+  tolerance_fraction: 0.05
+  technology: Metallized PET film R82
+  package: Radial 7.2 x 6 x 11.1mm; 5mm pitch
+  ratings: *id007
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/R82EC4100DQ70J
+  source_date: '2026-10-09'
+  manufacturer_document: https://www.digikey.com/htmldatasheets/production/3447437/0/0/1/r82dc3680dq60j.pdf
+- reference: Rrear
+  part_id: RC0603FR-071KL
+  quantity: 1
+  value: 1000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings:
+    power_w_at_70C: 0.1
+    working_voltage_v: 75
+    tcr_ppm_per_C: 100
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-071KL
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071KL
+- reference: Rinvertin
+  part_id: RC0603FR-0710KL
+  quantity: 1
+  value: 10000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: *id004
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-0710KL
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL
+- reference: Rinvertfb
+  part_id: RC0603FR-0710KL
+  quantity: 1
+  value: 10000
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: *id004
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-0710KL
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL
+- reference: Uoutn
+  part_id: OPA197IDBVR
+  quantity: 1
+  value: OPAx197
+  unit: device
+  tolerance_fraction: null
+  technology: CMOS opamp; vendor macro behavioral
+  package: DBV SOT-23-5
+  ratings: *id006
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/OPA197IDBVR
+  source_date: '2026-10-09'
+  manufacturer_document: https://www.ti.com/lit/ds/symlink/opa197.pdf
+- reference: Routp
+  part_id: RC0603FR-0747RL
+  quantity: 1
+  value: 47
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: &id008
+    power_w_at_70C: 0.1
+    working_voltage_v: 75
+    tcr_ppm_per_C: 100
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-0747RL
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747RL
+- reference: Routn
+  part_id: RC0603FR-0747RL
+  quantity: 1
+  value: 47
+  unit: ohm
+  tolerance_fraction: 0.01
+  technology: Thick film
+  package: 0603 / 1608
+  ratings: *id008
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/RC0603FR-0747RL
+  source_date: '2026-10-09'
+  manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747RL
+- reference: Coutp
+  part_id: EEU-FR1J470
+  quantity: 1
+  value: 4.7e-05
+  unit: F
+  tolerance_fraction: 0.2
+  technology: Polar aluminium electrolytic FR-A
+  package: Radial 6.3 x 12.7mm; 2.5mm pitch
+  ratings: *id003
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/EEU-FR1J470
+  source_date: '2026-10-09'
+  manufacturer_document: null
+- reference: Coutn
+  part_id: EEU-FR1J470
+  quantity: 1
+  value: 4.7e-05
+  unit: F
+  tolerance_fraction: 0.2
+  technology: Polar aluminium electrolytic FR-A
+  package: Radial 6.3 x 12.7mm; 2.5mm pitch
+  ratings: *id003
+  source_record: ../../research/procurement/architecture_parts_2026-10-09.yaml#parts/EEU-FR1J470
+  source_date: '2026-10-09'
+  manufacturer_document: null
+simulation_only: Zero-volt current observers and explicit geometry/leakage controls
+  are not purchases
+substitutes_qualified: []
+build_ready: false
+license: CERN-OHL-S-2.0
+quantity_summary:
+- exact_mpn: RC0603FR-072K2L
+  installed_quantity: 2
+  purchase_quantity_scenario: 2
+  unavoidable_pack_excess_scenario: 0
+  moq: 1
+  retail_pack_size: 1
+  factory_pack_not_ordered: 5000
+  seller: DigiKey Germany
+  unit_price_net_eur_observed: 0.09
+  extended_net_eur_scenario: 0.18
+  evidence_limit: Indexed primary seller catalogue; reported crawl age retained; not
+    live stock or accepted quote
+- exact_mpn: EEU-FR1J470
+  installed_quantity: 5
+  purchase_quantity_scenario: 5
+  unavoidable_pack_excess_scenario: 0
+  moq: 1
+  retail_pack_size: 1
+  factory_pack_not_ordered: null
+  seller: DigiKey Germany
+  unit_price_net_eur_observed: 0.4
+  extended_net_eur_scenario: 2.0
+  evidence_limit: Older German stock/price; frequency/temperature ESR, leakage, reversal
+    and startup stress remain unqualified. No live stock inference.
+- exact_mpn: RC0603FR-07100KL
+  installed_quantity: 2
+  purchase_quantity_scenario: 2
+  unavoidable_pack_excess_scenario: 0
+  moq: 1
+  retail_pack_size: 1
+  factory_pack_not_ordered: 5000
+  seller: DigiKey Germany
+  unit_price_net_eur_observed: 0.09
+  extended_net_eur_scenario: 0.18
+  evidence_limit: Indexed primary seller catalogue; reported crawl age retained; not
+    live stock or accepted quote
+- exact_mpn: R82EC4100DQ70J
+  installed_quantity: 2
+  purchase_quantity_scenario: 2
+  unavoidable_pack_excess_scenario: 0
+  moq: 1
+  retail_pack_size: 1
+  factory_pack_not_ordered: 1400
+  seller: DigiKey Germany
+  unit_price_net_eur_observed: 0.78
+  extended_net_eur_scenario: 1.56
+  evidence_limit: Indexed primary seller catalogue; reported crawl age retained; not
+    live stock or accepted quote
+- exact_mpn: BC846B,215
+  installed_quantity: 1
+  purchase_quantity_scenario: 1
+  unavoidable_pack_excess_scenario: 0
+  moq: 1
+  retail_pack_size: 1
+  factory_pack_not_ordered: 3000
+  seller: TME Germany
+  unit_price_net_eur_observed: 0.08
+  extended_net_eur_scenario: 0.08
+  evidence_limit: Indexed primary seller catalogue; reported crawl age retained; not
+    live stock or accepted quote
+- exact_mpn: RC0603FR-0710KL
+  installed_quantity: 4
+  purchase_quantity_scenario: 4
+  unavoidable_pack_excess_scenario: 0
+  moq: 1
+  retail_pack_size: 1
+  factory_pack_not_ordered: 5000
+  seller: DigiKey Germany
+  unit_price_net_eur_observed: 0.09
+  extended_net_eur_scenario: 0.36
+  evidence_limit: Zero-stock/backorder observation; parents retained as research dependencies
+- exact_mpn: RC0603FR-071ML
+  installed_quantity: 12
+  purchase_quantity_scenario: 12
+  unavoidable_pack_excess_scenario: 0
+  moq: 1
+  retail_pack_size: 1
+  factory_pack_not_ordered: 5000
+  seller: DigiKey Germany
+  unit_price_net_eur_observed: 0.09
+  extended_net_eur_scenario: 1.08
+  evidence_limit: Indexed primary seller catalogue; reported crawl age retained; not
+    live stock or accepted quote
+- exact_mpn: R82EC3100DQ70J
+  installed_quantity: 1
+  purchase_quantity_scenario: 1
+  unavoidable_pack_excess_scenario: 0
+  moq: 1
+  retail_pack_size: 1
+  factory_pack_not_ordered: null
+  seller: DigiKey Germany
+  unit_price_net_eur_observed: null
+  extended_net_eur_scenario: null
+  evidence_limit: Indexed primary seller catalogue; reported crawl age retained; not
+    live stock or accepted quote
+- exact_mpn: HVA12JA1G00
+  installed_quantity: 1
+  purchase_quantity_scenario: 1
+  unavoidable_pack_excess_scenario: 0
+  moq: 1
+  retail_pack_size: 1
+  factory_pack_not_ordered: 1000
+  seller: DigiKey Germany
+  unit_price_net_eur_observed: 0.73
+  extended_net_eur_scenario: 0.73
+  evidence_limit: German distributor filter showed stock/CT price; direct exact product
+    cache miss. CT MOQ1, factory tape-and-box1000 is not a required private pack.
+- exact_mpn: OPA197IDBVR
+  installed_quantity: 3
+  purchase_quantity_scenario: 3
+  unavoidable_pack_excess_scenario: 0
+  moq: 1
+  retail_pack_size: 1
+  factory_pack_not_ordered: 3000
+  seller: DigiKey Germany
+  unit_price_net_eur_observed: 1.8
+  extended_net_eur_scenario: 5.4
+  evidence_limit: Indexed primary seller catalogue; reported crawl age retained; not
+    live stock or accepted quote
+- exact_mpn: RC0603FR-071KL
+  installed_quantity: 1
+  purchase_quantity_scenario: 1
+  unavoidable_pack_excess_scenario: 0
+  moq: 1
+  retail_pack_size: 1
+  factory_pack_not_ordered: 5000
+  seller: DigiKey Germany
+  unit_price_net_eur_observed: 0.09
+  extended_net_eur_scenario: 0.09
+  evidence_limit: Indexed primary seller catalogue; reported crawl age retained; not
+    live stock or accepted quote
+- exact_mpn: RC0603FR-0747RL
+  installed_quantity: 2
+  purchase_quantity_scenario: 2
+  unavoidable_pack_excess_scenario: 0
+  moq: 1
+  retail_pack_size: 1
+  factory_pack_not_ordered: 5000
+  seller: DigiKey Germany
+  unit_price_net_eur_observed: 0.09
+  extended_net_eur_scenario: 0.18
+  evidence_limit: Indexed primary seller catalogue; reported crawl age retained; not
+    live stock or accepted quote
+electronics_cost:
+  confirmed_delivered_eur: null
+  priced_items_net_eur_scenario: 11.84
+  unpriced_items:
+  - mpn: R82EC3100DQ70J
+    quantity: 1
+  priced_items_vat_inclusive_eur_scenario: 14.0896
+  formula: 1.19*(DigiKey net basket including unknown part prices) + DigiKey shipping
+    gross + TME gross basket + TME shipping gross + applicable import/payment/fees;
+    not a confirmed quote
+  digikey_shipping_eur_observed: 25
+  digikey_shipping_tax_basis: 'unknown: EUR25 gross or EUR29.75 if net under19% VAT'
+  tme_shipping_eur: null
+  import_payment_fees_eur: null
+  scope: Electronics only. Mixed-age catalogue scenarios; unavailable parents not
+    presently purchasable. All six comparison BOMs must never be bought. No unused
+    specimens/matching services.
+implementation_qualification: Nominal/tolerance/explicit parasitic controls are rerun.
+  Electrolytic/film ESR/leakage/temperature/excess-noise and joint semiconductor behavior
+  remain gaps; no ideal-value or substitute qualification credit.

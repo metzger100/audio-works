@@ -1,0 +1,137 @@
+{
+  "current_procurement_refresh": {
+    "all_confirmed_delivered_totals_eur": null,
+    "budget_cap_eur": null,
+    "capsule_quantity": 1,
+    "checked_date": "2026-10-09",
+    "matching_service_or_comparison_purchases": false,
+    "method": "Public read-only web retrieval; no basket, checkout, account, supplier contact or purchase",
+    "observations": [
+      {
+        "confirmed_delivered_eur": null,
+        "displayed_currency": "USD",
+        "displayed_price": 131.44,
+        "included_mount": "saddle, mounting post and screws",
+        "lead_time": null,
+        "limitation": "Cached public observation, no accepted Germany quote; no FX conversion into an invented EUR cost.",
+        "moq_verified": null,
+        "private_germany_delivery_verified": false,
+        "reported_crawl_age": "4 days",
+        "retail_pack_verified": null,
+        "safe_polarization_v": null,
+        "shipping_eur": null,
+        "stock_observed": 11,
+        "tax_import_payment_fees_eur": null,
+        "url": "https://store.arienneaudio.com/microphone-capsules/20-26-arienne-audio-flat-k47-microphone-capsule.html#/12-options-cardioid_omni",
+        "variant_observed": "Cardioid/Omni K47FRB"
+      },
+      {
+        "displayed_currency": "EUR",
+        "displayed_price": 90.81,
+        "limitation": "Currency link changed variant. Reject transferring its price to the required Cardioid/Omni capsule.",
+        "reported_crawl_age": "last month",
+        "url": "https://store.arienneaudio.com/microphone-capsules/20-arienne-audio-flat-k47-microphone-capsule.html?SubmitCurrency=1&id_currency=4",
+        "usable_for_K47FRB_quote": false,
+        "variant_observed": "Cardioid K47FBSB"
+      },
+      {
+        "accepted_quote": false,
+        "live_stock": null,
+        "retrieval": "Internal error; page inaccessible through web tool",
+        "url": "https://www.digikey.de/en/products/detail/texas-instruments/JFE150DBVR/18185049"
+      },
+      {
+        "accepted_quote": false,
+        "live_stock": null,
+        "retrieval": "Cache miss",
+        "url": "https://www.digikey.de/en/products/detail/panasonic-industry/EEU-FR1J470/3072280"
+      },
+      {
+        "accepted_quote": false,
+        "exact_part_orderability_confirmed": false,
+        "handling_fee_eur": 0,
+        "observation": "EUR non-business destination terms exist; no minimum order/handling fee. Freight/tax depends on warehouse and courier; product pages alone do not establish a delivered total.",
+        "private_route_confirmed_at_terms_level": true,
+        "reported_crawl_age": "today",
+        "sections_inspected": [
+          5,
+          8,
+          9,
+          10
+        ],
+        "shipping_eur": null,
+        "url": "https://www.digikey.de/en/terms-and-conditions"
+      }
+    ],
+    "parent_registers": [
+      "procurement/architecture_parts_2026-10-09.yaml",
+      "procurement/robust_parts_2026-10-09.yaml"
+    ],
+    "schema_version": 1
+  },
+  "sensitivity_scaling": [
+    {
+      "assumption": "Linear pressure-transfer scaling; unchanged DC/stationary noise. No physical noise qualification.",
+      "candidate": "candidate_0019",
+      "derived_electronics_dba_conditional": 30.377683921724945,
+      "derived_noise_pa_rms": 0.0012395813423409245,
+      "sref_v_per_pa_at_60v": 0.005
+    },
+    {
+      "assumption": "Linear pressure-transfer scaling; unchanged DC/stationary noise. No physical noise qualification.",
+      "candidate": "candidate_0019",
+      "derived_electronics_dba_conditional": 18.336484095165694,
+      "derived_noise_pa_rms": 0.0003098953355852311,
+      "sref_v_per_pa_at_60v": 0.02
+    },
+    {
+      "assumption": "Linear pressure-transfer scaling; unchanged DC/stationary noise. No physical noise qualification.",
+      "candidate": "candidate_0019",
+      "derived_electronics_dba_conditional": 12.31588418188607,
+      "derived_noise_pa_rms": 0.00015494766779261556,
+      "sref_v_per_pa_at_60v": 0.04
+    },
+    {
+      "assumption": "Linear pressure-transfer scaling; unchanged DC/stationary noise. No physical noise qualification.",
+      "candidate": "candidate_0023",
+      "derived_electronics_dba_conditional": 45.66307049750868,
+      "derived_noise_pa_rms": 0.004206974311275832,
+      "sref_v_per_pa_at_60v": 0.005
+    },
+    {
+      "assumption": "Linear pressure-transfer scaling; unchanged DC/stationary noise. No physical noise qualification.",
+      "candidate": "candidate_0023",
+      "derived_electronics_dba_conditional": 33.62187067094943,
+      "derived_noise_pa_rms": 0.001051743577818958,
+      "sref_v_per_pa_at_60v": 0.02
+    },
+    {
+      "assumption": "Linear pressure-transfer scaling; unchanged DC/stationary noise. No physical noise qualification.",
+      "candidate": "candidate_0023",
+      "derived_electronics_dba_conditional": 27.601270757669802,
+      "derived_noise_pa_rms": 0.000525871788909479,
+      "sref_v_per_pa_at_60v": 0.04
+    },
+    {
+      "assumption": "Linear pressure-transfer scaling; unchanged DC/stationary noise. No physical noise qualification.",
+      "candidate": "candidate_0012",
+      "derived_electronics_dba_conditional": 84.53541217033882,
+      "derived_noise_pa_rms": 0.45558265043339563,
+      "sref_v_per_pa_at_60v": 0.005
+    },
+    {
+      "assumption": "Linear pressure-transfer scaling; unchanged DC/stationary noise. No physical noise qualification.",
+      "candidate": "candidate_0012",
+      "derived_electronics_dba_conditional": 72.49421234377957,
+      "derived_noise_pa_rms": 0.11389566260834891,
+      "sref_v_per_pa_at_60v": 0.02
+    },
+    {
+      "assumption": "Linear pressure-transfer scaling; unchanged DC/stationary noise. No physical noise qualification.",
+      "candidate": "candidate_0012",
+      "derived_electronics_dba_conditional": 66.47361243049994,
+      "derived_noise_pa_rms": 0.056947831304174454,
+      "sref_v_per_pa_at_60v": 0.04
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+- device_id: lsk170a
+  manufacturer: Linear Systems
+  exact_mpn: LSK170A TO-92 3L ROHS
+  package: TO-92 3L
+  roles:
+  - high_impedance
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      lsk170a_syntax_r1:
+      - behavior: idss_25c
+        status: pass
+        evidence: guaranteed_limit
+        condition: Doc201110 A22 table2 VDS10V VGS0 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_10
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; Doc201110 A22 table2
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_1000
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; Doc201110 A22 table2
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: ciss
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: LSK170 table2 VDS15V ID100uA f1MHz
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: reverse_gate_leak
+        status: pass
+        evidence: guaranteed_limit
+        condition: 25C VDS0 VGS-30V TI or -10V Linear; bound includes fixture GMIN
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.linearsystems.com/jfetamplifierssingles/lsk170-series
+  model_ids:
+  - lsk170a_vendor
+  - lsk170a_syntax_r1
+  models:
+  - id: lsk170a_vendor
+    path: semiconductor/vendor/lsk170a.lib
+    sha256: 6eadbfe9c86ef69795852f3f7be8f66fbe25ef8caa4de1fa942f8a4af6347409
+    version: 03/16/2026
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: not_yet_characterized
+    primitive: J
+    runnability: not_yet_tested
+    load_record: null
+    external_parameter_dependencies: []
+    compatibility_omissions: []
+  - id: lsk170a_syntax_r1
+    path: semiconductor/vendor/lsk170a_metadata_r1.lib
+    sha256: aaa2de4916c05f6a03b343df26e8f4dc0ae1363226595d886e3b62b6b1f94e99
+    version: 03/16/2026; authored metadata r1
+    parent_model_id: lsk170a_vendor
+    acquisition: valid_spice
+    behavior: disagreement
+    primitive: J
+    runnability: all_planned_jobs_run
+    load_record: null
+    external_parameter_dependencies: []
+    compatibility_omissions: []
+  datasheet:
+    url: https://www.linearsystems.com/_files/ugd/7e8069_a086ff7323054b5da3b91e364c90b3d4.pdf
+    version: Doc201110 A22 19Nov2019
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_lsk170a.pdf
+    sha256: a1657555b571914568504f5e90efb1868ef76ec63b4a0e5d1560d710482e0cf3
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  candidate_combination_qualified: false
+  sourcing:
+    register: research/procurement/parts_expansion_001_2026-10-09.yaml
+    implementation_qualified: false
+    delivered_cost_confirmed_eur: null
+- device_id: lsk389a
+  manufacturer: Linear Systems
+  exact_mpn: LSK389A SOIC 8L ROHS
+  package: SOIC-8
+  roles:
+  - high_impedance
+  states:
+    investigated: true
+    acquired: true
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.linearsystems.com/jfet-amplifiers-duals/lsk389-series
+  model_ids:
+  - lsk389a_vendor
+  - lsk389a_syntax_r1
+  models:
+  - id: lsk389a_vendor
+    path: semiconductor/vendor/lsk389a.lib
+    sha256: c458cc0648f4c017d13bbb8454894b06927c934f431d02bb68505f94e8eea8dd
+    version: Rev2 18May2026
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: uncharacterized_load_failed
+    primitive: J
+    runnability: failed_isolated_load_check
+    load_record: results/device_models/20261009T135500Z_partsload_551b10d1/results.json
+    external_parameter_dependencies: []
+    compatibility_omissions: []
+  - id: lsk389a_syntax_r1
+    path: semiconductor/vendor/lsk389a_metadata_r1.lib
+    sha256: f81f63ea5975db8cce4183711db8beaa80deb36d067e482c92dedf27763ee271
+    version: Rev2 18May2026 metadata-r1
+    parent_model_id: lsk389a_vendor
+    acquisition: valid_spice
+    behavior: only conditioned accepted rows; omissions unresolved
+    primitive: J
+    runnability: failed_strict_control
+    load_record: results/device_models/20261009T145346Z_parts2_742caaa3/results.json
+    external_parameter_dependencies: []
+    compatibility_omissions: []
+  datasheet:
+    url: https://www.linearsystems.com/_files/ugd/7e8069_c90834b817214602abcbf263293295f2.pdf
+    version: Doc201122 A27 23Jun2023
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_lsk389a.pdf
+    sha256: da78812493368ad6d54396693d05aa7561b7959e636c5bd52f164a2991b7d7a0
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: null
+  candidate_combination_qualified: false
+  sourcing:
+    register: research/procurement/parts_expansion_001_2026-10-09.yaml
+    implementation_qualified: false
+    delivered_cost_confirmed_eur: null
+- device_id: pmbt5551
+  manufacturer: Nexperia
+  exact_mpn: PMBT5551,215
+  package: SOT-23
+  roles:
+  - p48_power
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      pmbt5551_vendor:
+      - behavior: hfe_0.001
+        status: pass
+        evidence: guaranteed_limit
+        condition: PMBT5551 table7 12Oct2023 VCE5V 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: hfe_0.01
+        status: pass
+        evidence: guaranteed_limit
+        condition: PMBT5551 table7 12Oct2023 VCE5V 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: nf_1khz_density_screen
+        status: pass
+        evidence: conditional_frequency_screen
+        condition: Rs2kohm IC200uA VCE5V25C; local density approximation to narrowband
+          NF; exact measurement filter unmodeled
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: nf_refinement_ratio
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: icbo_100
+        status: pass
+        evidence: guaranteed_limit
+        condition: VCB120V open emitter1Pohm; PMBT5551 table
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.nexperia.com/product/PMBT5551
+  model_ids:
+  - pmbt5551_vendor
+  models:
+  - id: pmbt5551_vendor
+    path: semiconductor/vendor/pmbt5551.lib
+    sha256: 9f3e7425c5ebd57b8709851f271354dd46ddc42a4503b280d248fd015f27deb0
+    version: extraction week42/2018
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: error
+    primitive: X
+    runnability: scoped_jobs_ok_with_retained_errors
+    load_record: null
+    external_parameter_dependencies: []
+    compatibility_omissions: []
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/PMBT5551.pdf
+    version: 12Oct2023
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_pmbt5551.pdf
+    sha256: 481051a143a71fb6223ce52c3f5061525fea4fb70b2a41672a3a22399c114622
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  candidate_combination_qualified: false
+  sourcing:
+    register: research/procurement/parts_expansion_001_2026-10-09.yaml
+    implementation_qualified: false
+    delivered_cost_confirmed_eur: null

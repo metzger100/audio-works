@@ -1,0 +1,89 @@
+candidate,check,status,reason,coverage
+candidate_0019,operating_point,pass,,DC feasibility screen; device safe operating area remains a separate evidence gate
+candidate_0019,frequency_response,pass,,"1 Hz to 10 MHz, nominal environment; electrical model only"
+candidate_0019,noise,fail,,Resistive fixture noise; conditional capsule sensitivity. Semiconductor and capsule mechanical noise unresolved.
+candidate_0019,distortion,error,"SimulationError: ngspice exit 0: 
+doAnalyses: TRAN:  Timestep too small",
+candidate_0019,headroom,incomplete,No valid distortion bracket,
+candidate_0019,output_impedance,fail,,
+candidate_0019,balance,fail,,
+candidate_0019,phantom_supply,pass,,8 DC/AC supply/feed extremes. Noise/distortion/abuse at corners pending.
+candidate_0019,temperature,pass,,3 electrical temperatures; no validated mechanical or leakage temperature law
+candidate_0019,semiconductor_corners,incomplete,No manufacturer-bounded semiconductor corners; ideal fixtures cannot demonstrate no-selection yield,
+candidate_0019,monte_carlo,incomplete,Initial Monte Carlo runs DC/AC screens only; all-requirement manufacturing yield is not established,
+candidate_0019,loading,fail,,Electrical loading and 16 assumed capsule corners; not an acoustic polar or mechanical model
+candidate_0019,startup,pass,,"Symmetric cold turn-on PWL. Hot-plug, asymmetric pin connection, disconnect, RF/ESD pending."
+candidate_0019,stability,fail,,HF and cable/load screening
+candidate_0023,operating_point,pass,,DC feasibility screen; device safe operating area remains a separate evidence gate
+candidate_0023,frequency_response,pass,,"1 Hz to 10 MHz, nominal environment; electrical model only"
+candidate_0023,noise,fail,,Resistive fixture noise; conditional capsule sensitivity. Semiconductor and capsule mechanical noise unresolved.
+candidate_0023,distortion,error,"SimulationError: ngspice exit 0: 
+doAnalyses: TRAN:  Timestep too small",
+candidate_0023,headroom,incomplete,No valid distortion bracket,
+candidate_0023,output_impedance,fail,,
+candidate_0023,balance,fail,,
+candidate_0023,phantom_supply,pass,,8 DC/AC supply/feed extremes. Noise/distortion/abuse at corners pending.
+candidate_0023,temperature,pass,,3 electrical temperatures; no validated mechanical or leakage temperature law
+candidate_0023,semiconductor_corners,incomplete,No manufacturer-bounded semiconductor corners; ideal fixtures cannot demonstrate no-selection yield,
+candidate_0023,monte_carlo,incomplete,Initial Monte Carlo runs DC/AC screens only; all-requirement manufacturing yield is not established,
+candidate_0023,loading,fail,,Electrical loading and 16 assumed capsule corners; not an acoustic polar or mechanical model
+candidate_0023,startup,fail,,"Symmetric cold turn-on PWL. Hot-plug, asymmetric pin connection, disconnect, RF/ESD pending."
+candidate_0023,stability,fail,,HF and cable/load screening
+candidate_0012,operating_point,pass,,DC feasibility screen; device safe operating area remains a separate evidence gate
+candidate_0012,frequency_response,fail,,"1 Hz to 10 MHz, nominal environment; electrical model only"
+candidate_0012,noise,fail,,Resistive fixture noise; conditional capsule sensitivity. Semiconductor and capsule mechanical noise unresolved.
+candidate_0012,distortion,error,"SimulationError: Command '['/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/tools/ngspice-run', '-n', '-b', 'job.cir']' timed out after 60 seconds",
+candidate_0012,headroom,incomplete,No valid distortion bracket,
+candidate_0012,output_impedance,fail,,
+candidate_0012,balance,fail,,
+candidate_0012,phantom_supply,fail,,8 DC/AC supply/feed extremes. Noise/distortion/abuse at corners pending.
+candidate_0012,temperature,fail,,3 electrical temperatures; no validated mechanical or leakage temperature law
+candidate_0012,semiconductor_corners,incomplete,No manufacturer-bounded semiconductor corners; ideal fixtures cannot demonstrate no-selection yield,
+candidate_0012,monte_carlo,incomplete,Initial Monte Carlo runs DC/AC screens only; all-requirement manufacturing yield is not established,
+candidate_0012,loading,fail,,Electrical loading and 16 assumed capsule corners; not an acoustic polar or mechanical model
+candidate_0012,startup,pass,,"Symmetric cold turn-on PWL. Hot-plug, asymmetric pin connection, disconnect, RF/ESD pending."
+candidate_0012,stability,fail,,HF and cable/load screening
+candidate_0010,operating_point,error,ngspice exit 0: Warning,
+candidate_0010,frequency_response,error,ngspice exit 0: Warning,
+candidate_0010,noise,error,ngspice exit 0: Warning,
+candidate_0010,distortion,error,ngspice exit 0: Warning,
+candidate_0010,headroom,error,ngspice exit 0: Warning,
+candidate_0010,output_impedance,error,ngspice exit 0: Warning,
+candidate_0010,balance,error,ngspice exit 0: Warning,
+candidate_0010,phantom_supply,error,ngspice exit 0: Warning,
+candidate_0010,temperature,error,ngspice exit 0: Warning,
+candidate_0010,semiconductor_corners,error,ngspice exit 0: Warning,
+candidate_0010,monte_carlo,error,ngspice exit 0: Warning,
+candidate_0010,loading,error,ngspice exit 0: Warning,
+candidate_0010,startup,error,ngspice exit 0: Warning,
+candidate_0010,stability,error,ngspice exit 0: Warning,
+candidate_0014,operating_point,error,ngspice exit 0: Warning,
+candidate_0014,frequency_response,error,ngspice exit 0: Warning,
+candidate_0014,noise,error,ngspice exit 0: Warning,
+candidate_0014,distortion,error,ngspice exit 0: Warning,
+candidate_0014,headroom,error,ngspice exit 0: Warning,
+candidate_0014,output_impedance,error,ngspice exit 0: Warning,
+candidate_0014,balance,error,ngspice exit 0: Warning,
+candidate_0014,phantom_supply,error,ngspice exit 0: Warning,
+candidate_0014,temperature,error,ngspice exit 0: Warning,
+candidate_0014,semiconductor_corners,error,ngspice exit 0: Warning,
+candidate_0014,monte_carlo,error,ngspice exit 0: Warning,
+candidate_0014,loading,error,ngspice exit 0: Warning,
+candidate_0014,startup,error,ngspice exit 0: Warning,
+candidate_0014,stability,error,ngspice exit 0: Warning,
+candidate_0013,operating_point,pass,,DC feasibility screen; device safe operating area remains a separate evidence gate
+candidate_0013,carrier_mechanism,error,"SimulationError: ngspice exit 0: 
+doAnalyses: TRAN:  Timestep too small",
+candidate_0013,frequency_response,incomplete,Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior,
+candidate_0013,noise,incomplete,Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior,
+candidate_0013,distortion,incomplete,Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior,
+candidate_0013,headroom,incomplete,Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior,
+candidate_0013,output_impedance,incomplete,Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior,
+candidate_0013,balance,incomplete,Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior,
+candidate_0013,phantom_supply,incomplete,Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior,
+candidate_0013,temperature,incomplete,Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior,
+candidate_0013,semiconductor_corners,incomplete,Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior,
+candidate_0013,monte_carlo,incomplete,Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior,
+candidate_0013,loading,incomplete,Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior,
+candidate_0013,startup,incomplete,Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior,
+candidate_0013,stability,incomplete,Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior,

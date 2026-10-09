@@ -1,0 +1,226 @@
+- device_id: diodes_mmbt5401
+  manufacturer: Diodes Incorporated
+  exact_mpn: MMBT5401-7-F
+  package: SOT-23; B1 E2 C3
+  roles:
+  - p48_power
+  - balanced_output
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+    - behavior: hfe_0.001
+      status: pass
+      evidence: guaranteed_limit
+      condition: DS30057 Rev12-2 March2024 table page2 VCE5V25C; pulse-reference isothermal
+        screen
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T145346Z_parts2_742caaa3/results.json
+    - behavior: hfe_0.01
+      status: pass
+      evidence: guaranteed_limit
+      condition: DS30057 Rev12-2 March2024 table page2 VCE5V25C; pulse-reference isothermal
+        screen
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T145346Z_parts2_742caaa3/results.json
+    - behavior: ccb
+      status: pass
+      evidence: guaranteed_limit
+      condition: VCB10V1MHz emitter1Pohm; finite fixture
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T145346Z_parts2_742caaa3/results.json
+    - behavior: icbo_25
+      status: pass
+      evidence: guaranteed_limit
+      condition: VCB120V emitter1Pohm
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T145346Z_parts2_742caaa3/results.json
+    - behavior: icbo_100
+      status: pass
+      evidence: guaranteed_limit
+      condition: VCB120V emitter1Pohm
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T145346Z_parts2_742caaa3/results.json
+    - behavior: nf_density_screen
+      status: fail
+      evidence: conditional_frequency_screen
+      condition: IC200uA VCE5V Rs10ohm f1k25C; unspecified measurement filter; no
+        broadband claim
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T145346Z_parts2_742caaa3/results.json
+    - behavior: noise_refinement
+      status: pass
+      evidence: numerical_refinement
+      condition: ''
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T145346Z_parts2_742caaa3/results.json
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_manufacturer_catalogue_no_reserved_stock
+    checked_date: '2026-10-09'
+    source_url: https://www.diodes.com/part/view/MMBT5401/
+  model_ids:
+  - diodes_mmbt5401_vendor
+  models:
+  - id: diodes_mmbt5401_vendor
+    path: semiconductor/vendor/diodes_mmbt5401.lib
+    sha256: 6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5
+    version: Version2 08FEB2011
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: only conditioned accepted rows; omissions unresolved
+    primitive: Q
+    runnability: scoped_success_with_retained_disagreements
+    load_record: results/device_models/20261009T145346Z_parts2_742caaa3/results.json
+    external_parameter_dependencies: []
+    compatibility_omissions: []
+  candidate_combination_qualified: false
+  sourcing:
+    register: research/procurement/parts_expansion_002_2026-10-09.yaml
+    implementation_qualified: false
+    delivered_cost_confirmed_eur: null
+  datasheet:
+    url: https://www.diodes.com/datasheet/download/MMBT5401.pdf
+    retrieved_date: '2026-10-09'
+    version: DS30057 Rev12-2 March2024
+    local_path: models/semiconductor/vendor/evidence/parts002_diodes_mmbt5401.pdf
+    sha256: 1515e425149f78c5e350f8c09aa98ab5ed6b1745420c8f7ef40811d783f71ab2
+- device_id: diotec_2n5551
+  manufacturer: Diotec Semiconductor
+  exact_mpn: 2N5551
+  package: TO-92 taped ammo 2.54mm; physical pin mapping remains unqualified
+  roles:
+  - p48_power
+  - balanced_output
+  states:
+    investigated: true
+    acquired: true
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_manufacturer_catalogue_no_reserved_stock
+    checked_date: '2026-10-09'
+    source_url: https://diotec.com/en/product/2N5551.html
+  model_ids:
+  - diotec_2n5551_vendor
+  models:
+  - id: diotec_2n5551_vendor
+    path: semiconductor/vendor/diotec_2n5551.lib
+    sha256: 32c2fca2b0e0bdb4ebda569449e914085148a39946fe63e96a950aa26742c2d6
+    version: Diotec example 2017
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: only conditioned accepted rows; omissions unresolved
+    primitive: X
+    runnability: failed_strict_control
+    load_record: results/device_models/20261009T170734Z_constant_ae3a9e1d/results.json
+    external_parameter_dependencies:
+    - pi undefined by original file; fixture constant only
+    compatibility_omissions:
+    - bvcbo and bvbe warned/ignored; other rating metadata transformed, no breakdown
+      credit
+  candidate_combination_qualified: false
+  sourcing:
+    register: research/procurement/parts_expansion_002_2026-10-09.yaml
+    implementation_qualified: false
+    delivered_cost_confirmed_eur: null
+  datasheet:
+    url: https://diotec.com/request/datasheet/2n5551.pdf
+    retrieved_date: '2026-10-09'
+    version: '2025-01-17'
+    local_path: models/semiconductor/vendor/evidence/parts002_diotec_2n5551.pdf
+    sha256: ad8bc6032ca2856fa638cffcaa8aa27cbc470ca3b7aba2016edb55906e02d06e
+- device_id: dmmt5401
+  manufacturer: Diodes Incorporated
+  exact_mpn: DMMT5401-7-F
+  package: SOT26
+  roles:
+  - p48_power
+  - balanced_output
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+    - behavior: hfe_0.001
+      status: pass
+      evidence: guaranteed_limit
+      condition: DS30437 Rev9-2 March2024 page2 VCE5V25C; pulse-reference isothermal
+        screen
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T171204Z_dual_pnp_9ff5882e/results.json
+    - behavior: hfe_0.01
+      status: pass
+      evidence: guaranteed_limit
+      condition: DS30437 Rev9-2 March2024 page2 VCE5V25C; pulse-reference isothermal
+        screen
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T171204Z_dual_pnp_9ff5882e/results.json
+    - behavior: ccb
+      status: pass
+      evidence: guaranteed_limit
+      condition: VCB10V1MHz emitter1Pohm; finite fixture
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T171204Z_dual_pnp_9ff5882e/results.json
+    - behavior: icbo_100
+      status: pass
+      evidence: guaranteed_limit
+      condition: VCB120V emitter1Pohm
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T171204Z_dual_pnp_9ff5882e/results.json
+    - behavior: nf_density_screen
+      status: fail
+      evidence: conditional_frequency_screen
+      condition: IC200uA VCE5V Rs10ohm f1k25C; unspecified measurement filter; no
+        broadband claim
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T171204Z_dual_pnp_9ff5882e/results.json
+    - behavior: noise_refinement
+      status: pass
+      evidence: numerical_refinement
+      condition: ''
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T171204Z_dual_pnp_9ff5882e/results.json
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_manufacturer_catalogue_no_reserved_stock
+    checked_date: '2026-10-09'
+    source_url: https://www.diodes.com/part/view/DMMT5401/
+  model_ids:
+  - dmmt5401_vendor
+  models:
+  - id: dmmt5401_vendor
+    path: semiconductor/vendor/dmmt5401.lib
+    sha256: ba932265a79f5084da2790f45b0397d46182b9e88d81e247296425e30f715b62
+    version: Version2 10FEB2011
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: only conditioned accepted rows; omissions unresolved
+    primitive: X
+    runnability: scoped_success_with_retained_disagreements
+    load_record: results/device_models/20261009T171204Z_dual_pnp_9ff5882e/results.json
+    external_parameter_dependencies: []
+    compatibility_omissions: []
+  candidate_combination_qualified: false
+  sourcing:
+    register: research/procurement/parts_expansion_002_2026-10-09.yaml
+    implementation_qualified: false
+    delivered_cost_confirmed_eur: null
+  ordinary_production_matching:
+    hfe_mismatch_max_fraction: 0.02
+    hfe_condition: IC10mA VCE5V25C; short pulse note9
+    vsat_mismatch_max_fraction: 0.02
+    source: DS30437 page2 note9
+    limitation: Adjacent same-wafer die, not monolithic assertion. Identical nominal
+      models do not represent mismatch or thermal correlation.
+  datasheet:
+    url: https://www.diodes.com/datasheet/download/DMMT5401.pdf
+    retrieved_date: '2026-10-09'
+    version: DS30437 Rev9-2 March2024
+    local_path: models/semiconductor/vendor/evidence/parts002_dmmt5401.pdf
+    sha256: 9f6a6294ac8d8f71fa2798d76a9f5504ffc8df01a7c26208197846d83ebdfca8

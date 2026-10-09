@@ -1,0 +1,177 @@
+power_resistors:
+- reference: Rharvestp
+  nodes:
+  - p
+  - raw
+  parameter: RHARVESTP_VALUE
+- reference: Rharvestn
+  nodes:
+  - n
+  - raw
+  parameter: RHARVESTN_VALUE
+- reference: Rregtop
+  nodes:
+  - raw
+  - regbase
+  parameter: RREGTOP_VALUE
+- reference: Rregbottom
+  nodes:
+  - regbase
+  - g
+  parameter: RREGBOTTOM_VALUE
+- reference: Rmidtop
+  nodes:
+  - rail
+  - mid
+  parameter: RMIDTOP_VALUE
+- reference: Rmidbottom
+  nodes:
+  - mid
+  - g
+  parameter: RMIDBOTTOM_VALUE
+- reference: Rpolar0
+  nodes:
+  - raw
+  - pol_0
+  parameter: RPOLAR0_VALUE
+- reference: Rpolar1
+  nodes:
+  - pol_0
+  - pol_1
+  parameter: RPOLAR1_VALUE
+- reference: Rpolar2
+  nodes:
+  - pol_1
+  - pol_2
+  parameter: RPOLAR2_VALUE
+- reference: Rpolar3
+  nodes:
+  - pol_2
+  - pol_3
+  parameter: RPOLAR3_VALUE
+- reference: Rpolar4
+  nodes:
+  - pol_3
+  - pol_4
+  parameter: RPOLAR4_VALUE
+- reference: Rpolar5
+  nodes:
+  - pol_4
+  - pol_5
+  parameter: RPOLAR5_VALUE
+- reference: Rpolar6
+  nodes:
+  - pol_5
+  - pol_6
+  parameter: RPOLAR6_VALUE
+- reference: Rpolar7
+  nodes:
+  - pol_6
+  - pol_7
+  parameter: RPOLAR7_VALUE
+- reference: Rpolar8
+  nodes:
+  - pol_7
+  - pol_8
+  parameter: RPOLAR8_VALUE
+- reference: Rpolar9
+  nodes:
+  - pol_8
+  - pol
+  parameter: RPOLAR9_VALUE
+- reference: Rback
+  nodes:
+  - pol
+  - b
+  parameter: RBACK_VALUE
+- reference: Rbias
+  nodes:
+  - f
+  - boot
+  parameter: RBIAS_VALUE
+- reference: Rbootdc
+  nodes:
+  - boot
+  - mid
+  parameter: RBOOTDC_VALUE
+- reference: Rguardleak
+  nodes:
+  - f
+  - guard
+  parameter: RGUARDLEAK_VALUE
+- reference: Rrear
+  nodes:
+  - rear
+  - g
+  parameter: RREAR_VALUE
+- reference: Rinvertin
+  nodes:
+  - outp
+  - inv
+  parameter: RINVERTIN_VALUE
+- reference: Rinvertfb
+  nodes:
+  - outn
+  - inv
+  parameter: RINVERTFB_VALUE
+- reference: Routp
+  nodes:
+  - outp
+  - cp
+  parameter: ROUTP_VALUE
+- reference: Routn
+  nodes:
+  - outn
+  - cn
+  parameter: ROUTN_VALUE
+questions:
+  sensed_quantity: front voltage
+  loading: finite CMOS Cin; guard follows front; bias return bootstrapped in audio
+  dc_bias: midrail through 1 GOhm; guard DC anchored by 1 Mohm
+  gain_or_impedance_transformation: OPA197 follower plus finite-bandwidth guard buffer
+  balanced_output: Real output devices and two 47 ohm/47 uF legs; harvest/cable/load
+    coupling measured, symmetry not presumed
+  expected_noise: input CMOS en/in/1f, guard coupling and both output channels
+  expected_distortion: common-mode crossover and positive-feedback tracking error
+  likely_fatal_flaw: guard noise or instability exceeds loading benefit
+  quickest_falsification: compare guarded/untracked admittance and noise with assumed
+    0.5-10 pF geometry
+  hypothesis: A real follower guard may reduce external capacitive/leakage loading;
+    it cannot erase the opamp intrinsic input capacitance.
+sources:
+- S06
+- S16
+- S24
+- S25
+input_device_class: CMOS
+fet_audio_path: true
+fet_power_circuitry: false
+internal_device_classes: CMOS per OPA197 datasheet; macro internals are behavioral,
+  not transistor evidence
+procurement_state: research_BOM_live_orderability_and_delivered_quote_unverified
+patent_state: unscreened_no_clearance
+prototype_gate: hold
+manufacture_gate: hold
+build_publication_gate: hold
+niche:
+  input_device: CMOS
+  sensing: voltage
+  reference: single_ended
+  feedback: unity_voltage_guard
+  bias: fixed_parts
+  active_device_count: 4
+  servo: false
+  output: differential_real_devices
+  common_mode: divider
+  bootstrap: true
+id: candidate_0003
+kind: research_candidate
+parents:
+- fixture_0001
+hypothesis: A real follower guard may reduce external capacitive/leakage loading;
+  it cannot erase the opamp intrinsic input capacitance.
+structural_changes: Independent CMOS voltage input with driven guard mechanism child
+  of interface fixture; not a copied production microphone.
+eligible: false
+state: engineering_ready
+patent_record: ../../research/patents/first_architecture_batch_2026-10-09.yaml

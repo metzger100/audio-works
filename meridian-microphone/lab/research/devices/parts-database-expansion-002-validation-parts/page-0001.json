@@ -1,0 +1,216 @@
+{
+  "acquisition_audit": {
+    "$include": "0014-acquisition-audit.json"
+  },
+  "control_audits": [
+    {
+      "failed_jobs": 14,
+      "id": "20261009T145346Z_parts2_742caaa3",
+      "jobs": 27,
+      "snapshot_raw_csv_errors": [],
+      "source_unchanged": true
+    },
+    {
+      "failed_jobs": 6,
+      "id": "20261009T170734Z_constant_ae3a9e1d",
+      "jobs": 6,
+      "snapshot_raw_csv_errors": [],
+      "source_unchanged": true
+    },
+    {
+      "failed_jobs": 1,
+      "id": "20261009T171204Z_dual_pnp_9ff5882e",
+      "jobs": 13,
+      "snapshot_raw_csv_errors": [],
+      "source_unchanged": true
+    }
+  ],
+  "date": "2026-10-09",
+  "expected_acquisition_failure": "Retained2n7002 invalid HTML; aggregate exit2",
+  "final_verification": "results/verification/20261009T172142Z_c2732675",
+  "first_test_failure": "20261009T170857Z_34228d45: decimal-format assertion; retained; independent numerical oracle corrected",
+  "git_whitespace_check": "Frozen original simulator logs and CSV CRLF cause whitespace notices; bytes preserved, not repaired. Mandatory quality gate passes.",
+  "lab_doctor": "pass",
+  "lab_tests": 68,
+  "matrix_canonical_audit": "pass",
+  "model_files": [
+    {
+      "acquisition": "valid_spice",
+      "device": "jfe150",
+      "hash_matches": true,
+      "model": "jfe150_generic"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "jfe150",
+      "hash_matches": true,
+      "model": "jfe150_weak"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "jfe150",
+      "hash_matches": true,
+      "model": "jfe150_strong"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "jfe150",
+      "hash_matches": true,
+      "model": "jfe150_pspice"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "vishay_2n7002k",
+      "hash_matches": true,
+      "model": "vishay_2n7002k_ps"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "bc846b",
+      "hash_matches": true,
+      "model": "bc846b_vendor"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "bc846b",
+      "hash_matches": true,
+      "model": "bc846b_emitter_r1"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "bc856b",
+      "hash_matches": true,
+      "model": "bc856b_vendor"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "opa197",
+      "hash_matches": true,
+      "model": "opa197_pspice"
+    },
+    {
+      "acquisition": "invalid_html_challenge",
+      "device": "2n7002",
+      "hash_matches": true,
+      "model": "2n7002_failed_download"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "jfe2140",
+      "hash_matches": true,
+      "model": "jfe2140_vendor"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "lsk170a",
+      "hash_matches": true,
+      "model": "lsk170a_vendor"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "lsk170a",
+      "hash_matches": true,
+      "model": "lsk170a_syntax_r1"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "lsk389a",
+      "hash_matches": true,
+      "model": "lsk389a_vendor"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "lsk389a",
+      "hash_matches": true,
+      "model": "lsk389a_syntax_r1"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "pmbt5551",
+      "hash_matches": true,
+      "model": "pmbt5551_vendor"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "diotec_mmbt5551",
+      "hash_matches": true,
+      "model": "diotec_mmbt5551_vendor"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "bc850c",
+      "hash_matches": true,
+      "model": "bc850c_vendor"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "bav199",
+      "hash_matches": true,
+      "model": "bav199_vendor"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "bav199",
+      "hash_matches": true,
+      "model": "bav199_syntax_r1"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "opa928",
+      "hash_matches": true,
+      "model": "opa928_vendor"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "opa928",
+      "hash_matches": true,
+      "model": "opa928_reference_v10"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "opa1656",
+      "hash_matches": true,
+      "model": "opa1656_vendor"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "opa1656",
+      "hash_matches": true,
+      "model": "opa1656_tina_v12"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "lmp7721",
+      "hash_matches": true,
+      "model": "lmp7721_vendor"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "diodes_mmbt5401",
+      "hash_matches": true,
+      "model": "diodes_mmbt5401_vendor"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "diotec_2n5551",
+      "hash_matches": true,
+      "model": "diotec_2n5551_vendor"
+    },
+    {
+      "acquisition": "valid_spice",
+      "device": "dmmt5401",
+      "hash_matches": true,
+      "model": "dmmt5401_vendor"
+    }
+  ],
+  "new_inventory_files": 216,
+  "preservation": "Independent persistent private coverage and89 legacy sources remain incomplete",
+  "preservation_receipt": "research/parts_database_expansion_002_preservation.json",
+  "publication_privacy": "No newly staged vendor/local/rawwaveform files; two synthetic probe traces already exist in HEAD and retain history",
+  "qualification": "Research only; no microphone substitute or candidate combination qualified",
+  "repository_tests": 24,
+  "root_gate": "pass; preservation explicitly incomplete",
+  "root_staged_gate": "pass; common31967characters;118current words; preservation explicitly incomplete",
+  "spec_digest": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+  "status": "software_and_provenance_pass_preservation_incomplete"
+}

@@ -1,0 +1,192 @@
+[
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "fixture_0001",
+    "eligible": false,
+    "experiment_id": "20261005T110554Z_d4d0b3e8",
+    "failure_reasons": {
+      "distortion": "SimulationError: ngspice exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+      "headroom": "No valid distortion bracket"
+    },
+    "family": "ideal_voltage_control",
+    "graph": {
+      "device_histogram": {
+        "C": 4,
+        "E": 2,
+        "R": 8
+      },
+      "graph_nodes": 25,
+      "graph_signature": "4075f24959a04f823ea9eb1466f3fa458422cc48c35cb109262a0155d66b9651"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "infrastructure_fixture",
+    "metrics": {
+      "conductor_current_mismatch_fraction": 0.0,
+      "current_a": 0.002750558768983656,
+      "internal_rail_v": 38.50782168823766,
+      "polarization_dc_v": 38.46166384546057,
+      "supplied_power_w": 0.13202682091121548,
+      "terminal_power_w": 0.10629630529612207
+    },
+    "niche": {
+      "active_device_count": 0,
+      "bias": "resistor",
+      "bootstrap": false,
+      "common_mode": "open_loop",
+      "feedback": "none",
+      "input_device": "ideal",
+      "output": "ideal_differential",
+      "reference": "single_ended",
+      "sensing": "voltage",
+      "servo": false
+    },
+    "novelty_nearest": 0.0,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unknown_unscreened",
+    "procurement_state": "unknown",
+    "result_file": "results/runs/20261005T110554Z_d4d0b3e8/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "failed",
+    "suite_sha256": "6b842fc67e6a88b29ad3ab0fe802b9a53f0d40bd58f856e2da4141879fb0374d"
+  },
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "fixture_0001",
+    "eligible": false,
+    "experiment_id": "20261005T110607Z_88e36da3",
+    "failure_reasons": {},
+    "family": "ideal_voltage_control",
+    "graph": {
+      "device_histogram": {
+        "C": 4,
+        "E": 2,
+        "R": 8
+      },
+      "graph_nodes": 25,
+      "graph_signature": "4075f24959a04f823ea9eb1466f3fa458422cc48c35cb109262a0155d66b9651"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "infrastructure_fixture",
+    "metrics": {
+      "conductor_current_mismatch_fraction": 0.0,
+      "current_a": 0.002750558768983656,
+      "frequency_hz": 1000,
+      "headroom_lower_bound_pa_rms": 112.46826503806983,
+      "internal_rail_v": 38.50782168823766,
+      "polarization_dc_v": 38.46166384546057,
+      "supplied_power_w": 0.13202682091121548,
+      "terminal_power_w": 0.10629630529612207,
+      "thd_percent": 0.0006252850979189585,
+      "threshold_percent": 0.5
+    },
+    "niche": {
+      "active_device_count": 0,
+      "bias": "resistor",
+      "bootstrap": false,
+      "common_mode": "open_loop",
+      "feedback": "none",
+      "input_device": "ideal",
+      "output": "ideal_differential",
+      "reference": "single_ended",
+      "sensing": "voltage",
+      "servo": false
+    },
+    "novelty_nearest": 0.0,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unknown_unscreened",
+    "procurement_state": "unknown",
+    "result_file": "results/runs/20261005T110607Z_88e36da3/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "incomplete",
+    "suite_sha256": "7523e4538d8508686a4453f3914f3d521211e446d1a5d2926e8eba746d3f70aa"
+  },
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "fixture_0001",
+    "eligible": false,
+    "experiment_id": "20261005T110727Z_a75bc476",
+    "failure_reasons": {
+      "distortion": "SimulationError: ngspice exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+      "headroom": "No valid distortion bracket"
+    },
+    "family": "ideal_voltage_control",
+    "graph": {
+      "device_histogram": {
+        "C": 4,
+        "E": 2,
+        "R": 8
+      },
+      "graph_nodes": 25,
+      "graph_signature": "4075f24959a04f823ea9eb1466f3fa458422cc48c35cb109262a0155d66b9651"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "infrastructure_fixture",
+    "metrics": {
+      "conductor_current_mismatch_fraction": 0.0,
+      "current_a": 0.002750558768983656,
+      "internal_rail_v": 38.50782168823766,
+      "polarization_dc_v": 38.46166384546057,
+      "supplied_power_w": 0.13202682091121548,
+      "terminal_power_w": 0.10629630529612207
+    },
+    "niche": {
+      "active_device_count": 0,
+      "bias": "resistor",
+      "bootstrap": false,
+      "common_mode": "open_loop",
+      "feedback": "none",
+      "input_device": "ideal",
+      "output": "ideal_differential",
+      "reference": "single_ended",
+      "sensing": "voltage",
+      "servo": false
+    },
+    "novelty_nearest": 0.0,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unknown_unscreened",
+    "procurement_state": "unknown",
+    "result_file": "results/runs/20261005T110727Z_a75bc476/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "failed",
+    "suite_sha256": "d25532b294f2426f5cbe5e314fa2aa49fd1795e67286fd1b9e148b36fe8aa82a"
+  }
+]

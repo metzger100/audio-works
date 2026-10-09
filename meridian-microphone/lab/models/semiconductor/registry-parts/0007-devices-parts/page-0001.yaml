@@ -1,0 +1,137 @@
+- id: jfe150
+  manufacturer: Texas Instruments
+  exact_variant: JFE150DBVR
+  family: discrete_n_jfet
+  package: SOT-23-5 DBV
+  lifecycle:
+    status: active
+    checked_date: '2026-10-05'
+    source_url: https://www.ti.com/product/JFE150
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/jfe150.pdf
+    retrieved_date: '2026-10-05'
+    version: SLPS732B April 2023
+    local_path: models/semiconductor/vendor/evidence/jfe150.pdf
+    sha256: 925d58a8f0cf7db307325ece12fb2f61a736b2c1440f63928b5e6c1312f39365
+  ratings:
+    abs_vds_v:
+    - -40
+    - 40
+    abs_vgs_v:
+    - -40
+    - 0.9
+    abs_id_a: 0.05
+    recommended_temp_c:
+    - -40
+    - 125
+    idss_25c_a:
+    - 0.024
+    - 0.046
+    idss_full_temperature_a:
+    - 0.022
+    - 0.057
+    gfs_25c_s:
+    - 0.055
+    - 0.08
+    conditions: Idss/GFS at VDS=10 V,VGS=0; ratings are not enforced by SPICE.
+  models:
+  - id: jfe150_generic
+    path: semiconductor/vendor/jfe150_generic.lib
+    sha256: afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207
+    version: Final 1.2; 26SEP2024; SLPM366
+    source_url: https://www.ti.com/lit/zip/slpm366
+    retrieved_date: '2026-10-05'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: SPICE3 subcircuit with PSpice extensions
+    ngspice_behavior: ps
+    subcircuit: JFE150
+    parent_model_id: null
+  - id: jfe150_weak
+    path: semiconductor/vendor/jfe150_weak.lib
+    sha256: 494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4
+    version: Final 1.2 vendor weak
+    source_url: https://www.ti.com/lit/zip/slpm366
+    retrieved_date: '2026-10-05'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: SPICE3 subcircuit with PSpice extensions
+    ngspice_behavior: ps
+    subcircuit: JFE150_WEAK
+    parent_model_id: jfe150_generic
+  - id: jfe150_strong
+    path: semiconductor/vendor/jfe150_strong.lib
+    sha256: 832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8
+    version: Final 1.2 vendor strong
+    source_url: https://www.ti.com/lit/zip/slpm366
+    retrieved_date: '2026-10-05'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: SPICE3 subcircuit with PSpice extensions
+    ngspice_behavior: ps
+    subcircuit: JFE150_STRONG
+    parent_model_id: jfe150_generic
+  - id: jfe150_pspice
+    path: semiconductor/vendor/jfe150_pspice.lib
+    sha256: 6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6
+    version: Final 1.2; SLPM349I
+    source_url: https://www.ti.com/lit/zip/slpm349i
+    retrieved_date: '2026-10-05'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: SPICE3 subcircuit with PSpice extensions
+    ngspice_behavior: ps
+    subcircuit: JFE150
+    parent_model_id: jfe150_generic
+  represented_behavior:
+    dc: Shichman-Hodges + series resistances/channel modulation
+    capacitance: bias-dependent CGS/CGD + diode CJO
+    temperature: BETATCE, VTOTC, junction equations
+    leakage: IS + gate-drain diode + clamp ROFF; lacks measured high-VDS rise
+    noise: native channel thermal, junction shot and KF/AF flicker; must test actual
+      spectra
+    clipping: pinch-off/saturation; ideal VSWITCH clamp approximation
+    supply_current: native terminal currents, no external bias/power circuit
+  unqualified_behavior:
+  - production noise maxima/distributions
+  - clamp noise/physical protection fidelity
+  - high-field gate leakage
+  - breakdown/SOA/self-heating
+  - full correlated production corners
+  - nominal/strong GFS below guaranteed minimum; weak Idss below guaranteed range
+  - strong VGS bias/cutoff limits failed
+  - capacitance reference gate bias unresolved; nominal gate-current noise differs
+    from typical
+  substitutes:
+  - part: onsemi MMBFJ113
+    state: investigated_not_equivalent_unqualified
+  - part: TI JFE2140
+    state: dual_investigation_only_no_matching_requirement_or_model_validation
+  procurement_register: research/procurement/semiconductors_2026-10-05.yaml
+  readiness: partial_nominal_voltage_noise_use_guaranteed_dc_corner_disagreement
+  patent_status: isolated_device_research_only_no_architecture_claim_screen_no_clearance
+  validation_report: research/device_model_validation.md
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false

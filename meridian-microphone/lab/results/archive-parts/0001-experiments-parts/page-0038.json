@@ -1,0 +1,218 @@
+[
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "candidate_0008",
+    "eligible": false,
+    "experiment_id": "20261009T090412Z_5620861e",
+    "failure_reasons": {
+      "balance": "Numerical acceptance requirement failed",
+      "distortion": "SimulationError: ngspice exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+      "headroom": "No valid distortion bracket",
+      "loading": "Numerical acceptance requirement failed",
+      "monte_carlo": "Initial Monte Carlo runs DC/AC screens only; all-requirement manufacturing yield is not established",
+      "noise": "Numerical acceptance requirement failed",
+      "output_impedance": "Numerical acceptance requirement failed",
+      "semiconductor_corners": "No manufacturer-bounded semiconductor corners; ideal fixtures cannot demonstrate no-selection yield",
+      "stability": "Numerical acceptance requirement failed",
+      "startup": "Numerical acceptance requirement failed"
+    },
+    "family": "unconventional_jfet",
+    "graph": {
+      "device_histogram": {
+        "C": 11,
+        "R": 49,
+        "V": 23
+      },
+      "graph_nodes": 154,
+      "graph_signature": "f5e417ff02f8aa58302bf8f9cd923de67dc43a4b50766f1bc266f8c2db796753"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "research_candidate",
+    "metrics": {
+      "analyzed_max_hz": 9999999.999999803,
+      "common_mode_to_differential_v_per_v_at_1khz": 0.00986727487574414,
+      "component_count": 66,
+      "conductor_current_mismatch_fraction": 0.0,
+      "current_a": 0.005150433655753722,
+      "differential_output_peak_v": 0.02234711402772404,
+      "electronics_ein_v_rms_conditional": 7.904253784665308e-06,
+      "electronics_noise_a_pa_rms": 0.0009596729076543503,
+      "electronics_noise_dba_conditional": 33.621864776537585,
+      "electronics_noise_pa_rms": 0.00105174270866762,
+      "electronics_output_v_rms": 1.1058896836639454e-05,
+      "environment_output_v_rms": 9.464103172653888e-08,
+      "failures": 8,
+      "front_voltage_transfer_ratio_at_1khz": 0.9199818023269095,
+      "full_fixture_output_v_rms": 1.1059690601524259e-05,
+      "hf_db": -0.4720860523724294,
+      "hf_peaking_db": -0.47256252452229613,
+      "impedance_mismatch_fraction": 0.12117281592296472,
+      "internal_rail_v": 11.010303405703981,
+      "lf_db": -0.4771359480159142,
+      "loading_loss_db": 0.7244152623752025,
+      "median": 0.9285682788215066,
+      "metric_sample_count": 16,
+      "missing_metric_count": 0,
+      "noise_power_closure_relative_error": 1.4858735397329895e-15,
+      "observed_pass_fraction": 0.5,
+      "output_impedance_ohm": 271.2786425650185,
+      "p95": 2.137823448931001,
+      "p99": 2.7194090981317967,
+      "passing": 8,
+      "phase_1khz_deg": -0.9748730506198413,
+      "polarization_dc_v": 22.546161868843356,
+      "rail_final_v": 10.767552630735159,
+      "rail_target_v": 11.010303405703981,
+      "response_deviation_db": 0.4771359480159142,
+      "samples": 16,
+      "seed": 84047,
+      "sensitivity_v_per_pa_at_1khz": 0.010734160577337244,
+      "settling_to_1percent_s": 5.0,
+      "simulation_error_count": 0,
+      "supplied_power_w": 0.2472208154761787,
+      "terminal_power_w": 0.15700260124544657,
+      "worst_observed": 2.8648055104319963
+    },
+    "niche": {
+      "active_device_count": 7,
+      "bias": "source_servo",
+      "bootstrap": false,
+      "common_mode": "divider",
+      "feedback": "slow_source_current_servo",
+      "input_device": "JFET",
+      "output": "discrete_NPN_differential_fixed_degeneration",
+      "reference": "single_ended",
+      "sensing": "voltage",
+      "servo": true
+    },
+    "novelty_nearest": 0.0,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unscreened_no_clearance",
+    "procurement_cost": {
+      "confirmed_delivered_eur": null,
+      "digikey_shipping_eur_observed": 25,
+      "digikey_shipping_tax_basis": "unknown: EUR25 gross or EUR29.75 if net under19% VAT",
+      "formula": "1.19*(DigiKey net basket including unknown part prices) + DigiKey shipping gross + TME gross basket + TME shipping gross + applicable import/payment/fees; not a confirmed quote",
+      "import_payment_fees_eur": null,
+      "priced_items_net_eur_scenario": 9.89,
+      "priced_items_vat_inclusive_eur_scenario": 11.7691,
+      "scope": "Electronics only. Mixed-age catalogue scenarios; unavailable parents not presently purchasable. All six comparison BOMs must never be bought. No unused specimens/matching services.",
+      "tme_shipping_eur": null,
+      "unpriced_items": [
+        {
+          "mpn": "R82EC3100DQ70J",
+          "quantity": 1
+        },
+        {
+          "mpn": "JFE150DBVR",
+          "quantity": 1
+        }
+      ]
+    },
+    "procurement_state": "research_BOM_live_orderability_and_delivered_quote_unverified",
+    "result_file": "results/runs/20261009T090412Z_5620861e/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "failed",
+    "suite_sha256": "75bea8b0ca5302a3b1906d41931149133244dd75b1572f52c557cd7a9ab84df5"
+  },
+  {
+    "analysis_domain": "stationary_audio",
+    "backend": "ngspice",
+    "candidate_id": "candidate_0010",
+    "eligible": false,
+    "experiment_id": "20261009T090436Z_496da267",
+    "failure_reasons": {
+      "balance": "ngspice exit 0: Warning",
+      "distortion": "ngspice exit 0: Warning",
+      "frequency_response": "ngspice exit 0: Warning",
+      "headroom": "ngspice exit 0: Warning",
+      "loading": "ngspice exit 0: Warning",
+      "monte_carlo": "ngspice exit 0: Warning",
+      "noise": "ngspice exit 0: Warning",
+      "operating_point": "ngspice exit 0: Warning",
+      "output_impedance": "ngspice exit 0: Warning",
+      "phantom_supply": "ngspice exit 0: Warning",
+      "semiconductor_corners": "ngspice exit 0: Warning",
+      "stability": "ngspice exit 0: Warning",
+      "startup": "ngspice exit 0: Warning",
+      "temperature": "ngspice exit 0: Warning"
+    },
+    "family": "bootstrap",
+    "graph": {
+      "device_histogram": {
+        "C": 10,
+        "R": 27,
+        "V": 22
+      },
+      "graph_nodes": 110,
+      "graph_signature": "cd86fc34f7f3e203e739db833614f09def05ded9e50e76b6afc841c1b9cdc38b"
+    },
+    "implementation_gates": {
+      "build_publication_gate": "hold",
+      "manufacture_gate": "hold",
+      "prototype_gate": "hold"
+    },
+    "kind": "research_candidate",
+    "metrics": {
+      "component_count": 40
+    },
+    "niche": {
+      "active_device_count": 6,
+      "bias": "fixed_parts",
+      "bootstrap": true,
+      "common_mode": "divider",
+      "feedback": "unity_voltage_guard",
+      "input_device": "CMOS",
+      "output": "discrete_NPN_differential_fixed_degeneration",
+      "reference": "single_ended",
+      "sensing": "voltage",
+      "servo": false
+    },
+    "novelty_nearest": 0.0,
+    "objective_validity": {
+      "cost_eur": false,
+      "electronics_noise_pa_rms": false,
+      "headroom_pa_rms": false,
+      "observed_pass_fraction": false,
+      "pcb_sensitivity": false,
+      "sensitivity_to_devices": false,
+      "thd_percent": false
+    },
+    "patent_state": "unscreened_no_clearance",
+    "procurement_cost": {
+      "confirmed_delivered_eur": null,
+      "digikey_shipping_eur_observed": 25,
+      "digikey_shipping_tax_basis": "unknown: EUR25 gross or EUR29.75 if net under19% VAT",
+      "formula": "1.19*(DigiKey net basket including unknown part prices) + DigiKey shipping gross + TME gross basket + TME shipping gross + applicable import/payment/fees; not a confirmed quote",
+      "import_payment_fees_eur": null,
+      "priced_items_net_eur_scenario": 10.46,
+      "priced_items_vat_inclusive_eur_scenario": 12.4474,
+      "scope": "Electronics only. Mixed-age catalogue scenarios; unavailable parents not presently purchasable. All six comparison BOMs must never be bought. No unused specimens/matching services.",
+      "tme_shipping_eur": null,
+      "unpriced_items": [
+        {
+          "mpn": "R82EC3100DQ70J",
+          "quantity": 1
+        }
+      ]
+    },
+    "procurement_state": "research_BOM_live_orderability_and_delivered_quote_unverified",
+    "result_file": "results/runs/20261009T090436Z_496da267/results.json",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "status": "failed",
+    "suite_sha256": "75bea8b0ca5302a3b1906d41931149133244dd75b1572f52c557cd7a9ab84df5"
+  }
+]

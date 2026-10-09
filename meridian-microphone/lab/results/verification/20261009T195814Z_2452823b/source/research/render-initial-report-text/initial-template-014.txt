@@ -1,0 +1,7 @@
+/trials.json) produced a proposal of 16.317 GΩ, 24.447 MΩ and 99.286 µF, respectively. The iteration budget expired before the optimizer's convergence criterion; global optimality is not claimed. Initial two-parameter and shorter searches failed feasibility and remain recorded.
+
+The proposal improves nominal response and output impedance but worsens noise, impedance balance and startup settling. Its P48 current/response screens pass, yet realistic low-impedance output-load stress cases still fail response. The full suite rejects it. This verifies the optimizer-to-test-to-archive workflow and demonstrates why one-axis success cannot override other requirements. The current optimizer is a **nominal constrained control**; robust high-percentile/worst-case optimization is future work.
+
+| Engineering check | Nominal | Proposal |
+| --- | --- | --- |
+
