@@ -1,0 +1,15 @@
+schema_version: 1
+date: '2026-10-09'
+purpose: Acquisition-level unencrypted model/dialect/dependency load check for the four remaining additions; no behavior characterization or performance assigned
+models: [lsk389a_vendor, diotec_mmbt5551_vendor, opa1656_vendor, lmp7721_vendor]
+conditions:
+  lsk389a_vendor: Native one-half J D G S; VDS5V VGS-0.2V
+  diotec_mmbt5551_vendor: Original declared dialect; VCE5V VBE0.6V; no forced parameter defaults or substitutions
+  opa1656_vendor: One macro half, grounded16V unity follower8V,10k load to8V
+  lmp7721_vendor: Grounded5V unity follower1V,10k load to1V; documentedGMIN1e-16
+analyses: OP only; parser/simulator warnings are failures; terminal vectors retained as diagnostics without performance claims
+maximum_jobs: 4
+timeout_s_per_job: 15
+stopping: Single pass; no repairs/retries/parameter changes. Unsupported metadata/dialect or solver errors stay unresolved.
+seed: null
+qualification: None; a syntax load does not change behavior_characterized or candidate gates

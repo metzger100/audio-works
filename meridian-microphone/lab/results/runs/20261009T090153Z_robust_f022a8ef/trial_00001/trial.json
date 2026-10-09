@@ -1,0 +1,325 @@
+{
+  "trial": 1,
+  "design_values": {
+    "FEEDBACK_C": 1e-10
+  },
+  "parameters": {
+    "CFEEDBACK_VALUE": 1e-10
+  },
+  "cases": [
+    {
+      "scenario": {
+        "id": "nominal",
+        "parameters": {},
+        "kind": "nominal"
+      },
+      "status": "fail",
+      "jobs": [
+        {
+          "folder": "results/runs/20261009T090153Z_robust_f022a8ef/trial_00001/scenario_0000/0001_dc_feasibility",
+          "semiconductor_models": [
+            {
+              "id": "bc846b_emitter_r1",
+              "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+              "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+              "version": "project structural child r1; Q2 emitter 33 -> 3",
+              "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+              "retrieved_date": "2026-10-05",
+              "acquisition_status": "valid_spice",
+              "redistribution": {
+                "status": "not_established_do_not_redistribute",
+                "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+                "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+              },
+              "syntax": "SPICE3 subcircuit",
+              "ngspice_behavior": "",
+              "subcircuit": "BC846B",
+              "parent_model_id": "bc846b_vendor",
+              "device_id": "bc846b",
+              "manufacturer": "Nexperia",
+              "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T090153Z_robust_f022a8ef/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+              "model_lineage": [
+                {
+                  "id": "bc846b_vendor",
+                  "version": "extraction week 24/2021",
+                  "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+                  "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+                  "retrieved_date": "2026-10-05"
+                }
+              ]
+            }
+          ],
+          "netlist_sha256": "a251011faa41e717d29e1eb24cf45dc8d8431ecbdba24c1633d543f10f9ba4dc",
+          "status": "ok",
+          "advisories": [],
+          "files": {
+            "op.raw": "91e37284c110151bca5d10924b14501201d4761c732c1db881d8a082c83b7a50"
+          }
+        },
+        {
+          "folder": "results/runs/20261009T090153Z_robust_f022a8ef/trial_00001/scenario_0000/0002_ac_feasibility",
+          "semiconductor_models": [
+            {
+              "id": "bc846b_emitter_r1",
+              "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+              "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+              "version": "project structural child r1; Q2 emitter 33 -> 3",
+              "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+              "retrieved_date": "2026-10-05",
+              "acquisition_status": "valid_spice",
+              "redistribution": {
+                "status": "not_established_do_not_redistribute",
+                "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+                "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+              },
+              "syntax": "SPICE3 subcircuit",
+              "ngspice_behavior": "",
+              "subcircuit": "BC846B",
+              "parent_model_id": "bc846b_vendor",
+              "device_id": "bc846b",
+              "manufacturer": "Nexperia",
+              "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T090153Z_robust_f022a8ef/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+              "model_lineage": [
+                {
+                  "id": "bc846b_vendor",
+                  "version": "extraction week 24/2021",
+                  "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+                  "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+                  "retrieved_date": "2026-10-05"
+                }
+              ]
+            }
+          ],
+          "netlist_sha256": "3c6a9a332103749beef5f8e5fc97e38d93f733d8bd35db88554d5c283da20eca",
+          "status": "ok",
+          "advisories": [],
+          "files": {
+            "op.raw": "be192d4e0c6bdc6f27d482fbd44953a012c6c831fabd1f35cdf04ac88d23972e",
+            "ac.raw": "a0e72dfaf82c15784f1474da7061f0af33f8456628260c6b26bac48120a67ead"
+          }
+        }
+      ],
+      "current_a": 0.004086004492612225,
+      "polarization_dc_v": 22.310746829065796,
+      "response_deviation_db": 32.818535899537665,
+      "sensitivity_v_per_pa": 0.001458981301554565,
+      "stage": "DC/AC screen",
+      "runtime_s": 0.1881557039960171
+    },
+    {
+      "scenario": {
+        "id": "training_supply_low",
+        "parameters": {
+          "VS": 44,
+          "FT": 0.2
+        },
+        "kind": "supply bounded stress"
+      },
+      "status": "fail",
+      "jobs": [
+        {
+          "folder": "results/runs/20261009T090153Z_robust_f022a8ef/trial_00001/scenario_0001/0001_dc_feasibility",
+          "semiconductor_models": [
+            {
+              "id": "bc846b_emitter_r1",
+              "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+              "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+              "version": "project structural child r1; Q2 emitter 33 -> 3",
+              "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+              "retrieved_date": "2026-10-05",
+              "acquisition_status": "valid_spice",
+              "redistribution": {
+                "status": "not_established_do_not_redistribute",
+                "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+                "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+              },
+              "syntax": "SPICE3 subcircuit",
+              "ngspice_behavior": "",
+              "subcircuit": "BC846B",
+              "parent_model_id": "bc846b_vendor",
+              "device_id": "bc846b",
+              "manufacturer": "Nexperia",
+              "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T090153Z_robust_f022a8ef/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+              "model_lineage": [
+                {
+                  "id": "bc846b_vendor",
+                  "version": "extraction week 24/2021",
+                  "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+                  "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+                  "retrieved_date": "2026-10-05"
+                }
+              ]
+            }
+          ],
+          "netlist_sha256": "6793ac473148106db3f7c2748263891404f8ea162285d0d60ac7584627053aad",
+          "status": "ok",
+          "advisories": [],
+          "files": {
+            "op.raw": "87c8cdd586dc8b817355cd05c51f994ae103ba45e022e8a70188d14f018e25c7"
+          }
+        },
+        {
+          "folder": "results/runs/20261009T090153Z_robust_f022a8ef/trial_00001/scenario_0001/0002_ac_feasibility",
+          "semiconductor_models": [
+            {
+              "id": "bc846b_emitter_r1",
+              "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+              "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+              "version": "project structural child r1; Q2 emitter 33 -> 3",
+              "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+              "retrieved_date": "2026-10-05",
+              "acquisition_status": "valid_spice",
+              "redistribution": {
+                "status": "not_established_do_not_redistribute",
+                "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+                "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+              },
+              "syntax": "SPICE3 subcircuit",
+              "ngspice_behavior": "",
+              "subcircuit": "BC846B",
+              "parent_model_id": "bc846b_vendor",
+              "device_id": "bc846b",
+              "manufacturer": "Nexperia",
+              "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T090153Z_robust_f022a8ef/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+              "model_lineage": [
+                {
+                  "id": "bc846b_vendor",
+                  "version": "extraction week 24/2021",
+                  "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+                  "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+                  "retrieved_date": "2026-10-05"
+                }
+              ]
+            }
+          ],
+          "netlist_sha256": "ae027dda6a143f46c34389c64daf7c225501cd92193902daa3ba3006aeb1fdb2",
+          "status": "ok",
+          "advisories": [],
+          "files": {
+            "op.raw": "c2100cb7f571a4a21dcf18749474a8a63b09af085dae6841c83f63e97474bdbc",
+            "ac.raw": "19b42e87bfec2f44e7b006959999afcc93a1f870d3faf7fba4ec350452ef9ebf"
+          }
+        }
+      ],
+      "current_a": 0.00351457248115368,
+      "polarization_dc_v": 19.472193098634833,
+      "response_deviation_db": 32.79709548310769,
+      "sensitivity_v_per_pa": 0.00125920009714914,
+      "stage": "DC/AC screen",
+      "runtime_s": 0.19333012500283075
+    },
+    {
+      "scenario": {
+        "id": "training_supply_high",
+        "parameters": {
+          "VS": 52,
+          "FT": -0.2
+        },
+        "kind": "supply bounded stress"
+      },
+      "status": "fail",
+      "jobs": [
+        {
+          "folder": "results/runs/20261009T090153Z_robust_f022a8ef/trial_00001/scenario_0002/0001_dc_feasibility",
+          "semiconductor_models": [
+            {
+              "id": "bc846b_emitter_r1",
+              "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+              "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+              "version": "project structural child r1; Q2 emitter 33 -> 3",
+              "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+              "retrieved_date": "2026-10-05",
+              "acquisition_status": "valid_spice",
+              "redistribution": {
+                "status": "not_established_do_not_redistribute",
+                "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+                "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+              },
+              "syntax": "SPICE3 subcircuit",
+              "ngspice_behavior": "",
+              "subcircuit": "BC846B",
+              "parent_model_id": "bc846b_vendor",
+              "device_id": "bc846b",
+              "manufacturer": "Nexperia",
+              "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T090153Z_robust_f022a8ef/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+              "model_lineage": [
+                {
+                  "id": "bc846b_vendor",
+                  "version": "extraction week 24/2021",
+                  "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+                  "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+                  "retrieved_date": "2026-10-05"
+                }
+              ]
+            }
+          ],
+          "netlist_sha256": "f74b23fa0bdf46c8bd18aa95144d98e4e36ae2bfbb76da27347d74b7c9675739",
+          "status": "ok",
+          "advisories": [],
+          "files": {
+            "op.raw": "2586f613f178245af46efe6819fe3aaae92e947cfe8a001750dfda23c5e3ee37"
+          }
+        },
+        {
+          "folder": "results/runs/20261009T090153Z_robust_f022a8ef/trial_00001/scenario_0002/0002_ac_feasibility",
+          "semiconductor_models": [
+            {
+              "id": "bc846b_emitter_r1",
+              "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+              "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+              "version": "project structural child r1; Q2 emitter 33 -> 3",
+              "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+              "retrieved_date": "2026-10-05",
+              "acquisition_status": "valid_spice",
+              "redistribution": {
+                "status": "not_established_do_not_redistribute",
+                "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+                "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+              },
+              "syntax": "SPICE3 subcircuit",
+              "ngspice_behavior": "",
+              "subcircuit": "BC846B",
+              "parent_model_id": "bc846b_vendor",
+              "device_id": "bc846b",
+              "manufacturer": "Nexperia",
+              "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T090153Z_robust_f022a8ef/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+              "model_lineage": [
+                {
+                  "id": "bc846b_vendor",
+                  "version": "extraction week 24/2021",
+                  "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+                  "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+                  "retrieved_date": "2026-10-05"
+                }
+              ]
+            }
+          ],
+          "netlist_sha256": "4e50a5c6a8e2a390ce4f8a22611cbbd3fa4ee16cc7e170103fee63ddfa9ccc4d",
+          "status": "ok",
+          "advisories": [],
+          "files": {
+            "op.raw": "cac8104fbebbb404f75aaab909479755ef85c83dd66ecd57c0fcb703c32952a8",
+            "ac.raw": "52650457410fcdcff87d8608dabd0da3a11be2ed7a0a75cc1eeb59bc6a08beae"
+          }
+        }
+      ],
+      "current_a": 0.004732510659089661,
+      "polarization_dc_v": 25.510542294020812,
+      "response_deviation_db": 32.84011430263994,
+      "sensitivity_v_per_pa": 0.0016796708288449099,
+      "stage": "DC/AC screen",
+      "runtime_s": 0.19498422999458853
+    }
+  ],
+  "objective": {
+    "value": 32.84011430263994,
+    "complete": true,
+    "samples": 3,
+    "finite_samples": 3,
+    "missing_or_error_samples": 0,
+    "worst_observed": 32.84011430263994,
+    "p95_scenario": 32.837956462329714,
+    "interpretation": "finite tested scenarios only; no full-envelope bound or population percentile"
+  },
+  "screen_feasible": false
+}

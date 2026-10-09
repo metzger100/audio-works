@@ -1,0 +1,24 @@
+id: concept_0010
+title: CMOS charge amplifier with resistive bleed
+families:
+- charge
+- no_jfet
+- instrumentation
+role: Inventor
+status: proposed_not_simulated
+performance_claim: false
+nonconventional_jfet_buffer: true
+scientific_transfer: true
+sources:
+- S05
+assumption_inverted: The capsule must be voltage sensed
+sensed_quantity: Charge/current integral
+loading_control: Virtual potential and feedback capacitance
+dc_bias: Feedback bleed resistor and midrail reference
+gain_or_impedance_transformation: Charge-to-voltage in feedback C
+balanced_output: Independent balanced output
+expected_dominant_noise: Feedback resistor, voltage noise times noise gain
+expected_dominant_distortion: Input compliance and finite loop gain
+likely_fatal_flaw: Bleed noise or required compensation ruins audio range
+fastest_falsification: Noise gain and return ratio across C/leakage and feedback-C
+  tolerance

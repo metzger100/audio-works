@@ -1,0 +1,168 @@
+schema_version: 1
+policy: Persistent independent families; no retirement based on another family winning.
+  Record physics or simulation failures per concept.
+families:
+- id: conventional_jfet
+  name: Conventional high-impedance JFET architectures
+  minimum_retained: 1
+  state: engineering_attempts_registered
+  implemented_candidates:
+  - candidate_0001
+  - candidate_0007
+  retirement_evidence: null
+  qualification: no family retired; coverage is a mechanism attempt, never proof of
+    qualification
+- id: unconventional_jfet
+  name: Unconventional JFET architectures
+  minimum_retained: 1
+  state: engineering_attempts_registered
+  implemented_candidates:
+  - candidate_0002
+  - candidate_0008
+  retirement_evidence: null
+  qualification: no family retired; coverage is a mechanism attempt, never proof of
+    qualification
+- id: mosfet
+  name: MOSFET input architectures
+  minimum_retained: 1
+  state: engineering_attempts_registered
+  implemented_candidates:
+  - candidate_0003
+  - candidate_0004
+  - candidate_0006
+  - candidate_0010
+  - candidate_0011
+  - candidate_0014
+  retirement_evidence: null
+  qualification: no family retired; coverage is a mechanism attempt, never proof of
+    qualification
+- id: no_jfet
+  name: No-JFET architectures
+  minimum_retained: 1
+  state: engineering_attempts_registered
+  implemented_candidates:
+  - candidate_0003
+  - candidate_0004
+  - candidate_0005
+  - candidate_0006
+  - candidate_0010
+  - candidate_0011
+  - candidate_0012
+  - candidate_0014
+  retirement_evidence: null
+  qualification: no family retired; coverage is a mechanism attempt, never proof of
+    qualification
+- id: no_fet
+  name: No-FET architectures
+  minimum_retained: 1
+  state: engineering_attempts_registered
+  implemented_candidates:
+  - candidate_0005
+  - candidate_0012
+  retirement_evidence: null
+  qualification: no family retired; coverage is a mechanism attempt, never proof of
+    qualification
+- id: charge
+  name: Charge-sensitive architectures
+  minimum_retained: 1
+  state: engineering_attempts_registered
+  implemented_candidates:
+  - candidate_0004
+  - candidate_0005
+  - candidate_0011
+  - candidate_0012
+  - candidate_0014
+  retirement_evidence: null
+  qualification: no family retired; coverage is a mechanism attempt, never proof of
+    qualification
+- id: current
+  name: Transimpedance/current-mode architectures
+  minimum_retained: 1
+  state: engineering_attempts_registered
+  implemented_candidates:
+  - candidate_0005
+  - candidate_0012
+  retirement_evidence: null
+  qualification: no family retired; coverage is a mechanism attempt, never proof of
+    qualification
+- id: floating
+  name: Floating input architectures
+  minimum_retained: 1
+  state: engineering_attempts_registered
+  implemented_candidates:
+  - candidate_0006
+  - candidate_0009
+  - candidate_0013
+  retirement_evidence: null
+  qualification: no family retired; coverage is a mechanism attempt, never proof of
+    qualification
+- id: differential
+  name: Differential capsule sensing
+  minimum_retained: 1
+  state: engineering_attempts_registered
+  implemented_candidates:
+  - candidate_0006
+  - candidate_0009
+  - candidate_0013
+  retirement_evidence: null
+  qualification: no family retired; coverage is a mechanism attempt, never proof of
+    qualification
+- id: bootstrap
+  name: Bootstrapped input architectures
+  minimum_retained: 1
+  state: engineering_attempts_registered
+  implemented_candidates:
+  - candidate_0003
+  - candidate_0010
+  retirement_evidence: null
+  qualification: no family retired; coverage is a mechanism attempt, never proof of
+    qualification
+- id: servo
+  name: Servo-controlled operating-point architectures
+  minimum_retained: 1
+  state: engineering_attempts_registered
+  implemented_candidates:
+  - candidate_0002
+  - candidate_0008
+  retirement_evidence: null
+  qualification: no family retired; coverage is a mechanism attempt, never proof of
+    qualification
+- id: minimal
+  name: Minimal-active-device architectures
+  minimum_retained: 1
+  state: awaiting_engineering
+  implemented_candidates: []
+  retirement_evidence: null
+  qualification: no family retired; coverage is a mechanism attempt, never proof of
+    qualification
+- id: high_feedback
+  name: High-feedback architectures
+  minimum_retained: 1
+  state: engineering_attempts_registered
+  implemented_candidates:
+  - candidate_0003
+  - candidate_0004
+  - candidate_0010
+  - candidate_0011
+  - candidate_0014
+  retirement_evidence: null
+  qualification: no family retired; coverage is a mechanism attempt, never proof of
+    qualification
+- id: instrumentation
+  name: Architectures borrowed from scientific instrumentation
+  minimum_retained: 1
+  state: engineering_attempts_registered
+  implemented_candidates:
+  - candidate_0003
+  - candidate_0004
+  - candidate_0005
+  - candidate_0006
+  - candidate_0009
+  - candidate_0010
+  - candidate_0011
+  - candidate_0012
+  - candidate_0013
+  - candidate_0014
+  retirement_evidence: null
+  qualification: no family retired; coverage is a mechanism attempt, never proof of
+    qualification

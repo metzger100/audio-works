@@ -1,0 +1,246 @@
+[
+  {
+    "trial": 0,
+    "design_values": {
+      "FEEDBACK_C": 9.999999999999996e-11
+    },
+    "parameters": {
+      "CFEEDBACK_VALUE": 9.999999999999996e-11
+    },
+    "cases": [
+      {
+        "scenario": {
+          "id": "nominal",
+          "parameters": {},
+          "kind": "nominal"
+        },
+        "status": "error",
+        "jobs": [
+          {
+            "folder": "results/runs/20261009T090150Z_robust_17f23af9/trial_00000/scenario_0000/0001_dc_feasibility",
+            "semiconductor_models": [
+              {
+                "id": "bc846b_emitter_r1",
+                "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+                "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+                "version": "project structural child r1; Q2 emitter 33 -> 3",
+                "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+                "retrieved_date": "2026-10-05",
+                "acquisition_status": "valid_spice",
+                "redistribution": {
+                  "status": "not_established_do_not_redistribute",
+                  "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+                  "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+                },
+                "syntax": "SPICE3 subcircuit",
+                "ngspice_behavior": "",
+                "subcircuit": "BC846B",
+                "parent_model_id": "bc846b_vendor",
+                "device_id": "bc846b",
+                "manufacturer": "Nexperia",
+                "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T090150Z_robust_17f23af9/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+                "model_lineage": [
+                  {
+                    "id": "bc846b_vendor",
+                    "version": "extraction week 24/2021",
+                    "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+                    "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+                    "retrieved_date": "2026-10-05"
+                  }
+                ]
+              },
+              {
+                "id": "opa197_pspice",
+                "path": "semiconductor/vendor/opa197.lib",
+                "sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+                "version": "Final 1.3; 23JUN2022; SBOMA34D",
+                "source_url": "https://www.ti.com/lit/zip/sboma34d",
+                "retrieved_date": "2026-10-05",
+                "acquisition_status": "valid_spice",
+                "redistribution": {
+                  "status": "not_established_do_not_redistribute",
+                  "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+                  "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+                },
+                "syntax": "SPICE3 subcircuit with PSpice extensions",
+                "ngspice_behavior": "ps",
+                "subcircuit": "OPAx197",
+                "parent_model_id": null,
+                "device_id": "opa197",
+                "manufacturer": "Texas Instruments",
+                "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T090150Z_robust_17f23af9/source/models/semiconductor/vendor/opa197.lib",
+                "model_lineage": []
+              }
+            ],
+            "netlist_sha256": "b70933c710ecb958c3e89d59396ac867b41fd25fd7d74bb9a8f1abdec7d9d77c",
+            "status": "error",
+            "reason": "ngspice exit 0: Warning"
+          }
+        ],
+        "reason": "SimulationError: ngspice exit 0: Warning",
+        "runtime_s": 0.28148042999964673
+      },
+      {
+        "scenario": {
+          "id": "training_supply_low",
+          "parameters": {
+            "VS": 44,
+            "FT": 0.2
+          },
+          "kind": "supply bounded stress"
+        },
+        "status": "error",
+        "jobs": [
+          {
+            "folder": "results/runs/20261009T090150Z_robust_17f23af9/trial_00000/scenario_0001/0001_dc_feasibility",
+            "semiconductor_models": [
+              {
+                "id": "bc846b_emitter_r1",
+                "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+                "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+                "version": "project structural child r1; Q2 emitter 33 -> 3",
+                "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+                "retrieved_date": "2026-10-05",
+                "acquisition_status": "valid_spice",
+                "redistribution": {
+                  "status": "not_established_do_not_redistribute",
+                  "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+                  "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+                },
+                "syntax": "SPICE3 subcircuit",
+                "ngspice_behavior": "",
+                "subcircuit": "BC846B",
+                "parent_model_id": "bc846b_vendor",
+                "device_id": "bc846b",
+                "manufacturer": "Nexperia",
+                "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T090150Z_robust_17f23af9/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+                "model_lineage": [
+                  {
+                    "id": "bc846b_vendor",
+                    "version": "extraction week 24/2021",
+                    "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+                    "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+                    "retrieved_date": "2026-10-05"
+                  }
+                ]
+              },
+              {
+                "id": "opa197_pspice",
+                "path": "semiconductor/vendor/opa197.lib",
+                "sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+                "version": "Final 1.3; 23JUN2022; SBOMA34D",
+                "source_url": "https://www.ti.com/lit/zip/sboma34d",
+                "retrieved_date": "2026-10-05",
+                "acquisition_status": "valid_spice",
+                "redistribution": {
+                  "status": "not_established_do_not_redistribute",
+                  "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+                  "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+                },
+                "syntax": "SPICE3 subcircuit with PSpice extensions",
+                "ngspice_behavior": "ps",
+                "subcircuit": "OPAx197",
+                "parent_model_id": null,
+                "device_id": "opa197",
+                "manufacturer": "Texas Instruments",
+                "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T090150Z_robust_17f23af9/source/models/semiconductor/vendor/opa197.lib",
+                "model_lineage": []
+              }
+            ],
+            "netlist_sha256": "d5d6e73e67deed749d2b35c5c7793139329913d18f97909cf7a7af19428e4852",
+            "status": "error",
+            "reason": "ngspice exit 0: Warning"
+          }
+        ],
+        "reason": "SimulationError: ngspice exit 0: Warning",
+        "runtime_s": 0.5808651990009821
+      },
+      {
+        "scenario": {
+          "id": "training_supply_high",
+          "parameters": {
+            "VS": 52,
+            "FT": -0.2
+          },
+          "kind": "supply bounded stress"
+        },
+        "status": "error",
+        "jobs": [
+          {
+            "folder": "results/runs/20261009T090150Z_robust_17f23af9/trial_00000/scenario_0002/0001_dc_feasibility",
+            "semiconductor_models": [
+              {
+                "id": "bc846b_emitter_r1",
+                "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+                "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+                "version": "project structural child r1; Q2 emitter 33 -> 3",
+                "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+                "retrieved_date": "2026-10-05",
+                "acquisition_status": "valid_spice",
+                "redistribution": {
+                  "status": "not_established_do_not_redistribute",
+                  "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+                  "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+                },
+                "syntax": "SPICE3 subcircuit",
+                "ngspice_behavior": "",
+                "subcircuit": "BC846B",
+                "parent_model_id": "bc846b_vendor",
+                "device_id": "bc846b",
+                "manufacturer": "Nexperia",
+                "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T090150Z_robust_17f23af9/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+                "model_lineage": [
+                  {
+                    "id": "bc846b_vendor",
+                    "version": "extraction week 24/2021",
+                    "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+                    "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+                    "retrieved_date": "2026-10-05"
+                  }
+                ]
+              },
+              {
+                "id": "opa197_pspice",
+                "path": "semiconductor/vendor/opa197.lib",
+                "sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+                "version": "Final 1.3; 23JUN2022; SBOMA34D",
+                "source_url": "https://www.ti.com/lit/zip/sboma34d",
+                "retrieved_date": "2026-10-05",
+                "acquisition_status": "valid_spice",
+                "redistribution": {
+                  "status": "not_established_do_not_redistribute",
+                  "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+                  "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+                },
+                "syntax": "SPICE3 subcircuit with PSpice extensions",
+                "ngspice_behavior": "ps",
+                "subcircuit": "OPAx197",
+                "parent_model_id": null,
+                "device_id": "opa197",
+                "manufacturer": "Texas Instruments",
+                "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T090150Z_robust_17f23af9/source/models/semiconductor/vendor/opa197.lib",
+                "model_lineage": []
+              }
+            ],
+            "netlist_sha256": "3557e99bc9016a55ffc0247eba774e32778788ce2df312e05e26ee986026b993",
+            "status": "error",
+            "reason": "ngspice exit 0: Warning"
+          }
+        ],
+        "reason": "SimulationError: ngspice exit 0: Warning",
+        "runtime_s": 1.9766008950027754
+      }
+    ],
+    "objective": {
+      "value": null,
+      "complete": false,
+      "samples": 3,
+      "finite_samples": 0,
+      "missing_or_error_samples": 3,
+      "worst_observed": null,
+      "p95_scenario": null,
+      "interpretation": "finite tested scenarios only; no full-envelope bound or population percentile"
+    },
+    "screen_feasible": false
+  }
+]

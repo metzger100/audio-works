@@ -1,0 +1,1740 @@
+Note: gnd in a subcircuit is not set to 0 automatically
+
+Note: Compatibility modes selected: ps
+
+
+Circuit: meridian research operating_point
+
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+DC solution failed -
+
+Last Node Voltages
+------------------
+
+Node                                   Last Voltage        Previous Iter
+----                                   ------------        -------------
+pressure                              -3.35321e+156                    0 *
+pressure_r                             -9.8272e+157                    0 *
+xenv.feed                                        48                    0 *
+xenv.xp                               -3.55427e+140                    0 *
+xenv.xn                               -3.55427e+140                    0 *
+p                                     -2.86091e+166                    0 *
+n                                     -2.86091e+166                    0 *
+mic_g                                 -2.86091e+166                    0 *
+pp                                    -3.55424e+140                    0 *
+pn                                    -3.55424e+140                    0 *
+cm                                                0                    0
+xcap.qf                               -9.90552e+268                    0 *
+b                                       9.8272e+172                    0 *
+f                                     -1.78676e+173                    0 *
+xcap.cqf                                5.8067e+170                    0 *
+xcap.qr                               -2.11318e+270                    0 *
+rear                                   1.96544e+173                    0 *
+xcap.cqr                              -5.80727e+170                    0 *
+xdut.raw                              -2.86091e+166                    0 *
+xdut.regbase                          -2.86091e+166                    0 *
+xdut.qreg_t0                          -2.86091e+166                    0 *
+xdut.qreg_t1                          -2.86091e+166                    0 *
+rail                                  -2.86091e+166                    0 *
+xdut.qreg_t2                          -2.86091e+166                    0 *
+xdut.xqreg.11                         -1.57597e+164                    0 *
+xdut.mid                              -2.86091e+166                    0 *
+xdut.pol_0                            -2.86091e+166                    0 *
+xdut.pol_1                            -2.86091e+166                    0 *
+xdut.pol_2                            -2.86091e+166                    0 *
+xdut.pol_3                            -2.86091e+166                    0 *
+xdut.pol_4                            -2.86091e+166                    0 *
+xdut.pol_5                            -2.86091e+166                    0 *
+xdut.pol_6                            -2.86091e+166                    0 *
+xdut.pol_7                            -2.86091e+166                    0 *
+xdut.pol_8                            -2.86091e+166                    0 *
+xdut.pol                              -2.86091e+166                    0 *
+xdut.gate_div0                        -2.88625e+166                    0 *
+xdut.gate_div1                         -2.9116e+166                    0 *
+xdut.gatebias                         -2.93694e+166                    0 *
+xdut.jinput_t0                        -1.65995e+168                    0 *
+xdut.jinput_t1                        -1.54582e+173                    0 *
+xdut.source                           -1.54582e+173                    0 *
+xdut.jinput_t2                        -1.54582e+173                    0 *
+xdut.jinput_t3                        -2.86091e+166                    0 *
+xdut.jinput_t4                        -2.86091e+166                    0 *
+xdut.signal                           -1.54582e+173                    0 *
+xdut.uoutp_t0                         -2.86054e+162                    0 *
+xdut.outp                             -2.91744e+166                    0 *
+xdut.uoutp_t1                         -2.91744e+166                    0 *
+xdut.uoutp_t2                         -2.86091e+166                    0 *
+xdut.uoutp_t3                         -2.86091e+166                    0 *
+xdut.uoutp_t4                         -2.91744e+166                    0 *
+xdut.xuoutp.n24458                     1.74242e+129                    0 *
+xdut.xuoutp.n24659                     1.44368e+111                    0 *
+xdut.xuoutp.n37029                     1.88453e+154                    0 *
+xdut.xuoutp.n37037                     1.88453e+154                    0 *
+xdut.xuoutp.n39124                    -1.95491e+177                    0 *
+xdut.xuoutp.n39892                    -1.95491e+177                    0 *
+xdut.xuoutp.n2425309                  -2.13042e+146                    0 *
+xdut.xuoutp.n2425287                  -3.17609e+111                    0 *
+xdut.xuoutp.n2425325                  -2.13042e+146                    0 *
+xdut.xuoutp.mid                       -3.17609e+111                    0 *
+xdut.xuoutp.n56849                    -1.46078e+121                    0 *
+xdut.xuoutp.n57325                    -3.17609e+111                    0 *
+xdut.xuoutp.n59747                    -3.17609e+111                    0 *
+xdut.xuoutp.n59865                    -5.48113e+119                    0 *
+xdut.xuoutp.n25921                     3.83721e+197                    0 *
+xdut.xuoutp.n25929                     3.83721e+197                    0 *
+xdut.xuoutp.n65579                    -3.17609e+111                    0 *
+xdut.xuoutp.n65697                    -3.17609e+111                    0 *
+xdut.xuoutp.n68774                    -3.17609e+111                    0 *
+xdut.xuoutp.n72398                    -2.13042e+140                    0 *
+xdut.xuoutp.n72391                    -2.13042e+140                    0 *
+xdut.xuoutp.n81574                    -3.17609e+111                    0 *
+xdut.xuoutp.n81664                    -3.17609e+111                    0 *
+xdut.xuoutp.sw_ol_opax197             -3.17609e+111                    0 *
+xdut.xuoutp.vclp                       4.88005e+125                    0 *
+xdut.xuoutp.vimon                       7.3605e+139                    0 *
+xdut.xuoutp.n27785                    -9.21944e+160                    0 *
+xdut.xuoutp.n27793                    -9.21944e+160                    0 *
+xdut.xuoutp.vout_s                     -2.1747e+141                    0 *
+xdut.xuoutp.n2402147                   1.69097e+170                    0 *
+xdut.xuoutp.n2402155                   1.69097e+170                    0 *
+xdut.xuoutp.n2419074                  -3.17609e+111                    0 *
+xdut.xuoutp.n2525790                  -3.17609e+111                    0 *
+xdut.xuoutp.n2526890                  -3.17609e+111                    0 *
+xdut.xuoutp.n36262                    -3.17609e+111                    0 *
+xdut.xuoutp.n32347                     -2.1283e+143                    0 *
+xdut.xuoutp.clamp                     -3.17609e+111                    0 *
+xdut.xuoutp.esdp                        3.7246e+158                    0 *
+xdut.xuoutp.esdn                        7.4492e+157                    0 *
+xdut.xuoutp.n158495                    6.54678e+150                    0 *
+xdut.xuoutp.cl_clamp                   6.54678e+150                    0 *
+xdut.xuoutp.n161937                   -2.91744e+166                    0 *
+xdut.xuoutp.claw_clamp                -3.17609e+111                    0 *
+xdut.xuoutp.n45999                    -2.91744e+166                    0 *
+xdut.xuoutp.vcc_b                     -2.85805e+163                    0 *
+xdut.xuoutp.vee_b                     -2.85805e+163                    0 *
+xdut.xuoutp.n25415                     3.83747e+185                    0 *
+xdut.xuoutp.n25397                      3.7246e+158                    0 *
+xdut.xuoutp.n25248                     7.68621e+173                    0 *
+xdut.xuoutp.vcc_clp                   -2.13042e+140                    0 *
+xdut.xuoutp.vee_clp                   -2.13042e+140                    0 *
+xdut.xuoutp.n1356345                   4.88005e+125                    0 *
+xdut.xuoutp.n1356333                   4.88005e+125                    0 *
+xdut.xuoutp.n1356409                   4.88005e+125                    0 *
+xdut.xuoutp.n1356429                   4.88005e+125                    0 *
+xdut.xuoutp.vsense                    -3.17609e+111                    0 *
+xdut.xuoutp.n28678                    -3.83721e+197                    0 *
+xdut.xuoutp.n28438                     3.83747e+185                    0 *
+xdut.xuoutp.n24207                      3.7246e+158                    0 *
+xdut.xuoutp.n31303                      7.4492e+157                    0 *
+xdut.xuoutp.n31389                    -2.85805e+163                    0 *
+xdut.xuoutp.n31737                    -2.85805e+163                    0 *
+xdut.xuoutp.n32236                    -2.85519e+160                    0 *
+xdut.xuoutp.n32510                    -3.17609e+111                    0 *
+xdut.xuoutp.n46041                    -8.97671e+160                    0 *
+xdut.xuoutp.n55560                    -1.95969e+138                    0 *
+xdut.xuoutp.n57321                    -3.17609e+111                    0 *
+xdut.xuoutp.n59739                    -3.17609e+111                    0 *
+xdut.xuoutp.n59743                    -3.17609e+111                    0 *
+xdut.xuoutp.n59881                    -7.35315e+136                    0 *
+xdut.xuoutp.n59905                    -3.17609e+111                    0 *
+xdut.xuoutp.n65567                    -3.17609e+111                    0 *
+xdut.xuoutp.n65575                    -3.17609e+111                    0 *
+xdut.xuoutp.n65713                    -3.17609e+111                    0 *
+xdut.xuoutp.n65737                    -3.17609e+111                    0 *
+xdut.xuoutp.n72064                    -2.85805e+157                    0 *
+xdut.xuoutp.n72073                    -2.85805e+157                    0 *
+xdut.xuoutp.v11                        9.76495e+116                    0 *
+xdut.xuoutp.v12                       -9.76501e+116                    0 *
+xdut.xuoutp.n81756                    -3.17609e+111                    0 *
+xdut.xuoutp.n161737                    9.87441e+164                    0 *
+xdut.xuoutp.n1356115                   4.88005e+125                    0 *
+xdut.xuoutp.n1356061                   4.88005e+125                    0 *
+xdut.xuoutp.x_u1.7                         0.836142                    0 *
+xdut.xuoutp.x_u1.8                         0.836142                    0 *
+xdut.xuoutp.x_u1.3                                0                    0
+xdut.xuoutp.x_u1.6                                0                    0
+xdut.xuoutp.x_u1.4                                0                    0
+xdut.xuoutp.x_u1.5                                0                    0
+xdut.xuoutp.x_u10.gvo+_int1           -1.96165e+141                    0 *
+xdut.xuoutp.x_u10.gvo-_int1                       0                    0
+xdut.xuoutp.x_u11.gvo+_int1                       0                    0
+xdut.xuoutp.x_u11.gvo-_int1            -7.3605e+139                    0 *
+xdut.xuoutp.x_u12.gvo+_int1            -3.41758e+97                    0 *
+xdut.xuoutp.x_u12.gvo-_int1                       0                    0
+xdut.xuoutp.x_u16.gsw+_int1                       1                    0 *
+xdut.xuoutp.x_u18.g1_int1              9.58146e+134                    0 *
+xdut.xuoutp.x_u18.g1_int2               7.3605e+139                    0 *
+xdut.xuoutp.x_u19.g1_int1             -1.97355e+135                    0 *
+xdut.xuoutp.x_u19.g1_int2              -7.3605e+139                    0 *
+xdut.xuoutp.x_u22.g1_int1                       -11                    0 *
+xdut.xuoutp.x_u23.g1_int1                         0                    0
+xdut.xuoutp.x_u26.g1_int1                         0                    0
+xdut.xuoutp.x_u27.g1_int1              -7.3605e+136                    0 *
+xdut.xuoutp.x_u30.g1_int1                      -0.5                    0 *
+xdut.xuoutp.x_u31.g1_int1                      -2.4                    0 *
+xdut.xuoutp.x_u32.g1_int1                    -50000                    0 *
+xdut.xuoutp.x_u35.g1_int1                       5.5                    0 *
+xdut.xuoutp.x_u36.3                               0                    0
+xdut.xuoutp.x_u36.5                               0                    0
+xdut.xuoutp.x_u37.3                               0                    0
+xdut.xuoutp.x_u37.5                               0                    0
+xdut.xuoutp.x_u4.e1_int1                  1.612e-05                    0 *
+xdut.xuoutp.x_u6.g1_int1              -2.85805e+163                    0 *
+xdut.inv                              -3.18983e+168                    0 *
+xdut.outn                             -3.88783e+166                    0 *
+xdut.uoutn_t0                         -2.12455e+183                    0 *
+xdut.uoutn_t1                         -3.18983e+168                    0 *
+xdut.uoutn_t2                         -2.86091e+166                    0 *
+xdut.uoutn_t3                         -2.86091e+166                    0 *
+xdut.uoutn_t4                         -3.88783e+166                    0 *
+xdut.xuoutn.n24458                     1.47861e+168                    0 *
+xdut.xuoutn.n24659                     1.47861e+168                    0 *
+xdut.xuoutn.n37029                    -2.09927e+156                    0 *
+xdut.xuoutn.n37037                    -2.09927e+156                    0 *
+xdut.xuoutn.n39124                    -1.95491e+177                    0 *
+xdut.xuoutn.n39892                    -1.95491e+177                    0 *
+xdut.xuoutn.n2425309                  -2.37266e+146                    0 *
+xdut.xuoutn.n2425287                  -3.53722e+111                    0 *
+xdut.xuoutn.n2425325                  -2.37266e+146                    0 *
+xdut.xuoutn.mid                       -3.25294e+168                    0 *
+xdut.xuoutn.n56849                    -3.25294e+168                    0 *
+xdut.xuoutn.n57325                    -3.25294e+168                    0 *
+xdut.xuoutn.n59747                    -3.25294e+168                    0 *
+xdut.xuoutn.n59865                    -3.25294e+168                    0 *
+xdut.xuoutn.n25921                    -1.63134e+183                    0 *
+xdut.xuoutn.n25929                    -1.63134e+183                    0 *
+xdut.xuoutn.n65579                    -3.25294e+168                    0 *
+xdut.xuoutn.n65697                    -3.25294e+168                    0 *
+xdut.xuoutn.n68774                    -3.25294e+168                    0 *
+xdut.xuoutn.n72398                    -3.25294e+168                    0 *
+xdut.xuoutn.n72391                    -3.25294e+168                    0 *
+xdut.xuoutn.n81574                    -3.25294e+168                    0 *
+xdut.xuoutn.n81664                    -3.25294e+168                    0 *
+xdut.xuoutn.sw_ol_opax197             -3.25294e+168                    0 *
+xdut.xuoutn.vclp                      -3.25294e+168                    0 *
+xdut.xuoutn.vimon                     -3.25294e+168                    0 *
+xdut.xuoutn.n27785                     3.35321e+171                    0 *
+xdut.xuoutn.n27793                     3.35321e+171                    0 *
+xdut.xuoutn.vout_s                    -3.25294e+168                    0 *
+xdut.xuoutn.n2402147                  -1.15059e+182                    0 *
+xdut.xuoutn.n2402155                  -1.15059e+182                    0 *
+xdut.xuoutn.n2419074                  -3.25294e+168                    0 *
+xdut.xuoutn.n2525790                  -3.25294e+168                    0 *
+xdut.xuoutn.n2526890                  -3.25294e+168                    0 *
+xdut.xuoutn.n36262                    -3.25294e+168                    0 *
+xdut.xuoutn.n32347                    -3.25294e+168                    0 *
+xdut.xuoutn.clamp                     -3.25294e+168                    0 *
+xdut.xuoutn.esdp                      -3.25294e+168                    0 *
+xdut.xuoutn.esdn                      -3.25294e+168                    0 *
+xdut.xuoutn.n158495                   -3.25294e+168                    0 *
+xdut.xuoutn.cl_clamp                  -3.25294e+168                    0 *
+xdut.xuoutn.n161937                   -3.88783e+166                    0 *
+xdut.xuoutn.claw_clamp                -3.25294e+168                    0 *
+xdut.xuoutn.n45999                    -3.88783e+166                    0 *
+xdut.xuoutn.vcc_b                     -3.18302e+163                    0 *
+xdut.xuoutn.vee_b                     -3.18302e+163                    0 *
+xdut.xuoutn.n25415                    -5.22993e+185                    0 *
+xdut.xuoutn.n25397                    -3.25294e+168                    0 *
+xdut.xuoutn.n25248                    -5.22993e+185                    0 *
+xdut.xuoutn.vcc_clp                   -3.25294e+168                    0 *
+xdut.xuoutn.vee_clp                   -3.25294e+168                    0 *
+xdut.xuoutn.n1356345                  -3.25294e+168                    0 *
+xdut.xuoutn.n1356333                  -3.25294e+168                    0 *
+xdut.xuoutn.n1356409                  -3.25294e+168                    0 *
+xdut.xuoutn.n1356429                  -3.25294e+168                    0 *
+xdut.xuoutn.vsense                    -3.25294e+168                    0 *
+xdut.xuoutn.n28678                    -5.21362e+185                    0 *
+xdut.xuoutn.n28438                    -5.22993e+185                    0 *
+xdut.xuoutn.n24207                    -3.25294e+168                    0 *
+xdut.xuoutn.n31303                    -3.25294e+168                    0 *
+xdut.xuoutn.n31389                    -3.18302e+163                    0 *
+xdut.xuoutn.n31737                    -3.18302e+163                    0 *
+xdut.xuoutn.n32236                    -3.24969e+168                    0 *
+xdut.xuoutn.n32510                    -3.25294e+168                    0 *
+xdut.xuoutn.n46041                    -3.25293e+168                    0 *
+xdut.xuoutn.n55560                    -3.25294e+168                    0 *
+xdut.xuoutn.n57321                    -3.25294e+168                    0 *
+xdut.xuoutn.n59739                    -3.25294e+168                    0 *
+xdut.xuoutn.n59743                    -3.25294e+168                    0 *
+xdut.xuoutn.n59881                    -3.25294e+168                    0 *
+xdut.xuoutn.n59905                    -3.25294e+168                    0 *
+xdut.xuoutn.n65567                    -3.25294e+168                    0 *
+xdut.xuoutn.n65575                    -3.25294e+168                    0 *
+xdut.xuoutn.n65713                    -3.25294e+168                    0 *
+xdut.xuoutn.n65737                    -3.25294e+168                    0 *
+xdut.xuoutn.n72064                    -3.25294e+168                    0 *
+xdut.xuoutn.n72073                    -3.25294e+168                    0 *
+xdut.xuoutn.v11                       -3.25294e+168                    0 *
+xdut.xuoutn.v12                       -3.25294e+168                    0 *
+xdut.xuoutn.n81756                    -3.25294e+168                    0 *
+xdut.xuoutn.n161737                   -3.36172e+168                    0 *
+xdut.xuoutn.n1356115                  -3.25294e+168                    0 *
+xdut.xuoutn.n1356061                  -3.25294e+168                    0 *
+xdut.xuoutn.x_u1.7                         0.836142                    0 *
+xdut.xuoutn.x_u1.8                         0.836142                    0 *
+xdut.xuoutn.x_u1.3                                0                    0
+xdut.xuoutn.x_u1.6                                0                    0
+xdut.xuoutn.x_u1.4                                0                    0
+xdut.xuoutn.x_u1.5                                0                    0
+xdut.xuoutn.x_u10.gvo+_int1           -3.25287e+156                    0 *
+xdut.xuoutn.x_u10.gvo-_int1                       0                    0
+xdut.xuoutn.x_u11.gvo+_int1           -3.35195e+153                    0 *
+xdut.xuoutn.x_u11.gvo-_int1                       0                    0
+xdut.xuoutn.x_u12.gvo+_int1           -3.35195e+154                    0 *
+xdut.xuoutn.x_u12.gvo-_int1                       0                    0
+xdut.xuoutn.x_u16.gsw+_int1                       0                    0
+xdut.xuoutn.x_u18.g1_int1               2.56175e-05                    0 *
+xdut.xuoutn.x_u18.g1_int2                         0                    0
+xdut.xuoutn.x_u19.g1_int1               3.52742e-05                    0 *
+xdut.xuoutn.x_u19.g1_int2                         0                    0
+xdut.xuoutn.x_u22.g1_int1                         0                    0
+xdut.xuoutn.x_u23.g1_int1                         0                    0
+xdut.xuoutn.x_u26.g1_int1                         0                    0
+xdut.xuoutn.x_u27.g1_int1                         0                    0
+xdut.xuoutn.x_u30.g1_int1                       0.5                    0 *
+xdut.xuoutn.x_u31.g1_int1                      -2.4                    0 *
+xdut.xuoutn.x_u32.g1_int1                    -50000                    0 *
+xdut.xuoutn.x_u35.g1_int1                         0                    0
+xdut.xuoutn.x_u36.3                               0                    0
+xdut.xuoutn.x_u36.5                               0                    0
+xdut.xuoutn.x_u37.3                               0                    0
+xdut.xuoutn.x_u37.5                               0                    0
+xdut.xuoutn.x_u4.e1_int1                  1.612e-05                    0 *
+xdut.xuoutn.x_u6.g1_int1               3.25291e+168                    0 *
+xdut.cp                               -2.86091e+166                    0 *
+xdut.cn                               -2.86091e+166                    0 *
+b.xdut.xuoutn.x_u6.bg1#branch                     0         8.22503e+151 *
+b.xdut.xuoutn.x_u4.be1#branch                     0            1.612e-05 *
+b.xdut.xuoutn.x_u35.bg1#branch                    0                    0
+b.xdut.xuoutn.x_u32.bg1#branch                    0               -50000 *
+b.xdut.xuoutn.x_u31.bg1#branch                    0                  2.4 *
+b.xdut.xuoutn.x_u30.bg1#branch                    0                  0.5 *
+b.xdut.xuoutn.x_u27.bg1#branch                    0                    0
+b.xdut.xuoutn.x_u26.bg1#branch                    0                    0
+b.xdut.xuoutn.x_u23.bg1#branch                    0                    0
+b.xdut.xuoutn.x_u22.bg1#branch                    0                    0
+b.xdut.xuoutn.x_u19.bg1#branch                    0                    0
+b.xdut.xuoutn.x_u18.bg1#branch                    0                    0
+b.xdut.xuoutn.x_u16.bgsw+#branch                    0                    0
+b.xdut.xuoutn.x_u12.bgvo-#branch                    0                    0
+b.xdut.xuoutn.x_u12.bgvo+#branch                    0                    0
+b.xdut.xuoutn.x_u11.bgvo-#branch                    0                    0
+b.xdut.xuoutn.x_u11.bgvo+#branch                    0                    0
+b.xdut.xuoutn.x_u10.bgvo-#branch                    0                    0
+b.xdut.xuoutn.x_u10.bgvo+#branch                    0                    0
+b.xdut.xuoutp.x_u6.bg1#branch                     0                    0
+b.xdut.xuoutp.x_u4.be1#branch                     0            1.612e-05 *
+b.xdut.xuoutp.x_u35.bg1#branch                    0                 -5.5 *
+b.xdut.xuoutp.x_u32.bg1#branch                    0               -50000 *
+b.xdut.xuoutp.x_u31.bg1#branch                    0                  2.4 *
+b.xdut.xuoutp.x_u30.bg1#branch                    0                 -0.5 *
+b.xdut.xuoutp.x_u27.bg1#branch                    0                    0
+b.xdut.xuoutp.x_u26.bg1#branch                    0                    0
+b.xdut.xuoutp.x_u23.bg1#branch                    0                    0
+b.xdut.xuoutp.x_u22.bg1#branch                    0                   11 *
+b.xdut.xuoutp.x_u19.bg1#branch                    0         3.17609e+111 *
+b.xdut.xuoutp.x_u18.bg1#branch                    0                    0
+b.xdut.xuoutp.x_u16.bgsw+#branch                    0                    0
+b.xdut.xuoutp.x_u12.bgvo-#branch                    0                    0
+b.xdut.xuoutp.x_u12.bgvo+#branch                    0                    0
+b.xdut.xuoutp.x_u11.bgvo-#branch                    0                    0
+b.xdut.xuoutp.x_u11.bgvo+#branch                    0        -3.17609e+111 *
+b.xdut.xuoutp.x_u10.bgvo-#branch                    0        -4.23076e+124 *
+b.xdut.xuoutp.x_u10.bgvo+#branch                    0                    0
+b.xcap.bqr#branch                       7.7903e+196                 -nan
+b.xcap.bqf#branch                      -7.7903e+196                    0 *
+v.xcap.vqr#branch                      -7.7903e+196                    0 *
+v.xcap.vqf#branch                       7.7903e+196                    0 *
+h.xdut.xuoutn.x_h3.h_h3#branch        -6.54678e+150                    0 *
+v.xdut.xuoutn.x_h3.vh_h3#branch         2.93296e+153                    0 *
+h.xdut.xuoutn.x_h2.h_h2#branch        -6.54678e+151                    0 *
+v.xdut.xuoutn.x_h2.vh_h2#branch         2.93296e+153                    0 *
+h.xdut.xuoutn.x_h1.h_h1#branch         1.08784e+165                    0 *
+v.xdut.xuoutn.x_h1.vh_h1#branch        -1.08784e+164                    0 *
+h.xdut.xuoutp.x_h3.h_h3#branch        -9.76498e+114                    0 *
+v.xdut.xuoutp.x_h3.vh_h3#branch        -9.76498e+116                    0 *
+h.xdut.xuoutp.x_h2.h_h2#branch         9.76498e+114                    0 *
+v.xdut.xuoutp.x_h2.vh_h2#branch        -9.76498e+116                    0 *
+h.xdut.xuoutp.x_h1.h_h1#branch        -9.87441e+162                    0 *
+v.xdut.xuoutp.x_h1.vh_h1#branch         9.87441e+161                    0 *
+e.xdut.xuoutn.x_u4.e1#branch          -1.09654e+181                    0 *
+e.xdut.xuoutn.x_u37.e1#branch                     0                    0
+e.xdut.xuoutn.x_u36.e1#branch                     0                    0
+e.xdut.xuoutn.x_u1.e3#branch           1.09654e+181                    0 *
+e.xdut.xuoutn.x_u1.e2#branch                      0                    0
+e.xdut.xuoutn.x_u1.e1#branch                      0                    0
+e.xdut.xuoutn.e_e3#branch             -3.21406e+166                    0 *
+e.xdut.xuoutn.e_e2#branch             -3.25571e+154                    0 *
+e.xdut.xuoutn.e_e1#branch             -1.85951e+183                    0 *
+e.xdut.xuoutp.x_u4.e1#branch           3.83747e+182                    0 *
+e.xdut.xuoutp.x_u37.e1#branch                     0                    0
+e.xdut.xuoutp.x_u36.e1#branch                     0                    0
+e.xdut.xuoutp.x_u1.e3#branch          -3.83747e+182                    0 *
+e.xdut.xuoutp.x_u1.e2#branch                      0                    0
+e.xdut.xuoutp.x_u1.e1#branch                      0                    0
+e.xdut.xuoutp.e_e3#branch              2.91744e+164                    0 *
+e.xdut.xuoutp.e_e2#branch             -6.54678e+148                    0 *
+e.xdut.xuoutp.e_e1#branch               3.8492e+197                    0 *
+v.xdut.xuoutn.v_v_orp#branch                      0                    0
+v.xdut.xuoutn.v_v_orn#branch                      0                    0
+v.xdut.xuoutn.v_v_iscp#branch         -3.81073e+141                    0 *
+v.xdut.xuoutn.v_v_iscn#branch         -3.81073e+141                    0 *
+v.xdut.xuoutn.v_v_grp#branch          -3.81073e+141                    0 *
+v.xdut.xuoutn.v_v_grn#branch          -3.81073e+141                    0 *
+v.xdut.xuoutn.v_vcm_min#branch        -3.25291e+156                    0 *
+v.xdut.xuoutn.v_vcm_max#branch        -3.25291e+156                    0 *
+v.xdut.vuoutn_4#branch                -9.66007e+163                    0 *
+v.xdut.vuoutn_3#branch                 4.14952e+181                    0 *
+v.xdut.vuoutn_2#branch                -2.64049e+160                    0 *
+v.xdut.vuoutn_1#branch                  6.3116e+164                    0 *
+v.xdut.vuoutn_0#branch                -2.86091e+162                    0 *
+v.xdut.xuoutp.v_v_orp#branch                      0                    0
+v.xdut.xuoutp.v_v_orn#branch                      0                    0
+v.xdut.xuoutp.v_v_iscp#branch          -3.88534e+84                    0 *
+v.xdut.xuoutp.v_v_iscn#branch          -3.88534e+84                    0 *
+v.xdut.xuoutp.v_v_grp#branch           -3.88534e+84                    0 *
+v.xdut.xuoutp.v_v_grn#branch           -3.88534e+84                    0 *
+v.xdut.xuoutp.v_vcm_min#branch         2.85805e+151                    0 *
+v.xdut.xuoutp.v_vcm_max#branch         2.85805e+151                    0 *
+v.xdut.vuoutp_4#branch                -1.22934e+163                    0 *
+v.xdut.vuoutp_3#branch                -1.13306e+155                    0 *
+v.xdut.vuoutp_2#branch                 -7.5265e+165                    0 *
+v.xdut.vuoutp_1#branch                -2.91744e+164                    0 *
+v.xdut.vuoutp_0#branch                -2.86091e+160                    0 *
+v.xdut.vjinput_4#branch                6.18329e+161                    0 *
+v.xdut.vjinput_3#branch                6.18329e+161                    0 *
+v.xdut.vjinput_2#branch               -8.66943e+162                    0 *
+v.xdut.vjinput_1#branch               -5.80932e+181                    0 *
+v.xdut.vjinput_0#branch                 4.4167e+172                    0 *
+v.xdut.vqreg_2#branch                 -3.55835e+166                    0 *
+v.xdut.vqreg_1#branch                 -1.90727e+164                    0 *
+v.xdut.vqreg_0#branch                  1.32265e+163                    0 *
+v.xenv.vcm#branch                     -1.90726e+166                    0 *
+v.xenv.vphantom#branch                -1.04537e+137                    0 *
+vpr#branch                                        0                    0
+vp#branch                                         0                    0
+a.xdut.xuoutn.x_u19.ag1#branch_1_0                    0                    0
+a.xdut.xuoutn.x_u18.ag1#branch_1_0                    0                    0
+a.xdut.xuoutp.x_u19.ag1#branch_1_0                    0                    0
+a.xdut.xuoutp.x_u18.ag1#branch_1_0                    0                    0
+
+ngspice-47 done
+
+Note: Starting dynamic gmin stepping
+Warning: Dynamic gmin stepping failed
+Note: Starting true gmin stepping
+Warning: True gmin stepping failed
+Note: Starting source stepping
+Warning: source stepping failed
+Note: Transient op started
+Warning: singular matrix:  check nodes xdut.xuoutp.n37037 and xdut.xuoutp.cl_clamp
+
+Warning: singular matrix:  check node xdut.xuoutp.n27793
+
+Warning: singular matrix:  check node xdut.xuoutp.n27793
+
+Warning: singular matrix:  check nodes xdut.xuoutp.n39892 and xdut.xuoutn.n25929
+
+Warning: singular matrix:  check nodes xdut.xuoutp.n27793 and q.xdut.xqreg.q2#collCX
+
+Warning: singular matrix:  check nodes xdut.xuoutp.n25929 and xdut.xuoutn.n27793
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+
+Error: -1.11774e+153, -2.76948e+173 out of range for *
+    in line b.xcap.bqf
+
+Error: Transient op failed, timestep too small
+
+
+Error: The operating point could not be simulated successfully.
+    Any of the following steps may fail.!
+
+doAnalyses: OP:  Timestep too small; trouble with xdut.xjinput:njfe150-instance j.xdut.xjinput.j_j1
+
+
+op simulation(s) aborted
+Warning from checkvalid: vector a.xdut.xuoutn.x_u18.ag1#branch_1_0 is not available or has zero length.
+Error during 'write': no writable vector found.

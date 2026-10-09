@@ -1,0 +1,2042 @@
+schema_version: 1
+date: '2026-10-09'
+task: parts_database_expansion_001
+measurement_state: No capsule or owned-stock measurements evidenced
+no_selection: true
+role_gap_matrix:
+- id: high_impedance
+  role: High-impedance voltage/charge input
+  device_ids:
+  - jfe150
+  - jfe2140
+  - lsk170a
+  - lsk389a
+  - mmbfj113
+  remaining_gap: Only JFE150 at baseline; J113 no model. New dual and independent maker allow
+    DC comparisons, but current/flicker/high-field leakage and process correlation block complete
+    noise/charge controls.
+  next_falsification: Freeze reduced charge-input oracle before candidate0012 alternatives;
+    compare actual100uA/2mA spectra and capsule45-100pF envelope.
+- id: low_noise_bipolar
+  role: Low-noise bipolar amplification
+  device_ids:
+  - bc846b
+  - bc850c
+  remaining_gap: BC850C adds ordinary high-beta/NF evidence; base-current authority still conflicts
+    with1Gohm leakage; no KF in either model.
+  next_falsification: Separate200uA Rs2k narrowband NF from voltage/current noise spectra and
+    low-current charge authority.
+- id: p48_power
+  role: High-voltage P48 power/current control
+  device_ids:
+  - pmbt5551
+  - diotec_mmbt5551
+  - vishay_2n7002k
+  remaining_gap: PMBT5551 offers exact160V NPN model; open-emitter capacitance/leakage warnings
+    and no electrothermal/SOA model. Ordinary150V PNP remains documentary with no acquired model.
+  next_falsification: DC current regulator with real resistor feedback, P48 feed drop, coupled
+    temperature, startup/reversal and dissipation oracle first.
+- id: balanced_output
+  role: Low-noise balanced output
+  device_ids:
+  - bc846b
+  - bc856b
+  - pmbt5551
+  - opa1656
+  remaining_gap: Baseline output matching/leakage/noise unresolved. OPA1656 dual macro acquired;
+    power budget and floating/loaded current control untested.
+  next_falsification: Derive total quiescent + load currents; exact complementary BJT model
+    prerequisite before balanced HV output experiments.
+- id: guard_servo
+  role: CMOS/electrometer/guard/servo
+  device_ids:
+  - opa197
+  - opa928
+  - lmp7721
+  remaining_gap: OPA928 supports grounded follower/noise at some supply/temperature points,
+    others warn/timeout. ADA4530 licence gate. No floating/guard-loaded/charge/noise validation.
+  next_falsification: Grounded versus floating identical oracle and common-mode/guard load sweep;
+    humidity/board leakage remains physical unknown.
+- id: carrier
+  role: Carrier excitation/demodulation
+  device_ids: []
+  remaining_gap: CD74HC4053PWR has primary current/leakage/capacitance evidence but no acquired
+    analog model; AD630 model route/terms and periodic noise unresolved.
+  next_falsification: Continue isolated carrier oracle; real switch charge injection/Ron/leakage,
+    oscillator and demodulator synchronous noise prerequisite; no ideal-block credit.
+- id: protection
+  role: Protection
+  device_ids:
+  - bav199
+  - jfe2140
+  remaining_gap: BAV199 one-diode syntax child passes75V25C leakage bound and0V1MHz cap bound.
+    Double package plus humidity/high-T/turn-on/recovery not qualified.
+  next_falsification: Add protection only after actual node voltage and leakage-noise budget;5nA
+    worst bound forbids assuming femtoampere loading.
+- id: high_r
+  role: High-R/low-leakage passives
+  device_ids: []
+  remaining_gap: ExistingHVA12JA1G00 thickfilm high-V resistor; excess noise and surface leakage
+    unknown.500M series and CRHV are leads, no substitute qualification.
+  next_falsification: Couple gate leak, DC authority, VCR, board leakage, TCR and dielectric
+    losses; documented limits are not a broadband law.
+- id: capacitors
+  role: Practical coupling/compensation capacitors
+  device_ids: []
+  remaining_gap: 14baseline exact passives preserved; one new1nF C0G exact document. PET/PP
+    loss, insulation, absorption, dimensions and polar47uF parallel arrangements need exact
+    combinations.
+  next_falsification: C0G1nF feedback/compensation control and PP series research; output electrolytic
+    optimization stays below bias/noise gaps.
+baseline_receipt: research/device_sources/local/parts_expansion_001/baseline.json
+counts:
+  registry_exact_device_entries: 17
+  valid_hash_pinned_spice_files: 21
+  device_types_with_acquired_valid_spice: 15
+  new_exact_device_entries: 10
+  new_spice_files_including_syntax_children: 12
+  new_model_devices: 10
+  controlled_new_device_types: 6
+  independent_jfet_manufacturers_with_acquired_models: 2
+  exact_passive_evidence_entries: 15
+  baseline_exact_passives: 14
+  physical_owned_stock: null
+  separate_documentary_lead_rows: 16
+  lead_rows_not_in_registry_count: true
+parts:
+- device_id: jfe150
+  manufacturer: Texas Instruments
+  exact_mpn: JFE150DBVR
+  package: SOT-23-5 DBV
+  roles:
+  - high_impedance
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: active
+    checked_date: '2026-10-05'
+    source_url: https://www.ti.com/product/JFE150
+  model_ids:
+  - jfe150_generic
+  - jfe150_weak
+  - jfe150_strong
+  - jfe150_pspice
+  models:
+  - id: jfe150_generic
+    path: semiconductor/vendor/jfe150_generic.lib
+    sha256: afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207
+    version: Final 1.2; 26SEP2024; SLPM366
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  - id: jfe150_weak
+    path: semiconductor/vendor/jfe150_weak.lib
+    sha256: 494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4
+    version: Final 1.2 vendor weak
+    parent_model_id: jfe150_generic
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  - id: jfe150_strong
+    path: semiconductor/vendor/jfe150_strong.lib
+    sha256: 832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8
+    version: Final 1.2 vendor strong
+    parent_model_id: jfe150_generic
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  - id: jfe150_pspice
+    path: semiconductor/vendor/jfe150_pspice.lib
+    sha256: 6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6
+    version: Final 1.2; SLPM349I
+    parent_model_id: jfe150_generic
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/jfe150.pdf
+    retrieved_date: '2026-10-05'
+    version: SLPS732B April 2023
+    local_path: models/semiconductor/vendor/evidence/jfe150.pdf
+    sha256: 925d58a8f0cf7db307325ece12fb2f61a736b2c1440f63928b5e6c1312f39365
+  sourcing_register: research/procurement/semiconductors_2026-10-05.yaml
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  candidate_combination_qualified: false
+- device_id: vishay_2n7002k
+  manufacturer: Vishay Siliconix
+  exact_mpn: 2N7002K-T1-GE3
+  package: SOT-23 TO-236; G=1 S=2 D=3
+  roles:
+  - p48_power
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_manufacturer_catalogue_supplier_active; explicit manufacturer lifecycle
+      label not found
+    checked_date: '2026-10-09'
+    source_url: https://www.vishay.com/en/product/71333/tab/quality/
+    limitation: Current exact order-code listing is not a stock reservation or an assurance
+      of future production.
+  model_ids:
+  - vishay_2n7002k_ps
+  models:
+  - id: vishay_2n7002k_ps
+    path: semiconductor/vendor/vishay_2n7002k.lib
+    sha256: d59ce922b2c814e4aaa63f27459696b8c71494fac61f47c8cf8c093eba273111
+    version: ECN S14-1598 Rev. B, 11-Aug-2014; 2n7002k_ps Rev B.lib
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  datasheet:
+    url: https://www.vishay.com/docs/71333/2n7002k.pdf
+    retrieved_date: '2026-10-09'
+    version: S17-1299 Rev. F, 21-Aug-2017; document 71333
+    local_path: models/semiconductor/vendor/evidence/vishay_2n7002k.pdf
+    sha256: 639ab49255a61576ef6c5cb89c1536e045b44724fb95af12438ba41022e44adf
+  sourcing_register: research/procurement/semiconductors_2026-10-09.yaml
+  validation_record: results/device_models/20261009T070419Z_3bd1122a/results.json
+  candidate_combination_qualified: false
+- device_id: bc846b
+  manufacturer: Nexperia
+  exact_mpn: BC846B,215
+  package: SOT-23
+  roles:
+  - low_noise_bipolar
+  - balanced_output
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: production
+    checked_date: '2026-10-05'
+    source_url: https://www.nexperia.com/product/BC846B
+  model_ids:
+  - bc846b_vendor
+  - bc846b_emitter_r1
+  models:
+  - id: bc846b_vendor
+    path: semiconductor/vendor/bc846b.lib
+    sha256: 4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed
+    version: extraction week 24/2021
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  - id: bc846b_emitter_r1
+    path: semiconductor/vendor/bc846b_emitter_r1.lib
+    sha256: 55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d
+    version: project structural child r1; Q2 emitter 33 -> 3
+    parent_model_id: bc846b_vendor
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/BC846_SER.pdf
+    retrieved_date: '2026-10-05'
+    version: Rev 9; 25 September 2012
+    local_path: models/semiconductor/vendor/evidence/bc846.pdf
+    sha256: 045a6cc21de93ac634aad910567e882926bd6ef154cbd8c59d13201134642a97
+  sourcing_register: research/procurement/semiconductors_2026-10-05.yaml
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  candidate_combination_qualified: false
+- device_id: bc856b
+  manufacturer: Nexperia
+  exact_mpn: BC856B,215
+  package: SOT-23
+  roles:
+  - balanced_output
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: production
+    checked_date: '2026-10-05'
+    source_url: https://www.nexperia.com/product/BC856B
+  model_ids:
+  - bc856b_vendor
+  models:
+  - id: bc856b_vendor
+    path: semiconductor/vendor/bc856b.lib
+    sha256: 580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33
+    version: extraction week 19/2020
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/BC856_BC857_BC858.pdf
+    retrieved_date: '2026-10-05'
+    version: Rev 9; 1 July 2022
+    local_path: models/semiconductor/vendor/evidence/bc856.pdf
+    sha256: d9a836e40dd8f1e788d7dadbfcbe8cf4836ed5debe789c84b8fa574132f84943
+  sourcing_register: research/procurement/semiconductors_2026-10-05.yaml
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  candidate_combination_qualified: false
+- device_id: opa197
+  manufacturer: Texas Instruments
+  exact_mpn: OPA197IDBVR
+  package: SOT-23-5 DBV
+  roles:
+  - guard_servo
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: active
+    checked_date: '2026-10-05'
+    source_url: https://www.ti.com/product/OPA197
+  model_ids:
+  - opa197_pspice
+  models:
+  - id: opa197_pspice
+    path: semiconductor/vendor/opa197.lib
+    sha256: fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5
+    version: Final 1.3; 23JUN2022; SBOMA34D
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/opa197.pdf
+    retrieved_date: '2026-10-05'
+    version: SBOS737C March 2018
+    local_path: models/semiconductor/vendor/evidence/opa197.pdf
+    sha256: 27653a7d5e965cbb2d23f7998919ebd774efd5cd3e126b8f0881469ae91166fd
+  sourcing_register: research/procurement/semiconductors_2026-10-05.yaml
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  candidate_combination_qualified: false
+- device_id: 2n7002
+  manufacturer: Nexperia
+  exact_mpn: 2N7002,215
+  package: SOT-23
+  roles: []
+  states:
+    investigated: true
+    acquired: false
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: production
+    checked_date: '2026-10-05'
+    source_url: https://www.nexperia.com/product/2N7002
+  model_ids:
+  - 2n7002_failed_download
+  models:
+  - id: 2n7002_failed_download
+    path: semiconductor/vendor/2n7002.lib
+    sha256: 4a2a3f7fb1725f12fcfe3f7fef5cc082be2ac58eeb30ee4fdb693398e74abbf5
+    version: not_a_model
+    parent_model_id: null
+    acquisition: invalid_html_challenge
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/2N7002.pdf
+    retrieved_date: '2026-10-05'
+    version: Rev 7; 8 September 2011
+    local_path: models/semiconductor/vendor/evidence/2n7002.pdf
+    sha256: cc9c275457670c3cbbf2e56f5a75c800d3b5f0b396fabc798cf18cb639646475
+  sourcing_register: research/procurement/semiconductors_2026-10-05.yaml
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  candidate_combination_qualified: false
+- device_id: mmbfj113
+  manufacturer: onsemi
+  exact_mpn: MMBFJ113
+  package: SOT-23
+  roles:
+  - high_impedance
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: unverified_exact_order_code
+    checked_date: '2026-10-05'
+    source_url: https://www.onsemi.com/design/tools-software/product-recommendation-tools-plus/jfet/products
+  model_ids: []
+  models: []
+  datasheet:
+    url: https://www.onsemi.com/download/data-sheet/pdf/mmbfj113-d.pdf
+    retrieved_date: '2026-10-05'
+    local_path: null
+    sha256: null
+  sourcing_register: research/procurement/semiconductors_2026-10-05.yaml
+  validation_record: null
+  candidate_combination_qualified: false
+- device_id: jfe2140
+  manufacturer: Texas Instruments
+  exact_mpn: JFE2140DR
+  package: SOIC-8 D
+  roles:
+  - high_impedance
+  - protection
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      jfe2140_vendor:
+      - behavior: idss_25c
+        status: pass
+        evidence: guaranteed_limit
+        condition: SLPS730B table6.5 VDS10V VGS0 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.0001_10
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.0001_1000
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_10
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_1000
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: current_noise_1khz
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: JFE2140 table6.5 VDS5V ID2mA 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: reverse_gate_leak
+        status: fail
+        evidence: guaranteed_limit
+        condition: 25C VDS0 VGS-30V TI or -10V Linear; bound includes fixture GMIN
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://www.ti.com/product/JFE2140
+  model_ids:
+  - jfe2140_vendor
+  models:
+  - id: jfe2140_vendor
+    path: semiconductor/vendor/jfe2140.lib
+    sha256: b872775746e2be5b00347664128b41c86c1483be224be8bc3780dc533c5fc2e0
+    version: Final 1.0 16AUG2021
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: disagreement
+    primitive: X
+    runnability: all_planned_jobs_run
+    load_record: null
+    pin_order: D G S VCH VCL; one half, physical pins 2 4 1 3 7; second half 6 8 5 3 7
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/jfe2140.pdf
+    version: SLPS730B August 2023
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_jfe2140.pdf
+    sha256: baeb38d1596ab468e9c8d0443afc5286e90fe3074001a81c660258767deb46a3
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  candidate_combination_qualified: false
+- device_id: lsk170a
+  manufacturer: Linear Systems
+  exact_mpn: LSK170A TO-92 3L ROHS
+  package: TO-92 3L
+  roles:
+  - high_impedance
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      lsk170a_syntax_r1:
+      - behavior: idss_25c
+        status: pass
+        evidence: guaranteed_limit
+        condition: Doc201110 A22 table2 VDS10V VGS0 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_10
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; Doc201110 A22 table2
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_1000
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; Doc201110 A22 table2
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: ciss
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: LSK170 table2 VDS15V ID100uA f1MHz
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: reverse_gate_leak
+        status: pass
+        evidence: guaranteed_limit
+        condition: 25C VDS0 VGS-30V TI or -10V Linear; bound includes fixture GMIN
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.linearsystems.com/jfetamplifierssingles/lsk170-series
+  model_ids:
+  - lsk170a_vendor
+  - lsk170a_syntax_r1
+  models:
+  - id: lsk170a_vendor
+    path: semiconductor/vendor/lsk170a.lib
+    sha256: 6eadbfe9c86ef69795852f3f7be8f66fbe25ef8caa4de1fa942f8a4af6347409
+    version: 03/16/2026
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: not_yet_characterized
+    primitive: J
+    runnability: not_yet_tested
+    load_record: null
+    pin_order: native J D G S; physical TO92 D1 G2 S3; other packages differ
+  - id: lsk170a_syntax_r1
+    path: semiconductor/vendor/lsk170a_metadata_r1.lib
+    sha256: aaa2de4916c05f6a03b343df26e8f4dc0ae1363226595d886e3b62b6b1f94e99
+    version: 03/16/2026; authored metadata r1
+    parent_model_id: lsk170a_vendor
+    acquisition: valid_spice
+    behavior: disagreement
+    primitive: J
+    runnability: all_planned_jobs_run
+    load_record: null
+    pin_order: native J D G S; physical TO92 D1 G2 S3; other packages differ
+  datasheet:
+    url: https://www.linearsystems.com/_files/ugd/7e8069_a086ff7323054b5da3b91e364c90b3d4.pdf
+    version: Doc201110 A22 19Nov2019
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_lsk170a.pdf
+    sha256: a1657555b571914568504f5e90efb1868ef76ec63b4a0e5d1560d710482e0cf3
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  candidate_combination_qualified: false
+- device_id: lsk389a
+  manufacturer: Linear Systems
+  exact_mpn: LSK389A SOIC 8L ROHS
+  package: SOIC-8
+  roles:
+  - high_impedance
+  states:
+    investigated: true
+    acquired: true
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.linearsystems.com/jfet-amplifiers-duals/lsk389-series
+  model_ids:
+  - lsk389a_vendor
+  models:
+  - id: lsk389a_vendor
+    path: semiconductor/vendor/lsk389a.lib
+    sha256: c458cc0648f4c017d13bbb8454894b06927c934f431d02bb68505f94e8eea8dd
+    version: Rev2 18May2026
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: uncharacterized_load_failed
+    primitive: J
+    runnability: failed_isolated_load_check
+    load_record: results/device_models/20261009T135500Z_partsload_551b10d1/results.json
+    pin_order: native J D G S one half; verify physical substrate pins before candidate integration
+  datasheet:
+    url: https://www.linearsystems.com/_files/ugd/7e8069_c90834b817214602abcbf263293295f2.pdf
+    version: Doc201122 A27 23Jun2023
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_lsk389a.pdf
+    sha256: da78812493368ad6d54396693d05aa7561b7959e636c5bd52f164a2991b7d7a0
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: null
+  candidate_combination_qualified: false
+- device_id: pmbt5551
+  manufacturer: Nexperia
+  exact_mpn: PMBT5551,215
+  package: SOT-23
+  roles:
+  - p48_power
+  - balanced_output
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      pmbt5551_vendor:
+      - behavior: hfe_0.001
+        status: pass
+        evidence: guaranteed_limit
+        condition: PMBT5551 table7 12Oct2023 VCE5V 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: hfe_0.01
+        status: pass
+        evidence: guaranteed_limit
+        condition: PMBT5551 table7 12Oct2023 VCE5V 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: nf_1khz_density_screen
+        status: pass
+        evidence: conditional_frequency_screen
+        condition: Rs2kohm IC200uA VCE5V25C; local density approximation to narrowband NF; exact
+          measurement filter unmodeled
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: nf_refinement_ratio
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: icbo_100
+        status: pass
+        evidence: guaranteed_limit
+        condition: VCB120V open emitter1Pohm; PMBT5551 table
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.nexperia.com/product/PMBT5551
+  model_ids:
+  - pmbt5551_vendor
+  models:
+  - id: pmbt5551_vendor
+    path: semiconductor/vendor/pmbt5551.lib
+    sha256: 9f3e7425c5ebd57b8709851f271354dd46ddc42a4503b280d248fd015f27deb0
+    version: extraction week42/2018
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: error
+    primitive: X
+    runnability: scoped_jobs_ok_with_retained_errors
+    load_record: null
+    pin_order: subcircuit C B E; physical B1 E2 C3
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/PMBT5551.pdf
+    version: 12Oct2023
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_pmbt5551.pdf
+    sha256: 481051a143a71fb6223ce52c3f5061525fea4fb70b2a41672a3a22399c114622
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  candidate_combination_qualified: false
+- device_id: diotec_mmbt5551
+  manufacturer: Diotec Semiconductor
+  exact_mpn: MMBT5551
+  package: SOT-23
+  roles:
+  - p48_power
+  states:
+    investigated: true
+    acquired: true
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://diotec.com/en/product/MMBT5551.html
+  model_ids:
+  - diotec_mmbt5551_vendor
+  models:
+  - id: diotec_mmbt5551_vendor
+    path: semiconductor/vendor/diotec_mmbt5551.lib
+    sha256: 96f44107a0eff47851731646952f0ac47cf1d794ad13cd29ca4055f2b81ba2aa
+    version: 13Dec2017 parameterized example
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: uncharacterized_load_failed
+    primitive: X
+    runnability: failed_isolated_load_check
+    load_record: results/device_models/20261009T135500Z_partsload_551b10d1/results.json
+    pin_order: subcircuit C B E; physical B1 E2 C3
+  datasheet:
+    url: https://diotec.com/request/datasheet/mmbt5551.pdf
+    version: 19Nov2025
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_diotec_mmbt5551.pdf
+    sha256: 227f5fe089670eeeb14ee175c873dee896d74406611c3265defe3b3aa38c61a2
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: null
+  candidate_combination_qualified: false
+- device_id: bc850c
+  manufacturer: Nexperia
+  exact_mpn: BC850C,215
+  package: SOT-23
+  roles:
+  - low_noise_bipolar
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      bc850c_vendor:
+      - behavior: hfe_0.002
+        status: pass
+        evidence: guaranteed_limit
+        condition: BC850C table7 VCE5V 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: nf_1khz_density_screen
+        status: pass
+        evidence: conditional_frequency_screen
+        condition: Rs2kohm IC200uA VCE5V25C; local density approximation to narrowband NF; exact
+          measurement filter unmodeled
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: nf_refinement_ratio
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.nexperia.com/product/BC850C
+  model_ids:
+  - bc850c_vendor
+  models:
+  - id: bc850c_vendor
+    path: semiconductor/vendor/bc850c.lib
+    sha256: ef3fc2c3776eaf52acbfb5b7955eda8efd9fa714dd2158aa015ac42610bca399
+    version: extraction week42/2018
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: error
+    primitive: X
+    runnability: scoped_jobs_ok_with_retained_errors
+    load_record: null
+    pin_order: subcircuit C B E; physical B1 E2 C3
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/BC850C.pdf
+    version: current public sheet; revision in original PDF
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_bc850c.pdf
+    sha256: 7be422c96ed19a0c874334d24811f714d8634a65d2f83505b5974f23257ed5c1
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  candidate_combination_qualified: false
+- device_id: bav199
+  manufacturer: Nexperia
+  exact_mpn: BAV199,215
+  package: SOT-23
+  roles:
+  - protection
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      bav199_syntax_r1:
+      - behavior: reverse_leak
+        status: pass
+        evidence: guaranteed_limit
+        condition: BAV199 VR75V 25C one diode
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: cap
+        status: pass
+        evidence: guaranteed_limit
+        condition: BAV199 VR0 f1MHz table
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.nexperia.com/product/BAV199
+  model_ids:
+  - bav199_vendor
+  - bav199_syntax_r1
+  models:
+  - id: bav199_vendor
+    path: semiconductor/vendor/bav199.lib
+    sha256: 37ca9619403894293238c41fbe05a9748c1d4d7d0a17b71ddde6dc2a8ba104e6
+    version: extraction date unspecified in vendor header
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: not_yet_characterized
+    primitive: D
+    runnability: not_yet_tested
+    load_record: null
+    pin_order: native D A K one diode; package D1 A1 K3 and D2 A3 K2
+  - id: bav199_syntax_r1
+    path: semiconductor/vendor/bav199_metadata_r1.lib
+    sha256: ed3a4386d3632c91917c88cbd5d168b943cfd1f5a16133cd0bc6c145cac3f1cc
+    version: extraction date unspecified in vendor header; authored metadata r1
+    parent_model_id: bav199_vendor
+    acquisition: valid_spice
+    behavior: scoped_agreement
+    primitive: D
+    runnability: all_planned_jobs_run
+    load_record: null
+    pin_order: native D A K one diode; package D1 A1 K3 and D2 A3 K2
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/BAV199.pdf
+    version: current public sheet; revision in original PDF
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_bav199.pdf
+    sha256: ab2f26d003e3c1d8f7e4e7ac674ae055849970bf7b392a7d5d31eca443aab9e2
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  candidate_combination_qualified: false
+- device_id: opa928
+  manufacturer: Texas Instruments
+  exact_mpn: OPA928DT
+  package: SOIC-8 D
+  roles:
+  - guard_servo
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      opa928_vendor:
+      - behavior: en_5
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: datasheet conditioned common mode, RL10k 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: ib_5
+        status: pass
+        evidence: guaranteed_limit
+        condition: RH<50percent; nominal grounded simulation does not model humidity
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: iq_5
+        status: pass
+        evidence: guaranteed_limit
+        condition: no-load output; model Iq fixed275u; no variation proof
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_16
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: datasheet conditioned common mode, RL10k 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: ib_16
+        status: pass
+        evidence: guaranteed_limit
+        condition: RH<50percent; nominal grounded simulation does not model humidity
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: iq_16
+        status: pass
+        evidence: guaranteed_limit
+        condition: no-load output; model Iq fixed275u; no variation proof
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://www.ti.com/product/OPA928
+  model_ids:
+  - opa928_vendor
+  models:
+  - id: opa928_vendor
+    path: semiconductor/vendor/opa928.lib
+    sha256: f4f9d38efc4aa2a31676c84a351d2ee9379baad88abab8b5afad550c7f99c616
+    version: 1.1 01Apr2024
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: error
+    primitive: X
+    runnability: scoped_jobs_ok_with_retained_errors
+    load_record: null
+    pin_order: IN+ IN- V+ V- OUT GRD1 GRD2; physical 4 5 6 3 1 2 7; NC8
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/opa928.pdf
+    version: SBOSA77A April2024
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_opa928.pdf
+    sha256: 06ab87dcd0ffd4d319b164f763bee44707a40593c6df60930d3e1f1fe5a936ad
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  candidate_combination_qualified: false
+- device_id: opa1656
+  manufacturer: Texas Instruments
+  exact_mpn: OPA1656IDR
+  package: SOIC-8 D
+  roles:
+  - balanced_output
+  states:
+    investigated: true
+    acquired: true
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://www.ti.com/product/OPA1656
+  model_ids:
+  - opa1656_vendor
+  models:
+  - id: opa1656_vendor
+    path: semiconductor/vendor/opa1656.lib
+    sha256: 9847ed60c62e792ee6f1c84899278a3c11ce71a6d21804bdd88f51199f1ba055
+    version: public SBOMAW6C; header retained
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: uncharacterized_load_failed
+    primitive: X
+    runnability: failed_isolated_load_check
+    load_record: results/device_models/20261009T135500Z_partsload_551b10d1/results.json
+    pin_order: one amplifier IN+ IN- V+ V- OUT; physical channel A 3 2 8 4 1, channel B 5 6
+      8 4 7; package integration unqualified
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/opa1656.pdf
+    version: SBOS901C September2022; pin functions page3
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_opa1656.pdf
+    sha256: 4243b58e553e6f27274858637c596596dbb89bba94d05b44fedd32877d988e9d
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: null
+  candidate_combination_qualified: false
+- device_id: lmp7721
+  manufacturer: Texas Instruments
+  exact_mpn: LMP7721MA/NOPB
+  package: SOIC-8
+  roles:
+  - guard_servo
+  states:
+    investigated: true
+    acquired: true
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://www.ti.com/product/LMP7721
+  model_ids:
+  - lmp7721_vendor
+  models:
+  - id: lmp7721_vendor
+    path: semiconductor/vendor/lmp7721.lib
+    sha256: 815a27e4a2189e0f54626a36f21cad3002ff21a5d5cd8df9fea60b34ceb2cb39
+    version: public SNOM096D; header retained
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: uncharacterized_load_failed
+    primitive: X
+    runnability: failed_isolated_load_check
+    load_record: results/device_models/20261009T135500Z_partsload_551b10d1/results.json
+    pin_order: IN+ IN- V+ V- OUT; physical 1 8 6 3 4; NC2 NC5 NC7; sheet recommends guard at2/7;
+      integration unqualified
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/lmp7721.pdf
+    version: SNOSAW6E December2014; pin functions page3
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_lmp7721.pdf
+    sha256: 162b4794e0aee249a75b6f93758cebacab1e5a26fc7eae2f2c9c4a3afdc0562e
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: null
+  candidate_combination_qualified: false
+investigated_leads:
+- manufacturer: onsemi
+  exact_mpn_or_lead: J113-D74Z
+  package: TO-92
+  role: high_impedance
+  primary_route: https://www.onsemi.com/
+  reason: J113 switch/chopper class; exact lifecycle and original model unresolved; not the
+    MMBFJ113 package
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+- manufacturer: onsemi
+  exact_mpn_or_lead: MMBFJ201
+  package: SOT-23
+  role: high_impedance
+  primary_route: https://www.onsemi.com/
+  reason: Manufacturer catalogue lead, no acquired exact model/noise or Germany route
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+- manufacturer: InterFET
+  exact_mpn_or_lead: IF170
+  package: package/order suffix unresolved
+  role: high_impedance
+  primary_route: https://www.interfet.com/
+  reason: Independent specialist; noise campaign uses5mA/3V or0.8Idss forA; blocked PDFs; no
+    transfer to100uA
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+- manufacturer: InterFET
+  exact_mpn_or_lead: IF3602T78
+  package: TO-78
+  role: high_impedance
+  primary_route: https://www.interfet.com/
+  reason: Dual high-current specialist; noise/capacitance/power tradeoff,403 evidence retained;
+    no model
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+- manufacturer: onsemi
+  exact_mpn_or_lead: 2N5551BU
+  package: TO-92
+  role: p48_power
+  primary_route: https://www.onsemi.com/
+  reason: Ordinary NPN exact suffix lead; base unsuffixed2N5551 distributor obsolete does not
+    decideBU lifecycle; no acquired model
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+- manufacturer: onsemi
+  exact_mpn_or_lead: MMBT5551LT1G
+  package: SOT-23
+  role: p48_power
+  primary_route: https://www.onsemi.com/
+  reason: Active indexed retail alternative, manufacturer status and original model pending
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+- manufacturer: Diodes Incorporated
+  exact_mpn_or_lead: MMBT5551-7-F
+  package: SOT-23
+  role: p48_power
+  primary_route: https://www.diodes.com/part/view/MMBT5551
+  reason: 160V NPN documented current catalogue/PCNs; public model filename indexed but attemptedroutes404;
+    private stockzero
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+- manufacturer: Diodes Incorporated
+  exact_mpn_or_lead: MMBT5401-7-F
+  package: SOT-23
+  role: balanced_output
+  primary_route: https://www.diodes.com/part/view/MMBT5401
+  reason: 150V PNP documented; exact-F distinct from discontinued-7; no acquired model; PCNs
+    mean model/die version must be checked
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+- manufacturer: onsemi
+  exact_mpn_or_lead: 2N5401YBU
+  package: TO-92
+  role: balanced_output
+  primary_route: https://www.onsemi.com/
+  reason: Ordinary PNP; original model and exact lifecycle/current Germany route pending
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+- manufacturer: onsemi
+  exact_mpn_or_lead: MMBT5401LT1G
+  package: SOT-23
+  role: balanced_output
+  primary_route: https://www.onsemi.com/
+  reason: Independent ordinary PNP; differing250/300mW/current grades require own datasheet/temperature/model
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+- manufacturer: Diotec Semiconductor
+  exact_mpn_or_lead: MMBT5401
+  package: SOT-23
+  role: balanced_output
+  primary_route: https://diotec.com/en/product/MMBT5401.html
+  reason: Primaryactive, factoryMOQ3000 stock0; page600mA headline/200mA field conflict; originaldatasheet
+    governs; no modellink
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+- manufacturer: Analog Devices
+  exact_mpn_or_lead: ADA4530-1ARZ
+  package: SOIC-8
+  role: guard_servo
+  primary_route: https://www.analog.com/en/products/ada4530-1.html
+  reason: Guard electrometer; model route requires explicit licence acceptance, not authorized;
+    no acquired model/performance simulation
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+- manufacturer: Texas Instruments
+  exact_mpn_or_lead: CD74HC4053PWR
+  package: TSSOP-16
+  role: carrier
+  primary_route: https://www.ti.com/product/CD74HC4053
+  reason: Ordinary tripleanalogmux; no acquired analog periodic-noise model; chargeinjection/leak/current/rail
+    limits needed
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+- manufacturer: Analog Devices
+  exact_mpn_or_lead: AD630ARZ
+  package: SOIC-20
+  role: carrier
+  primary_route: https://www.analog.com/en/products/ad630.html
+  reason: Balancedmodulator/demodulator; no acquired model or periodic-noise validation; not
+    a proven low-power P48 solution
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+- manufacturer: Infineon
+  exact_mpn_or_lead: BSS139H6327XTSA1
+  package: PG-SOT23-3
+  role: p48_power
+  primary_route: https://www.infineon.com/part/BSS139
+  reason: Active/preferred ordinary250V depletionMOS exactH6327 lead; avoid H6906 sorted-VGS
+    service. Directdatasheet404 retained, primaryweb sheet available. No acquired model/low-current
+    noise/leakage law/retailGermany cost.
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+- manufacturer: Microchip Technology
+  exact_mpn_or_lead: LND150N3-G
+  package: TO-92
+  role: p48_power
+  primary_route: https://www.microchip.com/en-us/product/LND150
+  reason: 500V depletionDMOS document acquired; primary AND16 current-source mechanism lead.
+    No original model acquired; no simulated current/noise/charge performance. Factory1000bag
+    not required retail pack; privateGermany route not verified.
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+historical_leads:
+- name: 2SK170
+  status: historical search lead; no current dependency or performance assigned
+  current_official_lifecycle: not established by these searches
+- name: BF862
+  status: historical search lead; no current dependency or performance assigned
+  current_official_lifecycle: not established by these searches
+- name: 2N5457
+  status: historical search lead; no current dependency or performance assigned
+  current_official_lifecycle: not established by these searches
+passives:
+- exact_mpn: RC0603FR-0747RL
+  roles:
+  - capacitors
+  original_register: research/procurement/architecture_parts_2026-10-09.yaml
+  original_fields:
+    exact_mpn: RC0603FR-0747RL
+    nominal: 47
+    unit: ohm
+    tolerance_fraction: 0.01
+    technology: Thick film
+    package: 0603 / 1608
+    ratings:
+      power_w_at_70C: 0.1
+      working_voltage_v: 75
+      tcr_ppm_per_C: 100
+    manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747RL
+    manufacturer_lifecycle: Documented production series; exact current notices/orderability
+      require refresh
+    observation_date: '2026-10-09'
+    evidence_kind: Indexed primary seller catalogue; reported crawl age retained; not live stock
+      or accepted quote
+    seller: DigiKey Germany
+    url: https://www.digikey.de/de/products/detail/yageo/RC0603FR-0747RL/727252
+    reported_crawl_age: 2 weeks
+    stock_observed: 543536
+    live_stock: null
+    moq_observed: 1
+    order_multiple_observed: 1
+    retail_pack_size_observed: 1
+    factory_pack: 5000
+    packaging: Cut tape / bulk individual; no optional reeling
+    manufacturer_lead_time_weeks_observed: 17
+    actual_dispatch_lead_time: null
+    unit_price_net_eur_observed: 0.09
+    unit_price_gross_eur_scenario: 0.1071
+    private_germany_route: See seller_contracts; subject to acceptance and current inventory;
+      no checkout performed
+    delivered_cost_eur: null
+    substitutes_qualified: []
+    qualification_gaps:
+    - Loss/leakage/temperature/excess-noise or production population not fully validated
+  audited_state: Existing exact MPN; old source/limits preserved; no blanket broadband loss/noise
+    law or substitute qualification
+  behavior_validated: {}
+  candidate_combination_qualified: false
+- exact_mpn: RC0603FR-071KL
+  roles:
+  - capacitors
+  original_register: research/procurement/architecture_parts_2026-10-09.yaml
+  original_fields:
+    exact_mpn: RC0603FR-071KL
+    nominal: 1000
+    unit: ohm
+    tolerance_fraction: 0.01
+    technology: Thick film
+    package: 0603 / 1608
+    ratings:
+      power_w_at_70C: 0.1
+      working_voltage_v: 75
+      tcr_ppm_per_C: 100
+    manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071KL
+    manufacturer_lifecycle: Documented production series; exact current notices/orderability
+      require refresh
+    observation_date: '2026-10-09'
+    evidence_kind: Indexed primary seller catalogue; reported crawl age retained; not live stock
+      or accepted quote
+    seller: DigiKey Germany
+    url: https://www.digikey.de/de/products/detail/yageo/RC0603FR-071KL/726843
+    reported_crawl_age: today
+    stock_observed: 2937396
+    live_stock: null
+    moq_observed: 1
+    order_multiple_observed: 1
+    retail_pack_size_observed: 1
+    factory_pack: 5000
+    packaging: Cut tape / bulk individual; no optional reeling
+    manufacturer_lead_time_weeks_observed: null
+    actual_dispatch_lead_time: null
+    unit_price_net_eur_observed: 0.09
+    unit_price_gross_eur_scenario: 0.1071
+    private_germany_route: See seller_contracts; subject to acceptance and current inventory;
+      no checkout performed
+    delivered_cost_eur: null
+    substitutes_qualified: []
+    qualification_gaps:
+    - Loss/leakage/temperature/excess-noise or production population not fully validated
+  audited_state: Existing exact MPN; old source/limits preserved; no blanket broadband loss/noise
+    law or substitute qualification
+  behavior_validated: {}
+  candidate_combination_qualified: false
+- exact_mpn: RC0603FR-072K2L
+  roles:
+  - capacitors
+  original_register: research/procurement/architecture_parts_2026-10-09.yaml
+  original_fields:
+    exact_mpn: RC0603FR-072K2L
+    nominal: 2200
+    unit: ohm
+    tolerance_fraction: 0.01
+    technology: Thick film
+    package: 0603 / 1608
+    ratings:
+      power_w_at_70C: 0.1
+      working_voltage_v: 75
+      tcr_ppm_per_C: 100
+    manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-072K2L
+    manufacturer_lifecycle: Documented production series; exact current notices/orderability
+      require refresh
+    observation_date: '2026-10-09'
+    evidence_kind: Indexed primary seller catalogue; reported crawl age retained; not live stock
+      or accepted quote
+    seller: DigiKey Germany
+    url: https://www.digikey.de/de/products/detail/yageo/RC0603FR-072K2L/727016
+    reported_crawl_age: last week
+    stock_observed: 159712
+    live_stock: null
+    moq_observed: 1
+    order_multiple_observed: 1
+    retail_pack_size_observed: 1
+    factory_pack: 5000
+    packaging: Cut tape / bulk individual; no optional reeling
+    manufacturer_lead_time_weeks_observed: 22
+    actual_dispatch_lead_time: null
+    unit_price_net_eur_observed: 0.09
+    unit_price_gross_eur_scenario: 0.1071
+    private_germany_route: See seller_contracts; subject to acceptance and current inventory;
+      no checkout performed
+    delivered_cost_eur: null
+    substitutes_qualified: []
+    qualification_gaps:
+    - Loss/leakage/temperature/excess-noise or production population not fully validated
+  audited_state: Existing exact MPN; old source/limits preserved; no blanket broadband loss/noise
+    law or substitute qualification
+  behavior_validated: {}
+  candidate_combination_qualified: false
+- exact_mpn: RC0603FR-073K3L
+  roles:
+  - capacitors
+  original_register: research/procurement/architecture_parts_2026-10-09.yaml
+  original_fields:
+    exact_mpn: RC0603FR-073K3L
+    nominal: 3300
+    unit: ohm
+    tolerance_fraction: 0.01
+    technology: Thick film
+    package: 0603 / 1608
+    ratings:
+      power_w_at_70C: 0.1
+      working_voltage_v: 75
+      tcr_ppm_per_C: 100
+    manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-073K3L
+    manufacturer_lifecycle: Documented production series; exact current notices/orderability
+      require refresh
+    observation_date: '2026-10-09'
+    evidence_kind: Indexed primary seller catalogue; reported crawl age retained; not live stock
+      or accepted quote
+    seller: DigiKey Germany
+    url: https://www.digikey.de/de/products/detail/yageo/RC0603FR-073K3L/727126
+    reported_crawl_age: 4 weeks
+    stock_observed: 39395
+    live_stock: null
+    moq_observed: 1
+    order_multiple_observed: 1
+    retail_pack_size_observed: 1
+    factory_pack: 5000
+    packaging: Cut tape / bulk individual; no optional reeling
+    manufacturer_lead_time_weeks_observed: 17
+    actual_dispatch_lead_time: null
+    unit_price_net_eur_observed: 0.09
+    unit_price_gross_eur_scenario: 0.1071
+    private_germany_route: See seller_contracts; subject to acceptance and current inventory;
+      no checkout performed
+    delivered_cost_eur: null
+    substitutes_qualified: []
+    qualification_gaps:
+    - Loss/leakage/temperature/excess-noise or production population not fully validated
+  audited_state: Existing exact MPN; old source/limits preserved; no blanket broadband loss/noise
+    law or substitute qualification
+  behavior_validated: {}
+  candidate_combination_qualified: false
+- exact_mpn: RC0603FR-0710KL
+  roles:
+  - capacitors
+  original_register: research/procurement/architecture_parts_2026-10-09.yaml
+  original_fields:
+    exact_mpn: RC0603FR-0710KL
+    nominal: 10000
+    unit: ohm
+    tolerance_fraction: 0.01
+    technology: Thick film
+    package: 0603 / 1608
+    ratings:
+      power_w_at_70C: 0.1
+      working_voltage_v: 75
+      tcr_ppm_per_C: 100
+    manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL
+    manufacturer_lifecycle: Documented production series; exact current notices/orderability
+      require refresh
+    observation_date: '2026-10-09'
+    evidence_kind: Indexed primary seller catalogue; reported crawl age retained; not live stock
+      or accepted quote
+    seller: DigiKey Germany
+    url: https://www.digikey.de/de/products/detail/yageo/RC0603FR-0710KL/729827
+    reported_crawl_age: yesterday
+    stock_observed: 0
+    live_stock: null
+    moq_observed: 1
+    order_multiple_observed: 1
+    retail_pack_size_observed: 1
+    factory_pack: 5000
+    packaging: Cut tape / bulk individual; no optional reeling
+    manufacturer_lead_time_weeks_observed: null
+    actual_dispatch_lead_time: null
+    unit_price_net_eur_observed: 0.09
+    unit_price_gross_eur_scenario: 0.1071
+    private_germany_route: See seller_contracts; subject to acceptance and current inventory;
+      no checkout performed
+    delivered_cost_eur: null
+    substitutes_qualified: []
+    qualification_gaps:
+    - Loss/leakage/temperature/excess-noise or production population not fully validated
+    availability_hold: Zero-stock/backorder observation; parents retained as research dependencies
+  audited_state: Existing exact MPN; old source/limits preserved; no blanket broadband loss/noise
+    law or substitute qualification
+  behavior_validated: {}
+  candidate_combination_qualified: false
+- exact_mpn: RC0603FR-07100KL
+  roles:
+  - capacitors
+  original_register: research/procurement/architecture_parts_2026-10-09.yaml
+  original_fields:
+    exact_mpn: RC0603FR-07100KL
+    nominal: 100000
+    unit: ohm
+    tolerance_fraction: 0.01
+    technology: Thick film
+    package: 0603 / 1608
+    ratings:
+      power_w_at_70C: 0.1
+      working_voltage_v: 75
+      tcr_ppm_per_C: 100
+    manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL
+    manufacturer_lifecycle: Documented production series; exact current notices/orderability
+      require refresh
+    observation_date: '2026-10-09'
+    evidence_kind: Indexed primary seller catalogue; reported crawl age retained; not live stock
+      or accepted quote
+    seller: DigiKey Germany
+    url: https://www.digikey.de/de/products/detail/yageo/RC0603FR-07100KL/726889
+    reported_crawl_age: 3 days
+    stock_observed: 548272
+    live_stock: null
+    moq_observed: 1
+    order_multiple_observed: 1
+    retail_pack_size_observed: 1
+    factory_pack: 5000
+    packaging: Cut tape / bulk individual; no optional reeling
+    manufacturer_lead_time_weeks_observed: null
+    actual_dispatch_lead_time: null
+    unit_price_net_eur_observed: 0.09
+    unit_price_gross_eur_scenario: 0.1071
+    private_germany_route: See seller_contracts; subject to acceptance and current inventory;
+      no checkout performed
+    delivered_cost_eur: null
+    substitutes_qualified: []
+    qualification_gaps:
+    - Loss/leakage/temperature/excess-noise or production population not fully validated
+  audited_state: Existing exact MPN; old source/limits preserved; no blanket broadband loss/noise
+    law or substitute qualification
+  behavior_validated: {}
+  candidate_combination_qualified: false
+- exact_mpn: RC0603FR-071ML
+  roles:
+  - capacitors
+  original_register: research/procurement/architecture_parts_2026-10-09.yaml
+  original_fields:
+    exact_mpn: RC0603FR-071ML
+    nominal: 1000000
+    unit: ohm
+    tolerance_fraction: 0.01
+    technology: Thick film
+    package: 0603 / 1608
+    ratings:
+      power_w_at_70C: 0.1
+      working_voltage_v: 75
+      tcr_ppm_per_C: 100
+    manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071ML
+    manufacturer_lifecycle: Documented production series; exact current notices/orderability
+      require refresh
+    observation_date: '2026-10-09'
+    evidence_kind: Indexed primary seller catalogue; reported crawl age retained; not live stock
+      or accepted quote
+    seller: DigiKey Germany
+    url: https://www.digikey.de/de/products/detail/yageo/RC0603FR-071ML/729791
+    reported_crawl_age: last week
+    stock_observed: 1566554
+    live_stock: null
+    moq_observed: 1
+    order_multiple_observed: 1
+    retail_pack_size_observed: 1
+    factory_pack: 5000
+    packaging: Cut tape / bulk individual; no optional reeling
+    manufacturer_lead_time_weeks_observed: 22
+    actual_dispatch_lead_time: null
+    unit_price_net_eur_observed: 0.09
+    unit_price_gross_eur_scenario: 0.1071
+    private_germany_route: See seller_contracts; subject to acceptance and current inventory;
+      no checkout performed
+    delivered_cost_eur: null
+    substitutes_qualified: []
+    qualification_gaps:
+    - Loss/leakage/temperature/excess-noise or production population not fully validated
+    conflicting_observation: Different catalogue alias/older snapshot has different inventory;
+      do not infer live stock
+  audited_state: Existing exact MPN; old source/limits preserved; no blanket broadband loss/noise
+    law or substitute qualification
+  behavior_validated: {}
+  candidate_combination_qualified: false
+- exact_mpn: AC0603FR-0710KL
+  roles:
+  - capacitors
+  original_register: research/procurement/architecture_parts_2026-10-09.yaml
+  original_fields:
+    exact_mpn: AC0603FR-0710KL
+    nominal: 10000
+    unit: ohm
+    tolerance_fraction: 0.01
+    technology: Thick film
+    package: 0603 / 1608
+    ratings:
+      power_w_at_70C: 0.1
+      working_voltage_v: 75
+      tcr_ppm_per_C: 100
+    manufacturer_document: https://yageogroup.com/component-documentation/download/specsheet/AC0603FR-0710KL
+    manufacturer_lifecycle: Documented production series; exact current notices/orderability
+      require refresh
+    observation_date: '2026-10-09'
+    evidence_kind: Indexed primary seller catalogue; reported crawl age retained; not live stock
+      or accepted quote
+    seller: DigiKey Germany
+    url: https://www.digikey.de/de/products/detail/yageo/AC0603FR-0710KL/2828135
+    reported_crawl_age: last week
+    stock_observed: 1303493
+    live_stock: null
+    moq_observed: 1
+    order_multiple_observed: 1
+    retail_pack_size_observed: 1
+    factory_pack: 5000
+    packaging: Cut tape / bulk individual; no optional reeling
+    manufacturer_lead_time_weeks_observed: 22
+    actual_dispatch_lead_time: null
+    unit_price_net_eur_observed: 0.09
+    unit_price_gross_eur_scenario: 0.1071
+    private_germany_route: See seller_contracts; subject to acceptance and current inventory;
+      no checkout performed
+    delivered_cost_eur: null
+    substitutes_qualified: []
+    qualification_gaps:
+    - Loss/leakage/temperature/excess-noise or production population not fully validated
+    conflicting_observation: Other catalogue alias shows backorder; exact current shared inventory
+      unconfirmed
+  audited_state: Existing exact MPN; old source/limits preserved; no blanket broadband loss/noise
+    law or substitute qualification
+  behavior_validated: {}
+  candidate_combination_qualified: false
+- exact_mpn: HVA12JA1G00
+  roles:
+  - high_r
+  original_register: research/procurement/architecture_parts_2026-10-09.yaml
+  original_fields:
+    exact_mpn: HVA12JA1G00
+    nominal: 1000000000.0
+    unit: ohm
+    tolerance_fraction: 0.05
+    technology: High-voltage metal film
+    package: Axial 4 x 11mm
+    ratings:
+      power_w: 1.2
+      voltage_limit_v: 8000
+      power_limited_voltage_v: 34641
+      tcr_ppm_per_C: 200
+      vcr_ppm_per_v_max: 20
+    manufacturer_document: https://www.mouser.com/datasheet/2/385/SEI_HVA-3077810.pdf
+    manufacturer_lifecycle: Documented production series; exact current notices/orderability
+      require refresh
+    observation_date: '2026-10-09'
+    evidence_kind: Indexed primary seller catalogue; reported crawl age retained; not live stock
+      or accepted quote
+    seller: DigiKey Germany
+    url: https://www.digikey.de/en/products/detail/stackpole-electronics-inc/HVA12JA1G00/6195865
+    reported_crawl_age: last week filter listing
+    stock_observed: 1148
+    live_stock: null
+    moq_observed: 1
+    order_multiple_observed: 1
+    retail_pack_size_observed: 1
+    factory_pack: 1000
+    packaging: Cut tape / bulk individual; no optional reeling
+    manufacturer_lead_time_weeks_observed: null
+    actual_dispatch_lead_time: null
+    unit_price_net_eur_observed: 0.73
+    unit_price_gross_eur_scenario: 0.8687
+    private_germany_route: See seller_contracts; subject to acceptance and current inventory;
+      no checkout performed
+    delivered_cost_eur: null
+    substitutes_qualified: []
+    qualification_gaps:
+    - Loss/leakage/temperature/excess-noise or production population not fully validated
+    evidence_limit: German distributor filter showed stock/CT price; direct exact product cache
+      miss. CT MOQ1, factory tape-and-box1000 is not a required private pack.
+  audited_state: Existing exact MPN; old source/limits preserved; no blanket broadband loss/noise
+    law or substitute qualification
+  behavior_validated: {}
+  candidate_combination_qualified: false
+- exact_mpn: EEU-FR1J470
+  roles:
+  - capacitors
+  original_register: research/procurement/architecture_parts_2026-10-09.yaml
+  original_fields:
+    exact_mpn: EEU-FR1J470
+    nominal: 4.7e-05
+    unit: F
+    tolerance_fraction: 0.2
+    technology: Polar aluminium electrolytic FR-A
+    package: Radial 6.3 x 12.7mm; 2.5mm pitch
+    ratings:
+      voltage_v: 63
+      temperature_C: 105
+      life_hours_at_105C: 5000
+    manufacturer_document: null
+    manufacturer_lifecycle: Documented production series; exact current notices/orderability
+      require refresh
+    observation_date: '2026-10-09'
+    evidence_kind: Indexed primary seller catalogue; reported crawl age retained; not live stock
+      or accepted quote
+    seller: DigiKey Germany
+    url: https://www.digikey.de/de/products/detail/panasonic-electronic-components/EEU-FR1J470/3072280
+    reported_crawl_age: 4 months
+    stock_observed: 68724
+    live_stock: null
+    moq_observed: 1
+    order_multiple_observed: 1
+    retail_pack_size_observed: 1
+    factory_pack: null
+    packaging: Cut tape / bulk individual; no optional reeling
+    manufacturer_lead_time_weeks_observed: 31
+    actual_dispatch_lead_time: null
+    unit_price_net_eur_observed: 0.4
+    unit_price_gross_eur_scenario: 0.476
+    private_germany_route: See seller_contracts; subject to acceptance and current inventory;
+      no checkout performed
+    delivered_cost_eur: null
+    substitutes_qualified: []
+    qualification_gaps:
+    - Loss/leakage/temperature/excess-noise or production population not fully validated
+    evidence_limit: Older German stock/price; frequency/temperature ESR, leakage, reversal and
+      startup stress remain unqualified. No live stock inference.
+  audited_state: Existing exact MPN; old source/limits preserved; no blanket broadband loss/noise
+    law or substitute qualification
+  behavior_validated: {}
+  candidate_combination_qualified: false
+- exact_mpn: R82EC4100DQ70J
+  roles:
+  - capacitors
+  original_register: research/procurement/architecture_parts_2026-10-09.yaml
+  original_fields:
+    exact_mpn: R82EC4100DQ70J
+    nominal: 1.0e-06
+    unit: F
+    tolerance_fraction: 0.05
+    technology: Metallized PET film R82
+    package: Radial 7.2 x 6 x 11.1mm; 5mm pitch
+    ratings:
+      voltage_dc_v: 100
+      voltage_ac_v: 63
+    manufacturer_document: https://www.digikey.com/htmldatasheets/production/3447437/0/0/1/r82dc3680dq60j.pdf
+    manufacturer_lifecycle: Documented production series; exact current notices/orderability
+      require refresh
+    observation_date: '2026-10-09'
+    evidence_kind: Indexed primary seller catalogue; reported crawl age retained; not live stock
+      or accepted quote
+    seller: DigiKey Germany
+    url: https://www.digikey.de/de/products/detail/kemet/R82EC4100DQ70J/1930809
+    reported_crawl_age: 3 weeks
+    stock_observed: 314884
+    live_stock: null
+    moq_observed: 1
+    order_multiple_observed: 1
+    retail_pack_size_observed: 1
+    factory_pack: 1400
+    packaging: Cut tape / bulk individual; no optional reeling
+    manufacturer_lead_time_weeks_observed: 26
+    actual_dispatch_lead_time: null
+    unit_price_net_eur_observed: 0.78
+    unit_price_gross_eur_scenario: 0.9282
+    private_germany_route: See seller_contracts; subject to acceptance and current inventory;
+      no checkout performed
+    delivered_cost_eur: null
+    substitutes_qualified: []
+    qualification_gaps:
+    - Loss/leakage/temperature/excess-noise or production population not fully validated
+  audited_state: Existing exact MPN; old source/limits preserved; no blanket broadband loss/noise
+    law or substitute qualification
+  behavior_validated: {}
+  candidate_combination_qualified: false
+- exact_mpn: R82EC3100DQ70J
+  roles:
+  - capacitors
+  original_register: research/procurement/architecture_parts_2026-10-09.yaml
+  original_fields:
+    exact_mpn: R82EC3100DQ70J
+    nominal: 1.0e-07
+    unit: F
+    tolerance_fraction: 0.05
+    technology: Metallized PET film R82
+    package: Radial 7.2 x 2.5 x 6.6mm; 5mm pitch
+    ratings:
+      voltage_dc_v: 100
+    manufacturer_document: https://www.digikey.com/htmldatasheets/production/3447437/0/0/1/r82dc3680dq60j.pdf
+    manufacturer_lifecycle: Documented production series; exact current notices/orderability
+      require refresh
+    observation_date: '2026-10-09'
+    evidence_kind: Indexed primary seller catalogue; reported crawl age retained; not live stock
+      or accepted quote
+    seller: DigiKey Germany
+    url: https://www.digikey.de/en/products/detail/kemet/R82EC3100DQ70J/1930807
+    reported_crawl_age: German exact price unavailable
+    stock_observed: null
+    live_stock: null
+    moq_observed: 1
+    order_multiple_observed: 1
+    retail_pack_size_observed: 1
+    factory_pack: null
+    packaging: Cut tape / bulk individual; no optional reeling
+    manufacturer_lead_time_weeks_observed: 26
+    actual_dispatch_lead_time: null
+    unit_price_net_eur_observed: null
+    unit_price_gross_eur_scenario: null
+    private_germany_route: See seller_contracts; subject to acceptance and current inventory;
+      no checkout performed
+    delivered_cost_eur: null
+    substitutes_qualified: []
+    qualification_gaps:
+    - Loss/leakage/temperature/excess-noise or production population not fully validated
+    other_territory_observation:
+      seller: DigiKey US
+      stock: 64236
+      crawl_age: yesterday
+      unit_price_usd: 0.34
+      limitation: Same exact MPN catalogue evidence only; not a German EUR quote or live Germany
+        inventory
+  audited_state: Existing exact MPN; old source/limits preserved; no blanket broadband loss/noise
+    law or substitute qualification
+  behavior_validated: {}
+  candidate_combination_qualified: false
+- exact_mpn: C0603C101J1GACTU
+  roles:
+  - capacitors
+  original_register: research/procurement/architecture_parts_2026-10-09.yaml
+  original_fields:
+    exact_mpn: C0603C101J1GACTU
+    nominal: 1.0e-10
+    unit: F
+    tolerance_fraction: 0.05
+    technology: C0G MLCC
+    package: 0603 / 1608
+    ratings:
+      voltage_v: 100
+      temperature_C:
+      - -55
+      - 125
+    manufacturer_document: https://search.kemet.com/download/specsheet/C0603C101J1GACTU
+    manufacturer_lifecycle: Documented production series; exact current notices/orderability
+      require refresh
+    observation_date: '2026-10-09'
+    evidence_kind: Indexed primary seller catalogue; reported crawl age retained; not live stock
+      or accepted quote
+    seller: DigiKey Germany
+    url: https://www.digikey.de/de/products/detail/kemet/C0603C101J1GACTU/1533979
+    reported_crawl_age: 3 months
+    stock_observed: 0
+    live_stock: null
+    moq_observed: 1
+    order_multiple_observed: 1
+    retail_pack_size_observed: 1
+    factory_pack: 4000
+    packaging: Cut tape / bulk individual; no optional reeling
+    manufacturer_lead_time_weeks_observed: 22
+    actual_dispatch_lead_time: null
+    unit_price_net_eur_observed: 0.09
+    unit_price_gross_eur_scenario: 0.1071
+    private_germany_route: See seller_contracts; subject to acceptance and current inventory;
+      no checkout performed
+    delivered_cost_eur: null
+    substitutes_qualified: []
+    qualification_gaps:
+    - Loss/leakage/temperature/excess-noise or production population not fully validated
+    availability_hold: Zero-stock/backorder; actual Yageo replacement creates a separate leakage/loss
+      child
+  audited_state: Existing exact MPN; old source/limits preserved; no blanket broadband loss/noise
+    law or substitute qualification
+  behavior_validated: {}
+  candidate_combination_qualified: false
+- exact_mpn: CC0603JRNPO0BN101
+  roles:
+  - capacitors
+  original_register: research/procurement/architecture_parts_2026-10-09.yaml
+  original_fields:
+    exact_mpn: CC0603JRNPO0BN101
+    nominal: 1.0e-10
+    unit: F
+    tolerance_fraction: 0.05
+    technology: C0G MLCC
+    package: 0603 / 1608
+    ratings:
+      voltage_v: 100
+      insulation_resistance_min_ohm: 10000000000.0
+      dissipation_factor_max: 0.001
+      temperature_C:
+      - -55
+      - 125
+    manufacturer_document: https://yageogroup.com/download/specsheet/CC0603JRNPO0BN101
+    manufacturer_lifecycle: Documented production series; exact current notices/orderability
+      require refresh
+    observation_date: '2026-10-09'
+    evidence_kind: Indexed primary seller catalogue; reported crawl age retained; not live stock
+      or accepted quote
+    seller: DigiKey Germany
+    url: https://www.digikey.de/de/products/detail/yageo/CC0603JRNPO0BN101/5195647
+    reported_crawl_age: 3 months replacement table; direct exact page inaccessible
+    stock_observed: 45850
+    live_stock: null
+    moq_observed: null
+    order_multiple_observed: null
+    retail_pack_size_observed: null
+    factory_pack: 4000
+    packaging: Cut tape / bulk individual; no optional reeling
+    manufacturer_lead_time_weeks_observed: null
+    actual_dispatch_lead_time: null
+    unit_price_net_eur_observed: 0.08
+    unit_price_gross_eur_scenario: 0.0952
+    private_germany_route: See seller_contracts; subject to acceptance and current inventory;
+      no checkout performed
+    delivered_cost_eur: null
+    substitutes_qualified: []
+    qualification_gaps:
+    - Loss/leakage/temperature/excess-noise or production population not fully validated
+    evidence_limit: Exact primary manufacturer sheet retrieved 2026-10-09, generated2026-10-01.
+      Seller replacement table sku311-1745-1-ND is CT; exact MOQ/retail pack/dispatch not independently
+      established. Intended qty1/2 only; no claim of resolved private orderability.
+  audited_state: Existing exact MPN; old source/limits preserved; no blanket broadband loss/noise
+    law or substitute qualification
+  behavior_validated: {}
+  candidate_combination_qualified: false
+- exact_mpn: CC0603JRNPO0BN102
+  manufacturer: YAGEO
+  roles:
+  - capacitors
+  nominal_f: 1.0e-09
+  tolerance_fraction: 0.05
+  rated_vdc: 100
+  technology: C0G NP0 MLCC nonpolar
+  dimensions_mm:
+    L:
+    - 1.5
+    - 1.7
+    W:
+    - 0.7
+    - 0.9
+    T:
+    - 0.7
+    - 0.9
+  temperature_c:
+  - -55
+  - 125
+  primary_spec: https://yageogroup.com/download/specsheet/CC0603JRNPO0BN102
+  document_sha256: da1808ed4018b1fc7c68a692449355fcb6461eaa7843a6204760a10adbf0b7b4
+  datasheet_display:
+    dissipation_factor: 0.001
+    insulation_resistance_ohm: 10000000000.0
+  limitations: Exact specsheet gives DF/IR without all measurement conditions; obtain series
+    test methods before broadband/temp/leakage law. C0G classification is not measured zero
+    DA/VCR/ESR. Feedback value is preferred nominal, not implemented microphone dependency.
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  states:
+    investigated: true
+    acquired_document: true
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+passive_leads:
+- name: HVA05FA500M
+  manufacturer: Stackpole
+  role: high_r
+  intent: Two500Mohm1percent elements for1Gohm authority sensitivity; different tolerance/VCR/leakage/board
+    geometry and noise, not equivalent toHVA12JA1G00
+  state: Exact retailer lead; primaryHVA acquisition403 and mirrorHTML retained; GermanyEUR
+    quote null, no implementation qualification
+- name: Vishay CRHV2512 1Gohm series
+  role: high_r
+  primary_url: https://www.vishay.com/docs/68002/crhv.pdf
+  state: Seriesprimarydocument acquired; >200Mohm1206 consultfactory excluded; no exact validated
+    MPN/privateMOQ route
+- name: WIMA MKP2 polypropylene100nF
+  role: capacitors
+  primary_url: https://www.wima.de/en/our-product-range/metallized-capacitors/mkp-2/
+  state: 2026 catalogue acquired; PP DA0.05-0.1percent at23C is general film guidance; exact
+    suffix/retail route not verified; no generic zero-loss capacitor substitute
+control_records:
+- id: 20261009T133250Z_parts_ec54d567
+  record: results/device_models/20261009T133250Z_parts_ec54d567/failure.json
+  state: analysis crash and fixture failures retained
+- id: 20261009T133422Z_parts_9ee64bfd
+  record: results/device_models/20261009T133422Z_parts_9ee64bfd/results.json
+  state: source_integrity_error; onlychangedsource was live stdoutlog; no cohort pooling
+- id: 20261009T133651Z_parts_d3c30763
+  record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  sha256: 3fc320023bdd3f36f0772fcf509d6e9a39767673f690a60b81cbcc4eab37fa36
+  state: source_unchanged_true;49jobs7errors; point evidence only
+- id: 20261009T135500Z_partsload_551b10d1
+  record: results/device_models/20261009T135500Z_partsload_551b10d1/results.json
+  state: 4 failed acquisition-level loads; no behavior/performance credit; wrapper provenance
+    limitation retained
+mechanism_handoff: role next_falsification fields linked to exact part/model/evidence, original14families
+  retained; no new candidate
+sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+source_ledger: research/parts_sources_2026-10-09.yaml
+patent_flags: research/patents/parts_expansion_001_2026-10-09.yaml
+qualification: No qualified microphone substitute; experimental support is behavior/condition-specific.

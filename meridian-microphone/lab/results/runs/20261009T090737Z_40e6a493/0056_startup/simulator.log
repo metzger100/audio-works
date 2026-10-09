@@ -1,0 +1,122 @@
+Note: gnd in a subcircuit is not set to 0 automatically
+
+Note: Compatibility modes selected: ps
+
+
+Circuit: meridian research startup
+
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+pressure                                     0
+pressure_r                                   0
+xenv.feed                                    0
+xenv.xp                            3.71734e-28
+xenv.xn                            3.71734e-28
+p                                  3.71789e-28
+n                                  3.71789e-28
+mic_g                             -5.46668e-32
+pp                                           0
+pn                                           0
+cm                                           0
+xcap.qf                            5.11888e-21
+b                                  8.04879e-25
+f                                  7.31277e-20
+xcap.cqf                           5.11888e-21
+xcap.qr                           -5.63416e-26
+rear                              -5.38619e-32
+xcap.cqr                          -5.63416e-26
+xdut.raw                           4.92056e-28
+xdut.regbase                      -1.58406e-27
+xdut.qreg_t0                       4.92056e-28
+xdut.qreg_t1                      -1.58406e-27
+rail                              -1.48486e-25
+xdut.qreg_t2                      -1.48486e-25
+xdut.xqreg.11                      4.87738e-28
+xdut.mid                          -7.44508e-26
+xdut.pol_0                         7.36182e-26
+xdut.pol_1                         1.46744e-25
+xdut.pol_2                          2.1987e-25
+xdut.pol_3                         2.92997e-25
+xdut.pol_4                         3.66123e-25
+xdut.pol_5                         4.39249e-25
+xdut.pol_6                         5.12375e-25
+xdut.pol_7                         5.85501e-25
+xdut.pol_8                         6.58627e-25
+xdut.pol                           7.31753e-25
+xdut.gate_div0                     7.14531e-26
+xdut.gate_div1                     2.91393e-25
+xdut.gatebias                      5.11332e-25
+xdut.jinput_t0                    -1.48486e-25
+xdut.jinput_t1                     7.31277e-20
+xdut.source                       -1.42557e-25
+xdut.jinput_t2                    -1.42557e-25
+xdut.jinput_t3                    -1.48486e-25
+xdut.jinput_t4                    -5.46668e-32
+xdut.signal                       -1.15953e-25
+xdut.outp                          -1.9834e-27
+xdut.cp                            -1.9834e-27
+xdut.outn                         -3.32233e-27
+xdut.cn                           -3.32233e-27
+xdut.qoutp_t0                     -1.48486e-25
+xdut.qoutp_t1                     -1.15953e-25
+xdut.qoutp_t2                      -1.9834e-27
+xdut.xqoutp.11                    -1.48479e-25
+xdut.inverse                      -1.46066e-25
+xdut.qinvert_t0                   -1.46066e-25
+xdut.qinvert_t1                   -1.15953e-25
+xdut.ie                           -1.98341e-27
+xdut.qinvert_t2                   -1.98341e-27
+xdut.xqinvert.11                  -1.46059e-25
+xdut.qoutn_t0                     -1.48486e-25
+xdut.qoutn_t1                     -1.46066e-25
+xdut.qoutn_t2                     -3.32233e-27
+xdut.xqoutn.11                    -1.48473e-25
+xdut.coutp0_loss                   3.71789e-28
+xdut.coutp1_loss                   3.71789e-28
+xdut.coutp2_loss                   3.71789e-28
+xdut.coutp3_loss                   3.71789e-28
+xdut.coutn0_loss                   3.71789e-28
+xdut.coutn1_loss                   3.71789e-28
+xdut.coutn2_loss                   3.71789e-28
+xdut.coutn3_loss                   3.71789e-28
+b.xcap.bqr#branch                            0
+b.xcap.bqf#branch                            0
+v.xcap.vqr#branch                            0
+v.xcap.vqf#branch                            0
+v.xdut.vqoutn_2#branch             3.32228e-31
+v.xdut.vqoutn_1#branch            -2.29419e-32
+v.xdut.vqoutn_0#branch            -3.09286e-31
+v.xdut.vqinvert_2#branch           1.98335e-31
+v.xdut.vqinvert_1#branch            2.0751e-32
+v.xdut.vqinvert_0#branch          -2.19086e-31
+v.xdut.vqoutp_2#branch             1.98335e-31
+v.xdut.vqoutp_1#branch             2.07508e-32
+v.xdut.vqoutp_0#branch            -2.19086e-31
+v.xdut.vjinput_4#branch           -1.46255e-31
+v.xdut.vjinput_3#branch           -1.46256e-31
+v.xdut.vjinput_2#branch             4.3199e-29
+v.xdut.vjinput_1#branch           -7.32003e-29
+v.xdut.vjinput_0#branch            3.02938e-29
+v.xdut.vqreg_2#branch              2.03675e-32
+v.xdut.vqreg_1#branch              3.66012e-32
+v.xdut.vqreg_0#branch             -5.69687e-32
+v.xenv.vcm#branch                            0
+v.xenv.vphantom#branch             1.09334e-31
+vpr#branch                                   0
+vp#branch                                    0
+
+ Reference value :  8.08377e-01
+ Reference value :  2.02825e+00
+ Reference value :  3.31184e+00
+No. of Data Rows : 6418
+ASCII raw file "startup.raw"
+ngspice-47 done
+

@@ -1,8 +1,10 @@
 # M100 Meridian analog research laboratory
 
+Current parts evidence: [strengthening002](research/parts_database_expansion_002.md), [searchable matrix](research/parts_database_expansion_002.yaml) and [search/audit tool](research/parts_database.py). Parts, model files, behavior and implementation gates remain separate.
+
 [Project overview](../README.md) · [Current state](../../CURRENT.md) · [Run the lab](#run-the-lab) · [Scientific contract](CONTRACT.md) · [Evidence](results/README.md)
 
-An executable, evidence-first workspace for **Arienne Audio Flat K47 Cardioid/Omni K47FRB** under realistic P48. The Phase 0–2 foundation now has a [Phase 3 semiconductor-model prerequisite report](research/device_model_validation.md), with scoped agreement and preserved failures. No production microphone architecture is selected, and no circuit is qualified for prototyping.
+An executable, evidence-first workspace for **Arienne Audio Flat K47 Cardioid/Omni K47FRB** under realistic P48. The [first architecture batch](research/first_architecture_batch.md) records six mechanisms and preserved engineering children using the [partial device library](research/device_model_validation.md). No production architecture is selected or qualified for prototyping.
 
 ## Implementation constraints
 
@@ -76,9 +78,11 @@ These are initial screens, with explicit `incomplete` states. Full loop return-r
 .venv/bin/python search/loop.py --evaluations 1 --samples 16
 ```
 
-Optimization uses SciPy differential evolution and explicit current/response constraints to minimize one stated axis, electronics noise. It keeps every trial, returns a value proposal and runs the full suite before acceptance. A search can legitimately find **no feasible point**; inspect the limiting physics without relaxing the requirements. The fixture exercise proves the workflow, not an architecture's merits.
+The optimizer supports separate single-axis objectives, nominal/worst tested scenarios and empirical scenario percentiles. Noise/nonlinear/port objectives require their documented behavior prerequisites; the legacy fixture noise control uses `--legacy-fixture`. SciPy differential evolution enforces an explicit evaluation budget and separates feasibility constraints from the performance axis. It keeps every trial, returns a value proposal and runs the full suite before acceptance. A search can legitimately find **no feasible point**; inspect the limiting physics without relaxing the requirements. The fixture exercise proves the workflow, not an architecture's merits.
 
-[Inventor/Engineer roles](research/roles.md) separate diversity from viability. [22 initial concepts](search/concepts.yaml) cover all [14 persistent families](search/families.yaml), with nine falsification questions per concept. They are **not simulated designs**. Twenty avoid a conventional JFET voltage-buffer input. The bounded loop evaluates supplied Engineer netlists; it currently reports `awaiting_engineer_netlists` because none are implemented. No AI service or unattended background process is installed.
+[Inventor/Engineer roles](research/roles.md) separate diversity from viability. [22 concepts](search/concepts.yaml) cover all [14 persistent families](search/families.yaml), with nine falsification questions each. Twenty avoid a conventional JFET voltage buffer. The [six-mechanism batch](research/first_architecture_batch.md) now supplies actual Engineer netlists and BOMs; remaining catalogue proposals await implementation. No AI service or unattended background process is installed.
+
+The batch adds [terminal-energy accounting](src/meridian_lab/architectures.py), [independent regressions](tests/test_architectures.py), a scoped [carrier protocol](research/carrier_protocol.md), [ordinary-parts sourcing](research/procurement/architecture_parts_2026-10-09.yaml), [primary observations](research/architecture_sources/README.md), [candidate patent flags](research/patents/first_architecture_batch_2026-10-09.yaml) and [dated decisions](research/first_architecture_decisions.md). These records do not establish build readiness or legal clearance.
 
 `search/mutate.py` registers structural children with new IDs and parent hypotheses. Value-only edits use the optimizer. Novelty uses approximate value-independent graph and functional descriptors, and never contributes engineering credit. The allocation helper tracks 50/25/15/10 exploration proportions. Diversity retention preserves niches independently of the global winner.
 
@@ -86,12 +90,20 @@ Optimization uses SciPy differential evolution and explicit current/response con
 
 The initial [results report](research/phase0_report.md) and its response/noise plots are rendered from immutable records by `research/render_initial_report.py`. It checks that the compared runs and verification use the same sources and specification before reporting the comparison. Population percentiles include completed simulations that fail requirements; missing/error counts remain explicit.
 
+[Scoped robust optimization](research/robust_optimization_report.md) adds constrained response proposals, nine realized/structural children and independent adverse-case validation. All remain unqualified. The [declared plan](optimization/robust_plan.yaml) and [batch runner](optimization/robust_batch.py) preserve budgets, source cohorts and separate procurement/patent gates.
+
+[Architecture comparison 001](research/architecture_comparison_001.md) audits six tested families, exact BOMs, raw noise contributions, uncertainty reversals and separate research Pareto projections. [Generated tables and plots](results/reports/architecture_comparison_001/tables.md) are reproduced with `.venv/bin/python research/compare_architectures.py`; original local evidence is required. The [measurement priorities](measurement/priority_plan.md) address remaining physical uncertainty. No topology or PCB is selected.
+
 ## Next phases
 
 Phase 3: obtain current, documented semiconductor models/limits and build a strong conventional JFET reference plus fundamentally different controls. Optimize them fairly under the same environment and no-selection requirement. Phase 4–7: implement diverse concepts, perform structural search and broaden robust qualification, with early patent-feature flags. Phase 8: separate claim/territory/status screening and resolution of implementation patent holds; no legal conclusion is asserted by the agent. Phase 9–10: only then advance eligible prototype implementations and close the measurement/model-correction loop.
 
 The [measurement interchange](measurement/result.schema.json) shares check names, units, statuses and provenance with simulation. `measurement/compare.py` imports physical records and reports differences without changing models or thresholds. No physical measurements have been made.
 
+The [continuation prompts 06–13](research/prompts/README.md#continuation-tasks--drafted-9-october-2026) cover parts/capsule literature, isolated model repair, focused JFET hypotheses, diverse mechanism controls, patents, sourcing/preservation and recomparison. Capsule measurement access is deferred; source-backed scenarios support continued research while physical gates remain open. The prompts are planned tasks, not new scientific results.
+
 ## License
 
 Project-authored software is GPL-3.0-or-later; hardware design sources and electrical netlists/models are CERN-OHL-S-2.0. The [root licensing scope](../../LICENSE) applies throughout the laboratory, including snapshots. Third-party material retains its own terms; vendor-model redistribution permission and engineering/patent release gates remain separate unresolved matters.
+
+[Parts evidence expansion001](research/parts_database_expansion_001.md) · [searchable role/model/behavior matrix](research/parts_database_expansion_001.yaml) · [dated decisions](research/parts_database_expansion_001_decisions.md). Scoped isolated controls expand the library without selecting a microphone implementation.

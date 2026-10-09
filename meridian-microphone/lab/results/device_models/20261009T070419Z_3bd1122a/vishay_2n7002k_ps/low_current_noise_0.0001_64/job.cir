@@ -1,0 +1,26 @@
+Meridian isolated vishay_2n7002k_ps low_current_noise_0.0001_64
+* SPDX-License-Identifier: CERN-OHL-S-2.0
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/device_models/20261009T070419Z_3bd1122a/source/models/semiconductor/vendor/vishay_2n7002k.lib"
+.temp 25
+.options reltol=1e-06 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+Vd d 0 DC 5 AC 0
+Vg g 0 DC 1.4416050384861927 AC 1
+Xq d g 0 2N7002K
+Hout out 0 Vd 1
+Hgate ig 0 Vg 1
+.control
+set filetype=ascii
+set numdgt=16
+op
+write op.raw i(vd) i(vg)
+ac dec 64 1 100Meg
+write ac.raw i(vd) i(vg)
+noise v(out) Vg dec 64 1 100k 1
+setplot noise1
+write noise.raw all
+noise v(ig) Vg dec 64 1 100k 1
+setplot noise3
+write gate_noise.raw all
+quit
+.endc
+.end

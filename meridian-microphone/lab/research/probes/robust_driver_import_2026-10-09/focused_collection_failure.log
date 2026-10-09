@@ -1,0 +1,27 @@
+
+==================================== ERRORS ====================================
+____________________ ERROR collecting tests/test_robust.py _____________________
+ImportError while importing test module '/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/tests/test_robust.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_robust.py:9: in <module>
+    from meridian_lab import robust
+E   ModuleNotFoundError: No module named 'meridian_lab'
+___________________ ERROR collecting tests/test_integrity.py ___________________
+ImportError while importing test module '/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/tests/test_integrity.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/leobareth/Dokumente/Audiotech/meridian/lab/tests/test_integrity.py:6: in <module>
+    ???
+E   ModuleNotFoundError: No module named 'meridian_lab'
+=========================== short test summary info ============================
+ERROR tests/test_robust.py
+ERROR tests/test_integrity.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
+2 errors in 0.15s

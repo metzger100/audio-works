@@ -1,0 +1,192 @@
+Meridian research ac_feasibility
+.param CF=9.357535607292353e-11
+.param CR=5.818524189378119e-11
+.param SREF=0.0206289541216984
+.param VREF=60
+.param LEAK=28189028956.91111
+.param PAR=4.205327721440401e-12
+.param CROSS=1.798022298809498e-12
+.param LIN=0
+.param POLDC=60
+.param VS=45.27314465267842
+.param FT=0.1611025961589577
+.param FM=-0.002887562321668367
+.param LEN=45.65418587608477
+.param RW=0.1778400400475137
+.param RS=0.05
+.param CD=9.327214657553188e-11
+.param CS=8.31507114152096e-11
+.param ZIN=9906.314569349799
+.param ZM=-0.03432798555262967
+.param CC=2.2e-05
+.param CP=2e-10
+.param START=0
+.param CMAC=0
+.param PRESSURE_AC=1
+.param PRESSURE_PEAK=0
+.param FREQ=1000
+.param RHARVESTP_VALUE=2204.561335967194
+.param RHARVESTN_VALUE=2188.651325376637
+.param CRAW_VALUE=4.049945500762112e-05
+.param RREGTOP_VALUE=100663.8008656407
+.param RREGBOTTOM_VALUE=100775.5299398588
+.param CREGBASE_VALUE=9.704301286423871e-07
+.param CRAIL_VALUE=4.418301480269093e-05
+.param RMIDTOP_VALUE=9943.13704935532
+.param RMIDBOTTOM_VALUE=9986.491538506747
+.param CMID_VALUE=4.472938571033637e-05
+.param RPOLAR0_VALUE=1008727.380066207
+.param RPOLAR1_VALUE=990448.413209492
+.param RPOLAR2_VALUE=1006268.62879306
+.param RPOLAR3_VALUE=998799.215829797
+.param RPOLAR4_VALUE=1008124.342418971
+.param RPOLAR5_VALUE=1001182.947518916
+.param RPOLAR6_VALUE=993564.0921001384
+.param RPOLAR7_VALUE=1008621.566786682
+.param RPOLAR8_VALUE=1004371.932032725
+.param RPOLAR9_VALUE=1005321.446907621
+.param CPOL_VALUE=9.591275266652209e-08
+.param RBACK_VALUE=992740.7585833829
+.param RGATETOP0_VALUE=10033.10984535233
+.param RGATETOP1_VALUE=10025.77095504163
+.param RGATETOP2_VALUE=9926.235539967669
+.param RGATEBOTTOM_VALUE=9976.826921849528
+.param CGATEBIAS_VALUE=4.319347904470894e-05
+.param RBIAS_VALUE=960276042.4750959
+.param CBIASSTRAY_VALUE=3.095478165294091e-13
+.param RREAR_VALUE=998.6963010047303
+.param RSOURCE_VALUE=3296.893448709131
+.param CAUDIO_VALUE=9.703745507210248e-07
+.param RSIGNAL_VALUE=996708.7177228525
+.param ROUTP_VALUE=47.09466389240527
+.param ROUTN_VALUE=46.53436875687333
+.param RINVEMITTER_VALUE=10006.77971833574
+.param RINVCOLLECTOR_VALUE=10081.97867533849
+.param ROUTLOADP_VALUE=9955.680455149821
+.param ROUTLOADN_VALUE=9945.118694989607
+.param CBACKFILTER_VALUE=1.042935344340219e-07
+.param COUTP0_VALUE=5.233304329401635e-05
+.param RCOUTP0LOSS_VALUE=0.1786635020223436
+.param RCOUTP0LEAK_VALUE=10598498488.6679
+.param COUTP1_VALUE=4.284537784349412e-05
+.param RCOUTP1LOSS_VALUE=0.8916526700759675
+.param RCOUTP1LEAK_VALUE=50502758.00466643
+.param COUTP2_VALUE=4.370234904153123e-05
+.param RCOUTP2LOSS_VALUE=0.7964169626059443
+.param RCOUTP2LEAK_VALUE=30223595255.20073
+.param COUTN0_VALUE=5.430826212993033e-05
+.param RCOUTN0LOSS_VALUE=0.3528009685420208
+.param RCOUTN0LEAK_VALUE=31531784.49863352
+.param COUTN1_VALUE=4.226869321108322e-05
+.param RCOUTN1LOSS_VALUE=1.593634861164472
+.param RCOUTN1LEAK_VALUE=59302831441.93805
+.param COUTN2_VALUE=3.971550501605704e-05
+.param RCOUTN2LOSS_VALUE=0.3228342896009981
+.param RCOUTN2LEAK_VALUE=9752157691728.266
+.temp 39.28181517413025
+.options reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/optimization_batches/20261009T090126Z_4735cd2a/candidate_0018/source/models/capsule/flat_k47.cir"
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/optimization_batches/20261009T090126Z_4735cd2a/candidate_0018/source/models/environment/p48.cir"
+VP pressure 0 DC 0 AC {PRESSURE_AC} SIN(0 {PRESSURE_PEAK} {FREQ})
+VPR pressure_r 0 DC 0 AC 0
+Xenv p n mic_g pp pn cm P48 VS={VS} FT={FT} FM={FM} LEN={LEN} RW={RW} RS={RS} CD={CD} CS={CS} ZIN={ZIN} ZM={ZM} CC={CC} CP={CP} START={START} CMAC={CMAC}
+Xcap f b rear pressure pressure_r mic_g FLAT_K47 CF={CF} CR={CR} SREF={SREF} VREF={VREF} LEAK={LEAK} PAR={PAR} CROSS={CROSS} LIN={LIN} POLDC={POLDC}
+* SPDX-License-Identifier: CERN-OHL-S-2.0
+* Internal research; no build recommendation.
+.subckt DUT f b rear p n g rail
+Rharvestp p raw {RHARVESTP_VALUE}
+Rharvestn n raw {RHARVESTN_VALUE}
+Craw raw g {CRAW_VALUE}
+Rregtop raw regbase {RREGTOP_VALUE}
+Rregbottom regbase g {RREGBOTTOM_VALUE}
+Cregbase regbase g {CREGBASE_VALUE}
+VQreg_0 raw Qreg_t0 0
+VQreg_1 regbase Qreg_t1 0
+VQreg_2 rail Qreg_t2 0
+XQreg Qreg_t0 Qreg_t1 Qreg_t2 BC846B
+Crail rail g {CRAIL_VALUE}
+Rmidtop rail mid {RMIDTOP_VALUE}
+Rmidbottom mid g {RMIDBOTTOM_VALUE}
+Cmid mid g {CMID_VALUE}
+Rpolar0 raw pol_0 {RPOLAR0_VALUE}
+Rpolar1 pol_0 pol_1 {RPOLAR1_VALUE}
+Rpolar2 pol_1 pol_2 {RPOLAR2_VALUE}
+Rpolar3 pol_2 pol_3 {RPOLAR3_VALUE}
+Rpolar4 pol_3 pol_4 {RPOLAR4_VALUE}
+Rpolar5 pol_4 pol_5 {RPOLAR5_VALUE}
+Rpolar6 pol_5 pol_6 {RPOLAR6_VALUE}
+Rpolar7 pol_6 pol_7 {RPOLAR7_VALUE}
+Rpolar8 pol_7 pol_8 {RPOLAR8_VALUE}
+Rpolar9 pol_8 pol {RPOLAR9_VALUE}
+Cpol pol g {CPOL_VALUE}
+Rback pol b {RBACK_VALUE}
+Rgatetop0 rail gate_div0 {RGATETOP0_VALUE}
+Rgatetop1 gate_div0 gate_div1 {RGATETOP1_VALUE}
+Rgatetop2 gate_div1 gatebias {RGATETOP2_VALUE}
+Rgatebottom gatebias g {RGATEBOTTOM_VALUE}
+Cgatebias gatebias g {CGATEBIAS_VALUE}
+Rbias f gatebias {RBIAS_VALUE}
+Cbiasstray f gatebias {CBIASSTRAY_VALUE}
+Rrear rear g {RREAR_VALUE}
+VJinput_0 rail Jinput_t0 0
+VJinput_1 f Jinput_t1 0
+VJinput_2 source Jinput_t2 0
+VJinput_3 rail Jinput_t3 0
+VJinput_4 g Jinput_t4 0
+XJinput Jinput_t0 Jinput_t1 Jinput_t2 Jinput_t3 Jinput_t4 JFE150
+Rsource source g {RSOURCE_VALUE}
+Caudio source signal {CAUDIO_VALUE}
+Rsignal signal mid {RSIGNAL_VALUE}
+Routp outp cp {ROUTP_VALUE}
+Routn outn cn {ROUTN_VALUE}
+VQoutp_0 rail Qoutp_t0 0
+VQoutp_1 signal Qoutp_t1 0
+VQoutp_2 outp Qoutp_t2 0
+XQoutp Qoutp_t0 Qoutp_t1 Qoutp_t2 BC846B
+VQinvert_0 inverse Qinvert_t0 0
+VQinvert_1 signal Qinvert_t1 0
+VQinvert_2 ie Qinvert_t2 0
+XQinvert Qinvert_t0 Qinvert_t1 Qinvert_t2 BC846B
+Rinvemitter ie g {RINVEMITTER_VALUE}
+Rinvcollector rail inverse {RINVCOLLECTOR_VALUE}
+VQoutn_0 rail Qoutn_t0 0
+VQoutn_1 inverse Qoutn_t1 0
+VQoutn_2 outn Qoutn_t2 0
+XQoutn Qoutn_t0 Qoutn_t1 Qoutn_t2 BC846B
+Routloadp outp g {ROUTLOADP_VALUE}
+Routloadn outn g {ROUTLOADN_VALUE}
+Cbackfilter b g {CBACKFILTER_VALUE}
+Coutp0 coutp0_loss cp {COUTP0_VALUE}
+RCoutp0loss p coutp0_loss {RCOUTP0LOSS_VALUE}
+RCoutp0leak p cp {RCOUTP0LEAK_VALUE}
+Coutp1 coutp1_loss cp {COUTP1_VALUE}
+RCoutp1loss p coutp1_loss {RCOUTP1LOSS_VALUE}
+RCoutp1leak p cp {RCOUTP1LEAK_VALUE}
+Coutp2 coutp2_loss cp {COUTP2_VALUE}
+RCoutp2loss p coutp2_loss {RCOUTP2LOSS_VALUE}
+RCoutp2leak p cp {RCOUTP2LEAK_VALUE}
+Coutn0 coutn0_loss cn {COUTN0_VALUE}
+RCoutn0loss n coutn0_loss {RCOUTN0LOSS_VALUE}
+RCoutn0leak n cn {RCOUTN0LEAK_VALUE}
+Coutn1 coutn1_loss cn {COUTN1_VALUE}
+RCoutn1loss n coutn1_loss {RCOUTN1LOSS_VALUE}
+RCoutn1leak n cn {RCOUTN1LEAK_VALUE}
+Coutn2 coutn2_loss cn {COUTN2_VALUE}
+RCoutn2loss n coutn2_loss {RCOUTN2LOSS_VALUE}
+RCoutn2leak n cn {RCOUTN2LEAK_VALUE}
+.ends DUT
+
+Xdut f b rear p n mic_g rail DUT
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/optimization_batches/20261009T090126Z_4735cd2a/candidate_0018/source/models/semiconductor/vendor/bc846b_emitter_r1.lib"
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/optimization_batches/20261009T090126Z_4735cd2a/candidate_0018/source/models/semiconductor/vendor/jfe150_pspice.lib"
+
+.control
+set filetype=ascii
+set numdgt=16
+op
+write op.raw all
+ac dec 32 1 10Meg
+write ac.raw all
+quit
+.endc
+.end

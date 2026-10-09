@@ -1,0 +1,27 @@
+* independently derived native DC controls
+* Project-authored r2 coupled DC controls; feasible subset only. Original r1 preserved.
+* Not production corners; no noise/capacitance/temperature/output/SOA qualification.
+.model DC_BOUND_0 NJF(BETA=0.02700892857142857 VTO=-1.018181818181818 LAMBDA=0)
+.model DC_BOUND_1 NJF(BETA=0.03302857142857143 VTO=-1.029411764705882 LAMBDA=0)
+.model DC_BOUND_2 NJF(BETA=0.03478260869565217 VTO=-1.15 LAMBDA=0)
+
+Vd0 d0 0 10
+Vg0 g0 0 DC 0 AC 1
+Jq0 d0 g0 0 DC_BOUND_0
+Vd1 d1 0 10
+Vg1 g1 0 DC 0 AC 1
+Jq1 d1 g1 0 DC_BOUND_1
+Vd2 d2 0 10
+Vg2 g2 0 DC 0 AC 1
+Jq2 d2 g2 0 DC_BOUND_2
+.temp 25
+.options tnom=25 reltol=1e-8
+.control
+set filetype=ascii
+op
+write op.raw all
+ac lin 1 1000 1000
+write ac.raw all
+quit
+.endc
+.end

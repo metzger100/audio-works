@@ -1,0 +1,258 @@
+{
+  "results": {
+    "vishay_2n7002k_ps": {
+      "comparisons": [],
+      "measurements": {
+        "transfer_-55": {
+          "id_at_vgs4_a": 0.8836342556103327,
+          "vgs_at_2ma_v": 1.947695424263417,
+          "reference_condition": "VDS10V; source transfer plot drain bias unspecified"
+        },
+        "transfer_-10": {
+          "id_at_vgs4_a": 0.7776883000330509,
+          "vgs_at_2ma_v": 1.865046807040171,
+          "reference_condition": "VDS10V; source transfer plot drain bias unspecified"
+        },
+        "transfer_25": {
+          "id_at_vgs4_a": 0.7142241280533886,
+          "vgs_at_2ma_v": 1.7940464505985867,
+          "reference_condition": "VDS10V; source transfer plot drain bias unspecified"
+        },
+        "transfer_50": {
+          "id_at_vgs4_a": 0.6764421735421456,
+          "vgs_at_2ma_v": 1.7395694182077244,
+          "reference_condition": "VDS10V; source transfer plot drain bias unspecified"
+        },
+        "transfer_125": {
+          "id_at_vgs4_a": 0.5901383200142928,
+          "vgs_at_2ma_v": 1.5554036119484,
+          "reference_condition": "VDS10V; source transfer plot drain bias unspecified"
+        }
+      },
+      "status": "error",
+      "reason": "Target current outside simulated transfer curve"
+    }
+  },
+  "jobs": [
+    {
+      "model_id": "vishay_2n7002k_ps",
+      "label": "transfer_-55",
+      "temperature_c": -55,
+      "refinement": false,
+      "netlist_sha256": "86b61e077f440e860ae00353530b03639ff563db01254f790aab7f4f836ec44b",
+      "model_sha256": "d59ce922b2c814e4aaa63f27459696b8c71494fac61f47c8cf8c093eba273111",
+      "model_version": "ECN S14-1598 Rev. B, 11-Aug-2014; 2n7002k_ps Rev B.lib",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.vishay.com/docs/77603/2n7002k_ps_revb.zip",
+      "compatibility": "ps",
+      "directory": "vishay_2n7002k_ps/transfer_-55",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "40850a6eab6f0555101f7fc06c6fcd96884adc962b38b1269689f474e1ad838e"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "086bc93c2c8c3328e05f234e691645a50fe341ca6e140aeb9eac48a0859d167b"
+      }
+    },
+    {
+      "model_id": "vishay_2n7002k_ps",
+      "label": "transfer_-10",
+      "temperature_c": -10,
+      "refinement": false,
+      "netlist_sha256": "802609faf50e58577154ab6874837eb3d47937b8a889b2496fcff0c999f7342c",
+      "model_sha256": "d59ce922b2c814e4aaa63f27459696b8c71494fac61f47c8cf8c093eba273111",
+      "model_version": "ECN S14-1598 Rev. B, 11-Aug-2014; 2n7002k_ps Rev B.lib",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.vishay.com/docs/77603/2n7002k_ps_revb.zip",
+      "compatibility": "ps",
+      "directory": "vishay_2n7002k_ps/transfer_-10",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "8b20da849faff45e316618cebb3ada08a14bdbc1c5f57e0e1e898611a0200b00"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "d9027923e32541ce952cb7162166ec4c6d09e9aa2a8f4dbb0ea39a3ff5bfeba6"
+      }
+    },
+    {
+      "model_id": "vishay_2n7002k_ps",
+      "label": "transfer_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "6ac25d362732d0792e5afd5662a05a10c6cadc28d8fce4055245a4a7e97347c9",
+      "model_sha256": "d59ce922b2c814e4aaa63f27459696b8c71494fac61f47c8cf8c093eba273111",
+      "model_version": "ECN S14-1598 Rev. B, 11-Aug-2014; 2n7002k_ps Rev B.lib",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.vishay.com/docs/77603/2n7002k_ps_revb.zip",
+      "compatibility": "ps",
+      "directory": "vishay_2n7002k_ps/transfer_25",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "41e1e95dcaf7fc5a16f09b2147fc2f4a889198530d77ac56e5c923fe1686b054"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "d661cc4521e09f7179ba20da84a2110c0cf2f3ec3734bd11c5d87b0f0123d641"
+      }
+    },
+    {
+      "model_id": "vishay_2n7002k_ps",
+      "label": "transfer_50",
+      "temperature_c": 50,
+      "refinement": false,
+      "netlist_sha256": "ad074990b270b57be9986cee30b0e4303be3dbca4288a7e01454292e1b05bfb9",
+      "model_sha256": "d59ce922b2c814e4aaa63f27459696b8c71494fac61f47c8cf8c093eba273111",
+      "model_version": "ECN S14-1598 Rev. B, 11-Aug-2014; 2n7002k_ps Rev B.lib",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.vishay.com/docs/77603/2n7002k_ps_revb.zip",
+      "compatibility": "ps",
+      "directory": "vishay_2n7002k_ps/transfer_50",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "1e222e8a4d9ed4158ed004500a0532696b80287abfabded4e9a66b433e2b026f"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "0ce9a775cb5e3b5cc5ef5f583713060f16615d757d92204b2ff95d478bc688ba"
+      }
+    },
+    {
+      "model_id": "vishay_2n7002k_ps",
+      "label": "transfer_125",
+      "temperature_c": 125,
+      "refinement": false,
+      "netlist_sha256": "6de27947c43dfb6e27bbc2c39b1d213fcac737928c3a6fb3fa5a240bc000957a",
+      "model_sha256": "d59ce922b2c814e4aaa63f27459696b8c71494fac61f47c8cf8c093eba273111",
+      "model_version": "ECN S14-1598 Rev. B, 11-Aug-2014; 2n7002k_ps Rev B.lib",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.vishay.com/docs/77603/2n7002k_ps_revb.zip",
+      "compatibility": "ps",
+      "directory": "vishay_2n7002k_ps/transfer_125",
+      "status": "ok",
+      "raw_data_hashes": {
+        "transfer.raw": "2e1274be8b1209cb5df517a09c3596dad9a40989207720603f6da51063a99932"
+      },
+      "csv_hashes": {
+        "transfer.raw.csv": "bd6ddfc684888085b5e0833477af4931bc39601aaae2ca2545d0f7c48aeef923"
+      }
+    },
+    {
+      "model_id": "vishay_2n7002k_ps",
+      "label": "threshold_diode_connected",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "df0d163986355b3771c7492d152ff5472d1e26f4bca9208b834a94f26b3b1c66",
+      "model_sha256": "d59ce922b2c814e4aaa63f27459696b8c71494fac61f47c8cf8c093eba273111",
+      "model_version": "ECN S14-1598 Rev. B, 11-Aug-2014; 2n7002k_ps Rev B.lib",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.vishay.com/docs/77603/2n7002k_ps_revb.zip",
+      "compatibility": "ps",
+      "directory": "vishay_2n7002k_ps/threshold_diode_connected",
+      "status": "ok",
+      "raw_data_hashes": {
+        "threshold.raw": "de26a8e925c948bf25973cc110f760e108f3143512ffc08b8535c787d563283c"
+      },
+      "csv_hashes": {
+        "threshold.raw.csv": "8b40ff612f3a47547373a2841b2623f945c797228784d57be5fbb59558ef2b3a"
+      }
+    }
+  ],
+  "source_manifest": {
+    "models/capsule/flat_k47.cir": "26899d24e6aefa2cfd41b6c13fe1e022e94f2ffec10358ec00dfb74ed0c082b4",
+    "models/capsule/flat_k47_native_q_r1.cir": "79b97ea73165979525f08aca427d8bfaa42fa8814ae576b140bf97550fb61c18",
+    "models/capsule/flat_k47_scaled_observer_r2.cir": "a977702eae58c5345e129bb282ce75f98e4405872e891e603512d37c480758fe",
+    "models/capsule/flat_k47_series_motion_r3.cir": "dcd00a192cfdc6a1744d9a3c2c8ad65b73b4a990697f85f23e756711834d5bb7",
+    "models/environment/p48.cir": "8037de103d579dc4923b37e2ae0b2c78a7337b39385f05055d7e08aa94a53d6f",
+    "models/semiconductor/acquire.py": "5da42d662f6d473a1a1a88412d03f7a3a5f3d03871c89bb68a889579ba507707",
+    "models/semiconductor/acquisition.yaml": "3bd9ce6c38641dc80645fbb312f39b4680c58e776b7b7dbbac805a0419bdf01e",
+    "models/semiconductor/characterize.py": "67a89668840b424a36f7d48874022b71b10196ec3cdee99a12fe81bde2935d96",
+    "models/semiconductor/corners.yaml": "533ecf345bf7c5ebfaf28ff945a41b47b483b41df61e0f8eafa2a8a00ab8a038",
+    "models/semiconductor/dc_bound_controls.cir": "fb9288ccf32775bfa3c2192a1314bde022f963fc5a7923ab71f5999671a1d120",
+    "models/semiconductor/prepare.py": "bd2aca3425ebaa7eb7d9048e3856640990a46c60b56f1093da1e87073e5457ea",
+    "models/semiconductor/proposals/corners_r1.yaml": "07cba7e177d59fbda19e4e1fecc8d1e045c28b7126e942122f32994a974ada17",
+    "models/semiconductor/proposals/corners_r2_metadata_parent_alias.yaml": "f472170740b18517edac85f112cd6388294a833bc558be156e641e4b7681fc63",
+    "models/semiconductor/proposals/dc_bound_controls_r1.cir": "4aec8ca3bf32d3ee0ac921b407d0b86b73acfef6de1db7a0b313e10e19b00c4d",
+    "models/semiconductor/references.yaml": "984982ec0a7e40250902865127b8d9d6e40012858d907a44a2acf699cf6a83ef",
+    "models/semiconductor/registry.yaml": "577662942f76dcc438ef116a6891604a6c02b8c80cbd7c637418d7ecf655a4d6",
+    "models/semiconductor/validate_corners.py": "42eb7c2d41bb6570b71949ce9476bb31c24cdb4795187c763f1dc5bde62f3357",
+    "models/semiconductor/vendor/2n7002.lib": "4a2a3f7fb1725f12fcfe3f7fef5cc082be2ac58eeb30ee4fdb693398e74abbf5",
+    "models/semiconductor/vendor/acquisition/20261005T181750804905Z.json": "db38cd67049333bd28265112abd095c76a0b9fe30e070fe8224324f65788b2da",
+    "models/semiconductor/vendor/acquisition/20261005T182032778675Z.json": "50ddb32c1e39564b817fd6fe8a5b1899a461501f583dec1ed831219a67606aa6",
+    "models/semiconductor/vendor/acquisition/20261005T190715553654Z.json": "e6e68a4a2c21e8acb836286cb9dbc8fcd5fb26a9ebcdb8bdb3e4de5851d4f175",
+    "models/semiconductor/vendor/acquisition/20261009T065251920839Z.json": "7e8c81e76abc6154ff9ed5d806564a10aa4c102263e6bb92ca9558669f800a58",
+    "models/semiconductor/vendor/acquisition/discovery_20261009T065017889193Z.json": "a74d4968672e587d22acb28a9d1a5ff8a1ed22df4eddd4a05e37a1463b49bd7f",
+    "models/semiconductor/vendor/bc846b.lib": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+    "models/semiconductor/vendor/bc846b_emitter_r1.lib": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+    "models/semiconductor/vendor/bc856b.lib": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+    "models/semiconductor/vendor/downloads/2n7002k_ps_revb.zip": "418a0ccb1e31c07c6f42e911514bb51b3a6d2ee7b5d13df12faa46c2e6467db1",
+    "models/semiconductor/vendor/downloads/sboma34d.zip": "9e55fcaa23d54cee025dda3fa9872b11c41c531f82e0802c2b93d51e943666e5",
+    "models/semiconductor/vendor/downloads/slpm349i.zip": "6358de546c957c142c321f30431fa816610a22599a0a3f980646ac6bbe6eace0",
+    "models/semiconductor/vendor/downloads/slpm366.zip": "1fd7c2ff8ef1c2b1354c98e35537f4d0db56ebb0eea614702bff7610c25e46a1",
+    "models/semiconductor/vendor/evidence/2n7002.pdf": "cc9c275457670c3cbbf2e56f5a75c800d3b5f0b396fabc798cf18cb639646475",
+    "models/semiconductor/vendor/evidence/bc846.pdf": "045a6cc21de93ac634aad910567e882926bd6ef154cbd8c59d13201134642a97",
+    "models/semiconductor/vendor/evidence/bc856.pdf": "d9a836e40dd8f1e788d7dadbfcbe8cf4836ed5debe789c84b8fa574132f84943",
+    "models/semiconductor/vendor/evidence/jfe150.pdf": "925d58a8f0cf7db307325ece12fb2f61a736b2c1440f63928b5e6c1312f39365",
+    "models/semiconductor/vendor/evidence/opa197.pdf": "27653a7d5e965cbb2d23f7998919ebd774efd5cd3e126b8f0881469ae91166fd",
+    "models/semiconductor/vendor/evidence/vishay_2n7002k.pdf": "639ab49255a61576ef6c5cb89c1536e045b44724fb95af12438ba41022e44adf",
+    "models/semiconductor/vendor/evidence/vishay_2n7002k_model_guide.pdf": "e6ffb92656896ce98f78945b50551c51bd3e8b6dfab2484b0c1134ee12d24fb0",
+    "models/semiconductor/vendor/jfe150_generic.lib": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+    "models/semiconductor/vendor/jfe150_pspice.lib": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+    "models/semiconductor/vendor/jfe150_strong.lib": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+    "models/semiconductor/vendor/jfe150_weak.lib": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+    "models/semiconductor/vendor/opa197.lib": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+    "models/semiconductor/vendor/vishay_2n7002k.lib": "d59ce922b2c814e4aaa63f27459696b8c71494fac61f47c8cf8c093eba273111",
+    "optimization/optimize_bias.py": "90cf1a61c2aaad14c39c3c6c544bc8bae21fb556303381d44c4ffc8bef498733",
+    "optimization/optimize_values.py": "6c332b7758d61cf92aad716781ee81ee0401156965543673f9438d2d8e5e85f4",
+    "requirements.txt": "f2162d13822ff575becaab0e43a96dcce42f33a9e3cd4aacbc88d3ae1e4ff3c3",
+    "research/device_sources/README.md": "f5950aa76d4a5813bc3a1fbfe9f74b553c9fee8559982c17899ae893923676eb",
+    "research/device_sources/local/2026-10-09/bc846b_lifecycle.html": "d6f650bc836f4c4bad6b52f06efd1705c6e51d57a4f01c6b5ca540b9b7d3a786",
+    "research/device_sources/local/2026-10-09/bc856b_lifecycle.html": "42f245e6f7ce5d84678a6186b99c6a664626093b9516c0f881e3c8b1a4b64134",
+    "research/device_sources/local/2026-10-09/digikey_indexed_observations.json": "ce05b158d06559d993ea6ab4251535e3b3e0f326ad332ac250385ab9c3b3277d",
+    "research/device_sources/local/2026-10-09/http_observations.json": "68e8b219dacb66d21ef6a7631accb41ab79cac350394342a0117df7878823e72",
+    "research/device_sources/local/2026-10-09/jfe150_product.html": "bbbd50494fa39314c8ec6bce69182fb28bf0120825bec92045a2e8f0405dee2a",
+    "research/device_sources/local/2026-10-09/mouser_mos.html": "47a1d4f38dba44d91b3f8ff73caf5353da6ec49367b0c9be930304ce02a4803c",
+    "research/device_sources/local/2026-10-09/mouser_terms.html": "72dafd24e3804769d5b0333e40a259d812462b319644574efa91cb1f7759c327",
+    "research/device_sources/local/2026-10-09/opa197_product.html": "55b9cffec118f93130fc70cf905a444d032c9a33397e04730cd2e53c65357093",
+    "research/device_sources/local/2026-10-09/search_retail_observations.json": "c838e1f5ecfebe8a9e6696ee00334672ff2700e7ef34ab87f91c1c867b792b00",
+    "research/device_sources/local/2026-10-09/search_terms_observations.json": "feaf5756d2c994e29380c6de0d1899dadc6ec3d0004bd84073852a6cdc332745",
+    "research/device_sources/local/2026-10-09/stock_search_observations.json": "41acfa9e9465355dbdbb9f893bad74d0935a857b2839c5df3df832071bb83753",
+    "research/device_sources/local/2026-10-09/vishay_design_tools.html": "d381549d343e3e1faf66c4fa9e5845a6420508d9ed7b1335de5529018032f71c",
+    "research/device_sources/local/2026-10-09/vishay_quality.html": "45e4fb7a41053e3eb4f0d6f6465fe4f17045d4dedf473fa8268485361775569d",
+    "research/device_sources/local/mos_alternative_observations_2026-10-05.json": "da942962cf0e951aded4889df9df6c183b32c5ce45d4118513a59e34bb9b3a3f",
+    "research/device_sources/local/web_observations.json": "82eba24adf2a815360d34ad69a3dc98feb4aba101e5431a6340ee11bc585b498",
+    "research/procurement/semiconductors_2026-10-05.yaml": "aa68772d1310a3847819fd6edaea7bbb1052e1bdbdc499f947f89f44c73e35f0",
+    "research/procurement/semiconductors_2026-10-09.yaml": "f2885eb6de3c9aa7b5fbcab131a0ddb4619a3c699f4181a1fb1161a61cc12957",
+    "research/sources.yaml": "040bb7379c6fcfae1036bc0b89825536ed3f34a2432f39d35addc89ab0585a46",
+    "search/archive.py": "a6540a439fd86d9d0989cc6b75a5656afd15eaeed86adae189debe604a242b58",
+    "search/concepts.yaml": "711693e5c28f1313246c4411926687981b4c0db48a845ab5fa4585dd22002123",
+    "search/families.yaml": "458ea6f4ad64c1244cb8f709ded0313b46c75f4c2ca46066683ea82f41c2ffdf",
+    "search/generate_topology.py": "3b03bd1291e1e757f2d5701e029bf9610a772442a3bfb55bf662b70ede13220b",
+    "search/loop.py": "3322bb6d43b86f9c4e1c472a79d50f80e06783960c880a8be8452ee4b64e1d9f",
+    "search/mutate.py": "8f91ab73f3ffca62922db5346173dd66a61baa6b781141dd9c3ca61f011d9886",
+    "search/novelty.py": "1d0373ee6060f925febf54375a2de2dd42c846b5a1ba6c86570c597d1c1566df",
+    "search/proposals/concept_0010/proposal.yaml": "4829f158162cbc7c3290a3655c87e50dc3d9648a6497bcc5e6bfa99e841592b0",
+    "search/selection.py": "83f62cbb70327ad8e713f05dedcf902ecd395146f4e5b9664080b27915b713a0",
+    "spec/capsule_model.yaml": "169983f2601ee39a59496e0e4d2d337deb14e7e4ec7bf38a92f6ca89b59bc696",
+    "spec/design_constraints.yaml": "48d03f7b8d6302aeca14efda4de5c12cf491c393e212e6842f04da60c344dc43",
+    "spec/lock.yaml": "0a5ac00e5d73b720b0c0926c6987ab6b8cb2dca6ac3d1513039db9f3a05c8d07",
+    "spec/microphone_spec.yaml": "ea5a6f973f17f907c5b76f9d17a35cfa784903bcfcd8d7f1d08cd538b65636cd",
+    "spec/scoring.yaml": "6aa6b8620a4700220ac952472f150396599ca67a2918f6f114e1b283a158c0af",
+    "src/meridian_lab/__init__.py": "70778163075ec49235b8cf725bce58f9cef39892880a46ccc9fa58a9aeb98f52",
+    "src/meridian_lab/archive.py": "56353457cb366e1141d3a82ce5cdd74e1648f6321ae5b1247a7f20019aa44d06",
+    "src/meridian_lab/cli.py": "8bd9d564d2dfe329c75a4403be77aeceda6cd5b8395d7322a9f3729b6e923bdf",
+    "src/meridian_lab/core.py": "4d4d5461c96381cb3ec3ba8933406d9d13ccabd73a178fe91684dc5621a76131",
+    "src/meridian_lab/device_models.py": "51539f53a88719109f8fa46dfb7dda6a0aac439c6593f25cffa74ce7f1a78435",
+    "src/meridian_lab/metrics.py": "37827dfc57123f2fbfb5398f4f0a6e0be147cae9e2f2ae5b46fc35d61d08c9c8",
+    "src/meridian_lab/qualification.py": "859c520c71bc6df38bd8e809aa74631b7dd5ca15c12d23986756d817e0837077",
+    "tests/test_device_models.py": "faf933325ccdcc2a6256ada0e88ff042f684b6cd76181719e38135dcb5c6f158",
+    "tests/test_integrity.py": "9f6a90bee69c5327216c42e29f11a6f4fd00b8359a42a42e72de90b7f1128c2d",
+    "tests/test_physics.py": "4cffb4617d81ee327b32883f7fafc88905c76126f567d77b5d79a39f22560e59",
+    "tests/test_search_and_numerics.py": "b906730c436811458eb61cfb96799e069c48485ecf2e54ec4b14694f338a761b",
+    "tools/ngspice-run": "52cc8315fd7b1dc8dc7757658407dbd4a0b21e1f73bbbdf8a183e04487fa26fd"
+  },
+  "complete": false
+}

@@ -1,0 +1,51 @@
+schema_version: 1
+declared_date: '2026-10-09'
+task: Parts expansion002; isolated controls and support fixtures only
+models:
+  - diodes_mmbt5401_vendor
+  - diotec_2n5551_vendor
+  - diotec_mmbt5551_vendor
+  - lsk389a_syntax_r1
+  - opa1656_vendor
+  - lmp7721_vendor
+  - opa928_vendor
+role_rationale:
+  pnp: Complementary high-voltage transistor prerequisite absent from expansion001
+  dual_jfet: Independent integrated family; ordinary factory matching evidence separate
+  compatibility: Explicit manufacturer LTspice syntax was rejected before backend launch
+  amplifier: Test documented initialization without altering equations or tolerances
+hypotheses:
+  - Supporting an explicitly documented dialect may reveal remaining unsupported parameters.
+  - Native PNP equations may fail conditioned gain, capacitance, leakage or NF references.
+  - A metadata-only dual-JFET child may support nominal DC while noise remains inaccurate.
+  - Nodeset provides only an initial guess and may not fix amplifier OP failures.
+bias_grid:
+  temperatures_c: [-10, 25, 50]
+  bjt_ic_a: [0.0001, 0.001, 0.002, 0.01]
+  bjt_vce_v: 5
+  p48_supply_v: [44, 48, 52]
+  p48_emitter_resistor_ohm: 1000
+  p48_base_resistor_ohm: 100000
+  p48_source_reference_v: 1.7
+  p48_fixture_note: Ordinary nominal E-series RC0603 values; finite resistor feedback sensitivity only. Not a regulator proposal, SOA or candidate qualification.
+  jfet_vds_v: 10
+  jfet_noise_ic_a: 0.002
+  jfet_cap_condition: VDS10V VGS0 f1MHz
+  amplifier_condition: Supplies16V; input/output8V; RL10k; unloaded guard. Grounded and translated+20V OPA928.
+oracles:
+  - Exact references.yaml parts_expansion_002; no other-manufacturer substitution
+  - Narrowband density NF ratio4kTR at200uA; PNP Rs10ohm, not2kohm
+  - DC interpolated beta and Im(I)/(2pi f); fixture1Pohm emitter leakage explicit
+  - Translated voltage differences and two-grid numerical consistency are numerical checks only
+  - No independent device transient reference; transient credit deferred
+maximum_jobs: 100
+timeout_s_per_job: 15
+typical_disagreement_fraction: 0.20
+numerical_refinement_fraction: 0.01
+stopping: One finite pass; preserve every error and disagreement; no fitting or favorable condition replacement.
+parent_experiments:
+  - 20261009T133651Z_parts_d3c30763
+  - 20261009T135500Z_partsload_551b10d1
+production_qualification: false
+capsule_measurements: absent
+preservation: Freeze source_manifest plus this plan, driver and imported helpers before evaluation; private model/waveforms; immutable results.

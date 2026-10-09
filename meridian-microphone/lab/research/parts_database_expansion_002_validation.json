@@ -1,0 +1,643 @@
+{
+  "date": "2026-10-09",
+  "status": "software_and_provenance_pass_preservation_incomplete",
+  "qualification": "Research only; no microphone substitute or candidate combination qualified",
+  "preservation": "Independent persistent private coverage and89 legacy sources remain incomplete",
+  "lab_tests": 68,
+  "repository_tests": 24,
+  "lab_doctor": "pass",
+  "spec_digest": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+  "matrix_canonical_audit": "pass",
+  "control_audits": [
+    {
+      "id": "20261009T145346Z_parts2_742caaa3",
+      "source_unchanged": true,
+      "jobs": 27,
+      "failed_jobs": 14,
+      "snapshot_raw_csv_errors": []
+    },
+    {
+      "id": "20261009T170734Z_constant_ae3a9e1d",
+      "source_unchanged": true,
+      "jobs": 6,
+      "failed_jobs": 6,
+      "snapshot_raw_csv_errors": []
+    },
+    {
+      "id": "20261009T171204Z_dual_pnp_9ff5882e",
+      "source_unchanged": true,
+      "jobs": 13,
+      "failed_jobs": 1,
+      "snapshot_raw_csv_errors": []
+    }
+  ],
+  "root_gate": "pass; preservation explicitly incomplete",
+  "first_test_failure": "20261009T170857Z_34228d45: decimal-format assertion; retained; independent numerical oracle corrected",
+  "final_verification": "results/verification/20261009T172142Z_c2732675",
+  "model_files": [
+    {
+      "device": "jfe150",
+      "model": "jfe150_generic",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "jfe150",
+      "model": "jfe150_weak",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "jfe150",
+      "model": "jfe150_strong",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "jfe150",
+      "model": "jfe150_pspice",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "vishay_2n7002k",
+      "model": "vishay_2n7002k_ps",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "bc846b",
+      "model": "bc846b_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "bc846b",
+      "model": "bc846b_emitter_r1",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "bc856b",
+      "model": "bc856b_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "opa197",
+      "model": "opa197_pspice",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "2n7002",
+      "model": "2n7002_failed_download",
+      "hash_matches": true,
+      "acquisition": "invalid_html_challenge"
+    },
+    {
+      "device": "jfe2140",
+      "model": "jfe2140_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "lsk170a",
+      "model": "lsk170a_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "lsk170a",
+      "model": "lsk170a_syntax_r1",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "lsk389a",
+      "model": "lsk389a_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "lsk389a",
+      "model": "lsk389a_syntax_r1",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "pmbt5551",
+      "model": "pmbt5551_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "diotec_mmbt5551",
+      "model": "diotec_mmbt5551_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "bc850c",
+      "model": "bc850c_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "bav199",
+      "model": "bav199_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "bav199",
+      "model": "bav199_syntax_r1",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "opa928",
+      "model": "opa928_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "opa928",
+      "model": "opa928_reference_v10",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "opa1656",
+      "model": "opa1656_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "opa1656",
+      "model": "opa1656_tina_v12",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "lmp7721",
+      "model": "lmp7721_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "diodes_mmbt5401",
+      "model": "diodes_mmbt5401_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "diotec_2n5551",
+      "model": "diotec_2n5551_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "dmmt5401",
+      "model": "dmmt5401_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    }
+  ],
+  "acquisition_audit": {
+    "record": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/models/semiconductor/vendor/acquisition/20261009T171900195708Z.json",
+    "observations": [
+      {
+        "id": "jfe150_generic",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.ti.com/lit/zip/slpm366",
+        "target": "vendor/downloads/slpm366.zip",
+        "sha256": "1fd7c2ff8ef1c2b1354c98e35537f4d0db56ebb0eea614702bff7610c25e46a1",
+        "files": {
+          "vendor/jfe150_generic.lib": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+          "vendor/jfe150_weak.lib": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+          "vendor/jfe150_strong.lib": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8"
+        }
+      },
+      {
+        "id": "jfe150_pspice",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.ti.com/lit/zip/slpm349i",
+        "target": "vendor/downloads/slpm349i.zip",
+        "sha256": "6358de546c957c142c321f30431fa816610a22599a0a3f980646ac6bbe6eace0",
+        "files": {
+          "vendor/jfe150_pspice.lib": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6"
+        }
+      },
+      {
+        "id": "opa197",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.ti.com/lit/zip/sboma34d",
+        "target": "vendor/downloads/sboma34d.zip",
+        "sha256": "9e55fcaa23d54cee025dda3fa9872b11c41c531f82e0802c2b93d51e943666e5",
+        "files": {
+          "vendor/opa197.lib": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5"
+        }
+      },
+      {
+        "id": "bc846b",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+        "target": "vendor/bc846b.lib",
+        "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+        "files": {}
+      },
+      {
+        "id": "bc856b",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://assets.nexperia.com/documents/spice-model/BC856B.txt?download=1",
+        "target": "vendor/bc856b.lib",
+        "sha256": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+        "files": {}
+      },
+      {
+        "id": "2n7002",
+        "status": "invalid_model_content",
+        "url": "https://assets.nexperia.com/documents/spice-model/2N7002.txt?download=1",
+        "target": "vendor/2n7002.lib",
+        "sha256": "4a2a3f7fb1725f12fcfe3f7fef5cc082be2ac58eeb30ee4fdb693398e74abbf5",
+        "diagnostic": "No SPICE definition; possible web challenge"
+      },
+      {
+        "id": "jfe150_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.ti.com/lit/ds/symlink/jfe150.pdf",
+        "target": "vendor/evidence/jfe150.pdf",
+        "sha256": "925d58a8f0cf7db307325ece12fb2f61a736b2c1440f63928b5e6c1312f39365",
+        "files": {}
+      },
+      {
+        "id": "opa197_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.ti.com/lit/ds/symlink/opa197.pdf",
+        "target": "vendor/evidence/opa197.pdf",
+        "sha256": "27653a7d5e965cbb2d23f7998919ebd774efd5cd3e126b8f0881469ae91166fd",
+        "files": {}
+      },
+      {
+        "id": "bc846_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://assets.nexperia.com/documents/data-sheet/BC846_SER.pdf?download=1",
+        "target": "vendor/evidence/bc846.pdf",
+        "sha256": "045a6cc21de93ac634aad910567e882926bd6ef154cbd8c59d13201134642a97",
+        "files": {}
+      },
+      {
+        "id": "bc856_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://assets.nexperia.com/documents/data-sheet/BC856_BC857_BC858.pdf?download=1",
+        "target": "vendor/evidence/bc856.pdf",
+        "sha256": "d9a836e40dd8f1e788d7dadbfcbe8cf4836ed5debe789c84b8fa574132f84943",
+        "files": {}
+      },
+      {
+        "id": "2n7002_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://assets.nexperia.com/documents/data-sheet/2N7002.pdf?download=1",
+        "target": "vendor/evidence/2n7002.pdf",
+        "sha256": "cc9c275457670c3cbbf2e56f5a75c800d3b5f0b396fabc798cf18cb639646475",
+        "files": {}
+      },
+      {
+        "id": "vishay_2n7002k",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.vishay.com/docs/77603/2n7002k_ps_revb.zip",
+        "target": "vendor/downloads/2n7002k_ps_revb.zip",
+        "sha256": "418a0ccb1e31c07c6f42e911514bb51b3a6d2ee7b5d13df12faa46c2e6467db1",
+        "files": {
+          "vendor/vishay_2n7002k.lib": "d59ce922b2c814e4aaa63f27459696b8c71494fac61f47c8cf8c093eba273111"
+        }
+      },
+      {
+        "id": "vishay_2n7002k_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.vishay.com/docs/71333/2n7002k.pdf",
+        "target": "vendor/evidence/vishay_2n7002k.pdf",
+        "sha256": "639ab49255a61576ef6c5cb89c1536e045b44724fb95af12438ba41022e44adf",
+        "files": {}
+      },
+      {
+        "id": "vishay_2n7002k_model_guide",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.vishay.com/docs/73307/2n7002k_ps_revb.pdf",
+        "target": "vendor/evidence/vishay_2n7002k_model_guide.pdf",
+        "sha256": "e6ffb92656896ce98f78945b50551c51bd3e8b6dfab2484b0c1134ee12d24fb0",
+        "files": {}
+      },
+      {
+        "id": "jfe2140",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.ti.com/lit/zip/slpm355",
+        "target": "vendor/downloads/parts001_jfe2140.zip",
+        "sha256": "c73f18d89a41ee950981736232e0e4b07c5e6bf23eed04d675b9701f4880cf8e",
+        "files": {
+          "vendor/jfe2140.lib": "b872775746e2be5b00347664128b41c86c1483be224be8bc3780dc533c5fc2e0"
+        }
+      },
+      {
+        "id": "jfe2140_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.ti.com/lit/ds/symlink/jfe2140.pdf",
+        "target": "vendor/evidence/parts001_jfe2140.pdf",
+        "sha256": "baeb38d1596ab468e9c8d0443afc5286e90fe3074001a81c660258767deb46a3",
+        "files": {}
+      },
+      {
+        "id": "lsk170a_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.linearsystems.com/_files/ugd/7e8069_a086ff7323054b5da3b91e364c90b3d4.pdf",
+        "target": "vendor/evidence/parts001_lsk170a.pdf",
+        "sha256": "a1657555b571914568504f5e90efb1868ef76ec63b4a0e5d1560d710482e0cf3",
+        "files": {}
+      },
+      {
+        "id": "lsk389a_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.linearsystems.com/_files/ugd/7e8069_c90834b817214602abcbf263293295f2.pdf",
+        "target": "vendor/evidence/parts001_lsk389a.pdf",
+        "sha256": "da78812493368ad6d54396693d05aa7561b7959e636c5bd52f164a2991b7d7a0",
+        "files": {}
+      },
+      {
+        "id": "pmbt5551",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://assets.nexperia.com/documents/spice-model/PMBT5551.txt?download=1",
+        "target": "vendor/pmbt5551.lib",
+        "sha256": "9f3e7425c5ebd57b8709851f271354dd46ddc42a4503b280d248fd015f27deb0",
+        "files": {}
+      },
+      {
+        "id": "pmbt5551_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://assets.nexperia.com/documents/data-sheet/PMBT5551.pdf",
+        "target": "vendor/evidence/parts001_pmbt5551.pdf",
+        "sha256": "481051a143a71fb6223ce52c3f5061525fea4fb70b2a41672a3a22399c114622",
+        "files": {}
+      },
+      {
+        "id": "diotec_mmbt5551",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://diotec.com/request/spice/mmbt5551.zip",
+        "target": "vendor/downloads/parts001_diotec_mmbt5551.zip",
+        "sha256": "b756d89d7cf4c83efe760373cb5ff18e8f47f78925736692a2af6f603b422f81",
+        "files": {
+          "vendor/diotec_mmbt5551.lib": "96f44107a0eff47851731646952f0ac47cf1d794ad13cd29ca4055f2b81ba2aa"
+        }
+      },
+      {
+        "id": "diotec_mmbt5551_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://diotec.com/request/datasheet/mmbt5551.pdf",
+        "target": "vendor/evidence/parts001_diotec_mmbt5551.pdf",
+        "sha256": "227f5fe089670eeeb14ee175c873dee896d74406611c3265defe3b3aa38c61a2",
+        "files": {}
+      },
+      {
+        "id": "bc850c",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://assets.nexperia.com/documents/spice-model/BC850C.txt?download=1",
+        "target": "vendor/bc850c.lib",
+        "sha256": "ef3fc2c3776eaf52acbfb5b7955eda8efd9fa714dd2158aa015ac42610bca399",
+        "files": {}
+      },
+      {
+        "id": "bc850c_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://assets.nexperia.com/documents/data-sheet/BC850C.pdf",
+        "target": "vendor/evidence/parts001_bc850c.pdf",
+        "sha256": "7be422c96ed19a0c874334d24811f714d8634a65d2f83505b5974f23257ed5c1",
+        "files": {}
+      },
+      {
+        "id": "bav199",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://assets.nexperia.com/documents/spice-model/BAV199.txt?download=1",
+        "target": "vendor/bav199.lib",
+        "sha256": "37ca9619403894293238c41fbe05a9748c1d4d7d0a17b71ddde6dc2a8ba104e6",
+        "files": {}
+      },
+      {
+        "id": "bav199_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://assets.nexperia.com/documents/data-sheet/BAV199.pdf",
+        "target": "vendor/evidence/parts001_bav199.pdf",
+        "sha256": "ab2f26d003e3c1d8f7e4e7ac674ae055849970bf7b392a7d5d31eca443aab9e2",
+        "files": {}
+      },
+      {
+        "id": "opa928",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.ti.com/lit/zip/sbomcc0a",
+        "target": "vendor/downloads/parts001_opa928.zip",
+        "sha256": "b4afe47a29fa45a608298f7af483a90f6dee90903e57445afc2704b5eee468e4",
+        "files": {
+          "vendor/opa928.lib": "f4f9d38efc4aa2a31676c84a351d2ee9379baad88abab8b5afad550c7f99c616"
+        }
+      },
+      {
+        "id": "opa928_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.ti.com/lit/ds/symlink/opa928.pdf",
+        "target": "vendor/evidence/parts001_opa928.pdf",
+        "sha256": "06ab87dcd0ffd4d319b164f763bee44707a40593c6df60930d3e1f1fe5a936ad",
+        "files": {}
+      },
+      {
+        "id": "opa1656",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.ti.com/lit/zip/sbomaw6c",
+        "target": "vendor/downloads/parts001_opa1656.zip",
+        "sha256": "8f696ee73bfb9a5d7d15b70ed27629dfe5b92ba54e8da894aa25fe51d3cb312f",
+        "files": {
+          "vendor/opa1656.lib": "9847ed60c62e792ee6f1c84899278a3c11ce71a6d21804bdd88f51199f1ba055"
+        }
+      },
+      {
+        "id": "opa1656_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.ti.com/lit/ds/symlink/opa1656.pdf",
+        "target": "vendor/evidence/parts001_opa1656.pdf",
+        "sha256": "4243b58e553e6f27274858637c596596dbb89bba94d05b44fedd32877d988e9d",
+        "files": {}
+      },
+      {
+        "id": "lmp7721",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.ti.com/lit/zip/snom096d",
+        "target": "vendor/downloads/parts001_lmp7721.zip",
+        "sha256": "bdc5776a44d34d956e499e0605ad5e47a097fc36e990ae12e09503df7114284b",
+        "files": {
+          "vendor/lmp7721.lib": "815a27e4a2189e0f54626a36f21cad3002ff21a5d5cd8df9fea60b34ceb2cb39"
+        }
+      },
+      {
+        "id": "lmp7721_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.ti.com/lit/ds/symlink/lmp7721.pdf",
+        "target": "vendor/evidence/parts001_lmp7721.pdf",
+        "sha256": "162b4794e0aee249a75b6f93758cebacab1e5a26fc7eae2f2c9c4a3afdc0562e",
+        "files": {}
+      },
+      {
+        "id": "diodes_mmbt5401",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt",
+        "target": "vendor/diodes_mmbt5401.lib",
+        "sha256": "6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5",
+        "files": {}
+      },
+      {
+        "id": "diodes_mmbt5401_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.diodes.com/datasheet/download/MMBT5401.pdf",
+        "target": "vendor/evidence/parts002_diodes_mmbt5401.pdf",
+        "sha256": "1515e425149f78c5e350f8c09aa98ab5ed6b1745420c8f7ef40811d783f71ab2",
+        "files": {}
+      },
+      {
+        "id": "diotec_2n5551",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://diotec.com/request/spice/2n5551.zip",
+        "target": "vendor/downloads/parts002_2n5551.zip",
+        "sha256": "2eb921dc430669d046b1ff2c925c1409efa41571b78ec00e06caa7394245e658",
+        "files": {
+          "vendor/diotec_2n5551.lib": "32c2fca2b0e0bdb4ebda569449e914085148a39946fe63e96a950aa26742c2d6"
+        }
+      },
+      {
+        "id": "diotec_2n5551_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://diotec.com/request/datasheet/2n5551.pdf",
+        "target": "vendor/evidence/parts002_diotec_2n5551.pdf",
+        "sha256": "ad8bc6032ca2856fa638cffcaa8aa27cbc470ca3b7aba2016edb55906e02d06e",
+        "files": {}
+      },
+      {
+        "id": "opa1656_tina_v12",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.ti.com/lit/zip/SBOMAW8",
+        "target": "vendor/downloads/parts002_opa1656_tina_model_primary.zip",
+        "sha256": "a702113427f9f7e7ccdbf113cd4d70cfeb6c54ff24a116cf9f3e26588c165858",
+        "files": {
+          "vendor/opa1656_tina_v12.lib": "bced33ad3d86413e7acbb5e53e727dea0bbf7819792d75aff91e085ba4a36bb1"
+        }
+      },
+      {
+        "id": "opa928_reference_v10",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.ti.com/lit/zip/sbomcd9",
+        "target": "vendor/downloads/parts002_opa928_reference.zip",
+        "sha256": "34baed18208ffda7e7e5b6f1f63dccc97fa9abb222b7f199eac07c7ae14262cf",
+        "files": {
+          "vendor/opa928_reference_v10.lib": "a542ad37e016c9f1020df14c3ba1546dc92f79f70c9b78e2b30020b57be6e3f5"
+        }
+      },
+      {
+        "id": "dmmt5401",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.diodes.com/spice/download/3323/DMMT5401.spice.txt",
+        "target": "vendor/dmmt5401.lib",
+        "sha256": "ba932265a79f5084da2790f45b0397d46182b9e88d81e247296425e30f715b62",
+        "files": {}
+      },
+      {
+        "id": "dmmt5401_datasheet",
+        "status": "ok",
+        "action": "existing_cache",
+        "url": "https://www.diodes.com/datasheet/download/DMMT5401.pdf",
+        "target": "vendor/evidence/parts002_dmmt5401.pdf",
+        "sha256": "9f6a6294ac8d8f71fa2798d76a9f5504ffc8df01a7c26208197846d83ebdfca8",
+        "files": {}
+      },
+      {
+        "id": "lsk170a",
+        "action": "local_derivative_audit",
+        "operation": "literal PDF text transcription; line continuations only; no parameter change",
+        "status": "ok",
+        "sha256": "6eadbfe9c86ef69795852f3f7be8f66fbe25ef8caa4de1fa942f8a4af6347409",
+        "ancestor_sha256": "1d384f4ee3510906a80798188a8a35bd8208ab053b81190c6896a329a1ef62a1"
+      },
+      {
+        "id": "lsk389a",
+        "action": "local_derivative_audit",
+        "operation": "literal PDF text transcription; line continuations only; no parameter change",
+        "status": "ok",
+        "sha256": "c458cc0648f4c017d13bbb8454894b06927c934f431d02bb68505f94e8eea8dd",
+        "ancestor_sha256": "66eb1b112b6fc8751e63b59ab0871e81981479aa40f1ba490a498908301d04ce"
+      },
+      {
+        "id": "lsk170a_syntax_r1",
+        "action": "local_derivative_audit",
+        "operation": "syntax metadata only; electrical parameters unchanged; original retained",
+        "status": "ok",
+        "sha256": "aaa2de4916c05f6a03b343df26e8f4dc0ae1363226595d886e3b62b6b1f94e99",
+        "ancestor_sha256": "6eadbfe9c86ef69795852f3f7be8f66fbe25ef8caa4de1fa942f8a4af6347409"
+      },
+      {
+        "id": "bav199_syntax_r1",
+        "action": "local_derivative_audit",
+        "operation": "syntax metadata only; electrical parameters unchanged; original retained",
+        "status": "ok",
+        "sha256": "ed3a4386d3632c91917c88cbd5d168b943cfd1f5a16133cd0bc6c145cac3f1cc",
+        "ancestor_sha256": "37ca9619403894293238c41fbe05a9748c1d4d7d0a17b71ddde6dc2a8ba104e6"
+      },
+      {
+        "id": "lsk389a_syntax_r1",
+        "action": "local_derivative_audit",
+        "operation": "Remove only unsupported MFG metadata; original retained; all electrical parameters unchanged",
+        "status": "ok",
+        "sha256": "f81f63ea5975db8cce4183711db8beaa80deb36d067e482c92dedf27763ee271",
+        "ancestor_sha256": "c458cc0648f4c017d13bbb8454894b06927c934f431d02bb68505f94e8eea8dd"
+      }
+    ]
+  },
+  "expected_acquisition_failure": "Retained2n7002 invalid HTML; aggregate exit2",
+  "root_staged_gate": "pass; common31967characters;118current words; preservation explicitly incomplete",
+  "new_inventory_files": 216,
+  "preservation_receipt": "research/parts_database_expansion_002_preservation.json",
+  "publication_privacy": "No newly staged vendor/local/rawwaveform files; two synthetic probe traces already exist in HEAD and retain history",
+  "git_whitespace_check": "Frozen original simulator logs and CSV CRLF cause whitespace notices; bytes preserved, not repaired. Mandatory quality gate passes."
+}

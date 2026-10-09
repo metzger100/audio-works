@@ -1,0 +1,65 @@
+schema_version: 1
+declared_date: '2026-10-09'
+task: Prompt 06 isolated part controls; no candidate evaluation or selection
+models:
+- jfe2140_vendor
+- lsk170a_vendor
+- pmbt5551_vendor
+- bc850c_vendor
+- opa928_vendor
+- bav199_vendor
+role_rationale:
+  jfe2140_vendor: Ordinary documented dual JFET; low-current input and mismatch gap
+  lsk170a_vendor: Independent manufacturer and low-Idss ordinary grade
+  pmbt5551_vendor: High-voltage NPN power/output DC and parasitics
+  bc850c_vendor: Ordinary bipolar input alternative; NF is separate from HV merit
+  opa928_vendor: Femtoampere CMOS guard and supply-current alternative
+  bav199_vendor: Protection leakage/capacitance burden
+hypotheses:
+- Vendor equations may disagree with guaranteed DC/capacitance or conditioned typical
+  noise.
+- Matched-dual nominal halves cannot establish worst-case mismatch robustness.
+- A grounded CMOS follower may converge while floating integration remains unsupported.
+- Ordinary high-voltage BJT ratings do not establish low-noise input performance or
+  SOA.
+conditions:
+  jfet: VDS10V transfer at -10/25/50C; 100uA/2mA voltage noise at 10Hz/1kHz, both
+    original and refined grids; 5V transfer for current-noise condition; LSK capacitance
+    at VDS15V/100uA/1MHz; leakage at documented reverse gate conditions
+  bipolar: VCE5V transfer at -10/25/50C; 100uA/1mA/2mA/10mA samples; NF at 200uA,
+    Rs2kohm, VCE5V, local density screen1kHz; integrated10Hz-15.7kHz is an unvalidated
+    diagnostic, BC850C specification uses B200Hz; collector capacitance VCB10V/1MHz;
+    PMBT collector leakage120V at25/100C; P48 sensitivity52V/2mA with isothermal temperature102C
+    from 500K/W and50C ambient
+  opa: Grounded unity follower; supplies5/16/36V with allowed common mode, temperatures-10/25/50C;
+    guard no load; noise at100Hz/1kHz; guide GMIN1e-16 recorded explicitly; overload/floating/candidate
+    behavior deferred
+  diode: One native diode from dual package; reverse75V at25/50C, capacitance0V1MHz;
+    no unreferenced transient recovery rating
+oracles:
+- Conditioned datasheet limits and typical references in references.yaml
+- NF source reference 4*k*T*Rs; capacitor observer C=Im(I)/(2*pi*f)
+- Gate noise observer is a noiseless1ohm current-to-voltage source
+- Noise/AC refinement must agree within existing1percent; typical accuracy uses existing20percent
+  only as disagreement screen
+variation: Deterministic coupled conditions; no random specimen selection, production
+  probability or invented distributions
+rng_seed: null
+maximum_jobs: 100
+timeout_s_per_job: 15
+stopping: One finite pass; preserve each solver/parser error, continue independent
+  devices. No fitted models, retries, threshold changes or favorable substitute bias.
+  Unsupported behaviors stay unvalidated.
+parents: Existing device library experiments remain retained; new model IDs are independent
+  manufacturer documents, not repairs of old models.
+preservation: Freeze shared source/models/spec/plan before evaluation; immutable results/device_models
+  record; hash originals and verify private capture/restore
+revision: child2_fixture_and_numpy_api
+parent_experiments:
+- 20261009T133250Z_parts_ec54d567
+repairs:
+- np.trapezoid replaces removed numpy API; same mathematical integration
+- JFE VCH25V for VD10/15; reverse-gate VCL-35V only for negative30V test; original
+  low VCH caused clamp current, not JFET transfer
+- LSK170A original bytes retained; LT dialect requested for metadata token parsing;
+  unsupported electrical terms still errors

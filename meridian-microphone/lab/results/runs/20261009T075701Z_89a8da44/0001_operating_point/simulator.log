@@ -1,0 +1,433 @@
+Note: gnd in a subcircuit is not set to 0 automatically
+
+Note: Compatibility modes selected: ps
+
+
+Circuit: meridian research operating_point
+
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+DC solution failed -
+
+Last Node Voltages
+------------------
+
+Node                                   Last Voltage        Previous Iter
+----                                   ------------        -------------
+pressure                                       -nan                 -nan
+pressure_r                                     -nan                 -nan
+xenv.feed                                        48                   48
+xenv.xp                                        -nan                 -nan
+xenv.xn                                        -nan                 -nan
+p                                              -nan                 -nan
+n                                              -nan                 -nan
+mic_g                                          -nan                 -nan
+pp                                             -nan                 -nan
+pn                                             -nan                 -nan
+cm                                                0                    0
+xcap.qf                                        -nan                 -nan
+b                                              -nan                 -nan
+f                                              -nan                 -nan
+xcap.cqf                                       -nan                 -nan
+xcap.qr                                        -nan                 -nan
+rear                                           -nan                 -nan
+xcap.cqr                                       -nan                 -nan
+xdut.raw                                       -nan                 -nan
+xdut.regbase                                   -nan                 -nan
+xdut.qreg_t0                                   -nan                 -nan
+xdut.qreg_t1                                   -nan                 -nan
+rail                                           -nan                 -nan
+xdut.qreg_t2                                   -nan                 -nan
+xdut.xqreg.11                                  -nan                 -nan
+xdut.mid                                       -nan                 -nan
+xdut.pol_0                                     -nan                 -nan
+xdut.pol_1                                     -nan                 -nan
+xdut.pol_2                                     -nan                 -nan
+xdut.pol_3                                     -nan                 -nan
+xdut.pol_4                                     -nan                 -nan
+xdut.pol_5                                     -nan                 -nan
+xdut.pol_6                                     -nan                 -nan
+xdut.pol_7                                     -nan                 -nan
+xdut.pol_8                                     -nan                 -nan
+xdut.pol                                       -nan                 -nan
+xdut.uinput_t0                                 -nan                 -nan
+xdut.uinput_t1                                 -nan                 -nan
+xdut.uinput_t2                                 -nan                 -nan
+xdut.uinput_t3                                 -nan                 -nan
+xdut.outp                                      -nan                 -nan
+xdut.uinput_t4                                 -nan                 -nan
+xdut.xuinput.n24458                            -nan                 -nan
+xdut.xuinput.n24659                            -nan                 -nan
+xdut.xuinput.n37029                            -nan                 -nan
+xdut.xuinput.n37037                            -nan                 -nan
+xdut.xuinput.n39124                            -nan                 -nan
+xdut.xuinput.n39892                            -nan                 -nan
+xdut.xuinput.n2425309                          -nan                 -nan
+xdut.xuinput.n2425287                          -nan                 -nan
+xdut.xuinput.n2425325                          -nan                 -nan
+xdut.xuinput.mid                               -nan                 -nan
+xdut.xuinput.n56849                            -nan                 -nan
+xdut.xuinput.n57325                            -nan                 -nan
+xdut.xuinput.n59747                            -nan                 -nan
+xdut.xuinput.n59865                            -nan                 -nan
+xdut.xuinput.n25921                            -nan                 -nan
+xdut.xuinput.n25929                            -nan                 -nan
+xdut.xuinput.n65579                            -nan                 -nan
+xdut.xuinput.n65697                            -nan                 -nan
+xdut.xuinput.n68774                            -nan                 -nan
+xdut.xuinput.n72398                            -nan                 -nan
+xdut.xuinput.n72391                            -nan                 -nan
+xdut.xuinput.n81574                            -nan                 -nan
+xdut.xuinput.n81664                            -nan                 -nan
+xdut.xuinput.sw_ol_opax197                     -nan                 -nan
+xdut.xuinput.vclp                              -nan                 -nan
+xdut.xuinput.vimon                             -nan                 -nan
+xdut.xuinput.n27785                            -nan                 -nan
+xdut.xuinput.n27793                            -nan                 -nan
+xdut.xuinput.vout_s                            -nan                 -nan
+xdut.xuinput.n2402147                          -nan                 -nan
+xdut.xuinput.n2402155                          -nan                 -nan
+xdut.xuinput.n2419074                          -nan                 -nan
+xdut.xuinput.n2525790                          -nan                 -nan
+xdut.xuinput.n2526890                          -nan                 -nan
+xdut.xuinput.n36262                            -nan                 -nan
+xdut.xuinput.n32347                            -nan                 -nan
+xdut.xuinput.clamp                             -nan                 -nan
+xdut.xuinput.esdp                              -nan                 -nan
+xdut.xuinput.esdn                              -nan                 -nan
+xdut.xuinput.n158495                           -nan                 -nan
+xdut.xuinput.cl_clamp                          -nan                 -nan
+xdut.xuinput.n161937                           -nan                 -nan
+xdut.xuinput.claw_clamp                        -nan                 -nan
+xdut.xuinput.n45999                            -nan                 -nan
+xdut.xuinput.vcc_b                             -nan                 -nan
+xdut.xuinput.vee_b                             -nan                 -nan
+xdut.xuinput.n25415                            -nan                 -nan
+xdut.xuinput.n25397                            -nan                 -nan
+xdut.xuinput.n25248                            -nan                 -nan
+xdut.xuinput.vcc_clp                           -nan                 -nan
+xdut.xuinput.vee_clp                           -nan                 -nan
+xdut.xuinput.n1356345                          -nan                 -nan
+xdut.xuinput.n1356333                          -nan                 -nan
+xdut.xuinput.n1356409                          -nan                 -nan
+xdut.xuinput.n1356429                          -nan                 -nan
+xdut.xuinput.vsense                            -nan                 -nan
+xdut.xuinput.n28678                            -nan                 -nan
+xdut.xuinput.n28438                            -nan                 -nan
+xdut.xuinput.n24207                            -nan                 -nan
+xdut.xuinput.n31303                            -nan                 -nan
+xdut.xuinput.n31389                            -nan                 -nan
+xdut.xuinput.n31737                            -nan                 -nan
+xdut.xuinput.n32236                            -nan                 -nan
+xdut.xuinput.n32510                            -nan                 -nan
+xdut.xuinput.n46041                            -nan                 -nan
+xdut.xuinput.n55560                            -nan                 -nan
+xdut.xuinput.n57321                            -nan                 -nan
+xdut.xuinput.n59739                            -nan                 -nan
+xdut.xuinput.n59743                            -nan                 -nan
+xdut.xuinput.n59881                            -nan                 -nan
+xdut.xuinput.n59905                            -nan                 -nan
+xdut.xuinput.n65567                            -nan                 -nan
+xdut.xuinput.n65575                            -nan                 -nan
+xdut.xuinput.n65713                            -nan                 -nan
+xdut.xuinput.n65737                            -nan                 -nan
+xdut.xuinput.n72064                            -nan                 -nan
+xdut.xuinput.n72073                            -nan                 -nan
+xdut.xuinput.v11                               -nan                 -nan
+xdut.xuinput.v12                               -nan                 -nan
+xdut.xuinput.n81756                            -nan                 -nan
+xdut.xuinput.n161737                           -nan                 -nan
+xdut.xuinput.n1356115                          -nan                 -nan
+xdut.xuinput.n1356061                          -nan                 -nan
+xdut.xuinput.x_u1.7                            -nan                 -nan
+xdut.xuinput.x_u1.8                            -nan                 -nan
+xdut.xuinput.x_u1.3                            -nan                 -nan
+xdut.xuinput.x_u1.6                            -nan                 -nan
+xdut.xuinput.x_u1.4                            -nan                 -nan
+xdut.xuinput.x_u1.5                               0                    0
+xdut.xuinput.x_u10.gvo+_int1                   -nan                 -nan
+xdut.xuinput.x_u10.gvo-_int1                   -nan                 -nan
+xdut.xuinput.x_u11.gvo+_int1                   -nan                 -nan
+xdut.xuinput.x_u11.gvo-_int1                   -nan                 -nan
+xdut.xuinput.x_u12.gvo+_int1                   -nan                 -nan
+xdut.xuinput.x_u12.gvo-_int1                   -nan                 -nan
+xdut.xuinput.x_u16.gsw+_int1                   -nan                 -nan
+xdut.xuinput.x_u18.g1_int1                     -nan                 -nan
+xdut.xuinput.x_u18.g1_int2                     -nan                 -nan
+xdut.xuinput.x_u19.g1_int1                     -nan                 -nan
+xdut.xuinput.x_u19.g1_int2                     -nan                 -nan
+xdut.xuinput.x_u22.g1_int1                     -nan                 -nan
+xdut.xuinput.x_u23.g1_int1                     -nan                 -nan
+xdut.xuinput.x_u26.g1_int1                     -nan                 -nan
+xdut.xuinput.x_u27.g1_int1                     -nan                 -nan
+xdut.xuinput.x_u30.g1_int1                     -nan                 -nan
+xdut.xuinput.x_u31.g1_int1                     -nan                 -nan
+xdut.xuinput.x_u32.g1_int1                     -nan                 -nan
+xdut.xuinput.x_u35.g1_int1                     -nan                 -nan
+xdut.xuinput.x_u36.3                              0                    0
+xdut.xuinput.x_u36.5                              0                    0
+xdut.xuinput.x_u37.3                              0                    0
+xdut.xuinput.x_u37.5                              0                    0
+xdut.xuinput.x_u4.e1_int1                 1.612e-05            1.612e-05
+xdut.xuinput.x_u6.g1_int1                      -nan                 -nan
+xdut.inv                                       -nan                 -nan
+xdut.outn                                      -nan                 -nan
+xdut.uoutn_t0                                  -nan                 -nan
+xdut.uoutn_t1                                  -nan                 -nan
+xdut.uoutn_t2                                  -nan                 -nan
+xdut.uoutn_t3                                  -nan                 -nan
+xdut.uoutn_t4                                  -nan                 -nan
+xdut.xuoutn.n24458                             -nan                 -nan
+xdut.xuoutn.n24659                             -nan                 -nan
+xdut.xuoutn.n37029                             -nan                 -nan
+xdut.xuoutn.n37037                             -nan                 -nan
+xdut.xuoutn.n39124                             -nan                 -nan
+xdut.xuoutn.n39892                             -nan                 -nan
+xdut.xuoutn.n2425309                           -nan                 -nan
+xdut.xuoutn.n2425287                           -nan                 -nan
+xdut.xuoutn.n2425325                           -nan                 -nan
+xdut.xuoutn.mid                                -nan                 -nan
+xdut.xuoutn.n56849                             -nan                 -nan
+xdut.xuoutn.n57325                             -nan                 -nan
+xdut.xuoutn.n59747                             -nan                 -nan
+xdut.xuoutn.n59865                             -nan                 -nan
+xdut.xuoutn.n25921                             -nan                 -nan
+xdut.xuoutn.n25929                             -nan                 -nan
+xdut.xuoutn.n65579                             -nan                 -nan
+xdut.xuoutn.n65697                             -nan                 -nan
+xdut.xuoutn.n68774                             -nan                 -nan
+xdut.xuoutn.n72398                             -nan                 -nan
+xdut.xuoutn.n72391                             -nan                 -nan
+xdut.xuoutn.n81574                             -nan                 -nan
+xdut.xuoutn.n81664                             -nan                 -nan
+xdut.xuoutn.sw_ol_opax197                      -nan                 -nan
+xdut.xuoutn.vclp                               -nan                 -nan
+xdut.xuoutn.vimon                              -nan                 -nan
+xdut.xuoutn.n27785                             -nan                 -nan
+xdut.xuoutn.n27793                             -nan                 -nan
+xdut.xuoutn.vout_s                             -nan                 -nan
+xdut.xuoutn.n2402147                           -nan                 -nan
+xdut.xuoutn.n2402155                           -nan                 -nan
+xdut.xuoutn.n2419074                           -nan                 -nan
+xdut.xuoutn.n2525790                           -nan                 -nan
+xdut.xuoutn.n2526890                           -nan                 -nan
+xdut.xuoutn.n36262                             -nan                 -nan
+xdut.xuoutn.n32347                             -nan                 -nan
+xdut.xuoutn.clamp                              -nan                 -nan
+xdut.xuoutn.esdp                               -nan                 -nan
+xdut.xuoutn.esdn                               -nan                 -nan
+xdut.xuoutn.n158495                            -nan                 -nan
+xdut.xuoutn.cl_clamp                           -nan                 -nan
+xdut.xuoutn.n161937                            -nan                 -nan
+xdut.xuoutn.claw_clamp                         -nan                 -nan
+xdut.xuoutn.n45999                             -nan                 -nan
+xdut.xuoutn.vcc_b                              -nan                 -nan
+xdut.xuoutn.vee_b                              -nan                 -nan
+xdut.xuoutn.n25415                             -nan                 -nan
+xdut.xuoutn.n25397                             -nan                 -nan
+xdut.xuoutn.n25248                             -nan                 -nan
+xdut.xuoutn.vcc_clp                            -nan                 -nan
+xdut.xuoutn.vee_clp                            -nan                 -nan
+xdut.xuoutn.n1356345                           -nan                 -nan
+xdut.xuoutn.n1356333                           -nan                 -nan
+xdut.xuoutn.n1356409                           -nan                 -nan
+xdut.xuoutn.n1356429                           -nan                 -nan
+xdut.xuoutn.vsense                             -nan                 -nan
+xdut.xuoutn.n28678                             -nan                 -nan
+xdut.xuoutn.n28438                             -nan                 -nan
+xdut.xuoutn.n24207                             -nan                 -nan
+xdut.xuoutn.n31303                             -nan                 -nan
+xdut.xuoutn.n31389                             -nan                 -nan
+xdut.xuoutn.n31737                             -nan                 -nan
+xdut.xuoutn.n32236                             -nan                 -nan
+xdut.xuoutn.n32510                             -nan                 -nan
+xdut.xuoutn.n46041                             -nan                 -nan
+xdut.xuoutn.n55560                             -nan                 -nan
+xdut.xuoutn.n57321                             -nan                 -nan
+xdut.xuoutn.n59739                             -nan                 -nan
+xdut.xuoutn.n59743                             -nan                 -nan
+xdut.xuoutn.n59881                             -nan                 -nan
+xdut.xuoutn.n59905                             -nan                 -nan
+xdut.xuoutn.n65567                             -nan                 -nan
+xdut.xuoutn.n65575                             -nan                 -nan
+xdut.xuoutn.n65713                             -nan                 -nan
+xdut.xuoutn.n65737                             -nan                 -nan
+xdut.xuoutn.n72064                             -nan                 -nan
+xdut.xuoutn.n72073                             -nan                 -nan
+xdut.xuoutn.v11                                -nan                 -nan
+xdut.xuoutn.v12                                -nan                 -nan
+xdut.xuoutn.n81756                             -nan                 -nan
+xdut.xuoutn.n161737                            -nan                 -nan
+xdut.xuoutn.n1356115                           -nan                 -nan
+xdut.xuoutn.n1356061                           -nan                 -nan
+xdut.xuoutn.x_u1.7                             -nan                 -nan
+xdut.xuoutn.x_u1.8                             -nan                 -nan
+xdut.xuoutn.x_u1.3                             -nan                 -nan
+xdut.xuoutn.x_u1.6                             -nan                 -nan
+xdut.xuoutn.x_u1.4                             -nan                 -nan
+xdut.xuoutn.x_u1.5                                0                    0
+xdut.xuoutn.x_u10.gvo+_int1                    -nan                 -nan
+xdut.xuoutn.x_u10.gvo-_int1                    -nan                 -nan
+xdut.xuoutn.x_u11.gvo+_int1                    -nan                 -nan
+xdut.xuoutn.x_u11.gvo-_int1                    -nan                 -nan
+xdut.xuoutn.x_u12.gvo+_int1                    -nan                 -nan
+xdut.xuoutn.x_u12.gvo-_int1                    -nan                 -nan
+xdut.xuoutn.x_u16.gsw+_int1                    -nan                 -nan
+xdut.xuoutn.x_u18.g1_int1                      -nan                 -nan
+xdut.xuoutn.x_u18.g1_int2                      -nan                 -nan
+xdut.xuoutn.x_u19.g1_int1                      -nan                 -nan
+xdut.xuoutn.x_u19.g1_int2                      -nan                 -nan
+xdut.xuoutn.x_u22.g1_int1                      -nan                 -nan
+xdut.xuoutn.x_u23.g1_int1                      -nan                 -nan
+xdut.xuoutn.x_u26.g1_int1                      -nan                 -nan
+xdut.xuoutn.x_u27.g1_int1                      -nan                 -nan
+xdut.xuoutn.x_u30.g1_int1                      -nan                 -nan
+xdut.xuoutn.x_u31.g1_int1                      -nan                 -nan
+xdut.xuoutn.x_u32.g1_int1                      -nan                 -nan
+xdut.xuoutn.x_u35.g1_int1                      -nan                 -nan
+xdut.xuoutn.x_u36.3                               0                    0
+xdut.xuoutn.x_u36.5                               0                    0
+xdut.xuoutn.x_u37.3                               0                    0
+xdut.xuoutn.x_u37.5                               0                    0
+xdut.xuoutn.x_u4.e1_int1                  1.612e-05            1.612e-05
+xdut.xuoutn.x_u6.g1_int1                       -nan                 -nan
+xdut.cp                                        -nan                 -nan
+xdut.cn                                        -nan                 -nan
+b.xdut.xuoutn.x_u6.bg1#branch                     0                    0
+b.xdut.xuoutn.x_u4.be1#branch                     0                    0
+b.xdut.xuoutn.x_u35.bg1#branch                    0                    0
+b.xdut.xuoutn.x_u32.bg1#branch                    0                    0
+b.xdut.xuoutn.x_u31.bg1#branch                    0                    0
+b.xdut.xuoutn.x_u30.bg1#branch                    0                    0
+b.xdut.xuoutn.x_u27.bg1#branch                    0                    0
+b.xdut.xuoutn.x_u26.bg1#branch                    0                    0
+b.xdut.xuoutn.x_u23.bg1#branch                    0                    0
+b.xdut.xuoutn.x_u22.bg1#branch                    0                    0
+b.xdut.xuoutn.x_u19.bg1#branch                    0                    0
+b.xdut.xuoutn.x_u18.bg1#branch                    0                    0
+b.xdut.xuoutn.x_u16.bgsw+#branch                    0                    0
+b.xdut.xuoutn.x_u12.bgvo-#branch                    0                    0
+b.xdut.xuoutn.x_u12.bgvo+#branch                    0                    0
+b.xdut.xuoutn.x_u11.bgvo-#branch                    0                    0
+b.xdut.xuoutn.x_u11.bgvo+#branch                    0                    0
+b.xdut.xuoutn.x_u10.bgvo-#branch                    0                    0
+b.xdut.xuoutn.x_u10.bgvo+#branch                    0                    0
+b.xdut.xuinput.x_u6.bg1#branch                    0                    0
+b.xdut.xuinput.x_u4.be1#branch                    0                    0
+b.xdut.xuinput.x_u35.bg1#branch                    0                    0
+b.xdut.xuinput.x_u32.bg1#branch                    0                    0
+b.xdut.xuinput.x_u31.bg1#branch                    0                    0
+b.xdut.xuinput.x_u30.bg1#branch                    0                    0
+b.xdut.xuinput.x_u27.bg1#branch                    0                    0
+b.xdut.xuinput.x_u26.bg1#branch                    0                    0
+b.xdut.xuinput.x_u23.bg1#branch                    0                    0
+b.xdut.xuinput.x_u22.bg1#branch                    0                    0
+b.xdut.xuinput.x_u19.bg1#branch                    0                    0
+b.xdut.xuinput.x_u18.bg1#branch                    0                    0
+b.xdut.xuinput.x_u16.bgsw+#branch                    0                    0
+b.xdut.xuinput.x_u12.bgvo-#branch                    0                    0
+b.xdut.xuinput.x_u12.bgvo+#branch                    0                    0
+b.xdut.xuinput.x_u11.bgvo-#branch                    0                    0
+b.xdut.xuinput.x_u11.bgvo+#branch                    0                    0
+b.xdut.xuinput.x_u10.bgvo-#branch                    0                    0
+b.xdut.xuinput.x_u10.bgvo+#branch                    0                    0
+b.xcap.bqr#branch                              -nan                 -nan
+b.xcap.bqf#branch                              -nan                 -nan
+v.xcap.vqr#branch                              -nan                 -nan
+v.xcap.vqf#branch                              -nan                 -nan
+h.xdut.xuoutn.x_h3.h_h3#branch                 -nan                 -nan
+v.xdut.xuoutn.x_h3.vh_h3#branch                 -nan                 -nan
+h.xdut.xuoutn.x_h2.h_h2#branch                 -nan                 -nan
+v.xdut.xuoutn.x_h2.vh_h2#branch                 -nan                 -nan
+h.xdut.xuoutn.x_h1.h_h1#branch                 -nan                 -nan
+v.xdut.xuoutn.x_h1.vh_h1#branch                 -nan                 -nan
+h.xdut.xuinput.x_h3.h_h3#branch                 -nan                 -nan
+v.xdut.xuinput.x_h3.vh_h3#branch                 -nan                 -nan
+h.xdut.xuinput.x_h2.h_h2#branch                 -nan                 -nan
+v.xdut.xuinput.x_h2.vh_h2#branch                 -nan                 -nan
+h.xdut.xuinput.x_h1.h_h1#branch                 -nan                 -nan
+v.xdut.xuinput.x_h1.vh_h1#branch                 -nan                 -nan
+e.xdut.xuoutn.x_u4.e1#branch                   -nan                 -nan
+e.xdut.xuoutn.x_u37.e1#branch                     0                    0
+e.xdut.xuoutn.x_u36.e1#branch                     0                    0
+e.xdut.xuoutn.x_u1.e3#branch                   -nan                 -nan
+e.xdut.xuoutn.x_u1.e2#branch                   -nan                 -nan
+e.xdut.xuoutn.x_u1.e1#branch                   -nan                 -nan
+e.xdut.xuoutn.e_e3#branch                      -nan                 -nan
+e.xdut.xuoutn.e_e2#branch                      -nan                 -nan
+e.xdut.xuoutn.e_e1#branch                      -nan                 -nan
+e.xdut.xuinput.x_u4.e1#branch                  -nan                 -nan
+e.xdut.xuinput.x_u37.e1#branch                    0                    0
+e.xdut.xuinput.x_u36.e1#branch                    0                    0
+e.xdut.xuinput.x_u1.e3#branch                  -nan                 -nan
+e.xdut.xuinput.x_u1.e2#branch                  -nan                 -nan
+e.xdut.xuinput.x_u1.e1#branch                  -nan                 -nan
+e.xdut.xuinput.e_e3#branch                     -nan                 -nan
+e.xdut.xuinput.e_e2#branch                     -nan                 -nan
+e.xdut.xuinput.e_e1#branch                     -nan                 -nan
+v.xdut.xuoutn.v_v_orp#branch                      0                    0
+v.xdut.xuoutn.v_v_orn#branch                      0                    0
+v.xdut.xuoutn.v_v_iscp#branch                  -nan                 -nan
+v.xdut.xuoutn.v_v_iscn#branch                  -nan                 -nan
+v.xdut.xuoutn.v_v_grp#branch                   -nan                 -nan
+v.xdut.xuoutn.v_v_grn#branch                   -nan                 -nan
+v.xdut.xuoutn.v_vcm_min#branch                 -nan                 -nan
+v.xdut.xuoutn.v_vcm_max#branch                 -nan                 -nan
+v.xdut.vuoutn_4#branch                         -nan                 -nan
+v.xdut.vuoutn_3#branch                         -nan                 -nan
+v.xdut.vuoutn_2#branch                         -nan                 -nan
+v.xdut.vuoutn_1#branch                         -nan                 -nan
+v.xdut.vuoutn_0#branch                         -nan                 -nan
+v.xdut.xuinput.v_v_orp#branch                     0                    0
+v.xdut.xuinput.v_v_orn#branch                     0                    0
+v.xdut.xuinput.v_v_iscp#branch                 -nan                 -nan
+v.xdut.xuinput.v_v_iscn#branch                 -nan                 -nan
+v.xdut.xuinput.v_v_grp#branch                  -nan                 -nan
+v.xdut.xuinput.v_v_grn#branch                  -nan                 -nan
+v.xdut.xuinput.v_vcm_min#branch                 -nan                 -nan
+v.xdut.xuinput.v_vcm_max#branch                 -nan                 -nan
+v.xdut.vuinput_4#branch                        -nan                 -nan
+v.xdut.vuinput_3#branch                        -nan                 -nan
+v.xdut.vuinput_2#branch                        -nan                 -nan
+v.xdut.vuinput_1#branch                        -nan                 -nan
+v.xdut.vuinput_0#branch                        -nan                 -nan
+v.xdut.vqreg_2#branch                          -nan                 -nan
+v.xdut.vqreg_1#branch                           nan                  nan
+v.xdut.vqreg_0#branch                          -nan                 -nan
+v.xenv.vcm#branch                              -nan                 -nan
+v.xenv.vphantom#branch                         -nan                 -nan
+vpr#branch                                        0                    0
+vp#branch                                         0                    0
+a.xdut.xuoutn.x_u19.ag1#branch_1_0                    0                    0
+a.xdut.xuoutn.x_u18.ag1#branch_1_0                    0                    0
+a.xdut.xuinput.x_u19.ag1#branch_1_0                    0                    0
+a.xdut.xuinput.x_u18.ag1#branch_1_0                    0                    0
+
+ngspice-47 done
+
+Note: Starting dynamic gmin stepping
+Warning: Dynamic gmin stepping failed
+Note: Starting true gmin stepping
+Warning: True gmin stepping failed
+Note: Starting source stepping
+Warning: source stepping failed
+Note: Transient op started
+Warning: singular matrix:  check node xdut.xuinput.n27793
+
+Warning: singular matrix:  check nodes xdut.xuinput.n39892 and xdut.xuinput.n27793
+
+Error: Transient op failed, timestep too small
+
+
+Error: The operating point could not be simulated successfully.
+    Any of the following steps may fail.!
+
+doAnalyses: OP:  Timestep too small; trouble with xdut.xqreg:main-instance q.xdut.xqreg.q1
+
+
+op simulation(s) aborted
+Warning from checkvalid: vector a.xdut.xuinput.x_u18.ag1#branch_1_0 is not available or has zero length.
+Error during 'write': no writable vector found.

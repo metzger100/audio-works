@@ -1,0 +1,12 @@
+* Two electrical diaphragms; pressure voltages represent Pa. Acoustics unknown.
+* Q implementation used because B-source ddt() produced zero AC transfer in ngspice 47.
+* No rshunt: see simulator issue 848. Do not suppress floating-node failures.
+.subckt FLAT_K47 f b r pf pr g params: CF=70p CR=70p SREF=0.02 VREF=60 LEAK=1e12 PAR=2p CROSS=0.5p LIN=0 POLDC=60
+Cfront f b Q='CF*((1+(1-LIN)*SREF/VREF*v(pf,g))*v(f,b)-LIN*SREF/VREF*POLDC*v(pf,g))'
+Crear r b Q='CR*((1+(1-LIN)*SREF/VREF*v(pr,g))*v(r,b)-LIN*SREF/VREF*POLDC*v(pr,g))'
+Rfront f b {LEAK}
+Rrear r b {LEAK}
+Cparf f g {PAR}
+Cparr r g {PAR}
+Ccross f r {CROSS}
+.ends FLAT_K47

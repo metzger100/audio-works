@@ -1,0 +1,93 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: meridian research carrier_control
+
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+pressure                                     0
+pressure_r                                   0
+xenv.feed                                   48
+xenv.xp                                43.8035
+xenv.xn                                43.8035
+p                                      43.8029
+n                                      43.8029
+mic_g                              0.000617126
+pp                                           0
+pn                                           0
+cm                                           0
+xcap.qf                               -2.25195
+b                                      42.4445
+f                                       10.265
+xcap.cqf                              -2.25195
+xcap.qr                               -2.25195
+rear                                    10.265
+xcap.cqr                              -2.25195
+xdut.raw                               42.4453
+xdut.regbase                           21.1038
+xdut.qreg_t0                           42.4453
+xdut.qreg_t1                           21.1038
+rail                                    20.465
+xdut.qreg_t2                            20.465
+xdut.xqreg.11                          42.4001
+xdut.mid                               10.2328
+xdut.pol_0                             42.4452
+xdut.pol_1                             42.4451
+xdut.pol_2                             42.4451
+xdut.pol_3                              42.445
+xdut.pol_4                             42.4449
+xdut.pol_5                             42.4449
+xdut.pol_6                             42.4448
+xdut.pol_7                             42.4447
+xdut.pol_8                             42.4447
+xdut.pol                               42.4446
+xdut.excite                            42.4446
+xdut.anti                              42.4446
+xdut.demod                             10.2328
+xdut.rearbuf                            10.265
+xdut.frontbuf                           10.265
+xdut.lp1                               10.2328
+xdut.audio                             10.2328
+xdut.outp                              10.2328
+xdut.cp                                10.2328
+xdut.outn                              10.2328
+xdut.cn                                10.2328
+xdut.eoutn_int1                        10.2322
+b.xdut.beoutn#branch                         0
+b.xdut.bdemod#branch               1.03908e-18
+b.xdut.banti#branch                          0
+b.xdut.bcarrier#branch             1.35525e-20
+b.xcap.bqr#branch                            0
+b.xcap.bqf#branch                            0
+v.xcap.vqr#branch                            0
+v.xcap.vqf#branch                            0
+e.xdut.eoutn#branch                -2.1684e-19
+e.xdut.eoutp#branch                          0
+e.xdut.erear#branch                          0
+e.xdut.efront#branch                         0
+v.xdut.vqreg_2#branch              -0.00102322
+v.xdut.vqreg_1#branch              2.38284e-06
+v.xdut.vqreg_0#branch               0.00102084
+v.xenv.vcm#branch                            0
+v.xenv.vphantom#branch             -0.00123425
+vpr#branch                                   0
+vp#branch                                    0
+
+
+No. of Data Rows : 0
+ngspice-47 done
+
+doAnalyses: TRAN:  Timestep too small; time = 0.000206822, timestep = 3.90625e-19: trouble with node "v.xdut.vqreg_2#branch"
+
+
+tran simulation(s) aborted
+Warning from checkvalid: vector time is not available or has zero length.
+Error during 'write': no writable vector found.

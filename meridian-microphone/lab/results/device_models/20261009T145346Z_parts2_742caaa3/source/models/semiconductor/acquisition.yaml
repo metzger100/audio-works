@@ -1,0 +1,244 @@
+schema_version: 1
+retrieved_date: '2026-10-05'
+redistribution: Not established; all downloaded bytes and local model derivatives
+  remain ignored, local research evidence.
+downloads:
+- id: jfe150_generic
+  url: https://www.ti.com/lit/zip/slpm366
+  target: vendor/downloads/slpm366.zip
+  members:
+    jfe150.lib: vendor/jfe150_generic.lib
+    jfe150_weak.lib: vendor/jfe150_weak.lib
+    jfe150_strong.lib: vendor/jfe150_strong.lib
+  sha256: 1fd7c2ff8ef1c2b1354c98e35537f4d0db56ebb0eea614702bff7610c25e46a1
+- id: jfe150_pspice
+  url: https://www.ti.com/lit/zip/slpm349i
+  target: vendor/downloads/slpm349i.zip
+  members:
+    jfe150.lib: vendor/jfe150_pspice.lib
+  sha256: 6358de546c957c142c321f30431fa816610a22599a0a3f980646ac6bbe6eace0
+- id: opa197
+  url: https://www.ti.com/lit/zip/sboma34d
+  target: vendor/downloads/sboma34d.zip
+  members:
+    OPAx197.LIB: vendor/opa197.lib
+  sha256: 9e55fcaa23d54cee025dda3fa9872b11c41c531f82e0802c2b93d51e943666e5
+- id: bc846b
+  url: https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1
+  target: vendor/bc846b.lib
+  sha256: 4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed
+- id: bc856b
+  url: https://assets.nexperia.com/documents/spice-model/BC856B.txt?download=1
+  target: vendor/bc856b.lib
+  sha256: 580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33
+- id: 2n7002
+  url: https://assets.nexperia.com/documents/spice-model/2N7002.txt?download=1
+  target: vendor/2n7002.lib
+  sha256: 4a2a3f7fb1725f12fcfe3f7fef5cc082be2ac58eeb30ee4fdb693398e74abbf5
+- id: jfe150_datasheet
+  url: https://www.ti.com/lit/ds/symlink/jfe150.pdf
+  target: vendor/evidence/jfe150.pdf
+  sha256: 925d58a8f0cf7db307325ece12fb2f61a736b2c1440f63928b5e6c1312f39365
+- id: opa197_datasheet
+  url: https://www.ti.com/lit/ds/symlink/opa197.pdf
+  target: vendor/evidence/opa197.pdf
+  sha256: 27653a7d5e965cbb2d23f7998919ebd774efd5cd3e126b8f0881469ae91166fd
+- id: bc846_datasheet
+  url: https://assets.nexperia.com/documents/data-sheet/BC846_SER.pdf?download=1
+  target: vendor/evidence/bc846.pdf
+  sha256: 045a6cc21de93ac634aad910567e882926bd6ef154cbd8c59d13201134642a97
+- id: bc856_datasheet
+  url: https://assets.nexperia.com/documents/data-sheet/BC856_BC857_BC858.pdf?download=1
+  target: vendor/evidence/bc856.pdf
+  sha256: d9a836e40dd8f1e788d7dadbfcbe8cf4836ed5debe789c84b8fa574132f84943
+- id: 2n7002_datasheet
+  url: https://assets.nexperia.com/documents/data-sheet/2N7002.pdf?download=1
+  target: vendor/evidence/2n7002.pdf
+  sha256: cc9c275457670c3cbbf2e56f5a75c800d3b5f0b396fabc798cf18cb639646475
+- id: vishay_2n7002k
+  url: https://www.vishay.com/docs/77603/2n7002k_ps_revb.zip
+  target: vendor/downloads/2n7002k_ps_revb.zip
+  retrieved_date: '2026-10-09'
+  sha256: 418a0ccb1e31c07c6f42e911514bb51b3a6d2ee7b5d13df12faa46c2e6467db1
+  members:
+    2n7002k_ps Rev B.lib: vendor/vishay_2n7002k.lib
+  note: Public manufacturer SPICE archive; preserve notice. Ultra Librarian ECAD agreement
+    is a separate route and was not accepted.
+- id: vishay_2n7002k_datasheet
+  url: https://www.vishay.com/docs/71333/2n7002k.pdf
+  target: vendor/evidence/vishay_2n7002k.pdf
+  retrieved_date: '2026-10-09'
+  sha256: 639ab49255a61576ef6c5cb89c1536e045b44724fb95af12438ba41022e44adf
+- id: vishay_2n7002k_model_guide
+  url: https://www.vishay.com/docs/73307/2n7002k_ps_revb.pdf
+  target: vendor/evidence/vishay_2n7002k_model_guide.pdf
+  retrieved_date: '2026-10-09'
+  sha256: e6ffb92656896ce98f78945b50551c51bd3e8b6dfab2484b0c1134ee12d24fb0
+- id: jfe2140
+  url: https://www.ti.com/lit/zip/slpm355
+  target: vendor/downloads/parts001_jfe2140.zip
+  sha256: c73f18d89a41ee950981736232e0e4b07c5e6bf23eed04d675b9701f4880cf8e
+  retrieved_date: '2026-10-09'
+  members:
+    jfex140.lib: vendor/jfe2140.lib
+  receipt: research/device_sources/local/parts_expansion_001/jfe2140_pspice/receipt.json
+- id: jfe2140_datasheet
+  url: https://www.ti.com/lit/ds/symlink/jfe2140.pdf
+  target: vendor/evidence/parts001_jfe2140.pdf
+  sha256: baeb38d1596ab468e9c8d0443afc5286e90fe3074001a81c660258767deb46a3
+  retrieved_date: '2026-10-09'
+- id: lsk170a_datasheet
+  url: https://www.linearsystems.com/_files/ugd/7e8069_a086ff7323054b5da3b91e364c90b3d4.pdf
+  target: vendor/evidence/parts001_lsk170a.pdf
+  sha256: a1657555b571914568504f5e90efb1868ef76ec63b4a0e5d1560d710482e0cf3
+  retrieved_date: '2026-10-09'
+- id: lsk389a_datasheet
+  url: https://www.linearsystems.com/_files/ugd/7e8069_c90834b817214602abcbf263293295f2.pdf
+  target: vendor/evidence/parts001_lsk389a.pdf
+  sha256: da78812493368ad6d54396693d05aa7561b7959e636c5bd52f164a2991b7d7a0
+  retrieved_date: '2026-10-09'
+- id: pmbt5551
+  url: https://assets.nexperia.com/documents/spice-model/PMBT5551.txt?download=1
+  target: vendor/pmbt5551.lib
+  sha256: 9f3e7425c5ebd57b8709851f271354dd46ddc42a4503b280d248fd015f27deb0
+  retrieved_date: '2026-10-09'
+  receipt: research/device_sources/local/parts_expansion_001/pmbt5551_model_attempt/receipt.json
+- id: pmbt5551_datasheet
+  url: https://assets.nexperia.com/documents/data-sheet/PMBT5551.pdf
+  target: vendor/evidence/parts001_pmbt5551.pdf
+  sha256: 481051a143a71fb6223ce52c3f5061525fea4fb70b2a41672a3a22399c114622
+  retrieved_date: '2026-10-09'
+- id: diotec_mmbt5551
+  url: https://diotec.com/request/spice/mmbt5551.zip
+  target: vendor/downloads/parts001_diotec_mmbt5551.zip
+  sha256: b756d89d7cf4c83efe760373cb5ff18e8f47f78925736692a2af6f603b422f81
+  retrieved_date: '2026-10-09'
+  members:
+    mmbt5551_spice.lib: vendor/diotec_mmbt5551.lib
+  receipt: research/device_sources/local/parts_expansion_001/diotec5551_model/receipt.json
+- id: diotec_mmbt5551_datasheet
+  url: https://diotec.com/request/datasheet/mmbt5551.pdf
+  target: vendor/evidence/parts001_diotec_mmbt5551.pdf
+  sha256: 227f5fe089670eeeb14ee175c873dee896d74406611c3265defe3b3aa38c61a2
+  retrieved_date: '2026-10-09'
+- id: bc850c
+  url: https://assets.nexperia.com/documents/spice-model/BC850C.txt?download=1
+  target: vendor/bc850c.lib
+  sha256: ef3fc2c3776eaf52acbfb5b7955eda8efd9fa714dd2158aa015ac42610bca399
+  retrieved_date: '2026-10-09'
+  receipt: research/device_sources/local/parts_expansion_001/bc850c_model_attempt/receipt.json
+- id: bc850c_datasheet
+  url: https://assets.nexperia.com/documents/data-sheet/BC850C.pdf
+  target: vendor/evidence/parts001_bc850c.pdf
+  sha256: 7be422c96ed19a0c874334d24811f714d8634a65d2f83505b5974f23257ed5c1
+  retrieved_date: '2026-10-09'
+- id: bav199
+  url: https://assets.nexperia.com/documents/spice-model/BAV199.txt?download=1
+  target: vendor/bav199.lib
+  sha256: 37ca9619403894293238c41fbe05a9748c1d4d7d0a17b71ddde6dc2a8ba104e6
+  retrieved_date: '2026-10-09'
+  receipt: research/device_sources/local/parts_expansion_001/bav199_model_attempt/receipt.json
+- id: bav199_datasheet
+  url: https://assets.nexperia.com/documents/data-sheet/BAV199.pdf
+  target: vendor/evidence/parts001_bav199.pdf
+  sha256: ab2f26d003e3c1d8f7e4e7ac674ae055849970bf7b392a7d5d31eca443aab9e2
+  retrieved_date: '2026-10-09'
+- id: opa928
+  url: https://www.ti.com/lit/zip/sbomcc0a
+  target: vendor/downloads/parts001_opa928.zip
+  sha256: b4afe47a29fa45a608298f7af483a90f6dee90903e57445afc2704b5eee468e4
+  retrieved_date: '2026-10-09'
+  members:
+    OPAx928.LIB: vendor/opa928.lib
+  receipt: research/device_sources/local/parts_expansion_001/opa928_model/receipt.json
+- id: opa928_datasheet
+  url: https://www.ti.com/lit/ds/symlink/opa928.pdf
+  target: vendor/evidence/parts001_opa928.pdf
+  sha256: 06ab87dcd0ffd4d319b164f763bee44707a40593c6df60930d3e1f1fe5a936ad
+  retrieved_date: '2026-10-09'
+- id: opa1656
+  url: https://www.ti.com/lit/zip/sbomaw6c
+  target: vendor/downloads/parts001_opa1656.zip
+  sha256: 8f696ee73bfb9a5d7d15b70ed27629dfe5b92ba54e8da894aa25fe51d3cb312f
+  retrieved_date: '2026-10-09'
+  members:
+    OPA1656.LIB: vendor/opa1656.lib
+  receipt: research/device_sources/local/parts_expansion_001/opa1656_model/receipt.json
+- id: opa1656_datasheet
+  url: https://www.ti.com/lit/ds/symlink/opa1656.pdf
+  target: vendor/evidence/parts001_opa1656.pdf
+  sha256: 4243b58e553e6f27274858637c596596dbb89bba94d05b44fedd32877d988e9d
+  retrieved_date: '2026-10-09'
+- id: lmp7721
+  url: https://www.ti.com/lit/zip/snom096d
+  target: vendor/downloads/parts001_lmp7721.zip
+  sha256: bdc5776a44d34d956e499e0605ad5e47a097fc36e990ae12e09503df7114284b
+  retrieved_date: '2026-10-09'
+  members:
+    LMP7721.LIB: vendor/lmp7721.lib
+  receipt: research/device_sources/local/parts_expansion_001/lmp7721_model/receipt.json
+- id: lmp7721_datasheet
+  url: https://www.ti.com/lit/ds/symlink/lmp7721.pdf
+  target: vendor/evidence/parts001_lmp7721.pdf
+  sha256: 162b4794e0aee249a75b6f93758cebacab1e5a26fc7eae2f2c9c4a3afdc0562e
+  retrieved_date: '2026-10-09'
+- id: diodes_mmbt5401
+  url: https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt
+  target: vendor/diodes_mmbt5401.lib
+  sha256: 6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5
+  retrieved_date: '2026-10-09'
+  receipt: research/device_sources/local/parts_expansion_002/diodes_5401_model/receipt.json
+- id: diodes_mmbt5401_datasheet
+  url: https://www.diodes.com/datasheet/download/MMBT5401.pdf
+  target: vendor/evidence/parts002_diodes_mmbt5401.pdf
+  sha256: 1515e425149f78c5e350f8c09aa98ab5ed6b1745420c8f7ef40811d783f71ab2
+  retrieved_date: '2026-10-09'
+- id: diotec_2n5551
+  url: https://diotec.com/request/spice/2n5551.zip
+  target: vendor/downloads/parts002_2n5551.zip
+  sha256: 2eb921dc430669d046b1ff2c925c1409efa41571b78ec00e06caa7394245e658
+  retrieved_date: '2026-10-09'
+  receipt: research/device_sources/local/parts_expansion_002/diotec_5551_model/receipt.json
+  members:
+    2n5551_spice.lib: vendor/diotec_2n5551.lib
+- id: diotec_2n5551_datasheet
+  url: https://diotec.com/request/datasheet/2n5551.pdf
+  target: vendor/evidence/parts002_diotec_2n5551.pdf
+  sha256: ad8bc6032ca2856fa638cffcaa8aa27cbc470ca3b7aba2016edb55906e02d06e
+  retrieved_date: '2026-10-09'
+local_derivatives:
+- id: lsk170a
+  path: models/semiconductor/vendor/lsk170a.lib
+  sha256: 6eadbfe9c86ef69795852f3f7be8f66fbe25ef8caa4de1fa942f8a4af6347409
+  ancestor_path: research/device_sources/local/parts_expansion_001/lsk170_model_pdf/response.bin
+  ancestor_sha256: 1d384f4ee3510906a80798188a8a35bd8208ab053b81190c6896a329a1ef62a1
+  operation: literal PDF text transcription; line continuations only; no parameter
+    change
+  version: 03/16/2026
+- id: lsk389a
+  path: models/semiconductor/vendor/lsk389a.lib
+  sha256: c458cc0648f4c017d13bbb8454894b06927c934f431d02bb68505f94e8eea8dd
+  ancestor_path: research/device_sources/local/parts_expansion_001/lsk389_model_pdf/response.bin
+  ancestor_sha256: 66eb1b112b6fc8751e63b59ab0871e81981479aa40f1ba490a498908301d04ce
+  operation: literal PDF text transcription; line continuations only; no parameter
+    change
+  version: Rev2 18May2026
+- id: lsk170a_syntax_r1
+  path: models/semiconductor/vendor/lsk170a_metadata_r1.lib
+  sha256: aaa2de4916c05f6a03b343df26e8f4dc0ae1363226595d886e3b62b6b1f94e99
+  ancestor_path: models/semiconductor/vendor/lsk170a.lib
+  ancestor_sha256: 6eadbfe9c86ef69795852f3f7be8f66fbe25ef8caa4de1fa942f8a4af6347409
+  operation: syntax metadata only; electrical parameters unchanged; original retained
+- id: bav199_syntax_r1
+  path: models/semiconductor/vendor/bav199_metadata_r1.lib
+  sha256: ed3a4386d3632c91917c88cbd5d168b943cfd1f5a16133cd0bc6c145cac3f1cc
+  ancestor_path: models/semiconductor/vendor/bav199.lib
+  ancestor_sha256: 37ca9619403894293238c41fbe05a9748c1d4d7d0a17b71ddde6dc2a8ba104e6
+  operation: syntax metadata only; electrical parameters unchanged; original retained
+- id: lsk389a_syntax_r1
+  path: models/semiconductor/vendor/lsk389a_metadata_r1.lib
+  sha256: f81f63ea5975db8cce4183711db8beaa80deb36d067e482c92dedf27763ee271
+  ancestor_path: models/semiconductor/vendor/lsk389a.lib
+  ancestor_sha256: c458cc0648f4c017d13bbb8454894b06927c934f431d02bb68505f94e8eea8dd
+  operation: Remove only unsupported MFG metadata; original retained; all electrical
+    parameters unchanged

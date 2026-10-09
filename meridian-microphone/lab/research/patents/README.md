@@ -9,3 +9,7 @@ Record search scope/limits, evidence dates and ambiguous cases for professional 
 Queries to prepare: capsule bootstrapping/guarding, floating/differential capsule sensing, DC bias servos, charge feedback, carrier bridge/demodulation, common-mode power extraction, impedance-balanced output. Dates/status must be freshly verified when screening actually occurs. Keep engineering results even when a feature awaits review.
 
 Use `register.yaml` for the index and candidate-linked reports/claim mappings for evidence. Record exact scoped screening states; do not use “patent safe” or a no-results search as legal clearance. The policy is currently an agent/review requirement, not a legal decision automated by the simulator.
+
+[Comparison 001 feature review](architecture_comparison_001_2026-10-09.yaml) links six exact netlist hashes, unresolved screening and alternative mechanisms. It records no researched claims or official statuses; Phase 8 remains incomplete. The carrier output correction preserves the original feature flag.
+
+[Parts expansion feature flags](parts_expansion_001_2026-10-09.yaml) link differential dualJFET/BJT/current-sink, phantom cascode, bootstrapped input and guard/reset ideas to technical prior art. Official status/territory/exact candidate claims remain incomplete; affected implementation gates remain held.

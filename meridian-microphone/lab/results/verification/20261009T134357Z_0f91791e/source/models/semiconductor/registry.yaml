@@ -1,0 +1,1439 @@
+schema_version: 2
+revision: parts-expansion-001-r1
+date: '2026-10-09'
+previous_revision: phase3-device-library-r2
+procurement_refresh: research/procurement/semiconductors_2026-10-09.yaml
+status: behavior_specific_characterization_no_production_qualification
+qualification_policy: Typical agreement is not a production guarantee; unknown !=
+  zero; see device_model_validation.md
+devices:
+- id: jfe150
+  manufacturer: Texas Instruments
+  exact_variant: JFE150DBVR
+  family: discrete_n_jfet
+  package: SOT-23-5 DBV
+  lifecycle:
+    status: active
+    checked_date: '2026-10-05'
+    source_url: https://www.ti.com/product/JFE150
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/jfe150.pdf
+    retrieved_date: '2026-10-05'
+    version: SLPS732B April 2023
+    local_path: models/semiconductor/vendor/evidence/jfe150.pdf
+    sha256: 925d58a8f0cf7db307325ece12fb2f61a736b2c1440f63928b5e6c1312f39365
+  ratings:
+    abs_vds_v:
+    - -40
+    - 40
+    abs_vgs_v:
+    - -40
+    - 0.9
+    abs_id_a: 0.05
+    recommended_temp_c:
+    - -40
+    - 125
+    idss_25c_a:
+    - 0.024
+    - 0.046
+    idss_full_temperature_a:
+    - 0.022
+    - 0.057
+    gfs_25c_s:
+    - 0.055
+    - 0.08
+    conditions: Idss/GFS at VDS=10 V,VGS=0; ratings are not enforced by SPICE.
+  models:
+  - id: jfe150_generic
+    path: semiconductor/vendor/jfe150_generic.lib
+    sha256: afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207
+    version: Final 1.2; 26SEP2024; SLPM366
+    source_url: https://www.ti.com/lit/zip/slpm366
+    retrieved_date: '2026-10-05'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: SPICE3 subcircuit with PSpice extensions
+    ngspice_behavior: ps
+    subcircuit: JFE150
+    parent_model_id: null
+  - id: jfe150_weak
+    path: semiconductor/vendor/jfe150_weak.lib
+    sha256: 494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4
+    version: Final 1.2 vendor weak
+    source_url: https://www.ti.com/lit/zip/slpm366
+    retrieved_date: '2026-10-05'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: SPICE3 subcircuit with PSpice extensions
+    ngspice_behavior: ps
+    subcircuit: JFE150_WEAK
+    parent_model_id: jfe150_generic
+  - id: jfe150_strong
+    path: semiconductor/vendor/jfe150_strong.lib
+    sha256: 832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8
+    version: Final 1.2 vendor strong
+    source_url: https://www.ti.com/lit/zip/slpm366
+    retrieved_date: '2026-10-05'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: SPICE3 subcircuit with PSpice extensions
+    ngspice_behavior: ps
+    subcircuit: JFE150_STRONG
+    parent_model_id: jfe150_generic
+  - id: jfe150_pspice
+    path: semiconductor/vendor/jfe150_pspice.lib
+    sha256: 6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6
+    version: Final 1.2; SLPM349I
+    source_url: https://www.ti.com/lit/zip/slpm349i
+    retrieved_date: '2026-10-05'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: SPICE3 subcircuit with PSpice extensions
+    ngspice_behavior: ps
+    subcircuit: JFE150
+    parent_model_id: jfe150_generic
+  represented_behavior:
+    dc: Shichman-Hodges + series resistances/channel modulation
+    capacitance: bias-dependent CGS/CGD + diode CJO
+    temperature: BETATCE, VTOTC, junction equations
+    leakage: IS + gate-drain diode + clamp ROFF; lacks measured high-VDS rise
+    noise: native channel thermal, junction shot and KF/AF flicker; must test actual
+      spectra
+    clipping: pinch-off/saturation; ideal VSWITCH clamp approximation
+    supply_current: native terminal currents, no external bias/power circuit
+  unqualified_behavior:
+  - production noise maxima/distributions
+  - clamp noise/physical protection fidelity
+  - high-field gate leakage
+  - breakdown/SOA/self-heating
+  - full correlated production corners
+  - nominal/strong GFS below guaranteed minimum; weak Idss below guaranteed range
+  - strong VGS bias/cutoff limits failed
+  - capacitance reference gate bias unresolved; nominal gate-current noise differs
+    from typical
+  substitutes:
+  - part: onsemi MMBFJ113
+    state: investigated_not_equivalent_unqualified
+  - part: TI JFE2140
+    state: dual_investigation_only_no_matching_requirement_or_model_validation
+  procurement_register: research/procurement/semiconductors_2026-10-05.yaml
+  readiness: partial_nominal_voltage_noise_use_guaranteed_dc_corner_disagreement
+  patent_status: isolated_device_research_only_no_architecture_claim_screen_no_clearance
+  validation_report: research/device_model_validation.md
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+- id: vishay_2n7002k
+  manufacturer: Vishay Siliconix
+  exact_variant: 2N7002K-T1-GE3
+  family: discrete_n_mosfet
+  package: SOT-23 TO-236; G=1 S=2 D=3
+  lifecycle:
+    status: current_manufacturer_catalogue_supplier_active; explicit manufacturer
+      lifecycle label not found
+    checked_date: '2026-10-09'
+    source_url: https://www.vishay.com/en/product/71333/tab/quality/
+    limitation: Current exact order-code listing is not a stock reservation or an
+      assurance of future production.
+  datasheet:
+    url: https://www.vishay.com/docs/71333/2n7002k.pdf
+    retrieved_date: '2026-10-09'
+    version: S17-1299 Rev. F, 21-Aug-2017; document 71333
+    local_path: models/semiconductor/vendor/evidence/vishay_2n7002k.pdf
+    sha256: 639ab49255a61576ef6c5cb89c1536e045b44724fb95af12438ba41022e44adf
+  ratings:
+    abs_vds_v: 60
+    abs_vgs_v:
+    - -20
+    - 20
+    abs_id_25c_a: 0.3
+    abs_id_100c_a: 0.19
+    abs_pulsed_id_a: 0.8
+    abs_power_25c_w: 0.35
+    thermal_rthja_k_per_w: 350
+    thermal_condition: Surface-mounted on FR4; pulse tests <=300us and <=2% duty for
+      marked electrical specifications; no DC SOA inference.
+    junction_temp_c:
+    - -55
+    - 150
+    vgs_threshold_v:
+    - 1
+    - 2.5
+    threshold_condition: VDS=VGS, ID=250uA,25C; bounds do not define a process distribution.
+    warning: 60V rating alone does not qualify P48 transients, linear-mode SOA, or
+      gate protection.
+  models:
+  - id: vishay_2n7002k_ps
+    path: semiconductor/vendor/vishay_2n7002k.lib
+    sha256: d59ce922b2c814e4aaa63f27459696b8c71494fac61f47c8cf8c093eba273111
+    version: ECN S14-1598 Rev. B, 11-Aug-2014; 2n7002k_ps Rev B.lib
+    source_url: https://www.vishay.com/docs/77603/2n7002k_ps_revb.zip
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Copyright notice retained; no redistribution grant found. Public SPICE
+        archive is separate from the unaccepted Ultra Librarian ECAD agreement.
+      acquisition: models/semiconductor/acquire.py --only vishay_2n7002k; archive/member
+        hashes in acquisition.yaml
+    syntax: PSpice level-3 NMOS/PMOS subcircuit, diode and RES temperature model
+    ngspice_behavior: ps
+    subcircuit: 2N7002K
+    terminal_order:
+    - drain
+    - gate
+    - source
+    parent_model_id: null
+    model_guide:
+      url: https://www.vishay.com/docs/73307/2n7002k_ps_revb.pdf
+      version: S14-1598 Rev. B, 11-Aug-2014; document 73307
+      sha256: e6ffb92656896ce98f78945b50551c51bd3e8b6dfab2484b0c1134ee12d24fb0
+      vendor_claimed_extraction_temperature_c:
+      - -55
+      - 125
+      vendor_claimed_conditions: Pulsed gate drive 0..10V; optimized typical data,
+        not exact physical parameter interpretation.
+  represented_behavior:
+    dc: Native level-3 MOS, series resistances and body diode; no fitted correction.
+    capacitance: Fixed24pF CGS plus native nonlinear M2 gate-drain and body diode
+      capacitances.
+    temperature: Native MOS/diode laws plus RTEMP TC1/TC2; PSpice defaults must be
+      tested in ngspice.
+    leakage: Body diode IS=1pA; no gate leakage or gate ESD zener network.
+    noise: Native channel/diode/resistor sources only; KF absent so 1/f absent; not
+      an audio noise model.
+    clipping: Native cutoff/triode/saturation/body diode; no independent overload/recovery
+      validation.
+    supply_current: Native terminal currents; no external P48 extraction/regulator
+      or self-heating in this selected file.
+  unqualified_behavior:
+  - low-current voltage/current/1/f noise; no manufacturer spectrum found
+  - gate leakage and gate ESD network
+  - coupled process corners and production correlations
+  - low-current subthreshold/temperature accuracy
+  - self-heating, linear-mode SOA and avalanche reliability
+  - complete P48 output/power implementation
+  substitutes:
+  - part: 2N7002K-7
+    manufacturer: Diodes Incorporated
+    state: Separate manufacturer model route; not equivalent or qualified.
+  - part: 2N7002ET1G
+    manufacturer: onsemi
+    state: Retail alternative; not model or combination qualified.
+  procurement_register: research/procurement/semiconductors_2026-10-09.yaml
+  readiness: nominal_threshold_rds_gfs_limits_agree_output_capacitance_temperature_disagree_noise_leakage_process_unqualified
+  patent_status: isolated_device_research_only_no_architecture_claim_screen_no_clearance
+  validation_report: research/device_model_validation.md
+  validation_record: results/device_models/20261009T070419Z_3bd1122a/results.json
+  failed_fixture_parent: results/device_models/20261009T070130Z_58467dca/results.json
+  refinement_parent: results/device_models/20261009T070230Z_d5f15884/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+- id: bc846b
+  manufacturer: Nexperia
+  exact_variant: BC846B,215
+  family: discrete_npn
+  package: SOT-23
+  lifecycle:
+    status: production
+    checked_date: '2026-10-05'
+    source_url: https://www.nexperia.com/product/BC846B
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/BC846_SER.pdf
+    retrieved_date: '2026-10-05'
+    version: Rev 9; 25 September 2012
+    local_path: models/semiconductor/vendor/evidence/bc846.pdf
+    sha256: 045a6cc21de93ac634aad910567e882926bd6ef154cbd8c59d13201134642a97
+  ratings:
+    abs_vce_v: 65
+    abs_vcb_v: 80
+    abs_veb_v: 6
+    abs_ic_a: 0.1
+    abs_power_w: 0.25
+    thermal_rthja_k_per_w: 500
+    thermal_condition: manufacturer standard FR4 footprint at 25 C; derate
+    temp_c:
+    - -65
+    - 150
+    hfe_grade:
+    - 200
+    - 450
+    hfe_condition: VCE magnitude=5 V, IC magnitude=2 mA,25 C
+  models:
+  - id: bc846b_vendor
+    path: semiconductor/vendor/bc846b.lib
+    sha256: 4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed
+    version: extraction week 24/2021
+    source_url: https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1
+    retrieved_date: '2026-10-05'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: SPICE3 subcircuit
+    ngspice_behavior: ''
+    subcircuit: BC846B
+    parent_model_id: null
+  - id: bc846b_emitter_r1
+    path: semiconductor/vendor/bc846b_emitter_r1.lib
+    sha256: 55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d
+    version: project structural child r1; Q2 emitter 33 -> 3
+    source_url: https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1
+    retrieved_date: '2026-10-05'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: SPICE3 subcircuit
+    ngspice_behavior: ''
+    subcircuit: BC846B
+    parent_model_id: bc846b_vendor
+  represented_behavior:
+    dc: Gummel-Poon + quasi-saturation network
+    capacitance: CJE/CJC voltage laws and TF/TR
+    temperature: XTI, XTB, EG junction equations
+    leakage: junction saturation currents only
+    noise: native shot and resistor thermal; KF absent so 1/f absent
+    clipping: saturation/reverse network
+    supply_current: native collector/base/emitter currents
+  unqualified_behavior:
+  - 1/f noise and separate voltage/current spectra
+  - manufacturing correlations
+  - self-heating/SOA/avalanche
+  - full temperature and leakage validation
+  - vendor floating Q2 emitter node 33; child hypothesis not vendor-approved
+  substitutes:
+  - part: BC846BLT1G
+    manufacturer: onsemi
+    state: supplier-listed_available_unvalidated_model_not_interchangeable
+  procurement_register: research/procurement/semiconductors_2026-10-05.yaml
+  readiness: vendor_unusable_structural_child_partial_dc_caps_noise_unqualified
+  patent_status: isolated_device_research_only_no_architecture_claim_screen_no_clearance
+  validation_report: research/device_model_validation.md
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+- id: bc856b
+  manufacturer: Nexperia
+  exact_variant: BC856B,215
+  family: discrete_pnp
+  package: SOT-23
+  lifecycle:
+    status: production
+    checked_date: '2026-10-05'
+    source_url: https://www.nexperia.com/product/BC856B
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/BC856_BC857_BC858.pdf
+    retrieved_date: '2026-10-05'
+    version: Rev 9; 1 July 2022
+    local_path: models/semiconductor/vendor/evidence/bc856.pdf
+    sha256: d9a836e40dd8f1e788d7dadbfcbe8cf4836ed5debe789c84b8fa574132f84943
+  ratings:
+    abs_vce_v: 65
+    abs_vcb_v: 80
+    abs_veb_v: 5
+    abs_ic_a: 0.1
+    abs_power_w: 0.25
+    thermal_rthja_k_per_w: 500
+    thermal_condition: manufacturer standard FR4 footprint at 25 C; derate
+    temp_c:
+    - -65
+    - 150
+    hfe_grade:
+    - 220
+    - 475
+    hfe_condition: VCE magnitude=5 V, IC magnitude=2 mA,25 C
+  models:
+  - id: bc856b_vendor
+    path: semiconductor/vendor/bc856b.lib
+    sha256: 580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33
+    version: extraction week 19/2020
+    source_url: https://assets.nexperia.com/documents/spice-model/BC856B.txt?download=1
+    retrieved_date: '2026-10-05'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: SPICE3 subcircuit
+    ngspice_behavior: ''
+    subcircuit: BC856B
+    parent_model_id: null
+  represented_behavior:
+    dc: Gummel-Poon + quasi-saturation network
+    capacitance: CJE/CJC voltage laws and TF/TR
+    temperature: XTI, XTB, EG junction equations
+    leakage: junction saturation currents only
+    noise: native shot and resistor thermal; KF absent so 1/f absent
+    clipping: saturation/reverse network
+    supply_current: native collector/base/emitter currents
+  unqualified_behavior:
+  - 1/f noise and separate voltage/current spectra
+  - manufacturing correlations
+  - self-heating/SOA/avalanche
+  - full temperature and leakage validation
+  - model header hFE 125-250 contradicts B-grade datasheet 220-475
+  substitutes:
+  - part: BC856BLT1G
+    manufacturer: onsemi
+    state: supplier-listed_available_unvalidated_model_not_interchangeable
+  procurement_register: research/procurement/semiconductors_2026-10-05.yaml
+  readiness: partial_nominal_dc_saturation_bandwidth_caps_flicker_unqualified_sourcing_hold
+  patent_status: isolated_device_research_only_no_architecture_claim_screen_no_clearance
+  validation_report: research/device_model_validation.md
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+- id: opa197
+  manufacturer: Texas Instruments
+  exact_variant: OPA197IDBVR
+  family: cmos_opamp
+  package: SOT-23-5 DBV
+  lifecycle:
+    status: active
+    checked_date: '2026-10-05'
+    source_url: https://www.ti.com/product/OPA197
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/opa197.pdf
+    retrieved_date: '2026-10-05'
+    version: SBOS737C March 2018
+    local_path: models/semiconductor/vendor/evidence/opa197.pdf
+    sha256: 27653a7d5e965cbb2d23f7998919ebd774efd5cd3e126b8f0881469ae91166fd
+  ratings:
+    recommended_supply_v:
+    - 4.5
+    - 36
+    abs_supply_v: 40
+    operating_temp_c:
+    - -40
+    - 125
+    iq_25c_max_a: 0.0013
+    input_bias_25c_max_a: 2.0e-11
+    thermal_rthja_k_per_w: 158.8
+    condition: SBOS737C; do not connect directly to unloaded P48
+  models:
+  - id: opa197_pspice
+    path: semiconductor/vendor/opa197.lib
+    sha256: fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5
+    version: Final 1.3; 23JUN2022; SBOMA34D
+    source_url: https://www.ti.com/lit/zip/sboma34d
+    retrieved_date: '2026-10-05'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: SPICE3 subcircuit with PSpice extensions
+    ngspice_behavior: ps
+    subcircuit: OPAx197
+    parent_model_id: null
+  represented_behavior:
+    dc: Green-Williams-Lis macro; fixed bias/offset/current
+    capacitance: common/differential RC input impedances
+    temperature: offset drift block; bias and noise temperature fidelity unproven
+    leakage: fixed input bias + input/ESD resistance; no realistic temperature population
+    noise: explicit voltage flicker/white and current white sources
+    clipping: output swing/current/slew/overload blocks
+    supply_current: fixed Iq plus output supply-current blocks
+  unqualified_behavior:
+  - THD transistor physics
+  - production noise maxima
+  - bias/Iq temperature and distribution
+  - thermal shutdown/SOA
+  - full common-mode crossover noise
+  - ngspice47 clipping/loaded-supply convergence failures
+  - floating common-mode operation; macro has global-ground referenced internals
+  substitutes:
+  - part: OPA197ID
+    state: same_die_SOIC8_package_requires_layout_thermal_requalification
+  - part: OPA140
+    state: JFET_input_alternative_not_validated
+  procurement_register: research/procurement/semiconductors_2026-10-05.yaml
+  readiness: scoped_mid_common_mode_small_signal_noise_dc_bandwidth_agreement_nonlinear_unqualified
+  patent_status: isolated_device_research_only_no_architecture_claim_screen_no_clearance
+  validation_report: research/device_model_validation.md
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+- id: 2n7002
+  manufacturer: Nexperia
+  exact_variant: 2N7002,215
+  family: discrete_n_mosfet
+  package: SOT-23
+  lifecycle:
+    status: production
+    checked_date: '2026-10-05'
+    source_url: https://www.nexperia.com/product/2N7002
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/2N7002.pdf
+    retrieved_date: '2026-10-05'
+    version: Rev 7; 8 September 2011
+    local_path: models/semiconductor/vendor/evidence/2n7002.pdf
+    sha256: cc9c275457670c3cbbf2e56f5a75c800d3b5f0b396fabc798cf18cb639646475
+  ratings:
+    abs_vds_v: 60
+    abs_vgs_v:
+    - -30
+    - 30
+    abs_id_a: 0.3
+    abs_power_w: 0.83
+    condition: current/power at solder point 25 C; not free-air power; see derating/SOA
+  models:
+  - id: 2n7002_failed_download
+    path: semiconductor/vendor/2n7002.lib
+    sha256: 4a2a3f7fb1725f12fcfe3f7fef5cc082be2ac58eeb30ee4fdb693398e74abbf5
+    version: not_a_model
+    source_url: https://assets.nexperia.com/documents/spice-model/2N7002.txt?download=1
+    retrieved_date: '2026-10-05'
+    acquisition_status: invalid_html_challenge
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: unavailable_invalid_HTML_response
+    ngspice_behavior: ''
+    subcircuit: unavailable
+    parent_model_id: null
+  represented_behavior:
+    dc: not_acquired
+    capacitance: not_acquired
+    temperature: not_acquired
+    leakage: not_acquired
+    noise: not_acquired
+    clipping: not_acquired
+    supply_current: not_acquired
+  unqualified_behavior:
+  - vendor model acquisition
+  - low-current transfer
+  - all noise including 1/f
+  - low-current production corners
+  substitutes:
+  - part: 2N7002ET1G
+    manufacturer: onsemi
+    state: available_supplier_listing_not_model_validated
+  - part: 2N7002-7-F
+    manufacturer: Diodes Incorporated
+    state: available_supplier_listing_not_model_validated
+  - part: Vishay 2N7002K-T1-GE3
+    state: manufacturer model route and indexed Germany supplier alternative identified;
+      unacquired/unvalidated
+  procurement_register: research/procurement/semiconductors_2026-10-05.yaml
+  readiness: model_acquisition_failed_unsupported
+  patent_status: isolated_device_research_only_no_architecture_claim_screen_no_clearance
+  validation_report: research/device_model_validation.md
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  evidence_states:
+    investigated: true
+    acquired: false
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+- id: mmbfj113
+  manufacturer: onsemi
+  exact_variant: MMBFJ113
+  family: discrete_n_jfet
+  package: SOT-23
+  lifecycle:
+    status: unverified_exact_order_code
+    checked_date: '2026-10-05'
+    source_url: https://www.onsemi.com/design/tools-software/product-recommendation-tools-plus/jfet/products
+  datasheet:
+    url: https://www.onsemi.com/download/data-sheet/pdf/mmbfj113-d.pdf
+    retrieved_date: '2026-10-05'
+    local_path: null
+    sha256: null
+  ratings:
+    gate_breakdown_min_v: 35
+    idss_min_a: 0.002
+    vgs_off_magnitude_v:
+    - 0.5
+    - 3
+    condition: manufacturer sheet at25C; no Idss upper/noise spectrum established
+      here
+  models: []
+  represented_behavior: {}
+  unqualified_behavior:
+  - all device model behaviors
+  - exact active small-quantity variant
+  procurement_register: research/procurement/semiconductors_2026-10-05.yaml
+  readiness: unsupported_alternative_investigation
+  substitutes: []
+  patent_status: no_implementation_selected
+  validation_report: research/device_model_validation.md
+  evidence_states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+- id: jfe2140
+  manufacturer: Texas Instruments
+  exact_variant: JFE2140DR
+  family: integrated_dual_n_jfet
+  package: SOIC-8 D
+  circuit_roles:
+  - high_impedance
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://www.ti.com/product/JFE2140
+  models:
+  - id: jfe2140_vendor
+    path: semiconductor/vendor/jfe2140.lib
+    sha256: b872775746e2be5b00347664128b41c86c1483be224be8bc3780dc533c5fc2e0
+    version: Final 1.0 16AUG2021
+    source_url: https://www.ti.com/lit/zip/slpm355
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: self-contained public subcircuit; dialect compatibility unverified
+    subcircuit: JFEx140
+    primitive: X
+    parent_model_id: null
+    ngspice_behavior: ps
+    pin_order: D G S VCH VCL; one half, physical pins 2 4 1 3 7; second half 6 8 5
+      3 7
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: all_planned_jobs_run
+    behavior_validation: disagreement
+    validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      jfe2140_vendor:
+      - behavior: idss_25c
+        status: pass
+        evidence: guaranteed_limit
+        condition: SLPS730B table6.5 VDS10V VGS0 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.0001_10
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.0001_1000
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_10
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_1000
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: current_noise_1khz
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: JFE2140 table6.5 VDS5V ID2mA 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: reverse_gate_leak
+        status: fail
+        evidence: guaranteed_limit
+        condition: 25C VDS0 VGS-30V TI or -10V Linear; bound includes fixture GMIN
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  procurement_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  readiness: research_only_no_blanket_behavior_qualification
+  patent_status: technical_feature_flags_only_exact_claim_status_screen_incomplete
+  validation_report: research/parts_database_expansion_001.md
+  unqualified_behavior:
+  - production correlated variation
+  - model omissions are not zero
+  - candidate combination
+  - physical P48 implementation
+  - capsule coupling
+  represented_behavior:
+    scope: model equations/header inspected; behavior evidence is independent from
+      loading
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/jfe2140.pdf
+    version: SLPS730B August 2023
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_jfe2140.pdf
+    sha256: baeb38d1596ab468e9c8d0443afc5286e90fe3074001a81c660258767deb46a3
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+- id: lsk170a
+  manufacturer: Linear Systems
+  exact_variant: LSK170A TO-92 3L ROHS
+  family: discrete_n_jfet
+  package: TO-92 3L
+  circuit_roles:
+  - high_impedance
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.linearsystems.com/jfetamplifierssingles/lsk170-series
+  models:
+  - id: lsk170a_vendor
+    path: semiconductor/vendor/lsk170a.lib
+    sha256: 6eadbfe9c86ef69795852f3f7be8f66fbe25ef8caa4de1fa942f8a4af6347409
+    version: 03/16/2026
+    source_url: https://www.linearsystems.com/_files/ugd/4be30b_c1ab091e16024893879338ec7c8c1db4.pdf
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: native .model
+    subcircuit: LSK170A
+    primitive: J
+    parent_model_id: null
+    ngspice_behavior: null
+    pin_order: native J D G S; physical TO92 D1 G2 S3; other packages differ
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: not_yet_tested
+    behavior_validation: not_yet_characterized
+    document_ancestor_sha256: 1d384f4ee3510906a80798188a8a35bd8208ab053b81190c6896a329a1ef62a1
+  - id: lsk170a_syntax_r1
+    path: semiconductor/vendor/lsk170a_metadata_r1.lib
+    sha256: aaa2de4916c05f6a03b343df26e8f4dc0ae1363226595d886e3b62b6b1f94e99
+    version: 03/16/2026; authored metadata r1
+    source_url: https://www.linearsystems.com/_files/ugd/4be30b_c1ab091e16024893879338ec7c8c1db4.pdf
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: native .model
+    subcircuit: LSK170A
+    primitive: J
+    parent_model_id: lsk170a_vendor
+    ngspice_behavior: null
+    pin_order: native J D G S; physical TO92 D1 G2 S3; other packages differ
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: all_planned_jobs_run
+    behavior_validation: disagreement
+    document_ancestor_sha256: 1d384f4ee3510906a80798188a8a35bd8208ab053b81190c6896a329a1ef62a1
+    validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      lsk170a_syntax_r1:
+      - behavior: idss_25c
+        status: pass
+        evidence: guaranteed_limit
+        condition: Doc201110 A22 table2 VDS10V VGS0 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_10
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; Doc201110 A22 table2
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_1000
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; Doc201110 A22 table2
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: ciss
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: LSK170 table2 VDS15V ID100uA f1MHz
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: reverse_gate_leak
+        status: pass
+        evidence: guaranteed_limit
+        condition: 25C VDS0 VGS-30V TI or -10V Linear; bound includes fixture GMIN
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  procurement_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  readiness: research_only_no_blanket_behavior_qualification
+  patent_status: technical_feature_flags_only_exact_claim_status_screen_incomplete
+  validation_report: research/parts_database_expansion_001.md
+  unqualified_behavior:
+  - production correlated variation
+  - model omissions are not zero
+  - candidate combination
+  - physical P48 implementation
+  - capsule coupling
+  represented_behavior:
+    scope: model equations/header inspected; behavior evidence is independent from
+      loading
+  datasheet:
+    url: https://www.linearsystems.com/_files/ugd/7e8069_a086ff7323054b5da3b91e364c90b3d4.pdf
+    version: Doc201110 A22 19Nov2019
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_lsk170a.pdf
+    sha256: a1657555b571914568504f5e90efb1868ef76ec63b4a0e5d1560d710482e0cf3
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+- id: lsk389a
+  manufacturer: Linear Systems
+  exact_variant: LSK389A SOIC 8L ROHS
+  family: integrated_dual_n_jfet
+  package: SOIC-8
+  circuit_roles:
+  - high_impedance
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.linearsystems.com/jfet-amplifiers-duals/lsk389-series
+  models:
+  - id: lsk389a_vendor
+    path: semiconductor/vendor/lsk389a.lib
+    sha256: c458cc0648f4c017d13bbb8454894b06927c934f431d02bb68505f94e8eea8dd
+    version: Rev2 18May2026
+    source_url: https://www.linearsystems.com/_files/ugd/4be30b_3b75f40e1a364550ac5a47dd56b4eff6.pdf
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: native .model
+    subcircuit: LSK389A_UPDATED
+    primitive: J
+    parent_model_id: null
+    ngspice_behavior: null
+    pin_order: native J D G S one half; verify physical substrate pins before candidate
+      integration
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: not_yet_tested
+    behavior_validation: not_yet_characterized
+    document_ancestor_sha256: 66eb1b112b6fc8751e63b59ab0871e81981479aa40f1ba490a498908301d04ce
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  procurement_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  readiness: research_only_no_blanket_behavior_qualification
+  patent_status: technical_feature_flags_only_exact_claim_status_screen_incomplete
+  validation_report: research/parts_database_expansion_001.md
+  unqualified_behavior:
+  - production correlated variation
+  - model omissions are not zero
+  - candidate combination
+  - physical P48 implementation
+  - capsule coupling
+  represented_behavior:
+    scope: model equations/header inspected; behavior evidence is independent from
+      loading
+  datasheet:
+    url: https://www.linearsystems.com/_files/ugd/7e8069_c90834b817214602abcbf263293295f2.pdf
+    version: Doc201122 A27 23Jun2023
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_lsk389a.pdf
+    sha256: da78812493368ad6d54396693d05aa7561b7959e636c5bd52f164a2991b7d7a0
+- id: pmbt5551
+  manufacturer: Nexperia
+  exact_variant: PMBT5551,215
+  family: npn_bjt
+  package: SOT-23
+  circuit_roles:
+  - p48_power
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.nexperia.com/product/PMBT5551
+  models:
+  - id: pmbt5551_vendor
+    path: semiconductor/vendor/pmbt5551.lib
+    sha256: 9f3e7425c5ebd57b8709851f271354dd46ddc42a4503b280d248fd015f27deb0
+    version: extraction week42/2018
+    source_url: https://assets.nexperia.com/documents/spice-model/PMBT5551.txt?download=1
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: self-contained public subcircuit; dialect compatibility unverified
+    subcircuit: PMBT5551
+    primitive: X
+    parent_model_id: null
+    ngspice_behavior: ps
+    pin_order: subcircuit C B E; physical B1 E2 C3
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: scoped_jobs_ok_with_retained_errors
+    behavior_validation: error
+    validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      pmbt5551_vendor:
+      - behavior: hfe_0.001
+        status: pass
+        evidence: guaranteed_limit
+        condition: PMBT5551 table7 12Oct2023 VCE5V 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: hfe_0.01
+        status: pass
+        evidence: guaranteed_limit
+        condition: PMBT5551 table7 12Oct2023 VCE5V 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: nf_1khz_density_screen
+        status: pass
+        evidence: conditional_frequency_screen
+        condition: Rs2kohm IC200uA VCE5V25C; local density approximation to narrowband
+          NF; exact measurement filter unmodeled
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: nf_refinement_ratio
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: icbo_100
+        status: pass
+        evidence: guaranteed_limit
+        condition: VCB120V open emitter1Pohm; PMBT5551 table
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  procurement_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  readiness: research_only_no_blanket_behavior_qualification
+  patent_status: technical_feature_flags_only_exact_claim_status_screen_incomplete
+  validation_report: research/parts_database_expansion_001.md
+  unqualified_behavior:
+  - production correlated variation
+  - model omissions are not zero
+  - candidate combination
+  - physical P48 implementation
+  - capsule coupling
+  represented_behavior:
+    scope: model equations/header inspected; behavior evidence is independent from
+      loading
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/PMBT5551.pdf
+    version: 12Oct2023
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_pmbt5551.pdf
+    sha256: 481051a143a71fb6223ce52c3f5061525fea4fb70b2a41672a3a22399c114622
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+- id: diotec_mmbt5551
+  manufacturer: Diotec Semiconductor
+  exact_variant: MMBT5551
+  family: npn_bjt
+  package: SOT-23
+  circuit_roles:
+  - p48_power
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://diotec.com/en/product/MMBT5551.html
+  models:
+  - id: diotec_mmbt5551_vendor
+    path: semiconductor/vendor/diotec_mmbt5551.lib
+    sha256: 96f44107a0eff47851731646952f0ac47cf1d794ad13cd29ca4055f2b81ba2aa
+    version: 13Dec2017 parameterized example
+    source_url: https://diotec.com/request/spice/mmbt5551.zip
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: self-contained public subcircuit; dialect compatibility unverified
+    subcircuit: MMBT5551
+    primitive: X
+    parent_model_id: null
+    ngspice_behavior: ltpsa
+    pin_order: subcircuit C B E; physical B1 E2 C3
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: not_yet_tested
+    behavior_validation: not_yet_characterized
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  procurement_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  readiness: research_only_no_blanket_behavior_qualification
+  patent_status: technical_feature_flags_only_exact_claim_status_screen_incomplete
+  validation_report: research/parts_database_expansion_001.md
+  unqualified_behavior:
+  - production correlated variation
+  - model omissions are not zero
+  - candidate combination
+  - physical P48 implementation
+  - capsule coupling
+  represented_behavior:
+    scope: model equations/header inspected; behavior evidence is independent from
+      loading
+  datasheet:
+    url: https://diotec.com/request/datasheet/mmbt5551.pdf
+    version: 19Nov2025
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_diotec_mmbt5551.pdf
+    sha256: 227f5fe089670eeeb14ee175c873dee896d74406611c3265defe3b3aa38c61a2
+- id: bc850c
+  manufacturer: Nexperia
+  exact_variant: BC850C,215
+  family: npn_bjt
+  package: SOT-23
+  circuit_roles:
+  - low_noise_bipolar
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.nexperia.com/product/BC850C
+  models:
+  - id: bc850c_vendor
+    path: semiconductor/vendor/bc850c.lib
+    sha256: ef3fc2c3776eaf52acbfb5b7955eda8efd9fa714dd2158aa015ac42610bca399
+    version: extraction week42/2018
+    source_url: https://assets.nexperia.com/documents/spice-model/BC850C.txt?download=1
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: self-contained public subcircuit; dialect compatibility unverified
+    subcircuit: BC850C
+    primitive: X
+    parent_model_id: null
+    ngspice_behavior: ps
+    pin_order: subcircuit C B E; physical B1 E2 C3
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: scoped_jobs_ok_with_retained_errors
+    behavior_validation: error
+    validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      bc850c_vendor:
+      - behavior: hfe_0.002
+        status: pass
+        evidence: guaranteed_limit
+        condition: BC850C table7 VCE5V 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: nf_1khz_density_screen
+        status: pass
+        evidence: conditional_frequency_screen
+        condition: Rs2kohm IC200uA VCE5V25C; local density approximation to narrowband
+          NF; exact measurement filter unmodeled
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: nf_refinement_ratio
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  procurement_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  readiness: research_only_no_blanket_behavior_qualification
+  patent_status: technical_feature_flags_only_exact_claim_status_screen_incomplete
+  validation_report: research/parts_database_expansion_001.md
+  unqualified_behavior:
+  - production correlated variation
+  - model omissions are not zero
+  - candidate combination
+  - physical P48 implementation
+  - capsule coupling
+  represented_behavior:
+    scope: model equations/header inspected; behavior evidence is independent from
+      loading
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/BC850C.pdf
+    version: current public sheet; revision in original PDF
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_bc850c.pdf
+    sha256: 7be422c96ed19a0c874334d24811f714d8634a65d2f83505b5974f23257ed5c1
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+- id: bav199
+  manufacturer: Nexperia
+  exact_variant: BAV199,215
+  family: series_dual_diode
+  package: SOT-23
+  circuit_roles:
+  - protection
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.nexperia.com/product/BAV199
+  models:
+  - id: bav199_vendor
+    path: semiconductor/vendor/bav199.lib
+    sha256: 37ca9619403894293238c41fbe05a9748c1d4d7d0a17b71ddde6dc2a8ba104e6
+    version: extraction date unspecified in vendor header
+    source_url: https://assets.nexperia.com/documents/spice-model/BAV199.txt?download=1
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: native .model
+    subcircuit: BAV199
+    primitive: D
+    parent_model_id: null
+    ngspice_behavior: ps
+    pin_order: native D A K one diode; package D1 A1 K3 and D2 A3 K2
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: not_yet_tested
+    behavior_validation: not_yet_characterized
+  - id: bav199_syntax_r1
+    path: semiconductor/vendor/bav199_metadata_r1.lib
+    sha256: ed3a4386d3632c91917c88cbd5d168b943cfd1f5a16133cd0bc6c145cac3f1cc
+    version: extraction date unspecified in vendor header; authored metadata r1
+    source_url: https://assets.nexperia.com/documents/spice-model/BAV199.txt?download=1
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: native .model
+    subcircuit: BAV199
+    primitive: D
+    parent_model_id: bav199_vendor
+    ngspice_behavior: ps
+    pin_order: native D A K one diode; package D1 A1 K3 and D2 A3 K2
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: all_planned_jobs_run
+    behavior_validation: scoped_agreement
+    validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      bav199_syntax_r1:
+      - behavior: reverse_leak
+        status: pass
+        evidence: guaranteed_limit
+        condition: BAV199 VR75V 25C one diode
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: cap
+        status: pass
+        evidence: guaranteed_limit
+        condition: BAV199 VR0 f1MHz table
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  procurement_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  readiness: research_only_no_blanket_behavior_qualification
+  patent_status: technical_feature_flags_only_exact_claim_status_screen_incomplete
+  validation_report: research/parts_database_expansion_001.md
+  unqualified_behavior:
+  - production correlated variation
+  - model omissions are not zero
+  - candidate combination
+  - physical P48 implementation
+  - capsule coupling
+  represented_behavior:
+    scope: model equations/header inspected; behavior evidence is independent from
+      loading
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/BAV199.pdf
+    version: current public sheet; revision in original PDF
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_bav199.pdf
+    sha256: ab2f26d003e3c1d8f7e4e7ac674ae055849970bf7b392a7d5d31eca443aab9e2
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+- id: opa928
+  manufacturer: Texas Instruments
+  exact_variant: OPA928DT
+  family: cmos_electrometer_guard_amplifier
+  package: SOIC-8 D
+  circuit_roles:
+  - guard_servo
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://www.ti.com/product/OPA928
+  models:
+  - id: opa928_vendor
+    path: semiconductor/vendor/opa928.lib
+    sha256: f4f9d38efc4aa2a31676c84a351d2ee9379baad88abab8b5afad550c7f99c616
+    version: 1.1 01Apr2024
+    source_url: https://www.ti.com/lit/zip/sbomcc0a
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: self-contained public subcircuit; dialect compatibility unverified
+    subcircuit: OPAX928
+    primitive: X
+    parent_model_id: null
+    ngspice_behavior: ps
+    pin_order: IN+ IN- V+ V- OUT GRD1 GRD2; physical 4 5 6 3 1 2 7; NC8
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: scoped_jobs_ok_with_retained_errors
+    behavior_validation: error
+    validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      opa928_vendor:
+      - behavior: en_5
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: datasheet conditioned common mode, RL10k 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: ib_5
+        status: pass
+        evidence: guaranteed_limit
+        condition: RH<50percent; nominal grounded simulation does not model humidity
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: iq_5
+        status: pass
+        evidence: guaranteed_limit
+        condition: no-load output; model Iq fixed275u; no variation proof
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_16
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: datasheet conditioned common mode, RL10k 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: ib_16
+        status: pass
+        evidence: guaranteed_limit
+        condition: RH<50percent; nominal grounded simulation does not model humidity
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: iq_16
+        status: pass
+        evidence: guaranteed_limit
+        condition: no-load output; model Iq fixed275u; no variation proof
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  procurement_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  readiness: research_only_no_blanket_behavior_qualification
+  patent_status: technical_feature_flags_only_exact_claim_status_screen_incomplete
+  validation_report: research/parts_database_expansion_001.md
+  unqualified_behavior:
+  - production correlated variation
+  - model omissions are not zero
+  - candidate combination
+  - physical P48 implementation
+  - capsule coupling
+  represented_behavior:
+    scope: model equations/header inspected; behavior evidence is independent from
+      loading
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/opa928.pdf
+    version: SBOSA77A April2024
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_opa928.pdf
+    sha256: 06ab87dcd0ffd4d319b164f763bee44707a40593c6df60930d3e1f1fe5a936ad
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+- id: opa1656
+  manufacturer: Texas Instruments
+  exact_variant: OPA1656IDR
+  family: dual_cmos_audio_amplifier
+  package: SOIC-8 D
+  circuit_roles:
+  - balanced_output
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://www.ti.com/product/OPA1656
+  models:
+  - id: opa1656_vendor
+    path: semiconductor/vendor/opa1656.lib
+    sha256: 9847ed60c62e792ee6f1c84899278a3c11ce71a6d21804bdd88f51199f1ba055
+    version: public SBOMAW6C; header retained
+    source_url: https://www.ti.com/lit/zip/sbomaw6c
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: self-contained public subcircuit; dialect compatibility unverified
+    subcircuit: OPA1656
+    primitive: X
+    parent_model_id: null
+    ngspice_behavior: ps
+    pin_order: one amplifier IN+ IN- V+ V- OUT; physical dual mapping requires separate
+      integration audit
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: not_yet_tested
+    behavior_validation: not_yet_characterized
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  procurement_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  readiness: research_only_no_blanket_behavior_qualification
+  patent_status: technical_feature_flags_only_exact_claim_status_screen_incomplete
+  validation_report: research/parts_database_expansion_001.md
+  unqualified_behavior:
+  - production correlated variation
+  - model omissions are not zero
+  - candidate combination
+  - physical P48 implementation
+  - capsule coupling
+  represented_behavior:
+    scope: model equations/header inspected; behavior evidence is independent from
+      loading
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/opa1656.pdf
+    version: SBOS901 series; revision in PDF
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_opa1656.pdf
+    sha256: 4243b58e553e6f27274858637c596596dbb89bba94d05b44fedd32877d988e9d
+- id: lmp7721
+  manufacturer: Texas Instruments
+  exact_variant: LMP7721MA/NOPB
+  family: cmos_electrometer_amplifier
+  package: SOIC-8
+  circuit_roles:
+  - guard_servo
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://www.ti.com/product/LMP7721
+  models:
+  - id: lmp7721_vendor
+    path: semiconductor/vendor/lmp7721.lib
+    sha256: 815a27e4a2189e0f54626a36f21cad3002ff21a5d5cd8df9fea60b34ceb2cb39
+    version: public SNOM096D; header retained
+    source_url: https://www.ti.com/lit/zip/snom096d
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: self-contained public subcircuit; dialect compatibility unverified
+    subcircuit: LMP7721
+    primitive: X
+    parent_model_id: null
+    ngspice_behavior: ps
+    pin_order: IN+ IN- V+ V- OUT; physical pin mapping not integration-qualified
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: not_yet_tested
+    behavior_validation: not_yet_characterized
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  procurement_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  readiness: research_only_no_blanket_behavior_qualification
+  patent_status: technical_feature_flags_only_exact_claim_status_screen_incomplete
+  validation_report: research/parts_database_expansion_001.md
+  unqualified_behavior:
+  - production correlated variation
+  - model omissions are not zero
+  - candidate combination
+  - physical P48 implementation
+  - capsule coupling
+  represented_behavior:
+    scope: model equations/header inspected; behavior evidence is independent from
+      loading
+parts_evidence_matrix: research/parts_database_expansion_001.yaml

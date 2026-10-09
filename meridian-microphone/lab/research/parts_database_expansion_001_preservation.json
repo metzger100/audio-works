@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-09",
+  "status": "local_capture_and_restore_verified_independent_preservation_incomplete",
+  "inventory": {
+    "record": "results/evidence-20261009T135947Z-ed3f718c.sha256",
+    "new_files": 351
+  },
+  "evidence_verify": {
+    "status": "incomplete",
+    "waveform_files": 10761,
+    "source_snapshot_files": 15663,
+    "damaged_files": [],
+    "uninventoried_files": [],
+    "legacy_missing_source_files": 89
+  },
+  "private_capture": {
+    "backup_id": "20261009T140053Z_ff218065",
+    "verified": true,
+    "files": 51040,
+    "manifest_sha256": "f27fa6cc020238da16696baff63a1125093402e8e9cf6ecaeadc0e0a833d6829",
+    "evidence_fingerprint": "3de9b5138c251f095aa55690244b1242a5a74cde7a57ff38df09b2b6a0856e62",
+    "independent": false,
+    "original_evidence_complete": false
+  },
+  "restore": {
+    "verified": true,
+    "files_verified": 51040,
+    "restored_at": "2026-10-09T14:05:25.899260+00:00",
+    "checkout_hook_installed": true
+  },
+  "final_handoff": {
+    "private_copy_id": "parts-expansion-final-handoff-20261009",
+    "scope": "Active current facts, derived handoff documents and this completion receipt after the scientific evidence capture; separate hash manifest, no original evidence edits"
+  },
+  "independent_backup_complete": false,
+  "legacy_missing_source_files": 89,
+  "note": "All available captured bytes restored and verified locally. Same-device recovery is not independent persistent backup. Original failures and missing originals are not reconstructed; independent owner-controlled coverage remains required. Private paths are held in .project-local/backups and excluded here."
+}

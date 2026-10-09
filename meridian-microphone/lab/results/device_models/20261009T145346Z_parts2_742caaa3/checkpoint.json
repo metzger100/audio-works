@@ -1,0 +1,788 @@
+{
+  "results": {
+    "diodes_mmbt5401_vendor": {
+      "comparisons": [
+        {
+          "name": "hfe_0.001",
+          "value": 121.93886616682484,
+          "status": "pass",
+          "lower": 50,
+          "upper": null,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "DS30057 Rev12-2 March2024 table page2 VCE5V25C; pulse-reference isothermal screen"
+        },
+        {
+          "name": "hfe_0.01",
+          "value": 124.91726309253347,
+          "status": "pass",
+          "lower": 60,
+          "upper": 240,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "DS30057 Rev12-2 March2024 table page2 VCE5V25C; pulse-reference isothermal screen"
+        },
+        {
+          "name": "ccb",
+          "value": 3.706261658390958e-12,
+          "status": "pass",
+          "lower": null,
+          "upper": 6e-12,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "VCB10V1MHz emitter1Pohm; finite fixture"
+        },
+        {
+          "name": "icbo_25",
+          "value": 6.366462912410498e-12,
+          "status": "pass",
+          "lower": null,
+          "upper": 5e-08,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "VCB120V emitter1Pohm"
+        },
+        {
+          "name": "icbo_100",
+          "value": 4.777348294737749e-09,
+          "status": "pass",
+          "lower": null,
+          "upper": 5e-05,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "guaranteed_limit",
+          "condition": "VCB120V emitter1Pohm"
+        },
+        {
+          "name": "nf_density_screen",
+          "value": 8.789744169732593,
+          "status": "fail",
+          "lower": null,
+          "upper": 8,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "conditional_frequency_screen",
+          "condition": "IC200uA VCE5V Rs10ohm f1k25C; unspecified measurement filter; no broadband claim"
+        },
+        {
+          "name": "noise_refinement",
+          "value": 8.215650382226158e-15,
+          "status": "pass",
+          "lower": null,
+          "upper": 0.01,
+          "typical": null,
+          "relative_disagreement": null,
+          "evidence": "numerical_refinement",
+          "condition": ""
+        }
+      ],
+      "measurements": {
+        "grid_-10": [
+          {
+            "ic_a": 0.0001,
+            "vbe_v": 0.6274314805763483,
+            "ib_a": 1.0445903310339913e-06,
+            "hfe": 95.73130923106923
+          },
+          {
+            "ic_a": 0.001,
+            "vbe_v": 0.679918188044793,
+            "ib_a": 9.909700264491992e-06,
+            "hfe": 100.91122569904124
+          },
+          {
+            "ic_a": 0.002,
+            "vbe_v": 0.6959098447539771,
+            "ib_a": 1.9631529426783472e-05,
+            "hfe": 101.87693258740106
+          },
+          {
+            "ic_a": 0.01,
+            "vbe_v": 0.7345335516601162,
+            "ib_a": 9.670747719034293e-05,
+            "hfe": 103.40462072356269
+          }
+        ],
+        "grid_25": [
+          {
+            "ic_a": 0.0001,
+            "vbe_v": 0.5535627738000114,
+            "ib_a": 8.643490974331293e-07,
+            "hfe": 115.69399481872722
+          },
+          {
+            "ic_a": 0.001,
+            "vbe_v": 0.6130031897297472,
+            "ib_a": 8.200830723092815e-06,
+            "hfe": 121.93886616682484
+          },
+          {
+            "ic_a": 0.002,
+            "vbe_v": 0.6310860729604306,
+            "ib_a": 1.6247309506958517e-05,
+            "hfe": 123.0973041501687
+          },
+          {
+            "ic_a": 0.01,
+            "vbe_v": 0.6745568158047658,
+            "ib_a": 8.005298669241912e-05,
+            "hfe": 124.91726309253347
+          }
+        ],
+        "grid_50": [
+          {
+            "ic_a": 0.0001,
+            "vbe_v": 0.5001315659801311,
+            "ib_a": 7.648054288525552e-07,
+            "hfe": 130.75220994447037
+          },
+          {
+            "ic_a": 0.001,
+            "vbe_v": 0.5645396569770985,
+            "ib_a": 7.257466907109794e-06,
+            "hfe": 137.78912295422907
+          },
+          {
+            "ic_a": 0.002,
+            "vbe_v": 0.5841175034780712,
+            "ib_a": 1.4378904601589672e-05,
+            "hfe": 139.0926538158469
+          },
+          {
+            "ic_a": 0.01,
+            "vbe_v": 0.631054425409866,
+            "ib_a": 7.085903082415803e-05,
+            "hfe": 141.12527201812492
+          }
+        ],
+        "icbo_25_a": 6.366462912410498e-12,
+        "icbo_100_a": 4.777348294737749e-09,
+        "nf_actual_ic_a": 0.0001999954088773848,
+        "nf_density_1khz_db": 8.789744169732593,
+        "coupled_support_44_-10": {
+          "ic_a": 0.000541200744123671,
+          "vce_v": 43.45389579438322,
+          "dissipation_w": 0.02351728073899266,
+          "base_drop_v": 0.49034614876496024
+        },
+        "coupled_support_48_25": {
+          "ic_a": 0.000630347364563022,
+          "vce_v": 47.364984478474696,
+          "dissipation_w": 0.029856393138574966,
+          "base_drop_v": 0.46681570427707775
+        },
+        "coupled_support_52_50": {
+          "ic_a": 0.0006945048673969723,
+          "vce_v": 51.30099438271757,
+          "dissipation_w": 0.03562879030110208,
+          "base_drop_v": 0.4500749915869663
+        },
+        "scope": "Isothermal controls; no electrothermal feedback/SOA/breakdown/flicker or production guarantee. Passive nominal fixture is not a qualified BOM."
+      },
+      "failed_jobs": 0,
+      "status": "disagreement"
+    },
+    "diotec_2n5551_vendor": {
+      "comparisons": [],
+      "measurements": {},
+      "failed_jobs": 3,
+      "status": "error"
+    },
+    "diotec_mmbt5551_vendor": {
+      "comparisons": [],
+      "measurements": {},
+      "failed_jobs": 3,
+      "status": "error"
+    },
+    "lsk389a_syntax_r1": {
+      "comparisons": [],
+      "measurements": {
+        "scope": "One nominal half; ordinary matching limits documentary only, no substrate/dual covariance/mismatch validation."
+      },
+      "failed_jobs": 5,
+      "status": "error"
+    },
+    "opa1656_vendor": {
+      "comparisons": [],
+      "measurements": {
+        "scope": "Nodeset is only an initial guess. No model edits or relaxed thresholds. Numerical translation is not independent noise/overload/leakage validation."
+      },
+      "failed_jobs": 1,
+      "status": "error"
+    },
+    "lmp7721_vendor": {
+      "comparisons": [],
+      "measurements": {
+        "scope": "Nodeset is only an initial guess. No model edits or relaxed thresholds. Numerical translation is not independent noise/overload/leakage validation."
+      },
+      "failed_jobs": 1,
+      "status": "error"
+    },
+    "opa928_vendor": {
+      "comparisons": [],
+      "measurements": {
+        "0": {
+          "output_error_v": -1.5385262832623425e-06,
+          "iq_a": 0.0002750000000034637,
+          "ib_a": 7.771561172376096e-16,
+          "en_1khz": 1.5683592691788946e-08
+        },
+        "scope": "Nodeset is only an initial guess. No model edits or relaxed thresholds. Numerical translation is not independent noise/overload/leakage validation."
+      },
+      "failed_jobs": 1,
+      "status": "error"
+    }
+  },
+  "jobs": [
+    {
+      "model_id": "diodes_mmbt5401_vendor",
+      "label": "transfer_-10",
+      "temperature_c": -10,
+      "refinement": false,
+      "netlist_sha256": "355fee30ffd7095aa8cecde852785527a52a8d49ce9a5a7644c6bd3be4354f74",
+      "model_sha256": "6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5",
+      "model_version": "Version2 08FEB2011",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt",
+      "compatibility": null,
+      "directory": "diodes_mmbt5401_vendor/transfer_-10",
+      "status": "ok",
+      "raw_data_hashes": {
+        "dc.raw": "75c5763c1973f865b67a6af1d99f92351fcf4f46162254045dd3bbbd94eab107"
+      },
+      "csv_hashes": {
+        "dc.raw.csv": "ebea5fe7f47fe790b43363136c3bf8fb504b9ebe95304bac87c3d8918146f423"
+      }
+    },
+    {
+      "model_id": "diodes_mmbt5401_vendor",
+      "label": "transfer_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "b1ab16329d37fed4d2f1676d20f22db6449e4df1b68c0c527b425d0b5c62ab26",
+      "model_sha256": "6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5",
+      "model_version": "Version2 08FEB2011",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt",
+      "compatibility": null,
+      "directory": "diodes_mmbt5401_vendor/transfer_25",
+      "status": "ok",
+      "raw_data_hashes": {
+        "dc.raw": "41347c9689bfd3dff0248fda796724c13f61a64d14a0904d0cb25b6558a4d582"
+      },
+      "csv_hashes": {
+        "dc.raw.csv": "72fa583e6b9949c3bd4e61e1aabcb2a6befe1b482cecac14eb650b4f2ddcf8c8"
+      }
+    },
+    {
+      "model_id": "diodes_mmbt5401_vendor",
+      "label": "transfer_50",
+      "temperature_c": 50,
+      "refinement": false,
+      "netlist_sha256": "1d32ef86f7d922713164ad113c1594494350e64da9d11238f229a6c4430b8847",
+      "model_sha256": "6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5",
+      "model_version": "Version2 08FEB2011",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt",
+      "compatibility": null,
+      "directory": "diodes_mmbt5401_vendor/transfer_50",
+      "status": "ok",
+      "raw_data_hashes": {
+        "dc.raw": "cb04edb7a8ad4a8a43aec105c2d36fd4736d23632c8358f106ae23605ad53721"
+      },
+      "csv_hashes": {
+        "dc.raw.csv": "5d7c2fdcd7f8a8d481ee774ca89225ddb75eb39394f61030a1c44d1a01d8debb"
+      }
+    },
+    {
+      "model_id": "diodes_mmbt5401_vendor",
+      "label": "collector_cap",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "cbc119ba631621b8f14c8d27c7d88b05ed86ebc04bc64aaf380f470b16df4a95",
+      "model_sha256": "6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5",
+      "model_version": "Version2 08FEB2011",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt",
+      "compatibility": null,
+      "directory": "diodes_mmbt5401_vendor/collector_cap",
+      "status": "ok",
+      "raw_data_hashes": {
+        "ac.raw": "1ca17d48e83202297f8b8a53c53c4432fa9f15682cd708a853980b5d8a5a552b"
+      },
+      "csv_hashes": {
+        "ac.raw.csv": "a36d40111afa9fdea255def7f9b11172d12d02bfdb8d749e628e4aeff23fc7ea"
+      }
+    },
+    {
+      "model_id": "diodes_mmbt5401_vendor",
+      "label": "icbo_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "dfcbb3f975daadbb6ca8eb103d6162e2b60fe3334c8980b12b2373931377f445",
+      "model_sha256": "6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5",
+      "model_version": "Version2 08FEB2011",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt",
+      "compatibility": null,
+      "directory": "diodes_mmbt5401_vendor/icbo_25",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "07b9bc0aaee41dee359e9ed070f84180d2f0f0cdf372cf32008be63a18cabb08"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "8b838feced6eeb83e09339a0f82de33109132681fc3833c9e71b86f4586262d2"
+      }
+    },
+    {
+      "model_id": "diodes_mmbt5401_vendor",
+      "label": "icbo_100",
+      "temperature_c": 100,
+      "refinement": false,
+      "netlist_sha256": "c3302c29770fbc3c3d7757e09c8c34ffeccda9f8d5a2b5c70a251fdc838bce81",
+      "model_sha256": "6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5",
+      "model_version": "Version2 08FEB2011",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt",
+      "compatibility": null,
+      "directory": "diodes_mmbt5401_vendor/icbo_100",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "65f52ff24e100ffec7fd7508ee3cc4f3068720fcf79894ed46eec04c6a937027"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "be9d33862304b3e9f21121c8befd4570324263d195033d8b5390d4d378651958"
+      }
+    },
+    {
+      "model_id": "diodes_mmbt5401_vendor",
+      "label": "nf_bias",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "c5cb6dfdb777ad9ef271a166905efd0c77dff5f029a53627bf03cb3940bf9c34",
+      "model_sha256": "6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5",
+      "model_version": "Version2 08FEB2011",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt",
+      "compatibility": null,
+      "directory": "diodes_mmbt5401_vendor/nf_bias",
+      "status": "ok",
+      "raw_data_hashes": {
+        "dc.raw": "0c8ed10de781694251f0896acb26d271ffcde12fa4b01b636c066dc703a38bdc"
+      },
+      "csv_hashes": {
+        "dc.raw.csv": "a70cfd538887c5f01e597027b25e59f06e997fe071cf57a43fe2c07a18b3028e"
+      }
+    },
+    {
+      "model_id": "diodes_mmbt5401_vendor",
+      "label": "noise_64",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "8a8e01c5222988c7b4fc2df154ecc9c7629ab02e881304e3357a1aa4ca7acc7b",
+      "model_sha256": "6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5",
+      "model_version": "Version2 08FEB2011",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt",
+      "compatibility": null,
+      "directory": "diodes_mmbt5401_vendor/noise_64",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "5568fb7a6513004ffd07c0e2866b24d8bb17fa6eff7695a262c9e17fcaa5dc58",
+        "noise.raw": "68066b29350d372255d8bb9eea58ffa7e2e48a8964d16dbd487bcd9f13bb3fa9"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "f48a07a706c3fc895629cd3c398f7de4edf4f7ecf4aec783107a34b3626318c7",
+        "noise.raw.csv": "ae1e79205420f8e6768fe3f5670410ea031ae66876b7ed00776b013493974033"
+      }
+    },
+    {
+      "model_id": "diodes_mmbt5401_vendor",
+      "label": "noise_128",
+      "temperature_c": 25,
+      "refinement": true,
+      "netlist_sha256": "86a3084c6aaa06e0514ebadc41e2e743a9a09674b54c83152512e67293ce2f5a",
+      "model_sha256": "6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5",
+      "model_version": "Version2 08FEB2011",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt",
+      "compatibility": null,
+      "directory": "diodes_mmbt5401_vendor/noise_128",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "b0175ea8db02d6ef20ca449048ef1e6839326f76d7049699f7a4343920e0b508",
+        "noise.raw": "ee81fcedac80ac6cfb4964a3c84b70e531dc9ebec682903a14679019c2fae59c"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "1d1329b43fae289a2417182b3922997c310d8b79d4a501de4cbd58d49c11bd8d",
+        "noise.raw.csv": "a080a788a3cb502e47756e1ff23adbc1413ee4f3b3b08e741ef338ecad240802"
+      }
+    },
+    {
+      "model_id": "diodes_mmbt5401_vendor",
+      "label": "coupled_support_44_-10",
+      "temperature_c": -10,
+      "refinement": false,
+      "netlist_sha256": "887b950af9f0b2c2dcf38af58912f1a8ad2084621e80f1d1094b86ea04e82a3c",
+      "model_sha256": "6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5",
+      "model_version": "Version2 08FEB2011",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt",
+      "compatibility": null,
+      "directory": "diodes_mmbt5401_vendor/coupled_support_44_-10",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "38b7bd8864f3d255d36af4a9438a6237130b0bd3c72d035e0ad72bd203e9ba20"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "44499fe3d1cfb598ac4f6bfc17b414f9a18cd57867f4531427ab7df4e9b45785"
+      }
+    },
+    {
+      "model_id": "diodes_mmbt5401_vendor",
+      "label": "coupled_support_48_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "1296057bb8648df8a002e2dac0d209db890227a25e91b3eb78c149040e98baf1",
+      "model_sha256": "6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5",
+      "model_version": "Version2 08FEB2011",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt",
+      "compatibility": null,
+      "directory": "diodes_mmbt5401_vendor/coupled_support_48_25",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "9ded6a90837295f3e559c7d60657dafb085896c0e32da14074ece441479bacc9"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "84a7aa662220e9ee5e7513b5e4e0896eaab372f30a2a36daadc9afac27469864"
+      }
+    },
+    {
+      "model_id": "diodes_mmbt5401_vendor",
+      "label": "coupled_support_52_50",
+      "temperature_c": 50,
+      "refinement": false,
+      "netlist_sha256": "4bcbe3e959a854d98896f1f657c9a5dcd79cb859cd8e09b59344df12561e3db1",
+      "model_sha256": "6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5",
+      "model_version": "Version2 08FEB2011",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt",
+      "compatibility": null,
+      "directory": "diodes_mmbt5401_vendor/coupled_support_52_50",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "d4956d089e200f7d9bff6aedd590d99d05490a77881d5c520eb85ad5a19b5a74"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "77a1b987380f0de11d42b83f921b6af0c26cc6656688930c41114299165cee67"
+      }
+    },
+    {
+      "model_id": "diotec_2n5551_vendor",
+      "label": "transfer_-10",
+      "temperature_c": -10,
+      "refinement": false,
+      "netlist_sha256": "0420a03e5ec51b96a6870a6b6eff5c2bcce072e853e3ac9bf39b567cd74e543d",
+      "model_sha256": "32c2fca2b0e0bdb4ebda569449e914085148a39946fe63e96a950aa26742c2d6",
+      "model_version": "Diotec example 2017",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://diotec.com/request/spice/2n5551.zip",
+      "compatibility": "ltpsa",
+      "directory": "diotec_2n5551_vendor/transfer_-10",
+      "status": "error",
+      "reason": "exit 1: \n\nError"
+    },
+    {
+      "model_id": "diotec_2n5551_vendor",
+      "label": "transfer_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "b9f5fcd00d979d11136431a364362efa44b8921023baaba25cf783eea4e87c2b",
+      "model_sha256": "32c2fca2b0e0bdb4ebda569449e914085148a39946fe63e96a950aa26742c2d6",
+      "model_version": "Diotec example 2017",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://diotec.com/request/spice/2n5551.zip",
+      "compatibility": "ltpsa",
+      "directory": "diotec_2n5551_vendor/transfer_25",
+      "status": "error",
+      "reason": "exit 1: \n\nError"
+    },
+    {
+      "model_id": "diotec_2n5551_vendor",
+      "label": "transfer_50",
+      "temperature_c": 50,
+      "refinement": false,
+      "netlist_sha256": "2ae96233f6b48284cde449edc60ab35ba9c728743b7c41636c576171c06d9a73",
+      "model_sha256": "32c2fca2b0e0bdb4ebda569449e914085148a39946fe63e96a950aa26742c2d6",
+      "model_version": "Diotec example 2017",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://diotec.com/request/spice/2n5551.zip",
+      "compatibility": "ltpsa",
+      "directory": "diotec_2n5551_vendor/transfer_50",
+      "status": "error",
+      "reason": "exit 1: \n\nError"
+    },
+    {
+      "model_id": "diotec_mmbt5551_vendor",
+      "label": "transfer_-10",
+      "temperature_c": -10,
+      "refinement": false,
+      "netlist_sha256": "a0f5f460716c57857c8c4ffd9e341ea96ccd14002970c76371bb1058a4c122bd",
+      "model_sha256": "96f44107a0eff47851731646952f0ac47cf1d794ad13cd29ca4055f2b81ba2aa",
+      "model_version": "13Dec2017 parameterized example",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://diotec.com/request/spice/mmbt5551.zip",
+      "compatibility": "ltpsa",
+      "directory": "diotec_mmbt5551_vendor/transfer_-10",
+      "status": "error",
+      "reason": "exit 1: \n\nError"
+    },
+    {
+      "model_id": "diotec_mmbt5551_vendor",
+      "label": "transfer_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "b1ca60fa454c02489b327f85917e59269103703e3813141be65a2a302343fe18",
+      "model_sha256": "96f44107a0eff47851731646952f0ac47cf1d794ad13cd29ca4055f2b81ba2aa",
+      "model_version": "13Dec2017 parameterized example",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://diotec.com/request/spice/mmbt5551.zip",
+      "compatibility": "ltpsa",
+      "directory": "diotec_mmbt5551_vendor/transfer_25",
+      "status": "error",
+      "reason": "exit 1: \n\nError"
+    },
+    {
+      "model_id": "diotec_mmbt5551_vendor",
+      "label": "transfer_50",
+      "temperature_c": 50,
+      "refinement": false,
+      "netlist_sha256": "c2dc1bcb4aeb50dc497c2aa145f72c0780f9e6aad2b31a3380f6e64f006c417d",
+      "model_sha256": "96f44107a0eff47851731646952f0ac47cf1d794ad13cd29ca4055f2b81ba2aa",
+      "model_version": "13Dec2017 parameterized example",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://diotec.com/request/spice/mmbt5551.zip",
+      "compatibility": "ltpsa",
+      "directory": "diotec_mmbt5551_vendor/transfer_50",
+      "status": "error",
+      "reason": "exit 1: \n\nError"
+    },
+    {
+      "model_id": "lsk389a_syntax_r1",
+      "label": "transfer_-10",
+      "temperature_c": -10,
+      "refinement": false,
+      "netlist_sha256": "aa67b9854cd0ad76303bb3606d3ae944765c7002245e4100ed1e591b18b16aba",
+      "model_sha256": "f81f63ea5975db8cce4183711db8beaa80deb36d067e482c92dedf27763ee271",
+      "model_version": "Rev2 18May2026 metadata-r1",
+      "parent_model_id": "lsk389a_vendor",
+      "model_lineage": [
+        {
+          "id": "lsk389a_vendor",
+          "version": "Rev2 18May2026",
+          "sha256": "c458cc0648f4c017d13bbb8454894b06927c934f431d02bb68505f94e8eea8dd",
+          "source_url": "https://www.linearsystems.com/_files/ugd/4be30b_3b75f40e1a364550ac5a47dd56b4eff6.pdf",
+          "retrieved_date": "2026-10-09"
+        }
+      ],
+      "source_url": "https://www.linearsystems.com/_files/ugd/4be30b_3b75f40e1a364550ac5a47dd56b4eff6.pdf",
+      "compatibility": null,
+      "directory": "lsk389a_syntax_r1/transfer_-10",
+      "status": "error",
+      "reason": "exit 0: \nWarning"
+    },
+    {
+      "model_id": "lsk389a_syntax_r1",
+      "label": "transfer_25",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "5cf47128f5c61e95335ab2033577380965f5b6fb4f960bda4db01deb340dd5f0",
+      "model_sha256": "f81f63ea5975db8cce4183711db8beaa80deb36d067e482c92dedf27763ee271",
+      "model_version": "Rev2 18May2026 metadata-r1",
+      "parent_model_id": "lsk389a_vendor",
+      "model_lineage": [
+        {
+          "id": "lsk389a_vendor",
+          "version": "Rev2 18May2026",
+          "sha256": "c458cc0648f4c017d13bbb8454894b06927c934f431d02bb68505f94e8eea8dd",
+          "source_url": "https://www.linearsystems.com/_files/ugd/4be30b_3b75f40e1a364550ac5a47dd56b4eff6.pdf",
+          "retrieved_date": "2026-10-09"
+        }
+      ],
+      "source_url": "https://www.linearsystems.com/_files/ugd/4be30b_3b75f40e1a364550ac5a47dd56b4eff6.pdf",
+      "compatibility": null,
+      "directory": "lsk389a_syntax_r1/transfer_25",
+      "status": "error",
+      "reason": "exit 0: \nWarning"
+    },
+    {
+      "model_id": "lsk389a_syntax_r1",
+      "label": "transfer_50",
+      "temperature_c": 50,
+      "refinement": false,
+      "netlist_sha256": "2199a79494642f4645ef52fa006089e312a6d71c0098e3a0c13c480b89f526b5",
+      "model_sha256": "f81f63ea5975db8cce4183711db8beaa80deb36d067e482c92dedf27763ee271",
+      "model_version": "Rev2 18May2026 metadata-r1",
+      "parent_model_id": "lsk389a_vendor",
+      "model_lineage": [
+        {
+          "id": "lsk389a_vendor",
+          "version": "Rev2 18May2026",
+          "sha256": "c458cc0648f4c017d13bbb8454894b06927c934f431d02bb68505f94e8eea8dd",
+          "source_url": "https://www.linearsystems.com/_files/ugd/4be30b_3b75f40e1a364550ac5a47dd56b4eff6.pdf",
+          "retrieved_date": "2026-10-09"
+        }
+      ],
+      "source_url": "https://www.linearsystems.com/_files/ugd/4be30b_3b75f40e1a364550ac5a47dd56b4eff6.pdf",
+      "compatibility": null,
+      "directory": "lsk389a_syntax_r1/transfer_50",
+      "status": "error",
+      "reason": "exit 0: \nWarning"
+    },
+    {
+      "model_id": "lsk389a_syntax_r1",
+      "label": "ciss",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "a6d8fd4ac54295ddfcdda359453fca68f4c0f87186b3d95c3b84864e9995928f",
+      "model_sha256": "f81f63ea5975db8cce4183711db8beaa80deb36d067e482c92dedf27763ee271",
+      "model_version": "Rev2 18May2026 metadata-r1",
+      "parent_model_id": "lsk389a_vendor",
+      "model_lineage": [
+        {
+          "id": "lsk389a_vendor",
+          "version": "Rev2 18May2026",
+          "sha256": "c458cc0648f4c017d13bbb8454894b06927c934f431d02bb68505f94e8eea8dd",
+          "source_url": "https://www.linearsystems.com/_files/ugd/4be30b_3b75f40e1a364550ac5a47dd56b4eff6.pdf",
+          "retrieved_date": "2026-10-09"
+        }
+      ],
+      "source_url": "https://www.linearsystems.com/_files/ugd/4be30b_3b75f40e1a364550ac5a47dd56b4eff6.pdf",
+      "compatibility": null,
+      "directory": "lsk389a_syntax_r1/ciss",
+      "status": "error",
+      "reason": "exit 0: \nWarning"
+    },
+    {
+      "model_id": "lsk389a_syntax_r1",
+      "label": "gate_leak",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "6182d9fa332e46b556bdf2b83b857bc844bd8763d251aeae20d7616a71ffec7f",
+      "model_sha256": "f81f63ea5975db8cce4183711db8beaa80deb36d067e482c92dedf27763ee271",
+      "model_version": "Rev2 18May2026 metadata-r1",
+      "parent_model_id": "lsk389a_vendor",
+      "model_lineage": [
+        {
+          "id": "lsk389a_vendor",
+          "version": "Rev2 18May2026",
+          "sha256": "c458cc0648f4c017d13bbb8454894b06927c934f431d02bb68505f94e8eea8dd",
+          "source_url": "https://www.linearsystems.com/_files/ugd/4be30b_3b75f40e1a364550ac5a47dd56b4eff6.pdf",
+          "retrieved_date": "2026-10-09"
+        }
+      ],
+      "source_url": "https://www.linearsystems.com/_files/ugd/4be30b_3b75f40e1a364550ac5a47dd56b4eff6.pdf",
+      "compatibility": null,
+      "directory": "lsk389a_syntax_r1/gate_leak",
+      "status": "error",
+      "reason": "exit 0: \nWarning"
+    },
+    {
+      "model_id": "opa1656_vendor",
+      "label": "nodeset_translate_0",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "02497b5399005124b4bd38343b4dbb92df960d9e832923e672b51620793ae592",
+      "model_sha256": "9847ed60c62e792ee6f1c84899278a3c11ce71a6d21804bdd88f51199f1ba055",
+      "model_version": "public SBOMAW6C; header retained",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.ti.com/lit/zip/sbomaw6c",
+      "compatibility": "ps",
+      "directory": "opa1656_vendor/nodeset_translate_0",
+      "status": "error",
+      "reason": "Simulator process-group timeout after15s; partial diagnostic output preserved"
+    },
+    {
+      "model_id": "lmp7721_vendor",
+      "label": "nodeset_translate_0",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "64e3861444957500d3928be356bc1db59a4ffa4b09bdc9b2c3fee8a549bc96af",
+      "model_sha256": "815a27e4a2189e0f54626a36f21cad3002ff21a5d5cd8df9fea60b34ceb2cb39",
+      "model_version": "public SNOM096D; header retained",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.ti.com/lit/zip/snom096d",
+      "compatibility": "ps",
+      "directory": "lmp7721_vendor/nodeset_translate_0",
+      "status": "error",
+      "reason": "Simulator process-group timeout after15s; partial diagnostic output preserved"
+    },
+    {
+      "model_id": "opa928_vendor",
+      "label": "nodeset_translate_0",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "c116705644abbd467bc5edcb185bf68c2b1a39a29b4de9a6806fdb5f57bbffd7",
+      "model_sha256": "f4f9d38efc4aa2a31676c84a351d2ee9379baad88abab8b5afad550c7f99c616",
+      "model_version": "1.1 01Apr2024",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.ti.com/lit/zip/sbomcc0a",
+      "compatibility": "ps",
+      "directory": "opa928_vendor/nodeset_translate_0",
+      "status": "ok",
+      "raw_data_hashes": {
+        "op.raw": "5b119c6ef241e21d81421b8e194c7d26af050fe3aeb9095def67d99af3ae2cef",
+        "ac.raw": "a62b8e1f7467d6f70f3d6914477e1209b159d1c017ec1d8f56e48ebbd84884ef",
+        "noise.raw": "06b18d6cf064280a4cc642838761bf41e5e278b52e6034e11af7b1bc3503f3fc"
+      },
+      "csv_hashes": {
+        "op.raw.csv": "0ffba3ebd45bdd936678eda5a262d2f3d79b8eff0f821e2c6027a3503e86bd9b",
+        "ac.raw.csv": "d73a69c5c389a627733876164ccb5baf44b8229d198a9c4233c220d8926be0c5",
+        "noise.raw.csv": "0cdb5ffd8b058f97a1fe84df02048439869168b9d0c27ea2c72aaf2fdb145527"
+      }
+    },
+    {
+      "model_id": "opa928_vendor",
+      "label": "nodeset_translate_20",
+      "temperature_c": 25,
+      "refinement": false,
+      "netlist_sha256": "60edf4e5f93b6d1d5f070373ee11410321dcffeea794c7646482948ab76958dc",
+      "model_sha256": "f4f9d38efc4aa2a31676c84a351d2ee9379baad88abab8b5afad550c7f99c616",
+      "model_version": "1.1 01Apr2024",
+      "parent_model_id": null,
+      "model_lineage": [],
+      "source_url": "https://www.ti.com/lit/zip/sbomcc0a",
+      "compatibility": "ps",
+      "directory": "opa928_vendor/nodeset_translate_20",
+      "status": "error",
+      "reason": "exit 0: Warning"
+    }
+  ],
+  "complete": false
+}

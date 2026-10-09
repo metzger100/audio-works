@@ -1,25 +1,25 @@
 # M100 Meridian microphone
 
-Condenser-microphone research for private DIY use in Germany: acoustic instruments, accordion, ukulele, voice-over and distant male choir. Goals: low noise, accurate transients, natural detail, smooth off-axis response and restrained warmth; transparency before added distortion.
+Condenser-microphone research for private DIY in Germany. Use and sonic goals: [brief](BRIEF.md).
 
 [Audio Works](../README.md) · [Current state](../CURRENT.md) · [Brief](BRIEF.md) · [Decisions](DECISIONS.md) · [Laboratory](lab/README.md)
 
 ## Status
 
-> **Not released.** No validated build BOM, PCB fabrication package, assembly guide or physical measurements exist.
+> **Not released.** Build BOM, PCB, assembly and physical validation remain absent.
 
-The owner specified Flat K47 Cardioid/Omni K47FRB for simulation on 2026-10-05, superseding earlier capsule-choice gates for research. Purchase, safe polarization and prototype/production selection remain unresolved.
+K47FRB is the owner-specified simulation capsule. Purchase, safe polarization and prototype selection remain unresolved.
 
-[Model evidence](lab/research/device_model_validation.md) is partial: scoped OPA197 grounded small-signal agreement; complete production/noise, floating/nonlinear and P48 output/power coverage remains unavailable. Software tests do not qualify a microphone.
+[Architecture comparison](lab/research/architecture_comparison_001.md) and [measurement priorities](lab/measurement/priority_plan.md): all candidates remain unqualified.
 
 ## Design goals
 
-Balanced XLR/P48, low distortion and interference resistance are objectives. ≤7 dBA self-noise and approximately ≥135 dB SPL remain aspirational; capsule mechanics/noise/overload are unknown. The [specification](lab/spec/microphone_spec.yaml) defines research thresholds, not hardware ratings.
+The [specification](lab/spec/microphone_spec.yaml) records balanced XLR/P48, noise, SPL and distortion goals. Capsule mechanics/noise/overload remain unknown; research thresholds are not hardware ratings.
 
 ## Design documentation
 
-The [capsule archive](research/reference-datasheets/README.md) retains history. The laboratory links simulations/results; the [measurement handoff](lab/measurement/README.md) defines future physical records.
+[Capsule history](research/reference-datasheets/README.md) · [measurement handoff](lab/measurement/README.md).
 
-Follow [components](../COMPONENTS.md), [Germany procurement](lab/research/procurement_germany.md), [patents](../PATENTS.md) and the [scientific contract](lab/CONTRACT.md). Preserve sources, assumptions, failures and decisions. Use reading routes and the [completion gate](../CONTRIBUTING.md#complete-a-change); read additional evidence needed for correctness.
+Follow [components](../COMPONENTS.md), [Germany procurement](lab/research/procurement_germany.md), [patents](../PATENTS.md), the [scientific contract](lab/CONTRACT.md) and [completion gate](../CONTRIBUTING.md#complete-a-change). Preserve sources, assumptions, failures and decisions.
 
-[Build conventions](../CONTRIBUTING.md#documenting-a-hardware-project) describe future releases. [License](../LICENSE): hardware/design documentation CERN-OHL-S-2.0; software/general material GPL-3.0-or-later; third-party terms apply.
+See [build conventions](../CONTRIBUTING.md#documenting-a-hardware-project) and [licence scope](../LICENSE).

@@ -1,0 +1,18 @@
+Meridian isolated vishay_2n7002k_ps transfer_125
+* SPDX-License-Identifier: CERN-OHL-S-2.0
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/device_models/20261009T070419Z_3bd1122a/source/models/semiconductor/vendor/vishay_2n7002k.lib"
+.temp 125
+.options reltol=1e-06 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+Vd d 0 DC 10 AC 0
+Vg g 0 DC 0 AC 1
+Xq d g 0 2N7002K
+Hout out 0 Vd 1
+Hgate ig 0 Vg 1
+.control
+set filetype=ascii
+set numdgt=16
+dc Vg 0 6 .002
+write transfer.raw v(g) i(vd) i(vg)
+quit
+.endc
+.end

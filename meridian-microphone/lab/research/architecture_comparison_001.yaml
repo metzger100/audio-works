@@ -1,0 +1,35 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+schema_version: 1
+date: '2026-10-09'
+batch: results/optimization_batches/20261009T090126Z_4735cd2a
+scope: Read-only synthesis of frozen simulation evidence; no physical or legal qualification
+representatives:
+  candidate_0019:
+    name: Filtered fixed-bias JFET
+    reason: Smallest tested nominal response deviation among realized filtered conventional children; lower-count 0017 remains a practical research companion.
+  candidate_0023:
+    name: Discrete servo JFET
+    reason: Smallest tested nominal response deviation among realized servo children; no claim of best noise, yield or overall architecture.
+  candidate_0012:
+    name: BJT-only charge feedback
+    reason: Most complete ordinary-passive DC-authority descendant; 0024 is worse in the response screen. Original 0005 retains slightly better nominal sensitivity but backordered dependencies.
+  candidate_0010:
+    name: Guarded CMOS voltage input
+    reason: Retains real CMOS input and guard in tested NPN-output child; convergence hold supplies no usable performance ranking.
+  candidate_0014:
+    name: CMOS charge feedback
+    reason: Explicit C0G loss/insulation realization; convergence hold supplies no usable performance ranking.
+  candidate_0013:
+    name: Floating carrier bridge control
+    reason: Most complete tested passive realization; excitation, demodulator and buffers remain ideals, periodic integration fails.
+additional_analysis:
+  - Verify original source, implementation, deck and raw hashes, including failures.
+  - Reintegrate original noise spectra with an exhaustive disjoint contribution partition; do not change the archived results or suite.
+  - Pair shared deterministic external endpoints; never compare unpaired random draws as yield.
+  - Derive explicitly labelled linear sensitivity rescaling over the unchanged 5-40mV/Pa assumption range.
+  - Derive response/current/count research Pareto projections within exact frozen cohorts; exclude unsupported noise, costs, yield and carrier power.
+new_spice_evaluations: 0
+reason_no_repeat_evaluation: Existing 17 complete suite attempts share a frozen cohort; repeated unresolved nonlinear/macro failures would add no defensible coverage. Offline analyses reduce identifiable reporting gaps.
+acceptance_or_uncertainty_changes: none
+production_selection: null
+physical_measurements: []

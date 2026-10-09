@@ -1,0 +1,52 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+schema_version: 1
+checked_date: '2026-10-09'
+method: Public read-only web retrieval; no basket, checkout, account, supplier contact or purchase
+parent_registers:
+  - procurement/architecture_parts_2026-10-09.yaml
+  - procurement/robust_parts_2026-10-09.yaml
+observations:
+  - url: https://store.arienneaudio.com/microphone-capsules/20-26-arienne-audio-flat-k47-microphone-capsule.html#/12-options-cardioid_omni
+    reported_crawl_age: 4 days
+    variant_observed: Cardioid/Omni K47FRB
+    displayed_currency: USD
+    displayed_price: 131.44
+    stock_observed: 11
+    included_mount: saddle, mounting post and screws
+    safe_polarization_v: null
+    moq_verified: null
+    retail_pack_verified: null
+    private_germany_delivery_verified: false
+    lead_time: null
+    shipping_eur: null
+    tax_import_payment_fees_eur: null
+    confirmed_delivered_eur: null
+    limitation: Cached public observation, no accepted Germany quote; no FX conversion into an invented EUR cost.
+  - url: https://store.arienneaudio.com/microphone-capsules/20-arienne-audio-flat-k47-microphone-capsule.html?SubmitCurrency=1&id_currency=4
+    reported_crawl_age: last month
+    variant_observed: Cardioid K47FBSB
+    displayed_currency: EUR
+    displayed_price: 90.81
+    usable_for_K47FRB_quote: false
+    limitation: Currency link changed variant. Reject transferring its price to the required Cardioid/Omni capsule.
+  - url: https://www.digikey.de/en/products/detail/texas-instruments/JFE150DBVR/18185049
+    retrieval: Internal error; page inaccessible through web tool
+    live_stock: null
+    accepted_quote: false
+  - url: https://www.digikey.de/en/products/detail/panasonic-industry/EEU-FR1J470/3072280
+    retrieval: Cache miss
+    live_stock: null
+    accepted_quote: false
+  - url: https://www.digikey.de/en/terms-and-conditions
+    reported_crawl_age: today
+    sections_inspected: [5, 8, 9, 10]
+    observation: EUR non-business destination terms exist; no minimum order/handling fee. Freight/tax depends on warehouse and courier; product pages alone do not establish a delivered total.
+    private_route_confirmed_at_terms_level: true
+    exact_part_orderability_confirmed: false
+    handling_fee_eur: 0
+    shipping_eur: null
+    accepted_quote: false
+capsule_quantity: 1
+matching_service_or_comparison_purchases: false
+budget_cap_eur: null
+all_confirmed_delivered_totals_eur: null

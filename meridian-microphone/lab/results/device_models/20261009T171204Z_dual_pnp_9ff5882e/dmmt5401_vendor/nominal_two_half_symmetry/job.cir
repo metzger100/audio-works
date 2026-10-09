@@ -1,0 +1,18 @@
+Meridian isolated dmmt5401_vendor nominal_two_half_symmetry
+* SPDX-License-Identifier: CERN-OHL-S-2.0
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/device_models/20261009T171204Z_dual_pnp_9ff5882e/source/models/semiconductor/vendor/dmmt5401.lib"
+.temp 25
+.options reltol=1e-06 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+Vc1 c1 0 -5
+Vc2 c2 0 -5
+Vb1 b1 0 -.67456
+Vb2 b2 0 -.67456
+Xq c1 b1 b2 c2 0 0 DMMT5401
+.control
+set filetype=ascii
+set numdgt=16
+op
+write op.raw i(vc1) i(vc2) i(vb1) i(vb2)
+quit
+.endc
+.end

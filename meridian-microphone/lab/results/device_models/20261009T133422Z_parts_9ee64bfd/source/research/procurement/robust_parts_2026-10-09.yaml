@@ -1,0 +1,56 @@
+# SPDX-License-Identifier: CERN-OHL-S-2.0
+schema_version: 1
+checked_date: '2026-10-09'
+parent_register: architecture_parts_2026-10-09.yaml
+observations: ../architecture_sources/robust_observations_2026-10-09.json
+scope: Output-capacitor combinations for one possible finished microphone; alternatives not a shopping basket
+capsule_quantity: 1
+purchase_authorized: false
+budget_ceiling_eur: null
+part:
+  exact_mpn: EEU-FR1J470
+  manufacturer: Panasonic
+  nominal_f: 4.7e-5
+  tolerance_fraction: 0.20
+  voltage_v: 63
+  technology: Polar aluminum electrolytic FR-A
+  package: Radial 6.3mm diameter, 11.2mm body, 2.5mm pitch
+  primary_url: https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1J470
+  manufacturer_document: https://industrial.panasonic.com/cdbs/www-data/pdf/RDF0000/ABA0000C1259.pdf
+  datasheet_version: 01-Sep-25
+  temperature_c: [-40, 105]
+  tan_delta_max_at_120hz_20c: 0.09
+  leakage_max_a_at_63v_20c_after_2min: 2.96e-5
+  supplier_url: https://www.digikey.de/en/products/detail/panasonic-industry/EEU-FR1J470/3072280
+  supplier: DigiKey Germany
+  manufacturer_lifecycle: Current primary product listing; supplier Active observation
+  stock_observed: 65991
+  reported_crawl_age: 4 months
+  live_stock: null
+  direct_retrieval: Failed internal error; preserved observation, no accepted quote
+  moq_observed: 1
+  order_multiple_observed: 1
+  retail_pack_size_observed: 1
+  factory_pack_not_ordered: 5000
+  actual_dispatch_lead_time: null
+  manufacturer_lead_time: null
+  private_germany_route: Parent seller_contracts/digikey public consumer EUR terms; subject to acceptance, no checkout/contact
+  unit_price_net_eur_scenario: 0.40
+  vat_fraction_scenario: 0.19
+  unit_price_gross_eur_scenario: 0.476
+  price_tax_basis: Retain parent's net-price interpretation as scenario, not invoice confirmation
+  shipping_eur_per_basket_scenario: [25, 29.75]
+  shipping_tax_basis: Parent public EUR25 summary may be gross or net; neither accepted quote
+  import_payment_fees_eur: null
+  confirmed_delivered_eur: null
+  substitutes_qualified: []
+combination_policy:
+  counts_per_leg: [1, 2, 3, 4]
+  nominal_total_f: [4.7e-5, 9.4e-5, 1.41e-4, 1.88e-4]
+  independent_capacitance_tolerances: true
+  correlated_tolerance_extremes_also_tested: true
+  loss_stress: Constant series R anchored to tan_delta/(2*pi*120*C), not broadband ESR qualification
+  leakage_stress: Ohmic 63V/29.6uA anchor; actual voltage/temperature/aging dependence and excess noise unknown
+  temperature: Full -10..50C electrical suite; cap temperature law unknown, with original uncertainty retained
+  cost: Count all installed parts, no free-shipping top-ups, no surplus matching/selection
+  readiness: Research BOM only; no physical footprint/SOA/broadband loss/noise/orderability qualification

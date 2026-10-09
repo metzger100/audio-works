@@ -1,0 +1,890 @@
+family: no_fet
+concept_parent: concept_0007
+ideal_devices: false
+semiconductor_models:
+- bc846b_emitter_r1
+parameters:
+  RHARVESTP_VALUE:
+    default: 2200
+    range:
+    - 2178.0
+    - 2222.0
+    scale: log
+    provenance: BOM RC0603FR-072K2L; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RHARVESTN_VALUE:
+    default: 2200
+    range:
+    - 2178.0
+    - 2222.0
+    scale: log
+    provenance: BOM RC0603FR-072K2L; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  CRAW_VALUE:
+    default: 4.7e-05
+    range:
+    - 3.76e-05
+    - 5.6399999999999995e-05
+    scale: log
+    provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+      partial
+  RREGTOP_VALUE:
+    default: 100000
+    range:
+    - 99000.0
+    - 101000.0
+    scale: log
+    provenance: BOM RC0603FR-07100KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RREGBOTTOM_VALUE:
+    default: 100000
+    range:
+    - 99000.0
+    - 101000.0
+    scale: log
+    provenance: BOM RC0603FR-07100KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  CREGBASE_VALUE:
+    default: 1.0e-06
+    range:
+    - 9.499999999999999e-07
+    - 1.05e-06
+    scale: log
+    provenance: BOM R82EC4100DQ70J; capacitance tolerance; dielectric/leakage/ESR
+      coverage partial
+  CRAIL_VALUE:
+    default: 4.7e-05
+    range:
+    - 3.76e-05
+    - 5.6399999999999995e-05
+    scale: log
+    provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+      partial
+  RMIDTOP_VALUE:
+    default: 10000
+    range:
+    - 9900.0
+    - 10100.0
+    scale: log
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RMIDBOTTOM_VALUE:
+    default: 10000
+    range:
+    - 9900.0
+    - 10100.0
+    scale: log
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  CMID_VALUE:
+    default: 4.7e-05
+    range:
+    - 3.76e-05
+    - 5.6399999999999995e-05
+    scale: log
+    provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+      partial
+  RPOLAR0_VALUE:
+    default: 1000000
+    range:
+    - 990000.0
+    - 1010000.0
+    scale: log
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RPOLAR1_VALUE:
+    default: 1000000
+    range:
+    - 990000.0
+    - 1010000.0
+    scale: log
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RPOLAR2_VALUE:
+    default: 1000000
+    range:
+    - 990000.0
+    - 1010000.0
+    scale: log
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RPOLAR3_VALUE:
+    default: 1000000
+    range:
+    - 990000.0
+    - 1010000.0
+    scale: log
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RPOLAR4_VALUE:
+    default: 1000000
+    range:
+    - 990000.0
+    - 1010000.0
+    scale: log
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RPOLAR5_VALUE:
+    default: 1000000
+    range:
+    - 990000.0
+    - 1010000.0
+    scale: log
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RPOLAR6_VALUE:
+    default: 1000000
+    range:
+    - 990000.0
+    - 1010000.0
+    scale: log
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RPOLAR7_VALUE:
+    default: 1000000
+    range:
+    - 990000.0
+    - 1010000.0
+    scale: log
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RPOLAR8_VALUE:
+    default: 1000000
+    range:
+    - 990000.0
+    - 1010000.0
+    scale: log
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RPOLAR9_VALUE:
+    default: 1000000
+    range:
+    - 990000.0
+    - 1010000.0
+    scale: log
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  CPOL_VALUE:
+    default: 1.0e-07
+    range:
+    - 9.499999999999999e-08
+    - 1.05e-07
+    scale: log
+    provenance: BOM R82EC3100DQ70J; capacitance tolerance; dielectric/leakage/ESR
+      coverage partial
+  RBACK_VALUE:
+    default: 1000000
+    range:
+    - 990000.0
+    - 1010000.0
+    scale: log
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RREFTOP_VALUE:
+    default: 10000
+    range:
+    - 9900.0
+    - 10100.0
+    scale: log
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RREFBOTTOM_VALUE:
+    default: 10000
+    range:
+    - 9900.0
+    - 10100.0
+    scale: log
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  CREF_VALUE:
+    default: 4.7e-05
+    range:
+    - 3.76e-05
+    - 5.6399999999999995e-05
+    scale: log
+    provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+      partial
+  REMITTER1_VALUE:
+    default: 1000
+    range:
+    - 990.0
+    - 1010.0
+    scale: log
+    provenance: BOM RC0603FR-071KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  REMITTER2_VALUE:
+    default: 1000
+    range:
+    - 990.0
+    - 1010.0
+    scale: log
+    provenance: BOM RC0603FR-071KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RTAIL_VALUE:
+    default: 10000
+    range:
+    - 9900.0
+    - 10100.0
+    scale: log
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RCOLLECTOR1_VALUE:
+    default: 10000
+    range:
+    - 9900.0
+    - 10100.0
+    scale: log
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RCOLLECTOR2_VALUE:
+    default: 10000
+    range:
+    - 9900.0
+    - 10100.0
+    scale: log
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RFEEDBACK_VALUE:
+    default: 1000000
+    range:
+    - 990000.0
+    - 1010000.0
+    scale: log
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  CFEEDBACK_VALUE:
+    default: 1.0e-07
+    range:
+    - 9.499999999999999e-08
+    - 1.05e-07
+    scale: log
+    provenance: BOM R82EC3100DQ70J; capacitance tolerance; dielectric/leakage/ESR
+      coverage partial
+  ROUTLOADP_VALUE:
+    default: 10000
+    range:
+    - 9900.0
+    - 10100.0
+    scale: log
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  ROUTLOADN_VALUE:
+    default: 10000
+    range:
+    - 9900.0
+    - 10100.0
+    scale: log
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  RREAR_VALUE:
+    default: 1000
+    range:
+    - 990.0
+    - 1010.0
+    scale: log
+    provenance: BOM RC0603FR-071KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  ROUTP_VALUE:
+    default: 47
+    range:
+    - 46.53
+    - 47.47
+    scale: log
+    provenance: BOM RC0603FR-0747RL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  ROUTN_VALUE:
+    default: 47
+    range:
+    - 46.53
+    - 47.47
+    scale: log
+    provenance: BOM RC0603FR-0747RL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+  COUTP_VALUE:
+    default: 4.7e-05
+    range:
+    - 3.76e-05
+    - 5.6399999999999995e-05
+    scale: log
+    provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+      partial
+  COUTN_VALUE:
+    default: 4.7e-05
+    range:
+    - 3.76e-05
+    - 5.6399999999999995e-05
+    scale: log
+    provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+      partial
+population:
+  RHARVESTP_VALUE:
+    range:
+    - 2178.0
+    - 2222.0
+    distribution: uniform
+    provenance: BOM RC0603FR-072K2L; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RHARVESTN_VALUE:
+    range:
+    - 2178.0
+    - 2222.0
+    distribution: uniform
+    provenance: BOM RC0603FR-072K2L; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  CRAW_VALUE:
+    range:
+    - 3.76e-05
+    - 5.6399999999999995e-05
+    distribution: uniform
+    provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+      partial
+    interpretation: independent tolerance stress, not a measured production distribution
+  RREGTOP_VALUE:
+    range:
+    - 99000.0
+    - 101000.0
+    distribution: uniform
+    provenance: BOM RC0603FR-07100KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RREGBOTTOM_VALUE:
+    range:
+    - 99000.0
+    - 101000.0
+    distribution: uniform
+    provenance: BOM RC0603FR-07100KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  CREGBASE_VALUE:
+    range:
+    - 9.499999999999999e-07
+    - 1.05e-06
+    distribution: uniform
+    provenance: BOM R82EC4100DQ70J; capacitance tolerance; dielectric/leakage/ESR
+      coverage partial
+    interpretation: independent tolerance stress, not a measured production distribution
+  CRAIL_VALUE:
+    range:
+    - 3.76e-05
+    - 5.6399999999999995e-05
+    distribution: uniform
+    provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+      partial
+    interpretation: independent tolerance stress, not a measured production distribution
+  RMIDTOP_VALUE:
+    range:
+    - 9900.0
+    - 10100.0
+    distribution: uniform
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RMIDBOTTOM_VALUE:
+    range:
+    - 9900.0
+    - 10100.0
+    distribution: uniform
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  CMID_VALUE:
+    range:
+    - 3.76e-05
+    - 5.6399999999999995e-05
+    distribution: uniform
+    provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+      partial
+    interpretation: independent tolerance stress, not a measured production distribution
+  RPOLAR0_VALUE:
+    range:
+    - 990000.0
+    - 1010000.0
+    distribution: uniform
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RPOLAR1_VALUE:
+    range:
+    - 990000.0
+    - 1010000.0
+    distribution: uniform
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RPOLAR2_VALUE:
+    range:
+    - 990000.0
+    - 1010000.0
+    distribution: uniform
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RPOLAR3_VALUE:
+    range:
+    - 990000.0
+    - 1010000.0
+    distribution: uniform
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RPOLAR4_VALUE:
+    range:
+    - 990000.0
+    - 1010000.0
+    distribution: uniform
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RPOLAR5_VALUE:
+    range:
+    - 990000.0
+    - 1010000.0
+    distribution: uniform
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RPOLAR6_VALUE:
+    range:
+    - 990000.0
+    - 1010000.0
+    distribution: uniform
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RPOLAR7_VALUE:
+    range:
+    - 990000.0
+    - 1010000.0
+    distribution: uniform
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RPOLAR8_VALUE:
+    range:
+    - 990000.0
+    - 1010000.0
+    distribution: uniform
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RPOLAR9_VALUE:
+    range:
+    - 990000.0
+    - 1010000.0
+    distribution: uniform
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  CPOL_VALUE:
+    range:
+    - 9.499999999999999e-08
+    - 1.05e-07
+    distribution: uniform
+    provenance: BOM R82EC3100DQ70J; capacitance tolerance; dielectric/leakage/ESR
+      coverage partial
+    interpretation: independent tolerance stress, not a measured production distribution
+  RBACK_VALUE:
+    range:
+    - 990000.0
+    - 1010000.0
+    distribution: uniform
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RREFTOP_VALUE:
+    range:
+    - 9900.0
+    - 10100.0
+    distribution: uniform
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RREFBOTTOM_VALUE:
+    range:
+    - 9900.0
+    - 10100.0
+    distribution: uniform
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  CREF_VALUE:
+    range:
+    - 3.76e-05
+    - 5.6399999999999995e-05
+    distribution: uniform
+    provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+      partial
+    interpretation: independent tolerance stress, not a measured production distribution
+  REMITTER1_VALUE:
+    range:
+    - 990.0
+    - 1010.0
+    distribution: uniform
+    provenance: BOM RC0603FR-071KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  REMITTER2_VALUE:
+    range:
+    - 990.0
+    - 1010.0
+    distribution: uniform
+    provenance: BOM RC0603FR-071KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RTAIL_VALUE:
+    range:
+    - 9900.0
+    - 10100.0
+    distribution: uniform
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RCOLLECTOR1_VALUE:
+    range:
+    - 9900.0
+    - 10100.0
+    distribution: uniform
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RCOLLECTOR2_VALUE:
+    range:
+    - 9900.0
+    - 10100.0
+    distribution: uniform
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RFEEDBACK_VALUE:
+    range:
+    - 990000.0
+    - 1010000.0
+    distribution: uniform
+    provenance: BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  CFEEDBACK_VALUE:
+    range:
+    - 9.499999999999999e-08
+    - 1.05e-07
+    distribution: uniform
+    provenance: BOM R82EC3100DQ70J; capacitance tolerance; dielectric/leakage/ESR
+      coverage partial
+    interpretation: independent tolerance stress, not a measured production distribution
+  ROUTLOADP_VALUE:
+    range:
+    - 9900.0
+    - 10100.0
+    distribution: uniform
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  ROUTLOADN_VALUE:
+    range:
+    - 9900.0
+    - 10100.0
+    distribution: uniform
+    provenance: BOM RC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  RREAR_VALUE:
+    range:
+    - 990.0
+    - 1010.0
+    distribution: uniform
+    provenance: BOM RC0603FR-071KL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  ROUTP_VALUE:
+    range:
+    - 46.53
+    - 47.47
+    distribution: uniform
+    provenance: BOM RC0603FR-0747RL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  ROUTN_VALUE:
+    range:
+    - 46.53
+    - 47.47
+    distribution: uniform
+    provenance: BOM RC0603FR-0747RL; catalogue tolerance; excess noise/voltage coefficient
+      unqualified
+    interpretation: independent tolerance stress, not a measured production distribution
+  COUTP_VALUE:
+    range:
+    - 3.76e-05
+    - 5.6399999999999995e-05
+    distribution: uniform
+    provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+      partial
+    interpretation: independent tolerance stress, not a measured production distribution
+  COUTN_VALUE:
+    range:
+    - 3.76e-05
+    - 5.6399999999999995e-05
+    distribution: uniform
+    provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+      partial
+    interpretation: independent tolerance stress, not a measured production distribution
+device_models: []
+qualification_evidence: []
+noise_groups: {}
+dc_probes: []
+loop_probes: []
+power_devices:
+- instance: Qreg
+  model_id: bc846b_emitter_r1
+  nodes:
+  - raw
+  - regbase
+  - rail
+  currents:
+  - i(v.xdut.vqreg_0)
+  - i(v.xdut.vqreg_1)
+  - i(v.xdut.vqreg_2)
+- instance: Qinput
+  model_id: bc846b_emitter_r1
+  nodes:
+  - outa
+  - f
+  - e1
+  currents:
+  - i(v.xdut.vqinput_0)
+  - i(v.xdut.vqinput_1)
+  - i(v.xdut.vqinput_2)
+- instance: Qreference
+  model_id: bc846b_emitter_r1
+  nodes:
+  - outb
+  - ref
+  - e2
+  currents:
+  - i(v.xdut.vqreference_0)
+  - i(v.xdut.vqreference_1)
+  - i(v.xdut.vqreference_2)
+- instance: Qoutp
+  model_id: bc846b_emitter_r1
+  nodes:
+  - rail
+  - outa
+  - outp
+  currents:
+  - i(v.xdut.vqoutp_0)
+  - i(v.xdut.vqoutp_1)
+  - i(v.xdut.vqoutp_2)
+- instance: Qoutn
+  model_id: bc846b_emitter_r1
+  nodes:
+  - rail
+  - outb
+  - outn
+  currents:
+  - i(v.xdut.vqoutn_0)
+  - i(v.xdut.vqoutn_1)
+  - i(v.xdut.vqoutn_2)
+power_resistors:
+- reference: Rharvestp
+  nodes:
+  - p
+  - raw
+  parameter: RHARVESTP_VALUE
+- reference: Rharvestn
+  nodes:
+  - n
+  - raw
+  parameter: RHARVESTN_VALUE
+- reference: Rregtop
+  nodes:
+  - raw
+  - regbase
+  parameter: RREGTOP_VALUE
+- reference: Rregbottom
+  nodes:
+  - regbase
+  - g
+  parameter: RREGBOTTOM_VALUE
+- reference: Rmidtop
+  nodes:
+  - rail
+  - mid
+  parameter: RMIDTOP_VALUE
+- reference: Rmidbottom
+  nodes:
+  - mid
+  - g
+  parameter: RMIDBOTTOM_VALUE
+- reference: Rpolar0
+  nodes:
+  - raw
+  - pol_0
+  parameter: RPOLAR0_VALUE
+- reference: Rpolar1
+  nodes:
+  - pol_0
+  - pol_1
+  parameter: RPOLAR1_VALUE
+- reference: Rpolar2
+  nodes:
+  - pol_1
+  - pol_2
+  parameter: RPOLAR2_VALUE
+- reference: Rpolar3
+  nodes:
+  - pol_2
+  - pol_3
+  parameter: RPOLAR3_VALUE
+- reference: Rpolar4
+  nodes:
+  - pol_3
+  - pol_4
+  parameter: RPOLAR4_VALUE
+- reference: Rpolar5
+  nodes:
+  - pol_4
+  - pol_5
+  parameter: RPOLAR5_VALUE
+- reference: Rpolar6
+  nodes:
+  - pol_5
+  - pol_6
+  parameter: RPOLAR6_VALUE
+- reference: Rpolar7
+  nodes:
+  - pol_6
+  - pol_7
+  parameter: RPOLAR7_VALUE
+- reference: Rpolar8
+  nodes:
+  - pol_7
+  - pol_8
+  parameter: RPOLAR8_VALUE
+- reference: Rpolar9
+  nodes:
+  - pol_8
+  - pol
+  parameter: RPOLAR9_VALUE
+- reference: Rback
+  nodes:
+  - pol
+  - b
+  parameter: RBACK_VALUE
+- reference: Rreftop
+  nodes:
+  - rail
+  - ref
+  parameter: RREFTOP_VALUE
+- reference: Rrefbottom
+  nodes:
+  - ref
+  - g
+  parameter: RREFBOTTOM_VALUE
+- reference: Remitter1
+  nodes:
+  - e1
+  - tail
+  parameter: REMITTER1_VALUE
+- reference: Remitter2
+  nodes:
+  - e2
+  - tail
+  parameter: REMITTER2_VALUE
+- reference: Rtail
+  nodes:
+  - tail
+  - g
+  parameter: RTAIL_VALUE
+- reference: Rcollector1
+  nodes:
+  - rail
+  - outa
+  parameter: RCOLLECTOR1_VALUE
+- reference: Rcollector2
+  nodes:
+  - rail
+  - outb
+  parameter: RCOLLECTOR2_VALUE
+- reference: Rfeedback
+  nodes:
+  - outa
+  - f
+  parameter: RFEEDBACK_VALUE
+- reference: Routloadp
+  nodes:
+  - outp
+  - g
+  parameter: ROUTLOADP_VALUE
+- reference: Routloadn
+  nodes:
+  - outn
+  - g
+  parameter: ROUTLOADN_VALUE
+- reference: Rrear
+  nodes:
+  - rear
+  - g
+  parameter: RREAR_VALUE
+- reference: Routp
+  nodes:
+  - outp
+  - cp
+  parameter: ROUTP_VALUE
+- reference: Routn
+  nodes:
+  - outn
+  - cn
+  parameter: ROUTN_VALUE
+questions:
+  sensed_quantity: front displacement charge at a bipolar summing input
+  loading: finite differential-pair loop; base shot noise remains
+  dc_bias: fixed midrail pair and degenerated tail; 1 Mohm DC feedback supplies base
+    current
+  gain_or_impedance_transformation: discrete differential error amplifier, 100 nF
+    feedback and emitter followers
+  balanced_output: Real output devices and two 47 ohm/47 uF legs; harvest/cable/load
+    coupling measured, symmetry not presumed
+  expected_noise: base-current shot noise, feedback resistor and collector/output
+    noise; missing KF explicitly unknown
+  expected_distortion: differential pair curvature, finite loop gain, unequal follower
+    bias
+  likely_fatal_flaw: low reset resistance requires very large Cfb and loses sensitivity/SNR
+  quickest_falsification: base current/feedback authority, pressure-referred shot
+    noise and finite-loop response
+  hypothesis: An entirely BJT audio/power path can perform charge feedback without
+    a FET, but base-current noise and DC authority may dominate the LF budget.
+sources:
+- S05
+- S07
+- S17
+input_device_class: BJT
+fet_audio_path: false
+fet_power_circuitry: false
+internal_device_classes: NPN only
+procurement_state: research_BOM_live_orderability_and_delivered_quote_unverified
+patent_state: unscreened_no_clearance
+prototype_gate: hold
+manufacture_gate: hold
+build_publication_gate: hold
+niche:
+  input_device: BJT
+  sensing: charge
+  reference: single_ended
+  feedback: bipolar_capacitive_feedback
+  bias: fixed_parts
+  active_device_count: 5
+  servo: false
+  output: differential_real_devices
+  common_mode: divider
+  bootstrap: false
+id: candidate_0005
+kind: research_candidate
+parents:
+- fixture_0001
+hypothesis: An entirely BJT audio/power path can perform charge feedback without a
+  FET, but base-current noise and DC authority may dominate the LF budget.
+structural_changes: Independent BJT-only discrete charge-feedback input mechanism
+  child of interface fixture; not a copied production microphone.
+eligible: false
+state: engineering_ready

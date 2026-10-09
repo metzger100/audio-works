@@ -1,0 +1,248 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+schema_version: 1
+checked_date: '2026-10-09'
+timezone: Europe/Berlin
+scope: Library alternatives per hypothetical functional slot for one finished microphone; no selected architecture, purchase basket or substitute approval.
+parent_register: research/procurement/semiconductors_2026-10-05.yaml
+purchase_authorized: false
+capsule_quantity: 1
+budget_ceiling_eur: null
+evidence_limit: Direct retail requests returned 403 or HTTP 200 access-denied/challenge pages. Indexed observations retain reported crawl age; none establishes live stock or an accepted Germany quote.
+snapshots:
+- research/device_sources/local/2026-10-09/http_observations.json
+- research/device_sources/local/2026-10-09/search_terms_observations.json
+- research/device_sources/local/2026-10-09/search_retail_observations.json
+- research/device_sources/local/2026-10-09/stock_search_observations.json
+- research/device_sources/local/2026-10-09/digikey_indexed_observations.json
+seller_contracts:
+  digikey:
+    private_customer_state: Public German terms explicitly address non-business EUR customers without validated VAT number; registration not required and no minimum order/handling charge. Ordering remains subject to supplier acceptance.
+    terms_url: https://www.digikey.de/en/terms-and-conditions
+    terms_version: Rev 5.7, modified 2026-03-10; retrieved via indexed primary page 2026-10-09,reported crawl last week.
+    germany_route: Warehouse shipments to non-business EUR customers under applicable DDP route; distinguish other couriers and marketplace CPT shipments.
+    shipping_eur_under_75_observed: 25
+    shipping_tax_basis: Unknown for the25 EUR public summary; retain separate net/gross scenarios.
+    delivery_time_observed: Typically 48 h Germany transit; actual dispatch and customs timing unconfirmed.
+    shipping_summary_url: https://www.digikey.de/en/products/detail/texas-instruments/OPA197IDBVR/5962128?s=N4Ig7CBcoIYE5QIwA5EGYA0IYBcmZAAcBLJAJjLAE4zEBfOoA
+    vat: Product observations distinguish19 percent VAT-inclusive shelf price; UPS terms assess VAT on invoice. No checkout-specific confirmation.
+    import_fees_eur: null
+    handling_fee_eur: 0
+    payment_fx_fees_eur: null
+    reeling_fee_eur_if_selected: 5.50
+    instruction: Cut tape avoids optional Digi-Reel fee; do not order a factory reel or extra parts to reach free shipping.
+  mouser:
+    private_customer_state: German storefront and retail MOQ 1 observed; independent consumer eligibility verification remains incomplete. Do not treat this route as fully verified private orderability.
+    germany_route: Product page says Germany,EUR,DDP and duty/customs included for selected shipping methods; exact route/tax/fees unresolved.
+    terms_url: https://www.mouser.de/terms/
+    direct_terms_state: HTTP 200 access denied; no terms acceptance or checkout.
+    shipping_eur: null
+    import_fees_eur: null
+    payment_fx_fees_eur: null
+    reeling_fee_eur_if_selected: 5.0
+  tme:
+    private_customer_state: Prior2026-10-05 German consumer terms evidence retained;2026-10-09 direct product retrieval403.
+    terms_url: https://static.cs.tme.eu/2025/01/677d16e64f859/de.pdf
+    germany_route: German retail storefront; delivery quote and exact dispatch unknown.
+    shipping_eur: null
+    import_fees_eur: null
+    payment_fx_fees_eur: null
+parts:
+- id: vishay_2n7002k
+  manufacturer: Vishay Siliconix
+  exact_mpn: 2N7002K-T1-GE3
+  package: SOT-23 TO-236
+  lifecycle: ExactGE3 order code remains manufacturer-listed; supplier Active. No explicit manufacturer lifecycle label found.
+  lifecycle_url: https://www.vishay.com/en/product/71333/tab/quality/
+  intended_quantity_if_used: 1
+  manufacturer_single_source: true
+  sourcing_state: Two independent indexed retail routes; live stock/private Mouser access and delivered quote unresolved.
+  routes:
+  - seller: DigiKey Germany
+    url: https://www.digikey.de/de/products/detail/vishay-siliconix/2N7002K-T1-GE3/2621521
+    observation_date: '2026-10-09'
+    observation_kind: Indexed primary catalogue,reported crawl3 months; direct 403/cache miss.
+    stock_observed: 2315
+    live_stock: null
+    supplier_sku: 2N7002K-T1-GE3CT-ND
+    moq: 1
+    order_multiple: 1
+    pack_size: 1
+    factory_pack: 3000
+    packaging: Cut tape
+    purchase_quantity_if_used: 1
+    unavoidable_excess: 0
+    manufacturer_lead_time_weeks_observed: 63
+    dispatch_lead_time: null
+    unit_price_net_eur_observed: 0.27
+    unit_price_vat_inclusive_eur_observed: 0.3213
+    delivered_cost_eur: null
+  - seller: Mouser Germany
+    url: https://www.mouser.de/en/ProductDetail/Vishay-Semiconductors/2N7002K-T1-GE3?qs=45wPT2wjtGnHy1uvyAq5Mg%3D%3D
+    observation_date: '2026-10-09'
+    observation_kind: Indexed primary page,reported crawl3 weeks; directHTTP 200 access denied.
+    stock_observed: 258089
+    live_stock: null
+    supplier_sku: 781-2N7002K-GE3
+    moq: 1
+    order_multiple: 1
+    pack_size: 1
+    factory_pack: 3000
+    packaging: Cut tape; optional MouseReel adds 5 EUR
+    purchase_quantity_if_used: 1
+    unavoidable_excess: 0
+    manufacturer_lead_time_weeks_observed: 43
+    dispatch_lead_time_observed: Catalogue says can dispatch immediately; not live confirmation.
+    unit_price_eur_tax_basis_unknown: 0.267
+    delivered_cost_eur: null
+  substitutes:
+  - {manufacturer: Diodes Incorporated, mpn: 2N7002K-7, state: Research alternative; separate datasheet/model/noise/package/combination qualification required., url: 'https://www.diodes.com/part/view/2N7002K'}
+  - {manufacturer: onsemi, mpn: 2N7002ET1G, state: Prior retailer alternative; not electrically interchangeable without requalification.}
+- id: mmbfj113
+  manufacturer: onsemi
+  exact_mpn: MMBFJ113
+  package: SOT-23-3
+  lifecycle: SupplierActive; directmanufacturer403, exact current manufacturer lifecycle remains unverified.
+  intended_quantity_if_used: 1
+  sourcing_state: Two retail routes found; audited model/noise/joint bounds missing. Not a qualified JFET substitute.
+  routes:
+  - seller: DigiKey Germany
+    url: https://www.digikey.de/en/products/detail/onsemi/MMBFJ113/2053131
+    observation_date: '2026-10-09'
+    observation_kind: Indexed primary page,reported crawl last week; direct 403.
+    stock_observed: 810
+    live_stock: null
+    supplier_sku: MMBFJ113CT-ND
+    moq: 1
+    order_multiple: 1
+    pack_size: 1
+    factory_pack: 3000
+    packaging: Cut tape
+    purchase_quantity_if_used: 1
+    unavoidable_excess: 0
+    manufacturer_lead_time_weeks_observed: 56
+    dispatch_lead_time: null
+    unit_price_net_eur_observed: 0.42
+    unit_price_vat_inclusive_eur_observed: 0.4998
+    delivered_cost_eur: null
+  - seller: Mouser Germany
+    url: https://www.mouser.de/de/ProductDetail/onsemi/MMBFJ113?qs=ljbEvF4DwOMU02MOFtlwqg%3D%3D
+    observation_date: '2026-10-09'
+    observation_kind: Indexed primary page,reported crawl2 months.
+    stock_observed: 39539
+    live_stock: null
+    moq: 1
+    order_multiple: 1
+    pack_size: 1
+    factory_pack: 3000
+    packaging: Exact retail cut-tape choice needs confirmation
+    purchase_quantity_if_used: 1
+    unavoidable_excess: 0
+    manufacturer_lead_time_weeks_observed: 52
+    dispatch_lead_time: null
+    unit_price_eur: null
+    delivered_cost_eur: null
+- id: opa197
+  manufacturer: Texas Instruments
+  exact_mpn: OPA197IDBVR
+  package: SOT-23-5 DBV
+  lifecycle: Manufacturer ACTIVE directly retrieved 2026-10-09; exact production variant supported by ordering addendum retained 2026-10-05.
+  lifecycle_url: https://www.ti.com/product/OPA197
+  manufacturer_single_source: true
+  intended_quantity_if_used: 1
+  sourcing_state: Private Germany retail route supported; live quantity/delivered quote unknown.
+  routes:
+  - seller: DigiKey Germany
+    url: https://www.digikey.de/en/products/detail/texas-instruments/OPA197IDBVR/5962128?s=N4Ig7CBcoIYE5QIwA5EGYA0IYBcmZAAcBLJAJjLAE4zEBfOoA
+    observation_date: '2026-10-09'
+    observation_kind: Indexed primary page, reported crawl 3 weeks;direct 403.
+    stock_observed: 29522
+    live_stock: null
+    supplier_sku: 296-47813-1-ND
+    moq: 1
+    order_multiple: 1
+    pack_size: 1
+    factory_pack: 3000
+    packaging: Cut tape
+    purchase_quantity_if_used: 1
+    unavoidable_excess: 0
+    manufacturer_lead_time_weeks_observed: 16
+    dispatch_lead_time: null
+    unit_price_net_eur_observed: 1.8
+    unit_price_vat_inclusive_eur_observed: 2.142
+    delivered_cost_eur: null
+  alternative_route: Mouser/official TI store listed in parent register; no newly confirmed private Germany quote.
+  substitute: OPA197ID SOIC-8 shares die but requires package/layout/thermal and candidate combination requalification.
+- id: jfe150
+  exact_mpn: JFE150DBVR
+  package: SOT-23-5 DBV
+  intended_quantity_if_used: 1
+  lifecycle: Manufacturer ACTIVE directly retrieved 2026-10-09; production addendum retained. Retail PROTOTYPE description discrepancy remains unresolved.
+  lifecycle_url: https://www.ti.com/product/JFE150
+  sourcing_state: Refresh direct 403; no new stock/price evidence. Parent record dated 2026-10-05 remains historical, not renewed.
+  parent_part_id: jfe150
+  parent_register: research/procurement/semiconductors_2026-10-05.yaml
+  stock_observed: null
+  moq: null
+  pack_size: null
+  lead_time: null
+  unit_price_eur: null
+  delivered_cost_eur: null
+  manufacturer_single_source: true
+- id: bc846b
+  exact_mpn: BC846B,215
+  package: SOT-23
+  intended_quantity_if_used: 1
+  lifecycle: Previous manufacturer Production state;2026-10-09 product requestreturnedHTTP 200challenge,not confirmation.
+  sourcing_state: Indexed TME retail route; direct 403; group/product stock and prices disagree, retain uncertainty.
+  seller: TME Germany
+  url: https://www.tme.eu/de/details/bc846b.215/npn-smd-transistoren/nexperia/bc846b-215/
+  observation_date: '2026-10-09'
+  observation_kind: Product page crawl 2 months,group crawl 1 week;group zero-stock placeholder also seen. Not live inventory.
+  stock_observed_product: 178360
+  stock_observed_group: 157126
+  live_stock: null
+  moq: 1
+  order_multiple: 1
+  pack_size: 1
+  factory_pack: 3000
+  packaging: Cut tape
+  purchase_quantity_if_used: 1
+  unavoidable_excess: 0
+  dispatch_lead_time: null
+  unit_price_net_eur_observed_range: [0.08, 0.09]
+  unit_price_gross_eur_observed_rounded_range: [0.09, 0.11]
+  delivered_cost_eur: null
+  substitute: onsemi BC846BLT1G remains a separate unvalidated model/implementation.
+- id: bc856b
+  exact_mpn: BC856B,215
+  package: SOT-23
+  intended_quantity_if_used: 1
+  lifecycle: Previous manufacturer Production state;2026-10-09HTTP 200challenge,not lifecycle confirmation.
+  sourcing_state: Exact variant remains on hold; no newly verified small quantity stock. Preserve parent backorder disagreements.
+  parent_register: research/procurement/semiconductors_2026-10-05.yaml
+  stock_observed: null
+  moq: null
+  pack_size: null
+  lead_time: null
+  unit_price_eur: null
+  delivered_cost_eur: null
+- id: nexperia_2n7002
+  exact_mpn: 2N7002,215
+  package: SOT-23
+  intended_quantity_if_used: 1
+  sourcing_state: Failed model retained; no new exact variant procurement assertion. Vishay alternative is a separate device, not validated substitution.
+  parent_register: research/procurement/semiconductors_2026-10-05.yaml
+  stock_observed: null
+  moq: null
+  pack_size: null
+  lead_time: null
+  unit_price_eur: null
+  delivered_cost_eur: null
+delivered_cost_scenarios:
+  status: Illustrative one-slot standalone basket only, not a quote, chosen BOM or total microphone cost.
+  condition: If observed prices hold, warehouse cut-tape DDP route applies,25 EURshipping is gross/net respectively,19 percent VAT applies, and no extra fees; unverified charges remain outside the interval.
+  vishay_2n7002k_one_piece_eur: [25.3213, 30.0713]
+  mmbfj113_one_piece_eur: [25.4998, 30.2498]
+  opa197_one_piece_eur: [27.142, 31.892]
+  confirmed_delivered_cost_eur: null
+  instruction: Shipping belongs to an actual supplier basket, not per line. Do not sum these standalone scenarios or buy comparison devices; refresh before any future purchase recommendation.

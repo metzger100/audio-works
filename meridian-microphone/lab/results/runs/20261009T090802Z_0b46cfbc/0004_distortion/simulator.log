@@ -1,0 +1,150 @@
+Note: gnd in a subcircuit is not set to 0 automatically
+
+Note: Compatibility modes selected: ps
+
+
+Circuit: meridian research distortion
+
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+pressure                                     0
+pressure_r                                   0
+xenv.feed                                   48
+xenv.xp                                30.4885
+xenv.xn                                30.4885
+p                                       30.486
+n                                       30.486
+mic_g                               0.00257522
+pp                                           0
+pn                                           0
+cm                                           0
+xcap.qf                               -1.57566
+b                                        24.82
+f                                      2.27379
+xcap.cqf                              -1.57566
+xcap.qr                               -1.73464
+rear                                0.00257524
+xcap.cqr                              -1.73464
+xdut.raw                               24.8205
+xdut.regbase                           11.7019
+xdut.qreg_t0                           24.8205
+xdut.qreg_t1                           11.7019
+rail                                   11.0129
+xdut.qreg_t2                           11.0129
+xdut.xqreg.11                          24.5989
+xdut.mid                               5.49821
+xdut.pol_0                             24.8204
+xdut.pol_1                             24.8204
+xdut.pol_2                             24.8203
+xdut.pol_3                             24.8203
+xdut.pol_4                             24.8202
+xdut.pol_5                             24.8202
+xdut.pol_6                             24.8201
+xdut.pol_7                             24.8201
+xdut.pol_8                               24.82
+xdut.pol                                 24.82
+xdut.servo                             2.23755
+xdut.jinput_t0                         11.0129
+xdut.jinput_t1                         2.27379
+xdut.source                            2.95029
+xdut.jinput_t2                         2.95029
+xdut.jinput_t3                         11.0129
+xdut.jinput_t4                      0.00257522
+xdut.signal                            3.59461
+xdut.outp                              2.98087
+xdut.cp                                2.98087
+xdut.outn                              7.38052
+xdut.cn                                7.38052
+xdut.set_div0                          10.3247
+xdut.set_div1                          9.63645
+xdut.set_div2                          8.94824
+xdut.set_div3                          8.26002
+xdut.set_div4                          7.57181
+xdut.set_div5                          6.88359
+xdut.set_div6                          6.19538
+xdut.set_div7                          5.50716
+xdut.set_div8                          4.81895
+xdut.set_div9                          4.13074
+xdut.set_div10                         3.44252
+xdut.set_div11                         2.75431
+xdut.set_div12                         2.06609
+xdut.set_div13                         1.37788
+xdut.setpoint                         0.689665
+xdut.sense_div0                         2.2055
+xdut.sense_div1                         1.4607
+xdut.slow                             0.715911
+xdut.qservoerror_t0                    2.23755
+xdut.qservoerror_t1                   0.715911
+xdut.se                                0.12963
+xdut.qservoerror_t2                    0.12963
+xdut.xqservoerror.11                   2.23366
+xdut.qservoref_t0                      11.0129
+xdut.qservoref_t1                     0.689665
+xdut.qservoref_t2                      0.12963
+xdut.xqservoref.11                     11.0112
+xdut.qoutp_t0                          11.0129
+xdut.qoutp_t1                          3.59461
+xdut.qoutp_t2                          2.98087
+xdut.xqoutp.11                         10.9997
+xdut.inverse                           8.02081
+xdut.qinvert_t0                        8.02081
+xdut.qinvert_t1                        3.59461
+xdut.ie                                2.97901
+xdut.qinvert_t2                        2.97901
+xdut.xqinvert.11                       8.00767
+xdut.qoutn_t0                          11.0129
+xdut.qoutn_t1                          8.02081
+xdut.qoutn_t2                          7.38052
+xdut.xqoutn.11                         10.9803
+xdut.coutp0_loss                        30.486
+xdut.coutn0_loss                        30.486
+b.xcap.bqr#branch                            0
+b.xcap.bqf#branch                            0
+v.xcap.vqr#branch                            0
+v.xcap.vqf#branch                            0
+v.xdut.vqoutn_2#branch            -0.000737794
+v.xdut.vqoutn_1#branch             2.54908e-06
+v.xdut.vqoutn_0#branch             0.000735245
+v.xdut.vqinvert_2#branch          -0.000297644
+v.xdut.vqinvert_1#branch           9.86338e-07
+v.xdut.vqinvert_0#branch           0.000296658
+v.xdut.vqoutp_2#branch            -0.000297829
+v.xdut.vqoutp_1#branch             9.17263e-07
+v.xdut.vqoutp_0#branch             0.000296912
+v.xdut.vqservoref_2#branch        -3.89867e-05
+v.xdut.vqservoref_1#branch         1.12436e-07
+v.xdut.vqservoref_0#branch         3.88743e-05
+v.xdut.vqservoerror_2#branch      -8.80679e-05
+v.xdut.vqservoerror_1#branch       3.14567e-07
+v.xdut.vqservoerror_0#branch       8.77533e-05
+v.xdut.vjinput_4#branch           -3.24585e-11
+v.xdut.vjinput_3#branch            3.36033e-11
+v.xdut.vjinput_2#branch            -0.00295516
+v.xdut.vjinput_1#branch           -1.36969e-11
+v.xdut.vjinput_0#branch             0.00295516
+v.xdut.vqreg_2#branch              -0.00503344
+v.xdut.vqreg_1#branch              1.41929e-05
+v.xdut.vqreg_0#branch               0.00501925
+v.xenv.vcm#branch                            0
+v.xenv.vphantom#branch             -0.00515043
+vpr#branch                                   0
+vp#branch                                    0
+
+
+No. of Data Rows : 0
+ngspice-47 done
+
+doAnalyses: TRAN:  Timestep too small; time = 7.46252e-09, timestep = 4.88281e-17: trouble with xdut.xjinput:njfe150-instance j.xdut.xjinput.j_j1
+
+
+tran simulation(s) aborted
+Warning from checkvalid: vector b is not available or has zero length.
+Error during 'write': no writable vector found.

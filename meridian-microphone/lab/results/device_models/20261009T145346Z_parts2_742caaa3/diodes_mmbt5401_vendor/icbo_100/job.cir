@@ -1,0 +1,17 @@
+Meridian isolated diodes_mmbt5401_vendor icbo_100
+* SPDX-License-Identifier: CERN-OHL-S-2.0
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/device_models/20261009T145346Z_parts2_742caaa3/source/models/semiconductor/vendor/diodes_mmbt5401.lib"
+.temp 100
+.options reltol=1e-06 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+Vc c 0 DC -120 AC 1
+Vb b 0 0
+Re e 0 1e15
+Qq c b e MMBT5401
+.control
+set filetype=ascii
+set numdgt=16
+op
+write op.raw i(vc)
+quit
+.endc
+.end

@@ -1,0 +1,21 @@
+Meridian isolated pmbt5551_vendor noise_nf_128
+* SPDX-License-Identifier: CERN-OHL-S-2.0
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/device_models/20261009T133422Z_parts_9ee64bfd/source/models/semiconductor/vendor/pmbt5551.lib"
+.temp 25
+.options reltol=1e-07 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+Vc c 0 5
+Vin in 0 DC 0.6198856819978777 AC 1
+Rsrc in b 2000
+Xq c b 0 PMBT5551
+Hout out 0 Vc 1
+.control
+set filetype=ascii
+set numdgt=16
+op
+write op.raw i(vc)
+noise v(out) Vin dec 128 10 15.7k 1
+setplot noise1
+write noise.raw all
+quit
+.endc
+.end

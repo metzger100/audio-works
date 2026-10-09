@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-09",
+  "status": "checks_pass_preservation_incomplete",
+  "verification_record": "../results/verification/20261009T121724Z_12bf12df/verification.json",
+  "laboratory_tests": {
+    "command": "./run verify",
+    "passed": 61,
+    "source_unchanged": true
+  },
+  "repository_tests": {
+    "command": "meridian-microphone/lab/.venv/bin/python -m pytest tests -q",
+    "passed": 24
+  },
+  "report_reproduction": {
+    "command": ".venv/bin/python research/compare_architectures.py",
+    "identical_output_files": 34,
+    "input_and_output_hashes": "pass",
+    "original_declared_files_verified": 9117,
+    "new_spice_evaluations": 0
+  },
+  "static_visual_review": [
+    "response_noise.png",
+    "noise_contributions.png",
+    "uncertainty_regions.png",
+    "research_pareto.png",
+    "candidate_0019_connectivity.svg"
+  ],
+  "early_check_failures_preserved": [
+    {
+      "check": "repository gate",
+      "reason": "Common context 32098 characters exceeded 32000",
+      "resolution": "Shortened entry wording, retained required evidence; unchanged limit."
+    },
+    {
+      "check": "repository gate",
+      "reason": "docs/INDEX.md stale while new rendering log was created",
+      "resolution": "Final refresh after output creation."
+    },
+    {
+      "check": "repository test invocation",
+      "reason": "unittest found zero tests",
+      "resolution": "Ran actual pytest suite: 24 pass."
+    },
+    {
+      "check": "report reproduction pre-hash capture",
+      "reason": "Wrong relative path from laboratory working directory",
+      "resolution": "Corrected path; repeat outputs byte-identical."
+    }
+  ],
+  "original_records_modified": false,
+  "thresholds_ranges_budgets_changed": false,
+  "artifact_links": {
+    "status": "pass",
+    "local_links_checked": 162,
+    "files_checked": [
+      "meridian-microphone/lab/research/architecture_comparison_001.md",
+      "meridian-microphone/lab/research/architecture_comparison_001_decisions.md",
+      "meridian-microphone/lab/measurement/priority_plan.md",
+      "meridian-microphone/lab/results/reports/architecture_comparison_001/tables.md",
+      "meridian-microphone/lab/results/README.md",
+      "meridian-microphone/lab/measurement/README.md",
+      "meridian-microphone/lab/README.md",
+      "meridian-microphone/lab/research/patents/README.md"
+    ]
+  },
+  "repository_final_gate": {
+    "status": "pass",
+    "organization": "pass",
+    "common_characters": 31949,
+    "hook_installed": true,
+    "continued_quality": "pass",
+    "preservation": {
+      "status": "incomplete",
+      "note": "No independent restored backup covering the current declared evidence is attested. Local bytes are not hashed by the fast gate."
+    },
+    "context_limit": 32000
+  },
+  "independent_preservation_complete": false,
+  "missing_legacy_sources": 89,
+  "evidence_verification": {
+    "status": "incomplete",
+    "declared_waveforms": 10410,
+    "snapshot_files": 13447,
+    "missing": 89,
+    "damaged": 0,
+    "uninventoried": 0
+  },
+  "private_capture_restore": {
+    "available_files_verified": 47209,
+    "restored_repository_gate": "pass",
+    "restored_hook_installed": true,
+    "independent": false,
+    "original_evidence_complete": false,
+    "missing_legacy_sources": 89
+  },
+  "supplementary_carrier_control": {
+    "record": "../results/mechanism_controls/20261009T082154Z_70cf7874/results.json",
+    "reported_values_checked_against_record": true,
+    "separate_ideal_mechanism_cohort": true,
+    "periodic_noise_rating": null
+  }
+}

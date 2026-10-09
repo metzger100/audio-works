@@ -1,0 +1,18 @@
+Meridian isolated diotec_mmbt5551_vendor transfer_50
+* SPDX-License-Identifier: CERN-OHL-S-2.0
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/device_models/20261009T145346Z_parts2_742caaa3/source/models/semiconductor/vendor/diotec_mmbt5551.lib"
+.temp 50
+.options reltol=1e-06 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+Vc c 0 5
+Vin in 0 DC 0.6 AC 1
+Rb in b 1e-06
+Xq c b 0 MMBT5551
+Hout out 0 Vc 1
+.control
+set filetype=ascii
+set numdgt=16
+dc Vin 0.3 1 0.0005
+write dc.raw v(in) i(vc) i(vin)
+quit
+.endc
+.end

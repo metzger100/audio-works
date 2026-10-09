@@ -1,0 +1,528 @@
+schema_version: 1
+generation_date: '2026-10-05'
+basis: Initial diversity catalogue after physics/integrity regression tests passed;
+  one explicit conventional control and 21 research proposals. Expectations are falsifiable
+  hypotheses.
+concepts:
+- id: concept_0001
+  title: Conventional self-biased JFET voltage reference
+  families:
+  - conventional_jfet
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: false
+  scientific_transfer: false
+  sources: []
+  assumption_inverted: null
+  sensed_quantity: Open-circuit capsule voltage
+  loading_control: Low input C and high bias R
+  dc_bias: Source degeneration and ordinary device bounds
+  gain_or_impedance_transformation: JFET buffer and separate driver
+  balanced_output: Differential or impedance-balanced driver
+  expected_dominant_noise: Gate/bias-network current noise and channel voltage noise
+  expected_dominant_distortion: JFET curvature and output swing
+  likely_fatal_flaw: Idss/VTO spread exceeds self-bias authority
+  fastest_falsification: DC/noise/distortion sweep across manufacturer JFET bounds
+- id: concept_0002
+  title: JFET closed-loop common-source conversion
+  families:
+  - unconventional_jfet
+  - high_feedback
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: false
+  sources: []
+  assumption_inverted: null
+  sensed_quantity: Capsule voltage error
+  loading_control: Feedback and a controlled drain voltage reduce Miller effects
+  dc_bias: Controlled current and local DC feedback
+  gain_or_impedance_transformation: Common-source gain inside feedback
+  balanced_output: Resistor-defined differential driver
+  expected_dominant_noise: Input channel noise and feedback/bias noise
+  expected_dominant_distortion: Finite loop gain and drain modulation
+  likely_fatal_flaw: Feedback increases input C or oscillates
+  fastest_falsification: Extract input admittance, gain and return ratio across capacitance
+    corners
+- id: concept_0003
+  title: JFET cascode with driven drain/guard
+  families:
+  - unconventional_jfet
+  - bootstrap
+  - instrumentation
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S06
+  assumption_inverted: null
+  sensed_quantity: Capsule voltage
+  loading_control: Track drain and surrounding guard to reduce displacement/loading
+  dc_bias: Source degeneration, drain-voltage servo
+  gain_or_impedance_transformation: JFET transconductance plus cascode
+  balanced_output: Independent low-impedance line stage
+  expected_dominant_noise: JFET 1/f and guard amplifier noise
+  expected_dominant_distortion: Cascode nonlinearity and bootstrap error
+  likely_fatal_flaw: Guard noise or positive feedback dominates
+  fastest_falsification: Sweep guard delay, Cgd and parasitic coupling, including
+    return ratio
+- id: concept_0004
+  title: Differential JFET sensing without pair selection
+  families:
+  - unconventional_jfet
+  - differential
+  - servo
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: false
+  sources: []
+  assumption_inverted: null
+  sensed_quantity: Front/rear electrode voltages
+  loading_control: Two high-impedance ports with finite mutual C
+  dc_bias: Individual current loops and common-mode servo
+  gain_or_impedance_transformation: Degenerated differential conversion
+  balanced_output: Early differential representation drives line outputs
+  expected_dominant_noise: Two input devices plus current-control noise
+  expected_dominant_distortion: Unequal device nonlinearities
+  likely_fatal_flaw: Common backplate or unequal sensitivities defeats differential
+    benefit
+  fastest_falsification: Two-electrode admittance and uncorrelated device-corner sweeps
+- id: concept_0005
+  title: CMOS-input voltage amplifier
+  families:
+  - mosfet
+  - no_jfet
+  - high_feedback
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: false
+  sources: []
+  assumption_inverted: null
+  sensed_quantity: Capsule voltage
+  loading_control: Documented CMOS input C and leakage, guard if justified
+  dc_bias: Filtered midrail and feedback
+  gain_or_impedance_transformation: Closed-loop CMOS amplifier
+  balanced_output: Balanced line driver
+  expected_dominant_noise: MOS 1/f and input current noise
+  expected_dominant_distortion: Input common-mode and output crossover
+  likely_fatal_flaw: CMOS macro model omits leakage/noise or exceeds P48 budget
+  fastest_falsification: Noise/SOA/current across vendor limits and temperature
+- id: concept_0006
+  title: Common-gate MOS displacement-current input
+  families:
+  - mosfet
+  - current
+  - no_jfet
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S07
+  assumption_inverted: The capsule must be voltage sensed
+  sensed_quantity: Capsule displacement current
+  loading_control: Low input impedance defines the electrical boundary
+  dc_bias: Controlled drain current and gate-voltage loop
+  gain_or_impedance_transformation: Current conveyor then integration
+  balanced_output: Current-to-differential conversion
+  expected_dominant_noise: Channel current noise and gate-control noise
+  expected_dominant_distortion: Source-voltage compliance and body effect
+  likely_fatal_flaw: Current noise plus pressure differentiation loses LF SNR
+  fastest_falsification: Noise referred to pressure at 20 Hz and large-signal input
+    compliance
+- id: concept_0007
+  title: Bipolar charge-feedback amplifier
+  families:
+  - no_fet
+  - charge
+  - instrumentation
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S05
+  - S07
+  assumption_inverted: The first device must be a FET
+  sensed_quantity: Electrode charge
+  loading_control: Virtual-node charge summation with feedback C
+  dc_bias: Slow offset/leakage servo
+  gain_or_impedance_transformation: BJT error amplifier and capacitor feedback
+  balanced_output: Differential output buffer
+  expected_dominant_noise: Base-current shot noise and feedback resistor noise
+  expected_dominant_distortion: Input/base-current modulation
+  likely_fatal_flaw: BJT current noise exceeds the entire LF budget
+  fastest_falsification: Integrate pressure-referred shot-noise envelope before detailed
+    construction
+- id: concept_0008
+  title: Bipolar carrier capacitance bridge
+  families:
+  - no_fet
+  - instrumentation
+  - differential
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S09
+  assumption_inverted: The first device must be a FET
+  sensed_quantity: Capacitance modulation of an analog carrier
+  loading_control: Bridge balance and controlled excitation
+  dc_bias: Zero-mean carrier with separately researched safe DC bias
+  gain_or_impedance_transformation: BJT synchronous detector and audio gain
+  balanced_output: Differential detector/driver
+  expected_dominant_noise: Carrier oscillator phase/amplitude noise and detector noise
+  expected_dominant_distortion: Demodulation and electrostatic back-action
+  likely_fatal_flaw: RF power or carrier force destabilizes diaphragm
+  fastest_falsification: Carrier sidebands, demodulated noise and nonlinear C/voltage
+    force model
+- id: concept_0009
+  title: Transformer resonant bridge with bipolar detector
+  families:
+  - no_fet
+  - minimal
+  - instrumentation
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S09
+  assumption_inverted: The first device must be a FET
+  sensed_quantity: Capacitance-induced bridge imbalance
+  loading_control: Resonant impedance transformation and symmetric coupling
+  dc_bias: Carrier transformer isolation plus independent DC bias
+  gain_or_impedance_transformation: Passive transformer then BJT detector
+  balanced_output: Balanced transformer secondary or line buffer
+  expected_dominant_noise: Winding loss and detector noise
+  expected_dominant_distortion: Core/carrier nonlinearity
+  likely_fatal_flaw: Useful bandwidth and carrier-noise rejection are incompatible
+  fastest_falsification: Lossy coupled-inductor bridge across C/cable/temperature
+- id: concept_0010
+  title: CMOS charge amplifier with resistive bleed
+  families:
+  - charge
+  - no_jfet
+  - instrumentation
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S05
+  assumption_inverted: The capsule must be voltage sensed
+  sensed_quantity: Charge/current integral
+  loading_control: Virtual potential and feedback capacitance
+  dc_bias: Feedback bleed resistor and midrail reference
+  gain_or_impedance_transformation: Charge-to-voltage in feedback C
+  balanced_output: Independent balanced output
+  expected_dominant_noise: Feedback resistor, voltage noise times noise gain
+  expected_dominant_distortion: Input compliance and finite loop gain
+  likely_fatal_flaw: Bleed noise or required compensation ruins audio range
+  fastest_falsification: Noise gain and return ratio across C/leakage and feedback-C
+    tolerance
+- id: concept_0011
+  title: TIA followed by leaky integrator
+  families:
+  - current
+  - servo
+  - instrumentation
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S07
+  - S08
+  assumption_inverted: The capsule must be voltage sensed
+  sensed_quantity: Displacement current
+  loading_control: Virtual input voltage defines capsule loading
+  dc_bias: DC servo removes leakage without passing it through audio
+  gain_or_impedance_transformation: Resistive TIA then frequency-shaped integrator
+  balanced_output: Differential integration/output stage
+  expected_dominant_noise: TIA voltage/current noise and feedback R
+  expected_dominant_distortion: Integrator saturation and TIA slew
+  likely_fatal_flaw: Extra stages cost current/noise and drift into clipping
+  fastest_falsification: DC leakage steps, integrated LF noise and corner clipping
+- id: concept_0012
+  title: Floating powered sensor island
+  families:
+  - floating
+  - no_jfet
+  - instrumentation
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S09
+  assumption_inverted: The capsule must be referenced to a fixed potential
+  sensed_quantity: Voltage/charge between capsule electrodes
+  loading_control: Float local reference with capsule rather than case
+  dc_bias: Controlled floating rail and slow common-mode servo
+  gain_or_impedance_transformation: Floating CMOS error amplifier
+  balanced_output: Level-shifting differential current outputs
+  expected_dominant_noise: Isolation/reference and input noise
+  expected_dominant_distortion: Common-mode loop and output compliance
+  likely_fatal_flaw: No stable power extraction/common-mode solution under P48
+  fastest_falsification: Full DC solvability and power/current sweep before audio
+    metrics
+- id: concept_0013
+  title: Dual front/rear charge channels
+  families:
+  - differential
+  - charge
+  - instrumentation
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S05
+  - S09
+  assumption_inverted: The capsule must be voltage sensed
+  sensed_quantity: Independent front/rear charges
+  loading_control: Separate virtual nodes, account for shared backplate
+  dc_bias: Two slow DC loops and controlled backplate
+  gain_or_impedance_transformation: Two charge conversion loops
+  balanced_output: Analog sum/difference into balanced line driver
+  expected_dominant_noise: Two front ends and backplate-reference noise
+  expected_dominant_distortion: Mismatch and interchannel feedback
+  likely_fatal_flaw: Electrode access or acoustic correlation differs from assumed
+    model
+  fastest_falsification: Verify electrical isolation and sweep arbitrary front/rear
+    phase/correlation
+- id: concept_0014
+  title: Bootstrapped bipolar voltage input
+  families:
+  - bootstrap
+  - no_fet
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S06
+  assumption_inverted: The first device must be a FET
+  sensed_quantity: Capsule voltage
+  loading_control: Drive bias/guard to reduce effective capacitance and DC loading
+  dc_bias: Controlled base current and slow cancellation
+  gain_or_impedance_transformation: Degenerated bipolar follower with auxiliary guard
+    loop
+  balanced_output: Impedance-balanced line driver
+  expected_dominant_noise: Base shot noise; cancellation may not remove fluctuations
+  expected_dominant_distortion: Bootstrap tracking and base-emitter curvature
+  likely_fatal_flaw: Bias cancellation removes mean but leaves excessive shot noise
+  fastest_falsification: Noise with cancellation on/off plus guard loop stability
+- id: concept_0015
+  title: JFET audio path with separate ultra-slow bias servo
+  families:
+  - servo
+  - unconventional_jfet
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S06
+  assumption_inverted: null
+  sensed_quantity: Capsule voltage
+  loading_control: High-impedance audio node; DC loop filtered far below audio
+  dc_bias: Servo adjusts source current/DC voltage
+  gain_or_impedance_transformation: JFET transconductance and local feedback
+  balanced_output: Feedback-controlled line stage
+  expected_dominant_noise: JFET noise and servo leakage/sidebands
+  expected_dominant_distortion: Servo modulation and finite audio feedback
+  likely_fatal_flaw: Servo actuator injects noise or cannot start reliably
+  fastest_falsification: Leakage/device spread, startup and audio/servo loop interaction
+- id: concept_0016
+  title: Single active JFET with passive balanced transformation
+  families:
+  - minimal
+  - conventional_jfet
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: false
+  scientific_transfer: false
+  sources: []
+  assumption_inverted: null
+  sensed_quantity: Capsule voltage
+  loading_control: Low-C input with passive bias
+  dc_bias: Source degeneration without specimen selection
+  gain_or_impedance_transformation: One JFET gain/current stage
+  balanced_output: Transformer with DC-separated P48 extraction
+  expected_dominant_noise: Input device and transformer loss
+  expected_dominant_distortion: Device curvature and transformer magnetic behavior
+  likely_fatal_flaw: No-selection bias or required transformer drive fails
+  fastest_falsification: Device corners then lossy transformer headroom and LF response
+- id: concept_0017
+  title: High-feedback CMOS amplifier with common-mode control
+  families:
+  - high_feedback
+  - mosfet
+  - no_jfet
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S07
+  assumption_inverted: null
+  sensed_quantity: Voltage error referenced to controlled electrode
+  loading_control: Feedback, guarding and deliberately compensated input C
+  dc_bias: Common-mode feedback plus slow DC servo
+  gain_or_impedance_transformation: High-gain error amplifier
+  balanced_output: Fully differential output with shared CM controller
+  expected_dominant_noise: Error amplifier and reference/servo noise
+  expected_dominant_distortion: Loop gain loss and saturation recovery
+  likely_fatal_flaw: Interacting loops unstable under cable and capsule variation
+  fastest_falsification: MIMO return-ratio/Nyquist and transient recovery at all loads
+- id: concept_0018
+  title: Continuous-reset electrometer charge front end
+  families:
+  - instrumentation
+  - charge
+  - servo
+  - no_jfet
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S06
+  - S08
+  assumption_inverted: The capsule must be voltage sensed
+  sensed_quantity: Continuous motional charge
+  loading_control: Virtual node and feedback C with guarded leakage paths
+  dc_bias: Ultra-slow continuous reset rather than abrupt switching
+  gain_or_impedance_transformation: Electrometer error amplifier
+  balanced_output: Charge output then differential buffer
+  expected_dominant_noise: Reset element excess noise and voltage-noise gain
+  expected_dominant_distortion: Reset nonlinearity leaking into audio
+  likely_fatal_flaw: Reset/servo noise worse than passive bleed
+  fastest_falsification: Reset-element noise injection and audio sidebands over leakage
+    extremes
+- id: concept_0019
+  title: Bipolar synchronous capacitive bridge
+  families:
+  - instrumentation
+  - no_fet
+  - floating
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S09
+  assumption_inverted: The first device must be a FET
+  sensed_quantity: Carrier-synchronous capacitance change
+  loading_control: Floating excitation and differential parasitic rejection
+  dc_bias: Carrier zero mean, separate controlled polarization
+  gain_or_impedance_transformation: Analog bipolar switching/detection
+  balanced_output: Differential synchronous detector plus low-pass driver
+  expected_dominant_noise: Switch shot noise and carrier feedthrough
+  expected_dominant_distortion: Charge injection and detector compression
+  likely_fatal_flaw: Carrier residue or flicker folding exceeds noise budget
+  fastest_falsification: Periodic steady-state surrogate/time-domain carrier simulation
+    and noise folding study
+- id: concept_0020
+  title: Bipolar capacitance-controlled oscillator readout
+  families:
+  - no_fet
+  - instrumentation
+  - minimal
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S09
+  assumption_inverted: The first device must be a FET
+  sensed_quantity: Capacitance-to-frequency modulation
+  loading_control: Low carrier voltage limits electrical force; resonant transformation
+  dc_bias: Carrier amplitude servo and separately verified DC bias
+  gain_or_impedance_transformation: Oscillator plus all-analog frequency discriminator
+  balanced_output: Balanced audio driver after discriminator
+  expected_dominant_noise: Oscillator phase noise and amplitude-to-frequency noise
+  expected_dominant_distortion: Oscillator pulling and discriminator curvature
+  likely_fatal_flaw: Audible phase noise or excessive electrostatic back-action
+  fastest_falsification: Sideband sensitivity and phase-noise envelope across realistic
+    C/leakage
+- id: concept_0021
+  title: Separate AC charge loop and DC electrode-voltage loop
+  families:
+  - charge
+  - floating
+  - servo
+  - high_feedback
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S05
+  - S06
+  assumption_inverted: The capsule must be voltage sensed
+  sensed_quantity: AC charge while DC electrode voltage is independently regulated
+  loading_control: AC virtual potential, DC reference floats as needed
+  dc_bias: Independent low-bandwidth polarization/leakage loop
+  gain_or_impedance_transformation: Capacitive audio feedback plus DC loop
+  balanced_output: Differential current-output transformation
+  expected_dominant_noise: Loop crossover/reference and charge amplifier noise
+  expected_dominant_distortion: Loop crossover intermodulation and finite authority
+  likely_fatal_flaw: Two loops fight at LF or violate safe electrode bias
+  fastest_falsification: AC/DC return ratios, slow ramps, leakage steps and audio
+    injection together
+- id: concept_0022
+  title: Bipolar current-conveyor charge translator
+  families:
+  - no_fet
+  - current
+  - instrumentation
+  - high_feedback
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S07
+  - S08
+  assumption_inverted: The first device must be a FET
+  sensed_quantity: Capsule displacement current translated to a remote integration
+    node
+  loading_control: Feedback makes controlled input potential; remote capacitor sets
+    gain
+  dc_bias: Degenerated current conveyor and slow offset loop
+  gain_or_impedance_transformation: Current copying then charge integration
+  balanced_output: Complementary differential output currents
+  expected_dominant_noise: Base-current fluctuations, mirror/current-copy noise
+  expected_dominant_distortion: Current-copy nonlinearity and Early effect
+  likely_fatal_flaw: Current copying amplifies shot noise and loses LF charge
+  fastest_falsification: Current-noise floor and transimpedance linearity before complete
+    output design

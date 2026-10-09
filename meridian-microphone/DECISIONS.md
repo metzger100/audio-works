@@ -69,3 +69,23 @@ Owner-directed: show the standard logo on an ivory banner in both GitHub themes.
 ## D026 / 2026-10-06 — project folder
 
 Owner-directed: rename `meridian/` to `meridian-microphone/`; use family and device in project folders. Supersedes D009. Preserve frozen bytes, hashes and legacy-backup restoration.
+
+## D027 / 2026-10-09 — first architecture attempts
+
+Owner-directed six-mechanism research; no topology/PCB selection. Preserve failures and children, all14 families and separate qualification gates. [Rationale](lab/research/first_architecture_decisions.md).
+
+## D028 / 2026-10-09 — scoped optimization
+
+[Results and holds](lab/research/robust_optimization_decisions.md). No production selection.
+
+## D029 / 2026-10-09 — intermediate comparison
+
+[Rationale](lab/research/architecture_comparison_001_decisions.md); all gates retained, no selection.
+
+## D030 / 2026-10-09 — continuation
+
+[Plan](lab/research/prompts/DECISIONS.md). Measurements deferred; gates retained.
+
+## D031 / 2026-10-09 — parts
+
+[Rationale](lab/research/parts_database_expansion_002_decisions.md). Owner authorized GitHub push; qualification gates retained.

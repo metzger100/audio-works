@@ -1,0 +1,52 @@
+* SPDX-License-Identifier: CERN-OHL-S-2.0
+* Internal research; no build recommendation.
+.subckt DUT f b rear p n g rail
+Rharvestp p raw {RHARVESTP_VALUE}
+Rharvestn n raw {RHARVESTN_VALUE}
+Craw raw g {CRAW_VALUE}
+Rregtop raw regbase {RREGTOP_VALUE}
+Rregbottom regbase g {RREGBOTTOM_VALUE}
+Cregbase regbase g {CREGBASE_VALUE}
+VQreg_0 raw Qreg_t0 0
+VQreg_1 regbase Qreg_t1 0
+VQreg_2 rail Qreg_t2 0
+XQreg Qreg_t0 Qreg_t1 Qreg_t2 BC846B
+Crail rail g {CRAIL_VALUE}
+Rmidtop rail mid {RMIDTOP_VALUE}
+Rmidbottom mid g {RMIDBOTTOM_VALUE}
+Cmid mid g {CMID_VALUE}
+Rpolar0 raw pol_0 {RPOLAR0_VALUE}
+Rpolar1 pol_0 pol_1 {RPOLAR1_VALUE}
+Rpolar2 pol_1 pol_2 {RPOLAR2_VALUE}
+Rpolar3 pol_2 pol_3 {RPOLAR3_VALUE}
+Rpolar4 pol_3 pol_4 {RPOLAR4_VALUE}
+Rpolar5 pol_4 pol_5 {RPOLAR5_VALUE}
+Rpolar6 pol_5 pol_6 {RPOLAR6_VALUE}
+Rpolar7 pol_6 pol_7 {RPOLAR7_VALUE}
+Rpolar8 pol_7 pol_8 {RPOLAR8_VALUE}
+Rpolar9 pol_8 pol {RPOLAR9_VALUE}
+Cpol pol g {CPOL_VALUE}
+Rback pol b {RBACK_VALUE}
+Bcarrier excite pol V={CARRIER_PEAK*sin(2*PI*CARRIER_HZ*time)}
+Banti anti pol V={-CARRIER_PEAK*sin(2*PI*CARRIER_HZ*time)}
+Cexcite excite b {CEXCITE_VALUE}
+Cbridgef f anti {CBRIDGEF_VALUE}
+Cbridger rear anti {CBRIDGER_VALUE}
+Rbias f mid {RBIAS_VALUE}
+Cbiasstray f mid {CBIASSTRAY_VALUE}
+Rrearbias rear mid {RREARBIAS_VALUE}
+Crearbiasstray rear mid {CREARBIASSTRAY_VALUE}
+Bdemod demod mid V={(v(frontbuf,rearbuf))*2*sin(2*PI*CARRIER_HZ*time)}
+Rfilter1 demod lp1 {RFILTER1_VALUE}
+Cfilter1 lp1 mid {CFILTER1_VALUE}
+Rfilter2 lp1 audio {RFILTER2_VALUE}
+Cfilter2 audio mid {CFILTER2_VALUE}
+Routp outp cp {ROUTP_VALUE}
+Routn outn cn {ROUTN_VALUE}
+Coutp p cp {COUTP_VALUE}
+Coutn n cn {COUTN_VALUE}
+Efront frontbuf g f g 1
+Erear rearbuf g rear g 1
+Eoutp outp g audio g 1
+Eoutn outn g VOL='2*v(mid,g)-v(audio,g)'
+.ends DUT

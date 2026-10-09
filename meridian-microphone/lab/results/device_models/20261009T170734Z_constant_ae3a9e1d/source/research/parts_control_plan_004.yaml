@@ -1,0 +1,15 @@
+schema_version: 1
+declared_date: '2026-10-09'
+task: Independent missing-constant fixture control after expansion002 finite pass
+parent_experiments: [20261009T145346Z_parts2_742caaa3]
+models: [diotec_2n5551_vendor, diotec_mmbt5551_vendor]
+hypothesis: Manufacturer example uses pi without declaring it; declaring the mathematical constant in the fixture may restore parsing while revealing omitted LTspice terms.
+repair: Add only .param pi=3.141592653589793238462643383279502884 in the control fixture. Original model bytes unchanged.
+conditions: Same full bipolar -10/25/50C transfer and100uA/1mA/2mA/10mA points; VCB10V1MHz cap,120V leakage25/100C and44/-10,48/25,52/50 P48 resistor fixtures as plan003.
+references: Exact Diotec MMBT5551 and2N5551 datasheets, not a cross-manufacturer model.
+maximum_jobs: 100
+timeout_s_per_job: 15
+typical_disagreement_fraction: 0.20
+numerical_refinement_fraction: 0.01
+stopping: One pass; no further fitting, deleted-parameter repair or qualification promotion.
+scope: Parameter dependency / conditioned nominal device controls only. Compatibility transformations may omit ratings; no breakdown/SOA or candidate claims.

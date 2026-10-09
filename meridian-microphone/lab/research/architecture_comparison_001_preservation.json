@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-09",
+  "timestamp_utc": "2026-10-09T12:26:27.538669+00:00",
+  "status": "incomplete_independent_and_legacy_coverage",
+  "backup_id": "20261009T122139Z_43998ec3",
+  "manifest_sha256": "49d202a85e44ba1062879f6155e18665c8ce03f9b92a0c79932b9e990abd1268",
+  "capture_verified": true,
+  "capture_idle_and_unchanged": true,
+  "available_files_captured": 47209,
+  "restore_verified": true,
+  "restored_files_verified": 47209,
+  "scope": "Git history, available working files, original inventoried raw/CSV, frozen sources and allowlisted private vendor evidence; no credentials or runtimes.",
+  "all_comparison_outputs_captured": true,
+  "original_records_modified": false,
+  "independent": false,
+  "original_evidence_complete": false,
+  "missing_legacy_original_sources": 89,
+  "evidence_verification": {
+    "declared_waveforms": 10410,
+    "snapshot_files": 13447,
+    "damaged": 0,
+    "uninventoried": 0
+  },
+  "new_inventory": "../results/evidence-20261009T121907Z-3c4139cd.sha256",
+  "new_waveform_exports": 71,
+  "restored_hook_installed": true,
+  "restored_repository_gate": {
+    "status": "pass",
+    "organization": "pass",
+    "common_characters": 31942,
+    "hook_installed": true,
+    "preservation": {
+      "status": "incomplete",
+      "note": "No independent restored backup covering the current declared evidence is attested. Local bytes are not hashed by the fast gate."
+    }
+  },
+  "private_destinations": "Retained only in ignored .project-local/backups attestations; same-device private local recovery.",
+  "post_capture_metadata": "This receipt and final validation/current-state updates are written after capture. Frozen scientific evidence, comparison code/tables/plots and reports were captured unchanged.",
+  "remaining_coverage": "Independent persistent owner-controlled backup/restore and the 89 missing originals remain incomplete. New simulations/reacquisition cannot recover originals."
+}

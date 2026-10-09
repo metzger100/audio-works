@@ -1,0 +1,419 @@
+schema_version: 1
+checked_date: '2026-10-09'
+parent_registers:
+- research/procurement/semiconductors_2026-10-09.yaml
+- research/procurement/architecture_parts_2026-10-09.yaml
+- research/procurement/robust_parts_2026-10-09.yaml
+scope: Intended one functional slot in one possible microphone, only if used; no selected
+  BOM or combined alternatives basket
+purchase_authorized: false
+fixed_capsule_quantity: 1
+physical_owned_stock: null
+seller_contracts:
+  digikey:
+    terms_url: https://www.digikey.de/en/terms-and-conditions
+    delivery_url: https://www.digikey.de/en/help-support/delivery-information
+    retrieval: web21/22 primary page, terms crawl today, delivery3days; direct curl403
+      retained
+    private_germany: Terms address non-business EUR customers without VAT number;
+      no minimum order or handling; acceptance of a particular order unknown
+    dispatch: Warehouse origin for each exact line unknown; Germany transit typically48h
+      is not dispatch promise
+    shipping_under75_eur: 25
+    shipping_tax_basis: Unknown whether quoted25EUR already gross; UPS terms add VAT
+      to invoice products/services
+    vat_fraction_scenario: 0.19
+    import: Warehouse DDP non-business EUR route stated; direct suppliers/marketplace
+      CPT differ; no unverified import cost set to zero
+    payment_fx_fee_eur: null
+    account_or_licence_accepted: false
+  mouser:
+    private_access: German catalogue observed, complete consumer eligibility not verified
+    shipping_eur: null
+  tme:
+    private_access: Parent consumer terms retained; newly searched exactNPN no live
+      orderability
+    shipping_eur: null
+parts:
+- id: jfe2140
+  exact_mpn: JFE2140DR
+  seller: DigiKey Germany
+  url: https://www.digikey.de/de/products/detail/texas-instruments/JFE2140DR/15666863
+  observation_date: '2026-10-09'
+  observation_kind: Indexed primary supplier product page; cache/full-body where returned;
+    detailed retrieval failed on several routes
+  reported_crawl_age: 3months
+  indexed_stock_observed: 4493
+  live_stock: null
+  private_orderability: unverified_exact_checkout; positive indexed stock is not live
+    availability
+  moq_observed: 1
+  order_multiple_observed: 1
+  retail_pack: cut tape or bulk when indexed listing says so; line-specific confirmation
+    required
+  factory_pack_observed: 2500
+  manufacturer_lead_weeks_observed: 9
+  dispatch_lead_time: null
+  intended_quantity_if_used: 1
+  required_purchase_quantity_if_used: 1
+  unavoidable_excess_if_used: 0
+  unit_net_eur_observed: 4.19
+  unit_gross_eur_19percent_scenario: 4.9861
+  shipping_eur_quote: null
+  delivered_eur_confirmed: null
+  standalone_slot_delivered_eur_scenario:
+  - 29.9861
+  - 34.7361
+  scenario_condition: Observed price persists;25EUR shipping gross/net alternatives,19percentVAT,
+    eligible warehouse route, no extra charges; not a quote or recommendation
+  independent_route_or_substitute: MouserDE same exact variant3027 at4.11EUR indexed3months;
+    consumer eligibility/shipping unresolved
+  single_source: Exact silicon/model manufacturer remains single source even if multiple
+    retailers
+- id: lsk170a
+  exact_mpn: LSK170A TO-92 3L ROHS
+  seller: DigiKey Germany
+  url: https://www.digikey.de/de/products/detail/linear-integrated-systems-inc/LSK170A-TO-92-3L-ROHS/14312281
+  observation_date: '2026-10-09'
+  observation_kind: Indexed primary supplier product page; cache/full-body where returned;
+    detailed retrieval failed on several routes
+  reported_crawl_age: 6days
+  indexed_stock_observed: 1400
+  live_stock: null
+  private_orderability: unverified_exact_checkout; positive indexed stock is not live
+    availability
+  moq_observed: 1
+  order_multiple_observed: 1
+  retail_pack: cut tape or bulk when indexed listing says so; line-specific confirmation
+    required
+  factory_pack_observed: null
+  manufacturer_lead_weeks_observed: 8
+  dispatch_lead_time: null
+  intended_quantity_if_used: 1
+  required_purchase_quantity_if_used: 1
+  unavoidable_excess_if_used: 0
+  unit_net_eur_observed: 10.38
+  unit_gross_eur_19percent_scenario: 12.3522
+  shipping_eur_quote: null
+  delivered_eur_confirmed: null
+  standalone_slot_delivered_eur_scenario:
+  - 37.3522
+  - 42.1022
+  scenario_condition: Observed price persists;25EUR shipping gross/net alternatives,19percentVAT,
+    eligible warehouse route, no extra charges; not a quote or recommendation
+  independent_route_or_substitute: Mouser LSK170A-TO-92-3L-BK is a different order
+    code; manufacturer mapping and Germany terms required
+  single_source: Exact silicon/model manufacturer remains single source even if multiple
+    retailers
+- id: lsk389a
+  exact_mpn: LSK389A SOIC 8L ROHS
+  seller: DigiKey Germany
+  url: https://www.digikey.de/en/products/detail/linear-integrated-systems-inc/LSK389A-SOIC-8L-ROHS/15930279
+  observation_date: '2026-10-09'
+  observation_kind: Indexed primary supplier product page; cache/full-body where returned;
+    detailed retrieval failed on several routes
+  reported_crawl_age: 2months
+  indexed_stock_observed: null
+  live_stock: null
+  private_orderability: unverified_exact_checkout; positive indexed stock is not live
+    availability
+  moq_observed: null
+  order_multiple_observed: null
+  retail_pack: cut tape or bulk when indexed listing says so; line-specific confirmation
+    required
+  factory_pack_observed: null
+  manufacturer_lead_weeks_observed: 8
+  dispatch_lead_time: null
+  intended_quantity_if_used: 1
+  required_purchase_quantity_if_used: null
+  unavoidable_excess_if_used: null
+  unit_net_eur_observed: null
+  unit_gross_eur_19percent_scenario: null
+  shipping_eur_quote: null
+  delivered_eur_confirmed: null
+  standalone_slot_delivered_eur_scenario: null
+  scenario_condition: Observed price persists;25EUR shipping gross/net alternatives,19percentVAT,
+    eligible warehouse route, no extra charges; not a quote or recommendation
+  independent_route_or_substitute: Independent retailer route not verified; JFE2140
+    is distinct silicon, not a validated substitute
+  single_source: Exact silicon/model manufacturer remains single source even if multiple
+    retailers
+- id: pmbt5551
+  exact_mpn: PMBT5551,215
+  seller: DigiKey Germany
+  url: https://www.digikey.de/en/products/detail/nexperia-usa-inc/PMBT5551-215/1157645
+  observation_date: '2026-10-09'
+  observation_kind: Indexed primary supplier product page; cache/full-body where returned;
+    detailed retrieval failed on several routes
+  reported_crawl_age: 3weeks
+  indexed_stock_observed: 0
+  live_stock: null
+  private_orderability: unverified_exact_checkout; positive indexed stock is not live
+    availability
+  moq_observed: 1
+  order_multiple_observed: 1
+  retail_pack: cut tape or bulk when indexed listing says so; line-specific confirmation
+    required
+  factory_pack_observed: 3000
+  manufacturer_lead_weeks_observed: 30
+  dispatch_lead_time: null
+  intended_quantity_if_used: 1
+  required_purchase_quantity_if_used: 1
+  unavoidable_excess_if_used: 0
+  unit_net_eur_observed: 0.23
+  unit_gross_eur_19percent_scenario: 0.2737
+  shipping_eur_quote: null
+  delivered_eur_confirmed: null
+  standalone_slot_delivered_eur_scenario: null
+  scenario_condition: Observed price persists;25EUR shipping gross/net alternatives,19percentVAT,
+    eligible warehouse route, no extra charges; not a quote or recommendation
+  independent_route_or_substitute: TME exact variant zero/null stock indexed3-8months;
+    no EUR Germany quote; model research only
+  single_source: Exact silicon/model manufacturer remains single source even if multiple
+    retailers
+- id: onsemi_mmbt5551
+  exact_mpn: MMBT5551LT1G
+  seller: DigiKey Germany
+  url: https://www.digikey.de/en/products/detail/onsemi/MMBT5551LT1G/1139826
+  observation_date: '2026-10-09'
+  observation_kind: Indexed primary supplier product page; cache/full-body where returned;
+    detailed retrieval failed on several routes
+  reported_crawl_age: 3weeks
+  indexed_stock_observed: 503380
+  live_stock: null
+  private_orderability: unverified_exact_checkout; positive indexed stock is not live
+    availability
+  moq_observed: 1
+  order_multiple_observed: 1
+  retail_pack: cut tape or bulk when indexed listing says so; line-specific confirmation
+    required
+  factory_pack_observed: 3000
+  manufacturer_lead_weeks_observed: null
+  dispatch_lead_time: null
+  intended_quantity_if_used: 1
+  required_purchase_quantity_if_used: 1
+  unavoidable_excess_if_used: 0
+  unit_net_eur_observed: 0.14
+  unit_gross_eur_19percent_scenario: 0.1666
+  shipping_eur_quote: null
+  delivered_eur_confirmed: null
+  standalone_slot_delivered_eur_scenario:
+  - 25.1666
+  - 29.9166
+  scenario_condition: Observed price persists;25EUR shipping gross/net alternatives,19percentVAT,
+    eligible warehouse route, no extra charges; not a quote or recommendation
+  independent_route_or_substitute: onsemi exact package alternative, no acquired original
+    model; may not use Nexperia model as interchangeability
+  single_source: Exact silicon/model manufacturer remains single source even if multiple
+    retailers
+- id: diodes_mmbt5551
+  exact_mpn: MMBT5551-7-F
+  seller: DigiKey Germany
+  url: https://www.digikey.de/en/products/detail/diodes-incorporated/MMBT5551-7-F/1154713
+  observation_date: '2026-10-09'
+  observation_kind: Indexed primary supplier product page; cache/full-body where returned;
+    detailed retrieval failed on several routes
+  reported_crawl_age: 5days
+  indexed_stock_observed: 0
+  live_stock: null
+  private_orderability: unverified_exact_checkout; positive indexed stock is not live
+    availability
+  moq_observed: 1
+  order_multiple_observed: 1
+  retail_pack: cut tape or bulk when indexed listing says so; line-specific confirmation
+    required
+  factory_pack_observed: 3000
+  manufacturer_lead_weeks_observed: null
+  dispatch_lead_time: null
+  intended_quantity_if_used: 1
+  required_purchase_quantity_if_used: 1
+  unavoidable_excess_if_used: 0
+  unit_net_eur_observed: 0.22
+  unit_gross_eur_19percent_scenario: 0.2618
+  shipping_eur_quote: null
+  delivered_eur_confirmed: null
+  standalone_slot_delivered_eur_scenario: null
+  scenario_condition: Observed price persists;25EUR shipping gross/net alternatives,19percentVAT,
+    eligible warehouse route, no extra charges; not a quote or recommendation
+  independent_route_or_substitute: Manufacturer public model listed; download unresolved;
+    unavailable exact route
+  single_source: Exact silicon/model manufacturer remains single source even if multiple
+    retailers
+- id: diodes_mmbt5401
+  exact_mpn: MMBT5401-7-F
+  seller: DigiKey Germany
+  url: https://www.digikey.de/de/products/detail/diodes-incorporated/MMBT5401-7-F/804904
+  observation_date: '2026-10-09'
+  observation_kind: Indexed primary supplier product page; cache/full-body where returned;
+    detailed retrieval failed on several routes
+  reported_crawl_age: 1week
+  indexed_stock_observed: 177052
+  live_stock: null
+  private_orderability: unverified_exact_checkout; positive indexed stock is not live
+    availability
+  moq_observed: 1
+  order_multiple_observed: 1
+  retail_pack: cut tape or bulk when indexed listing says so; line-specific confirmation
+    required
+  factory_pack_observed: 3000
+  manufacturer_lead_weeks_observed: 40
+  dispatch_lead_time: null
+  intended_quantity_if_used: 1
+  required_purchase_quantity_if_used: 1
+  unavoidable_excess_if_used: 0
+  unit_net_eur_observed: 0.21
+  unit_gross_eur_19percent_scenario: 0.2499
+  shipping_eur_quote: null
+  delivered_eur_confirmed: null
+  standalone_slot_delivered_eur_scenario:
+  - 25.2499
+  - 29.9999
+  scenario_condition: Observed price persists;25EUR shipping gross/net alternatives,19percentVAT,
+    eligible warehouse route, no extra charges; not a quote or recommendation
+  independent_route_or_substitute: Alternate alias804878 reported215447 at.22EUR two
+    months; no live confirmation. onsemiMMBT5401LT1G separate option
+  single_source: Exact silicon/model manufacturer remains single source even if multiple
+    retailers
+- id: opa928
+  exact_mpn: OPA928DT
+  seller: DigiKey Germany
+  url: https://www.digikey.de/en/products/detail/texas-instruments/OPA928DT/23028807
+  observation_date: '2026-10-09'
+  observation_kind: Indexed primary supplier product page; cache/full-body where returned;
+    detailed retrieval failed on several routes
+  reported_crawl_age: 4months
+  indexed_stock_observed: 402
+  live_stock: null
+  private_orderability: unverified_exact_checkout; positive indexed stock is not live
+    availability
+  moq_observed: 1
+  order_multiple_observed: 1
+  retail_pack: cut tape or bulk when indexed listing says so; line-specific confirmation
+    required
+  factory_pack_observed: 250
+  manufacturer_lead_weeks_observed: 16
+  dispatch_lead_time: null
+  intended_quantity_if_used: 1
+  required_purchase_quantity_if_used: 1
+  unavoidable_excess_if_used: 0
+  unit_net_eur_observed: 24.56
+  unit_gross_eur_19percent_scenario: 29.2264
+  shipping_eur_quote: null
+  delivered_eur_confirmed: null
+  standalone_slot_delivered_eur_scenario:
+  - 54.2264
+  - 58.9764
+  scenario_condition: Observed price persists;25EUR shipping gross/net alternatives,19percentVAT,
+    eligible warehouse route, no extra charges; not a quote or recommendation
+  independent_route_or_substitute: Other indexed observation381 at24.76; OPA928DR
+    zero stock is another order code; no silent quote transfer
+  single_source: Exact silicon/model manufacturer remains single source even if multiple
+    retailers
+- id: bav199
+  exact_mpn: BAV199,215
+  seller: DigiKey Germany
+  url: https://www.digikey.de/de/products/detail/nexperia-usa-inc/BAV199-215/763446
+  observation_date: '2026-10-09'
+  observation_kind: Indexed primary supplier product page; cache/full-body where returned;
+    detailed retrieval failed on several routes
+  reported_crawl_age: 3months
+  indexed_stock_observed: 24628
+  live_stock: null
+  private_orderability: unverified_exact_checkout; positive indexed stock is not live
+    availability
+  moq_observed: 1
+  order_multiple_observed: 1
+  retail_pack: cut tape or bulk when indexed listing says so; line-specific confirmation
+    required
+  factory_pack_observed: 3000
+  manufacturer_lead_weeks_observed: null
+  dispatch_lead_time: null
+  intended_quantity_if_used: 1
+  required_purchase_quantity_if_used: 1
+  unavoidable_excess_if_used: 0
+  unit_net_eur_observed: 0.15
+  unit_gross_eur_19percent_scenario: 0.1785
+  shipping_eur_quote: null
+  delivered_eur_confirmed: null
+  standalone_slot_delivered_eur_scenario:
+  - 25.1785
+  - 29.9285
+  scenario_condition: Observed price persists;25EUR shipping gross/net alternatives,19percentVAT,
+    eligible warehouse route, no extra charges; not a quote or recommendation
+  independent_route_or_substitute: Other same-MPN alias763223 zero stock at.16EUR2months;
+    live stock unresolved
+  single_source: Exact silicon/model manufacturer remains single source even if multiple
+    retailers
+- id: bc850c
+  exact_mpn: BC850C,215
+  seller: DigiKey Germany
+  url: https://www.digikey.de/en/products/detail/nexperia-usa-inc/BC850C-215/2531364
+  observation_date: '2026-10-09'
+  observation_kind: Indexed primary supplier product page; cache/full-body where returned;
+    detailed retrieval failed on several routes
+  reported_crawl_age: 2weeks
+  indexed_stock_observed: 0
+  live_stock: null
+  private_orderability: unverified_exact_checkout; positive indexed stock is not live
+    availability
+  moq_observed: null
+  order_multiple_observed: null
+  retail_pack: cut tape or bulk when indexed listing says so; line-specific confirmation
+    required
+  factory_pack_observed: 3000
+  manufacturer_lead_weeks_observed: null
+  dispatch_lead_time: null
+  intended_quantity_if_used: 1
+  required_purchase_quantity_if_used: null
+  unavoidable_excess_if_used: null
+  unit_net_eur_observed: null
+  unit_gross_eur_19percent_scenario: null
+  shipping_eur_quote: null
+  delivered_eur_confirmed: null
+  standalone_slot_delivered_eur_scenario: null
+  scenario_condition: Observed price persists;25EUR shipping gross/net alternatives,19percentVAT,
+    eligible warehouse route, no extra charges; not a quote or recommendation
+  independent_route_or_substitute: Warehouse/marketplace mixing in indexed page; private
+    small-quantity confirmation unresolved
+  single_source: Exact silicon/model manufacturer remains single source even if multiple
+    retailers
+- id: c0g_1nf
+  exact_mpn: CC0603JRNPO0BN102
+  seller: DigiKey Germany
+  url: https://www.digikey.de/en/products/detail/yageo/CC0603JRNPO0BN102/5195155
+  observation_date: '2026-10-09'
+  observation_kind: Indexed primary supplier product page; cache/full-body where returned;
+    detailed retrieval failed on several routes
+  reported_crawl_age: 6days
+  indexed_stock_observed: null
+  live_stock: null
+  private_orderability: unverified_exact_checkout; positive indexed stock is not live
+    availability
+  moq_observed: null
+  order_multiple_observed: null
+  retail_pack: cut tape or bulk when indexed listing says so; line-specific confirmation
+    required
+  factory_pack_observed: 4000
+  manufacturer_lead_weeks_observed: 24
+  dispatch_lead_time: null
+  intended_quantity_if_used: 1
+  required_purchase_quantity_if_used: null
+  unavoidable_excess_if_used: null
+  unit_net_eur_observed: null
+  unit_gross_eur_19percent_scenario: null
+  shipping_eur_quote: null
+  delivered_eur_confirmed: null
+  standalone_slot_delivered_eur_scenario: null
+  scenario_condition: Observed price persists;25EUR shipping gross/net alternatives,19percentVAT,
+    eligible warehouse route, no extra charges; not a quote or recommendation
+  independent_route_or_substitute: LCSC alternate public routeC113793; MOQ/private
+    Germany shipment, fees not verified
+  single_source: Exact silicon/model manufacturer remains single source even if multiple
+    retailers
+cost_boundary:
+  electronics_confirmed_delivered_eur: null
+  fixed_K47FRB_delivered_eur: null
+  mechanical_PCB_connector_labor_test_costs_eur: null
+  do_not_sum_alternative_slots: true
+  shipping_once_per_actual_supplier_basket: true
+  no_free_shipping_topups: true

@@ -1,0 +1,87 @@
+Meridian research output_environment
+.param CF=7e-11
+.param CR=7e-11
+.param SREF=0.02
+.param VREF=60
+.param LEAK=1000000000000
+.param PAR=2e-12
+.param CROSS=5e-13
+.param LIN=0
+.param POLDC=60
+.param VS=48
+.param FT=0
+.param FM=0
+.param LEN=10
+.param RW=0.1
+.param RS=0.05
+.param CD=6e-11
+.param CS=8e-11
+.param ZIN=2000
+.param ZM=0
+.param CC=2.2e-05
+.param CP=2e-10
+.param START=0
+.param CMAC=0
+.param PRESSURE_AC=0
+.param PRESSURE_PEAK=0
+.param FREQ=1000
+.param RHARVESTP_VALUE=2200
+.param RHARVESTN_VALUE=2200
+.param CRAW_VALUE=4.7e-05
+.param RREGTOP_VALUE=100000
+.param RREGBOTTOM_VALUE=100000
+.param CREGBASE_VALUE=1e-06
+.param CRAIL_VALUE=4.7e-05
+.param RMIDTOP_VALUE=10000
+.param RMIDBOTTOM_VALUE=10000
+.param CMID_VALUE=4.7e-05
+.param RPOLAR0_VALUE=1000000
+.param RPOLAR1_VALUE=1000000
+.param RPOLAR2_VALUE=1000000
+.param RPOLAR3_VALUE=1000000
+.param RPOLAR4_VALUE=1000000
+.param RPOLAR5_VALUE=1000000
+.param RPOLAR6_VALUE=1000000
+.param RPOLAR7_VALUE=1000000
+.param RPOLAR8_VALUE=1000000
+.param RPOLAR9_VALUE=1000000
+.param CPOL_VALUE=1e-07
+.param RBACK_VALUE=1000000
+.param RGATETOP0_VALUE=10000
+.param RGATETOP1_VALUE=10000
+.param RGATETOP2_VALUE=10000
+.param RGATEBOTTOM_VALUE=10000
+.param CGATEBIAS_VALUE=4.7e-05
+.param RBIAS_VALUE=1000000000
+.param CBIASSTRAY_VALUE=2e-13
+.param RREAR_VALUE=1000
+.param RSOURCE_VALUE=3300
+.param CAUDIO_VALUE=1e-06
+.param RSIGNAL_VALUE=1000000
+.param ROUTP_VALUE=47
+.param ROUTN_VALUE=47
+.param COUTP_VALUE=4.7e-05
+.param COUTN_VALUE=4.7e-05
+.param RINVEMITTER_VALUE=10000
+.param RINVCOLLECTOR_VALUE=10000
+.param ROUTLOADP_VALUE=10000
+.param ROUTLOADN_VALUE=10000
+.param CBACKFILTER_VALUE=1e-07
+.temp 25
+.options reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T090337Z_3c7187fa/source/models/capsule/flat_k47.cir"
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T090337Z_3c7187fa/source/models/environment/p48.cir"
+VP pressure 0 DC 0 AC {PRESSURE_AC} SIN(0 {PRESSURE_PEAK} {FREQ})
+VPR pressure_r 0 DC 0 AC 0
+Xenv p n mic_g pp pn cm P48 VS={VS} FT={FT} FM={FM} LEN={LEN} RW={RW} RS={RS} CD={CD} CS={CS} ZIN={ZIN} ZM={ZM} CC={CC} CP={CP} START={START} CMAC={CMAC}
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T090337Z_3c7187fa/source/models/semiconductor/vendor/bc846b_emitter_r1.lib"
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T090337Z_3c7187fa/source/models/semiconductor/vendor/jfe150_pspice.lib"
+Iprobe mic_g n DC 0 AC 1
+.control
+set filetype=ascii
+set numdgt=16
+ac dec 8 20 20k
+write port.raw all
+quit
+.endc
+.end

@@ -1,0 +1,52 @@
+schema_version: 1
+checked_date: '2026-10-09'
+scope: Component-linked technical prior-art/feature handoff; no new microphone candidate or clearance
+parent_records: [device_library_2026-10-09.yaml, architecture_comparison_001_2026-10-09.yaml]
+candidate_ids: []
+model_evidence: research/parts_database_expansion_001.yaml
+initial_territories: [DE, relevant_EP_rights]
+search_record: research/parts_sources_2026-10-09.yaml
+search_terms: [H04R3/00, H04R19/01, H03F3/45, H03F3/185, H03F1/0211, microphone JFET gate protection bootstrapping guard charge amplifier]
+technical_flags:
+  - parts: [jfe2140, lsk389a, pmbt5551, bc850c]
+    feature: Differential matched common-source JFETs with BJT feedback and fixed total current sink
+    publication: US12021490B2
+    claims_to_examine: [1, 11]
+    source: https://patents.google.com/patent/US12021490B2/en
+    relation: Claim1 includes microphone housing/transducer differential output, matchedJFET common-source pair, BJT feedback pair and current sink. An integrated dual is a component choice, not avoidance or coverage by itself.
+  - parts: [jfe2140, lsk389a, lsk170a]
+    feature: Phantom-powered differential/cascode JFET gain and supply/current extraction
+    publication: US9668045B1
+    source: https://patents.google.com/patent/US9668045B1/en
+    relation: Technical cascode/gain/supply arrangement deserves exact-connectivity claim mapping if implemented; P48 or public JFET macro alone confers no clearance.
+  - parts: [jfe2140, lsk389a, opa928, bav199]
+    feature: Differential capsule impedance converters, bipolar output buffers, bootstrapped input capacitance
+    publication: US20110085683A1
+    claims_to_examine: [1, 4, 5]
+    source: https://patents.google.com/patent/US20110085683A1/en
+    relation: Application text/claims offer technical differential-converter and BJT-buffer prior art; grant/family/surviving scope must be researched separately.
+  - parts: [bav199, jfe2140]
+    feature: Reset/charge-discharge and protection behavior
+    publication: US8270635B2
+    source: https://patents.google.com/patent/US8270635B2/en
+    relation: Search lead for switched reset and slow-charge noise; adding diode model neither implements nor clears any specific reset claim.
+  - parts: [opa928, lmp7721, ada4530_1]
+    feature: Guard buffer, input bias cancellation, floating electrometer/servo
+    sources: [https://www.ti.com/product/OPA928, https://www.ti.com/product/LMP7721, https://www.analog.com/en/products/ada4530-1.html]
+    relation: Manufacturer circuit/app notes and macro terms are technical evidence; marketing patent-pending/e-trim statements are not legal-status findings or licence scope.
+official_status_attempts:
+  - url: https://patentcenter.uspto.gov/applications/14852618
+    state: Web fetch internal error; no official status obtained
+  - url: https://register.epo.org/smartSearch?query=pn%3DUS20110085683
+    state: Web fetch internal error; no EP family/status obtained
+  - url: https://register.dpma.de/DPMAregister/pat/einsteiger
+    state: Redirected to accessible basis search page; no exact-record search/status determination completed
+official_current_status: unknown
+google_status: Discovery only; Google expressly states assumed status is not a legal conclusion
+candidate_claim_mapping_complete: false
+claims_screened_under_prompt11: false
+credible_unresolved_blocking_risk: Potential related implementation features flagged; territory/current claim determination incomplete
+clearance: Not assessed
+gate: Affected prototype, manufacture and implementation/build-publication advancement held pending exact-version claim/territory/current official-status screening and resolution of credible blockers
+professional_review: Material legal claim, status, territorial or scope uncertainty requires professional review before release of held implementation gates
+external_actions_authorized: false

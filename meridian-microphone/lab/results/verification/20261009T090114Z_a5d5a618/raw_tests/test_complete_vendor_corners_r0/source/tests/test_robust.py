@@ -1,0 +1,134 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+"""Adverse/error specimens, independent uncertainty, budgets and objective gates."""
+from copy import deepcopy
+import json
+import importlib.util
+import numpy as np
+import pytest
+import yaml
+
+from meridian_lab import robust
+from meridian_lab.core import ROOT, Simulator, read_yaml
+
+
+def test_batch_driver_import_and_plan_cover_equal_initial_family_budgets():
+    spec=importlib.util.spec_from_file_location('robust_batch_test', ROOT/'optimization/robust_batch.py')
+    module=importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+    plan=read_yaml(ROOT/'optimization/robust_plan.yaml')
+    assert len(plan['families'])==6 and plan['initial_evaluation_budget_per_family']==12
+    assert sum(plan['followup_policy']['allocation'].values())==20
+    assert plan['validation_seeds'][0] != plan['training_seed']
+
+
+def test_missing_or_error_robust_objective_is_not_a_favorable_zero():
+    rows = [{'status':'pass','m':1}, {'status':'fail','m':100}, {'status':'error'}]
+    out = robust.aggregate(rows, 'm')
+    assert not out['complete'] and out['value'] is None
+    assert out['worst_observed'] == 100 and out['finite_samples']==2
+    assert robust.aggregate(rows[:2], 'm', 'scenario_percentile')['value'] > 90
+    assert robust.aggregate(rows[:2], 'm', direction='maximize')['value'] == 1
+
+
+def test_periodic_and_missing_noise_never_rank_as_stationary_audio():
+    assert not robust.audit({'analysis_domain':'periodic_mechanism_control'},'response')['allowed']
+    assert not robust.audit({}, 'noise')['allowed']
+    assert robust.audit({}, 'response')['allowed']
+    assert not robust.audit({}, 'headroom')['allowed']
+    with pytest.raises(ValueError):
+        robust.audit({}, 'weighted_winner')
+
+
+def test_seeded_holdout_keeps_original_capsule_bounds_and_cross_stray():
+    meta=read_yaml(ROOT/'candidates/candidate_0015/topology.yaml')
+    a=robust.random_scenarios(meta,84047,16)
+    assert a == robust.random_scenarios(meta,84047,16)
+    assert a != robust.random_scenarios(meta,94047,16)
+    ranges=robust.uncertainty_ranges(meta)
+    assert ranges['LEAK']==[1e9,1e14] and ranges['CF']==[45e-12,100e-12]
+    assert ranges['CROSS']==[0,5e-12]
+    corners=robust.corner_scenarios(meta)
+    assert {c.get('model_replacement') for c in corners} >= {'jfe150_weak','jfe150_strong'}
+
+
+def test_design_tolerance_is_centered_on_new_design_without_narrowing():
+    meta=deepcopy(read_yaml(ROOT/'candidates/candidate_0015/topology.yaml'))
+    meta['parameters']['COUTP_VALUE']['default']=188e-6
+    definition={'OUTPUT_C':{'targets':['COUTP_VALUE'],'tolerance_fraction':.2}}
+    assert robust.uncertainty_ranges(meta,definition)['COUTP_VALUE']==pytest.approx([150.4e-6,225.6e-6])
+
+
+def test_small_sample_percentile_interval_has_unbounded_upper_tail():
+    assert robust.percentile_interval(range(16))[1] is None
+    assert robust.percentile_interval([])==[None,None]
+
+
+def test_documented_tcr_stresses_include_temperature_and_full_passive_tolerance():
+    meta={'parameters':{'RTEST_VALUE':{'default':1000}}}
+    bom={'physical_parts':[{'reference':'Rtest','tolerance_fraction':.01,'ratings':{'tcr_ppm_per_C':100}}]}
+    rows=robust.thermal_passive_scenarios(meta,bom)
+    coldlow=next(r for r in rows if r['id']=='TCR_-10_-1')
+    assert coldlow['parameters']['TEMP']==-10
+    assert coldlow['parameters']['RTEST_VALUE']==pytest.approx(1000*.99*.9965)
+
+
+def test_full_suite_design_population_cannot_silently_narrow():
+    from meridian_lab.cli import design_population
+    meta=read_yaml(ROOT/'candidates/candidate_0015/topology.yaml')
+    out=design_population(meta,{'COUTP_VALUE':188e-6},{'COUTP_VALUE':[150.4e-6,225.6e-6]})
+    assert out['population']['COUTP_VALUE']['range'] != meta['population']['COUTP_VALUE']['range']
+    with pytest.raises(ValueError,match='Cannot narrow'):
+        design_population(meta,{'COUTP_VALUE':188e-6},{'COUTP_VALUE':[180e-6,200e-6]})
+
+
+def test_complete_vendor_corners_render_distinct_model_without_mutating_parent(tmp_path):
+    robust.freeze(tmp_path, 'candidate_0015')
+    original=(tmp_path/'candidate/circuit.cir').read_bytes()
+    rows=robust.measure('candidate_0015',tmp_path/'corners',tmp_path,{},
+                        [{'id':'weak','parameters':{},'model_replacement':'jfe150_weak'}])
+    assert rows[0]['status'] in {'pass','fail'}
+    assert rows[0]['current_a']>0
+    deck=next((tmp_path/'corners').glob('scenario_*/0001*/job.cir')).read_text()
+    assert ' JFE150_WEAK\n' in deck
+    assert (tmp_path/'candidate/circuit.cir').read_bytes()==original
+
+
+def test_archive_cannot_compare_unvalidated_axes_or_protocols():
+    from meridian_lab.archive import dominates
+    a={'spec_sha256':'s','suite_sha256':'c','backend':'ngspice','metrics':{'noise':1},'objective_validity':{'noise':False}}
+    b={**a,'metrics':{'noise':2}}
+    assert not dominates(a,b,{'noise':'minimize'})
+    a={**a,'objective_validity':{'noise':True}}
+    b={**b,'objective_validity':{'noise':True},'analysis_domain':'periodic_mechanism_control'}
+    assert not dominates(a,b,{'noise':'minimize'})
+
+
+def test_budget_counts_failures_and_unique_trials(monkeypatch,tmp_path):
+    folder=tmp_path/'candidates/candidate_9999';folder.mkdir(parents=True)
+    meta={'id':'candidate_9999','parameters':{'R':{'default':3}},'qualification_evidence':[]}
+    (folder/'topology.yaml').write_text(yaml.safe_dump(meta))
+    (folder/'circuit.cir').write_text('* analytic optimizer oracle\n')
+    monkeypatch.setattr(robust,'ROOT',tmp_path)
+    monkeypatch.setattr(robust,'source_manifest',lambda:{})
+    monkeypatch.setattr(robust,'verify_spec_lock',lambda:None)
+    monkeypatch.setattr(robust,'spec_digest',lambda:'frozen')
+    monkeypatch.setattr(robust,'environment_versions',lambda:{})
+    def oracle(candidate,directory,snapshot,overrides,scenarios,axis):
+        # Independent convex physical-objective surrogate; a broad infeasible region
+        # must not make the finite adverse trials disappear.
+        v=abs(overrides['R']-7)/7
+        return [{'status':'pass' if v<=.5 else 'fail','response_deviation_db':v,'current_a':.001} for _ in scenarios]
+    monkeypatch.setattr(robust,'measure',oracle)
+    record=robust.optimize('candidate_9999',{'R':{'targets':['R'],'range':[1,10],'rationale':'oracle'}},budget=9)
+    assert record['evaluations']==9 and record['termination']=='evaluation_budget_exhausted'
+    assert not record['scipy_success'] and not record['global_optimality']
+    assert record['trial_failures']>0 and record['best'] is not None
+    saved=json.loads((tmp_path/'results/runs'/record['experiment_id']/'trials.json').read_text())
+    assert len(saved)==9 and record['scenario_attempts']==27
+
+
+def test_parallel_capacitors_match_independent_admittance_oracle(tmp_path):
+    sim=Simulator('fixture_0001',tmp_path)
+    for count in [1,4]:
+        circuit='Vtest cap 0 AC 1\n'+''.join(f'Ctest{i} cap 0 47u\n' for i in range(count))
+        data=sim.execute('parallel_control','ac lin 1 120 120\nwrite cap.raw all',['cap.raw'],extra=circuit)['cap.raw']
+        assert -data['i(vtest)'][0].imag/(2*np.pi*120)==pytest.approx(count*47e-6,rel=1e-10)

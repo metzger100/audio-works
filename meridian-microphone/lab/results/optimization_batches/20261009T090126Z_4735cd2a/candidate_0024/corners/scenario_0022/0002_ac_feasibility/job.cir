@@ -1,0 +1,159 @@
+Meridian research ac_feasibility
+.param CF=7e-11
+.param CR=7e-11
+.param SREF=0.02
+.param VREF=60
+.param LEAK=1000000000000
+.param PAR=2e-12
+.param CROSS=5e-13
+.param LIN=0
+.param POLDC=60
+.param VS=48
+.param FT=0
+.param FM=0
+.param LEN=10
+.param RW=0.1
+.param RS=0.05
+.param CD=6e-11
+.param CS=4e-11
+.param ZIN=2000
+.param ZM=0
+.param CC=2.2e-05
+.param CP=2e-10
+.param START=0
+.param CMAC=0
+.param PRESSURE_AC=1
+.param PRESSURE_PEAK=0
+.param FREQ=1000
+.param RHARVESTP_VALUE=2200
+.param RHARVESTN_VALUE=2200
+.param CRAW_VALUE=4.7e-05
+.param RREGTOP_VALUE=100000
+.param RREGBOTTOM_VALUE=100000
+.param CREGBASE_VALUE=1e-06
+.param CRAIL_VALUE=4.7e-05
+.param RMIDTOP_VALUE=10000
+.param RMIDBOTTOM_VALUE=10000
+.param CMID_VALUE=4.7e-05
+.param RPOLAR0_VALUE=1000000
+.param RPOLAR1_VALUE=1000000
+.param RPOLAR2_VALUE=1000000
+.param RPOLAR3_VALUE=1000000
+.param RPOLAR4_VALUE=1000000
+.param RPOLAR5_VALUE=1000000
+.param RPOLAR6_VALUE=1000000
+.param RPOLAR7_VALUE=1000000
+.param RPOLAR8_VALUE=1000000
+.param RPOLAR9_VALUE=1000000
+.param CPOL_VALUE=1e-07
+.param RBACK_VALUE=1000000
+.param RREFTOP_VALUE=10000
+.param RREFBOTTOM_VALUE=10000
+.param CREF_VALUE=4.7e-05
+.param REMITTER1_VALUE=1000
+.param REMITTER2_VALUE=1000
+.param RTAIL_VALUE=10000
+.param RCOLLECTOR1_VALUE=10000
+.param RCOLLECTOR2_VALUE=10000
+.param CFEEDBACK_VALUE=1e-07
+.param ROUTLOADP_VALUE=10000
+.param ROUTLOADN_VALUE=10000
+.param RREAR_VALUE=1000
+.param ROUTP_VALUE=47
+.param ROUTN_VALUE=47
+.param COUTP_VALUE=4.7e-05
+.param COUTN_VALUE=4.7e-05
+.param RFEEDBACKA_VALUE=1000000
+.param RFEEDBACKB_VALUE=1000000
+.param CFEEDBACKSERIES_VALUE=1e-10
+.param RCFEEDBACKSERIESLOSS_VALUE=1.5915494309
+.param RCFEEDBACKSERIESINSULATION_VALUE=10000000000
+.temp 25
+.options reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/optimization_batches/20261009T090126Z_4735cd2a/candidate_0024/source/models/capsule/flat_k47.cir"
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/optimization_batches/20261009T090126Z_4735cd2a/candidate_0024/source/models/environment/p48.cir"
+VP pressure 0 DC 0 AC {PRESSURE_AC} SIN(0 {PRESSURE_PEAK} {FREQ})
+VPR pressure_r 0 DC 0 AC 0
+Xenv p n mic_g pp pn cm P48 VS={VS} FT={FT} FM={FM} LEN={LEN} RW={RW} RS={RS} CD={CD} CS={CS} ZIN={ZIN} ZM={ZM} CC={CC} CP={CP} START={START} CMAC={CMAC}
+Xcap f b rear pressure pressure_r mic_g FLAT_K47 CF={CF} CR={CR} SREF={SREF} VREF={VREF} LEAK={LEAK} PAR={PAR} CROSS={CROSS} LIN={LIN} POLDC={POLDC}
+* SPDX-License-Identifier: CERN-OHL-S-2.0
+* Internal research; no build recommendation.
+.subckt DUT f b rear p n g rail
+Rharvestp p raw {RHARVESTP_VALUE}
+Rharvestn n raw {RHARVESTN_VALUE}
+Craw raw g {CRAW_VALUE}
+Rregtop raw regbase {RREGTOP_VALUE}
+Rregbottom regbase g {RREGBOTTOM_VALUE}
+Cregbase regbase g {CREGBASE_VALUE}
+VQreg_0 raw Qreg_t0 0
+VQreg_1 regbase Qreg_t1 0
+VQreg_2 rail Qreg_t2 0
+XQreg Qreg_t0 Qreg_t1 Qreg_t2 BC846B
+Crail rail g {CRAIL_VALUE}
+Rmidtop rail mid {RMIDTOP_VALUE}
+Rmidbottom mid g {RMIDBOTTOM_VALUE}
+Cmid mid g {CMID_VALUE}
+Rpolar0 raw pol_0 {RPOLAR0_VALUE}
+Rpolar1 pol_0 pol_1 {RPOLAR1_VALUE}
+Rpolar2 pol_1 pol_2 {RPOLAR2_VALUE}
+Rpolar3 pol_2 pol_3 {RPOLAR3_VALUE}
+Rpolar4 pol_3 pol_4 {RPOLAR4_VALUE}
+Rpolar5 pol_4 pol_5 {RPOLAR5_VALUE}
+Rpolar6 pol_5 pol_6 {RPOLAR6_VALUE}
+Rpolar7 pol_6 pol_7 {RPOLAR7_VALUE}
+Rpolar8 pol_7 pol_8 {RPOLAR8_VALUE}
+Rpolar9 pol_8 pol {RPOLAR9_VALUE}
+Cpol pol g {CPOL_VALUE}
+Rback pol b {RBACK_VALUE}
+Rreftop rail ref {RREFTOP_VALUE}
+Rrefbottom ref g {RREFBOTTOM_VALUE}
+Cref ref g {CREF_VALUE}
+VQinput_0 outa Qinput_t0 0
+VQinput_1 f Qinput_t1 0
+VQinput_2 e1 Qinput_t2 0
+XQinput Qinput_t0 Qinput_t1 Qinput_t2 BC846B
+VQreference_0 outb Qreference_t0 0
+VQreference_1 ref Qreference_t1 0
+VQreference_2 e2 Qreference_t2 0
+XQreference Qreference_t0 Qreference_t1 Qreference_t2 BC846B
+Remitter1 e1 tail {REMITTER1_VALUE}
+Remitter2 e2 tail {REMITTER2_VALUE}
+Rtail tail g {RTAIL_VALUE}
+Rcollector1 rail outa {RCOLLECTOR1_VALUE}
+Rcollector2 rail outb {RCOLLECTOR2_VALUE}
+Cfeedback outa feedback_series {CFEEDBACK_VALUE}
+VQoutp_0 rail Qoutp_t0 0
+VQoutp_1 outa Qoutp_t1 0
+VQoutp_2 outp Qoutp_t2 0
+XQoutp Qoutp_t0 Qoutp_t1 Qoutp_t2 BC846B
+VQoutn_0 rail Qoutn_t0 0
+VQoutn_1 outb Qoutn_t1 0
+VQoutn_2 outn Qoutn_t2 0
+XQoutn Qoutn_t0 Qoutn_t1 Qoutn_t2 BC846B
+Routloadp outp g {ROUTLOADP_VALUE}
+Routloadn outn g {ROUTLOADN_VALUE}
+Rrear rear g {RREAR_VALUE}
+Routp outp cp {ROUTP_VALUE}
+Routn outn cn {ROUTN_VALUE}
+Coutp p cp {COUTP_VALUE}
+Coutn n cn {COUTN_VALUE}
+Rfeedbacka outa f {RFEEDBACKA_VALUE}
+Rfeedbackb outa f {RFEEDBACKB_VALUE}
+Cfeedbackseries cfeedbackseries_loss f {CFEEDBACKSERIES_VALUE}
+RCfeedbackseriesloss feedback_series cfeedbackseries_loss {RCFEEDBACKSERIESLOSS_VALUE}
+RCfeedbackseriesinsulation feedback_series f {RCFEEDBACKSERIESINSULATION_VALUE}
+.ends DUT
+
+Xdut f b rear p n mic_g rail DUT
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/optimization_batches/20261009T090126Z_4735cd2a/candidate_0024/source/models/semiconductor/vendor/bc846b_emitter_r1.lib"
+
+.control
+set filetype=ascii
+set numdgt=16
+op
+write op.raw all
+ac dec 32 1 10Meg
+write ac.raw all
+quit
+.endc
+.end

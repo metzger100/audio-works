@@ -1,26 +1,27 @@
 {
   "schema_version": 1,
-  "as_of": "2026-10-06",
-  "phase": "Phase 3 semiconductor prerequisite — partial",
+  "as_of": "2026-10-09",
+  "phase": "Parts evidence strengthened \u2014 research",
   "readiness": {
-    "software": "Final recorded verification: 31 tests pass; original failed verification retained.",
-    "engineering": "Behavior-specific grounded small-signal model agreement; complete production/noise/P48 coverage unresolved.",
-    "procurement": "No build-ready BOM; confirmed delivered costs remain unknown.",
-    "patents": "Early feature flags only; candidate claim/status screening incomplete.",
-    "physical": "No physical measurements or selected prototype.",
-    "preservation": "Available waveforms intact; 89 legacy source files absent. Independent backup/restore pending owner destination."
+    "software": "68 lab/24 repository tests pass; gates retained.",
+    "engineering": "20 devices/27 model files; scoped PNP controls; no selection.",
+    "procurement": "Realized BOMs; Germany private orderability/costs unresolved.",
+    "patents": "Phase 8 claims/status missing; affected gates held.",
+    "physical": "No measurements; access deferred; no selected prototype.",
+    "preservation": "Local recovery verified; 89 legacy source gaps; independent backup incomplete."
   },
   "blockers": [
     "Unknown capsule safe polarization, mechanics and noise.",
-    "Device-model/nonlinear/production coverage remains incomplete.",
-    "Procurement and candidate patent screening remain unresolved."
+    "Device/nonlinear/production coverage incomplete.",
+    "Procurement and candidate patent screening unresolved."
   ],
-  "next_action": "Strengthen qualification/evidence states while resolving unsupported device behaviors; preserve all 14 architecture families.",
+  "next_action": "Resolve08 behavior and11\u201312 sourcing/patent/preservation prerequisites.",
   "evidence": [
+    "meridian-microphone/lab/research/parts_database_expansion_002.md",
+    "meridian-microphone/lab/research/architecture_comparison_001.md",
+    "meridian-microphone/lab/research/parts_database_expansion_001.md",
     "meridian-microphone/lab/research/device_model_validation.md",
-    "meridian-microphone/lab/results/verification/20261005T190817Z_17885439/verification.json",
-    "meridian-microphone/lab/research/procurement/semiconductors_2026-10-05.yaml",
-    "meridian-microphone/lab/research/patents/register.yaml"
+    "meridian-microphone/lab/research/patents/architecture_comparison_001_2026-10-09.yaml"
   ],
   "stages": [
     {
@@ -30,19 +31,23 @@
     },
     {
       "id": "qualification",
-      "state": "planned"
+      "state": "partial",
+      "evidence": "meridian-microphone/lab/research/robust_optimization_report.md"
     },
     {
       "id": "topology",
-      "state": "planned"
+      "state": "partial",
+      "evidence": "meridian-microphone/lab/research/first_architecture_batch.md"
     },
     {
       "id": "optimization",
-      "state": "planned"
+      "state": "partial",
+      "evidence": "meridian-microphone/lab/research/robust_optimization_report.md"
     },
     {
       "id": "reporting",
-      "state": "planned"
+      "state": "partial",
+      "evidence": "meridian-microphone/lab/research/architecture_comparison_001.md"
     }
   ],
   "common": [
@@ -85,7 +90,34 @@
       "meridian-microphone/lab/models/semiconductor/README.md",
       "meridian-microphone/lab/research/device_model_validation.md",
       "QUALITY.md",
-      "LICENSE"
+      "LICENSE",
+      "meridian-microphone/lab/models/semiconductor/registry.yaml",
+      "meridian-microphone/lab/models/semiconductor/references.yaml",
+      "meridian-microphone/lab/models/semiconductor/corners.yaml",
+      "meridian-microphone/lab/research/procurement/semiconductors_2026-10-09.yaml",
+      "meridian-microphone/lab/research/device_model_decisions.md",
+      "meridian-microphone/lab/research/prompts/README.md",
+      "meridian-microphone/lab/research/prompts/RESEARCH_WORKFLOW.md",
+      "meridian-microphone/lab/research/prompts/DECISIONS.md",
+      "meridian-microphone/lab/research/prompts/06_parts_database_expansion.md",
+      "meridian-microphone/lab/research/prompts/08_simulation_prerequisites.md",
+      "meridian-microphone/lab/research/parts_database_expansion_001.md",
+      "meridian-microphone/lab/research/parts_database_expansion_001_decisions.md",
+      "meridian-microphone/lab/research/parts_database_expansion_001.yaml",
+      "meridian-microphone/lab/research/parts_sources_2026-10-09.yaml",
+      "meridian-microphone/lab/research/parts_control_plan_002.yaml",
+      "meridian-microphone/lab/research/procurement/parts_expansion_001_2026-10-09.yaml",
+      "meridian-microphone/lab/research/patents/parts_expansion_001_2026-10-09.yaml",
+      "meridian-microphone/lab/research/parts_database_expansion_002.md",
+      "meridian-microphone/lab/research/parts_database_expansion_002_decisions.md",
+      "meridian-microphone/lab/research/parts_database_expansion_002.yaml",
+      "meridian-microphone/lab/research/parts_database.py",
+      "meridian-microphone/lab/research/parts_sources_expansion_002_2026-10-09.yaml",
+      "meridian-microphone/lab/research/parts_control_plan_003.yaml",
+      "meridian-microphone/lab/research/parts_control_plan_004.yaml",
+      "meridian-microphone/lab/research/parts_control_plan_005.yaml",
+      "meridian-microphone/lab/research/procurement/parts_expansion_002_2026-10-09.yaml",
+      "meridian-microphone/lab/research/patents/parts_expansion_002_2026-10-09.yaml"
     ],
     "qualification": [
       "meridian-microphone/lab/CONTRACT.md",
@@ -103,7 +135,11 @@
       "meridian-microphone/lab/research/patents/README.md",
       "meridian-microphone/lab/research/prompts/02_qualification.md",
       "QUALITY.md",
-      "LICENSE"
+      "LICENSE",
+      "meridian-microphone/lab/research/prompts/README.md",
+      "meridian-microphone/lab/research/prompts/RESEARCH_WORKFLOW.md",
+      "meridian-microphone/lab/research/prompts/DECISIONS.md",
+      "meridian-microphone/lab/research/prompts/09_focused_engineering_hypotheses.md"
     ],
     "topology": [
       "meridian-microphone/lab/CONTRACT.md",
@@ -123,7 +159,16 @@
       "meridian-microphone/lab/search/concepts.yaml",
       "meridian-microphone/lab/research/prompts/03_architectures.md",
       "QUALITY.md",
-      "LICENSE"
+      "LICENSE",
+      "meridian-microphone/lab/research/first_architecture_batch.md",
+      "meridian-microphone/lab/research/carrier_protocol.md",
+      "meridian-microphone/lab/research/procurement/architecture_parts_2026-10-09.yaml",
+      "meridian-microphone/lab/research/patents/first_architecture_batch_2026-10-09.yaml",
+      "meridian-microphone/lab/research/first_architecture_decisions.md",
+      "meridian-microphone/lab/research/prompts/README.md",
+      "meridian-microphone/lab/research/prompts/RESEARCH_WORKFLOW.md",
+      "meridian-microphone/lab/research/prompts/DECISIONS.md",
+      "meridian-microphone/lab/research/prompts/10_diverse_mechanism_prerequisites.md"
     ],
     "optimization": [
       "meridian-microphone/lab/CONTRACT.md",
@@ -141,7 +186,16 @@
       "meridian-microphone/lab/research/patents/README.md",
       "meridian-microphone/lab/research/prompts/04_robust_optimization.md",
       "QUALITY.md",
-      "LICENSE"
+      "LICENSE",
+      "meridian-microphone/lab/research/first_architecture_batch.md",
+      "meridian-microphone/lab/research/robust_optimization_report.md",
+      "meridian-microphone/lab/research/robust_optimization_decisions.md",
+      "meridian-microphone/lab/optimization/robust_plan.yaml",
+      "meridian-microphone/lab/research/procurement/robust_parts_2026-10-09.yaml",
+      "meridian-microphone/lab/research/patents/robust_optimization_2026-10-09.yaml",
+      "meridian-microphone/lab/research/prompts/README.md",
+      "meridian-microphone/lab/research/prompts/RESEARCH_WORKFLOW.md",
+      "meridian-microphone/lab/research/prompts/DECISIONS.md"
     ],
     "reporting": [
       "meridian-microphone/lab/CONTRACT.md",
@@ -160,7 +214,31 @@
       "meridian-microphone/lab/research/prompts/05_comparative_report.md",
       "meridian-microphone/lab/results/README.md",
       "QUALITY.md",
-      "LICENSE"
+      "LICENSE",
+      "meridian-microphone/lab/research/first_architecture_batch.md",
+      "meridian-microphone/lab/research/carrier_protocol.md",
+      "meridian-microphone/lab/research/procurement/architecture_parts_2026-10-09.yaml",
+      "meridian-microphone/lab/research/patents/first_architecture_batch_2026-10-09.yaml",
+      "meridian-microphone/lab/research/first_architecture_decisions.md",
+      "meridian-microphone/lab/research/robust_optimization_report.md",
+      "meridian-microphone/lab/research/robust_optimization_decisions.md",
+      "meridian-microphone/lab/optimization/robust_plan.yaml",
+      "meridian-microphone/lab/research/procurement/robust_parts_2026-10-09.yaml",
+      "meridian-microphone/lab/research/patents/robust_optimization_2026-10-09.yaml",
+      "meridian-microphone/lab/research/architecture_comparison_001.md",
+      "meridian-microphone/lab/research/architecture_comparison_001.yaml",
+      "meridian-microphone/lab/research/architecture_comparison_001_decisions.md",
+      "meridian-microphone/lab/research/compare_architectures.py",
+      "meridian-microphone/lab/measurement/priority_plan.md",
+      "meridian-microphone/lab/research/comparison_procurement_observations_2026-10-09.yaml",
+      "meridian-microphone/lab/research/patents/architecture_comparison_001_2026-10-09.yaml",
+      "meridian-microphone/lab/research/prompts/README.md",
+      "meridian-microphone/lab/research/prompts/RESEARCH_WORKFLOW.md",
+      "meridian-microphone/lab/research/prompts/DECISIONS.md",
+      "meridian-microphone/lab/research/prompts/07_capsule_evidence_envelope.md",
+      "meridian-microphone/lab/research/prompts/11_candidate_patent_screening.md",
+      "meridian-microphone/lab/research/prompts/12_sourcing_and_preservation.md",
+      "meridian-microphone/lab/research/prompts/13_common_cohort_recomparison.md"
     ]
   },
   "modules": [
@@ -203,9 +281,52 @@
       "prefix": "meridian-microphone/lab/",
       "name": "Meridian microphone laboratory",
       "purpose": "Specifications, scientific code, models and evidence."
+    },
+    {
+      "prefix": "meridian-microphone/lab/research/architecture_sources/",
+      "name": "Architecture primary observations",
+      "purpose": "Dated own observations, primary URLs, source freshness and limits; frozen in evaluation sources."
+    },
+    {
+      "prefix": "meridian-microphone/lab/optimization/",
+      "name": "Scoped robust numerical research",
+      "purpose": "Predeclared single-axis scenarios, strict evaluation budgets, retained continuous proposals and realized-BOM phases."
+    },
+    {
+      "prefix": "meridian-microphone/lab/results/optimization_batches/",
+      "name": "Robust batch evidence",
+      "purpose": "Frozen batch plans, parent/full-suite indexes, discrete studies and independent withheld uncertainty records."
+    },
+    {
+      "prefix": "meridian-microphone/lab/results/reports/architecture_comparison_001/",
+      "name": "Reproducible architecture comparison",
+      "purpose": "Derived same-cohort tables, spectra, netlist connectivity and separate research fronts; original evidence remains immutable."
+    },
+    {
+      "prefix": "meridian-microphone/lab/measurement/",
+      "name": "Physical measurement handoff",
+      "purpose": "Prioritized calibrated measurements, safe prerequisites, interchange and versioned model updates; no measured data yet."
+    },
+    {
+      "prefix": "meridian-microphone/lab/research/prompts/",
+      "name": "Research task prompts",
+      "purpose": "Authoritative phase and continuation tasks, shared execution contract, dated plan and generated combined pack; written tasks are not executed evidence."
+    },
+    {
+      "prefix": "meridian-microphone/lab/research/device_sources/",
+      "name": "Manufacturer and parts evidence",
+      "purpose": "Purpose/index for private original acquisitions, notices, failed responses and dated search/model provenance; parts-expansion matrix/report link scoped handoffs."
     }
   ],
   "classifications": [
+    {
+      "prefix": "meridian-microphone/lab/research/parts_sources_expansion_002_2026-10-09.yaml",
+      "role": "evidence"
+    },
+    {
+      "prefix": "meridian-microphone/lab/results/reports/architecture_comparison_001/",
+      "role": "generated"
+    },
     {
       "prefix": "branding/archive/",
       "role": "historical"
@@ -237,6 +358,10 @@
     {
       "prefix": "meridian-microphone/lab/models/semiconductor/proposals/",
       "role": "proposal"
+    },
+    {
+      "prefix": "meridian-microphone/lab/research/parts_sources_2026-10-09.yaml",
+      "role": "evidence"
     }
   ],
   "root_files": [
@@ -262,13 +387,17 @@
     "branding/archive/",
     "meridian-microphone/lab/results/runs/",
     "meridian-microphone/lab/results/device_models/",
-    "meridian-microphone/lab/results/verification/"
+    "meridian-microphone/lab/results/verification/",
+    "meridian-microphone/lab/results/mechanism_controls/",
+    "meridian-microphone/lab/results/optimization_batches/"
   ],
   "immutable_files": [
     "meridian-microphone/lab/results/raw-data.sha256",
     "meridian-microphone/lab/results/device-model-raw-data.sha256",
     "meridian-microphone/lab/results/device-model-csv-data.sha256",
-    "docs/legacy-source-gaps.json"
+    "docs/legacy-source-gaps.json",
+    "meridian-microphone/lab/research/parts_sources_2026-10-09.yaml",
+    "meridian-microphone/lab/research/parts_sources_expansion_002_2026-10-09.yaml"
   ],
   "backup_evidence_prefixes": [
     "meridian-microphone/lab/models/semiconductor/vendor/",

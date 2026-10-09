@@ -1,0 +1,1606 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20261009T082146Z_25aa5621",
+  "timestamp_utc": "2026-10-09T08:21:46.729091+00:00",
+  "backend": "ngspice",
+  "candidate_id": "candidate_0014",
+  "parent_candidates": [
+    "candidate_0011"
+  ],
+  "parent_experiments": [
+    "20261009T080943Z_c80c6e97",
+    "20261009T081956Z_3e19c047"
+  ],
+  "hypothesis": "Capacitive feedback may flatten electrical charge conversion while a finite resistive reset prevents indefinite drift only within measured DC authority.",
+  "structural_changes": "Replace backordered KEMET 100pF by documented Yageo CC0603JRNPO0BN101; include explicit insulation and loss sensitivity controls. These do not validate a complete temperature/frequency loss model or the ideal carrier hardware. Rerun all supported checks.",
+  "numerical_optimization": {
+    "performed": false
+  },
+  "simulation_configuration": {
+    "CF": 7e-11,
+    "CR": 7e-11,
+    "SREF": 0.02,
+    "VREF": 60,
+    "LEAK": 1000000000000.0,
+    "PAR": 2e-12,
+    "CROSS": 5e-13,
+    "LIN": 0,
+    "POLDC": 60,
+    "VS": 48,
+    "FT": 0,
+    "FM": 0,
+    "LEN": 10,
+    "RW": 0.1,
+    "RS": 0.05,
+    "CD": 6e-11,
+    "CS": 8e-11,
+    "ZIN": 2000,
+    "ZM": 0,
+    "CC": 2.2e-05,
+    "CP": 2e-10,
+    "TEMP": 25,
+    "START": 0,
+    "CMAC": 0,
+    "PRESSURE_AC": 1,
+    "PRESSURE_PEAK": 0,
+    "FREQ": 1000,
+    "RHARVESTP_VALUE": 2200,
+    "RHARVESTN_VALUE": 2200,
+    "CRAW_VALUE": 4.7e-05,
+    "RREGTOP_VALUE": 100000,
+    "RREGBOTTOM_VALUE": 100000,
+    "CREGBASE_VALUE": 1e-06,
+    "CRAIL_VALUE": 4.7e-05,
+    "RMIDTOP_VALUE": 10000,
+    "RMIDBOTTOM_VALUE": 10000,
+    "CMID_VALUE": 4.7e-05,
+    "RPOLAR0_VALUE": 1000000,
+    "RPOLAR1_VALUE": 1000000,
+    "RPOLAR2_VALUE": 1000000,
+    "RPOLAR3_VALUE": 1000000,
+    "RPOLAR4_VALUE": 1000000,
+    "RPOLAR5_VALUE": 1000000,
+    "RPOLAR6_VALUE": 1000000,
+    "RPOLAR7_VALUE": 1000000,
+    "RPOLAR8_VALUE": 1000000,
+    "RPOLAR9_VALUE": 1000000,
+    "CPOL_VALUE": 1e-07,
+    "RBACK_VALUE": 1000000,
+    "RFEEDBACK_VALUE": 1000000000.0,
+    "CFEEDBACKSTRAY_VALUE": 2e-13,
+    "CFEEDBACK_VALUE": 1e-10,
+    "RREAR_VALUE": 1000,
+    "ROUTP_VALUE": 47,
+    "ROUTN_VALUE": 47,
+    "COUTP_VALUE": 4.7e-05,
+    "COUTN_VALUE": 4.7e-05,
+    "RINVEMITTER_VALUE": 10000,
+    "RINVCOLLECTOR_VALUE": 10000,
+    "ROUTLOADP_VALUE": 10000,
+    "ROUTLOADN_VALUE": 10000,
+    "RCFEEDBACKLOSS_VALUE": 1.5915494309,
+    "RCFEEDBACKINSULATION_VALUE": 10000000000.0
+  },
+  "rng_seed": 34047,
+  "scenario_samples": 16,
+  "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+  "suite_sha256": "8911ebc19b0dc9ab81b57862f0ed3dc99c787b1c1b400c4be6b87814523aece5",
+  "source_manifest": {
+    "models/capsule/flat_k47.cir": "26899d24e6aefa2cfd41b6c13fe1e022e94f2ffec10358ec00dfb74ed0c082b4",
+    "models/capsule/flat_k47_native_q_r1.cir": "79b97ea73165979525f08aca427d8bfaa42fa8814ae576b140bf97550fb61c18",
+    "models/capsule/flat_k47_scaled_observer_r2.cir": "a977702eae58c5345e129bb282ce75f98e4405872e891e603512d37c480758fe",
+    "models/capsule/flat_k47_series_motion_r3.cir": "dcd00a192cfdc6a1744d9a3c2c8ad65b73b4a990697f85f23e756711834d5bb7",
+    "models/environment/p48.cir": "8037de103d579dc4923b37e2ae0b2c78a7337b39385f05055d7e08aa94a53d6f",
+    "models/semiconductor/acquire.py": "5da42d662f6d473a1a1a88412d03f7a3a5f3d03871c89bb68a889579ba507707",
+    "models/semiconductor/acquisition.yaml": "3bd9ce6c38641dc80645fbb312f39b4680c58e776b7b7dbbac805a0419bdf01e",
+    "models/semiconductor/characterize.py": "582ab687091d53e87f0f7e1d0b679825b7c7109273a71724d32fa664695a0a7f",
+    "models/semiconductor/corners.yaml": "533ecf345bf7c5ebfaf28ff945a41b47b483b41df61e0f8eafa2a8a00ab8a038",
+    "models/semiconductor/dc_bound_controls.cir": "fb9288ccf32775bfa3c2192a1314bde022f963fc5a7923ab71f5999671a1d120",
+    "models/semiconductor/prepare.py": "bd2aca3425ebaa7eb7d9048e3856640990a46c60b56f1093da1e87073e5457ea",
+    "models/semiconductor/proposals/corners_r1.yaml": "07cba7e177d59fbda19e4e1fecc8d1e045c28b7126e942122f32994a974ada17",
+    "models/semiconductor/proposals/corners_r2_metadata_parent_alias.yaml": "f472170740b18517edac85f112cd6388294a833bc558be156e641e4b7681fc63",
+    "models/semiconductor/proposals/dc_bound_controls_r1.cir": "4aec8ca3bf32d3ee0ac921b407d0b86b73acfef6de1db7a0b313e10e19b00c4d",
+    "models/semiconductor/references.yaml": "984982ec0a7e40250902865127b8d9d6e40012858d907a44a2acf699cf6a83ef",
+    "models/semiconductor/registry.yaml": "d1d8a595dc2fb1fae76a103be3508c78d98bbfce3354f8bc22a176c1181f1498",
+    "models/semiconductor/validate_corners.py": "42eb7c2d41bb6570b71949ce9476bb31c24cdb4795187c763f1dc5bde62f3357",
+    "models/semiconductor/vendor/2n7002.lib": "4a2a3f7fb1725f12fcfe3f7fef5cc082be2ac58eeb30ee4fdb693398e74abbf5",
+    "models/semiconductor/vendor/acquisition/20261005T181750804905Z.json": "db38cd67049333bd28265112abd095c76a0b9fe30e070fe8224324f65788b2da",
+    "models/semiconductor/vendor/acquisition/20261005T182032778675Z.json": "50ddb32c1e39564b817fd6fe8a5b1899a461501f583dec1ed831219a67606aa6",
+    "models/semiconductor/vendor/acquisition/20261005T190715553654Z.json": "e6e68a4a2c21e8acb836286cb9dbc8fcd5fb26a9ebcdb8bdb3e4de5851d4f175",
+    "models/semiconductor/vendor/acquisition/20261009T065251920839Z.json": "7e8c81e76abc6154ff9ed5d806564a10aa4c102263e6bb92ca9558669f800a58",
+    "models/semiconductor/vendor/acquisition/discovery_20261009T065017889193Z.json": "a74d4968672e587d22acb28a9d1a5ff8a1ed22df4eddd4a05e37a1463b49bd7f",
+    "models/semiconductor/vendor/bc846b.lib": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+    "models/semiconductor/vendor/bc846b_emitter_r1.lib": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+    "models/semiconductor/vendor/bc856b.lib": "580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33",
+    "models/semiconductor/vendor/downloads/2n7002k_ps_revb.zip": "418a0ccb1e31c07c6f42e911514bb51b3a6d2ee7b5d13df12faa46c2e6467db1",
+    "models/semiconductor/vendor/downloads/sboma34d.zip": "9e55fcaa23d54cee025dda3fa9872b11c41c531f82e0802c2b93d51e943666e5",
+    "models/semiconductor/vendor/downloads/slpm349i.zip": "6358de546c957c142c321f30431fa816610a22599a0a3f980646ac6bbe6eace0",
+    "models/semiconductor/vendor/downloads/slpm366.zip": "1fd7c2ff8ef1c2b1354c98e35537f4d0db56ebb0eea614702bff7610c25e46a1",
+    "models/semiconductor/vendor/evidence/2n7002.pdf": "cc9c275457670c3cbbf2e56f5a75c800d3b5f0b396fabc798cf18cb639646475",
+    "models/semiconductor/vendor/evidence/bc846.pdf": "045a6cc21de93ac634aad910567e882926bd6ef154cbd8c59d13201134642a97",
+    "models/semiconductor/vendor/evidence/bc856.pdf": "d9a836e40dd8f1e788d7dadbfcbe8cf4836ed5debe789c84b8fa574132f84943",
+    "models/semiconductor/vendor/evidence/jfe150.pdf": "925d58a8f0cf7db307325ece12fb2f61a736b2c1440f63928b5e6c1312f39365",
+    "models/semiconductor/vendor/evidence/opa197.pdf": "27653a7d5e965cbb2d23f7998919ebd774efd5cd3e126b8f0881469ae91166fd",
+    "models/semiconductor/vendor/evidence/vishay_2n7002k.pdf": "639ab49255a61576ef6c5cb89c1536e045b44724fb95af12438ba41022e44adf",
+    "models/semiconductor/vendor/evidence/vishay_2n7002k_model_guide.pdf": "e6ffb92656896ce98f78945b50551c51bd3e8b6dfab2484b0c1134ee12d24fb0",
+    "models/semiconductor/vendor/jfe150_generic.lib": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+    "models/semiconductor/vendor/jfe150_pspice.lib": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+    "models/semiconductor/vendor/jfe150_strong.lib": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+    "models/semiconductor/vendor/jfe150_weak.lib": "494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4",
+    "models/semiconductor/vendor/opa197.lib": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+    "models/semiconductor/vendor/vishay_2n7002k.lib": "d59ce922b2c814e4aaa63f27459696b8c71494fac61f47c8cf8c093eba273111",
+    "optimization/optimize_bias.py": "90cf1a61c2aaad14c39c3c6c544bc8bae21fb556303381d44c4ffc8bef498733",
+    "optimization/optimize_values.py": "6c332b7758d61cf92aad716781ee81ee0401156965543673f9438d2d8e5e85f4",
+    "requirements.txt": "f2162d13822ff575becaab0e43a96dcce42f33a9e3cd4aacbc88d3ae1e4ff3c3",
+    "research/architecture_sources/README.md": "8d08827cf09f9f94a5aba58226781ada5eb9e9e3c01377e88a4cf5c4e7fc135e",
+    "research/architecture_sources/observations_2026-10-09.json": "c4d9b9cd15e7bb85523ef2f091074cc9061f5b1d0f335b12f64e2f79401014f1",
+    "research/device_sources/README.md": "b862cb16df6e8252854ea7d172f9cb7ae5766d6e057c9fd9be0868d350a2b480",
+    "research/device_sources/local/2026-10-09/bc846b_lifecycle.html": "d6f650bc836f4c4bad6b52f06efd1705c6e51d57a4f01c6b5ca540b9b7d3a786",
+    "research/device_sources/local/2026-10-09/bc856b_lifecycle.html": "42f245e6f7ce5d84678a6186b99c6a664626093b9516c0f881e3c8b1a4b64134",
+    "research/device_sources/local/2026-10-09/digikey_indexed_observations.json": "ce05b158d06559d993ea6ab4251535e3b3e0f326ad332ac250385ab9c3b3277d",
+    "research/device_sources/local/2026-10-09/http_observations.json": "68e8b219dacb66d21ef6a7631accb41ab79cac350394342a0117df7878823e72",
+    "research/device_sources/local/2026-10-09/jfe150_product.html": "bbbd50494fa39314c8ec6bce69182fb28bf0120825bec92045a2e8f0405dee2a",
+    "research/device_sources/local/2026-10-09/mouser_mos.html": "47a1d4f38dba44d91b3f8ff73caf5353da6ec49367b0c9be930304ce02a4803c",
+    "research/device_sources/local/2026-10-09/mouser_terms.html": "72dafd24e3804769d5b0333e40a259d812462b319644574efa91cb1f7759c327",
+    "research/device_sources/local/2026-10-09/opa197_product.html": "55b9cffec118f93130fc70cf905a444d032c9a33397e04730cd2e53c65357093",
+    "research/device_sources/local/2026-10-09/search_retail_observations.json": "c838e1f5ecfebe8a9e6696ee00334672ff2700e7ef34ab87f91c1c867b792b00",
+    "research/device_sources/local/2026-10-09/search_terms_observations.json": "feaf5756d2c994e29380c6de0d1899dadc6ec3d0004bd84073852a6cdc332745",
+    "research/device_sources/local/2026-10-09/stock_search_observations.json": "41acfa9e9465355dbdbb9f893bad74d0935a857b2839c5df3df832071bb83753",
+    "research/device_sources/local/2026-10-09/vishay_design_tools.html": "d381549d343e3e1faf66c4fa9e5845a6420508d9ed7b1335de5529018032f71c",
+    "research/device_sources/local/2026-10-09/vishay_quality.html": "45e4fb7a41053e3eb4f0d6f6465fe4f17045d4dedf473fa8268485361775569d",
+    "research/device_sources/local/mos_alternative_observations_2026-10-05.json": "da942962cf0e951aded4889df9df6c183b32c5ce45d4118513a59e34bb9b3a3f",
+    "research/device_sources/local/web_observations.json": "82eba24adf2a815360d34ad69a3dc98feb4aba101e5431a6340ee11bc585b498",
+    "research/procurement/architecture_parts_2026-10-09.yaml": "510da5723030cc6e6918e9dc5802cbc4aa4f508211d6e7167db7622d41327e1a",
+    "research/procurement/semiconductors_2026-10-05.yaml": "aa68772d1310a3847819fd6edaea7bbb1052e1bdbdc499f947f89f44c73e35f0",
+    "research/procurement/semiconductors_2026-10-09.yaml": "8623518f110d7340798f270e4acb17e3e51b33bb5fa58ecaa4cf2d2b6e921a88",
+    "research/sources.yaml": "6fb1f4a960a155178d75e8faa54d22ee554367cc7ac41e0c1dfec6ccc9658182",
+    "search/archive.py": "a6540a439fd86d9d0989cc6b75a5656afd15eaeed86adae189debe604a242b58",
+    "search/concepts.yaml": "711693e5c28f1313246c4411926687981b4c0db48a845ab5fa4585dd22002123",
+    "search/families.yaml": "d0afa9dd39c3c2515bb64b31f89af18e358fddb3b9495976080f8425ea813b19",
+    "search/first_batch.py": "4f7c5c5cdd0d1bebb86c52b3ed384b946883c862eb20a8aaeb18ea066bdd9649",
+    "search/first_batch_children.py": "0858d5b2bcce6666a2fe4403c7bdcaaa4be31d3677ad9cb83f17f19439c2be02",
+    "search/first_batch_realization.py": "892314c797e8815d617948067b65e3f41cc8621e245498be8e43c027cef6a251",
+    "search/generate_topology.py": "3b03bd1291e1e757f2d5701e029bf9610a772442a3bfb55bf662b70ede13220b",
+    "search/loop.py": "3322bb6d43b86f9c4e1c472a79d50f80e06783960c880a8be8452ee4b64e1d9f",
+    "search/mutate.py": "8f91ab73f3ffca62922db5346173dd66a61baa6b781141dd9c3ca61f011d9886",
+    "search/novelty.py": "1d0373ee6060f925febf54375a2de2dd42c846b5a1ba6c86570c597d1c1566df",
+    "search/proposals/candidate_0001/circuit.cir": "80ba176b014e71b494ec4f7e9470fe2ac45897ccd30fda685e0cb498445a07c4",
+    "search/proposals/candidate_0001/topology.yaml": "dc6ed7a648b31d8cd6d9e27c4c2ca98d36518f5a02a12a5c13244383c05f780d",
+    "search/proposals/candidate_0002/circuit.cir": "a14dab7032b27e1723cb387d0f74a693753f04be0855b969861cc9c071cb7977",
+    "search/proposals/candidate_0002/topology.yaml": "cbe427674c1bf434dce919438bab6d5dbf245ce289c09005b5371b0794f53da2",
+    "search/proposals/candidate_0003/circuit.cir": "197c47f5ff0a80232d7ba319a2edb3cc644c4d5f7ba941b317a4f92218cec4ea",
+    "search/proposals/candidate_0003/topology.yaml": "15c0d6cc42c8dbb9ce61dbb992646dae4b1a3a14a8689129ec99e02fdfc822f0",
+    "search/proposals/candidate_0004/circuit.cir": "4baac866e38bdcf36ac44bc5c115891576613d2c924e2feda3641b002e443832",
+    "search/proposals/candidate_0004/topology.yaml": "cdff6d8b0237d7fcde111c9df957c550420542629b709d22619510655427895e",
+    "search/proposals/candidate_0005/circuit.cir": "64b28c3ba47a65edd24c14881949dde86da264ce5889eaa5f100ba2aad678280",
+    "search/proposals/candidate_0005/topology.yaml": "ecb5d649b32cab6b39be92c80901c50c68969cf43b0b77fc3b740e662bdf9b38",
+    "search/proposals/candidate_0006/circuit.cir": "c956f5b5e232f11a9ab7eaed39e02ea5fbd54900f8bc1d26fb00dd02a7f551dd",
+    "search/proposals/candidate_0006/topology.yaml": "264d381f8b25e1fc1b4cea848830bf1195fccd4dfc2d1f7c88e120c4d8a4bfa3",
+    "search/proposals/candidate_0007/circuit.cir": "95e75204c04f9b1c9c4c3aa1c83fa233e82aa3a66b87a10f4f31afaa8e27af36",
+    "search/proposals/candidate_0007/topology.yaml": "ff47554f7f176c7cfa8fa87da7bcb1c3b4cf9b353ebaf021e64bae7a0eff29cf",
+    "search/proposals/candidate_0008/circuit.cir": "379c4e8276b087c7547eae9409ee8ace2d9b629488f5589dc523e7fae97decae",
+    "search/proposals/candidate_0008/topology.yaml": "d2edcff2bb9172f7e2a23f73c558616afb68910d77d5d7bdc8310099da7c394f",
+    "search/proposals/candidate_0009/circuit.cir": "6bb1194218f164fc2f82f8ad015b3ac997aad060edaf66ed641e85aaf163e8a1",
+    "search/proposals/candidate_0009/topology.yaml": "29ce18c477f6296c0cd7193b692128157a51556432c70395c291e606a23848c0",
+    "search/proposals/candidate_0010/circuit.cir": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9",
+    "search/proposals/candidate_0010/topology.yaml": "e6ee9d8e66553300a4598c8b1bfa2205c1e0a0f415b1b5c3f9ac56bcbd6d43cb",
+    "search/proposals/candidate_0011/circuit.cir": "539533138e3a1de5346b2c98f54c26b7f9d9bf9c964a410e0a07bcea604b9035",
+    "search/proposals/candidate_0011/topology.yaml": "f6d73725d550929192e860d8e88b94d01bd545edc39d4510b718cd01f416d2db",
+    "search/proposals/candidate_0012/circuit.cir": "f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968",
+    "search/proposals/candidate_0012/topology.yaml": "08e00e012070adf1dd474952103f353dff4a08c25b79ea6e51b3976028955822",
+    "search/proposals/candidate_0013/circuit.cir": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015",
+    "search/proposals/candidate_0013/topology.yaml": "5780cd8ded5106e6d020d23d2e39d7f2e4084f36ddccf52c82c6cb98e0785954",
+    "search/proposals/candidate_0014/circuit.cir": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+    "search/proposals/candidate_0014/topology.yaml": "18e3345430f866dd049f1001ba0eccb6ca0a20725cbe4159e544b23957975144",
+    "search/proposals/candidate_0015/circuit.cir": "0ef08679b0b31c427f1877966582f1e1532148c084cf01ea42eb1bbb53f5bc42",
+    "search/proposals/candidate_0015/topology.yaml": "648b4e61c7e9d030ae4ab4f3ea8cac4d17d9a1b9bf3dcc3876d8fb9fe35d2731",
+    "search/proposals/concept_0010/proposal.yaml": "4829f158162cbc7c3290a3655c87e50dc3d9648a6497bcc5e6bfa99e841592b0",
+    "search/selection.py": "83f62cbb70327ad8e713f05dedcf902ecd395146f4e5b9664080b27915b713a0",
+    "spec/capsule_model.yaml": "169983f2601ee39a59496e0e4d2d337deb14e7e4ec7bf38a92f6ca89b59bc696",
+    "spec/design_constraints.yaml": "48d03f7b8d6302aeca14efda4de5c12cf491c393e212e6842f04da60c344dc43",
+    "spec/lock.yaml": "0a5ac00e5d73b720b0c0926c6987ab6b8cb2dca6ac3d1513039db9f3a05c8d07",
+    "spec/microphone_spec.yaml": "ea5a6f973f17f907c5b76f9d17a35cfa784903bcfcd8d7f1d08cd538b65636cd",
+    "spec/scoring.yaml": "6aa6b8620a4700220ac952472f150396599ca67a2918f6f114e1b283a158c0af",
+    "src/meridian_lab/__init__.py": "70778163075ec49235b8cf725bce58f9cef39892880a46ccc9fa58a9aeb98f52",
+    "src/meridian_lab/architectures.py": "e6581a17c9b10dfea6b0c42bc11cd3804ab83e6f2be8c3ce3426164f0064520d",
+    "src/meridian_lab/archive.py": "56353457cb366e1141d3a82ce5cdd74e1648f6321ae5b1247a7f20019aa44d06",
+    "src/meridian_lab/cli.py": "36dd7a89452ddc9d0e14251d80a4472804231d8e2fe85ae42201c98859c1f451",
+    "src/meridian_lab/core.py": "5e116f6971366837df519c2f834056efc5b51c1b3ba200f85b571c1ab2290774",
+    "src/meridian_lab/device_models.py": "51539f53a88719109f8fa46dfb7dda6a0aac439c6593f25cffa74ce7f1a78435",
+    "src/meridian_lab/metrics.py": "37827dfc57123f2fbfb5398f4f0a6e0be147cae9e2f2ae5b46fc35d61d08c9c8",
+    "src/meridian_lab/qualification.py": "4a322a11b11513dff23cec15a36d65157aa2f98061a456d993a6fa01c97a9818",
+    "tests/test_architectures.py": "ee3dcbe093503d14a9e438e6514b15cf1343cb0b5671fc9fbcd4c9e01f989eb8",
+    "tests/test_device_models.py": "180892eb4f8227a7185f3ff67779e44037478e57210c2dc68e80cf0455e74d80",
+    "tests/test_integrity.py": "9f6a90bee69c5327216c42e29f11a6f4fd00b8359a42a42e72de90b7f1128c2d",
+    "tests/test_physics.py": "4cffb4617d81ee327b32883f7fafc88905c76126f567d77b5d79a39f22560e59",
+    "tests/test_search_and_numerics.py": "b906730c436811458eb61cfb96799e069c48485ecf2e54ec4b14694f338a761b",
+    "tools/ngspice-run": "52cc8315fd7b1dc8dc7757658407dbd4a0b21e1f73bbbdf8a183e04487fa26fd"
+  },
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.8",
+    "yaml": "6.0.3",
+    "ngspice": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Wed Aug 19 09:38:31 UTC 2026\n******"
+  },
+  "topology": {
+    "family": "charge",
+    "concept_parent": "concept_0010",
+    "ideal_devices": false,
+    "semiconductor_models": [
+      "bc846b_emitter_r1",
+      "opa197_pspice"
+    ],
+    "parameters": {
+      "RHARVESTP_VALUE": {
+        "default": 2200,
+        "range": [
+          2178.0,
+          2222.0
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-072K2L; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "RHARVESTN_VALUE": {
+        "default": 2200,
+        "range": [
+          2178.0,
+          2222.0
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-072K2L; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "CRAW_VALUE": {
+        "default": 4.7e-05,
+        "range": [
+          3.76e-05,
+          5.6399999999999995e-05
+        ],
+        "scale": "log",
+        "provenance": "BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage partial"
+      },
+      "RREGTOP_VALUE": {
+        "default": 100000,
+        "range": [
+          99000.0,
+          101000.0
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-07100KL; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "RREGBOTTOM_VALUE": {
+        "default": 100000,
+        "range": [
+          99000.0,
+          101000.0
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-07100KL; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "CREGBASE_VALUE": {
+        "default": 1e-06,
+        "range": [
+          9.499999999999999e-07,
+          1.05e-06
+        ],
+        "scale": "log",
+        "provenance": "BOM R82EC4100DQ70J; capacitance tolerance; dielectric/leakage/ESR coverage partial"
+      },
+      "CRAIL_VALUE": {
+        "default": 4.7e-05,
+        "range": [
+          3.76e-05,
+          5.6399999999999995e-05
+        ],
+        "scale": "log",
+        "provenance": "BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage partial"
+      },
+      "RMIDTOP_VALUE": {
+        "default": 10000,
+        "range": [
+          9900.0,
+          10100.0
+        ],
+        "scale": "log",
+        "provenance": "BOM AC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "RMIDBOTTOM_VALUE": {
+        "default": 10000,
+        "range": [
+          9900.0,
+          10100.0
+        ],
+        "scale": "log",
+        "provenance": "BOM AC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "CMID_VALUE": {
+        "default": 4.7e-05,
+        "range": [
+          3.76e-05,
+          5.6399999999999995e-05
+        ],
+        "scale": "log",
+        "provenance": "BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage partial"
+      },
+      "RPOLAR0_VALUE": {
+        "default": 1000000,
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "RPOLAR1_VALUE": {
+        "default": 1000000,
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "RPOLAR2_VALUE": {
+        "default": 1000000,
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "RPOLAR3_VALUE": {
+        "default": 1000000,
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "RPOLAR4_VALUE": {
+        "default": 1000000,
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "RPOLAR5_VALUE": {
+        "default": 1000000,
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "RPOLAR6_VALUE": {
+        "default": 1000000,
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "RPOLAR7_VALUE": {
+        "default": 1000000,
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "RPOLAR8_VALUE": {
+        "default": 1000000,
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "RPOLAR9_VALUE": {
+        "default": 1000000,
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "CPOL_VALUE": {
+        "default": 1e-07,
+        "range": [
+          9.499999999999999e-08,
+          1.05e-07
+        ],
+        "scale": "log",
+        "provenance": "BOM R82EC3100DQ70J; capacitance tolerance; dielectric/leakage/ESR coverage partial"
+      },
+      "RBACK_VALUE": {
+        "default": 1000000,
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "RFEEDBACK_VALUE": {
+        "default": 1000000000.0,
+        "range": [
+          950000000.0,
+          1050000000.0
+        ],
+        "scale": "log",
+        "provenance": "BOM HVA12JA1G00; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "CFEEDBACKSTRAY_VALUE": {
+        "default": 2e-13,
+        "range": [
+          1.9999999999999997e-14,
+          3.8e-13
+        ],
+        "scale": "log",
+        "provenance": "assumed geometry/parasitic; not a purchasable part or measured bound"
+      },
+      "CFEEDBACK_VALUE": {
+        "default": 1e-10,
+        "range": [
+          9.5e-11,
+          1.0500000000000001e-10
+        ],
+        "scale": "log",
+        "provenance": "BOM CC0603JRNPO0BN101; 100pF 5%, 100V C0G; worst-DF/IR controls separate"
+      },
+      "RREAR_VALUE": {
+        "default": 1000,
+        "range": [
+          990.0,
+          1010.0
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-071KL; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "ROUTP_VALUE": {
+        "default": 47,
+        "range": [
+          46.53,
+          47.47
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-0747RL; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "ROUTN_VALUE": {
+        "default": 47,
+        "range": [
+          46.53,
+          47.47
+        ],
+        "scale": "log",
+        "provenance": "BOM RC0603FR-0747RL; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "COUTP_VALUE": {
+        "default": 4.7e-05,
+        "range": [
+          3.76e-05,
+          5.6399999999999995e-05
+        ],
+        "scale": "log",
+        "provenance": "BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage partial"
+      },
+      "COUTN_VALUE": {
+        "default": 4.7e-05,
+        "range": [
+          3.76e-05,
+          5.6399999999999995e-05
+        ],
+        "scale": "log",
+        "provenance": "BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage partial"
+      },
+      "RINVEMITTER_VALUE": {
+        "default": 10000,
+        "range": [
+          9900.0,
+          10100.0
+        ],
+        "scale": "log",
+        "provenance": "BOM AC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "RINVCOLLECTOR_VALUE": {
+        "default": 10000,
+        "range": [
+          9900.0,
+          10100.0
+        ],
+        "scale": "log",
+        "provenance": "BOM AC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "ROUTLOADP_VALUE": {
+        "default": 10000,
+        "range": [
+          9900.0,
+          10100.0
+        ],
+        "scale": "log",
+        "provenance": "BOM AC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "ROUTLOADN_VALUE": {
+        "default": 10000,
+        "range": [
+          9900.0,
+          10100.0
+        ],
+        "scale": "log",
+        "provenance": "BOM AC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient unqualified"
+      },
+      "RCFEEDBACKLOSS_VALUE": {
+        "default": 1.5915494309,
+        "range": [
+          0.15915494309,
+          15.915494309
+        ],
+        "scale": "log",
+        "provenance": "Yageo primary DF/IR anchor; decade loss stress / IR lower-bound-to-1e14 scenario, not a production distribution"
+      },
+      "RCFEEDBACKINSULATION_VALUE": {
+        "default": 10000000000.0,
+        "range": [
+          10000000000.0,
+          100000000000000.0
+        ],
+        "scale": "log",
+        "provenance": "Yageo primary DF/IR anchor; decade loss stress / IR lower-bound-to-1e14 scenario, not a production distribution"
+      }
+    },
+    "population": {
+      "RHARVESTP_VALUE": {
+        "range": [
+          2178.0,
+          2222.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-072K2L; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RHARVESTN_VALUE": {
+        "range": [
+          2178.0,
+          2222.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-072K2L; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "CRAW_VALUE": {
+        "range": [
+          3.76e-05,
+          5.6399999999999995e-05
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage partial",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RREGTOP_VALUE": {
+        "range": [
+          99000.0,
+          101000.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-07100KL; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RREGBOTTOM_VALUE": {
+        "range": [
+          99000.0,
+          101000.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-07100KL; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "CREGBASE_VALUE": {
+        "range": [
+          9.499999999999999e-07,
+          1.05e-06
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM R82EC4100DQ70J; capacitance tolerance; dielectric/leakage/ESR coverage partial",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "CRAIL_VALUE": {
+        "range": [
+          3.76e-05,
+          5.6399999999999995e-05
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage partial",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RMIDTOP_VALUE": {
+        "range": [
+          9900.0,
+          10100.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM AC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RMIDBOTTOM_VALUE": {
+        "range": [
+          9900.0,
+          10100.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM AC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "CMID_VALUE": {
+        "range": [
+          3.76e-05,
+          5.6399999999999995e-05
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage partial",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RPOLAR0_VALUE": {
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RPOLAR1_VALUE": {
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RPOLAR2_VALUE": {
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RPOLAR3_VALUE": {
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RPOLAR4_VALUE": {
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RPOLAR5_VALUE": {
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RPOLAR6_VALUE": {
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RPOLAR7_VALUE": {
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RPOLAR8_VALUE": {
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RPOLAR9_VALUE": {
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "CPOL_VALUE": {
+        "range": [
+          9.499999999999999e-08,
+          1.05e-07
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM R82EC3100DQ70J; capacitance tolerance; dielectric/leakage/ESR coverage partial",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RBACK_VALUE": {
+        "range": [
+          990000.0,
+          1010000.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-071ML; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RFEEDBACK_VALUE": {
+        "range": [
+          950000000.0,
+          1050000000.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM HVA12JA1G00; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "CFEEDBACKSTRAY_VALUE": {
+        "range": [
+          1.9999999999999997e-14,
+          3.8e-13
+        ],
+        "distribution": "uniform",
+        "provenance": "assumed geometry/parasitic; not a purchasable part or measured bound",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "CFEEDBACK_VALUE": {
+        "range": [
+          9.5e-11,
+          1.0500000000000001e-10
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM CC0603JRNPO0BN101; 100pF 5%, 100V C0G; worst-DF/IR controls separate",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RREAR_VALUE": {
+        "range": [
+          990.0,
+          1010.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-071KL; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "ROUTP_VALUE": {
+        "range": [
+          46.53,
+          47.47
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-0747RL; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "ROUTN_VALUE": {
+        "range": [
+          46.53,
+          47.47
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM RC0603FR-0747RL; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "COUTP_VALUE": {
+        "range": [
+          3.76e-05,
+          5.6399999999999995e-05
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage partial",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "COUTN_VALUE": {
+        "range": [
+          3.76e-05,
+          5.6399999999999995e-05
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage partial",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RINVEMITTER_VALUE": {
+        "range": [
+          9900.0,
+          10100.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM AC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RINVCOLLECTOR_VALUE": {
+        "range": [
+          9900.0,
+          10100.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM AC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "ROUTLOADP_VALUE": {
+        "range": [
+          9900.0,
+          10100.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM AC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "ROUTLOADN_VALUE": {
+        "range": [
+          9900.0,
+          10100.0
+        ],
+        "distribution": "uniform",
+        "provenance": "BOM AC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient unqualified",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RCFEEDBACKLOSS_VALUE": {
+        "range": [
+          0.15915494309,
+          15.915494309
+        ],
+        "distribution": "uniform",
+        "provenance": "Yageo primary DF/IR anchor; decade loss stress / IR lower-bound-to-1e14 scenario, not a production distribution",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      },
+      "RCFEEDBACKINSULATION_VALUE": {
+        "range": [
+          10000000000.0,
+          100000000000000.0
+        ],
+        "distribution": "uniform",
+        "provenance": "Yageo primary DF/IR anchor; decade loss stress / IR lower-bound-to-1e14 scenario, not a production distribution",
+        "interpretation": "independent tolerance stress, not a measured production distribution"
+      }
+    },
+    "device_models": [],
+    "qualification_evidence": [],
+    "noise_groups": {},
+    "dc_probes": [],
+    "loop_probes": [],
+    "power_devices": [
+      {
+        "instance": "Qreg",
+        "model_id": "bc846b_emitter_r1",
+        "nodes": [
+          "raw",
+          "regbase",
+          "rail"
+        ],
+        "currents": [
+          "i(v.xdut.vqreg_0)",
+          "i(v.xdut.vqreg_1)",
+          "i(v.xdut.vqreg_2)"
+        ]
+      },
+      {
+        "instance": "Uinput",
+        "model_id": "opa197_pspice",
+        "nodes": [
+          "mid",
+          "f",
+          "rail",
+          "g",
+          "chargeout"
+        ],
+        "currents": [
+          "i(v.xdut.vuinput_0)",
+          "i(v.xdut.vuinput_1)",
+          "i(v.xdut.vuinput_2)",
+          "i(v.xdut.vuinput_3)",
+          "i(v.xdut.vuinput_4)"
+        ]
+      },
+      {
+        "instance": "Qoutp",
+        "model_id": "bc846b_emitter_r1",
+        "nodes": [
+          "rail",
+          "chargeout",
+          "outp"
+        ],
+        "currents": [
+          "i(v.xdut.vqoutp_0)",
+          "i(v.xdut.vqoutp_1)",
+          "i(v.xdut.vqoutp_2)"
+        ]
+      },
+      {
+        "instance": "Qinvert",
+        "model_id": "bc846b_emitter_r1",
+        "nodes": [
+          "inverse",
+          "chargeout",
+          "ie"
+        ],
+        "currents": [
+          "i(v.xdut.vqinvert_0)",
+          "i(v.xdut.vqinvert_1)",
+          "i(v.xdut.vqinvert_2)"
+        ]
+      },
+      {
+        "instance": "Qoutn",
+        "model_id": "bc846b_emitter_r1",
+        "nodes": [
+          "rail",
+          "inverse",
+          "outn"
+        ],
+        "currents": [
+          "i(v.xdut.vqoutn_0)",
+          "i(v.xdut.vqoutn_1)",
+          "i(v.xdut.vqoutn_2)"
+        ]
+      }
+    ],
+    "power_resistors": [
+      {
+        "reference": "Rharvestp",
+        "nodes": [
+          "p",
+          "raw"
+        ],
+        "parameter": "RHARVESTP_VALUE"
+      },
+      {
+        "reference": "Rharvestn",
+        "nodes": [
+          "n",
+          "raw"
+        ],
+        "parameter": "RHARVESTN_VALUE"
+      },
+      {
+        "reference": "Rregtop",
+        "nodes": [
+          "raw",
+          "regbase"
+        ],
+        "parameter": "RREGTOP_VALUE"
+      },
+      {
+        "reference": "Rregbottom",
+        "nodes": [
+          "regbase",
+          "g"
+        ],
+        "parameter": "RREGBOTTOM_VALUE"
+      },
+      {
+        "reference": "Rmidtop",
+        "nodes": [
+          "rail",
+          "mid"
+        ],
+        "parameter": "RMIDTOP_VALUE"
+      },
+      {
+        "reference": "Rmidbottom",
+        "nodes": [
+          "mid",
+          "g"
+        ],
+        "parameter": "RMIDBOTTOM_VALUE"
+      },
+      {
+        "reference": "Rpolar0",
+        "nodes": [
+          "raw",
+          "pol_0"
+        ],
+        "parameter": "RPOLAR0_VALUE"
+      },
+      {
+        "reference": "Rpolar1",
+        "nodes": [
+          "pol_0",
+          "pol_1"
+        ],
+        "parameter": "RPOLAR1_VALUE"
+      },
+      {
+        "reference": "Rpolar2",
+        "nodes": [
+          "pol_1",
+          "pol_2"
+        ],
+        "parameter": "RPOLAR2_VALUE"
+      },
+      {
+        "reference": "Rpolar3",
+        "nodes": [
+          "pol_2",
+          "pol_3"
+        ],
+        "parameter": "RPOLAR3_VALUE"
+      },
+      {
+        "reference": "Rpolar4",
+        "nodes": [
+          "pol_3",
+          "pol_4"
+        ],
+        "parameter": "RPOLAR4_VALUE"
+      },
+      {
+        "reference": "Rpolar5",
+        "nodes": [
+          "pol_4",
+          "pol_5"
+        ],
+        "parameter": "RPOLAR5_VALUE"
+      },
+      {
+        "reference": "Rpolar6",
+        "nodes": [
+          "pol_5",
+          "pol_6"
+        ],
+        "parameter": "RPOLAR6_VALUE"
+      },
+      {
+        "reference": "Rpolar7",
+        "nodes": [
+          "pol_6",
+          "pol_7"
+        ],
+        "parameter": "RPOLAR7_VALUE"
+      },
+      {
+        "reference": "Rpolar8",
+        "nodes": [
+          "pol_7",
+          "pol_8"
+        ],
+        "parameter": "RPOLAR8_VALUE"
+      },
+      {
+        "reference": "Rpolar9",
+        "nodes": [
+          "pol_8",
+          "pol"
+        ],
+        "parameter": "RPOLAR9_VALUE"
+      },
+      {
+        "reference": "Rback",
+        "nodes": [
+          "pol",
+          "b"
+        ],
+        "parameter": "RBACK_VALUE"
+      },
+      {
+        "reference": "Rfeedback",
+        "nodes": [
+          "chargeout",
+          "f"
+        ],
+        "parameter": "RFEEDBACK_VALUE"
+      },
+      {
+        "reference": "Rrear",
+        "nodes": [
+          "rear",
+          "g"
+        ],
+        "parameter": "RREAR_VALUE"
+      },
+      {
+        "reference": "Routp",
+        "nodes": [
+          "outp",
+          "cp"
+        ],
+        "parameter": "ROUTP_VALUE"
+      },
+      {
+        "reference": "Routn",
+        "nodes": [
+          "outn",
+          "cn"
+        ],
+        "parameter": "ROUTN_VALUE"
+      },
+      {
+        "reference": "Rinvemitter",
+        "nodes": [
+          "ie",
+          "g"
+        ],
+        "parameter": "RINVEMITTER_VALUE"
+      },
+      {
+        "reference": "Rinvcollector",
+        "nodes": [
+          "rail",
+          "inverse"
+        ],
+        "parameter": "RINVCOLLECTOR_VALUE"
+      },
+      {
+        "reference": "Routloadp",
+        "nodes": [
+          "outp",
+          "g"
+        ],
+        "parameter": "ROUTLOADP_VALUE"
+      },
+      {
+        "reference": "Routloadn",
+        "nodes": [
+          "outn",
+          "g"
+        ],
+        "parameter": "ROUTLOADN_VALUE"
+      },
+      {
+        "reference": "RCfeedbackloss",
+        "nodes": [
+          "chargeout",
+          "cfeedback_loss"
+        ],
+        "parameter": "RCFEEDBACKLOSS_VALUE"
+      },
+      {
+        "reference": "RCfeedbackinsulation",
+        "nodes": [
+          "chargeout",
+          "f"
+        ],
+        "parameter": "RCFEEDBACKINSULATION_VALUE"
+      }
+    ],
+    "questions": {
+      "sensed_quantity": "front displacement charge",
+      "loading": "virtual midrail at front; 100 pF feedback capacitor sets conversion",
+      "dc_bias": "1 GOhm feedback bleed supplies input bias and capsule leakage; DC authority explicitly finite",
+      "gain_or_impedance_transformation": "Q/Cfb then real inverted output",
+      "balanced_output": "NPN follower plus emitter-degenerated NPN inverse/follower; finite unequal impedances measured",
+      "expected_noise": "feedback thermal/excess noise, CMOS en times noise gain and in, output driver noise",
+      "expected_distortion": "finite loop gain, DC leakage saturation and rail clipping",
+      "likely_fatal_flaw": "leakage times 1 GOhm exhausts swing",
+      "quickest_falsification": "DC at LEAK=1G then charge transfer/noise across C/leakage corners",
+      "hypothesis": "Capacitive feedback may flatten electrical charge conversion while a finite resistive reset prevents indefinite drift only within measured DC authority."
+    },
+    "sources": [
+      "S05",
+      "S07",
+      "S16",
+      "S24",
+      "S25"
+    ],
+    "input_device_class": "CMOS",
+    "fet_audio_path": true,
+    "fet_power_circuitry": false,
+    "internal_device_classes": "CMOS input/guard (if present); NPN audio drivers and power",
+    "procurement_state": "research_BOM_live_orderability_and_delivered_quote_unverified",
+    "patent_state": "unscreened_no_clearance",
+    "prototype_gate": "hold",
+    "manufacture_gate": "hold",
+    "build_publication_gate": "hold",
+    "niche": {
+      "input_device": "CMOS",
+      "sensing": "charge",
+      "reference": "single_ended",
+      "feedback": "capacitive_feedback",
+      "bias": "fixed_parts",
+      "active_device_count": 5,
+      "servo": false,
+      "output": "discrete_NPN_differential_fixed_degeneration",
+      "common_mode": "divider",
+      "bootstrap": false
+    },
+    "id": "candidate_0014",
+    "kind": "research_candidate",
+    "parents": [
+      "candidate_0011"
+    ],
+    "hypothesis": "Capacitive feedback may flatten electrical charge conversion while a finite resistive reset prevents indefinite drift only within measured DC authority.",
+    "structural_changes": "Replace backordered KEMET 100pF by documented Yageo CC0603JRNPO0BN101; include explicit insulation and loss sensitivity controls. These do not validate a complete temperature/frequency loss model or the ideal carrier hardware. Rerun all supported checks.",
+    "eligible": false,
+    "state": "engineering_ready",
+    "patent_record": "../../research/patents/first_architecture_batch_2026-10-09.yaml"
+  },
+  "checks": {
+    "operating_point": {
+      "status": "error",
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "coverage": null
+    },
+    "frequency_response": {
+      "status": "error",
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "coverage": null
+    },
+    "noise": {
+      "status": "error",
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "coverage": null
+    },
+    "distortion": {
+      "status": "error",
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "coverage": null
+    },
+    "headroom": {
+      "status": "error",
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "coverage": null
+    },
+    "output_impedance": {
+      "status": "error",
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "coverage": null
+    },
+    "balance": {
+      "status": "error",
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "coverage": null
+    },
+    "phantom_supply": {
+      "status": "error",
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "coverage": null
+    },
+    "temperature": {
+      "status": "error",
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "coverage": null
+    },
+    "semiconductor_corners": {
+      "status": "error",
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "coverage": null
+    },
+    "monte_carlo": {
+      "status": "error",
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "coverage": null
+    },
+    "loading": {
+      "status": "error",
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "coverage": null
+    },
+    "startup": {
+      "status": "error",
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "coverage": null
+    },
+    "stability": {
+      "status": "error",
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "coverage": null
+    }
+  },
+  "status": "failed",
+  "eligible": false,
+  "missing_qualification_evidence": [
+    "device_safe_operating_area",
+    "documented_semiconductor_models",
+    "loop_stability",
+    "model_uncertainty_coverage",
+    "physical_measurements",
+    "validated_noise_models"
+  ],
+  "failure_reasons": {
+    "operating_point": "ngspice exit 0: Warning",
+    "frequency_response": "ngspice exit 0: Warning",
+    "noise": "ngspice exit 0: Warning",
+    "distortion": "ngspice exit 0: Warning",
+    "headroom": "ngspice exit 0: Warning",
+    "output_impedance": "ngspice exit 0: Warning",
+    "balance": "ngspice exit 0: Warning",
+    "phantom_supply": "ngspice exit 0: Warning",
+    "temperature": "ngspice exit 0: Warning",
+    "semiconductor_corners": "ngspice exit 0: Warning",
+    "monte_carlo": "ngspice exit 0: Warning",
+    "loading": "ngspice exit 0: Warning",
+    "startup": "ngspice exit 0: Warning",
+    "stability": "ngspice exit 0: Warning"
+  },
+  "jobs": [
+    {
+      "folder": "results/runs/20261009T082146Z_25aa5621/0001_operating_point",
+      "semiconductor_models": [
+        {
+          "id": "bc846b_emitter_r1",
+          "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+          "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+          "version": "project structural child r1; Q2 emitter 33 -> 3",
+          "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+          "retrieved_date": "2026-10-05",
+          "acquisition_status": "valid_spice",
+          "redistribution": {
+            "status": "not_established_do_not_redistribute",
+            "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+            "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+          },
+          "syntax": "SPICE3 subcircuit",
+          "ngspice_behavior": "",
+          "subcircuit": "BC846B",
+          "parent_model_id": "bc846b_vendor",
+          "device_id": "bc846b",
+          "manufacturer": "Nexperia",
+          "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T082146Z_25aa5621/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+          "model_lineage": [
+            {
+              "id": "bc846b_vendor",
+              "version": "extraction week 24/2021",
+              "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+              "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+              "retrieved_date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "opa197_pspice",
+          "path": "semiconductor/vendor/opa197.lib",
+          "sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+          "version": "Final 1.3; 23JUN2022; SBOMA34D",
+          "source_url": "https://www.ti.com/lit/zip/sboma34d",
+          "retrieved_date": "2026-10-05",
+          "acquisition_status": "valid_spice",
+          "redistribution": {
+            "status": "not_established_do_not_redistribute",
+            "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+            "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+          },
+          "syntax": "SPICE3 subcircuit with PSpice extensions",
+          "ngspice_behavior": "ps",
+          "subcircuit": "OPAx197",
+          "parent_model_id": null,
+          "device_id": "opa197",
+          "manufacturer": "Texas Instruments",
+          "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T082146Z_25aa5621/source/models/semiconductor/vendor/opa197.lib",
+          "model_lineage": []
+        }
+      ],
+      "netlist_sha256": "42859b89ed292552a8a1be4f506870d4d587fef89e28919d231ff1ddd9846092",
+      "status": "error",
+      "reason": "ngspice exit 0: Warning"
+    }
+  ],
+  "comparison_with_parent": [
+    {
+      "experiment_id": "20261009T080943Z_c80c6e97",
+      "metric_deltas": {
+        "operating_point": {},
+        "frequency_response": {},
+        "noise": {},
+        "distortion": {},
+        "headroom": {},
+        "output_impedance": {},
+        "balance": {},
+        "phantom_supply": {},
+        "temperature": {},
+        "semiconductor_corners": {},
+        "monte_carlo": {},
+        "loading": {},
+        "startup": {},
+        "stability": {}
+      },
+      "same_spec": true,
+      "same_suite": false,
+      "note": "Interpret deltas as a controlled value comparison only when specification and suite match."
+    },
+    {
+      "experiment_id": "20261009T081956Z_3e19c047",
+      "metric_deltas": {
+        "operating_point": {},
+        "frequency_response": {},
+        "noise": {},
+        "distortion": {},
+        "headroom": {},
+        "output_impedance": {},
+        "balance": {},
+        "phantom_supply": {},
+        "temperature": {},
+        "semiconductor_corners": {},
+        "monte_carlo": {},
+        "loading": {},
+        "startup": {},
+        "stability": {}
+      },
+      "same_spec": true,
+      "same_suite": true,
+      "note": "Interpret deltas as a controlled value comparison only when specification and suite match."
+    }
+  ],
+  "useful_discovery": null,
+  "next_potential_experiment": "Resolve failed checks and missing evidence without changing acceptance thresholds.",
+  "result_file": "results/runs/20261009T082146Z_25aa5621/results.json",
+  "solver_configuration": {
+    "method": "gear",
+    "maxord": 2,
+    "reltol": 1e-06,
+    "abstol_a": 1e-15,
+    "vntol_v": 1e-09,
+    "gmin_s": 1e-15,
+    "rshunt": null,
+    "note": "Timestep-refinement regressions required; integration method is not a stability proof."
+  },
+  "provenance": {
+    "timestamp": "2026-10-09T08:21:46.729091+00:00",
+    "instrument_or_simulator": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Wed Aug 19 09:38:31 UTC 2026\n******",
+    "configuration": {
+      "CF": 7e-11,
+      "CR": 7e-11,
+      "SREF": 0.02,
+      "VREF": 60,
+      "LEAK": 1000000000000.0,
+      "PAR": 2e-12,
+      "CROSS": 5e-13,
+      "LIN": 0,
+      "POLDC": 60,
+      "VS": 48,
+      "FT": 0,
+      "FM": 0,
+      "LEN": 10,
+      "RW": 0.1,
+      "RS": 0.05,
+      "CD": 6e-11,
+      "CS": 8e-11,
+      "ZIN": 2000,
+      "ZM": 0,
+      "CC": 2.2e-05,
+      "CP": 2e-10,
+      "TEMP": 25,
+      "START": 0,
+      "CMAC": 0,
+      "PRESSURE_AC": 1,
+      "PRESSURE_PEAK": 0,
+      "FREQ": 1000,
+      "RHARVESTP_VALUE": 2200,
+      "RHARVESTN_VALUE": 2200,
+      "CRAW_VALUE": 4.7e-05,
+      "RREGTOP_VALUE": 100000,
+      "RREGBOTTOM_VALUE": 100000,
+      "CREGBASE_VALUE": 1e-06,
+      "CRAIL_VALUE": 4.7e-05,
+      "RMIDTOP_VALUE": 10000,
+      "RMIDBOTTOM_VALUE": 10000,
+      "CMID_VALUE": 4.7e-05,
+      "RPOLAR0_VALUE": 1000000,
+      "RPOLAR1_VALUE": 1000000,
+      "RPOLAR2_VALUE": 1000000,
+      "RPOLAR3_VALUE": 1000000,
+      "RPOLAR4_VALUE": 1000000,
+      "RPOLAR5_VALUE": 1000000,
+      "RPOLAR6_VALUE": 1000000,
+      "RPOLAR7_VALUE": 1000000,
+      "RPOLAR8_VALUE": 1000000,
+      "RPOLAR9_VALUE": 1000000,
+      "CPOL_VALUE": 1e-07,
+      "RBACK_VALUE": 1000000,
+      "RFEEDBACK_VALUE": 1000000000.0,
+      "CFEEDBACKSTRAY_VALUE": 2e-13,
+      "CFEEDBACK_VALUE": 1e-10,
+      "RREAR_VALUE": 1000,
+      "ROUTP_VALUE": 47,
+      "ROUTN_VALUE": 47,
+      "COUTP_VALUE": 4.7e-05,
+      "COUTN_VALUE": 4.7e-05,
+      "RINVEMITTER_VALUE": 10000,
+      "RINVCOLLECTOR_VALUE": 10000,
+      "ROUTLOADP_VALUE": 10000,
+      "ROUTLOADN_VALUE": 10000,
+      "RCFEEDBACKLOSS_VALUE": 1.5915494309,
+      "RCFEEDBACKINSULATION_VALUE": 10000000000.0
+    },
+    "raw_data_hashes": {
+      "results/runs/20261009T082146Z_25aa5621/0001_operating_point": {}
+    },
+    "candidate_circuit_sha256": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+    "source_snapshot": "source/",
+    "semiconductor_models": [
+      {
+        "id": "bc846b_emitter_r1",
+        "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+        "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+        "version": "project structural child r1; Q2 emitter 33 -> 3",
+        "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+        "retrieved_date": "2026-10-05",
+        "acquisition_status": "valid_spice",
+        "redistribution": {
+          "status": "not_established_do_not_redistribute",
+          "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+          "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+        },
+        "syntax": "SPICE3 subcircuit",
+        "ngspice_behavior": "",
+        "subcircuit": "BC846B",
+        "parent_model_id": "bc846b_vendor",
+        "device_id": "bc846b",
+        "manufacturer": "Nexperia",
+        "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T082146Z_25aa5621/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+        "model_lineage": [
+          {
+            "id": "bc846b_vendor",
+            "version": "extraction week 24/2021",
+            "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+            "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+            "retrieved_date": "2026-10-05"
+          }
+        ]
+      },
+      {
+        "id": "opa197_pspice",
+        "path": "semiconductor/vendor/opa197.lib",
+        "sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+        "version": "Final 1.3; 23JUN2022; SBOMA34D",
+        "source_url": "https://www.ti.com/lit/zip/sboma34d",
+        "retrieved_date": "2026-10-05",
+        "acquisition_status": "valid_spice",
+        "redistribution": {
+          "status": "not_established_do_not_redistribute",
+          "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+          "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+        },
+        "syntax": "SPICE3 subcircuit with PSpice extensions",
+        "ngspice_behavior": "ps",
+        "subcircuit": "OPAx197",
+        "parent_model_id": null,
+        "device_id": "opa197",
+        "manufacturer": "Texas Instruments",
+        "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T082146Z_25aa5621/source/models/semiconductor/vendor/opa197.lib",
+        "model_lineage": []
+      }
+    ]
+  },
+  "implementation_manifest": {
+    "bom.yaml": "dd29aa20ad124e0a09543d9fa92eb08b203033c79a15033d6b20dd57a574b690",
+    "circuit.cir": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+    "hypothesis.md": "989f79acaf48c937099042b8d6c4c8fe1905ba6826440fd7272ca5df680d40f7",
+    "notes.md": "066ad5098e85a9ed91ab73200d0eda7444db5cd9a4ce76d4ccc7b89fd57e0095",
+    "topology.yaml": "3d85360eb7a5b1d3cd8fccfbe5d88c44570f4cab7c441fc19f974b9f9b6d5d74"
+  }
+}

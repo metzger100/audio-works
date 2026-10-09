@@ -1,0 +1,79 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+schema_version: 1
+date: '2026-10-09'
+scope: Model-conditional response/current research, not noise ranking or production qualification
+initial_evaluation_budget_per_family: 12
+budget_unit: unique design vectors; each has three DC/AC training scenarios
+training_seed: 34047
+full_suite_samples: 16
+validation_seeds: [84047, 94047]
+validation_samples_per_seed: 16
+aggregation: worst
+axis: response
+hard_constraints: Frozen current/DC energy/positive rail/positive polarization and <=1dB response in every training scenario
+qualifications_not_inferred: [validated_noise, nonlinear, all_corner_coverage, manufacturing_yield, physical, procurement, patents]
+families:
+  conventional_jfet:
+    candidate: candidate_0015
+    design:
+      OUTPUT_C:
+        targets: [COUTP_VALUE, COUTN_VALUE]
+        range: [4.7e-5, 1.88e-4]
+        tolerance_fraction: 0.20
+        rationale: LF coupling into finite preamp/load; 1-4 parallel documented 47uF parts per leg bounded by count/energy/space research, not a changed acceptance budget
+  unconventional_jfet:
+    candidate: candidate_0008
+    design:
+      OUTPUT_C:
+        targets: [COUTP_VALUE, COUTN_VALUE]
+        range: [4.7e-5, 1.88e-4]
+        tolerance_fraction: 0.20
+        rationale: Same finite-load LF/energy/count bracket as conventional control; fixed servo/current retain mechanism and avoid per-unit trimming
+  bootstrap:
+    candidate: candidate_0010
+    design:
+      OUTPUT_C:
+        targets: [COUTP_VALUE, COUTN_VALUE]
+        range: [4.7e-5, 1.88e-4]
+        tolerance_fraction: 0.20
+        rationale: Shared output feasibility bracket; stop on known macro integration failure before continuous search
+  charge:
+    candidate: candidate_0014
+    design:
+      FEEDBACK_C:
+        targets: [CFEEDBACK_VALUE]
+        range: [5.0e-11, 2.0e-10]
+        tolerance_fraction: 0.05
+        rationale: Charge gain and feedback-reset LF pole around 100pF; excludes arbitrarily vanishing feedback, retains stability/noise gaps
+  no_fet:
+    candidate: candidate_0012
+    design:
+      FEEDBACK_C:
+        targets: [CFEEDBACK_VALUE]
+        range: [1.0e-10, 1.0e-7]
+        tolerance_fraction: 0.05
+        rationale: Explore charge gain/LF reset pole from 100pF to 100nF while retaining fixed parallel 1Mohm base-current DC authority; no hand-selected transistor
+  floating:
+    candidate: candidate_0013
+    design:
+      OUTPUT_C:
+        targets: [COUTP_VALUE, COUTN_VALUE]
+        range: [4.7e-5, 1.88e-4]
+        tolerance_fraction: 0.20
+        rationale: Preserve the same output budget; periodic protocol prerequisite holds ordinary DC-linearized optimization
+staging:
+  - audit model/analysis prerequisites and rerun full baseline suite
+  - cheap nominal DC then AC; stop family tuning after repeated baseline integration failure
+  - bounded differential evolution for supported families only
+  - full suite for continuous proposal plus withheld corners and independent seed
+  - enumerate 1-4 actual parallel capacitor combinations including loss/leakage stress
+  - full suite and independent seed for realized child; no value-equivalence acceptance
+followup_policy:
+  total_slots: 20
+  allocation: {improve: 10, underexplored: 5, new_concepts: 3, assumption_breaking: 2}
+  slot_unit: one explicitly limited DC/AC structural/discrete experiment or reserved prerequisite task; not arbitrary convergence extension
+  improve: Four preferred-output combinations per JFET niche; two full validation tasks
+  underexplored: One BJT structural child and four model/periodic prerequisite tasks held on absent evidence
+  new_concepts: Three retained catalogue handoffs reserved until model prerequisites exist
+  assumption_breaking: Two leakage/loss extremes applied to each combination; tests conventional ideal-passive assumption
+  rule: No family eliminated; unused held slots reported, never transferred to a favored family

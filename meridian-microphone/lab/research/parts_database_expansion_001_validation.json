@@ -1,0 +1,184 @@
+{
+  "date": "2026-10-09",
+  "status": "verification_pass_preservation_incomplete",
+  "model_files": [
+    {
+      "device": "jfe150",
+      "model": "jfe150_generic",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "jfe150",
+      "model": "jfe150_weak",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "jfe150",
+      "model": "jfe150_strong",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "jfe150",
+      "model": "jfe150_pspice",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "vishay_2n7002k",
+      "model": "vishay_2n7002k_ps",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "bc846b",
+      "model": "bc846b_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "bc846b",
+      "model": "bc846b_emitter_r1",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "bc856b",
+      "model": "bc856b_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "opa197",
+      "model": "opa197_pspice",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "2n7002",
+      "model": "2n7002_failed_download",
+      "hash_matches": true,
+      "acquisition": "invalid_html_challenge"
+    },
+    {
+      "device": "jfe2140",
+      "model": "jfe2140_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "lsk170a",
+      "model": "lsk170a_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "lsk170a",
+      "model": "lsk170a_syntax_r1",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "lsk389a",
+      "model": "lsk389a_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "pmbt5551",
+      "model": "pmbt5551_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "diotec_mmbt5551",
+      "model": "diotec_mmbt5551_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "bc850c",
+      "model": "bc850c_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "bav199",
+      "model": "bav199_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "bav199",
+      "model": "bav199_syntax_r1",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "opa928",
+      "model": "opa928_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "opa1656",
+      "model": "opa1656_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    },
+    {
+      "device": "lmp7721",
+      "model": "lmp7721_vendor",
+      "hash_matches": true,
+      "acquisition": "valid_spice"
+    }
+  ],
+  "control_snapshot_and_raw_csv_audits": [
+    {
+      "id": "20261009T133250Z_parts_ec54d567",
+      "frozen_source_files": 434,
+      "snapshot_hash_mismatches": [],
+      "status": "partial_checkpoint",
+      "jobs": 7
+    },
+    {
+      "id": "20261009T133422Z_parts_9ee64bfd",
+      "frozen_source_files": 436,
+      "snapshot_hash_mismatches": [],
+      "status": "source_integrity_error",
+      "jobs": 44
+    },
+    {
+      "id": "20261009T133651Z_parts_d3c30763",
+      "frozen_source_files": 439,
+      "snapshot_hash_mismatches": [],
+      "status": "recorded_unqualified",
+      "jobs": 49
+    },
+    {
+      "id": "20261009T135500Z_partsload_551b10d1",
+      "frozen_source_files": 463,
+      "snapshot_hash_mismatches": [],
+      "status": "acquisition_only",
+      "jobs": 4
+    }
+  ],
+  "errors": [],
+  "lab_doctor": "pass",
+  "lab_tests": 64,
+  "repository_tests": 24,
+  "acquisition_expected_failure": "2n7002 invalid_model_content; retained original HTML",
+  "root_check": {
+    "status": "pass",
+    "common_characters": 31967,
+    "current_words": 117,
+    "independent_preservation": "incomplete"
+  },
+  "qualification": "No microphone/device blanket validation",
+  "acquisition_observations_ok": 35,
+  "valid_spice_hashes_ok": 21,
+  "failed_html_hash_ok": true,
+  "preservation_receipt": "research/parts_database_expansion_001_preservation.json"
+}

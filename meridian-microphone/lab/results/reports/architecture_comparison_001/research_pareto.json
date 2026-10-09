@@ -1,0 +1,162 @@
+{
+  "scope": "Model-conditional nominal DC/AC projection only; no architecture qualification",
+  "axes_all_minimize": [
+    "response_deviation_db",
+    "current_a",
+    "installed_count"
+  ],
+  "matching_spec_suite_source_backend": true,
+  "actual_bom_projection": [
+    "candidate_0015",
+    "candidate_0012",
+    "candidate_0016",
+    "candidate_0017",
+    "candidate_0018",
+    "candidate_0019",
+    "candidate_0021",
+    "candidate_0022",
+    "candidate_0023",
+    "candidate_0024"
+  ],
+  "continuous_proposals_separate_projection": [
+    "candidate_0015:continuous",
+    "candidate_0008:continuous"
+  ],
+  "excluded_axes": [
+    "unvalidated noise",
+    "unsupported nonlinear",
+    "manufacturing yield",
+    "unknown delivered cost",
+    "carrier power"
+  ],
+  "production_front": [],
+  "physical_qualified_front": [],
+  "rows": [
+    {
+      "candidate": "candidate_0015",
+      "experiment": "20261009T090337Z_3c7187fa",
+      "family": "conventional_jfet",
+      "response_deviation_db": 1.1173789986946694,
+      "current_a": 0.00410354597735262,
+      "installed_count": 46,
+      "implementation": "actual research BOM"
+    },
+    {
+      "candidate": "candidate_0008",
+      "experiment": "20261009T090403Z_bdcfe8b9",
+      "family": "unconventional_jfet",
+      "response_deviation_db": 0.9131093087819344,
+      "current_a": 0.005150433655753722,
+      "installed_count": 66,
+      "implementation": "actual research BOM"
+    },
+    {
+      "candidate": "candidate_0012",
+      "experiment": "20261009T090439Z_c6d23a08",
+      "family": "no_fet",
+      "response_deviation_db": 20.930637711817923,
+      "current_a": 0.004086004492612225,
+      "installed_count": 45,
+      "implementation": "actual research BOM"
+    },
+    {
+      "candidate": "candidate_0015:continuous",
+      "experiment": "20261009T090344Z_f2f3eb75",
+      "family": "conventional_jfet",
+      "response_deviation_db": 0.6612368591405343,
+      "current_a": 0.00410354597735262,
+      "installed_count": 46,
+      "implementation": "continuous proposal"
+    },
+    {
+      "candidate": "candidate_0008:continuous",
+      "experiment": "20261009T090412Z_5620861e",
+      "family": "unconventional_jfet",
+      "response_deviation_db": 0.4771359480159142,
+      "current_a": 0.005150433655753722,
+      "installed_count": 66,
+      "implementation": "continuous proposal"
+    },
+    {
+      "candidate": "candidate_0016",
+      "experiment": "20261009T090628Z_d87c22bb",
+      "family": "conventional_jfet",
+      "response_deviation_db": 1.1119680677540924,
+      "current_a": 0.004103545977428845,
+      "installed_count": 46,
+      "implementation": "actual research BOM"
+    },
+    {
+      "candidate": "candidate_0017",
+      "experiment": "20261009T090650Z_595690f6",
+      "family": "conventional_jfet",
+      "response_deviation_db": 0.7924080859451152,
+      "current_a": 0.004103545977559726,
+      "installed_count": 48,
+      "implementation": "actual research BOM"
+    },
+    {
+      "candidate": "candidate_0018",
+      "experiment": "20261009T090713Z_3965ee56",
+      "family": "conventional_jfet",
+      "response_deviation_db": 0.7022213599316733,
+      "current_a": 0.004103545977627202,
+      "installed_count": 50,
+      "implementation": "actual research BOM"
+    },
+    {
+      "candidate": "candidate_0019",
+      "experiment": "20261009T090737Z_40e6a493",
+      "family": "conventional_jfet",
+      "response_deviation_db": 0.6605551221272248,
+      "current_a": 0.00410354597772711,
+      "installed_count": 52,
+      "implementation": "actual research BOM"
+    },
+    {
+      "candidate": "candidate_0020",
+      "experiment": "20261009T090802Z_0b46cfbc",
+      "family": "unconventional_jfet",
+      "response_deviation_db": 0.9079023774299745,
+      "current_a": 0.005150433655863648,
+      "installed_count": 66,
+      "implementation": "actual research BOM"
+    },
+    {
+      "candidate": "candidate_0021",
+      "experiment": "20261009T090831Z_ea375e10",
+      "family": "unconventional_jfet",
+      "response_deviation_db": 0.5965291314461364,
+      "current_a": 0.005150433655967314,
+      "installed_count": 68,
+      "implementation": "actual research BOM"
+    },
+    {
+      "candidate": "candidate_0022",
+      "experiment": "20261009T090859Z_5f41d82e",
+      "family": "unconventional_jfet",
+      "response_deviation_db": 0.5087078035031315,
+      "current_a": 0.005150433656048273,
+      "installed_count": 70,
+      "implementation": "actual research BOM"
+    },
+    {
+      "candidate": "candidate_0023",
+      "experiment": "20261009T090930Z_1acba093",
+      "family": "unconventional_jfet",
+      "response_deviation_db": 0.47212318350849386,
+      "current_a": 0.005150433656145151,
+      "installed_count": 72,
+      "implementation": "actual research BOM"
+    },
+    {
+      "candidate": "candidate_0024",
+      "experiment": "20261009T091002Z_36aac551",
+      "family": "no_fet",
+      "response_deviation_db": 32.819192762887745,
+      "current_a": 0.00408600449259294,
+      "installed_count": 46,
+      "implementation": "actual research BOM"
+    }
+  ]
+}

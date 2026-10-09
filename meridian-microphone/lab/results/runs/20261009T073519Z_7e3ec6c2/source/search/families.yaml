@@ -1,0 +1,88 @@
+schema_version: 1
+policy: Persistent independent families; no retirement based on another family winning.
+  Record physics or simulation failures per concept.
+families:
+- id: conventional_jfet
+  name: Conventional high-impedance JFET architectures
+  minimum_retained: 1
+  state: awaiting_engineering
+  implemented_candidates: []
+  retirement_evidence: null
+- id: unconventional_jfet
+  name: Unconventional JFET architectures
+  minimum_retained: 1
+  state: awaiting_engineering
+  implemented_candidates: []
+  retirement_evidence: null
+- id: mosfet
+  name: MOSFET input architectures
+  minimum_retained: 1
+  state: awaiting_engineering
+  implemented_candidates: []
+  retirement_evidence: null
+- id: no_jfet
+  name: No-JFET architectures
+  minimum_retained: 1
+  state: awaiting_engineering
+  implemented_candidates: []
+  retirement_evidence: null
+- id: no_fet
+  name: No-FET architectures
+  minimum_retained: 1
+  state: awaiting_engineering
+  implemented_candidates: []
+  retirement_evidence: null
+- id: charge
+  name: Charge-sensitive architectures
+  minimum_retained: 1
+  state: awaiting_engineering
+  implemented_candidates: []
+  retirement_evidence: null
+- id: current
+  name: Transimpedance/current-mode architectures
+  minimum_retained: 1
+  state: awaiting_engineering
+  implemented_candidates: []
+  retirement_evidence: null
+- id: floating
+  name: Floating input architectures
+  minimum_retained: 1
+  state: awaiting_engineering
+  implemented_candidates: []
+  retirement_evidence: null
+- id: differential
+  name: Differential capsule sensing
+  minimum_retained: 1
+  state: awaiting_engineering
+  implemented_candidates: []
+  retirement_evidence: null
+- id: bootstrap
+  name: Bootstrapped input architectures
+  minimum_retained: 1
+  state: awaiting_engineering
+  implemented_candidates: []
+  retirement_evidence: null
+- id: servo
+  name: Servo-controlled operating-point architectures
+  minimum_retained: 1
+  state: awaiting_engineering
+  implemented_candidates: []
+  retirement_evidence: null
+- id: minimal
+  name: Minimal-active-device architectures
+  minimum_retained: 1
+  state: awaiting_engineering
+  implemented_candidates: []
+  retirement_evidence: null
+- id: high_feedback
+  name: High-feedback architectures
+  minimum_retained: 1
+  state: awaiting_engineering
+  implemented_candidates: []
+  retirement_evidence: null
+- id: instrumentation
+  name: Architectures borrowed from scientific instrumentation
+  minimum_retained: 1
+  state: awaiting_engineering
+  implemented_candidates: []
+  retirement_evidence: null
