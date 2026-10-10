@@ -18,7 +18,7 @@ D010 limits purchases to finished-project uses: default one capsule for one micr
 
 ## Evidence and progression
 
-[Capsule research](research/README.md) retains the single-capsule recommendation and dated originals. Its noise/SPL risks remain unresolved. Online evidence supports research while measurement access is deferred; physical gates remain open.
+[Capsule research](lab/research/capsules/README.md) retains the single-capsule recommendation and dated originals. Its noise/SPL risks remain unresolved. Online evidence supports research while measurement access is deferred; physical gates remain open.
 
 Formal model/framework → fair conventional benchmarks and diverse mechanisms → bounded value/structural search → robust actual-BOM qualification → candidate-linked [patent screening](../PATENTS.md) → eligible prototype/measurement/model correction. Flag claims early; unresolved credible blocking risks hold affected prototype/manufacture/build-publication gates. No legal clearance is asserted.
 

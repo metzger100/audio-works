@@ -24,7 +24,7 @@ Exit 2 means unqualified. The ideal infrastructure fixture is ineligible by cons
 | Formal requirements and uncertainty | [Specification hub](spec/INDEX.md) |
 | Parts, supported behavior and failures | [Device findings](research/devices/device-model-validation.md), [latest expansion](research/devices/parts-database-expansion-002.md) |
 | Implementations and comparisons | [Architecture findings](research/architectures/architecture-comparison-001.md) |
-| Sources, sourcing and patent holds | [Research hub](research/INDEX.md) |
+| Capsules, sources, sourcing and patent holds | [Research hub](research/README.md) |
 | Lessons and failed hypotheses | [Research memory](research/memory/INDEX.md) |
 | Next authorized task | [Prompt hub](research/prompts/README.md) |
 | Immutable runs and private storage | [Evidence storage](results/README.md) |

@@ -1,0 +1,54 @@
+- id: concept_0021
+  title: Separate AC charge loop and DC electrode-voltage loop
+  families:
+  - charge
+  - floating
+  - servo
+  - high_feedback
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S05
+  - S06
+  assumption_inverted: The capsule must be voltage sensed
+  sensed_quantity: AC charge while DC electrode voltage is independently regulated
+  loading_control: AC virtual potential, DC reference floats as needed
+  dc_bias: Independent low-bandwidth polarization/leakage loop
+  gain_or_impedance_transformation: Capacitive audio feedback plus DC loop
+  balanced_output: Differential current-output transformation
+  expected_dominant_noise: Loop crossover/reference and charge amplifier noise
+  expected_dominant_distortion: Loop crossover intermodulation and finite authority
+  likely_fatal_flaw: Two loops fight at LF or violate safe electrode bias
+  fastest_falsification: AC/DC return ratios, slow ramps, leakage steps and audio
+    injection together
+- id: concept_0022
+  title: Bipolar current-conveyor charge translator
+  families:
+  - no_fet
+  - current
+  - instrumentation
+  - high_feedback
+  role: Inventor
+  status: proposed_not_simulated
+  performance_claim: false
+  nonconventional_jfet_buffer: true
+  scientific_transfer: true
+  sources:
+  - S07
+  - S08
+  assumption_inverted: The first device must be a FET
+  sensed_quantity: Capsule displacement current translated to a remote integration
+    node
+  loading_control: Feedback makes controlled input potential; remote capacitor sets
+    gain
+  dc_bias: Degenerated current conveyor and slow offset loop
+  gain_or_impedance_transformation: Current copying then charge integration
+  balanced_output: Complementary differential output currents
+  expected_dominant_noise: Base-current fluctuations, mirror/current-copy noise
+  expected_dominant_distortion: Current-copy nonlinearity and Early effect
+  likely_fatal_flaw: Current copying amplifies shot noise and loses LF charge
+  fastest_falsification: Current-noise floor and transimpedance linearity before complete
+    output design

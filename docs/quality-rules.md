@@ -6,6 +6,8 @@ Ordinary maintained paths use lowercase kebab-case; Python modules/packages use 
 
 Every maintained file must be reachable from `docs/INDEX.md`. Registered modules need a purpose and their own index. Generated indexes expose immediate contents and child hubs. Pages target 12,000 characters and must remain below the 15,000-character ceiling. Refresh is deterministic; missing, stale or obsolete generated outputs fail.
 
+Projects register one `research_root` inside their module. Maintained research uses that root and subject hubs; competing research directories fail. Original-history navigation is generated from the preservation register. Relocations retain original Git identity, SHA256 and execute mode; deleting protection or duplicating an identity fails.
+
 Maintained text must be UTF-8 with LF endings and a final newline. JSON/YAML/TOML must parse; duplicate mapping keys and record identities fail. Python correctness/format checks use pinned Ruff. Markdown checks inspect ordinary/reference links, images, HTML links and anchors. Empty Markdown sections, repeated paragraphs of180characters or more, conflict markers and accidental private/cache files fail.
 
 A sole `$include` key contains a relative filename or list of filenames. A single reference substitutes its node. Lists of references concatenate lists in order or merge disjoint mappings. Reject absolute paths, parent traversal, cycles, duplicate keys/identities and mixed composition types. Original plain records remain readable. Sharding preserves numeric types and precision.

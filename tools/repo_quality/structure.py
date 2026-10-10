@@ -284,6 +284,19 @@ def validate(view, register):
         path = module.get("index")
         if path and path not in view.paths:
             errors.append(f"Missing module index: {path}")
+        research_root = module.get("research_root")
+        if research_root:
+            roots = {
+                "/".join(PurePosixPath(path).parts[: index + 1]) + "/"
+                for path in maintained
+                if path.startswith(module["prefix"])
+                for index, component in enumerate(PurePosixPath(path).parts[:-1])
+                if component == "research"
+            }
+            errors.extend(
+                f"Competing research root: {root}; use {research_root}"
+                for root in sorted(roots - {research_root})
+            )
     return {
         "errors": errors,
         "oversized": oversized,

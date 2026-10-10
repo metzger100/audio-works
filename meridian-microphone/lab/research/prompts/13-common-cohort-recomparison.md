@@ -27,6 +27,6 @@ Generate machine-readable metrics/coverage/BOM/uncertainty/source/patent tables 
 
 ## Deliverables and next milestone
 
-Deliver `research/architecture_comparison_002.md`, machine-readable comparison, plots/tables/diagrams, reproduction and validation records, preserved full-suite/holdout evidence, and an updated future measurement handoff. Mark physical measurements deferred while useful documentary/numerical work continues. Define the remaining prototype gates and smallest next falsification task for each useful niche. If none is compelling, state the actual simulated/mechanistic reasons and retain diversity.
+Deliver `research/architectures/architecture-comparison-002.md`, machine-readable comparison, plots/tables/diagrams, reproduction and validation records, preserved full-suite/holdout evidence, and an updated future measurement handoff. Mark physical measurements deferred while useful documentary/numerical work continues. Define the remaining prototype gates and smallest next falsification task for each useful niche. If none is compelling, state the actual simulated/mechanistic reasons and retain diversity.
 
 Run the shared lab/root checks, link/value/hash verification and new-batch inventory/private restoration workflow. Refresh current facts, rationale, discoveries and rejected ideas. Independent backup or missing-original gaps remain incomplete until actually resolved. No production topology, PCB or physical prototype is selected by this comparison.

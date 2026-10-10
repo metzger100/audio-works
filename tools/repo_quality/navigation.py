@@ -29,11 +29,13 @@ def navigation_output(path):
             "docs/evidence.md",
             "docs/evidence-index.json",
             "docs/current-evidence.md",
+            "docs/history.md",
             "meridian-microphone/lab/research/memory/experiment-log.md",
         }
         or "/index-pages/" in path
         or path.startswith("docs/evidence-index-parts/")
         or path.startswith("docs/evidence/")
+        or path.startswith("docs/history-pages/")
         or path == "meridian-microphone/lab/research/prompts/prompt-pack.md"
     )
 
@@ -168,6 +170,7 @@ def render(view, register):
     summaries = {
         "CURRENT.md",
         "docs/current-evidence.md",
+        "docs/history.md",
         "meridian-microphone/lab/research/memory/experiment-log.md",
         "meridian-microphone/lab/research/prompts/prompt-pack.md",
     }
@@ -253,6 +256,16 @@ def render(view, register):
         "Repository index",
         "[Current state](../CURRENT.md) · [Quality](../QUALITY.md). Follow child hubs; load relevant evidence on demand.",
         root_entries,
+    )
+    pages(
+        outputs,
+        "docs/history.md",
+        "Preserved research and policy history",
+        "Original bytes retain SHA256 and baseline Git provenance. Historical embedded links describe their original layout; use current subject hubs for live material.",
+        [
+            f"- [{declaration['original_path']}]({link(path, 'docs/history.md')}) — `{declaration['sha256']}`"
+            for path, declaration in sorted(register.get("original_files", {}).items())
+        ],
     )
     log = "meridian-microphone/lab/research/memory/experiment-log.md"
     index = record_index(view)

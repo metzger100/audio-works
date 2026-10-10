@@ -31,6 +31,6 @@
 - [validation.md](validation.md)
 - [config/](config/INDEX.md)
 - [decisions/](decisions/INDEX.md)
-- [history-pages/](history-pages/INDEX.md)
+- [validation/](validation/INDEX.md)
 - [Original experiment metadata](evidence.md)
 - [Current supporting records](current-evidence.md)

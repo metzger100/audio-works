@@ -30,6 +30,31 @@ def report(content):
 
 
 class StructureTests(unittest.TestCase):
+    def test_one_research_root_per_project(self):
+        view = MemoryView(
+            {
+                "docs/INDEX.md": "# Hub\n\n[Project](project/INDEX.md)\n",
+                "docs/project/INDEX.md": "# Project\n\n[Research](research/notes.md)\n",
+                "docs/project/research/notes.md": "# Notes\n\nEvidence.\n",
+            }
+        )
+        register = {
+            "modules": [
+                {
+                    "prefix": "docs/project/",
+                    "index": "docs/project/INDEX.md",
+                    "research_root": "docs/project/lab/research/",
+                }
+            ],
+            "root_files": list(view.paths),
+            "classifications": [],
+            "generated": [],
+        }
+        errors = "\n".join(validate(view, register)["errors"])
+        self.assertIn("Competing research root: docs/project/research/", errors)
+        register["modules"][0]["research_root"] = "docs/project/research/"
+        self.assertEqual(validate(view, register)["errors"], [])
+
     def test_empty_sections_and_repeated_prose_are_rejected(self):
         from repo_quality.structure import markdown_health
 

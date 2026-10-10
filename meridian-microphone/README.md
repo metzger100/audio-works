@@ -2,7 +2,7 @@
 
 Condenser-microphone research for private DIY in Germany. Use and sonic goals: [brief](brief.md).
 
-[Audio Works](../README.md) · [Current state](../CURRENT.md) · [Brief](brief.md) · [Decisions](DECISIONS.md) · [Laboratory](lab/README.md)
+[Audio Works](../README.md) · [Current state](../CURRENT.md) · [Brief](brief.md) · [Decisions](DECISIONS.md) · [Laboratory](lab/README.md) · [Research](lab/research/README.md)
 
 ## Status
 
@@ -18,7 +18,7 @@ The [specification](lab/spec/microphone-spec.yaml) records balanced XLR/P48, noi
 
 ## Design documentation
 
-[Capsule history](research/reference-datasheets/README.md) · [measurement handoff](lab/measurement/README.md).
+[Capsule history](lab/research/capsules/README.md) · [measurement handoff](lab/measurement/README.md).
 
 Follow [components](../COMPONENTS.md), [Germany procurement](lab/research/procurement/germany.md), [patents](../PATENTS.md), the [scientific contract](lab/CONTRACT.md) and [completion gate](../CONTRIBUTING.md#complete-a-change). Preserve sources, assumptions, failures and decisions.
 

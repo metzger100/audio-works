@@ -14,6 +14,7 @@ from .navigation import navigation_output, render
 from .register import immutable
 from .structure import validate, original
 from .records import relationships
+from .originals import declared_originals
 
 HOOKS = ("pre-commit", "pre-merge-commit", "pre-applypatch", "pre-push")
 
@@ -96,15 +97,7 @@ def check(view, register):
                 errors.append(
                     f"Changed immutable evidence/history: {path}; create a descendant/correction"
                 )
-    for key in ("original_files", "external_files"):
-        declarations = {**register.get(key, {}), **prior.get(key, {})}
-        for path, declaration in declarations.items():
-            expected_hash = declaration["sha256"] if isinstance(declaration, dict) else declaration
-            if (
-                path not in view.paths
-                or hashlib.sha256(view.read(path)).hexdigest() != expected_hash
-            ):
-                errors.append(f"Changed or missing declared original: {path}")
+    errors.extend(declared_originals(view, register, prior, baseline))
     originals = register.get("original_files", {})
     external = register.get("external_files", {})
     if originals or external:
@@ -129,7 +122,6 @@ def check(view, register):
                     path.startswith(
                         (
                             "docs/history/",
-                            "meridian-microphone/research/",
                             "meridian-microphone/lab/research/",
                         )
                     )

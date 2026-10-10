@@ -1,6 +1,6 @@
 # Meridian decisions
 
-Current operative view,10 October 2026. [Hashed original rationale](../docs/history/2026-10-09/meridian-microphone/DECISIONS.md) retains all historical entries. D014 supersedes D002/D012's simulation stop; D010 supersedes D006's comparison purchases; D026 supersedes D009's folder name. Purchase/characterization and implementation qualification remain unresolved.
+Current operative view, 11 October 2026. [Hashed original rationale](../docs/history/2026-10-09/meridian-microphone/DECISIONS.md) retains all historical entries. D014 supersedes D002/D012's simulation stop; D010 supersedes D006's comparison purchases; D026 supersedes D009's folder name. Purchase/characterization and implementation qualification remain unresolved.
 
 | ID / date | Decision or recommendation | Status |
 | --- | --- | --- |
@@ -39,5 +39,6 @@ Current operative view,10 October 2026. [Hashed original rationale](../docs/hist
 | D030 /2026-10-09 | [Continuation plan](lab/research/prompts/DECISIONS.md); deferred measurement access | Gates retained |
 | D031 /2026-10-09 | [Parts strengthening](lab/research/devices/parts-database-expansion-002-decisions.md); earlier owner publication direction | No qualification promotion |
 | D032 /2026-10-10 | [Concise reports and subject/tool separation](../docs/decisions/2026-10-10-meridian-cleanup.md) | Owner-directed cleanup |
+| D033 /2026-10-11 | [One research home, verified original relocation and concise current guides](../docs/decisions/2026-10-11-research-consolidation.md) | Owner-directed completion |
 
 The historical G1 gate still requires intended capsule/variant/use, quantity, Germany delivered quote, interface facts, confidence and acknowledged residual risks before purchasing. Default one capsule; a second needs an intended second microphone. Record batch/serial and calibrated measurements before architecture selection. No purchase/contact authorization follows from this log.

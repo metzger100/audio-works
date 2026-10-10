@@ -1,81 +1,74 @@
-# M100 / METZGER100 AUDIO WORKS SVG masters
+# M100 / METZGER100 AUDIO WORKS artwork
 
-[Brand guide](../README.md) · [Masters](README.md#master-files) · [Reproduction limits](README.md#backgrounds-and-reproduction-limits) · [Rebuilding](README.md#rebuilding)
+[Brand guide](../README.md) · [Preview](preview.html) · [Naming decision](../proposals/README.md) · [Validation](qc/validation.json)
 
-Artwork reconstructed from the original brand concept. **Selected identity, 5 October 2026:** the manufacturer subline now reads METZGER100 AUDIO WORKS, and two single-colour wordmarks support other equipment categories. See the [naming decision and comparison](../proposals/README.md). Brand strategy and usage rules are maintained in the [brand guide](../README.md). The concept's flat silhouette and hierarchy are preserved; its lighting, material simulation and incidental asymmetries are omitted.
+Selected identity, 5 October 2026: METZGER100 AUDIO WORKS subline, custom M100 lettering, mountain and copper beard. Flat vector geometry follows the original concept. Original microphone-specific artwork remains in the [archive](../archive/2026-10-04-microphones/README.md).
 
 ## Master files
 
-| Filename | viewBox | Intended use |
+| Master | viewBox | Use |
 | --- | --- | --- |
-| `m100-primary.svg` | `0 0 488 492` | Complete identity: mountains, striped peak, M100 and copper beard. Packaging, website, print and larger equipment markings. |
-| `m100-monogram.svg` | `0 0 304 504` | Tall stepped badge for a microphone body, enamel or a machined badge; intended artwork height 20–30 mm. |
-| `m100-wordmark.svg` | `0 0 488 140` | Compact product marking, PCB silkscreen, engraving and horizontal branding. |
-| `m100-lockup.svg` | `0 0 500 198` | M100 above the divider and METZGER100 AUDIO WORKS. Packaging and microphone body engraving, including a placement rotated as a whole along the body. |
-| `m100-palette.svg` | `0 0 1200 254` | Documentation: five swatches with outlined names and hexadecimal values. |
+| [Primary](m100-primary.svg) | `0 0 488 492` | Full identity; packaging, print and larger markings |
+| [Monogram](m100-monogram.svg) | `0 0 304 504` | Stepped equipment badge; intended visible height 20–30mm |
+| [Wordmark](m100-wordmark.svg) | `0 0 488 140` | Compact panels, engraving and PCB markings |
+| [Manufacturer lockup](m100-lockup.svg) | `0 0 500 198` | M100, divider and full manufacturer name |
+| [Palette](m100-palette.svg) | `0 0 1200 254` | Outlined colour names and hexadecimal values |
+| [README banner](m100-readme-banner.svg) | `0 0 1200 240` | Shared standard lockup on Ivory in both GitHub themes |
 
-The five core files are independent standalone SVGs. They have no fixed width or height and scale through their viewBox. The SVG masters contain editable vector shapes and outlined lettering; the raster QC files are previews only.
+Standalone SVGs scale through viewBox without fixed dimensions. Lettering is outlined; raster QC is preview evidence. No live text, bitmap content, external resources, gradients, filters, masks, clipping, opacity effects or material simulation appears in masters. The only paint values are those in the [brand palette](../README.md#visual-identity); brass remains flat colour. Palette outlines distinguish matching substrate/swatches.
 
-The [README banner](m100-readme-banner.svg) places the unchanged standard lockup on an Ivory Beige background. Its `0 0 1200 240` viewBox gives the repository and brand READMEs the same appearance in GitHub's light and dark themes. It is generated from the shared lockup geometry by the existing artwork builder; no separate raster copy is needed.
-
-For Forest Green substrates, use the additional standalone variants below. Graphite Black uses the standard masters, as requested. Their viewBoxes and geometry match the corresponding standard masters exactly.
-
-| Filename | Dark-background treatment |
+| Substrate / process | Artwork |
 | --- | --- |
-| `m100-primary-inverse.svg` | Ivory mountains, striped peak, M and zeroes; brass 1 and copper beard. |
-| `m100-wordmark-inverse.svg` | Ivory M and zeroes; brass 1. |
-| `m100-lockup-inverse.svg` | Inverse wordmark with ivory divider, diamond and outlined subline. |
-| `m100-palette-inverse.svg` | Original five swatch colours, with ivory documentation lettering. |
+| Ivory or Graphite | Standard masters |
+| Forest Green | [Primary inverse](m100-primary-inverse.svg), [wordmark inverse](m100-wordmark-inverse.svg), [lockup inverse](m100-lockup-inverse.svg), [palette inverse](m100-palette-inverse.svg) |
+| Single-colour production | [Graphite wordmark](m100-wordmark-mono.svg) or [Ivory wordmark](m100-wordmark-mono-inverse.svg) |
+| Monogram on any of the three backgrounds | Same monogram; ivory lettering and gold perimeter frame its green field |
 
-For single-colour equipment markings, use `m100-wordmark-mono.svg` (Graphite Black) or `m100-wordmark-mono-inverse.svg` (Ivory Beige). Both have viewBox `0 0 488 140`, contain the same outlines as the colour wordmark and keep transparent counters. All characters, including the 1, use one flat colour. These production variants are distinct from the full-colour background system. Use them for panel printing, PCB silkscreen and engraving; choose ink/substrate contrast and process dimensions explicitly.
-
-The monogram already has ivory lettering and a gold perimeter framing its green field, so `m100-monogram.svg` works on both light and dark substrates.
-
-## Authoritative colours
-
-| Name | Value |
-| --- | --- |
-| Forest Green | `#355856` |
-| Brass Gold | `#B89255` |
-| Copper Red | `#B24C39` |
-| Ivory Beige | `#E9DDC6` |
-| Graphite Black | `#2D2D2A` |
-
-These are the only paint values in the masters. No gradients, shading, filters, textures, opacity effects, masks, clipping, bitmap content or external resources are present. Brass is a flat colour. The documentation palette uses thin brass swatch outlines so green, ivory and graphite remain distinguishable against matching backgrounds.
+Inverse geometry/viewBoxes match standard counterparts; green foreground becomes ivory, while brass/copper remain. Palette inverse changes labels only. Mono wordmarks use the same outlines and transparent counters in one colour, including the 1. Choose actual ink/substrate contrast and process dimensions.
 
 ## Shared construction and inferred decisions
 
-- The common lettering uses a one-unit construction grid with major dimensions in four-unit increments. Its nominal envelope is 464 × 116 units. The M is 164 units wide with 40-unit stems, mirrored diagonal notches and straight edges. The narrow 1 occupies a 45-unit envelope and has an angled flag without an added foot.
-- Both primary zeroes use the same exact path: a circular 116-unit outside contour with a vertically oval 64 × 72-unit counter. The curves in the concept suggested this circular outside / oval inside relationship. Small round overshoots extend two units below the M and 1 baseline.
-- The M-to-1 gap is nine units, the 1-to-first-zero gap is nine units, and the zero-to-zero gap is five units. These reflect the reference's broad M, narrow 1 and compact paired rounds. All three related masters insert the same complete lettering group verbatim; they differ only in its placement. The full wordmark envelope and mountain/crest axis share the same mathematical centre.
-- The primary mark has a local centre axis at x = 232; the SVG axis is x = 244 after its 12-unit margin. The two mountain shoulders are mirrored triangles with a common horizontal baseline at local y = 154.
-- The central peak is a 146 × 140-unit diamond articulated by eight mirrored green bands. Full bands are 16 units wide on a 21-unit pitch; the central gap is six units. The outermost bands terminate in triangles, derived directly from the diamond edges. All intervening spaces are true cutouts, showing ivory on an ivory substrate and the substrate colour elsewhere.
-- The primary beard is 232 × 170 units, centred under the wordmark. A symmetric pair of restrained Bézier horn returns and two small top lobes preserve the reference's beard character. The lower shield is a straight-edged pentagon. Its mouth is a compound-path hole with a peaked upper edge and softened lower corners. It contains no ivory rectangle or simulated background.
-- The monogram is constructed independently around x = 152. Its stepped silhouette, inset border, paired side bands and roof ribs are mirrored. Its visible shield is 280 × 484 units within the padded viewBox. Border and main gold line widths are 7.5 units, a deliberate increase over ambiguous fine details in the reference. Side-line endpoints are calculated from the inset silhouette, with a 0.2-unit overlap into the border to suppress antialias seams. Borders are actual compound rings, rather than a full gold shield hidden under a green duplicate.
-- The badge uses an ivory M with the same angular profile, separately proportioned ivory 100 and a taller version of the copper beard, as shown in the concept. The beard's gold rim is now constructed from one symmetric centreline with a uniform **5-unit stroke in final badge coordinates**, then expanded into a filled compound path using Inkscape. Round joins maintain an even rim around the horn returns and central notch. The copper field follows the expanded rim's actual inner contour. This replaces the previous independently scaled inner/outer silhouettes, whose separation varied around the curves. There is no remaining live stroke or non-uniform scaling of the rim. Its ivory mouth is an intentionally filled element on the green badge field.
-- The lockup's thin horizontal rules surround a small outlined diamond with a solid centre diamond. Forest Green is used for the subline, matching the concept. The reference visibly uses tracked serif capitals; Source Serif 4, regular display proportions, retains that character without substituting another manufacturer's lettering. The selected METZGER100 AUDIO WORKS subline has a nominal 20-unit cap height, fits a measured 460-unit visible width centred on x = 250 and uses uniform added tracking. This matches the selected Audio Works comparison artwork: a 20-unit cap height and 460-unit visible width. The wordmark, divider and viewBox keep their established geometry. The original microphone-specific subline is preserved in the archive. Its actual glyph contours are converted to paths with FontTools, with coordinates rounded to four decimals.
-- Source Serif 4 is an open-source font under the SIL Open Font License 1.1. It is used only for the manufacturer subline and palette labels. M100 is custom geometric artwork. There are no font files, live text elements, or runtime font dependencies in any SVG. The local font licence is included in `tools/SourceSerif-LICENSE.md` for provenance.
+The [builder](tools/build_branding.py) owns common geometry. All related masters reuse the complete wordmark; badge lettering is separately proportioned. The reconstruction infers dimensions from the concept and establishes no physical production qualification.
+
+| Element | Construction |
+| --- | --- |
+| Lettering | One-unit grid; major dimensions in four-unit increments; envelope 464×116. M width164 / stems 40; 1 envelope 45 with angled flag and no foot |
+| Zeroes | Identical paths: circular outer 116, oval counter 64×72; overshoot 2 below M/1 baseline |
+| Spacing | M–1 gap 9, 1–zero 9, zero–zero 5; lettering and mountain axis share centre |
+| Primary mountains | Local centre x232, SVG centre x244 after margin12; mirrored shoulders at baseline y154 |
+| Central peak | Diamond 146×140; eight mirrored bands width 16 / pitch 21; central gap 6; triangular tips and true cutouts |
+| Primary beard | Symmetric 232×170; Bézier horn returns/two top lobes, pentagonal lower shield; compound mouth cutout with peaked edge/soft corners |
+| Monogram | Centre x152; mirrored stepped shield 280×484; main border / lines 7.5; side-line overlap 0.2 prevents seams; compound border rings |
+| Badge beard rim | Uniform 5-unit stroke in final badge coordinates, round joins, expanded by Inkscape to a filled compound path; copper follows inner contour; ivory mouth filled on green |
+| Lockup | Divider rules and outlined/solid-centre diamond; tracked Source Serif4 subline cap height 20 / visible width 460, centre x250; established wordmark/divider/viewBox retained |
+| Outlined labels | FontTools glyph paths rounded to four decimals; Source Serif4 supplies manufacturer/palette labels, M100 remains custom geometry |
+
+[Source Serif licence](tools/SourceSerif-LICENSE.md): SIL OFL 1.1. The local font licence retains provenance. Finished SVGs have no font-file or runtime font dependency. Uniform rim expansion replaces earlier separately scaled inner/outer silhouettes; no live rim stroke or nonuniform rim scaling remains.
 
 ## Backgrounds and reproduction limits
 
-`preview.html` selects the standard masters on Ivory Beige and Graphite Black, and the inverse masters on Forest Green, with 24, 64 and 256 px samples plus expandable 1024 px inspections. Each card labels and links the actual standalone SVG variant it uses. Size labels refer to the longest viewBox edge, preserving the aspect ratio. Inverse variants replace green foreground artwork with ivory while retaining brass and copper. Their contours and transparent counters remain identical. Palette variants change documentation lettering only; swatch values stay authoritative. The monogram uses the same corrected master in all three settings. This is an explicit colour application system, with no CSS filtering, backing rectangles or geometry changes to simulate contrast.
+The [preview](preview.html) links actual variants on Ivory, Graphite and Forest at 24,64,256px, with expandable1024px inspection. Size means longest viewBox edge. Geometry stays unchanged; no CSS filtering or backing shapes simulate contrast.
 
-At 24 px the wordmark remains identifiable, but individual primary peak gaps, badge roof ribs and the manufacturer subline cannot all resolve on the pixel grid. The monogram is recognizable by its silhouette, M and crest at that size. Its thickened main lines resolve substantially better at 64 px; use 128 px or more for clear inspection of the complete badge. Use the standalone wordmark for very small digital branding, and allow about 256 px lockup width for comfortable subline reading. Palette labels are documentation text and also require the larger previews. No alternate or simplified identity is substituted in the small samples.
+At 24px, wordmark/silhouette remain identifiable; fine peak/badge gaps and manufacturer text cannot all resolve. Badge lines improve at 64px; use ≥128px for full badge inspection and approximately 256px lockup width for readable subline. Palette labels need larger previews. Small samples substitute no simplified identity.
 
-At a 20 / 24 / 30 mm visible badge height, a 7.5-unit main line is approximately 0.31 / 0.37 / 0.46 mm wide. The roof's closest major gap is 6.5 units, approximately 0.27 / 0.32 / 0.40 mm at those heights. The uniform 5-unit beard rim is approximately 0.21 / 0.25 / 0.31 mm wide at those heights. The artwork has not been physically manufactured; final engraving depth, enamel clearances and PCB printing tolerances depend on the chosen process. Retain actual shape dimensions when specifying a fabricator's minimum feature widths. The masters provide flat colour regions, rather than toolpaths or engraving-depth instructions.
+| Feature | At 20 / 24 / 30mm visible badge height |
+| --- | --- |
+| Main line 7.5 units | 0.31 /0.37 /0.46mm |
+| Closest major roof gap 6.5 units | 0.27 /0.32 /0.40mm |
+| Uniform beard rim 5 units | 0.21 /0.25 /0.31mm |
+
+Artwork has not been physically manufactured. Fabricator-specific engraving depth, enamel clearance and PCB printing tolerances remain unresolved. Specify actual minimum features; SVG colour regions are not toolpaths or depth instructions.
 
 ## Validation and review
 
-- All five standard masters, four inverse variants and two single-colour wordmarks parse as valid XML and use `shape-rendering="geometricPrecision"`.
-- Automated checks verify the colour allowlist, absence of prohibited effects/resources, absence of live text, exact reuse of the shared wordmark, identical zero paths, bilateral shield silhouette and identical geometry between standard/inverse variants and between colour/single-colour wordmarks. The beard rim is generated from a documented uniform-width stroke and verified as an expanded compound path.
-- Each master and inverse variant was rendered through librsvg at 24, 64, 256 and 1024 px longest edge. All 44 PNGs are saved in `qc/`.
-- Original reconstruction review compared the primary logo and badge with the concept and corrected peak tips and side-line junctions. The 5 October revision applies the selected Audio Works manufacturer subline and adds single-colour wordmarks; review covers the updated lockup, naming comparison and rendered size/background reductions.
-- `qc/contact-sheet.png` shows all five assets on ivory. `qc/forest-contact-sheet.png` shows the corrected Forest Green application. `qc/reduction-sheet.png` shows 24, 64 and 256 px reductions using the appropriate variants on all three backgrounds. `qc/validation.json` contains the machine-readable checks and raster dimensions. Raster antialiasing can produce intermediate pixel colours; those are renderer outputs, not paints in the SVG masters.
+The builder checks XML, `shape-rendering="geometricPrecision"`, allowed paints/effects/resources, outlined text, shared wordmark/zero geometry, shield symmetry and equal inverse/mono contours. Rim review verifies documented uniform expansion. Original review corrected peak tips and side-line junctions; the 5 October revision reviewed updated lockup, naming comparison and reductions.
+
+All eleven standard/inverse/mono assets were rendered through librsvg at 24, 64, 256, 1024px: 44 PNGs in `qc/`. [Ivory contact sheet](qc/contact-sheet.png), [Forest sheet](qc/forest-contact-sheet.png), [reductions](qc/reduction-sheet.png) and [machine-readable checks](qc/validation.json) retain review evidence. Antialias colours are renderer outputs rather than master paints.
 
 ## Rebuilding
 
-`tools/build_branding.py` holds the shared geometry, outlined-label construction, constant-width beard rim expansion, inverse variant generation, rendering, preview generation and integrity checks. Run it with Python containing FontTools and Pillow, with `rsvg-convert` and `inkscape` on the executable path. It expects the installed Source Serif 4 variable font at `/usr/share/fonts/adobe-source-serif/SourceSerif4Variable-Roman.otf`. Only rebuilding needs that font and Inkscape; opening, editing and reproducing the finished SVG masters does not. The README and font provenance are maintained separately.
+Run [build_branding.py](tools/build_branding.py) with Python, FontTools, Pillow, `rsvg-convert` and Inkscape. It expects `/usr/share/fonts/adobe-source-serif/SourceSerif4Variable-Roman.otf`. The builder generates shared geometry, outlined labels, expanded rim, inverse variants, banner, previews/renders and checks. Finished artwork needs neither that font nor Inkscape to open or reproduce. README and font provenance are maintained separately.
 
 ## Naming comparison rebuild
 
-`tools/build_branding_proposal.py` builds the two unselected naming lockups, a copy of the selected lockup, local naming-history preview and comparison image from the shared artwork source. Rebuild the main artwork first, then run that script with the same dependencies. Archived files are historical references and are never overwritten by either rebuild.
+After the main build, run [build_branding_proposal.py](tools/build_branding_proposal.py) with the same dependencies. It generates two unselected naming lockups, selected comparison copy, history preview and image. Both builders preserve archived originals.

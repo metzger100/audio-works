@@ -22,6 +22,6 @@ For held features, investigate alternative mechanisms against actual relevant cl
 
 ## Deliverables
 
-Deliver `research/patents/candidate_screening_001.md`, machine-readable candidate/claim/territory/status mappings, reproducible dated query and source ledgers, exact original document references/hashes, unresolved-risk/hold register and professional-review questions. Update the existing register compatibly. Mark a patent screened only for the research actually performed and scoped date/claims/territories. No global legal clearance or patent-safety label is permitted.
+Deliver `research/patents/candidate-screening-001.md`, machine-readable candidate/claim/territory/status mappings, reproducible dated query and source ledgers, exact original document references/hashes, unresolved-risk/hold register and professional-review questions. Update the existing register compatibly. Mark a patent screened only for the research actually performed and scoped date/claims/territories. No global legal clearance or patent-safety label is permitted.
 
 Update comparison/readiness with genuine findings while preserving unaffected research. Follow shared link/current-state/preservation checks; do not run or fabricate electrical tests for this documentary task. Finish with completed search scope, remaining gaps, exact held features and evidence needed to resolve them.

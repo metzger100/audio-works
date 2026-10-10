@@ -11,6 +11,50 @@ from repo_fixture import RepositoryFixture, project, REPO
 
 
 class TestNavigation(RepositoryFixture):
+    def test_declared_original_relocation_checks_staged_bytes(self):
+        old = "meridian-microphone/research/survey first.md"
+        new = "meridian-microphone/lab/research/capsules/survey first.md"
+        payload = "# Original survey\n\nMeasured uncertainty is retained.\n"
+        self.put(old, payload)
+        self.run_git("add", old)
+        self.run_git("-c", "core.hooksPath=/dev/null", "commit", "--quiet", "-m", "Original")
+        revision = self.run_git("rev-parse", "HEAD").stdout.strip()
+        self.register["original_revision"] = revision
+        declaration = {
+            "git_revision": revision,
+            "original_path": old,
+            "sha256": hashlib.sha256(payload.encode()).hexdigest(),
+        }
+        self.register["original_files"] = {old: declaration}
+        self.save_register()
+        self.refresh()
+        self.run_git("add", "-A")
+        self.run_git("-c", "core.hooksPath=/dev/null", "commit", "--quiet", "-m", "Protection")
+        (self.root / old).rename(self.root / new)
+        self.register["original_files"] = {new: declaration}
+        self.save_register()
+        self.refresh()
+        history = (self.root / "docs/history.md").read_text()
+        self.assertIn("capsules/survey%20first.md", history)
+        self.assertIn(declaration["sha256"], history)
+        self.assertEqual(self.check()["status"], "pass")
+        self.run_git("add", "-A")
+        self.assertEqual(self.check(staged=True)["status"], "pass")
+        project.install_hook(self.root)
+        self.put(new, payload + "Changed finding.\n")
+        self.run_git("add", new)
+        self.put(new, payload)
+        errors = "\n".join(self.check(staged=True)["errors"])
+        self.assertIn("Changed or missing declared original", errors)
+        before = self.run_git("diff", "--binary").stdout
+        staged_before = self.run_git("diff", "--cached", "--binary").stdout
+        result = self.run_git("commit", "-m", "Reject changed relocated original", check=False)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("Changed or missing declared original", result.stdout + result.stderr)
+        self.assertEqual(before, self.run_git("diff", "--binary").stdout)
+        self.assertEqual(staged_before, self.run_git("diff", "--cached", "--binary").stdout)
+        self.assertEqual(self.check()["status"], "pass")
+
     def test_generation_is_deterministic_and_common_routes_include_contracts(self):
         first = {
             p: (self.root / p).read_bytes()

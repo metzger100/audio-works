@@ -5,4 +5,4 @@
 
 - [Device model controls](evidence/device-models.md) — 31 records
 - [Qualification and optimization attempts](evidence/runs.md) — 99 records
-- [Verification batches](evidence/verification.md) — 28 records
+- [Verification batches](evidence/verification.md) — 29 records

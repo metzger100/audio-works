@@ -57,6 +57,11 @@ def load_register(view):
             if not module.get("index") or not module["index"].startswith(prefix):
                 raise ValueError(f"Module needs its own index: {prefix}")
             safe_name(module["index"])
+        research_root = module.get("research_root")
+        if research_root:
+            safe_name(research_root.rstrip("/"))
+            if not research_root.startswith(prefix) or not research_root.endswith("/research/"):
+                raise ValueError(f"Research root must be one research directory inside {prefix}")
     prefixes = [module["prefix"] for module in r["modules"]]
     if len(set(prefixes)) != len(prefixes):
         raise ValueError("Duplicate module prefix")

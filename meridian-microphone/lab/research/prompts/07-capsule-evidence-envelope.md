@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: GPL-3.0-or-later -->
 # Prompt 7 — Build a defensible capsule assumption set without measurements
 
-Work in `meridian-microphone/lab` on M100 Meridian MIC-34-M/MIC-34-C, K47FRB under P48. Read and apply [the continuation execution contract](research-workflow.md). Use reading route `reporting`; inspect `spec/capsule-model.yaml`, the original capsule research/source register, `research/architectures/architecture-comparison-001.md` and `measurement/priority-plan.md`. The owner **cannot measure the capsule yet**. Complete useful literature/physics/simulation research now; do not make access, purchases or supplier contact a prerequisite.
+Work in `meridian-microphone/lab` on M100 Meridian MIC-34-M/MIC-34-C, K47FRB under P48. Read and apply [the continuation execution contract](research-workflow.md). Use reading route `reporting`; inspect `spec/capsule-model.yaml`, [capsule research](../capsules/README.md) and source register, `research/architectures/architecture-comparison-001.md` and `measurement/priority-plan.md`. The owner **cannot measure the capsule yet**. Complete useful literature/physics/simulation research now; do not make access, purchases or supplier contact a prerequisite.
 
 Research plausible K47FRB electrical/acoustic scenarios from the best available direct evidence and carefully qualified similar-capsule analogies. Do not invent a measured unit, a safe bias or an acoustic rating. Preserve the selected capsule and the current broad uncertainty envelope. Improve traceability and physical consistency rather than pretending a guessed nominal is known.
 
@@ -19,6 +19,6 @@ Starting identity source: [Arienne Flat K47 Cardioid/Omni listing](https://store
 
 ## Deliverables
 
-Deliver `research/capsule_evidence_envelope_001.md`, a machine-readable evidence/similarity/parameter/scenario ledger, source/query records, independent calculations and reproducible sensitivity plots/tables. Preserve rejected transfers explicitly, including regular K47 versus Flat K47, Cardioid-only versus Cardioid/Omni, complete microphone versus bare capsule, and approved bias versus normalization. If sources cannot justify a tighter central estimate, keep the existing nominal labelled assumed and report that result.
+Deliver `research/capsules/evidence-envelope-001.md`, a machine-readable evidence/similarity/parameter/scenario ledger, source/query records, independent calculations and reproducible sensitivity plots/tables. Preserve rejected transfers explicitly, including regular K47 versus Flat K47, Cardioid-only versus Cardioid/Omni, complete microphone versus bare capsule, and approved bias versus normalization. If sources cannot justify a tighter central estimate, keep the existing nominal labelled assumed and report that result.
 
 Update the future measurement handoff with the highest-value unresolved parameters and eventual calibration/safe prerequisites. Mark measurements deferred because the owner has no access now; do not claim they occurred or delete their qualification gates. Follow shared checks and preservation requirements. Finish with the assumption scenarios that permit continued research, rankings that survive them, and the limits that await physical evidence.

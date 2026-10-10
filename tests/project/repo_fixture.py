@@ -43,7 +43,7 @@ class RepositoryFixture(unittest.TestCase):
         paths.update(
             {
                 "meridian-microphone/lab/results/README.md",
-                "meridian-microphone/research/reference-datasheets/README.md",
+                "meridian-microphone/lab/research/capsules/README.md",
                 "branding/archive/2026-10-04-microphones/README.md",
                 "branding/archive/2026-10-05-audio-proposal/README.md",
                 "QUALITY.md",
