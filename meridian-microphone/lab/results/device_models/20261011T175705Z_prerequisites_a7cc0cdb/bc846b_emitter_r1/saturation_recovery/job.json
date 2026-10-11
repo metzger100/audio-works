@@ -1,0 +1,45 @@
+{
+  "model": {
+    "id": "bc846b_emitter_r1",
+    "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+    "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+    "version": "project structural child r1; Q2 emitter 33 -> 3",
+    "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+    "retrieved_date": "2026-10-05",
+    "acquisition_status": "valid_spice",
+    "redistribution": {
+      "status": "not_established_do_not_redistribute",
+      "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+      "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+    },
+    "syntax": "SPICE3 subcircuit",
+    "ngspice_behavior": "",
+    "subcircuit": "BC846B",
+    "parent_model_id": "bc846b_vendor",
+    "device_id": "bc846b",
+    "manufacturer": "Nexperia",
+    "model_lineage": [
+      {
+        "id": "bc846b_vendor",
+        "version": "extraction week 24/2021",
+        "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+        "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+        "retrieved_date": "2026-10-05"
+      }
+    ],
+    "file": "models/semiconductor/vendor/bc846b_emitter_r1.lib"
+  },
+  "label": "saturation_recovery",
+  "temperature_c": 25,
+  "directory": "bc846b_emitter_r1/saturation_recovery",
+  "netlist_sha256": "2292bb3f83c463b19b61cf917b670a538a66cf18e2f5c4d0983f6e30081937ee",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "timeout_s": 15,
+  "status": "ok",
+  "retained_hashes": {
+    "job.cir": "2292bb3f83c463b19b61cf917b670a538a66cf18e2f5c4d0983f6e30081937ee",
+    "tran.raw": "f18903c4c08d0434618da84d2f6fae83f2318d3116edae86f773cb3a2fae3992",
+    "simulator.log": "3c5c2115ced070537b25d5478db0489a11e38e1e70be373714590bd7bb7a75e1",
+    "tran.raw.csv": "e9cb5a28f358cadeded15c1b69e7a27f8c9922e960985c438bd69e6249ad3fb7"
+  }
+}

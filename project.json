@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "as_of": "2026-10-11",
-  "phase": "Parts evidence strengthened — research",
+  "phase": "Simulation prerequisite diagnosis — research",
   "readiness": {
-    "software": "94 lab tests; 36 Git/recovery and 23 fast regressions pass.",
-    "engineering": "20 devices/27 model files; scoped PNP controls; no selection.",
+    "software": "109 lab,39 Git/recovery and23 fast regressions pass.",
+    "engineering": "Isolated follower H2/H3 supported; full microphone nonlinear/headroom held.",
     "procurement": "Realized BOMs; Germany private orderability/costs unresolved.",
     "patents": "Phase 8 claims/status missing; affected gates held.",
     "physical": "No measurements; access deferred; no selected prototype.",
@@ -15,15 +15,20 @@
     "Device/nonlinear/production coverage incomplete.",
     "Procurement and candidate patent screening unresolved."
   ],
-  "next_action": "Resolve phase 08 behavior and phases 11–12 sourcing and patent prerequisites.",
+  "next_action": "Reduce the coupled failed JFET DUT under a frozen plan; validate floating OPA and settled BJT behavior before a common full comparison.",
   "evidence": [
+    "meridian-microphone/lab/research/capsules/evidence-envelope-001.md",
     "meridian-microphone/lab/research/devices/parts-database-expansion-002.md",
     "meridian-microphone/lab/research/architectures/architecture-comparison-001.md",
     "meridian-microphone/lab/research/devices/parts-database-expansion-001.md",
     "meridian-microphone/lab/research/devices/device-model-validation.md",
     "meridian-microphone/lab/research/patents/architecture_comparison_001_2026-10-09.yaml",
     "docs/validation/2026-10-11-maintainability.md",
-    "docs/validation/2026-10-11-github-canonical.md"
+    "docs/validation/2026-10-11-github-canonical.md",
+    "docs/decisions/2026-10-11-capsule-inventories.md",
+    "docs/validation/2026-10-11-capsule-envelope.md",
+    "meridian-microphone/lab/research/devices/simulation-prerequisites-001.md",
+    "docs/validation/2026-10-11-simulation-prerequisites.md"
   ],
   "stages": [
     {
@@ -130,11 +135,10 @@
   },
   "quality_change": {
     "date": "2026-10-11",
-    "decision": "docs/decisions/2026-10-11-github-canonical.md",
+    "decision": "docs/decisions/2026-10-11-runtime-storage.md",
     "tests": [
-      "tests/project/test_storage_policy.py",
       "tests/project/test_recovery.py",
-      "tests/quality/test_originals.py"
+      "tests/project/test_storage_policy.py"
     ]
   },
   "original_revision": "20c039a5323964520f80da2a3e9c07bd097b5e79",

@@ -1,0 +1,14 @@
+schema_version: 1
+declared_date: '2026-10-09'
+task: Exact ordinary factory-matched PNP package controls
+models: [dmmt5401_vendor]
+hypothesis: Same nominal manufacturer equations may reproduce DC bounds while failing conditioned noise. Identical halves cannot establish2percent documented matching under ordinary variation.
+conditions: Plan003 PNP grid/cap/leak/noise/support controls, with native6pin package and unused half tied to0; separate two-active-half DC control atVCE5V andIC10mA each.
+source: DS30437 Rev9-2 March2024 table/notes6-9; exact package200mA/half and300mW combined, not discrete600mA rating.
+maximum_jobs: 100
+timeout_s_per_job: 15
+typical_disagreement_fraction: 0.20
+numerical_refinement_fraction: 0.01
+stopping: One pass; no fitting or pooled credit from MMBT5401.
+production_qualification: false
+capsule_measurements: absent

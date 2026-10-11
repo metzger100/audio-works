@@ -1,0 +1,102 @@
+{
+  "acquisition": {
+    "child": "research/device_sources/local/20261011T175127Z_prerequisites_40132801/receipts.json",
+    "current_archives": "Generic SLPM366, PSpice SLPM349I, transient SLPM358, TINA SLPM350B/reference SLPM351B",
+    "failed_parent": "research/device_sources/local/20261011T175114Z_prerequisites_16a27a15/receipts.json",
+    "script": "tools/controls/prerequisite_sources.py"
+  },
+  "date": "2026-10-11",
+  "earlier_metadata_limit": "Four earlier raw response groups retained; exact earlier query strings, original call timestamps and two raw response groups were not saved. Search scope is reconstructed topic metadata, not an exact query transcript.",
+  "earlier_search_scope": [
+    "TI JFE archives/model revisions/independent extraction",
+    "Nexperia quasi-saturation/pin/emitter models and manufacturer alternatives",
+    "ngspice47 PSpice/switch/global-ground/integration/convergence mechanisms",
+    "OPA197 floating macros and model initialization",
+    "noise extraction and high-impedance instrumentation"
+  ],
+  "exact_followup_query_batch": {
+    "arguments": {
+      "response_length": "long",
+      "search_query": [
+        {
+          "q": "site:ti.com JFE150 SLPM366 SLPM349I SLPM350B SLPM358 model errata"
+        },
+        {
+          "q": "site:nexperia.com bipolar SPICE model quasi saturation emitter model guide"
+        },
+        {
+          "q": "site:ngspice.sourceforge.io ngspice 47 PSpice VSWITCH aswitch noise manual"
+        },
+        {
+          "q": "site:ti.com SLVA043B transistor noise extraction source impedance"
+        }
+      ]
+    },
+    "raw_response": {
+      "path": "research/device_sources/local/20261011_prerequisite_web/final-primary-search.json",
+      "sha256": "d0650e8ae1871831868584725af77ba040964f325e8eaa7b4f92214120e33dba"
+    },
+    "started_utc": "2026-10-11 18:20:12 UTC"
+  },
+  "primary_references": [
+    {
+      "url": "https://www.ti.com/product/JFE150",
+      "use": "Discovery resource identities verified; acquired ZIP receipts are exact-byte evidence"
+    },
+    {
+      "url": "https://ngspice.sourceforge.io/docs.html",
+      "use": "Release47 document selection; rolling manual not substituted for release PDF"
+    },
+    {
+      "url": "https://sourceforge.net/p/ngspice/bugs/824/",
+      "use": "Redundant source/DC and discontinuity diagnostic lead; no root-cause assertion"
+    },
+    {
+      "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/1989/1216.html",
+      "use": "Primary convergence research"
+    },
+    {
+      "url": "https://www.nexperia.com/support/simulation-and-modeling",
+      "use": "Manufacturer model support route; guessed AN10462 retrieval returned HTML"
+    },
+    {
+      "url": "https://e2e.ti.com/support/amplifiers-group/amplifiers/f/amplifiers-forum/1472837/jfe150-noise-density-versus-drain-source-current",
+      "use": "Manufacturer response on die heating; numerical core is isothermal"
+    },
+    {
+      "url": "https://www.tek.com/en/documents/product-article/keithley-low-level-measurements-handbook---7th-edition",
+      "use": "Primary handbook indexed text; direct open failed, no full original PDF receipt"
+    }
+  ],
+  "provider": "web.run",
+  "reliance": "Primary references and acquired documents only; secondary/Reddit search hits are discovery noise and supply no engineering evidence",
+  "retained_raw_responses": [
+    {
+      "path": "research/device_sources/local/20261011_prerequisite_web/final-primary-search.json",
+      "sha256": "d0650e8ae1871831868584725af77ba040964f325e8eaa7b4f92214120e33dba"
+    },
+    {
+      "path": "research/device_sources/local/20261011_prerequisite_web/prereqSearch1.txt",
+      "sha256": "82eeaf4404b4de4ca31c54c1b6fb7e6824ed91ad0e740cce9176fc6de399d083"
+    },
+    {
+      "path": "research/device_sources/local/20261011_prerequisite_web/prereqSearch2.txt",
+      "sha256": "3140de02b8f0843939804fadba71ef713fac153fa236c58e8b90d5774086d55c"
+    },
+    {
+      "path": "research/device_sources/local/20261011_prerequisite_web/prereqSearch4.txt",
+      "sha256": "73327ca4b465d19b5092283fb67cd9b12bd3282ff40dc799a37c34835602e41c"
+    },
+    {
+      "path": "research/device_sources/local/20261011_prerequisite_web/prereqSearch5.txt",
+      "sha256": "a135fe01cac5bab94b2aeef813f054670eca795ce4b2829a5f4a26a377a5d6ab"
+    }
+  ],
+  "unresolved": [
+    "No complete exact PSpice reference execution: omitted .net/Windows library inputs; retained reference output itself has floating SOURCE_NOISE error",
+    "No installed/licensed TINA or PSpice backend; binary TSC not executed",
+    "No independent measured JFE extraction/model erratum or owner approval found in retained evidence; absence of found erratum is not proof none exists",
+    "No physical noise/joint process qualification or legal clearance",
+    "SLPA018 referenced by retained EVM guide; full text not acquired/read here; no independent extraction inferred"
+  ]
+}

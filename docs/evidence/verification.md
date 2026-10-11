@@ -39,3 +39,9 @@ Original conditions, statuses, failures and parents remain authoritative. [Struc
 - [20261011T132611Z_b4e4b5b1 / verification.json](../../meridian-microphone/lab/results/verification/20261011T132611Z_b4e4b5b1/verification.json) — pass
 - [20261011T133432Z_a7befd8d / verification.json](../../meridian-microphone/lab/results/verification/20261011T133432Z_a7befd8d/verification.json) — pass
 - [20261011T133548Z_000612f5 / verification.json](../../meridian-microphone/lab/results/verification/20261011T133548Z_000612f5/verification.json) — pass
+- [20261011T173213Z_d5fcfae5 / verification.json](../../meridian-microphone/lab/results/verification/20261011T173213Z_d5fcfae5/verification.json) — pass
+- [20261011T182410Z_3a409d41 / verification.json](../../meridian-microphone/lab/results/verification/20261011T182410Z_3a409d41/verification.json) — fail
+- [20261011T182605Z_2075c81b / verification.json](../../meridian-microphone/lab/results/verification/20261011T182605Z_2075c81b/verification.json) — pass
+- [20261011T182754Z_eeb18626 / verification.json](../../meridian-microphone/lab/results/verification/20261011T182754Z_eeb18626/verification.json) — pass
+- [20261011T183122Z_d34845b1 / verification.json](../../meridian-microphone/lab/results/verification/20261011T183122Z_d34845b1/verification.json) — pass
+- [20261011T183943Z_8f8299de / verification.json](../../meridian-microphone/lab/results/verification/20261011T183943Z_8f8299de/verification.json) — pass

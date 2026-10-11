@@ -3,6 +3,10 @@
 
 Reproducible bounded tables/plots that preserve findings and originals.
 
+- [capsule_envelope.py](capsule_envelope.py) — active
+- [capsule_envelope_math.py](capsule_envelope_math.py) — active
+- [capsule_excess_controls.py](capsule_excess_controls.py) — active
+- [capsule_material_controls.py](capsule_material_controls.py) — active
 - [compare_architectures.py](compare_architectures.py) — active
 - [comparison_common.py](comparison_common.py) — active
 - [comparison_metrics.py](comparison_metrics.py) — active
@@ -13,6 +17,8 @@ Reproducible bounded tables/plots that preserve findings and originals.
 - [initial_plots.py](initial_plots.py) — active
 - [initial_receipt.py](initial_receipt.py) — active
 - [initial_summary.py](initial_summary.py) — active
+- [prerequisite_integrity.py](prerequisite_integrity.py) — active
+- [prerequisite_report.py](prerequisite_report.py) — active
 - [render_device_report.py](render_device_report.py) — active
 - [render_initial_report.py](render_initial_report.py) — active
 - [render_robust_report.py](render_robust_report.py) — active

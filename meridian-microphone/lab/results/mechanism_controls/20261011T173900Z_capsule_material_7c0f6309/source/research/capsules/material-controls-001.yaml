@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: CERN-OHL-S-2.0
+schema_version: 1
+revision: capsule-material-controls-001-r1
+date: '2026-10-11'
+parent: 20261011T172018Z_capsule_e4938198
+purpose: Reject unsupported disk material feasibility; independent center-constrained annular examples, not selected-capsule geometry
+budget: {gap_rows: 6, sensitivity_rows: 4, optimizations: 0, seed: null}
+stop: Evaluate only listed examples; retain failures; no fitting of real capsule
+sources: [SC05, SC10, SC19, SC23, SC25]
+assumed: {outer_radius_m: 0.0135, electrode_fraction: 0.55, Sref_V_per_Pa: 0.020, Vref_V: 60}
+constructions:
+- {id: inner04_film6, inner_outer_radius_ratio: 0.4, film_thickness_m: 6.0e-6}
+- {id: inner06_film3, inner_outer_radius_ratio: 0.6, film_thickness_m: 3.0e-6}
+per_side_C_F: [4.5e-11, 7.0e-11, 1.0e-10]
+coupling: Sref=0.020*C/(70pF), same area/constraint/tension, varying gap
+sensitivity_endpoints_V_per_Pa: [0.005, 0.040]
+material_comparator: Mylar92A typical F5=10 kgf/mm2=98.0665MPa, ultimateMD=20 kgf/mm2=196.133MPa; NOT allowable stress
+limits: Actual film grade/thickness/constraints and allowable stress unknown; no bias or safety inference. Low-S rows may exceed comparison material data; keep adverse coverage.

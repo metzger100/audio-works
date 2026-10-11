@@ -1,0 +1,47 @@
+{
+  "model": {
+    "id": "jfe150_strong",
+    "path": "semiconductor/vendor/jfe150_strong.lib",
+    "sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+    "version": "Final 1.2 vendor strong",
+    "source_url": "https://www.ti.com/lit/zip/slpm366",
+    "retrieved_date": "2026-10-05",
+    "acquisition_status": "valid_spice",
+    "redistribution": {
+      "status": "not_established_do_not_redistribute",
+      "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+      "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+    },
+    "syntax": "SPICE3 subcircuit with PSpice extensions",
+    "ngspice_behavior": "ps",
+    "subcircuit": "JFE150_STRONG",
+    "parent_model_id": "jfe150_generic",
+    "device_id": "jfe150",
+    "manufacturer": "Texas Instruments",
+    "model_lineage": [
+      {
+        "id": "jfe150_generic",
+        "version": "Final 1.2; 26SEP2024; SLPM366",
+        "sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+        "source_url": "https://www.ti.com/lit/zip/slpm366",
+        "retrieved_date": "2026-10-05"
+      }
+    ],
+    "file": "models/semiconductor/vendor/jfe150_strong.lib"
+  },
+  "label": "idss_gm",
+  "temperature_c": 25,
+  "directory": "jfe150_strong/idss_gm",
+  "netlist_sha256": "7c7b353c56586c95f4a0b2a0298744182578df330cc6b0daad7d8fc08661e2dd",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "timeout_s": 15,
+  "status": "ok",
+  "retained_hashes": {
+    "job.cir": "7c7b353c56586c95f4a0b2a0298744182578df330cc6b0daad7d8fc08661e2dd",
+    "op.raw": "25d9ef23fc4bbe9316d039d0be389cfd2189eb6a160c072aeb38dcac9bfbe7cb",
+    "ac.raw": "5083a98158118b4905ae8c1a42289f022fd9c4b1ee78fcce7324869af6921826",
+    "simulator.log": "8dc859ec33a60d50c48193e9af4945d5dfb8a6529787e3132ed8c2dffaebc7e5",
+    "op.raw.csv": "e40bae4f71c5ab431b9fc6be77efa9b23ef0d89996bc6e9e679c8c27d8d7151c",
+    "ac.raw.csv": "9111a5417417b465f4107554915e615405dfc6feca0a2b8b05104b16a273c438"
+  }
+}

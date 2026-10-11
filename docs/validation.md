@@ -32,3 +32,7 @@ The [failed verification](../meridian-microphone/lab/results/verification/202610
 This changes serialization/navigation, without threshold, budget or qualification changes. New verification evidence is inventoried and integrity-checked; private restoration is verified. Synthetic unsafe-input fixtures remain private under the existing scratch policy, with outcome/log/source records retained. Current storage requirements follow the [GitHub owner decision](decisions/2026-10-11-github-canonical.md). Remote publication and settings are unchanged.
 
 Latest continuation: [GitHub storage-policy checks](validation/2026-10-11-github-canonical.md). Earlier rows above record the requirements and outcomes observed at their dates; current storage authority follows the new owner decision.
+
+Latest capsule continuation: [documentary envelope and integrity checks](validation/2026-10-11-capsule-envelope.md), retaining the historical original-byte limitations separately from repository checks.
+
+Latest device continuation: [simulation prerequisites and preservation](validation/2026-10-11-simulation-prerequisites.md);109 lab tests pass, scoped follower H2/H3 supported, microphone nonlinear/headroom held.

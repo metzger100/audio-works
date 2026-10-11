@@ -1,0 +1,85 @@
+{
+  "archive_existing_comparisons": [
+    {
+      "download_id": "jfe150_generic",
+      "equal": true,
+      "expected": "1fd7c2ff8ef1c2b1354c98e35537f4d0db56ebb0eea614702bff7610c25e46a1",
+      "observed": "1fd7c2ff8ef1c2b1354c98e35537f4d0db56ebb0eea614702bff7610c25e46a1",
+      "receipt_id": "slpm366"
+    },
+    {
+      "download_id": "jfe150_pspice",
+      "equal": true,
+      "expected": "6358de546c957c142c321f30431fa816610a22599a0a3f980646ac6bbe6eace0",
+      "observed": "6358de546c957c142c321f30431fa816610a22599a0a3f980646ac6bbe6eace0",
+      "receipt_id": "slpm349i"
+    },
+    {
+      "download_id": "jfe150_datasheet",
+      "equal": true,
+      "expected": "925d58a8f0cf7db307325ece12fb2f61a736b2c1440f63928b5e6c1312f39365",
+      "observed": "925d58a8f0cf7db307325ece12fb2f61a736b2c1440f63928b5e6c1312f39365",
+      "receipt_id": "jfe150_sheet"
+    }
+  ],
+  "date": "2026-10-11",
+  "failed_parent": "research/device_sources/local/20261011T175114Z_prerequisites_16a27a15",
+  "generic_tina_byte_identical": true,
+  "metadata_parent": "results/device_models/20261011T175705Z_prerequisites_a7cc0cdb/source/research/devices/simulation-prerequisites-sources-001.json",
+  "metadata_revision": "r2 compare keyed nominal definitions, excluding repeated corner clamp definitions; replace overly broad archive equality with three actual acquired comparisons",
+  "model_comparison": [
+    {
+      "core_equal_to_generic": true,
+      "file_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "id": "generic",
+      "independent_extraction": false,
+      "normalized_nominal_definitions": {
+        "djfe150": "d is=1e-12 cjo=0.1pf rs=180k bv=22",
+        "esd_sw": "vswitch(ron=50 roff=1e12 von=700e-3 voff=100e-3)",
+        "njfe150": "njf (beta=31m betatce=.5 vto=-975m vtotc=2.5m lambda=16.95m rd=3.5 rs=4.2 n=1 m=0.33 pb=0.705 is=5.34f cgd=6.3p cgs=20.3p af=1 kf=3.25e-18 fc=0.5)"
+      },
+      "path": "models/semiconductor/vendor/jfe150_generic.lib"
+    },
+    {
+      "core_equal_to_generic": true,
+      "file_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "id": "pspice",
+      "independent_extraction": false,
+      "normalized_nominal_definitions": {
+        "djfe150": "d is=1e-12 cjo=0.1pf rs=180k bv=22",
+        "esd_sw": "vswitch(ron=50 roff=1e12 von=700e-3 voff=100e-3)",
+        "njfe150": "njf (beta=31m betatce=.5 vto=-975m vtotc=2.5m lambda=16.95m rd=3.5 rs=4.2 n=1 m=0.33 pb=0.705 is=5.34f cgd=6.3p cgs=20.3p af=1 kf=3.25e-18 fc=0.5)"
+      },
+      "path": "models/semiconductor/vendor/jfe150_pspice.lib"
+    },
+    {
+      "core_equal_to_generic": true,
+      "file_sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+      "id": "tina",
+      "independent_extraction": false,
+      "normalized_nominal_definitions": {
+        "djfe150": "d is=1e-12 cjo=0.1pf rs=180k bv=22",
+        "esd_sw": "vswitch(ron=50 roff=1e12 von=700e-3 voff=100e-3)",
+        "njfe150": "njf (beta=31m betatce=.5 vto=-975m vtotc=2.5m lambda=16.95m rd=3.5 rs=4.2 n=1 m=0.33 pb=0.705 is=5.34f cgd=6.3p cgs=20.3p af=1 kf=3.25e-18 fc=0.5)"
+      },
+      "path": "research/device_sources/local/20261011T175127Z_prerequisites_40132801/slpm350b/member_001"
+    },
+    {
+      "core_equal_to_generic": true,
+      "file_sha256": "283e6443c9288475cae9014eb45b47b5a30bf81e88b7102e3cb17bd750d83db1",
+      "id": "transient_reference",
+      "independent_extraction": false,
+      "normalized_nominal_definitions": {
+        "djfe150": "d is=1e-12 cjo=0.1pf rs=180k bv=22",
+        "esd_sw": "vswitch(ron=50 roff=1e12 von=700e-3 voff=100e-3)",
+        "njfe150": "njf (beta=31m betatce=.5 vto=-975m vtotc=2.5m lambda=16.95m rd=3.5 rs=4.2 n=1 m=0.33 pb=0.705 is=5.34f cgd=6.3p cgs=20.3p af=1 kf=3.25e-18 fc=0.5)"
+      },
+      "path": "research/device_sources/local/20261011T175127Z_prerequisites_40132801/slpm358/member_039"
+    }
+  ],
+  "redistribution": "unresolved; bytes remain private",
+  "reference_limitations": "PSpice generated .cir references omitted .net and external Windows libraries; TINA .TSC is binary; full exact reference reproduction unavailable in installed ngspice; no TINA/PSpice backend installed",
+  "sources": {
+    "$include": "simulation-prerequisites-sources-001-1a008d45080c-0001-sources.json"
+  }
+}

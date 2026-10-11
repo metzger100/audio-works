@@ -1,0 +1,39 @@
+{
+  "model": {
+    "id": "jfe150_generic",
+    "path": "semiconductor/vendor/jfe150_generic.lib",
+    "sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+    "version": "Final 1.2; 26SEP2024; SLPM366",
+    "source_url": "https://www.ti.com/lit/zip/slpm366",
+    "retrieved_date": "2026-10-05",
+    "acquisition_status": "valid_spice",
+    "redistribution": {
+      "status": "not_established_do_not_redistribute",
+      "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+      "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+    },
+    "syntax": "SPICE3 subcircuit with PSpice extensions",
+    "ngspice_behavior": "ps",
+    "subcircuit": "JFE150",
+    "parent_model_id": null,
+    "device_id": "jfe150",
+    "manufacturer": "Texas Instruments",
+    "model_lineage": [],
+    "file": "models/semiconductor/vendor/jfe150_generic.lib"
+  },
+  "label": "source_1e9_current_phase_90",
+  "temperature_c": 25,
+  "directory": "jfe150_generic/source_1e9_current_phase_90",
+  "netlist_sha256": "b530956be8759cba7dfcf6e7a528f6e7c73e87c252b3e9737b3055118a00a9d5",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "timeout_s": 15,
+  "status": "ok",
+  "retained_hashes": {
+    "job.cir": "b530956be8759cba7dfcf6e7a528f6e7c73e87c252b3e9737b3055118a00a9d5",
+    "op.raw": "2e81fcb03c7055e919b52ef9a575440fab8d662f2976506c6b2bf0dda676f345",
+    "tran.raw": "99f240e41f7efeb13afaae73b9f77342e0587e25ffcd1da11c1a41af98aa8acf",
+    "simulator.log": "c89be0126b36543fbf2c54159c07f28d53825f6b14a06e6b59360181caad2389",
+    "op.raw.csv": "61bc2e2d182d04af2570380294261cd15009beb3fabc51bba71721b0ae07b90b",
+    "tran.raw.csv": "d1cd5a044f4d9b5606a893f9a940a8f7c2b55072eeb31c85791ef9ad4b66d132"
+  }
+}

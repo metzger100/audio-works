@@ -1,0 +1,23 @@
+{
+  "model": {
+    "id": "candidate_0012",
+    "ngspice_behavior": "ps",
+    "semiconductor_ids": [
+      "bc846b_emitter_r1"
+    ]
+  },
+  "label": "charge_observer_reference_child",
+  "temperature_c": 25,
+  "directory": "candidate_0012/charge_observer_reference_child",
+  "netlist_sha256": "76d93c2c243fc4f53d6c2ad498e0241037af8e052f1d8f293ac85e67cccc8137",
+  "options": "reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15",
+  "timeout_s": 60,
+  "status": "ok",
+  "retained_hashes": {
+    "job.cir": "76d93c2c243fc4f53d6c2ad498e0241037af8e052f1d8f293ac85e67cccc8137",
+    "op.raw": "3e14c0ebfc8bb156d62769af31680b8161a91729da16dfe890c6c99da1c65081",
+    "tran.raw": "5f94e2dda2e52faff483a2dc9cbf2835f5dc7c7b8553b7b0cde93f81301cc9ab",
+    "simulator.log": "a28e6216efa4996ee784ac6cbabea765db047dc7a60cf5276aa4a0e68422a899",
+    "tran.raw.csv": "04680b3aaefd8d8bd735b533282e9f7e85819e86aa05650cf8561ff3a1c12632"
+  }
+}

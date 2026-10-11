@@ -1,0 +1,49 @@
+{
+  "model": {
+    "id": "bc846b_emitter_r1",
+    "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+    "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+    "version": "project structural child r1; Q2 emitter 33 -> 3",
+    "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+    "retrieved_date": "2026-10-05",
+    "acquisition_status": "valid_spice",
+    "redistribution": {
+      "status": "not_established_do_not_redistribute",
+      "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+      "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+    },
+    "syntax": "SPICE3 subcircuit",
+    "ngspice_behavior": "",
+    "subcircuit": "BC846B",
+    "parent_model_id": "bc846b_vendor",
+    "device_id": "bc846b",
+    "manufacturer": "Nexperia",
+    "model_lineage": [
+      {
+        "id": "bc846b_vendor",
+        "version": "extraction week 24/2021",
+        "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+        "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+        "retrieved_date": "2026-10-05"
+      }
+    ],
+    "file": "models/semiconductor/vendor/bc846b_emitter_r1.lib"
+  },
+  "label": "ac_noise",
+  "temperature_c": 25,
+  "directory": "bc846b_emitter_r1/ac_noise",
+  "netlist_sha256": "9478406f94d9365937ea68bd5f092e41674dcee1d3ffba38d4311c13af009879",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "timeout_s": 15,
+  "status": "ok",
+  "retained_hashes": {
+    "job.cir": "9478406f94d9365937ea68bd5f092e41674dcee1d3ffba38d4311c13af009879",
+    "op.raw": "d910f11d100561c7eaea2a698f5eb70cb5ef4ce2a72bddd4c7696065eb07d207",
+    "ac.raw": "c09386eb6e4af73e8f87211a7e8acff9f96f862a071be4e60cd6cbe83dabc094",
+    "noise.raw": "38615f459513f9dea10198b00084e803ef2763e6bd47f7049a510fa52454b917",
+    "simulator.log": "0685ba2e480cc0b9763bf46262977dac06232615acfe5d731f7a946a26f77521",
+    "op.raw.csv": "f7c1c2cbce0769abc25ced693f4d07af08d50462d623e496c05db3bd88c3ce9e",
+    "ac.raw.csv": "d373a80d8e1cfe61354fc11700e73a2f30af951fb27d5b1a5b6ee7d798dcb1a8",
+    "noise.raw.csv": "a813ebe86c55265e415a215592dab01717dea70052e6bc7c9af4d9c958f35d1f"
+  }
+}

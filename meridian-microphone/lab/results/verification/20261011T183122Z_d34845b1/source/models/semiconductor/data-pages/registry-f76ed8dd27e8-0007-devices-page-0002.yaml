@@ -1,0 +1,204 @@
+- id: vishay_2n7002k
+  manufacturer: Vishay Siliconix
+  exact_variant: 2N7002K-T1-GE3
+  family: discrete_n_mosfet
+  package: SOT-23 TO-236; G=1 S=2 D=3
+  lifecycle:
+    status: current_manufacturer_catalogue_supplier_active; explicit manufacturer
+      lifecycle label not found
+    checked_date: '2026-10-09'
+    source_url: https://www.vishay.com/en/product/71333/tab/quality/
+    limitation: Current exact order-code listing is not a stock reservation or an
+      assurance of future production.
+  datasheet:
+    url: https://www.vishay.com/docs/71333/2n7002k.pdf
+    retrieved_date: '2026-10-09'
+    version: S17-1299 Rev. F, 21-Aug-2017; document 71333
+    local_path: models/semiconductor/vendor/evidence/vishay_2n7002k.pdf
+    sha256: 639ab49255a61576ef6c5cb89c1536e045b44724fb95af12438ba41022e44adf
+  ratings:
+    abs_vds_v: 60
+    abs_vgs_v:
+    - -20
+    - 20
+    abs_id_25c_a: 0.3
+    abs_id_100c_a: 0.19
+    abs_pulsed_id_a: 0.8
+    abs_power_25c_w: 0.35
+    thermal_rthja_k_per_w: 350
+    thermal_condition: Surface-mounted on FR4; pulse tests <=300us and <=2% duty for
+      marked electrical specifications; no DC SOA inference.
+    junction_temp_c:
+    - -55
+    - 150
+    vgs_threshold_v:
+    - 1
+    - 2.5
+    threshold_condition: VDS=VGS, ID=250uA,25C; bounds do not define a process distribution.
+    warning: 60V rating alone does not qualify P48 transients, linear-mode SOA, or
+      gate protection.
+  models:
+  - id: vishay_2n7002k_ps
+    path: semiconductor/vendor/vishay_2n7002k.lib
+    sha256: d59ce922b2c814e4aaa63f27459696b8c71494fac61f47c8cf8c093eba273111
+    version: ECN S14-1598 Rev. B, 11-Aug-2014; 2n7002k_ps Rev B.lib
+    source_url: https://www.vishay.com/docs/77603/2n7002k_ps_revb.zip
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Copyright notice retained; no redistribution grant found. Public SPICE
+        archive is separate from the unaccepted Ultra Librarian ECAD agreement.
+      acquisition: models/semiconductor/acquire.py --only vishay_2n7002k; archive/member
+        hashes in acquisition.yaml
+    syntax: PSpice level-3 NMOS/PMOS subcircuit, diode and RES temperature model
+    ngspice_behavior: ps
+    subcircuit: 2N7002K
+    terminal_order:
+    - drain
+    - gate
+    - source
+    parent_model_id: null
+    model_guide:
+      url: https://www.vishay.com/docs/73307/2n7002k_ps_revb.pdf
+      version: S14-1598 Rev. B, 11-Aug-2014; document 73307
+      sha256: e6ffb92656896ce98f78945b50551c51bd3e8b6dfab2484b0c1134ee12d24fb0
+      vendor_claimed_extraction_temperature_c:
+      - -55
+      - 125
+      vendor_claimed_conditions: Pulsed gate drive 0..10V; optimized typical data,
+        not exact physical parameter interpretation.
+  represented_behavior:
+    dc: Native level-3 MOS, series resistances and body diode; no fitted correction.
+    capacitance: Fixed24pF CGS plus native nonlinear M2 gate-drain and body diode
+      capacitances.
+    temperature: Native MOS/diode laws plus RTEMP TC1/TC2; PSpice defaults must be
+      tested in ngspice.
+    leakage: Body diode IS=1pA; no gate leakage or gate ESD zener network.
+    noise: Native channel/diode/resistor sources only; KF absent so 1/f absent; not
+      an audio noise model.
+    clipping: Native cutoff/triode/saturation/body diode; no independent overload/recovery
+      validation.
+    supply_current: Native terminal currents; no external P48 extraction/regulator
+      or self-heating in this selected file.
+  unqualified_behavior:
+  - low-current voltage/current/1/f noise; no manufacturer spectrum found
+  - gate leakage and gate ESD network
+  - coupled process corners and production correlations
+  - low-current subthreshold/temperature accuracy
+  - self-heating, linear-mode SOA and avalanche reliability
+  - complete P48 output/power implementation
+  substitutes:
+  - part: 2N7002K-7
+    manufacturer: Diodes Incorporated
+    state: Separate manufacturer model route; not equivalent or qualified.
+  - part: 2N7002ET1G
+    manufacturer: onsemi
+    state: Retail alternative; not model or combination qualified.
+  procurement_register: research/procurement/semiconductors_2026-10-09.yaml
+  readiness: nominal_threshold_rds_gfs_limits_agree_output_capacitance_temperature_disagree_noise_leakage_process_unqualified
+  patent_status: isolated_device_research_only_no_architecture_claim_screen_no_clearance
+  validation_report: research/device_model_validation.md
+  validation_record: results/device_models/20261009T070419Z_3bd1122a/results.json
+  failed_fixture_parent: results/device_models/20261009T070130Z_58467dca/results.json
+  refinement_parent: results/device_models/20261009T070230Z_d5f15884/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+- id: bc846b
+  manufacturer: Nexperia
+  exact_variant: BC846B,215
+  family: discrete_npn
+  package: SOT-23
+  lifecycle:
+    status: production
+    checked_date: '2026-10-05'
+    source_url: https://www.nexperia.com/product/BC846B
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/BC846_SER.pdf
+    retrieved_date: '2026-10-05'
+    version: Rev 9; 25 September 2012
+    local_path: models/semiconductor/vendor/evidence/bc846.pdf
+    sha256: 045a6cc21de93ac634aad910567e882926bd6ef154cbd8c59d13201134642a97
+  ratings:
+    abs_vce_v: 65
+    abs_vcb_v: 80
+    abs_veb_v: 6
+    abs_ic_a: 0.1
+    abs_power_w: 0.25
+    thermal_rthja_k_per_w: 500
+    thermal_condition: manufacturer standard FR4 footprint at 25 C; derate
+    temp_c:
+    - -65
+    - 150
+    hfe_grade:
+    - 200
+    - 450
+    hfe_condition: VCE magnitude=5 V, IC magnitude=2 mA,25 C
+  models:
+  - id: bc846b_vendor
+    path: semiconductor/vendor/bc846b.lib
+    sha256: 4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed
+    version: extraction week 24/2021
+    source_url: https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1
+    retrieved_date: '2026-10-05'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: SPICE3 subcircuit
+    ngspice_behavior: ''
+    subcircuit: BC846B
+    parent_model_id: null
+  - id: bc846b_emitter_r1
+    path: semiconductor/vendor/bc846b_emitter_r1.lib
+    sha256: 55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d
+    version: project structural child r1; Q2 emitter 33 -> 3
+    source_url: https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1
+    retrieved_date: '2026-10-05'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: SPICE3 subcircuit
+    ngspice_behavior: ''
+    subcircuit: BC846B
+    parent_model_id: bc846b_vendor
+  represented_behavior:
+    dc: Gummel-Poon + quasi-saturation network
+    capacitance: CJE/CJC voltage laws and TF/TR
+    temperature: XTI, XTB, EG junction equations
+    leakage: junction saturation currents only
+    noise: native shot and resistor thermal; KF absent so 1/f absent
+    clipping: saturation/reverse network
+    supply_current: native collector/base/emitter currents
+  unqualified_behavior:
+  - 1/f noise and separate voltage/current spectra
+  - manufacturing correlations
+  - self-heating/SOA/avalanche
+  - full temperature and leakage validation
+  - vendor floating Q2 emitter node 33; child hypothesis not vendor-approved
+  substitutes:
+  - part: BC846BLT1G
+    manufacturer: onsemi
+    state: supplier-listed_available_unvalidated_model_not_interchangeable
+  procurement_register: research/procurement/semiconductors_2026-10-05.yaml
+  readiness: vendor_unusable_structural_child_partial_dc_caps_noise_unqualified
+  patent_status: isolated_device_research_only_no_architecture_claim_screen_no_clearance
+  validation_report: research/device_model_validation.md
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false

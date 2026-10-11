@@ -1,0 +1,10 @@
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+# Frozen runtime storage — 2026-10-11
+
+The owner requested committing and pushing the completed capsule and simulation-prerequisite research. The existing [storage policy](../../meridian-microphone/lab/results/README.md) excludes downloaded runtimes from Git. Three new cohorts froze exact ngspice binaries under their source directories; the ignore rules and repository snapshot check did not apply that existing boundary to these copies. Staging without the binaries failed with three missing-source errors.
+
+Apply the existing local runtime boundary to `results/**/source/tools/ngspice/`. Keep the original files and frozen manifest hashes unchanged. The repository gate permits this specific downloaded-runtime directory to remain local; authored wrappers and all other required source snapshots remain mandatory. Full original-evidence verification still checks every declared runtime byte for absence or damage. Optional backups now include these local runtime copies and verify them on restore. This implements the existing publication boundary; no scientific requirement, threshold, budget or historical-gap declaration changes.
+
+The two independent regressions first reproduced the repository missing-source error and an optional restore completeness contradiction. Their successors check the narrow runtime boundary, rejection of a missing authored wrapper, exact backup restoration and original-runtime corruption/missing detection. An initial fixture attempt overwrote scratch ignore rules and used an unrecognized record filename; these fixture setup errors were corrected before reproducing the actual defects. No real experiment file was changed by the fixtures.
+
+The earlier [nested-inventory correction](2026-10-11-capsule-inventories.md) remains part of this change and retains its independent regression. [Publication validation](../validation/2026-10-11-prerequisite-publication.md) records the final shared checks separately from the earlier scientific verification.

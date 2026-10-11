@@ -1,0 +1,24 @@
+{
+  "model": {
+    "id": "candidate_0019",
+    "ngspice_behavior": "ps",
+    "semiconductor_ids": [
+      "bc846b_emitter_r1",
+      "jfe150_pspice"
+    ]
+  },
+  "label": "charge_observer_reference_child",
+  "temperature_c": 25,
+  "directory": "candidate_0019/charge_observer_reference_child",
+  "netlist_sha256": "9e0dfa0c3001cc2760bc7f657155c495cadc74cd879690e5c42699926cf8ccbb",
+  "options": "reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15",
+  "timeout_s": 60,
+  "status": "error",
+  "reason": "exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+  "retained_hashes": {
+    "job.cir": "9e0dfa0c3001cc2760bc7f657155c495cadc74cd879690e5c42699926cf8ccbb",
+    "op.raw": "9ac666c5c8d2fa5043a105bcf5e63507bacd4f060a1820fcc0ad4a719ac6c5a2",
+    "tran.raw": "36ebacb1ab4df63735c49eb4d65a48ec28c4ca0899f046cf5a654a6f500f0418",
+    "simulator.log": "28f7c2a6cf76eaf730143424298d84c27d14f22fec2255f2067378b865419bb3"
+  }
+}

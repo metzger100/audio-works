@@ -9,6 +9,7 @@ Immediate contents and child hubs.
 - [test_comparison.py](test_comparison.py) — active
 - [test_device_models.py](test_device_models.py) — active
 - [test_integrity.py](test_integrity.py) — active
+- [test_nonlinear_prerequisites.py](test_nonlinear_prerequisites.py) — active
 - [test_parts_controls.py](test_parts_controls.py) — active
 - [test_parts_database.py](test_parts_database.py) — active
 - [test_physics.py](test_physics.py) — active

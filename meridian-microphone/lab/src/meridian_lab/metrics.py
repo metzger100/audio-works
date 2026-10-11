@@ -64,6 +64,7 @@ def harmonic_spectrum(time, voltage, frequency, cycles=16, samples_per_cycle=256
     return {
         "frequency_hz": frequency,
         "harmonics_v_rms": (peak / np.sqrt(2)).tolist(),
+        "harmonic_phase_rad": np.arctan2(coefficients[2::2], coefficients[1::2]).tolist(),
         "harmonics_dbc": [db(x / peak[0]) for x in peak],
         "h2_percent": float(100 * peak[1] / peak[0]),
         "h3_percent": float(100 * peak[2] / peak[0]),

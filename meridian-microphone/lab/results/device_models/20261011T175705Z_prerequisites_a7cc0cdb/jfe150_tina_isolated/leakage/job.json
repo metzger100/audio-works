@@ -1,0 +1,26 @@
+{
+  "model": {
+    "id": "jfe150_tina_isolated",
+    "device_id": "jfe150",
+    "subcircuit": "JFE150",
+    "file": "research/device_sources/local/20261011T175127Z_prerequisites_40132801/slpm350b/member_001",
+    "sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+    "version": "TI Final1.2 26SEP2024 SLPM350B literal member",
+    "ngspice_behavior": "ps",
+    "duplicate_of": "jfe150_generic",
+    "isolated_only": true
+  },
+  "label": "leakage",
+  "temperature_c": 25,
+  "directory": "jfe150_tina_isolated/leakage",
+  "netlist_sha256": "598a5931c319ae55c0f78bac2f2f4f2de9b72930bbac5bfe731d0680b8f90970",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "timeout_s": 15,
+  "status": "ok",
+  "retained_hashes": {
+    "job.cir": "598a5931c319ae55c0f78bac2f2f4f2de9b72930bbac5bfe731d0680b8f90970",
+    "op.raw": "6549cc2897f8fc7f443c06beffc720f4ea34d67002df68fefca487f2b75fd510",
+    "simulator.log": "37bdd9ac1caec373918844c48665549dd3d1c08a7bbc6595643398a79ac81f12",
+    "op.raw.csv": "37550cdb6a690b71bc9d4468afb5f8fd9f33b9a5cf18c1b0ac4d41189945508d"
+  }
+}

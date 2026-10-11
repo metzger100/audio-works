@@ -1,0 +1,42 @@
+{
+  "model": {
+    "id": "opa928_vendor",
+    "path": "semiconductor/vendor/opa928.lib",
+    "sha256": "f4f9d38efc4aa2a31676c84a351d2ee9379baad88abab8b5afad550c7f99c616",
+    "version": "1.1 01Apr2024",
+    "source_url": "https://www.ti.com/lit/zip/sbomcc0a",
+    "retrieved_date": "2026-10-09",
+    "acquisition_status": "valid_spice",
+    "syntax": "self-contained public subcircuit; dialect compatibility unverified",
+    "subcircuit": "OPAX928",
+    "primitive": "X",
+    "parent_model_id": null,
+    "ngspice_behavior": "ps",
+    "pin_order": "IN+ IN- V+ V- OUT GRD1 GRD2; physical 4 5 6 3 1 2 7; NC8",
+    "redistribution": {
+      "status": "not_established_do_not_redistribute",
+      "evidence": "Original notices and archive/PDF retained privately; public availability is not redistribution permission.",
+      "acquisition": "models/semiconductor/acquire.py; private receipt and acquisition.yaml"
+    },
+    "runnability": "scoped_success_with_retained_disagreements",
+    "behavior_validation": "only conditioned accepted rows; omissions unresolved",
+    "validation_record": "results/device_models/20261009T133651Z_parts_d3c30763/results.json",
+    "load_record": "results/device_models/20261009T145346Z_parts2_742caaa3/results.json",
+    "device_id": "opa928",
+    "manufacturer": "Texas Instruments",
+    "model_lineage": [],
+    "file": "models/semiconductor/vendor/opa928.lib"
+  },
+  "label": "translation_20_guess_True",
+  "temperature_c": 25,
+  "directory": "opa928_vendor/translation_20_guess_True",
+  "netlist_sha256": "98a3894a43ca13811dec81b59829333b8dee939ee3b412aea98c46d44ee16253",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "timeout_s": 15,
+  "status": "error",
+  "reason": "15s process-group timeout; partial log/waveform retained",
+  "retained_hashes": {
+    "job.cir": "98a3894a43ca13811dec81b59829333b8dee939ee3b412aea98c46d44ee16253",
+    "simulator.log": "958343dd299026dbd027c891fd54db0a05216bc65488f0774fc1811c2350f5b6"
+  }
+}

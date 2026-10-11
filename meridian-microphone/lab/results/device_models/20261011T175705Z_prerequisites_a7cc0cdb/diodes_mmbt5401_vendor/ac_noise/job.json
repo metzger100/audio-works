@@ -1,0 +1,45 @@
+{
+  "model": {
+    "id": "diodes_mmbt5401_vendor",
+    "path": "semiconductor/vendor/diodes_mmbt5401.lib",
+    "sha256": "6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5",
+    "version": "Version2 08FEB2011",
+    "source_url": "https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt",
+    "retrieved_date": "2026-10-09",
+    "acquisition_status": "valid_spice",
+    "syntax": "native .model",
+    "subcircuit": "MMBT5401",
+    "primitive": "Q",
+    "parent_model_id": null,
+    "ngspice_behavior": null,
+    "pin_order": "C B E; macro terminal order separate from physical package",
+    "redistribution": {
+      "status": "not_established_do_not_redistribute",
+      "evidence": "Manufacturer notices retained privately; public access does not grant redistribution."
+    },
+    "runnability": "scoped_success_with_retained_disagreements",
+    "behavior_validation": "only conditioned accepted rows; omissions unresolved",
+    "load_record": "results/device_models/20261009T145346Z_parts2_742caaa3/results.json",
+    "device_id": "diodes_mmbt5401",
+    "manufacturer": "Diodes Incorporated",
+    "model_lineage": [],
+    "file": "models/semiconductor/vendor/diodes_mmbt5401.lib"
+  },
+  "label": "ac_noise",
+  "temperature_c": 25,
+  "directory": "diodes_mmbt5401_vendor/ac_noise",
+  "netlist_sha256": "22f87cb71ba446c545874eb3ddea00dcbf3e0efdb810df29d7eade29d0a33508",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "timeout_s": 15,
+  "status": "ok",
+  "retained_hashes": {
+    "job.cir": "22f87cb71ba446c545874eb3ddea00dcbf3e0efdb810df29d7eade29d0a33508",
+    "op.raw": "38bf2d762efd48b5b75c03bcde4b4b6d4182a0362047850cd5845d73bc9c6a0a",
+    "ac.raw": "79154be9f09189c2632fa1246f2413d1c47505d7c3c329e77f20ad56c30892ae",
+    "noise.raw": "5bd6f051e55e94c1da26387f3b90b347bfa4f251170549dc501d2f2a3487b21d",
+    "simulator.log": "4c09adc73a12553026ec0677d397a566027ca4821a11b8ffea920870bc75aa60",
+    "op.raw.csv": "71e773ffa86a09e16751a6d3a58420dead53189e0c27b02fa2a5d265271f7dce",
+    "ac.raw.csv": "ad19757787fd886a88085e77e040492b9b0132f2e650c2691c75deb80e8b0300",
+    "noise.raw.csv": "6279b465bdb368c0412582b0dda4c64f288af57fccf37d4f65b8e64d27e590e5"
+  }
+}

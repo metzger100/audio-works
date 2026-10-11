@@ -1,0 +1,60 @@
+{
+  "plan": {
+    "schema_version": 1,
+    "revision": "capsule-material-controls-001-r1",
+    "date": "2026-10-11",
+    "parent": "20261011T172018Z_capsule_e4938198",
+    "purpose": "Reject unsupported disk material feasibility; independent center-constrained annular examples, not selected-capsule geometry",
+    "budget": {
+      "gap_rows": 6,
+      "sensitivity_rows": 4,
+      "optimizations": 0,
+      "seed": null
+    },
+    "stop": "Evaluate only listed examples; retain failures; no fitting of real capsule",
+    "sources": [
+      "SC05",
+      "SC10",
+      "SC19",
+      "SC23",
+      "SC25"
+    ],
+    "assumed": {
+      "outer_radius_m": 0.0135,
+      "electrode_fraction": 0.55,
+      "Sref_V_per_Pa": 0.02,
+      "Vref_V": 60
+    },
+    "constructions": [
+      {
+        "id": "inner04_film6",
+        "inner_outer_radius_ratio": 0.4,
+        "film_thickness_m": 6e-06
+      },
+      {
+        "id": "inner06_film3",
+        "inner_outer_radius_ratio": 0.6,
+        "film_thickness_m": 3e-06
+      }
+    ],
+    "per_side_C_F": [
+      4.5e-11,
+      7e-11,
+      1e-10
+    ],
+    "coupling": "Sref=0.020*C/(70pF), same area/constraint/tension, varying gap",
+    "sensitivity_endpoints_V_per_Pa": [
+      0.005,
+      0.04
+    ],
+    "material_comparator": "Mylar92A typical F5=10 kgf/mm2=98.0665MPa, ultimateMD=20 kgf/mm2=196.133MPa; NOT allowable stress",
+    "limits": "Actual film grade/thickness/constraints and allowable stress unknown; no bias or safety inference. Low-S rows may exceed comparison material data; keep adverse coverage."
+  },
+  "input_hashes": {
+    "tools/reporting/capsule_material_controls.py": "c2099b4197ae69a87888205909240337a552a07a056b6facacf52cbb64e26724",
+    "tools/reporting/capsule_envelope_math.py": "a2f1f9b98ea78f0a1522cd38ff943c679d5bf4b3052dc28ea6338e2f8666d629",
+    "research/capsules/material-controls-001.yaml": "1019bf92ba1d3356333520d8ee67578221a9ca531a963e05e88d170c2d40c815",
+    "research/capsules/sources-001.yaml": "da1d650940406523b652c1d4b87bf7aa81fe8e4c9b5503583daefd97916dcbfd",
+    "research/capsules/retrieval-001-part-3.json": "2a4c097f9bf9d52e0823acb5f55ff361bb0568c2e5118d48c331ca5a5eb5c551"
+  }
+}

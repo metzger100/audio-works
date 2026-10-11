@@ -25,5 +25,21 @@ Device findings, manufacturer-source conditions, role matrices, isolated control
 - [parts-database-expansion-002.csv](parts-database-expansion-002.csv) — active
 - [parts-database-expansion-002.md](parts-database-expansion-002.md) — active
 - [parts-database-expansion-002.yaml](parts-database-expansion-002.yaml) — active
+- [simulation-prerequisites-001.md](simulation-prerequisites-001.md) — active
+- [simulation-prerequisites-behavior-001.json](simulation-prerequisites-behavior-001.json) — active
+- [simulation-prerequisites-bipolar-001.csv](simulation-prerequisites-bipolar-001.csv) — active
+- [simulation-prerequisites-decisions-001.md](simulation-prerequisites-decisions-001.md) — active
+- [simulation-prerequisites-integration-001.csv](simulation-prerequisites-integration-001.csv) — active
+- [simulation-prerequisites-integrity-001.json](simulation-prerequisites-integrity-001.json) — active
+- [simulation-prerequisites-jfet-001.csv](simulation-prerequisites-jfet-001.csv) — active
+- [simulation-prerequisites-opa-001.csv](simulation-prerequisites-opa-001.csv) — active
+- [simulation-prerequisites-plan-001.yaml](simulation-prerequisites-plan-001.yaml) — active
+- [simulation-prerequisites-plan-002.yaml](simulation-prerequisites-plan-002.yaml) — active
+- [simulation-prerequisites-plan-003.yaml](simulation-prerequisites-plan-003.yaml) — active
+- [simulation-prerequisites-plan-004.yaml](simulation-prerequisites-plan-004.yaml) — active
+- [simulation-prerequisites-plan-005.yaml](simulation-prerequisites-plan-005.yaml) — active
+- [simulation-prerequisites-queries-001.json](simulation-prerequisites-queries-001.json) — active
+- [simulation-prerequisites-source-notes-001.md](simulation-prerequisites-source-notes-001.md) — active
+- [simulation-prerequisites-sources-001.json](simulation-prerequisites-sources-001.json) — active
 - [sources.md](sources.md) — active
 - [data-pages/](data-pages/INDEX.md)

@@ -1,0 +1,173 @@
+power_resistors:
+- reference: Rharvestp
+  nodes:
+  - p
+  - raw
+  parameter: RHARVESTP_VALUE
+- reference: Rharvestn
+  nodes:
+  - n
+  - raw
+  parameter: RHARVESTN_VALUE
+- reference: Rregtop
+  nodes:
+  - raw
+  - regbase
+  parameter: RREGTOP_VALUE
+- reference: Rregbottom
+  nodes:
+  - regbase
+  - g
+  parameter: RREGBOTTOM_VALUE
+- reference: Rmidtop
+  nodes:
+  - rail
+  - mid
+  parameter: RMIDTOP_VALUE
+- reference: Rmidbottom
+  nodes:
+  - mid
+  - g
+  parameter: RMIDBOTTOM_VALUE
+- reference: Rpolar0
+  nodes:
+  - raw
+  - pol_0
+  parameter: RPOLAR0_VALUE
+- reference: Rpolar1
+  nodes:
+  - pol_0
+  - pol_1
+  parameter: RPOLAR1_VALUE
+- reference: Rpolar2
+  nodes:
+  - pol_1
+  - pol_2
+  parameter: RPOLAR2_VALUE
+- reference: Rpolar3
+  nodes:
+  - pol_2
+  - pol_3
+  parameter: RPOLAR3_VALUE
+- reference: Rpolar4
+  nodes:
+  - pol_3
+  - pol_4
+  parameter: RPOLAR4_VALUE
+- reference: Rpolar5
+  nodes:
+  - pol_4
+  - pol_5
+  parameter: RPOLAR5_VALUE
+- reference: Rpolar6
+  nodes:
+  - pol_5
+  - pol_6
+  parameter: RPOLAR6_VALUE
+- reference: Rpolar7
+  nodes:
+  - pol_6
+  - pol_7
+  parameter: RPOLAR7_VALUE
+- reference: Rpolar8
+  nodes:
+  - pol_7
+  - pol_8
+  parameter: RPOLAR8_VALUE
+- reference: Rpolar9
+  nodes:
+  - pol_8
+  - pol
+  parameter: RPOLAR9_VALUE
+- reference: Rback
+  nodes:
+  - pol
+  - b
+  parameter: RBACK_VALUE
+- reference: Rbias
+  nodes:
+  - f
+  - mid
+  parameter: RBIAS_VALUE
+- reference: Rrearbias
+  nodes:
+  - rear
+  - mid
+  parameter: RREARBIAS_VALUE
+- reference: Rfilter1
+  nodes:
+  - demod
+  - lp1
+  parameter: RFILTER1_VALUE
+- reference: Rfilter2
+  nodes:
+  - lp1
+  - audio
+  parameter: RFILTER2_VALUE
+- reference: Rinvertin
+  nodes:
+  - outp
+  - inv
+  parameter: RINVERTIN_VALUE
+- reference: Rinvertfb
+  nodes:
+  - outn
+  - inv
+  parameter: RINVERTFB_VALUE
+- reference: Routp
+  nodes:
+  - outp
+  - cp
+  parameter: ROUTP_VALUE
+- reference: Routn
+  nodes:
+  - outn
+  - cn
+  parameter: ROUTN_VALUE
+questions:
+  sensed_quantity: front/rear capacitance modulation of an anti-phase analog carrier
+  loading: floating capacitor bridge; 100 pF fixed references; both input buffer loads
+    explicit
+  dc_bias: filtered DC backplate and midrail electrode returns; no physical safe RF/DC
+    rating inferred
+  gain_or_impedance_transformation: bridge sidebands then synchronous product and
+    two-pole RC low-pass
+  balanced_output: Real output devices and two 47 ohm/47 uF legs; harvest/cable/load
+    coupling measured, symmetry not presumed
+  expected_noise: periodic device noise, oscillator AM/PM and mixer folding; ordinary
+    DC noise is invalid
+  expected_distortion: bridge imbalance, product/filters, force/back-action absent
+    from capsule model
+  likely_fatal_flaw: unimplemented oscillator/mixer power/noise and unvalidated periodic
+    protocol
+  quickest_falsification: carrier on/off pressure sidebands, demodulation phase, step
+    refinement and analytic charge-control oracle
+  hypothesis: A floating bridge should create pressure-dependent carrier sidebands;
+    an ideal oscillator/multiplier can isolate this mechanism without qualifying a
+    hardware architecture.
+sources:
+- S09
+- S16
+input_device_class: CMOS
+fet_audio_path: true
+fet_power_circuitry: false
+internal_device_classes: CMOS per OPA197 datasheet; macro internals are behavioral,
+  not transistor evidence
+procurement_state: research_BOM_live_orderability_and_delivered_quote_unverified
+patent_state: unscreened_no_clearance
+prototype_gate: hold
+manufacture_gate: hold
+build_publication_gate: hold
+niche:
+  input_device: CMOS
+  sensing: carrier_capacitance
+  reference: floating_bridge
+  feedback: synchronous_demodulation_control
+  bias: fixed_parts
+  active_device_count: 5
+  servo: false
+  output: differential_real_devices
+  common_mode: divider
+  bootstrap: false
+analysis_domain: periodic_mechanism_control
+carrier_protocol: deterministic_r1_noise_unimplemented

@@ -4,4 +4,5 @@
 Candidate-linked feature flags, claim/status research and unresolved implementation holds.
 
 - [README.md](README.md) — active
+- [capsule-envelope-001-leads.yaml](capsule-envelope-001-leads.yaml) — active
 - [register.yaml](register.yaml) — active

@@ -1,0 +1,42 @@
+{
+  "model": {
+    "id": "pmbt5551_vendor",
+    "path": "semiconductor/vendor/pmbt5551.lib",
+    "sha256": "9f3e7425c5ebd57b8709851f271354dd46ddc42a4503b280d248fd015f27deb0",
+    "version": "extraction week42/2018",
+    "source_url": "https://assets.nexperia.com/documents/spice-model/PMBT5551.txt?download=1",
+    "retrieved_date": "2026-10-09",
+    "acquisition_status": "valid_spice",
+    "syntax": "self-contained public subcircuit; dialect compatibility unverified",
+    "subcircuit": "PMBT5551",
+    "primitive": "X",
+    "parent_model_id": null,
+    "ngspice_behavior": "ps",
+    "pin_order": "subcircuit C B E; physical B1 E2 C3",
+    "redistribution": {
+      "status": "not_established_do_not_redistribute",
+      "evidence": "Original notices and archive/PDF retained privately; public availability is not redistribution permission.",
+      "acquisition": "models/semiconductor/acquire.py; private receipt and acquisition.yaml"
+    },
+    "runnability": "scoped_jobs_ok_with_retained_errors",
+    "behavior_validation": "error",
+    "validation_record": "results/device_models/20261009T133651Z_parts_d3c30763/results.json",
+    "device_id": "pmbt5551",
+    "manufacturer": "Nexperia",
+    "model_lineage": [],
+    "file": "models/semiconductor/vendor/pmbt5551.lib"
+  },
+  "label": "transfer_-10",
+  "temperature_c": -10,
+  "directory": "pmbt5551_vendor/transfer_-10",
+  "netlist_sha256": "5bc9652ee7e4a748ba1aa241f67e392dbed5797ba78a530aa4d7b7cb8512086e",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "timeout_s": 15,
+  "status": "ok",
+  "retained_hashes": {
+    "job.cir": "5bc9652ee7e4a748ba1aa241f67e392dbed5797ba78a530aa4d7b7cb8512086e",
+    "dc.raw": "bd5139bf2f659b04c2650588e4fcb5304fe8042bedb9a64238ab185524ba9dc9",
+    "simulator.log": "344eebeeddc9d060d311c74c601a46933416d7adc84ecc19cfec7156579c8e16",
+    "dc.raw.csv": "24dc78d5dccacdf3a97438a8fcff8ff0ab95f3a315479f6fb9197d6508d25f24"
+  }
+}

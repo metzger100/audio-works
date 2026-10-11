@@ -1,0 +1,37 @@
+{
+  "model": {
+    "id": "bc846b_vendor",
+    "path": "semiconductor/vendor/bc846b.lib",
+    "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+    "version": "extraction week 24/2021",
+    "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+    "retrieved_date": "2026-10-05",
+    "acquisition_status": "valid_spice",
+    "redistribution": {
+      "status": "not_established_do_not_redistribute",
+      "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+      "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+    },
+    "syntax": "SPICE3 subcircuit",
+    "ngspice_behavior": "",
+    "subcircuit": "BC846B",
+    "parent_model_id": null,
+    "device_id": "bc846b",
+    "manufacturer": "Nexperia",
+    "model_lineage": [],
+    "file": "models/semiconductor/vendor/bc846b.lib"
+  },
+  "label": "transfer_50",
+  "temperature_c": 50,
+  "directory": "bc846b_vendor/transfer_50",
+  "netlist_sha256": "faf310446fa2845020d29d6c54edf73f9ea05ee0af4d003983dd3a45e116579a",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "timeout_s": 15,
+  "status": "ok",
+  "retained_hashes": {
+    "job.cir": "faf310446fa2845020d29d6c54edf73f9ea05ee0af4d003983dd3a45e116579a",
+    "dc.raw": "053e951f448c2f00df7dad75998bb3eb0ef029a9879c9bdcc54b047b497abadb",
+    "simulator.log": "42cdf8b639b1105c635604d0d6cf84c3a994bfc2f62b52b89ed85d58f00ed4dc",
+    "dc.raw.csv": "1b2784f7fd620355fd564fdc710f7d927ee295ce4796254566c84f9f62c9a8b2"
+  }
+}

@@ -1,0 +1,37 @@
+model,test,status,reason
+bc846b_vendor,transfer_-10,error,15s process-group timeout; partial log/waveform retained
+bc846b_vendor,transfer_25,error,15s process-group timeout; partial log/waveform retained
+bc846b_vendor,transfer_50,ok,
+bc846b_emitter_r1,transfer_-10,ok,
+bc846b_emitter_r1,transfer_25,ok,
+bc846b_emitter_r1,transfer_50,ok,
+bc846b_emitter_r1,ac_noise,ok,
+bc846b_emitter_r1,open_emitter_cap,error,exit 0: Warning
+bc846b_emitter_r1,saturation_recovery,ok,
+pmbt5551_vendor,transfer_-10,ok,
+pmbt5551_vendor,transfer_25,ok,
+pmbt5551_vendor,transfer_50,ok,
+pmbt5551_vendor,ac_noise,ok,
+pmbt5551_vendor,open_emitter_cap,error,exit 0: Warning
+pmbt5551_vendor,saturation_recovery,ok,
+bc850c_vendor,transfer_-10,ok,
+bc850c_vendor,transfer_25,ok,
+bc850c_vendor,transfer_50,ok,
+bc850c_vendor,ac_noise,ok,
+bc850c_vendor,open_emitter_cap,ok,
+bc850c_vendor,saturation_recovery,ok,
+diotec_mmbt5551_vendor,transfer_-10,error,"exit 1: 
+
+Error"
+diotec_mmbt5551_vendor,transfer_25,error,"exit 1: 
+
+Error"
+diotec_mmbt5551_vendor,transfer_50,error,"exit 1: 
+
+Error"
+diodes_mmbt5401_vendor,transfer_-10,ok,
+diodes_mmbt5401_vendor,transfer_25,ok,
+diodes_mmbt5401_vendor,transfer_50,ok,
+diodes_mmbt5401_vendor,ac_noise,ok,
+diodes_mmbt5401_vendor,open_emitter_cap,ok,
+diodes_mmbt5401_vendor,saturation_recovery,ok,

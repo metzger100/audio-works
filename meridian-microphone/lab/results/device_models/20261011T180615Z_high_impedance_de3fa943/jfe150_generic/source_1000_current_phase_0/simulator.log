@@ -1,0 +1,38 @@
+Note: gnd in a subcircuit is not set to 0 automatically
+
+Note: Compatibility modes selected: ps
+
+
+Circuit: meridian prerequisite jfe150_generic source_1000_current_phase_0
+
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 1
+ASCII raw file "op.raw"
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+rail                                   13.5558
+bias                                   3.38895
+g                                      3.38895
+back                                   29.5293
+s                                      4.17503
+vback#branch                      -2.61404e-11
+vbias#branch                       4.04603e-11
+vrail#branch                       -0.00126516
+
+
+No. of Data Rows : 2008
+ASCII raw file "tran.raw"
+ngspice-47 done
+

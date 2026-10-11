@@ -1,0 +1,19 @@
+Meridian prerequisite jfe150_generic follower_refined
+* SPDX-License-Identifier: CERN-OHL-S-2.0
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/device_models/20261011T175705Z_prerequisites_a7cc0cdb/source/models/semiconductor/vendor/jfe150_generic.lib"
+.temp 25
+.options reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+Vrail rail 0 12
+Vg g 0 DC 1 AC 1 SIN(1 .01 1000)
+Rsource s 0 1k
+Rin g 0 1G
+Cload s 0 70p
+Xq rail g s rail 0 JFE150
+.control
+set filetype=ascii
+set numdgt=16
+tran 1e-06 .064 0 1e-06
+write tran.raw all
+quit
+.endc
+.end

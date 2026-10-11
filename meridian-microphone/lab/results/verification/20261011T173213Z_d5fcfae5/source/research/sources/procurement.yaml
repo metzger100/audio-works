@@ -1,0 +1,42 @@
+S20:
+  title: Germany semiconductor retail and delivery investigation
+  register: procurement/semiconductors_2026-10-05.yaml
+  snapshots: device_sources/local/web_observations.json
+  kind: primary_supplier_terms_and_indexed_catalogue_observations
+  evidence_date: '2026-10-05'
+  limitation: Indexed stock/price freshness and delivery/fees unresolved; confirmed
+    delivered costs null; no orders
+S23:
+  title: Dated semiconductor procurement refresh with direct retrieval failures
+  register: procurement/semiconductors_2026-10-09.yaml
+  snapshots: device_sources/local/2026-10-09/
+  kind: primary_supplier_terms_and_indexed_catalogue_observations
+  evidence_date: '2026-10-09'
+  limitation: Indexed stock and prices have reported crawl ages; live retrieval blocked.
+    Delivered costs remain null; individual Germany route and tax assumptions stated
+    separately.
+S25:
+  title: First-architecture ordinary production parts and Germany delivery
+  kind: primary_manufacturer_and_indexed_retail_observations
+  evidence_date: '2026-10-09'
+  register: procurement/architecture_parts_2026-10-09.yaml
+  snapshot: architecture_sources/observations_2026-10-09.json
+  limitation: Crawl age retained; unavailable parents, exact MOQ and shipping/tax/fees
+    gaps explicit; confirmed delivered totals null
+S26:
+  title: Panasonic FR-A output combination limits and separate indexed retail observation
+  kind: primary_manufacturer_and_supplier_observations
+  evidence_date: '2026-10-09'
+  register: procurement/robust_parts_2026-10-09.yaml
+  snapshot: architecture_sources/robust_observations_2026-10-09.json
+  limitation: 120Hz DF and rated-bias leakage limits do not specify a broadband loss,
+    actual-bias noise or temperature distribution; indexed stock age and failed live
+    retrieval retained; delivered quote unknown
+S27:
+  title: Comparison capsule and Germany consumer-route refresh
+  kind: primary_cached_listing_and_supplier_terms_with_direct_failures
+  evidence_date: '2026-10-09'
+  register: comparison_procurement_observations_2026-10-09.yaml
+  limitation: Exact K47FRB EUR delivered quote unresolved; a different capsule's currency-link
+    price rejected. Semiconductor/capacitor live retrieval failed; no purchases or
+    contact.

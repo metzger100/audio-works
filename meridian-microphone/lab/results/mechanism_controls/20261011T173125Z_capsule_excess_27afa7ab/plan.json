@@ -1,0 +1,26 @@
+{
+  "input_hashes": {
+    "tools/reporting/capsule_excess_controls.py": "d3ada31f83388ba20db1cfbcdb67f7cd3594a8390edad6b6310f84ac6e78bb38",
+    "tools/reporting/capsule_envelope_math.py": "d43806b34ba912b1e955423c6c2fcda52c69a322665b3a3d3c41be78057ec430",
+    "research/capsules/parameters-001.yaml": "89fcc22682dcc92fb7f0ba60ea5e7de14099bcb348849c030a5532a68a11446e",
+    "research/capsules/sources-001.yaml": "77b89b52dfbb840ae238c260b3d1d6a125fdcc798564b18ffcb57afa24b780d1",
+    "research/capsules/scenarios-001.yaml": "c6c10cf3a631ea176c1fa6bcb8e2eaa1f1919e836b58af29e6ccfd8ab221f521",
+    "spec/capsule-model.yaml": "169983f2601ee39a59496e0e4d2d337deb14e7e4ec7bf38a92f6ca89b59bc696"
+  },
+  "budget": 12,
+  "optimizations": 0,
+  "assumed_C_F": 7e-11,
+  "R_ohm": 1000000000000.0,
+  "case_C_F": 2e-12,
+  "mathematical_bias_V": 40,
+  "Sref_values_V_per_Pa": [
+    0.005,
+    0.02,
+    0.04
+  ],
+  "supplementary_terms": [
+    "loss_tangent",
+    "excess_current"
+  ],
+  "interpretation": "Isolated grounded-backplate node diagnostic; no candidate noise or acoustic rating"
+}

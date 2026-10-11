@@ -1,0 +1,39 @@
+{
+  "model": {
+    "id": "opa197_pspice",
+    "path": "semiconductor/vendor/opa197.lib",
+    "sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+    "version": "Final 1.3; 23JUN2022; SBOMA34D",
+    "source_url": "https://www.ti.com/lit/zip/sboma34d",
+    "retrieved_date": "2026-10-05",
+    "acquisition_status": "valid_spice",
+    "redistribution": {
+      "status": "not_established_do_not_redistribute",
+      "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+      "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+    },
+    "syntax": "SPICE3 subcircuit with PSpice extensions",
+    "ngspice_behavior": "ps",
+    "subcircuit": "OPAx197",
+    "parent_model_id": null,
+    "device_id": "opa197",
+    "manufacturer": "Texas Instruments",
+    "model_lineage": [],
+    "file": "models/semiconductor/vendor/opa197.lib"
+  },
+  "label": "translation_0_guess_False",
+  "temperature_c": 25,
+  "directory": "opa197_pspice/translation_0_guess_False",
+  "netlist_sha256": "e4782f31ed766d3c662119349eeb01fb94066f46e1fb3f9378a00fa540e1bf33",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "timeout_s": 15,
+  "status": "ok",
+  "retained_hashes": {
+    "job.cir": "e4782f31ed766d3c662119349eeb01fb94066f46e1fb3f9378a00fa540e1bf33",
+    "op.raw": "e3a81739cff584094e6bcc9fa5bc01f4934b75fbaa691819840cfc05a449b67d",
+    "ac.raw": "fe665224c444b6a53ffc582516a6d67e8e4e3794d199ff2473841ada498ac596",
+    "simulator.log": "ceb1f91a23186bddd8399daddab2d5e636e424e602073ae26588bcbacb30a050",
+    "op.raw.csv": "4e4426ef90e050aa69ca657794074a026ca81f0eb569a86f76327380fbd307b3",
+    "ac.raw.csv": "01ab6adab8c4502f548a61777e0efdcf41d1e70b4d70e1197fe04e7e75c235b1"
+  }
+}

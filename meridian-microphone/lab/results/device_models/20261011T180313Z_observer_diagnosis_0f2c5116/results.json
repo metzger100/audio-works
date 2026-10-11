@@ -1,0 +1,1103 @@
+{
+  "rows": [
+    {
+      "model": "charge_oracle",
+      "label": "flat-k47.cir_0_2e-06",
+      "kind": "charge",
+      "status": "diagnostic_only",
+      "harmonics": {
+        "frequency_hz": 1000,
+        "harmonics_v_rms": [
+          0.009166135282957148,
+          2.0645911494237024e-08,
+          1.3765672324394101e-08,
+          1.0326070336933345e-08,
+          8.262722587439276e-09,
+          6.88750660813e-09,
+          5.905504683313149e-09,
+          5.169263020009053e-09,
+          4.596863298459846e-09,
+          4.1391531167893145e-09
+        ],
+        "harmonics_dbc": [
+          0.0,
+          -112.94704402900108,
+          -116.46777670468568,
+          -118.9650236750105,
+          -120.90126181407742,
+          -122.48248468336841,
+          -123.8185848889387,
+          -124.97515264818682,
+          -125.99449347631071,
+          -126.90549540915069
+        ],
+        "h2_percent": 0.00022524118242750078,
+        "h3_percent": 0.0001501796765970605,
+        "thd_percent": 0.0003341200446355649,
+        "residual_v_rms": 8.453460845694515e-07,
+        "output_peak_v": 0.012964268296895395,
+        "method": "Settled coherent cubic-spline resampling; least-squares H1-H10; residual reported separately from THD",
+        "settling_amplitude_fraction": 1.1221027604433496e-06,
+        "settling_harmonic_fraction": 1.1221027604433496e-06,
+        "coherent_dc_change_v": 3.2870320148814525e-06,
+        "startup_retained": true,
+        "settling_s": 0.032,
+        "fitted_interval_s": [
+          0.048,
+          0.064
+        ],
+        "prior_interval_s": [
+          0.032,
+          0.048
+        ],
+        "window_cycles": 16,
+        "samples_per_cycle": 256
+      },
+      "expected_rms_v": 0.009166176576504205,
+      "relative_error": -4.504991444664874e-06
+    },
+    {
+      "model": "charge_oracle",
+      "label": "flat-k47.cir_0_1e-06",
+      "kind": "charge",
+      "status": "diagnostic_only",
+      "harmonics": {
+        "frequency_hz": 1000,
+        "harmonics_v_rms": [
+          0.009166135288778295,
+          2.0646674532859095e-08,
+          1.3766179480404045e-08,
+          1.032645470075587e-08,
+          8.263030357768481e-09,
+          6.887758588670961e-09,
+          5.905721749972352e-09,
+          5.169452949633689e-09,
+          4.597031528161341e-09,
+          4.139303229313938e-09
+        ],
+        "harmonics_dbc": [
+          0.0,
+          -112.94672302438444,
+          -116.46745670984998,
+          -118.96470037461248,
+          -120.90093829314094,
+          -122.48216692002296,
+          -123.81826563598382,
+          -124.97483352166306,
+          -125.99417561336114,
+          -126.90518041371308
+        ],
+        "h2_percent": 0.00022524950682471304,
+        "h3_percent": 0.00015018520943343907,
+        "thd_percent": 0.0003341323843685197,
+        "residual_v_rms": 8.453770116799452e-07,
+        "output_peak_v": 0.012964268355343214,
+        "method": "Settled coherent cubic-spline resampling; least-squares H1-H10; residual reported separately from THD",
+        "settling_amplitude_fraction": 1.12214147873229e-06,
+        "settling_harmonic_fraction": 1.12214147873229e-06,
+        "coherent_dc_change_v": 3.287152621329892e-06,
+        "startup_retained": true,
+        "settling_s": 0.032,
+        "fitted_interval_s": [
+          0.048,
+          0.064
+        ],
+        "prior_interval_s": [
+          0.032,
+          0.048
+        ],
+        "window_cycles": 16,
+        "samples_per_cycle": 256
+      },
+      "expected_rms_v": 0.009166176576504205,
+      "relative_error": -4.50435637644464e-06
+    },
+    {
+      "model": "charge_oracle",
+      "label": "flat-k47.cir_20_2e-06",
+      "kind": "charge",
+      "status": "diagnostic_only",
+      "harmonics": {
+        "frequency_hz": 1000,
+        "harmonics_v_rms": [
+          0.009166135284223003,
+          2.0645259049512577e-08,
+          1.376524253458747e-08,
+          1.0325753574561293e-08,
+          8.262464657783872e-09,
+          6.8872882005615745e-09,
+          5.905322221663181e-09,
+          5.1691002541747975e-09,
+          4.596719231574257e-09,
+          4.139025751129542e-09
+        ],
+        "harmonics_dbc": [
+          0.0,
+          -112.94731852292131,
+          -116.46804789969387,
+          -118.9652901285115,
+          -120.90153295877302,
+          -122.48276012446553,
+          -123.81885326114525,
+          -124.97542614839888,
+          -125.99476569980546,
+          -126.90576268750917
+        ],
+        "h2_percent": 0.00022523406440495968,
+        "h3_percent": 0.00015017498768843802,
+        "thd_percent": 0.00033410957106026437,
+        "residual_v_rms": 8.453199926693345e-07,
+        "output_peak_v": 0.012964268255124315,
+        "method": "Settled coherent cubic-spline resampling; least-squares H1-H10; residual reported separately from THD",
+        "settling_amplitude_fraction": 1.12207507968831e-06,
+        "settling_harmonic_fraction": 1.12207507968831e-06,
+        "coherent_dc_change_v": 3.2869333026971925e-06,
+        "startup_retained": true,
+        "settling_s": 0.032,
+        "fitted_interval_s": [
+          0.048,
+          0.064
+        ],
+        "prior_interval_s": [
+          0.032,
+          0.048
+        ],
+        "window_cycles": 16,
+        "samples_per_cycle": 256
+      },
+      "expected_rms_v": 0.009166176576504205,
+      "relative_error": -4.504853343911819e-06
+    },
+    {
+      "model": "charge_oracle",
+      "label": "flat-k47.cir_20_1e-06",
+      "kind": "charge",
+      "status": "diagnostic_only",
+      "harmonics": {
+        "frequency_hz": 1000,
+        "harmonics_v_rms": [
+          0.009166135291492971,
+          2.064538368471304e-08,
+          1.3765296439465526e-08,
+          1.032577548094752e-08,
+          8.262503325425424e-09,
+          6.8873248976191096e-09,
+          5.905342852087496e-09,
+          5.169116654306193e-09,
+          4.596737868132463e-09,
+          4.1390400948916645e-09
+        ],
+        "harmonics_dbc": [
+          0.0,
+          -112.94726609334901,
+          -116.4680138925869,
+          -118.96527170805288,
+          -120.90149231652227,
+          -122.48271385105772,
+          -123.81882292366544,
+          -124.97539859739618,
+          -125.99473049141346,
+          -126.9057325935662
+        ],
+        "h2_percent": 0.00022523542396187283,
+        "h3_percent": 0.00015017557565663475,
+        "thd_percent": 0.0003341111614677233,
+        "residual_v_rms": 8.453228252790072e-07,
+        "output_peak_v": 0.012964268264731228,
+        "method": "Settled coherent cubic-spline resampling; least-squares H1-H10; residual reported separately from THD",
+        "settling_amplitude_fraction": 1.1220810431234063e-06,
+        "settling_harmonic_fraction": 1.1220810431234063e-06,
+        "coherent_dc_change_v": 3.2869397551330004e-06,
+        "startup_retained": true,
+        "settling_s": 0.032,
+        "fitted_interval_s": [
+          0.048,
+          0.064
+        ],
+        "prior_interval_s": [
+          0.032,
+          0.048
+        ],
+        "window_cycles": 16,
+        "samples_per_cycle": 256
+      },
+      "expected_rms_v": 0.009166176576504205,
+      "relative_error": -4.5040602141277475e-06
+    },
+    {
+      "model": "charge_oracle",
+      "label": "flat-k47-observer-r2.cir_0_2e-06",
+      "kind": "charge",
+      "status": "diagnostic_only",
+      "harmonics": {
+        "frequency_hz": 1000,
+        "harmonics_v_rms": [
+          0.009166135282957148,
+          2.0645911494237024e-08,
+          1.3765672324394101e-08,
+          1.0326070336933345e-08,
+          8.262722587439276e-09,
+          6.88750660813e-09,
+          5.905504683313149e-09,
+          5.169263020009053e-09,
+          4.596863298459846e-09,
+          4.1391531167893145e-09
+        ],
+        "harmonics_dbc": [
+          0.0,
+          -112.94704402900108,
+          -116.46777670468568,
+          -118.9650236750105,
+          -120.90126181407742,
+          -122.48248468336841,
+          -123.8185848889387,
+          -124.97515264818682,
+          -125.99449347631071,
+          -126.90549540915069
+        ],
+        "h2_percent": 0.00022524118242750078,
+        "h3_percent": 0.0001501796765970605,
+        "thd_percent": 0.0003341200446355649,
+        "residual_v_rms": 8.453460845694515e-07,
+        "output_peak_v": 0.012964268296895395,
+        "method": "Settled coherent cubic-spline resampling; least-squares H1-H10; residual reported separately from THD",
+        "settling_amplitude_fraction": 1.1221027604433496e-06,
+        "settling_harmonic_fraction": 1.1221027604433496e-06,
+        "coherent_dc_change_v": 3.2870320148814525e-06,
+        "startup_retained": true,
+        "settling_s": 0.032,
+        "fitted_interval_s": [
+          0.048,
+          0.064
+        ],
+        "prior_interval_s": [
+          0.032,
+          0.048
+        ],
+        "window_cycles": 16,
+        "samples_per_cycle": 256
+      },
+      "expected_rms_v": 0.009166176576504205,
+      "relative_error": -4.504991444664874e-06
+    },
+    {
+      "model": "charge_oracle",
+      "label": "flat-k47-observer-r2.cir_0_1e-06",
+      "kind": "charge",
+      "status": "diagnostic_only",
+      "harmonics": {
+        "frequency_hz": 1000,
+        "harmonics_v_rms": [
+          0.009166135288778295,
+          2.0646674532859095e-08,
+          1.3766179480404045e-08,
+          1.032645470075587e-08,
+          8.263030357768481e-09,
+          6.887758588670961e-09,
+          5.905721749972352e-09,
+          5.169452949633689e-09,
+          4.597031528161341e-09,
+          4.139303229313938e-09
+        ],
+        "harmonics_dbc": [
+          0.0,
+          -112.94672302438444,
+          -116.46745670984998,
+          -118.96470037461248,
+          -120.90093829314094,
+          -122.48216692002296,
+          -123.81826563598382,
+          -124.97483352166306,
+          -125.99417561336114,
+          -126.90518041371308
+        ],
+        "h2_percent": 0.00022524950682471304,
+        "h3_percent": 0.00015018520943343907,
+        "thd_percent": 0.0003341323843685197,
+        "residual_v_rms": 8.453770116799452e-07,
+        "output_peak_v": 0.012964268355343214,
+        "method": "Settled coherent cubic-spline resampling; least-squares H1-H10; residual reported separately from THD",
+        "settling_amplitude_fraction": 1.12214147873229e-06,
+        "settling_harmonic_fraction": 1.12214147873229e-06,
+        "coherent_dc_change_v": 3.287152621329892e-06,
+        "startup_retained": true,
+        "settling_s": 0.032,
+        "fitted_interval_s": [
+          0.048,
+          0.064
+        ],
+        "prior_interval_s": [
+          0.032,
+          0.048
+        ],
+        "window_cycles": 16,
+        "samples_per_cycle": 256
+      },
+      "expected_rms_v": 0.009166176576504205,
+      "relative_error": -4.50435637644464e-06
+    },
+    {
+      "model": "charge_oracle",
+      "label": "flat-k47-observer-r2.cir_20_2e-06",
+      "kind": "charge",
+      "status": "diagnostic_only",
+      "harmonics": {
+        "frequency_hz": 1000,
+        "harmonics_v_rms": [
+          0.009166135282912189,
+          2.0645935925233157e-08,
+          1.376568359397157e-08,
+          1.032608279088528e-08,
+          8.262732679408977e-09,
+          6.887511779957027e-09,
+          5.905511223779686e-09,
+          5.169268141831889e-09,
+          4.596866763384644e-09,
+          4.139156468082712e-09
+        ],
+        "harmonics_dbc": [
+          0.0,
+          -112.94703375066143,
+          -116.46776959374694,
+          -118.96501319919315,
+          -120.90125120522148,
+          -122.48247816109586,
+          -123.81857526910203,
+          -124.97514404197238,
+          -125.9944869292074,
+          -126.90548837652146
+        ],
+        "h2_percent": 0.0002252414489640142,
+        "h3_percent": 0.00015017979954576942,
+        "thd_percent": 0.00033412040159011574,
+        "residual_v_rms": 8.453469053004969e-07,
+        "output_peak_v": 0.01296426829819268,
+        "method": "Settled coherent cubic-spline resampling; least-squares H1-H10; residual reported separately from THD",
+        "settling_amplitude_fraction": 1.1220979795261311e-06,
+        "settling_harmonic_fraction": 1.1220979795261311e-06,
+        "coherent_dc_change_v": 3.2870344123664408e-06,
+        "startup_retained": true,
+        "settling_s": 0.032,
+        "fitted_interval_s": [
+          0.048,
+          0.064
+        ],
+        "prior_interval_s": [
+          0.032,
+          0.048
+        ],
+        "window_cycles": 16,
+        "samples_per_cycle": 256
+      },
+      "expected_rms_v": 0.009166176576504205,
+      "relative_error": -4.504996349519175e-06
+    },
+    {
+      "model": "charge_oracle",
+      "label": "flat-k47-observer-r2.cir_20_1e-06",
+      "kind": "charge",
+      "status": "diagnostic_only",
+      "harmonics": {
+        "frequency_hz": 1000,
+        "harmonics_v_rms": [
+          0.009166135288878958,
+          2.064661863871941e-08,
+          1.3766152294375314e-08,
+          1.0326427140731824e-08,
+          8.263005747487292e-09,
+          6.887741040019388e-09,
+          5.905706850725874e-09,
+          5.169439001201653e-09,
+          4.597020696448922e-09,
+          4.1392941210355936e-09
+        ],
+        "harmonics_dbc": [
+          0.0,
+          -112.94674653872592,
+          -116.46747386322154,
+          -118.96472355629861,
+          -120.90096416298331,
+          -122.4821890500817,
+          -123.81828754929816,
+          -124.9748569584172,
+          -125.99419607952663,
+          -126.90519952658741
+        ],
+        "h2_percent": 0.00022524889703263968,
+        "h3_percent": 0.00015018491283973784,
+        "thd_percent": 0.00033413153490833214,
+        "residual_v_rms": 8.45374930332199e-07,
+        "output_peak_v": 0.012964268351650723,
+        "method": "Settled coherent cubic-spline resampling; least-squares H1-H10; residual reported separately from THD",
+        "settling_amplitude_fraction": 1.1221372941351259e-06,
+        "settling_harmonic_fraction": 1.1221372941351259e-06,
+        "coherent_dc_change_v": 3.287143865625397e-06,
+        "startup_retained": true,
+        "settling_s": 0.032,
+        "fitted_interval_s": [
+          0.048,
+          0.064
+        ],
+        "prior_interval_s": [
+          0.032,
+          0.048
+        ],
+        "window_cycles": 16,
+        "samples_per_cycle": 256
+      },
+      "expected_rms_v": 0.009166176576504205,
+      "relative_error": -4.504345394451548e-06
+    },
+    {
+      "model": "jfe150_generic",
+      "label": "clamp_ramp",
+      "kind": "clamp",
+      "status": "diagnostic_only",
+      "gate_min_v": -0.4750675334353245,
+      "gate_max_v": 0.4700933940870581,
+      "peak_source_current_a": 5.299070338182629e-06
+    },
+    {
+      "model": "jfe150_pspice",
+      "label": "clamp_ramp",
+      "kind": "clamp",
+      "status": "diagnostic_only",
+      "gate_min_v": -0.4750675334353245,
+      "gate_max_v": 0.4700933940870581,
+      "peak_source_current_a": 5.299070338182629e-06
+    },
+    {
+      "model": "candidate_0019",
+      "label": "original",
+      "kind": "dut",
+      "status": "error"
+    },
+    {
+      "model": "candidate_0019",
+      "label": "terminal_observers_collapsed",
+      "kind": "dut",
+      "status": "error"
+    },
+    {
+      "model": "candidate_0019",
+      "label": "charge_observer_reference_child",
+      "kind": "dut",
+      "status": "error"
+    },
+    {
+      "model": "candidate_0023",
+      "label": "original",
+      "kind": "dut",
+      "status": "error"
+    },
+    {
+      "model": "candidate_0023",
+      "label": "terminal_observers_collapsed",
+      "kind": "dut",
+      "status": "error"
+    },
+    {
+      "model": "candidate_0023",
+      "label": "charge_observer_reference_child",
+      "kind": "dut",
+      "status": "error"
+    },
+    {
+      "model": "candidate_0012",
+      "label": "original",
+      "kind": "dut",
+      "status": "diagnostic_only",
+      "saved_time_s": [
+        0.0,
+        0.004
+      ],
+      "nonlinear_credit": false,
+      "reason": "4ms diagnostic cannot establish post-0.5s settling or headroom"
+    },
+    {
+      "model": "candidate_0012",
+      "label": "terminal_observers_collapsed",
+      "kind": "dut",
+      "status": "diagnostic_only",
+      "saved_time_s": [
+        0.0,
+        0.004
+      ],
+      "nonlinear_credit": false,
+      "reason": "4ms diagnostic cannot establish post-0.5s settling or headroom"
+    },
+    {
+      "model": "candidate_0012",
+      "label": "charge_observer_reference_child",
+      "kind": "dut",
+      "status": "diagnostic_only",
+      "saved_time_s": [
+        0.0,
+        0.004
+      ],
+      "nonlinear_credit": false,
+      "reason": "4ms diagnostic cannot establish post-0.5s settling or headroom"
+    }
+  ],
+  "jobs": [
+    {
+      "model": {
+        "id": "charge_oracle"
+      },
+      "label": "flat-k47.cir_0_2e-06",
+      "temperature_c": 25,
+      "directory": "charge_oracle/flat-k47.cir_0_2e-06",
+      "netlist_sha256": "2878fba25ce93412dc8f2bf202ecf95c7566ef381ffdea6c9a1df90f10c0fd71",
+      "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+      "timeout_s": 15,
+      "status": "ok",
+      "retained_hashes": {
+        "job.cir": "2878fba25ce93412dc8f2bf202ecf95c7566ef381ffdea6c9a1df90f10c0fd71",
+        "tran.raw": "35aaa7f43c27f978bf06dba4fbe25c7c03ce4cd5076a4a1bc3c8a276d85ac00a",
+        "simulator.log": "8660961824c622020a9bc7b77f214ce9ae79e87e38ed0c3aed7b347db5fdc728",
+        "tran.raw.csv": "ad6a3dca3b3f99bdc19f79f69fcbf67c5720bedc514899d0e655f74f0f10b37a"
+      }
+    },
+    {
+      "model": {
+        "id": "charge_oracle"
+      },
+      "label": "flat-k47.cir_0_1e-06",
+      "temperature_c": 25,
+      "directory": "charge_oracle/flat-k47.cir_0_1e-06",
+      "netlist_sha256": "05b122d40a20bafbeae43e386714f5cae0050bbaadd6717ebd6cbd6e88dd6886",
+      "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+      "timeout_s": 15,
+      "status": "ok",
+      "retained_hashes": {
+        "job.cir": "05b122d40a20bafbeae43e386714f5cae0050bbaadd6717ebd6cbd6e88dd6886",
+        "tran.raw": "9dce8970e3b286a9f4a403a4bc58014f0329898ed37b0821ce22305a529e694b",
+        "simulator.log": "99727c0203058824afb726d247245a8ec6f7621ded231ff986dcb9857faa80d9",
+        "tran.raw.csv": "b5de52b1f9a21620b6c9481d514122bac0777b464936fff7f3959d76fcf69753"
+      }
+    },
+    {
+      "model": {
+        "id": "charge_oracle"
+      },
+      "label": "flat-k47.cir_20_2e-06",
+      "temperature_c": 25,
+      "directory": "charge_oracle/flat-k47.cir_20_2e-06",
+      "netlist_sha256": "bc5f66cce079a25e31e20a098870c194bb3d00004d489cbde740648c6264f124",
+      "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+      "timeout_s": 15,
+      "status": "ok",
+      "retained_hashes": {
+        "job.cir": "bc5f66cce079a25e31e20a098870c194bb3d00004d489cbde740648c6264f124",
+        "tran.raw": "e421d674be1c227c873bacc802949dd018a62544fc38d22652aa8f57279b3303",
+        "simulator.log": "09acbfba8c0db7b3ae2e7dc020aace586c7242b603690cb981da39f56cbc004b",
+        "tran.raw.csv": "780bcf048f68b37cda8544302bdf01f14bc259148da9bd4a6e5072d6b39f64e7"
+      }
+    },
+    {
+      "model": {
+        "id": "charge_oracle"
+      },
+      "label": "flat-k47.cir_20_1e-06",
+      "temperature_c": 25,
+      "directory": "charge_oracle/flat-k47.cir_20_1e-06",
+      "netlist_sha256": "eda88f6d9bd1b064f01aa60087310d765559f7d86d271bd3fbaa99ec7ae3c535",
+      "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+      "timeout_s": 15,
+      "status": "ok",
+      "retained_hashes": {
+        "job.cir": "eda88f6d9bd1b064f01aa60087310d765559f7d86d271bd3fbaa99ec7ae3c535",
+        "tran.raw": "1cb8965837ef66f3df9ac83b231357a073c55bec6ceb4b06ab88e06ed83be442",
+        "simulator.log": "64f1ca85d88fae23bbde1a889e7ab5c4a616b954824f4eb67d15c1917656094f",
+        "tran.raw.csv": "d27a159999fdc12bc96f9c9dba921be624c4a4d55aa31994d3826390b7e236ae"
+      }
+    },
+    {
+      "model": {
+        "id": "charge_oracle"
+      },
+      "label": "flat-k47-observer-r2.cir_0_2e-06",
+      "temperature_c": 25,
+      "directory": "charge_oracle/flat-k47-observer-r2.cir_0_2e-06",
+      "netlist_sha256": "cc170b55e47745dcbf0ad32ebbfffc70dd0822adaa26d5494b7a17b31d499c7b",
+      "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+      "timeout_s": 15,
+      "status": "ok",
+      "retained_hashes": {
+        "job.cir": "cc170b55e47745dcbf0ad32ebbfffc70dd0822adaa26d5494b7a17b31d499c7b",
+        "tran.raw": "80b5ff40a7a9d57d782940bbb56bcf77ca0baeaba36cf28fb2e95ba1fc93beb6",
+        "simulator.log": "6df54601b88b47c22dc77e94904cb638ced1fc9e66b4b0582d0889d57798c107",
+        "tran.raw.csv": "5208a9188146f25d09cedf45ecf61dfc6b83a665cbeab46f15d61712a0f36c7b"
+      }
+    },
+    {
+      "model": {
+        "id": "charge_oracle"
+      },
+      "label": "flat-k47-observer-r2.cir_0_1e-06",
+      "temperature_c": 25,
+      "directory": "charge_oracle/flat-k47-observer-r2.cir_0_1e-06",
+      "netlist_sha256": "e4e0fcc493a8e1b1bde40b46798e172f5b80704fd985247190477972b8ace2a2",
+      "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+      "timeout_s": 15,
+      "status": "ok",
+      "retained_hashes": {
+        "job.cir": "e4e0fcc493a8e1b1bde40b46798e172f5b80704fd985247190477972b8ace2a2",
+        "tran.raw": "cf5a938b7ebf8a37e66b6bfb690c229ae31562115b620bcfb56708f3339e68cc",
+        "simulator.log": "010e2cb245d45a80af4a9bdcb8c45c029ba751939c05aaa0195d84256f106c57",
+        "tran.raw.csv": "8953219cb5b68ba8fe70c7e6c3bd6b6e2449abd3c0afc344e05690d8299d9d51"
+      }
+    },
+    {
+      "model": {
+        "id": "charge_oracle"
+      },
+      "label": "flat-k47-observer-r2.cir_20_2e-06",
+      "temperature_c": 25,
+      "directory": "charge_oracle/flat-k47-observer-r2.cir_20_2e-06",
+      "netlist_sha256": "e974a3bcf984c510e4b6bfe4032ffa46240c6fa2bf14762f5a7ad09583124fa8",
+      "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+      "timeout_s": 15,
+      "status": "ok",
+      "retained_hashes": {
+        "job.cir": "e974a3bcf984c510e4b6bfe4032ffa46240c6fa2bf14762f5a7ad09583124fa8",
+        "tran.raw": "8075123d83e836f31bd2c84ef2ad4bf72d210893e510cb45daddcedc8098a656",
+        "simulator.log": "5799c5a5bc1b0eaed273b99f08967bad9480d96fd9bd963f5dab697d4f300037",
+        "tran.raw.csv": "0851a6133dde83afe407e47c33f53125825b0d73d5efd202b22135abed75d8e8"
+      }
+    },
+    {
+      "model": {
+        "id": "charge_oracle"
+      },
+      "label": "flat-k47-observer-r2.cir_20_1e-06",
+      "temperature_c": 25,
+      "directory": "charge_oracle/flat-k47-observer-r2.cir_20_1e-06",
+      "netlist_sha256": "7268fbff885d00b0cc2117a51fa01e5e58b202374544b7971a8152f63d015770",
+      "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+      "timeout_s": 15,
+      "status": "ok",
+      "retained_hashes": {
+        "job.cir": "7268fbff885d00b0cc2117a51fa01e5e58b202374544b7971a8152f63d015770",
+        "tran.raw": "4b058db9986256d2080e396114a27a9fdc1f6bd0588b7b2b062b98d4b683ba50",
+        "simulator.log": "6420fa9e690c485933e8beb04118e0de9654035dd52b7d61500152ec3f3259e8",
+        "tran.raw.csv": "f555e37ce6083f60ae4cd7db71a2b54653bcc58a378e76b29f803437fdcc6b88"
+      }
+    },
+    {
+      "model": {
+        "id": "jfe150_generic",
+        "ngspice_behavior": "ps"
+      },
+      "label": "clamp_ramp",
+      "temperature_c": 25,
+      "directory": "jfe150_generic/clamp_ramp",
+      "netlist_sha256": "722b2f87d0180faf6b5371422f9bfb6a59167e6cacc169c637d52d82b9708f0b",
+      "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+      "timeout_s": 15,
+      "status": "ok",
+      "retained_hashes": {
+        "job.cir": "722b2f87d0180faf6b5371422f9bfb6a59167e6cacc169c637d52d82b9708f0b",
+        "tran.raw": "95c0b1fc003e97e9bb3ab6a10eaeac2cd7f59d77f86be4e26ccf8c1504732994",
+        "simulator.log": "6a55155519545611eb5254ee21149263aac53088de348211f8c8f6bb3cd9c766",
+        "tran.raw.csv": "6e9a857e6199cefaf32106d5c65c2f890baa7df22684b8f98ea6f56221a0adf1"
+      }
+    },
+    {
+      "model": {
+        "id": "jfe150_pspice",
+        "ngspice_behavior": "ps"
+      },
+      "label": "clamp_ramp",
+      "temperature_c": 25,
+      "directory": "jfe150_pspice/clamp_ramp",
+      "netlist_sha256": "942742facc1253d3235a158955acf3138368cb29792280ec985b699f7c9f5084",
+      "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+      "timeout_s": 15,
+      "status": "ok",
+      "retained_hashes": {
+        "job.cir": "942742facc1253d3235a158955acf3138368cb29792280ec985b699f7c9f5084",
+        "tran.raw": "147e5a9fcf58b7e8ec1d3e7ce4c6cd71e6e1ebd224ba4679c09d04fc55ccbeda",
+        "simulator.log": "e9d689e5b24a1cc33aa10367ffb16908e0189c0d57402737346b54c35a1033a7",
+        "tran.raw.csv": "6e9a857e6199cefaf32106d5c65c2f890baa7df22684b8f98ea6f56221a0adf1"
+      }
+    },
+    {
+      "model": {
+        "id": "candidate_0019",
+        "ngspice_behavior": "ps",
+        "semiconductor_ids": [
+          "bc846b_emitter_r1",
+          "jfe150_pspice"
+        ]
+      },
+      "label": "original",
+      "temperature_c": 25,
+      "directory": "candidate_0019/original",
+      "netlist_sha256": "c1eb54d8a761ae048105d8601b2521c8759bf1418999a6e4e54063717197e324",
+      "options": "reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15",
+      "timeout_s": 60,
+      "status": "error",
+      "reason": "exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+      "retained_hashes": {
+        "job.cir": "c1eb54d8a761ae048105d8601b2521c8759bf1418999a6e4e54063717197e324",
+        "op.raw": "5900d2e41dede812c396f1473aa0e6b61ae1bb2e604c76e7c56eae9d6021b6ee",
+        "tran.raw": "4f4534ff7b10a091766a9dca079619f61eba0736fefeb23cbf278546071a29c9",
+        "simulator.log": "7046e59105a0fa24e2d8b4ec437e3668a55ca0ce4699d924f4a3fdcf3c131aa6"
+      }
+    },
+    {
+      "model": {
+        "id": "candidate_0019",
+        "ngspice_behavior": "ps",
+        "semiconductor_ids": [
+          "bc846b_emitter_r1",
+          "jfe150_pspice"
+        ]
+      },
+      "label": "terminal_observers_collapsed",
+      "temperature_c": 25,
+      "directory": "candidate_0019/terminal_observers_collapsed",
+      "netlist_sha256": "71cfc3ebf070904002fb59334c6f077309d5f207262ba91475a4ccec46a0c90b",
+      "options": "reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15",
+      "timeout_s": 60,
+      "status": "error",
+      "reason": "exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+      "retained_hashes": {
+        "job.cir": "71cfc3ebf070904002fb59334c6f077309d5f207262ba91475a4ccec46a0c90b",
+        "op.raw": "93d0ebd419e86092b646f8261e9429a29c966b2a6de97c6a1eb0d5accfb1a4bc",
+        "tran.raw": "b9172268f7f6b4372dd02a0d17c0c635aa27acc58a1789801289829445b89140",
+        "simulator.log": "88cb2b4335d8ec2e8d0df9464db06ac9342235eb02fd47e31c11f250b6be0f9c"
+      }
+    },
+    {
+      "model": {
+        "id": "candidate_0019",
+        "ngspice_behavior": "ps",
+        "semiconductor_ids": [
+          "bc846b_emitter_r1",
+          "jfe150_pspice"
+        ]
+      },
+      "label": "charge_observer_reference_child",
+      "temperature_c": 25,
+      "directory": "candidate_0019/charge_observer_reference_child",
+      "netlist_sha256": "9e0dfa0c3001cc2760bc7f657155c495cadc74cd879690e5c42699926cf8ccbb",
+      "options": "reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15",
+      "timeout_s": 60,
+      "status": "error",
+      "reason": "exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+      "retained_hashes": {
+        "job.cir": "9e0dfa0c3001cc2760bc7f657155c495cadc74cd879690e5c42699926cf8ccbb",
+        "op.raw": "9ac666c5c8d2fa5043a105bcf5e63507bacd4f060a1820fcc0ad4a719ac6c5a2",
+        "tran.raw": "36ebacb1ab4df63735c49eb4d65a48ec28c4ca0899f046cf5a654a6f500f0418",
+        "simulator.log": "28f7c2a6cf76eaf730143424298d84c27d14f22fec2255f2067378b865419bb3"
+      }
+    },
+    {
+      "model": {
+        "id": "candidate_0023",
+        "ngspice_behavior": "ps",
+        "semiconductor_ids": [
+          "bc846b_emitter_r1",
+          "jfe150_pspice"
+        ]
+      },
+      "label": "original",
+      "temperature_c": 25,
+      "directory": "candidate_0023/original",
+      "netlist_sha256": "c7c94318e6ca379a491a940e437e40cc2b048696c362c68071e3297ecbb8bce3",
+      "options": "reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15",
+      "timeout_s": 60,
+      "status": "error",
+      "reason": "exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+      "retained_hashes": {
+        "job.cir": "c7c94318e6ca379a491a940e437e40cc2b048696c362c68071e3297ecbb8bce3",
+        "op.raw": "2deceaad935e31b565ca0fd898b8d3f534b199170171d55558ded677da3fed45",
+        "tran.raw": "11e59f66677d886465040367891045871096c642c06e28e1067bb4ef1efe9dbf",
+        "simulator.log": "6797eef272a625224bcffe8554cf59c40c87576f25711f90ee768e7b9d3abeea"
+      }
+    },
+    {
+      "model": {
+        "id": "candidate_0023",
+        "ngspice_behavior": "ps",
+        "semiconductor_ids": [
+          "bc846b_emitter_r1",
+          "jfe150_pspice"
+        ]
+      },
+      "label": "terminal_observers_collapsed",
+      "temperature_c": 25,
+      "directory": "candidate_0023/terminal_observers_collapsed",
+      "netlist_sha256": "3abb26f7bd2145afa398a672b1632438de09a7ec501b481d2083c173e43cebb5",
+      "options": "reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15",
+      "timeout_s": 60,
+      "status": "error",
+      "reason": "exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+      "retained_hashes": {
+        "job.cir": "3abb26f7bd2145afa398a672b1632438de09a7ec501b481d2083c173e43cebb5",
+        "op.raw": "293ea86fcc0aced411812b692cf6b2e636858183822db131c4ea46508d896b48",
+        "tran.raw": "c9ba5d6d95c6e2bb1585928085095e2344f50defced3e8633e12f3192298f97a",
+        "simulator.log": "80cf8333a07a53e99580b440b88bdd2bc4db034ce84a17996bc20ad7782b7f32"
+      }
+    },
+    {
+      "model": {
+        "id": "candidate_0023",
+        "ngspice_behavior": "ps",
+        "semiconductor_ids": [
+          "bc846b_emitter_r1",
+          "jfe150_pspice"
+        ]
+      },
+      "label": "charge_observer_reference_child",
+      "temperature_c": 25,
+      "directory": "candidate_0023/charge_observer_reference_child",
+      "netlist_sha256": "fc25e7d34eddff6b1ea42e27559b7cb29da71d898336b4f768843ad78f2aefe0",
+      "options": "reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15",
+      "timeout_s": 60,
+      "status": "error",
+      "reason": "exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+      "retained_hashes": {
+        "job.cir": "fc25e7d34eddff6b1ea42e27559b7cb29da71d898336b4f768843ad78f2aefe0",
+        "op.raw": "9c422d327ef48eff183b2eeba4880d3876fefe4466937e04ecf3b75c178d4457",
+        "tran.raw": "35ae14fe655ee265b7c6574dae0f1a29d628ff1fa17e915e5ac34aeec41a8633",
+        "simulator.log": "96d028b911aba8116bc2b7a82952f6eb0854928ba0af2697a13dd1e37b42f030"
+      }
+    },
+    {
+      "model": {
+        "id": "candidate_0012",
+        "ngspice_behavior": "ps",
+        "semiconductor_ids": [
+          "bc846b_emitter_r1"
+        ]
+      },
+      "label": "original",
+      "temperature_c": 25,
+      "directory": "candidate_0012/original",
+      "netlist_sha256": "a6361a16a5e46fdbe484cfbc01daefe3c14c9014c0fdc12bd9bd0774666db498",
+      "options": "reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15",
+      "timeout_s": 60,
+      "status": "ok",
+      "retained_hashes": {
+        "job.cir": "a6361a16a5e46fdbe484cfbc01daefe3c14c9014c0fdc12bd9bd0774666db498",
+        "op.raw": "374a7d7ef3b79f66f453c92f0dfc75505fa0d56c0e7ce53e7ed5348a39d79c63",
+        "tran.raw": "0f93a6f200753b06a25a79b7b98729a0237d29ee8eb9fdfa329e1257282e24d4",
+        "simulator.log": "240226057570f4cbbaf23da865a8bac84e4efbd6f6f10384ffef4df95155794d",
+        "tran.raw.csv": "38fc7e513edfc85c954316407dbf3d4ee266623af4935f46dd9d9cfe3599d9d7"
+      }
+    },
+    {
+      "model": {
+        "id": "candidate_0012",
+        "ngspice_behavior": "ps",
+        "semiconductor_ids": [
+          "bc846b_emitter_r1"
+        ]
+      },
+      "label": "terminal_observers_collapsed",
+      "temperature_c": 25,
+      "directory": "candidate_0012/terminal_observers_collapsed",
+      "netlist_sha256": "4d201612ed0ad7c4a6b45e3ccc83227f4f529daefe34dbfdeec1dfa673fdb786",
+      "options": "reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15",
+      "timeout_s": 60,
+      "status": "ok",
+      "retained_hashes": {
+        "job.cir": "4d201612ed0ad7c4a6b45e3ccc83227f4f529daefe34dbfdeec1dfa673fdb786",
+        "op.raw": "59a85cd71e3ed349d148013b4e8c4f25fbf6dda795ef828bc3ac965029028a34",
+        "tran.raw": "a5f7bf56e92c0b7380babbb17c74690d86d0a0b345e68b0b1b9c67d12b782509",
+        "simulator.log": "4017e32d1f251d596a650e80e25ac0d082744ec2feb0cefe95cd7548a93a5b01",
+        "tran.raw.csv": "f1739fd1ca7daefb114ef15611c983f73c2b2e602f20f1a0abf27174eaf65e83"
+      }
+    },
+    {
+      "model": {
+        "id": "candidate_0012",
+        "ngspice_behavior": "ps",
+        "semiconductor_ids": [
+          "bc846b_emitter_r1"
+        ]
+      },
+      "label": "charge_observer_reference_child",
+      "temperature_c": 25,
+      "directory": "candidate_0012/charge_observer_reference_child",
+      "netlist_sha256": "76d93c2c243fc4f53d6c2ad498e0241037af8e052f1d8f293ac85e67cccc8137",
+      "options": "reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15",
+      "timeout_s": 60,
+      "status": "ok",
+      "retained_hashes": {
+        "job.cir": "76d93c2c243fc4f53d6c2ad498e0241037af8e052f1d8f293ac85e67cccc8137",
+        "op.raw": "3e14c0ebfc8bb156d62769af31680b8161a91729da16dfe890c6c99da1c65081",
+        "tran.raw": "5f94e2dda2e52faff483a2dc9cbf2835f5dc7c7b8553b7b0cde93f81301cc9ab",
+        "simulator.log": "a28e6216efa4996ee784ac6cbabea765db047dc7a60cf5276aa4a0e68422a899",
+        "tran.raw.csv": "04680b3aaefd8d8bd735b533282e9f7e85819e86aa05650cf8561ff3a1c12632"
+      }
+    }
+  ],
+  "source_manifest": {
+    "candidates/candidate_0012/bom.yaml": "263776f4a0ca381d7978c8128de6f465f72c13f191c11928ad9cd638df550fe6",
+    "candidates/candidate_0012/circuit.cir": "f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968",
+    "candidates/candidate_0012/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0001.yaml": "56d9164f670374312db0abdc6c3e20857473f8a7f8a00bff50db3d3b8018b8ad",
+    "candidates/candidate_0012/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0002.yaml": "db790dd2ff3bd050e2482cb1f904365a5e722580b756c8d3f3795354fd85f333",
+    "candidates/candidate_0012/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0003.yaml": "1212170905c3d775d5e1bde72c6d5f5041226df86b9434fb129bb5324659f9bc",
+    "candidates/candidate_0012/data-pages/bom-9c5f3963535c-0005-physical-parts.yaml": "a52d77ff436e907d73a74f0df5cf1c15a693d7af5473f191ab454a46dec086a6",
+    "candidates/candidate_0012/data-pages/bom-9c5f3963535c-page-0001.yaml": "607c475c86d18dd3889c6541fd12d39500f456ce2234cde7aac4aa81c3b2a52d",
+    "candidates/candidate_0012/data-pages/topology-dac33064b494-0005-population.yaml": "9b46b91e5f0ac2f6589194aa10fed5fc1fe4ec2f33c5cf208f204f89dab92331",
+    "candidates/candidate_0012/data-pages/topology-dac33064b494-page-0001.yaml": "a480fab8888d18cdb608db12f0eb59feec16fa48be1ef8ac09f53d64f936ecf7",
+    "candidates/candidate_0012/data-pages/topology-dac33064b494-page-0002.yaml": "c1ae4b215e3e145fb02c1f7588b79336aeca79597edc97a9568cc8a87247d0b9",
+    "candidates/candidate_0012/topology.yaml": "35d58ebf1afb6592c8b29741b050aca1bf2ff9841c1a48478b4ac313c89c9b2d",
+    "candidates/candidate_0019/bom.yaml": "263776f4a0ca381d7978c8128de6f465f72c13f191c11928ad9cd638df550fe6",
+    "candidates/candidate_0019/circuit.cir": "1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da",
+    "candidates/candidate_0019/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0001.yaml": "d983ec2a454e29d597c2fa54b56ee9396225bfeb3dc6957d9aec02d00516a93f",
+    "candidates/candidate_0019/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0002.yaml": "0d52dbe1637691628f8f9d22cc8b7cace889307fbd6d0d54b0981f7792353c02",
+    "candidates/candidate_0019/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0003.yaml": "8e0c562840ab8faf890bae5af8d24d049cfaa276c3b534e8cac2e10637d04d6c",
+    "candidates/candidate_0019/data-pages/bom-9c5f3963535c-0005-physical-parts.yaml": "a52d77ff436e907d73a74f0df5cf1c15a693d7af5473f191ab454a46dec086a6",
+    "candidates/candidate_0019/data-pages/bom-9c5f3963535c-page-0001.yaml": "03b0cbed8e93e5ac67faea7517d79690c0a013297ab971cf4da1c66e8c56abaf",
+    "candidates/candidate_0019/data-pages/topology-dac33064b494-0004-parameters-page-0001.yaml": "0b20e4a23c09246bdaf80689818b241ecdeb86d385e61cf0c3691061eeb2f91e",
+    "candidates/candidate_0019/data-pages/topology-dac33064b494-0004-parameters-page-0002.yaml": "39a6f9d3d613da9acb5cf0b1372872192bd8a0b9477f73f7e8fef56a3da9172d",
+    "candidates/candidate_0019/data-pages/topology-dac33064b494-0004-parameters.yaml": "ce1e555f3af1429217664bb8723fb5387f58aeb7a3b0b1bc75d5531049b28fab",
+    "candidates/candidate_0019/data-pages/topology-dac33064b494-0005-population-page-0001.yaml": "fb3b050fcce94bb35e61cec3e7c837af2078bc7119a1dc749a6a6e072e44e80a",
+    "candidates/candidate_0019/data-pages/topology-dac33064b494-0005-population-page-0002.yaml": "2827cd3acc09ce1e1f23639c810a3174d5bb042f122fd23cece17ea9f8ea0aef",
+    "candidates/candidate_0019/data-pages/topology-dac33064b494-0005-population.yaml": "47d13ffffda1348e3483eb12682846e2e49c473fa639b50ca82f72fd42b18af7",
+    "candidates/candidate_0019/data-pages/topology-dac33064b494-page-0001.yaml": "879fc4f43a8c2b83d13cdf697a728445d47e08cdfabf30fef7dc04c107c34077",
+    "candidates/candidate_0019/topology.yaml": "a2dd2d74e37fb610572a6286d642a2e0f247f594c6d7fde70349dfd4b6a0f2d9",
+    "candidates/candidate_0023/bom.yaml": "263776f4a0ca381d7978c8128de6f465f72c13f191c11928ad9cd638df550fe6",
+    "candidates/candidate_0023/circuit.cir": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+    "candidates/candidate_0023/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0001.yaml": "d983ec2a454e29d597c2fa54b56ee9396225bfeb3dc6957d9aec02d00516a93f",
+    "candidates/candidate_0023/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0002.yaml": "f5fbfd53877bf0a0af48977585939e56fe9e4327f6d826545fb8f7f27993b4d2",
+    "candidates/candidate_0023/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0003.yaml": "f8ef2729511b38b60076c141b94be3bf6496435f77b6e49de88277cc5dc4ae8a",
+    "candidates/candidate_0023/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0004.yaml": "f9b2129b24ffbc2f147eb4c0b705e65b5e4c906bd09201ab65ec2ae55093ec8b",
+    "candidates/candidate_0023/data-pages/bom-9c5f3963535c-0005-physical-parts.yaml": "9b8b68e7aa2cdaa616a169e990affd02acc286fc207fa034f2fd938364ada424",
+    "candidates/candidate_0023/data-pages/bom-9c5f3963535c-page-0001.yaml": "121b017297ac42e08dd38ef24807e38aca75ceff5b4888aaa90c02e89cd56d78",
+    "candidates/candidate_0023/data-pages/topology-dac33064b494-0004-parameters-page-0001.yaml": "1a12227c7c6dca85fb9dffad0360e7a8dfa34724c6f14e60553f15dc8c31f1a5",
+    "candidates/candidate_0023/data-pages/topology-dac33064b494-0004-parameters-page-0002.yaml": "6d208718e772405a907754af1af8caea4fc12adbe4adb96112cc059e8f34df1d",
+    "candidates/candidate_0023/data-pages/topology-dac33064b494-0004-parameters.yaml": "ce1e555f3af1429217664bb8723fb5387f58aeb7a3b0b1bc75d5531049b28fab",
+    "candidates/candidate_0023/data-pages/topology-dac33064b494-0005-population-page-0001.yaml": "8336c3014aa3311424c76f23e525a2e44ca01ba0c36f3a5943bb8826686d8c73",
+    "candidates/candidate_0023/data-pages/topology-dac33064b494-0005-population-page-0002.yaml": "31ee331a7c42bb4ca30e6cfb821d936aff6c4cd493ed7a448fa6e6e5d801fa0b",
+    "candidates/candidate_0023/data-pages/topology-dac33064b494-0005-population-page-0003.yaml": "dae4fa9b78eecb870d26318f8e478dcca2d87c8dc79d785a77d432ebc6829917",
+    "candidates/candidate_0023/data-pages/topology-dac33064b494-0005-population.yaml": "792f7324c494969333b2178250e085d41e224c672f7dd435d59159fb1da49803",
+    "candidates/candidate_0023/data-pages/topology-dac33064b494-page-0001.yaml": "2912b725fd6399c318aaa7e023d2acd42ba4336eda982acf3995bcbe5d313673",
+    "candidates/candidate_0023/topology.yaml": "a2dd2d74e37fb610572a6286d642a2e0f247f594c6d7fde70349dfd4b6a0f2d9",
+    "models/capsule/flat-k47-native-q-r1.cir": "79b97ea73165979525f08aca427d8bfaa42fa8814ae576b140bf97550fb61c18",
+    "models/capsule/flat-k47-observer-r2.cir": "c37de763b15c4e22b85790c71f9bee4a98ee65100f5231341eeb60afa98d0111",
+    "models/capsule/flat-k47-scaled-observer-r2.cir": "a977702eae58c5345e129bb282ce75f98e4405872e891e603512d37c480758fe",
+    "models/capsule/flat-k47-series-motion-r3.cir": "dcd00a192cfdc6a1744d9a3c2c8ad65b73b4a990697f85f23e756711834d5bb7",
+    "models/capsule/flat-k47.cir": "26899d24e6aefa2cfd41b6c13fe1e022e94f2ffec10358ec00dfb74ed0c082b4",
+    "models/environment/p48.cir": "8037de103d579dc4923b37e2ae0b2c78a7337b39385f05055d7e08aa94a53d6f",
+    "models/semiconductor/acquire.py": "364b34a9bd6ff626013c4062fae24ce11ec0a7d25805937041878450bc2b517c",
+    "models/semiconductor/acquisition.yaml": "534ad53f02b97e5a2ababd2b1d790b90a9f520fd52778cead6ca49a7ab3b0de8",
+    "models/semiconductor/characterize.py": "2123134077d940da09dd876478affe75e5e806cff67c85a6b1bcdd7c821d92af",
+    "models/semiconductor/characterize_base.py": "5a537097df507733824c9fbe39c2420a5314e49a7d2c8e4bd6e80f8c67c698a0",
+    "models/semiconductor/characterize_bipolar.py": "381883c8d1152b47737967a38261ef69d79b55910608f620abecc6aa3fb00cf1",
+    "models/semiconductor/characterize_jfet.py": "f3f7ce3081b83fcde68b897e9a95fbb16366f4880438cda830993d18d2b73541",
+    "models/semiconductor/characterize_mos.py": "4fa12319b29ccff8a1b2822988cb6f360e1f8ee12fab2912cd0e8d417127961a",
+    "models/semiconductor/characterize_mos_base.py": "a119ad2cbdfca345276d98ac26510dcb68f99415b6c1cf0ab21b5a89e762c8ad",
+    "models/semiconductor/characterize_opa.py": "9495626206ffe4fd0703f56306b5e0820ba83c1c811147da26ab0f7e764de24d",
+    "models/semiconductor/corners.yaml": "0d25fdd0ff3c1a2f76bd5ed13d85e0c621435ffa6964e8404e8560575aa6fc44",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0001.yaml": "1f473557ab51fe9b7b339fda57c23ef2d2568efc9cd55585c1c0812b13ba2345",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0002.yaml": "5e536b6a278eb2be0e1a36493ede4e96a20ff692dd1b2163b10d17ce7ddd9024",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0003.yaml": "7d2843f7f4624f234cfc5d3ced1e359705f19874ea46ae7b2f480b7672d9c335",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0004.yaml": "bc3008ec435d60ad4f813b231bde0940e822e73d82fd47a7b3b94d63a1f499b0",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0005.yaml": "7050dc391ae0a56f5d618a558871dd8842cfa70a24903e1d4d09132a86aeef4a",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0006.yaml": "52c256dffb72ccbe952d9a7f51f7b9ab34bf53d8c2b64142c6890819c2447d15",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0007.yaml": "9840b34a2fe9df8b3eb5a4dbf7d9049c00542a150a938583b717fd834a41850d",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0008.yaml": "f476f8992be79b3a1054fecdfc343a368dbccbb00e8c4dc0e75daff4d2d328dc",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0009.yaml": "4db4f43a08609e0adfc20aee06ad0554838c62c67a4576c7b5e87f56c590fdb5",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0010.yaml": "20d15c8efa511118fe087b3174a3e139085a265579caba8989a6a69929cc93da",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices.yaml": "87a3191297fc916aaf84e7f81224f94f86afb2cef5b7775e6ee552427e476c2f",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-page-0001.yaml": "466e5fa6c066876376bb67be9cae3331084e1be0e2fe4ef0438fecee6ff53582",
+    "models/semiconductor/dc-bound-controls.cir": "fb9288ccf32775bfa3c2192a1314bde022f963fc5a7923ab71f5999671a1d120",
+    "models/semiconductor/prepare.py": "ab839216400d02127698ef01908035cc51b6840f0c6a197a0f552cc600dd3f9f",
+    "models/semiconductor/proposals/corners-r1.yaml": "07cba7e177d59fbda19e4e1fecc8d1e045c28b7126e942122f32994a974ada17",
+    "models/semiconductor/proposals/corners-r2-metadata-parent-alias.yaml": "f472170740b18517edac85f112cd6388294a833bc558be156e641e4b7681fc63",
+    "models/semiconductor/proposals/dc-bound-controls-r1.cir": "4aec8ca3bf32d3ee0ac921b407d0b86b73acfef6de1db7a0b313e10e19b00c4d",
+    "models/semiconductor/references.yaml": "a1bf00560a01514410be4c98d6bfbd20bd65d0c7cef636a545f1ca6d57732359",
+    "models/semiconductor/registry.yaml": "1cbb03445c99d51eaf065b6832ae38cee47a100b435518b0b7aad316eca9ccae",
+    "models/semiconductor/validate_corners.py": "6208b68b7a724b8aae5e8badc7d9584f0753e88920cade38fb8d577a0d8c06a2",
+    "models/semiconductor/vendor/bc846b_emitter_r1.lib": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+    "models/semiconductor/vendor/jfe150_generic.lib": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+    "models/semiconductor/vendor/jfe150_pspice.lib": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+    "models/semiconductor/vendor/opa197.lib": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+    "research/devices/simulation-prerequisites-plan-002.yaml": "a27d6b1a01e3968c250586768eef674d3d81eb927186f734b60f1ce4951d0a56",
+    "spec/capsule-model.yaml": "169983f2601ee39a59496e0e4d2d337deb14e7e4ec7bf38a92f6ca89b59bc696",
+    "spec/design-constraints.yaml": "48d03f7b8d6302aeca14efda4de5c12cf491c393e212e6842f04da60c344dc43",
+    "spec/lock.yaml": "0a5ac00e5d73b720b0c0926c6987ab6b8cb2dca6ac3d1513039db9f3a05c8d07",
+    "spec/microphone-spec.yaml": "ea5a6f973f17f907c5b76f9d17a35cfa784903bcfcd8d7f1d08cd538b65636cd",
+    "spec/scoring.yaml": "6aa6b8620a4700220ac952472f150396599ca67a2918f6f114e1b283a158c0af",
+    "src/meridian_lab/__init__.py": "70778163075ec49235b8cf725bce58f9cef39892880a46ccc9fa58a9aeb98f52",
+    "src/meridian_lab/architectures.py": "ffd97a4cdd928329a56f8f5d3a042fa2f413e12e979d8cc36926f0cebe2f3183",
+    "src/meridian_lab/archive.py": "7cdf9fff8dc59d7244849f63506f2f97b0604ccfc64d7a7997fc5ee777d4ae79",
+    "src/meridian_lab/bounded.py": "2f211f0205de3d92953bfcb9c336560e7de4abd24cce13a29785763482a47dcc",
+    "src/meridian_lab/cli.py": "883c8dff0bf192003702df6e1d98633e9aadc5a0cc51c3893933002f25eed866",
+    "src/meridian_lab/core.py": "c5f3716204f79474bab9381e9a399ca494bd0b41a020c7b7af5275b329847259",
+    "src/meridian_lab/data.py": "66897ef3b08484797af07d3c70eb0c1afe7e96a1c49e7cc293ab726e5ff5478a",
+    "src/meridian_lab/device_models.py": "54f79414d40c0303a8982bf179d2f8ef48dde57a727d16dbd955cb92cf3add36",
+    "src/meridian_lab/metrics.py": "f41aa31cee925d961efa910cd116e947673529cdb4df2b6f9a1e221eb4e65885",
+    "src/meridian_lab/nonlinear.py": "0873b10d49a1ea2affc1e80b04120ff7e9c6dddd0768e483d6e218441e995eb1",
+    "src/meridian_lab/partition.py": "f0ebce060ed755395861caf3f1889ac23345f138fd317f26f895aa02a9dedbb7",
+    "src/meridian_lab/qualification.py": "4659b0f6f019a340bb1bd01604891ec5d525f9feb21f84bb6f08805913006ff7",
+    "src/meridian_lab/qualification_ports.py": "9fe5cc0c70c9cf0e578bdc276942c2c4e1b7ea8837e36fc6601fddec143035bd",
+    "src/meridian_lab/qualification_signal.py": "ed63ab1cf8e7e20701a72cc161e3370e66d7c79b96a4ab30b055815389b2bd71",
+    "src/meridian_lab/robust.py": "bba114c1302f9d1a84faab93c8e5904368df6412cbd87feff2eedfb7257a800a",
+    "src/meridian_lab/robust_measure.py": "25d1d936e038f189f155658b3f57ea8a01bb428e4366aefa7602edc01a37b478",
+    "src/meridian_lab/robust_scenarios.py": "aa9e5698da48098fadb67eff1f1836364e24a45d0455a6dacc9fa97bd2d5d6da",
+    "tools/controls/carrier_island_control.py": "7439147114f54335e79b0a75e860f9e5abf22c6a9263e25f022b6a9415296fba",
+    "tools/controls/parts_bipolar_control.py": "3cf92c79f0542e954794434e7a4e9235397a06d5eb43e8dee4939b50d383b12e",
+    "tools/controls/parts_constant_control.py": "6687af74a3aa31338224aa2f6264fda1f9da7789e4339258fddc6b7842e539d8",
+    "tools/controls/parts_control_math.py": "d99dfd506d86db9f887fa0660c5a15be336101a87acadf1614fcdc8c7b38842e",
+    "tools/controls/parts_controls_001.py": "0043dc0ebc388f5f4f80ff583e66b3a66914a3b5d23b183b2d3dea58a8abf43f",
+    "tools/controls/parts_controls_002.py": "86440771bf1d4364eaf1c055a2ddea26e1abfafe6a54e4a9333bde5d33e21ed0",
+    "tools/controls/parts_database.py": "532837c26b70761327e78ac6be723dc32260569150146c134a5f4f4e62df18dd",
+    "tools/controls/parts_dual_control.py": "7e710003e03407b3d5cb2dc407fbec3051894a9ef77a08945a07a3ed33224ae8",
+    "tools/controls/parts_dual_pnp_control.py": "c08f84b04ba6c89fe21a81fdafdc690b8ece0a6a6329cff9bed11cd3eafea347",
+    "tools/controls/prerequisite_diagnosis.py": "cf492adeb7cfa656ca8d25dc8b313eb9bdfa937d98c9d2f9424a9d46cb9f5f69",
+    "tools/controls/prerequisite_fixtures.py": "12c976aaaba8f509fb468e15dddebb2f1eba8dfc49d691e14efa0f09d5b491b1",
+    "tools/controls/prerequisite_math.py": "4bd40b36c46b49b9d855815439048500e995be22ea8af477fa589f549bdd14a5",
+    "tools/controls/prerequisite_sources.py": "d8e8d8280eb04f4fb522d1bffc50be1f8e0f1381536d49365d6a71b1b408eb6f",
+    "tools/controls/simulation_prerequisites.py": "3c20b30302aa578b180e2eb68b5401a6fe39a3bbeede9b2274e3e942d14ecde4",
+    "tools/ngspice-run": "7edc9dd914f0e3f9db4e54f15038594f7e53304ee26d6abeab071dce4151bcd2",
+    "tools/ngspice/usr/bin/ngspice": "3e0f126c93dc66ac2b80ac3043eba5c57b0ee545aa323cdc06f59b3d86f6a70e"
+  },
+  "source_unchanged": true,
+  "plan": {
+    "schema_version": 1,
+    "revision": "observer-diagnosis-r2",
+    "declared_date": "2026-10-11",
+    "parent": "results/device_models/20261011T175705Z_prerequisites_a7cc0cdb/results.json",
+    "maximum_jobs": 36,
+    "timeout_s_per_job": 15,
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "candidate_options": "reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15",
+    "candidate_timeout_s": 60,
+    "candidate_ids": [
+      "candidate_0019",
+      "candidate_0023",
+      "candidate_0012"
+    ],
+    "candidate_controls": [
+      "original",
+      "terminal_observers_collapsed",
+      "charge_observer_reference_child"
+    ],
+    "isolated_charge_controls": [
+      "original",
+      "global_signal_reference_child"
+    ],
+    "charge_common_mode_v": [
+      0,
+      20
+    ],
+    "charge_steps_s": [
+      "2e-6",
+      "1e-6"
+    ],
+    "charge_assumptions": "CF=CR70p,PAR2p,CROSS0,LEAK1T,Rload1G,Rrear1k,POLDC40,LIN1; mathematical conditions only",
+    "clamp_control": "Source-limited gate ramp -1..1V,100kohm,all original clamp elements retained; VCH=VCL=0 for explicit clamp exercise",
+    "stopping": "One finite pass; no retries or altered tolerances. Original candidate DC/short-transient failures block microphone nonlinear claims. Children are numerical diagnostic decks, not hidden canonical edits or scored candidates.",
+    "supported_claims": "Only independently controlled scopes; typical/noise/production/physical/patent gates remain separate"
+  },
+  "complete": true,
+  "eligible": false
+}

@@ -1,0 +1,20 @@
+Meridian prerequisite charge_oracle flat-k47.cir_0_1e-06
+* SPDX-License-Identifier: CERN-OHL-S-2.0
+.temp 25
+.options reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/device_models/20261011T180313Z_observer_diagnosis_0f2c5116/source/models/capsule/flat-k47.cir"
+Vg g 0 0
+Vp pressure 0 SIN(0 1 1000)
+Vpr pr 0 0
+Vbias b g 40
+Rload f g 1G
+Rrear rear g 1k
+Xcap f b rear pressure pr g FLAT_K47 LIN=1 POLDC=40 CROSS=0
+.control
+set filetype=ascii
+set numdgt=16
+tran 1e-06 .064 0 1e-06
+write tran.raw all
+quit
+.endc
+.end

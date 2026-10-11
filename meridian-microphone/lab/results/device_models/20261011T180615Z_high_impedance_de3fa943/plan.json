@@ -1,0 +1,173 @@
+{
+  "plan": {
+    "schema_version": 1,
+    "revision": "high-impedance-reproducer-r3",
+    "declared_date": "2026-10-11",
+    "parent": "results/device_models/20261011T180313Z_observer_diagnosis_0f2c5116/results.json",
+    "maximum_jobs": 12,
+    "timeout_s_per_job": 15,
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "model": "jfe150_generic",
+    "source_resistance_ohm": [
+      0,
+      1000,
+      "1e9"
+    ],
+    "excitations": [
+      "voltage",
+      "current_phase_0",
+      "current_phase_90"
+    ],
+    "conditions": "Candidate0019 extracted nominal local rail13.5557796144973V, gate-bias3.3889452055659V, backplate29.5293276326911V, source3300ohm; fixed ideal rails are explicit diagnostic terminal fixtures, not a microphone replacement.",
+    "physical_nodes": "All JFE clamp pins retained; gate70pF to backplate,1T leakage and1G bias where declared. No hidden bias assist.",
+    "transient": {
+      "frequency_hz": 1000,
+      "voltage_peak_v": 0.01,
+      "injected_current_peak_a": 8.29380490383245e-09,
+      "stop_s": 0.004,
+      "save_start_s": 0,
+      "max_step_s": "2e-6"
+    },
+    "stopping": "One pass; no relaxed tolerance, parameter repair, population fit or increase to existing budgets. Four-millisecond controls receive no settled nonlinear/headroom credit."
+  },
+  "model": {
+    "id": "jfe150_generic",
+    "path": "semiconductor/vendor/jfe150_generic.lib",
+    "sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+    "version": "Final 1.2; 26SEP2024; SLPM366",
+    "source_url": "https://www.ti.com/lit/zip/slpm366",
+    "retrieved_date": "2026-10-05",
+    "acquisition_status": "valid_spice",
+    "redistribution": {
+      "status": "not_established_do_not_redistribute",
+      "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+      "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+    },
+    "syntax": "SPICE3 subcircuit with PSpice extensions",
+    "ngspice_behavior": "ps",
+    "subcircuit": "JFE150",
+    "parent_model_id": null,
+    "device_id": "jfe150",
+    "manufacturer": "Texas Instruments",
+    "model_lineage": [],
+    "file": "models/semiconductor/vendor/jfe150_generic.lib"
+  },
+  "jobs": [
+    {
+      "label": "source_0_voltage",
+      "circuit": "Vrail rail 0 13.5557796144973\nVbias bias 0 DC 3.3889452055659 SIN(3.3889452055659 .01 1000)\nVlink bias g 0\nVback back 0 29.5293276326911\nRleak back g 1T\nCgate g back 70p\nRsource s 0 3300\nXq rail g s rail 0 JFE150\n"
+    },
+    {
+      "label": "source_0_current_phase_0",
+      "circuit": "Vrail rail 0 13.5557796144973\nVbias bias 0 DC 3.3889452055659 \nVlink bias g 0\nVback back 0 29.5293276326911\nRleak back g 1T\nCgate g back 70p\nRsource s 0 3300\nXq rail g s rail 0 JFE150\nIp 0 g SIN(0 8.29380490383245n 1000 0 0 0)"
+    },
+    {
+      "label": "source_0_current_phase_90",
+      "circuit": "Vrail rail 0 13.5557796144973\nVbias bias 0 DC 3.3889452055659 \nVlink bias g 0\nVback back 0 29.5293276326911\nRleak back g 1T\nCgate g back 70p\nRsource s 0 3300\nXq rail g s rail 0 JFE150\nIp 0 g SIN(0 8.29380490383245n 1000 0 0 90)"
+    },
+    {
+      "label": "source_1000_voltage",
+      "circuit": "Vrail rail 0 13.5557796144973\nVbias bias 0 DC 3.3889452055659 SIN(3.3889452055659 .01 1000)\nRbias bias g 1000\nVback back 0 29.5293276326911\nRleak back g 1T\nCgate g back 70p\nRsource s 0 3300\nXq rail g s rail 0 JFE150\n"
+    },
+    {
+      "label": "source_1000_current_phase_0",
+      "circuit": "Vrail rail 0 13.5557796144973\nVbias bias 0 DC 3.3889452055659 \nRbias bias g 1000\nVback back 0 29.5293276326911\nRleak back g 1T\nCgate g back 70p\nRsource s 0 3300\nXq rail g s rail 0 JFE150\nIp 0 g SIN(0 8.29380490383245n 1000 0 0 0)"
+    },
+    {
+      "label": "source_1000_current_phase_90",
+      "circuit": "Vrail rail 0 13.5557796144973\nVbias bias 0 DC 3.3889452055659 \nRbias bias g 1000\nVback back 0 29.5293276326911\nRleak back g 1T\nCgate g back 70p\nRsource s 0 3300\nXq rail g s rail 0 JFE150\nIp 0 g SIN(0 8.29380490383245n 1000 0 0 90)"
+    },
+    {
+      "label": "source_1e9_voltage",
+      "circuit": "Vrail rail 0 13.5557796144973\nVbias bias 0 DC 3.3889452055659 SIN(3.3889452055659 .01 1000)\nRbias bias g 1e9\nVback back 0 29.5293276326911\nRleak back g 1T\nCgate g back 70p\nRsource s 0 3300\nXq rail g s rail 0 JFE150\n"
+    },
+    {
+      "label": "source_1e9_current_phase_0",
+      "circuit": "Vrail rail 0 13.5557796144973\nVbias bias 0 DC 3.3889452055659 \nRbias bias g 1e9\nVback back 0 29.5293276326911\nRleak back g 1T\nCgate g back 70p\nRsource s 0 3300\nXq rail g s rail 0 JFE150\nIp 0 g SIN(0 8.29380490383245n 1000 0 0 0)"
+    },
+    {
+      "label": "source_1e9_current_phase_90",
+      "circuit": "Vrail rail 0 13.5557796144973\nVbias bias 0 DC 3.3889452055659 \nRbias bias g 1e9\nVback back 0 29.5293276326911\nRleak back g 1T\nCgate g back 70p\nRsource s 0 3300\nXq rail g s rail 0 JFE150\nIp 0 g SIN(0 8.29380490383245n 1000 0 0 90)"
+    }
+  ],
+  "source_manifest": {
+    "models/semiconductor/acquire.py": "364b34a9bd6ff626013c4062fae24ce11ec0a7d25805937041878450bc2b517c",
+    "models/semiconductor/acquisition.yaml": "534ad53f02b97e5a2ababd2b1d790b90a9f520fd52778cead6ca49a7ab3b0de8",
+    "models/semiconductor/characterize.py": "2123134077d940da09dd876478affe75e5e806cff67c85a6b1bcdd7c821d92af",
+    "models/semiconductor/characterize_base.py": "5a537097df507733824c9fbe39c2420a5314e49a7d2c8e4bd6e80f8c67c698a0",
+    "models/semiconductor/characterize_bipolar.py": "381883c8d1152b47737967a38261ef69d79b55910608f620abecc6aa3fb00cf1",
+    "models/semiconductor/characterize_jfet.py": "f3f7ce3081b83fcde68b897e9a95fbb16366f4880438cda830993d18d2b73541",
+    "models/semiconductor/characterize_mos.py": "4fa12319b29ccff8a1b2822988cb6f360e1f8ee12fab2912cd0e8d417127961a",
+    "models/semiconductor/characterize_mos_base.py": "a119ad2cbdfca345276d98ac26510dcb68f99415b6c1cf0ab21b5a89e762c8ad",
+    "models/semiconductor/characterize_opa.py": "9495626206ffe4fd0703f56306b5e0820ba83c1c811147da26ab0f7e764de24d",
+    "models/semiconductor/corners.yaml": "0d25fdd0ff3c1a2f76bd5ed13d85e0c621435ffa6964e8404e8560575aa6fc44",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0001.yaml": "1f473557ab51fe9b7b339fda57c23ef2d2568efc9cd55585c1c0812b13ba2345",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0002.yaml": "5e536b6a278eb2be0e1a36493ede4e96a20ff692dd1b2163b10d17ce7ddd9024",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0003.yaml": "7d2843f7f4624f234cfc5d3ced1e359705f19874ea46ae7b2f480b7672d9c335",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0004.yaml": "bc3008ec435d60ad4f813b231bde0940e822e73d82fd47a7b3b94d63a1f499b0",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0005.yaml": "7050dc391ae0a56f5d618a558871dd8842cfa70a24903e1d4d09132a86aeef4a",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0006.yaml": "52c256dffb72ccbe952d9a7f51f7b9ab34bf53d8c2b64142c6890819c2447d15",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0007.yaml": "9840b34a2fe9df8b3eb5a4dbf7d9049c00542a150a938583b717fd834a41850d",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0008.yaml": "f476f8992be79b3a1054fecdfc343a368dbccbb00e8c4dc0e75daff4d2d328dc",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0009.yaml": "4db4f43a08609e0adfc20aee06ad0554838c62c67a4576c7b5e87f56c590fdb5",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices-page-0010.yaml": "20d15c8efa511118fe087b3174a3e139085a265579caba8989a6a69929cc93da",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-0007-devices.yaml": "87a3191297fc916aaf84e7f81224f94f86afb2cef5b7775e6ee552427e476c2f",
+    "models/semiconductor/data-pages/registry-f76ed8dd27e8-page-0001.yaml": "466e5fa6c066876376bb67be9cae3331084e1be0e2fe4ef0438fecee6ff53582",
+    "models/semiconductor/prepare.py": "ab839216400d02127698ef01908035cc51b6840f0c6a197a0f552cc600dd3f9f",
+    "models/semiconductor/proposals/corners-r1.yaml": "07cba7e177d59fbda19e4e1fecc8d1e045c28b7126e942122f32994a974ada17",
+    "models/semiconductor/proposals/corners-r2-metadata-parent-alias.yaml": "f472170740b18517edac85f112cd6388294a833bc558be156e641e4b7681fc63",
+    "models/semiconductor/references.yaml": "a1bf00560a01514410be4c98d6bfbd20bd65d0c7cef636a545f1ca6d57732359",
+    "models/semiconductor/registry.yaml": "1cbb03445c99d51eaf065b6832ae38cee47a100b435518b0b7aad316eca9ccae",
+    "models/semiconductor/validate_corners.py": "6208b68b7a724b8aae5e8badc7d9584f0753e88920cade38fb8d577a0d8c06a2",
+    "models/semiconductor/vendor/jfe150_generic.lib": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+    "research/devices/simulation-prerequisites-plan-003.yaml": "417c31fb395358418923eaa0c1eb9a47a606be3ad70588486121bdf73c7d4378",
+    "spec/capsule-model.yaml": "169983f2601ee39a59496e0e4d2d337deb14e7e4ec7bf38a92f6ca89b59bc696",
+    "spec/design-constraints.yaml": "48d03f7b8d6302aeca14efda4de5c12cf491c393e212e6842f04da60c344dc43",
+    "spec/lock.yaml": "0a5ac00e5d73b720b0c0926c6987ab6b8cb2dca6ac3d1513039db9f3a05c8d07",
+    "spec/microphone-spec.yaml": "ea5a6f973f17f907c5b76f9d17a35cfa784903bcfcd8d7f1d08cd538b65636cd",
+    "spec/scoring.yaml": "6aa6b8620a4700220ac952472f150396599ca67a2918f6f114e1b283a158c0af",
+    "src/meridian_lab/__init__.py": "70778163075ec49235b8cf725bce58f9cef39892880a46ccc9fa58a9aeb98f52",
+    "src/meridian_lab/architectures.py": "ffd97a4cdd928329a56f8f5d3a042fa2f413e12e979d8cc36926f0cebe2f3183",
+    "src/meridian_lab/archive.py": "7cdf9fff8dc59d7244849f63506f2f97b0604ccfc64d7a7997fc5ee777d4ae79",
+    "src/meridian_lab/bounded.py": "2f211f0205de3d92953bfcb9c336560e7de4abd24cce13a29785763482a47dcc",
+    "src/meridian_lab/cli.py": "883c8dff0bf192003702df6e1d98633e9aadc5a0cc51c3893933002f25eed866",
+    "src/meridian_lab/core.py": "c5f3716204f79474bab9381e9a399ca494bd0b41a020c7b7af5275b329847259",
+    "src/meridian_lab/data.py": "66897ef3b08484797af07d3c70eb0c1afe7e96a1c49e7cc293ab726e5ff5478a",
+    "src/meridian_lab/device_models.py": "54f79414d40c0303a8982bf179d2f8ef48dde57a727d16dbd955cb92cf3add36",
+    "src/meridian_lab/metrics.py": "f41aa31cee925d961efa910cd116e947673529cdb4df2b6f9a1e221eb4e65885",
+    "src/meridian_lab/nonlinear.py": "0873b10d49a1ea2affc1e80b04120ff7e9c6dddd0768e483d6e218441e995eb1",
+    "src/meridian_lab/partition.py": "f0ebce060ed755395861caf3f1889ac23345f138fd317f26f895aa02a9dedbb7",
+    "src/meridian_lab/qualification.py": "4659b0f6f019a340bb1bd01604891ec5d525f9feb21f84bb6f08805913006ff7",
+    "src/meridian_lab/qualification_ports.py": "9fe5cc0c70c9cf0e578bdc276942c2c4e1b7ea8837e36fc6601fddec143035bd",
+    "src/meridian_lab/qualification_signal.py": "ed63ab1cf8e7e20701a72cc161e3370e66d7c79b96a4ab30b055815389b2bd71",
+    "src/meridian_lab/robust.py": "bba114c1302f9d1a84faab93c8e5904368df6412cbd87feff2eedfb7257a800a",
+    "src/meridian_lab/robust_measure.py": "25d1d936e038f189f155658b3f57ea8a01bb428e4366aefa7602edc01a37b478",
+    "src/meridian_lab/robust_scenarios.py": "aa9e5698da48098fadb67eff1f1836364e24a45d0455a6dacc9fa97bd2d5d6da",
+    "tools/controls/carrier_island_control.py": "7439147114f54335e79b0a75e860f9e5abf22c6a9263e25f022b6a9415296fba",
+    "tools/controls/parts_bipolar_control.py": "3cf92c79f0542e954794434e7a4e9235397a06d5eb43e8dee4939b50d383b12e",
+    "tools/controls/parts_constant_control.py": "6687af74a3aa31338224aa2f6264fda1f9da7789e4339258fddc6b7842e539d8",
+    "tools/controls/parts_control_math.py": "d99dfd506d86db9f887fa0660c5a15be336101a87acadf1614fcdc8c7b38842e",
+    "tools/controls/parts_controls_001.py": "0043dc0ebc388f5f4f80ff583e66b3a66914a3b5d23b183b2d3dea58a8abf43f",
+    "tools/controls/parts_controls_002.py": "86440771bf1d4364eaf1c055a2ddea26e1abfafe6a54e4a9333bde5d33e21ed0",
+    "tools/controls/parts_database.py": "532837c26b70761327e78ac6be723dc32260569150146c134a5f4f4e62df18dd",
+    "tools/controls/parts_dual_control.py": "7e710003e03407b3d5cb2dc407fbec3051894a9ef77a08945a07a3ed33224ae8",
+    "tools/controls/parts_dual_pnp_control.py": "c08f84b04ba6c89fe21a81fdafdc690b8ece0a6a6329cff9bed11cd3eafea347",
+    "tools/controls/prerequisite_diagnosis.py": "31b55708a1ddb6bc50aa0122cffa5b6361cf302c9a32122faaa74d7518d83829",
+    "tools/controls/prerequisite_fixtures.py": "12c976aaaba8f509fb468e15dddebb2f1eba8dfc49d691e14efa0f09d5b491b1",
+    "tools/controls/prerequisite_math.py": "4bd40b36c46b49b9d855815439048500e995be22ea8af477fa589f549bdd14a5",
+    "tools/controls/prerequisite_reproducer.py": "5791d2cfe66c462e34ab857cf0db0c4d33acf89097bba0989986fb74c587457a",
+    "tools/controls/prerequisite_sources.py": "d8e8d8280eb04f4fb522d1bffc50be1f8e0f1381536d49365d6a71b1b408eb6f",
+    "tools/controls/simulation_prerequisites.py": "1a42bdda9ccd2a84ba30f1d2165fda7a798e6604be57d489d3e3531253770b03",
+    "tools/ngspice-run": "7edc9dd914f0e3f9db4e54f15038594f7e53304ee26d6abeab071dce4151bcd2",
+    "tools/ngspice/usr/bin/ngspice": "3e0f126c93dc66ac2b80ac3043eba5c57b0ee545aa323cdc06f59b3d86f6a70e"
+  },
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.8",
+    "yaml": "6.0.3",
+    "ngspice": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Wed Aug 19 09:38:31 UTC 2026\n******"
+  }
+}

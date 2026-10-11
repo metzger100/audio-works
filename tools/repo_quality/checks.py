@@ -138,6 +138,7 @@ def check(view, register):
         private_original = (
             "/source/models/semiconductor/vendor/" in path
             or "/source/research/device_sources/local/" in path
+            or "/source/tools/ngspice/" in path
             or path.endswith((".raw", ".raw.csv"))
         )
         if path in view.paths:

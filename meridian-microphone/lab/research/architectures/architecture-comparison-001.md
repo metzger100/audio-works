@@ -32,3 +32,7 @@ Exact ordinary-part costs remain incomplete catalogue scenarios; all delivered t
 Reproduce with [comparison tool](../../tools/reporting/compare_architectures.py) using original private waveforms. [Provenance](../../results/reports/architecture-comparison-001/provenance.json) identifies checked sources/cohort and outputs. Follow [measurement priorities](../../measurement/priority-plan.md), repair independent behavior prerequisites, then recompute a shared cohort without weakening bounds.
 
 [Complete dated original](../../../../docs/history/2026-10-09/meridian-microphone/lab/research/architecture_comparison_001.md) · [Current verification](../../../../docs/validation.md). Original tables, failures, conditions and decisions remain authoritative.
+
+[Capsule envelope 001](../capsules/evidence-envelope-001.md), 11 October 2026, adds a separate frozen shared capsule scenario cohort. It confirms capsule-only response reversals and conditional noise reversals at failed 1GΩ cases. It does not replace this baseline cohort, its full-suite failures or eligibility gates.
+
+[Simulation prerequisites001](../devices/simulation-prerequisites-001.md) adds a separate119-job terminal/reduced-DUT diagnosis. Isolated follower H2/H3 and extraction controls pass; full DUT prerequisites remain unsupported. No common full comparison, microphone harmonics, headroom or eligibility is promoted.

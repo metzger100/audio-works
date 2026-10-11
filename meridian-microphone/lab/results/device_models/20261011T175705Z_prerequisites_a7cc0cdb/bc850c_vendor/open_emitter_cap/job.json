@@ -1,0 +1,42 @@
+{
+  "model": {
+    "id": "bc850c_vendor",
+    "path": "semiconductor/vendor/bc850c.lib",
+    "sha256": "ef3fc2c3776eaf52acbfb5b7955eda8efd9fa714dd2158aa015ac42610bca399",
+    "version": "extraction week42/2018",
+    "source_url": "https://assets.nexperia.com/documents/spice-model/BC850C.txt?download=1",
+    "retrieved_date": "2026-10-09",
+    "acquisition_status": "valid_spice",
+    "syntax": "self-contained public subcircuit; dialect compatibility unverified",
+    "subcircuit": "BC850C",
+    "primitive": "X",
+    "parent_model_id": null,
+    "ngspice_behavior": "ps",
+    "pin_order": "subcircuit C B E; physical B1 E2 C3",
+    "redistribution": {
+      "status": "not_established_do_not_redistribute",
+      "evidence": "Original notices and archive/PDF retained privately; public availability is not redistribution permission.",
+      "acquisition": "models/semiconductor/acquire.py; private receipt and acquisition.yaml"
+    },
+    "runnability": "scoped_jobs_ok_with_retained_errors",
+    "behavior_validation": "error",
+    "validation_record": "results/device_models/20261009T133651Z_parts_d3c30763/results.json",
+    "device_id": "bc850c",
+    "manufacturer": "Nexperia",
+    "model_lineage": [],
+    "file": "models/semiconductor/vendor/bc850c.lib"
+  },
+  "label": "open_emitter_cap",
+  "temperature_c": 25,
+  "directory": "bc850c_vendor/open_emitter_cap",
+  "netlist_sha256": "9d2d5aab6d51f5bd2a976f280ad69304e2df9a6e7e0f891b18b1bcddd24887e4",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "timeout_s": 15,
+  "status": "ok",
+  "retained_hashes": {
+    "job.cir": "9d2d5aab6d51f5bd2a976f280ad69304e2df9a6e7e0f891b18b1bcddd24887e4",
+    "ac.raw": "846c9eff382c2c319938b844a1b4eef1818ee67e156b0776ee4d5ecc46430ebf",
+    "simulator.log": "a0fbd6ed8fd2a9ab1baf75728e4b32bd694bbe0d351b440d43ea1b8bc9eb520d",
+    "ac.raw.csv": "b9ae6ae7efb34a87f64af71aad116417068dddc2fa15f738f952f28adb7c54c3"
+  }
+}

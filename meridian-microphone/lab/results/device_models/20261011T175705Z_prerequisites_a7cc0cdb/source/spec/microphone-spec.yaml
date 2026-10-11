@@ -1,0 +1,32 @@
+schema_version: 1
+revision: phase0-2026-10-05-r1
+project: M100 Meridian
+model_names: [MIC-34-M, MIC-34-C]
+phase: 0
+capsule: Arienne Audio Flat K47 Cardioid/Omni K47FRB
+evidence_order: [physics_measurements, spice, automated_tests, numerical_optimization, engineering_reasoning, llm_intuition]
+interface: {connector: balanced_XLR3, supply: P48}
+requirements:
+  no_device_selection: {value: true, status: user_requirement}
+  open_hardware_publication: {value: true, status: user_requirement}
+  current_max_a: {value: 0.010, status: interface_constraint, source: S03}
+  current_preferred_a: {value: 0.007, status: provisional_efficiency_target, source: S02, note: Verify Table 6 rated-current wording against a controlled full standard.}
+  system_self_noise_dba: {value: 7, status: inherited_aspirational_target, note: Capsule mechanical noise is unknown; electronics simulation cannot establish this.}
+  system_max_spl_db: {value: 135, status: inherited_aspirational_target, distortion_percent: 0.5, note: Criterion is a provisional research definition; capsule overload unknown.}
+  electronics_noise_dba: {value: 4, status: provisional_research_target, note: Conditional on measured capsule transfer; not an absolute capsule specification.}
+  electronics_ein_unweighted_v_rms: {value: 1.0e-6, band_hz: [20, 20000], status: provisional_research_target}
+  electronics_response_db: {value: 1.0, band_hz: [20, 20000], reference_hz: 1000, status: provisional_research_target}
+  thd_at_1pa_percent: {value: 0.01, status: provisional_research_target}
+  thd_at_135db_percent: {value: 0.5, status: provisional_research_target}
+  differential_output_impedance_ohm: {value: 200, band_hz: [20, 20000], status: provisional_research_target}
+  impedance_balance_fraction: {value: 0.01, status: provisional_research_target}
+  hf_peaking_db: {value: 3, band_hz: [20000, 10000000], status: screening_target, note: Does not prove loop stability.}
+  startup_settling_s: {value: 5, status: provisional_research_target}
+qualification:
+  required_tests: [operating_point, frequency_response, noise, distortion, headroom, output_impedance, balance, phantom_supply, temperature, semiconductor_corners, monte_carlo, loading, startup, stability]
+  missing_or_error_is_pass: false
+  ideal_models_eligible: false
+  assumed_device_populations_prove_yield: false
+  unknown_capsule_mechanics_prove_system_noise_or_spl: false
+  evidence_required: [documented_semiconductor_models, validated_noise_models, device_safe_operating_area, loop_stability, model_uncertainty_coverage, physical_measurements]
+  threshold_changes: Separate versioned specification amendment with evidence; never mutate thresholds from optimizer or candidate scripts.

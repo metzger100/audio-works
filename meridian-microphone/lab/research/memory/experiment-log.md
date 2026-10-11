@@ -3,12 +3,6 @@
 
 [All original records](../../../../docs/evidence.md) · [Original narrative](../../../../docs/history/2026-10-09/meridian-microphone/lab/research/experiment_log.md). Statuses and ancestry remain authoritative in original records. Latest twenty records:
 
-- [20261009T090114Z_a5d5a618](../../results/verification/20261009T090114Z_a5d5a618/verification.json) — pass; candidate None; parents None
-- [20261009T091419Z_7d61f5d4](../../results/verification/20261009T091419Z_7d61f5d4/verification.json) — pass; candidate None; parents None
-- [20261009T121724Z_12bf12df](../../results/verification/20261009T121724Z_12bf12df/verification.json) — pass; candidate None; parents None
-- [20261009T134357Z_0f91791e](../../results/verification/20261009T134357Z_0f91791e/verification.json) — pass; candidate None; parents None
-- [20261009T170857Z_34228d45](../../results/verification/20261009T170857Z_34228d45/verification.json) — fail; candidate None; parents None
-- [20261009T172142Z_c2732675](../../results/verification/20261009T172142Z_c2732675/verification.json) — pass; candidate None; parents None
 - [20261009T195333Z_300c1d16](../../results/verification/20261009T195333Z_300c1d16/verification.json) — pass; candidate None; parents None
 - [20261009T195559Z_007ef138](../../results/verification/20261009T195559Z_007ef138/verification.json) — pass; candidate None; parents None
 - [20261009T195814Z_2452823b](../../results/verification/20261009T195814Z_2452823b/verification.json) — pass; candidate None; parents None
@@ -23,3 +17,9 @@
 - [20261011T132611Z_b4e4b5b1](../../results/verification/20261011T132611Z_b4e4b5b1/verification.json) — pass; candidate None; parents None
 - [20261011T133432Z_a7befd8d](../../results/verification/20261011T133432Z_a7befd8d/verification.json) — pass; candidate None; parents None
 - [20261011T133548Z_000612f5](../../results/verification/20261011T133548Z_000612f5/verification.json) — pass; candidate None; parents None
+- [20261011T173213Z_d5fcfae5](../../results/verification/20261011T173213Z_d5fcfae5/verification.json) — pass; candidate None; parents None
+- [20261011T182410Z_3a409d41](../../results/verification/20261011T182410Z_3a409d41/verification.json) — fail; candidate None; parents None
+- [20261011T182605Z_2075c81b](../../results/verification/20261011T182605Z_2075c81b/verification.json) — pass; candidate None; parents None
+- [20261011T182754Z_eeb18626](../../results/verification/20261011T182754Z_eeb18626/verification.json) — pass; candidate None; parents None
+- [20261011T183122Z_d34845b1](../../results/verification/20261011T183122Z_d34845b1/verification.json) — pass; candidate None; parents None
+- [20261011T183943Z_8f8299de](../../results/verification/20261011T183943Z_8f8299de/verification.json) — pass; candidate None; parents None

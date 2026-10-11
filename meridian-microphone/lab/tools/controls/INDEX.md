@@ -12,3 +12,10 @@ Finite isolated experiments and canonical parts search/audit.
 - [parts_database.py](parts_database.py) — active
 - [parts_dual_control.py](parts_dual_control.py) — active
 - [parts_dual_pnp_control.py](parts_dual_pnp_control.py) — active
+- [prerequisite_diagnosis.py](prerequisite_diagnosis.py) — active
+- [prerequisite_extraction.py](prerequisite_extraction.py) — active
+- [prerequisite_fixtures.py](prerequisite_fixtures.py) — active
+- [prerequisite_math.py](prerequisite_math.py) — active
+- [prerequisite_reproducer.py](prerequisite_reproducer.py) — active
+- [prerequisite_sources.py](prerequisite_sources.py) — active
+- [simulation_prerequisites.py](simulation_prerequisites.py) — active

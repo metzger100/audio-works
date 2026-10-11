@@ -1,0 +1,51 @@
+{
+  "model": {
+    "id": "jfe150_strong",
+    "path": "semiconductor/vendor/jfe150_strong.lib",
+    "sha256": "832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8",
+    "version": "Final 1.2 vendor strong",
+    "source_url": "https://www.ti.com/lit/zip/slpm366",
+    "retrieved_date": "2026-10-05",
+    "acquisition_status": "valid_spice",
+    "redistribution": {
+      "status": "not_established_do_not_redistribute",
+      "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+      "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml"
+    },
+    "syntax": "SPICE3 subcircuit with PSpice extensions",
+    "ngspice_behavior": "ps",
+    "subcircuit": "JFE150_STRONG",
+    "parent_model_id": "jfe150_generic",
+    "device_id": "jfe150",
+    "manufacturer": "Texas Instruments",
+    "model_lineage": [
+      {
+        "id": "jfe150_generic",
+        "version": "Final 1.2; 26SEP2024; SLPM366",
+        "sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+        "source_url": "https://www.ti.com/lit/zip/slpm366",
+        "retrieved_date": "2026-10-05"
+      }
+    ],
+    "file": "models/semiconductor/vendor/jfe150_strong.lib"
+  },
+  "label": "admittance_noise",
+  "temperature_c": 25,
+  "directory": "jfe150_strong/admittance_noise",
+  "netlist_sha256": "19a1b9447335562c383de760253373cf93a627eeddfd83f9b3d531c521894304",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "timeout_s": 15,
+  "status": "ok",
+  "retained_hashes": {
+    "job.cir": "19a1b9447335562c383de760253373cf93a627eeddfd83f9b3d531c521894304",
+    "op.raw": "d64e23bd4332c4cfad09c79e3d8180d96766d0555da98d1eef324c1b3040f066",
+    "ac.raw": "9278b1155c0131ae639e458d01894af8bd134ffff3c8c7c4616909d2ff22a3ed",
+    "noise.raw": "18d4fd9f01d0d1c6bc8d701100ba1ffd8c01f7fc8f296d21632b66610e6c3fa6",
+    "gate.raw": "2d5a69967a020a06ab2bdf1ccb2fdb3582886ee2e0c1329e9473a0c008231f0e",
+    "simulator.log": "1ad68711e26b4c39c2c32ade898160d73392d57e3782b3abece782d0c2c98458",
+    "op.raw.csv": "70a9ffabc244ae5662597098e0b4c05ee65f483b358b0b32f42f84864c07ad41",
+    "ac.raw.csv": "8d216b3f812fc1db9365634bb4e6491215d9031ff601064545be70b693c7ef1e",
+    "noise.raw.csv": "55b5d7bf7c9da362871a740b195c8b41079a6f7dabf575d5454ed1086fc8c3e1",
+    "gate.raw.csv": "36fd09adc41135a4bfd884ba03c8db954c86b510cece3513fd81548619e85139"
+  }
+}

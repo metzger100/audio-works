@@ -1,0 +1,216 @@
+- device_id: bav199
+  manufacturer: Nexperia
+  exact_mpn: BAV199,215
+  package: SOT-23
+  roles:
+  - protection
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      bav199_syntax_r1:
+      - behavior: reverse_leak
+        status: pass
+        evidence: guaranteed_limit
+        condition: BAV199 VR75V 25C one diode
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: cap
+        status: pass
+        evidence: guaranteed_limit
+        condition: BAV199 VR0 f1MHz table
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.nexperia.com/product/BAV199
+  model_ids:
+  - bav199_vendor
+  - bav199_syntax_r1
+  models:
+  - id: bav199_vendor
+    path: semiconductor/vendor/bav199.lib
+    sha256: 37ca9619403894293238c41fbe05a9748c1d4d7d0a17b71ddde6dc2a8ba104e6
+    version: extraction date unspecified in vendor header
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: not_yet_characterized
+    primitive: D
+    runnability: not_yet_tested
+    load_record: null
+    pin_order: native D A K one diode; package D1 A1 K3 and D2 A3 K2
+  - id: bav199_syntax_r1
+    path: semiconductor/vendor/bav199_metadata_r1.lib
+    sha256: ed3a4386d3632c91917c88cbd5d168b943cfd1f5a16133cd0bc6c145cac3f1cc
+    version: extraction date unspecified in vendor header; authored metadata r1
+    parent_model_id: bav199_vendor
+    acquisition: valid_spice
+    behavior: scoped_agreement
+    primitive: D
+    runnability: all_planned_jobs_run
+    load_record: null
+    pin_order: native D A K one diode; package D1 A1 K3 and D2 A3 K2
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/BAV199.pdf
+    version: current public sheet; revision in original PDF
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_bav199.pdf
+    sha256: ab2f26d003e3c1d8f7e4e7ac674ae055849970bf7b392a7d5d31eca443aab9e2
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  candidate_combination_qualified: false
+- device_id: opa928
+  manufacturer: Texas Instruments
+  exact_mpn: OPA928DT
+  package: SOIC-8 D
+  roles:
+  - guard_servo
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      opa928_vendor:
+      - behavior: en_5
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: datasheet conditioned common mode, RL10k 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: ib_5
+        status: pass
+        evidence: guaranteed_limit
+        condition: RH<50percent; nominal grounded simulation does not model humidity
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: iq_5
+        status: pass
+        evidence: guaranteed_limit
+        condition: no-load output; model Iq fixed275u; no variation proof
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_16
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: datasheet conditioned common mode, RL10k 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: ib_16
+        status: pass
+        evidence: guaranteed_limit
+        condition: RH<50percent; nominal grounded simulation does not model humidity
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: iq_16
+        status: pass
+        evidence: guaranteed_limit
+        condition: no-load output; model Iq fixed275u; no variation proof
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://www.ti.com/product/OPA928
+  model_ids:
+  - opa928_vendor
+  models:
+  - id: opa928_vendor
+    path: semiconductor/vendor/opa928.lib
+    sha256: f4f9d38efc4aa2a31676c84a351d2ee9379baad88abab8b5afad550c7f99c616
+    version: 1.1 01Apr2024
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: error
+    primitive: X
+    runnability: scoped_jobs_ok_with_retained_errors
+    load_record: null
+    pin_order: IN+ IN- V+ V- OUT GRD1 GRD2; physical 4 5 6 3 1 2 7; NC8
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/opa928.pdf
+    version: SBOSA77A April2024
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_opa928.pdf
+    sha256: 06ab87dcd0ffd4d319b164f763bee44707a40593c6df60930d3e1f1fe5a936ad
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  candidate_combination_qualified: false
+- device_id: opa1656
+  manufacturer: Texas Instruments
+  exact_mpn: OPA1656IDR
+  package: SOIC-8 D
+  roles:
+  - balanced_output
+  states:
+    investigated: true
+    acquired: true
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://www.ti.com/product/OPA1656
+  model_ids:
+  - opa1656_vendor
+  models:
+  - id: opa1656_vendor
+    path: semiconductor/vendor/opa1656.lib
+    sha256: 9847ed60c62e792ee6f1c84899278a3c11ce71a6d21804bdd88f51199f1ba055
+    version: public SBOMAW6C; header retained
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: uncharacterized_load_failed
+    primitive: X
+    runnability: failed_isolated_load_check
+    load_record: results/device_models/20261009T135500Z_partsload_551b10d1/results.json
+    pin_order: one amplifier IN+ IN- V+ V- OUT; physical channel A 3 2 8 4 1, channel
+      B 5 6 8 4 7; package integration unqualified
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/opa1656.pdf
+    version: SBOS901C September2022; pin functions page3
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_opa1656.pdf
+    sha256: 4243b58e553e6f27274858637c596596dbb89bba94d05b44fedd32877d988e9d
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: null
+  candidate_combination_qualified: false
+- device_id: lmp7721
+  manufacturer: Texas Instruments
+  exact_mpn: LMP7721MA/NOPB
+  package: SOIC-8
+  roles:
+  - guard_servo
+  states:
+    investigated: true
+    acquired: true
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://www.ti.com/product/LMP7721
+  model_ids:
+  - lmp7721_vendor
+  models:
+  - id: lmp7721_vendor
+    path: semiconductor/vendor/lmp7721.lib
+    sha256: 815a27e4a2189e0f54626a36f21cad3002ff21a5d5cd8df9fea60b34ceb2cb39
+    version: public SNOM096D; header retained
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: uncharacterized_load_failed
+    primitive: X
+    runnability: failed_isolated_load_check
+    load_record: results/device_models/20261009T135500Z_partsload_551b10d1/results.json
+    pin_order: IN+ IN- V+ V- OUT; physical 1 8 6 3 4; NC2 NC5 NC7; sheet recommends
+      guard at2/7; integration unqualified
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/lmp7721.pdf
+    version: SNOSAW6E December2014; pin functions page3
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_lmp7721.pdf
+    sha256: 162b4794e0aee249a75b6f93758cebacab1e5a26fc7eae2f2c9c4a3afdc0562e
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: null
+  candidate_combination_qualified: false

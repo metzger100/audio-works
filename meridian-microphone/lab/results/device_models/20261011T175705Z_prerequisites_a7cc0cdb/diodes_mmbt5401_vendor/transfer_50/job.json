@@ -1,0 +1,41 @@
+{
+  "model": {
+    "id": "diodes_mmbt5401_vendor",
+    "path": "semiconductor/vendor/diodes_mmbt5401.lib",
+    "sha256": "6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5",
+    "version": "Version2 08FEB2011",
+    "source_url": "https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt",
+    "retrieved_date": "2026-10-09",
+    "acquisition_status": "valid_spice",
+    "syntax": "native .model",
+    "subcircuit": "MMBT5401",
+    "primitive": "Q",
+    "parent_model_id": null,
+    "ngspice_behavior": null,
+    "pin_order": "C B E; macro terminal order separate from physical package",
+    "redistribution": {
+      "status": "not_established_do_not_redistribute",
+      "evidence": "Manufacturer notices retained privately; public access does not grant redistribution."
+    },
+    "runnability": "scoped_success_with_retained_disagreements",
+    "behavior_validation": "only conditioned accepted rows; omissions unresolved",
+    "load_record": "results/device_models/20261009T145346Z_parts2_742caaa3/results.json",
+    "device_id": "diodes_mmbt5401",
+    "manufacturer": "Diodes Incorporated",
+    "model_lineage": [],
+    "file": "models/semiconductor/vendor/diodes_mmbt5401.lib"
+  },
+  "label": "transfer_50",
+  "temperature_c": 50,
+  "directory": "diodes_mmbt5401_vendor/transfer_50",
+  "netlist_sha256": "51542fc824a5f3c0a3928da79e6d271d3d54e67119fb55ca3851e086f0c81808",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "timeout_s": 15,
+  "status": "ok",
+  "retained_hashes": {
+    "job.cir": "51542fc824a5f3c0a3928da79e6d271d3d54e67119fb55ca3851e086f0c81808",
+    "dc.raw": "0b217d871bed4e79dfc47fcc73b379a13537ec3f79ea8ae54775a718edffbce7",
+    "simulator.log": "6fd79964b956719912023d1ac6f3701319c706f9709518821284f34dbbe9ac83",
+    "dc.raw.csv": "f1c1efed291b13434809c4e2d1cdffdd412be24a8ff89cf65d1f327a1391c105"
+  }
+}

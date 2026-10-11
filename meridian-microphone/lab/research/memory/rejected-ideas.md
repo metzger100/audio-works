@@ -16,8 +16,12 @@ Retain failure scope: software/model/integration failure does not reject an enti
 | Unsettled harmonics /5s edge as settling | No valid H2–H10/THD/headroom inference from partial failed transients or censored observation |
 | Nominal Pareto / random pass count as yield | Full qualification absent; first family samplers unpaired. Shared endpoint results remain scoped |
 | Historical/revision/dual-half pooling | Four JFE variants remain one part; duplicate TI members and equal nominal halves are not independent models/matching populations |
+| Observer removal or4ms completion as repair | [Prerequisites001](../devices/simulation-prerequisites-001.md) explicit children still fail both JFE DUTs; short BJT completion and charge-amplitude agreement earn no microphone harmonics/headroom |
 | Mathematical pi or ignored electrical terms as behavior | Diotec BVCBO/BVBE and LSK389 ISR/NR/ALPHA/VK remain unsupported; strict failures retained |
 | Missing KF/leakage/film laws as zero | No favorable noise/leakage/transient credit; discrete limits cannot supply broadband/temperature laws |
+| Capsule analogy as measurement or safety | [Envelope001](../capsules/parameters-001.yaml) rejects regular/Flat, variant, system/capsule, dual-backplate/dual-diaphragm and normalization/approved-bias transfers; dimensional source errors and unsuitable tiny-value absolute tolerance corrected explicitly |
 | Source/cost/claim inference | HTML200 is not model acquisition; indexed stock is not live supply; K47FBSB price is not K47FRB; flags/absent searches are not claim/status clearance |
 
 [Device evidence](../devices/INDEX.md), [architecture evidence](../architectures/INDEX.md) and [immutable records](../../results/README.md) retain exact failed parents, repaired descendants and raw hashes. No thresholds, budgets or families are removed to get a pass.
+
+[Capsule material controls](../capsules/physics-001.md#material-consistency-and-center-constrained-examples) reject unqualified physical feasibility of the simple3µm polyester disk and two low-sensitivity material transfers. Retain both the original calculations and adverse sensitivity range; center-constraint/film-grade data remain unknown.

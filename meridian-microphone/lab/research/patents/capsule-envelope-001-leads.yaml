@@ -1,0 +1,105 @@
+# SPDX-License-Identifier: CERN-OHL-S-2.0
+schema_version: 1
+date: '2026-10-11'
+handoff: Prompt 11
+scope: Documentary technical feature leads, not claim/status screening or design instructions
+sources: ../capsules/sources-001.yaml
+candidate_versions:
+  candidate_0010:
+    netlist_sha256: 72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9
+    scope: current mechanism research; no implementation selected
+  candidate_0012:
+    netlist_sha256: f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968
+    scope: current mechanism research; no implementation selected
+  candidate_0013:
+    netlist_sha256: 7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015
+    scope: current mechanism research; no implementation selected
+  candidate_0014:
+    netlist_sha256: cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6
+    scope: current mechanism research; no implementation selected
+  candidate_0017:
+    netlist_sha256: 06d104a8f60e29e4214fe42130a8109dd0e870e26ce30e64bdce9fd525495922
+    scope: current mechanism research; no implementation selected
+  candidate_0019:
+    netlist_sha256: 1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da
+    scope: current mechanism research; no implementation selected
+  candidate_0023:
+    netlist_sha256: d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816
+    scope: current mechanism research; no implementation selected
+features:
+- id: construction_mount
+  sources:
+  - SC06
+  candidates: &id001
+  - candidate_0010
+  - candidate_0012
+  - candidate_0013
+  - candidate_0014
+  - candidate_0017
+  - candidate_0019
+  - candidate_0023
+  lead: Backplate tabs/insulating mount manufacture; capsule sourcing/construction interface only; no
+    custom capsule implementation
+  inspect: Independent assembly/manufacture claims, family and DE/EP equivalents; actual product provenance
+    unknown
+- id: guard
+  sources:
+  - SC22
+  - SC05
+  candidates:
+  - candidate_0010
+  lead: Driven guard electrode/lead-insulator field control; inspect geometric/feedback limitations
+  inspect: Actual guard node and netlist versus granted/amended independent and dependent claims
+- id: charge_reset_bias_monitor
+  sources:
+  - SC21
+  - SC05
+  candidates:
+  - candidate_0012
+  - candidate_0014
+  - candidate_0023
+  lead: Charge adaptation/reset and monitored bias reduction; a servo is not automatically a collapse
+    detector
+  inspect: Whether any actual implementation senses diaphragm separation/collapse; DC-servo feedback elements
+    and claim distinctions
+- id: carrier_push_pull
+  sources:
+  - SC07
+  - SC20
+  - SC18
+  - SC21
+  candidates:
+  - candidate_0013
+  lead: Differential capacitive bridge, synchronous demodulation and probe mechanisms; single-membrane
+    push-pull cannot be assumed for two K47 diaphragms
+  inspect: Electrode/membrane topology, excitation/demodulator circuitry, mechanical claims and actual
+    current/power path
+- id: nonlinear_compensation
+  sources:
+  - SC12
+  candidates: *id001
+  lead: Paper declares French filing FR2404994 on 2024-05-16; no compensation implemented in this task
+  inspect: Locate official publication/family/status if compensation becomes concrete; no reading-based
+    licence or clearance
+search_routes:
+- H04R19/04 electrostatic microphone
+- H04R3/007 protection
+- guard electrode condenser microphone
+- charge adaptation reset bias diaphragm collapse
+- differential capacitance synchronous demodulation
+- backplate insulating mount tabs
+official_status: null
+claim_element_mappings: []
+territory_status:
+  DE: null
+  EP: null
+  US: null
+  WO: publication/family route only
+clearance: not_assessed
+affected_gate_hold: true
+limits:
+- Google Patents supplies publication text; status badges not relied upon.
+- EP3114857B1 original EPO published document acquired; current register/status not inspected.
+- Dates/family lead data require official confirmation and candidate-specific claim interpretation in
+  Prompt 11.
+- Prototype/manufacture/build-publication holds retained; no contact/payment/licence acceptance authorized.

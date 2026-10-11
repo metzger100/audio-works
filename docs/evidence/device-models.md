@@ -34,3 +34,10 @@ Original conditions, statuses, failures and parents remain authoritative. [Struc
 - [20261009T170734Z_constant_ae3a9e1d / checkpoint.json](../../meridian-microphone/lab/results/device_models/20261009T170734Z_constant_ae3a9e1d/checkpoint.json) — unknown
 - [20261009T170734Z_constant_ae3a9e1d / results.json](../../meridian-microphone/lab/results/device_models/20261009T170734Z_constant_ae3a9e1d/results.json) — recorded_unqualified
 - [20261009T171204Z_dual_pnp_9ff5882e / results.json](../../meridian-microphone/lab/results/device_models/20261009T171204Z_dual_pnp_9ff5882e/results.json) — recorded_unqualified
+- [20261011T175705Z_prerequisites_a7cc0cdb / checkpoint.json](../../meridian-microphone/lab/results/device_models/20261011T175705Z_prerequisites_a7cc0cdb/checkpoint.json) — unknown
+- [20261011T175705Z_prerequisites_a7cc0cdb / results.json](../../meridian-microphone/lab/results/device_models/20261011T175705Z_prerequisites_a7cc0cdb/results.json) — unknown
+- [20261011T180313Z_observer_diagnosis_0f2c5116 / checkpoint.json](../../meridian-microphone/lab/results/device_models/20261011T180313Z_observer_diagnosis_0f2c5116/checkpoint.json) — unknown
+- [20261011T180313Z_observer_diagnosis_0f2c5116 / results.json](../../meridian-microphone/lab/results/device_models/20261011T180313Z_observer_diagnosis_0f2c5116/results.json) — unknown
+- [20261011T180615Z_high_impedance_de3fa943 / results.json](../../meridian-microphone/lab/results/device_models/20261011T180615Z_high_impedance_de3fa943/results.json) — unknown
+- [20261011T183033Z_extraction_0984d6e6 / results.json](../../meridian-microphone/lab/results/device_models/20261011T183033Z_extraction_0984d6e6/results.json) — pass
+- [20261011T183846Z_extraction_d0b338ed / results.json](../../meridian-microphone/lab/results/device_models/20261011T183846Z_extraction_d0b338ed/results.json) — pass

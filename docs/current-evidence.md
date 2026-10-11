@@ -3,6 +3,7 @@
 
 Authoritative pointers from project.json; read relevant originals and conditions.
 
+- [evidence-envelope-001.md](../meridian-microphone/lab/research/capsules/evidence-envelope-001.md)
 - [parts-database-expansion-002.md](../meridian-microphone/lab/research/devices/parts-database-expansion-002.md)
 - [architecture-comparison-001.md](../meridian-microphone/lab/research/architectures/architecture-comparison-001.md)
 - [parts-database-expansion-001.md](../meridian-microphone/lab/research/devices/parts-database-expansion-001.md)
@@ -10,3 +11,7 @@ Authoritative pointers from project.json; read relevant originals and conditions
 - [architecture_comparison_001_2026-10-09.yaml](../meridian-microphone/lab/research/patents/architecture_comparison_001_2026-10-09.yaml)
 - [2026-10-11-maintainability.md](validation/2026-10-11-maintainability.md)
 - [2026-10-11-github-canonical.md](validation/2026-10-11-github-canonical.md)
+- [2026-10-11-capsule-inventories.md](decisions/2026-10-11-capsule-inventories.md)
+- [2026-10-11-capsule-envelope.md](validation/2026-10-11-capsule-envelope.md)
+- [simulation-prerequisites-001.md](../meridian-microphone/lab/research/devices/simulation-prerequisites-001.md)
+- [2026-10-11-simulation-prerequisites.md](validation/2026-10-11-simulation-prerequisites.md)

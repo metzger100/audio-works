@@ -12,6 +12,55 @@ from repo_fixture import RepositoryFixture, project
 
 
 class TestRecovery(RepositoryFixture):
+    def test_ignored_runtime_is_hashed_and_restored_by_optional_backup(self):
+        folder = "meridian-microphone/lab/results/device_models/runtime_batch"
+        runtime = "tools/ngspice/usr/bin/ngspice"
+        path = folder + "/source/" + runtime
+        data = b"original frozen runtime fixture\n"
+        self.put(path, data.decode())
+        self.put(
+            folder + "/results.json",
+            json.dumps({"source_manifest": {runtime: hashlib.sha256(data).hexdigest()}}),
+        )
+        self.put(
+            ".gitignore",
+            (self.root / ".gitignore").read_text()
+            + "meridian-microphone/lab/results/**/source/tools/ngspice/\n",
+        )
+        self.refresh()
+        source = self.backup()
+        destination = self.parent / "runtime-restore"
+        result = project.restore_backup(self.root, source, destination)
+        self.assertTrue(result["original_evidence_complete"])
+        self.assertEqual((destination / path).read_bytes(), data)
+        self.put(path, "damaged runtime\n")
+        self.assertEqual(
+            project.verify_evidence(self.root, project.View(self.root))["damaged"], [path]
+        )
+        (self.root / path).unlink()
+        self.assertEqual(
+            project.verify_evidence(self.root, project.View(self.root))["missing"], [path]
+        )
+
+    def test_nested_batch_inventory_keeps_lab_relative_paths_and_detects_damage(self):
+        path = "meridian-microphone/lab/results/mechanism_controls/new_batch/job/ac.raw"
+        data = "retained control evidence\n"
+        self.put(path, data)
+        self.put(
+            "meridian-microphone/lab/results/mechanism_controls/new_batch/batch.sha256",
+            hashlib.sha256(data.encode()).hexdigest()
+            + "  results/mechanism_controls/new_batch/job/ac.raw\n",
+        )
+        report = project.verify_evidence(self.root, project.View(self.root))
+        self.assertEqual(report["status"], "pass")
+        self.assertEqual(report["uninventoried"], [])
+        self.put(path, "damaged control\n")
+        report = project.verify_evidence(self.root, project.View(self.root))
+        self.assertEqual(report["damaged"], [path])
+        (self.root / path).unlink()
+        report = project.verify_evidence(self.root, project.View(self.root))
+        self.assertEqual(report["missing"], [path])
+
     def test_missing_corrupt_and_uninventoried_waveforms_are_distinct(self):
         path = self.add_wave()
         self.assertEqual(

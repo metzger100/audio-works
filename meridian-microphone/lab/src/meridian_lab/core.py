@@ -5,6 +5,7 @@ import json
 import os
 from pathlib import Path
 import re
+import signal
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -312,23 +313,31 @@ VPR pressure_r 0 DC 0 AC 0
             env.pop("MERIDIAN_NGSPICE_BEHAVIOR", None)
         executable = os.environ.get("MERIDIAN_NGSPICE", str(ROOT / "tools/ngspice-run"))
         try:
-            run = subprocess.run(
+            run = subprocess.Popen(
                 [executable, "-n", "-b", "job.cir"],
                 cwd=folder,
                 env=env,
-                capture_output=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
                 text=True,
-                timeout=60,
+                start_new_session=True,
             )
-        except (subprocess.TimeoutExpired, OSError) as exc:
+            try:
+                stdout, stderr = run.communicate(timeout=60)
+            except subprocess.TimeoutExpired:
+                os.killpg(run.pid, signal.SIGKILL)
+                stdout, stderr = run.communicate()
+                (folder / "simulator.log").write_text(stdout + "\n" + stderr)
+                reason = "Simulator process-group timeout after60s; partial solver log and waveforms retained"
+                self.jobs.append({**job_provenance, "status": "error", "reason": reason})
+                raise SimulationError(reason) from None
+        except OSError as exc:
             (folder / "simulator.log").write_text(str(exc))
             self.jobs.append({**job_provenance, "status": "error", "reason": str(exc)})
             raise SimulationError(str(exc)) from exc
-        log = run.stdout + "\n" + run.stderr
+        log = stdout + "\n" + stderr
         (folder / "simulator.log").write_text(log)
-        # This exact advisory estimates all transient steps, even when TSTART limits
-        # saved data. It is not a convergence/model warning. Preserve it in the record;
-        # acceptance still requires complete finite output and all numerical checks.
+        # Resource advisories still require complete finite output and numerical checks.
         memory_advisory = r"(?m)^Warning: memory required[^\n]*\n\s+[^\n]*time steps,\n\s+is more than the DRAM memory available[^\n]*\n\s+Swapping data to SSD may slow down the simulation\.[\n]?"
         advisories = re.findall(memory_advisory, log)
         diagnostic_log = re.sub(memory_advisory, "Resource advisory recorded.\n", log)
@@ -378,7 +387,7 @@ VPR pressure_r 0 DC 0 AC 0
         step = 1 / frequency / samples
         return self.execute(
             "distortion",
-            f"tran {step:.16g} {duration:.16g} {settling:.16g} {step:.16g}\nwrite tran.raw all",
+            f"tran {step:.16g} {duration:.16g} 0 {step:.16g}\nwrite tran.raw all",
             ["tran.raw"],
             {"FREQ": frequency, "PRESSURE_PEAK": pressure_peak, **(overrides or {})},
         )["tran.raw"]

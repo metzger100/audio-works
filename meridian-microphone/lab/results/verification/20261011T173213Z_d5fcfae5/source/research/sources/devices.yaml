@@ -1,0 +1,95 @@
+S14:
+  title: TI JFE150 SLPS732B April2023
+  url: https://www.ti.com/lit/ds/symlink/jfe150.pdf
+  kind: primary_manufacturer_datasheet
+  evidence_date: '2026-10-05'
+  use: Guaranteed DC/bias limits; typical curves/capacitance/noise and ratings
+  limitation: Capacitance gate bias ambiguous; transfer/output figures conflict; no
+    production noise maxima or joint distribution
+S15:
+  title: TI JFE150 Generic SLPM366 and PSpice SLPM349I Final1.2
+  urls:
+  - https://www.ti.com/lit/zip/slpm366
+  - https://www.ti.com/lit/zip/slpm349i
+  kind: primary_vendor_models
+  evidence_date: '2026-10-05'
+  hashes_and_terms: ../models/semiconductor/registry.yaml
+  limitation: Same nominal electrical parameters; tested corners fail guaranteed limits;
+    redistribution not established
+S16:
+  title: TI OPA197 SBOS737C and PSpice SBOMA34D Final1.3
+  urls:
+  - https://www.ti.com/lit/ds/symlink/opa197.pdf
+  - https://www.ti.com/lit/zip/sboma34d
+  kind: primary_datasheet_and_vendor_model
+  evidence_date: '2026-10-05'
+  limitation: Tested mid-common-mode small-signal agreement; nonlinear/floating/production
+    behavior unqualified; redistribution not established
+S17:
+  title: Nexperia BC846/BC856 Rev9 datasheets and models
+  urls:
+  - https://assets.nexperia.com/documents/data-sheet/BC846_SER.pdf
+  - https://assets.nexperia.com/documents/data-sheet/BC856_BC857_BC858.pdf
+  - https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1
+  - https://assets.nexperia.com/documents/spice-model/BC856B.txt?download=1
+  kind: primary_datasheets_and_vendor_models
+  evidence_date: '2026-10-05'
+  limitation: NPN floating emitter node; child not vendor-approved; typical capacitance/NF
+    mismatch; KF absent; PNP header grade conflict; redistribution not established
+S18:
+  title: Nexperia 2N7002 Rev7 and failed model response
+  urls:
+  - https://assets.nexperia.com/documents/data-sheet/2N7002.pdf
+  - https://assets.nexperia.com/documents/spice-model/2N7002.txt?download=1
+  kind: primary_datasheet_and_acquisition_failure
+  evidence_date: '2026-10-05'
+  limitation: HTTP-success HTML is not SPICE; model behavior unsupported
+S19:
+  title: onsemi J113/MMBFJ113 alternative investigation
+  url: https://www.onsemi.com/download/data-sheet/pdf/mmbfj113-d.pdf
+  kind: primary_datasheet
+  evidence_date: '2026-10-05'
+  limitation: No audited model/exact active retail code/upper Idss/noise production
+    coverage or qualified substitute
+S21:
+  title: Vishay MOSFET model and variant investigation
+  urls:
+  - https://www.vishay.com/en/product/70860/tab/designtools-ppg/
+  - https://www.vishay.com/en/product/71333/tab/quality/
+  - https://www.vishay.com/zh/product/71333/tab/designtools-ppg/
+  kind: primary_manufacturer_listings
+  evidence_date: '2026-10-05'
+  limitation: 2N7002E E3/GE3 retailer-listed obsolete; 2N7002K-T1-GE3 further unacquired/unvalidated
+    research route
+S22:
+  title: Vishay 2N7002K Rev F datasheet and Rev B public SPICE archive
+  urls:
+  - https://www.vishay.com/docs/71333/2n7002k.pdf
+  - https://www.vishay.com/docs/77603/2n7002k_ps_revb.zip
+  - https://www.vishay.com/docs/73307/2n7002k_ps_revb.pdf
+  - https://www.vishay.com/en/product/71333/tab/quality/
+  kind: primary_datasheet_vendor_model_and_order_code_listing
+  evidence_date: '2026-10-09'
+  hashes_and_terms: ../models/semiconductor/registry.yaml
+  limitation: Unmodified typical model; no primary low-current noise spectrum found,
+    KF/gate leakage absent, no coupled process set. Table and plotted Ciss disagree.
+    Redistribution not established.
+S28:
+  title: Prompt06 circuit-role parts/model/passive evidence expansion
+  kind: primary_manufacturer_documents_models_and_dated_own_observations
+  evidence_date: '2026-10-09'
+  ledger: parts_sources_2026-10-09.yaml
+  matrix: devices/parts-database-expansion-001.yaml
+  register: procurement/parts_expansion_001_2026-10-09.yaml
+  limitation: Independent evidence states; public model and point agreement not production/noise/substitute/stock/patent
+    qualification; originals and failures retained privately
+S29:
+  title: Parts strengthening002 exact PNP, compatibility, passives and source handoff
+  kind: primary_manufacturer_documents_models_and_dated_own_observations
+  evidence_date: '2026-10-09'
+  ledger: parts_sources_expansion_002_2026-10-09.yaml
+  matrix: devices/parts-database-expansion-002.yaml
+  register: procurement/parts_expansion_002_2026-10-09.yaml
+  limitation: Strict source-stable finite controls; ignored terms/noise/floating errors
+    retained. Live orderability, implementation patent and physical/private preservation
+    incomplete.

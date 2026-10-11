@@ -5,7 +5,8 @@ from itertools import product
 import numpy as np
 
 from .core import SimulationError
-from .metrics import at_frequency, db, device_noise_totals, harmonic_spectrum, integrate_asd
+from .metrics import at_frequency, db, device_noise_totals, integrate_asd
+from .nonlinear import settled_spectrum
 
 
 def noise(sim, ctx):
@@ -87,24 +88,15 @@ def distortion(sim, ctx):
             settling=0.5,
             overrides={"LIN": 1, "POLDC": ctx["polarization_dc_v"]},
         )
-        m = harmonic_spectrum(wave["time"], wave.voltage("pp", "pn"), f)
-        # Compare final two coherent windows to detect incomplete settling.
-        cut = wave["time"].real[-1] - 16 / f
-        earlier = wave["time"].real <= cut
-        prior = harmonic_spectrum(
-            wave["time"].real[earlier], wave.voltage("pp", "pn").real[earlier], f
-        )
-        change = abs(prior["harmonics_v_rms"][0] / m["harmonics_v_rms"][0] - 1)
+        try:
+            m = settled_spectrum(wave["time"], wave.voltage("pp", "pn"), f, 0.5)
+        except ValueError as exc:
+            raise SimulationError(str(exc)) from exc
         m.update(
             pressure_pa_rms=level,
             pressure_spl_db=db(level / 20e-6),
-            settling_amplitude_fraction=float(change),
             capsule_mode="linearized_at_actual_DC_bias",
         )
-        if change > 1e-3:
-            raise SimulationError(
-                "Unsettled distortion waveform; extend simulation instead of accepting THD"
-            )
         limit = thresholds()["thd_at_1pa_percent" if level == 1 else "thd_at_135db_percent"][
             "value"
         ]
@@ -138,7 +130,10 @@ def headroom(sim, ctx):
                 settling=0.5,
                 overrides={"LIN": 1, "POLDC": ctx["polarization_dc_v"]},
             )
-            h = harmonic_spectrum(wave["time"], wave.voltage("pp", "pn"), 1000)
+            try:
+                h = settled_spectrum(wave["time"], wave.voltage("pp", "pn"), 1000, 0.5)
+            except ValueError as exc:
+                raise SimulationError(str(exc)) from exc
             if h["thd_percent"] <= limit:
                 lower = level
             else:

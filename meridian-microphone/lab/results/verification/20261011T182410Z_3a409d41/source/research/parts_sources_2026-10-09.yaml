@@ -1,0 +1,1305 @@
+schema_version: 1
+date: '2026-10-09'
+scope: Prompt06 role-gap research; own observations immutable; third-party bytes private
+question_source_matrix:
+- role: high_impedance
+  question: Only JFE150 at baseline; J113 no model. New dual and independent maker
+    allow DC comparisons, but current/flicker/high-field leakage and process correlation
+    block complete noise/charge controls.
+  primary_routes:
+  - https://www.ti.com/product/JFE150
+  - https://www.ti.com/product/JFE2140
+  - https://www.linearsystems.com/jfetamplifierssingles/lsk170-series
+  - https://www.linearsystems.com/jfet-amplifiers-duals/lsk389-series
+  - https://www.onsemi.com/design/tools-software/product-recommendation-tools-plus/jfet/products
+  followup: Freeze reduced charge-input oracle before candidate0012 alternatives;
+    compare actual100uA/2mA spectra and capsule45-100pF envelope.
+- role: low_noise_bipolar
+  question: BC850C adds ordinary high-beta/NF evidence; base-current authority still
+    conflicts with1Gohm leakage; no KF in either model.
+  primary_routes:
+  - https://www.nexperia.com/product/BC846B
+  - https://www.nexperia.com/product/BC850C
+  followup: Separate200uA Rs2k narrowband NF from voltage/current noise spectra and
+    low-current charge authority.
+- role: p48_power
+  question: PMBT5551 offers exact160V NPN model; open-emitter capacitance/leakage
+    warnings and no electrothermal/SOA model. Ordinary150V PNP remains documentary
+    with no acquired model.
+  primary_routes:
+  - https://www.nexperia.com/product/PMBT5551
+  - https://diotec.com/en/product/MMBT5551.html
+  - https://www.vishay.com/en/product/71333/tab/quality/
+  followup: DC current regulator with real resistor feedback, P48 feed drop, coupled
+    temperature, startup/reversal and dissipation oracle first.
+- role: balanced_output
+  question: Baseline output matching/leakage/noise unresolved. OPA1656 dual macro
+    acquired; power budget and floating/loaded current control untested.
+  primary_routes:
+  - https://www.nexperia.com/product/BC846B
+  - https://www.nexperia.com/product/BC856B
+  - https://www.nexperia.com/product/PMBT5551
+  - https://www.ti.com/product/OPA1656
+  followup: Derive total quiescent + load currents; exact complementary BJT model
+    prerequisite before balanced HV output experiments.
+- role: guard_servo
+  question: OPA928 supports grounded follower/noise at some supply/temperature points,
+    others warn/timeout. ADA4530 licence gate. No floating/guard-loaded/charge/noise
+    validation.
+  primary_routes:
+  - https://www.ti.com/product/OPA197
+  - https://www.ti.com/product/OPA928
+  - https://www.ti.com/product/LMP7721
+  followup: Grounded versus floating identical oracle and common-mode/guard load sweep;
+    humidity/board leakage remains physical unknown.
+- role: carrier
+  question: CD74HC4053PWR has primary current/leakage/capacitance evidence but no
+    acquired analog model; AD630 model route/terms and periodic noise unresolved.
+  primary_routes: []
+  followup: Continue isolated carrier oracle; real switch charge injection/Ron/leakage,
+    oscillator and demodulator synchronous noise prerequisite; no ideal-block credit.
+- role: protection
+  question: BAV199 one-diode syntax child passes75V25C leakage bound and0V1MHz cap
+    bound. Double package plus humidity/high-T/turn-on/recovery not qualified.
+  primary_routes:
+  - https://www.nexperia.com/product/BAV199
+  - https://www.ti.com/product/JFE2140
+  followup: Add protection only after actual node voltage and leakage-noise budget;5nA
+    worst bound forbids assuming femtoampere loading.
+- role: high_r
+  question: ExistingHVA12JA1G00 thickfilm high-V resistor; excess noise and surface
+    leakage unknown.500M series and CRHV are leads, no substitute qualification.
+  primary_routes: []
+  followup: Couple gate leak, DC authority, VCR, board leakage, TCR and dielectric
+    losses; documented limits are not a broadband law.
+- role: capacitors
+  question: 14baseline exact passives preserved; one new1nF C0G exact document. PET/PP
+    loss, insulation, absorption, dimensions and polar47uF parallel arrangements need
+    exact combinations.
+  primary_routes: []
+  followup: C0G1nF feedback/compensation control and PP series research; output electrolytic
+    optimization stays below bias/noise gaps.
+search_sessions:
+- record: research/device_sources/local/parts_expansion_001/web_01.json
+  sha256: a3f92418542e60f77a3babb5a9af4b258f11a2b18a8b82630c64a6be54961b8e
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: null
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries:
+  - site:ti.com/product/JFE2140 PSpice model SLPM noise
+  - site:onsemi.com MMBFJ113 J113 SPICE model active
+  - site:nexperia.com PMBT5551 PMBT5401 spice
+  - site:interfet.com JFET IF3602 IF170 LSK170 Linear Systems current production SPICE
+  actions: {}
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_02.json
+  sha256: e474c074eda6ac784711e309e21d23e13346f87cbaec273b984584d59a52a80c
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: null
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries:
+  - site:onsemi.com MMBFJ113 spice .lib J113 model
+  - site:diodes.com MMBFJ113 SPICE JFET
+  - site:linearsystems.com LSK170 LSK389 spice datasheet ordering
+  - site:interfet.com IF3602 IF170 datasheet model
+  actions: {}
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_03.json
+  sha256: d56a23082dfebafd0e03c735c7e8f4fa21a4aaea737a602f0e142c17477f438c
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: null
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries:
+  - site:nexperia.com PMBT5401 SPICE
+  - site:onsemi.com MMBT5551LT1G MMBT5401LT1G spice
+  - site:diodes.com MMBT5551 MMBT5401 spice model
+  - site:nexperia.com BC847C BC850C noise SPICE
+  actions: {}
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_04.json
+  sha256: 387d2f83b6d741787007bb23eccdd5026ad7aa561d2ae53db50339c4168fc865
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: null
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions: open TI JFE2140, Nexperia PMBT5551/PMBT5401, Linear LSK170 and Diodes MMBT5551
+    primary pages
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_05.json
+  sha256: 691bb939c3862317e377ef8098215146ae1e17ffb69a1cc7c7ac9d375a018ef9
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: null
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions: primary file links, model guides and CMOS/electrometer/carrier research
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_06.json
+  sha256: d519f0e053a3f5e786bbab9bcc50b9ed26f60516bcd58ba72d0e469bb6f9c29c
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: null
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions: guard, matched JFET, high voltage complementary BJT, protection and passive
+    exact evidence
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_07.json
+  sha256: 0e7eef2bc33e5997d277bdf24c3cc45a6d8546a4cedf489cff3a23da86f66368
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: null
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions: original file and passive/lifecycle follow-up
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_08.json
+  sha256: 9a7011b139c08df116b2ec08a1929045e20a3978b59888ac3af3c60f713c26f4
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: null
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries:
+  - site:nexperia.com "PMBT5401"
+  - site:diodes.com "MMBT5551.spice.txt"
+  - site:diodes.com "MMBT5401.spice.txt"
+  - site:linearsystems.com "LSK389" "Spice"
+  actions: ADA4530 model link
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_09.json
+  sha256: 8caa815b5aa65c25e688696b9878624519b4fe684e9e3a476a6c307670e16cb3
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: null
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions: high-R, film and dielectric research
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_10.json
+  sha256: 8b5300367b10e9c7daf35691c5bb90d2f9811493390db4ea0e2df10dc69f1695
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: null
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions: exact model discovery and baseline manufacturer portal refresh
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_11.json
+  sha256: 7431cbdac293f74da1dcbd76d49f35a69235820406d4d296bb6d806ceae25f88
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: null
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions: exact Germany retail route investigation
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_12.json
+  sha256: 7a08d4327acb16d0fe69233d934a57c8b72489cf563fa4c8f44c2b6927f6b5fe
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: null
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions: exact useful addition sourcing, alternative retailer
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_13.json
+  sha256: 765b09aa586a9df80cc2249bb75830419e074fb509ad8eabd3cdd0aa859aacd4
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: null
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions: independent routes and exact low noise/protection quantities
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_14.json
+  sha256: 1a29a7eef429022884271958294192b4308ca094c66b5c6cb4981640027f98fc
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: 2026-10-09 13:23:15 UTC
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries:
+  - q: site.diodes.com "MMBT5401.spice.txt"
+  - q: site:diotec.com MMBT5401 spice model
+  - q: site:nexperia.com "PMBT5401"
+  - q: site:onsemi.com "2N5457" "obsolete"
+  actions: {}
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_15.json
+  sha256: 9e0f82105884a2f3b26dd4e20af1276a6894249ed40088c23d392b16647e37a3
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: 2026-10-09 13:23:35 UTC
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions:
+    open:
+    - ref_id: https://diotec.com/en/product/MMBT5551.html
+    - ref_id: https://www.diodes.com/part/view/MMBT5401?BackID=0
+    - ref_id: https://www.diodes.com/spice/download/MMBT5401.spice.txt
+    search_query:
+    - q: '"MMBT5401.spice.txt" download'
+    - q: site:nexperia.com BF862 discontinued
+    - q: site:toshiba.semicon-storage.com 2SK170 discontinued
+    - q: site:digikey.de 2N5551BU MMBT5551LT1G 2N5401YBU
+    response_length: long
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_16.json
+  sha256: 1d7dc6e05357ae4a9ed8f22d100de6fd93469622183b51956a4c88ffedef52ae
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: 2026-10-09 13:23:54 UTC
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions:
+    open:
+    - ref_id: https://diotec.com/en/product/MMBT5551.html
+    response_length: medium
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_17.json
+  sha256: a827295edf3b7cd0285825418f1491dcff74ac3e8445f72959a448edb8865b92
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: 2026-10-09 13:24:22 UTC
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions:
+    click:
+    - ref_id: turn15view0
+      id: 66
+    - ref_id: turn15view0
+      id: 64
+    search_query:
+    - q: site:wima.de MKP 2 dielectric absorption dissipation insulation resistance
+        2026
+    - q: '"MKP2F031001B00JSSD" Germany Mouser'
+    - q: '"CC0603JRNPO0BN102" datasheet Germany'
+    - q: microphone JFET gate protection bootstrapping guard charge amplifier patents
+        H04R
+    response_length: long
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_18.json
+  sha256: 9c5a814f9abeb6c42257ccb5e7db42a6a28cc50ff9179fdf2ad3ae7bf858679b
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: 2026-10-09 13:24:55 UTC
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions:
+    open:
+    - ref_id: https://patents.google.com/patent/US9668045B1/en
+    - ref_id: https://patents.google.com/patent/US12021490B2/en
+    - ref_id: https://patents.google.com/patent/US20110085683A1/en
+    - ref_id: https://register.epo.org/smartSearch?query=pn%3DUS20110085683
+    response_length: short
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_19.json
+  sha256: 1e477b5e9c903ebd4dc3d29d94c00d5ef1d422ac2b742bb33f95f5f9772538b2
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: 2026-10-09 13:25:28 UTC
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions:
+    search_query:
+    - q: '"LSK389A" "SOIC" site:digikey.de'
+    - q: '"JFE2140DR" site:tme.eu'
+    - q: '"PMBT5551,215" site:tme.eu'
+    - q: '"OPA928DT" site:digikey.de'
+    find:
+    - ref_id: turn17view1
+      pattern: Claims (
+    - ref_id: turn17view2
+      pattern: Claims (
+    response_length: long
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_20.json
+  sha256: bde960531f9dfb3e14a399176e0d97073275adf3c98ecde37e467261b4237bef
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: 2026-10-09 13:35:43 UTC
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions:
+    search_query:
+    - q: site:ngspice.sourceforge.io JFET NLEV GDSNOI MFG LTspice compatibility ngbehavior
+    - q: site:ti.com LMP7721 model bias current fixed noise macro limitations
+    - q: '"JFE2140DR" "Mouser" stock 2026'
+    open:
+    - ref_id: https://patentcenter.uspto.gov/applications/14852618
+    - ref_id: https://register.dpma.de/DPMAregister/pat/einsteiger
+    response_length: short
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_21.json
+  sha256: 32333f113b72814a4034a1b7488277d6f45d7b238efc3e917104747f3c0672dd
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: 2026-10-09 13:37:36 UTC
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions:
+    open:
+    - ref_id: https://www.digikey.de/de/products/detail/texas-instruments/JFE2140DR/15666863
+    - ref_id: https://www.digikey.de/de/products/detail/linear-integrated-systems-inc/LSK170A-TO-92-3L-ROHS/14312281
+    - ref_id: https://www.digikey.de/en/products/detail/linear-integrated-systems-inc/LSK389A-SOIC-8L-ROHS/15930279
+    - ref_id: https://www.digikey.de/en/terms-and-conditions
+    - ref_id: https://www.digikey.de/en/help-support/delivery-information
+    response_length: short
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_22.json
+  sha256: 60838ab4b164a7a1778f287fc6e1271daba3e68dc0c7f444e24b2fec5b9b26fb
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: 2026-10-09 13:38:04 UTC
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions:
+    find:
+    - ref_id: turn20view3
+      pattern: not purchasing
+    - ref_id: turn20view3
+      pattern: DDP
+    - ref_id: turn20view4
+      pattern: 25 EUR
+    - ref_id: turn20view4
+      pattern: 75 EUR
+    open:
+    - ref_id: turn17view1
+      lineno: 475
+    - ref_id: turn17view0
+      lineno: 416
+    - ref_id: turn17view2
+      lineno: 288
+    response_length: short
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_23.json
+  sha256: a88079912eac2042c002387dcccc5e615974abf0be418d013ba8314a6f50b79c
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: 2026-10-09 13:50:35 UTC
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions:
+    search_query:
+    - q: site:microchip.com LND150N3-G SPICE depletion mode model
+    - q: site:infineon.com BSS139 spice depletion 250V
+    - q: '"LND150N3-G" site:digikey.de'
+    response_length: short
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+- record: research/device_sources/local/parts_expansion_001/web_24.json
+  sha256: 373dc80b7009be66b77bbedbc609970c2287618a9397d761ce0894074b8e1097
+  provider: web.run search/open/click/find
+  date: '2026-10-09'
+  timestamp_utc: 2026-10-09 13:51:30 UTC
+  filters: Actual query text/domain restrictions/actions retained; no unstated recency
+    filter.
+  queries: []
+  actions:
+    open:
+    - ref_id: https://www.infineon.com/part/BSS139
+    - ref_id: https://www.microchip.com/en-us/application-notes/and16
+    response_length: short
+  limitations: Provider crawl ages and access errors are observations, not live stock/current
+    legal status.
+acquisitions:
+- id: ada4530_datasheet
+  url: https://www.analog.com/media/en/technical-documentation/data-sheets/ADA4530-1.pdf
+  timestamp_utc: '2026-10-09T13:14:50.405216+00:00'
+  http: 0
+  effective_url: https://www.analog.com/media/en/technical-documentation/data-sheets/ADA4530-1.pdf
+  mime: null
+  file_type: empty_or_other
+  bytes: 0
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/ada4530_datasheet/receipt.json
+  original: null
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: ada4530_page
+  url: https://www.analog.com/en/products/ada4530-1.html
+  timestamp_utc: '2026-10-09T13:14:50.410753+00:00'
+  http: 0
+  effective_url: https://www.analog.com/en/products/ada4530-1.html
+  mime: null
+  file_type: empty_or_other
+  bytes: 0
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/ada4530_page/receipt.json
+  original: null
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: bav199_datasheet
+  url: https://assets.nexperia.com/documents/data-sheet/BAV199.pdf
+  timestamp_utc: '2026-10-09T13:16:13.172551+00:00'
+  http: 200
+  effective_url: https://assets.nexperia.com/documents/data-sheet/BAV199.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 669108
+  sha256: ab2f26d003e3c1d8f7e4e7ac674ae055849970bf7b392a7d5d31eca443aab9e2
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/bav199_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/bav199_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: bav199_model_attempt
+  url: https://assets.nexperia.com/documents/spice-model/BAV199.txt?download=1
+  timestamp_utc: '2026-10-09T13:16:12.662162+00:00'
+  http: 200
+  effective_url: https://assets.nexperia.com/documents/spice-model/BAV199.txt?download=1
+  mime: text/plain; charset=utf-8
+  file_type: spice_text
+  bytes: 710
+  sha256: 37ca9619403894293238c41fbe05a9748c1d4d7d0a17b71ddde6dc2a8ba104e6
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/bav199_model_attempt/receipt.json
+  original: research/device_sources/local/parts_expansion_001/bav199_model_attempt/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: bc850_datasheet
+  url: https://assets.nexperia.com/documents/data-sheet/BC849_BC850.pdf
+  timestamp_utc: '2026-10-09T13:16:12.921999+00:00'
+  http: 200
+  effective_url: https://www.nexperia.com/404.html?query=/documents/data-sheet/BC849_BC850.pdf
+  mime: text/html
+  file_type: html
+  bytes: 1874
+  sha256: 8e641b2b4f578e44f7570d8d6af42c7bfa03949b83623953c9198b4e36833e4f
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/bc850_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/bc850_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: bc850c_datasheet_exact
+  url: https://assets.nexperia.com/documents/data-sheet/BC850C.pdf
+  timestamp_utc: '2026-10-09T13:17:25.888626+00:00'
+  http: 200
+  effective_url: https://assets.nexperia.com/documents/data-sheet/BC850C.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 202054
+  sha256: 7be422c96ed19a0c874334d24811f714d8634a65d2f83505b5974f23257ed5c1
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/bc850c_datasheet_exact/receipt.json
+  original: research/device_sources/local/parts_expansion_001/bc850c_datasheet_exact/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: bc850c_model_attempt
+  url: https://assets.nexperia.com/documents/spice-model/BC850C.txt?download=1
+  timestamp_utc: '2026-10-09T13:16:12.055460+00:00'
+  http: 200
+  effective_url: https://assets.nexperia.com/documents/spice-model/BC850C.txt?download=1
+  mime: text/plain; charset=utf-8
+  file_type: spice_text
+  bytes: 1583
+  sha256: ef3fc2c3776eaf52acbfb5b7955eda8efd9fa714dd2158aa015ac42610bca399
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/bc850c_model_attempt/receipt.json
+  original: research/device_sources/local/parts_expansion_001/bc850c_model_attempt/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: bss139_datasheet
+  url: https://www.infineon.com/assets/row/public/documents/non-assigned/49/infineon-bss139-datasheet-en.pdf
+  timestamp_utc: '2026-10-09T13:51:35.293954+00:00'
+  http: 404
+  effective_url: https://www.infineon.com/assets/row/public/documents/non-assigned/49/infineon-bss139-datasheet-en.pdf
+  mime: text/html;charset=utf-8
+  file_type: html
+  bytes: 1526659
+  sha256: f87c9ace75a0cbd26be9916cd85fa63284baca71363913537d70e4c3f65f6df7
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/bss139_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/bss139_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: digikey_delivery
+  url: https://www.digikey.de/en/help-support/delivery-information
+  timestamp_utc: '2026-10-09T13:17:26.173171+00:00'
+  http: 403
+  effective_url: https://www.digikey.de/en/help-support/delivery-information
+  mime: text/html; charset=UTF-8
+  file_type: html
+  bytes: 5534
+  sha256: ca5c10c15783c2b625af487910a39ce31666258acfc5f5268b986c2d031fc04a
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/digikey_delivery/receipt.json
+  original: research/device_sources/local/parts_expansion_001/digikey_delivery/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: digikey_mmbt5401
+  url: https://www.digikey.de/de/products/detail/diodes-incorporated/MMBT5401-7-F/804904
+  timestamp_utc: '2026-10-09T13:17:26.125047+00:00'
+  http: 403
+  effective_url: https://www.digikey.de/de/products/detail/diodes-incorporated/MMBT5401-7-F/804904
+  mime: text/html; charset=UTF-8
+  file_type: html
+  bytes: 5621
+  sha256: 9f5f21dad8e6fb1ee83ee867d5afd694f56d0021ce1ac5acd7260a2a6bc6e1d7
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/digikey_mmbt5401/receipt.json
+  original: research/device_sources/local/parts_expansion_001/digikey_mmbt5401/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: digikey_pmbt5551
+  url: https://www.digikey.de/en/products/detail/nexperia-usa-inc/PMBT5551-215/1157645
+  timestamp_utc: '2026-10-09T13:17:25.787650+00:00'
+  http: 403
+  effective_url: https://www.digikey.de/en/products/detail/nexperia-usa-inc/PMBT5551-215/1157645
+  mime: text/html; charset=UTF-8
+  file_type: html
+  bytes: 5615
+  sha256: dc59e7c40ab414086a3c45df46f9f2efe4666b9da5ae8fb5f4ef5c86f3142661
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/digikey_pmbt5551/receipt.json
+  original: research/device_sources/local/parts_expansion_001/digikey_pmbt5551/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: digikey_terms
+  url: https://www.digikey.de/en/terms-and-conditions
+  timestamp_utc: '2026-10-09T13:17:26.131800+00:00'
+  http: 403
+  effective_url: https://www.digikey.de/en/terms-and-conditions
+  mime: text/html; charset=UTF-8
+  file_type: html
+  bytes: 5453
+  sha256: 92889199773380ca3eb93009f3a52a7044bc0767e3ec3e8a98bc6c6220a1f8e5
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/digikey_terms/receipt.json
+  original: research/device_sources/local/parts_expansion_001/digikey_terms/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: diodes5401_download_route
+  url: https://www.diodes.com/spice/download/MMBT5401.spice.txt
+  timestamp_utc: '2026-10-09T13:24:04.044709+00:00'
+  http: 404
+  effective_url: https://www.diodes.com/spice/download/MMBT5401.spice.txt
+  mime: text/html; charset=utf-8
+  file_type: html
+  bytes: 282461
+  sha256: 276ec0208037ac08ba2ac54615c144040cb3759a507aef4f4ddc6dc548982229
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/diodes5401_download_route/receipt.json
+  original: research/device_sources/local/parts_expansion_001/diodes5401_download_route/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: diodes5401_model_attempt
+  url: https://www.diodes.com/assets/Spice-Models/MMBT5401.txt
+  timestamp_utc: '2026-10-09T13:16:12.616986+00:00'
+  http: 404
+  effective_url: https://www.diodes.com/assets/Spice-Models/MMBT5401.txt
+  mime: text/html; charset=utf-8
+  file_type: html
+  bytes: 282449
+  sha256: baff1a0368bc4974104d6eb229df2e01584aacefa0bebadb6180aa4f3c00b428
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/diodes5401_model_attempt/receipt.json
+  original: research/device_sources/local/parts_expansion_001/diodes5401_model_attempt/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: diodes5401_spice_txt
+  url: https://www.diodes.com/assets/Spice-Models/MMBT5401.spice.txt
+  timestamp_utc: '2026-10-09T13:17:25.750471+00:00'
+  http: 404
+  effective_url: https://www.diodes.com/assets/Spice-Models/MMBT5401.spice.txt
+  mime: text/html; charset=utf-8
+  file_type: html
+  bytes: 282449
+  sha256: baff1a0368bc4974104d6eb229df2e01584aacefa0bebadb6180aa4f3c00b428
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/diodes5401_spice_txt/receipt.json
+  original: research/device_sources/local/parts_expansion_001/diodes5401_spice_txt/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: diodes5551_download_route
+  url: https://www.diodes.com/spice/download/MMBT5551.spice.txt
+  timestamp_utc: '2026-10-09T13:24:04.186132+00:00'
+  http: 404
+  effective_url: https://www.diodes.com/spice/download/MMBT5551.spice.txt
+  mime: text/html; charset=utf-8
+  file_type: html
+  bytes: 282446
+  sha256: 992bc3e254f3b9bddf93b0615c5acbe91a87404532a2023c21f6035720e605be
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/diodes5551_download_route/receipt.json
+  original: research/device_sources/local/parts_expansion_001/diodes5551_download_route/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: diodes5551_model_attempt
+  url: https://www.diodes.com/assets/Spice-Models/MMBT5551.txt
+  timestamp_utc: '2026-10-09T13:16:12.488217+00:00'
+  http: 404
+  effective_url: https://www.diodes.com/assets/Spice-Models/MMBT5551.txt
+  mime: text/html; charset=utf-8
+  file_type: html
+  bytes: 282449
+  sha256: baff1a0368bc4974104d6eb229df2e01584aacefa0bebadb6180aa4f3c00b428
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/diodes5551_model_attempt/receipt.json
+  original: research/device_sources/local/parts_expansion_001/diodes5551_model_attempt/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: diodes5551_spice_txt
+  url: https://www.diodes.com/assets/Spice-Models/MMBT5551.spice.txt
+  timestamp_utc: '2026-10-09T13:17:25.743427+00:00'
+  http: 404
+  effective_url: https://www.diodes.com/assets/Spice-Models/MMBT5551.spice.txt
+  mime: text/html; charset=utf-8
+  file_type: html
+  bytes: 282449
+  sha256: baff1a0368bc4974104d6eb229df2e01584aacefa0bebadb6180aa4f3c00b428
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/diodes5551_spice_txt/receipt.json
+  original: research/device_sources/local/parts_expansion_001/diodes5551_spice_txt/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: diodes_5401_datasheet
+  url: https://www.diodes.com/datasheet/download/MMBT5401.pdf
+  timestamp_utc: '2026-10-09T13:14:50.976988+00:00'
+  http: 200
+  effective_url: https://www.diodes.com/datasheet/download/MMBT5401.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 395677
+  sha256: 1515e425149f78c5e350f8c09aa98ab5ed6b1745420c8f7ef40811d783f71ab2
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/diodes_5401_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/diodes_5401_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: diodes_5401_page
+  url: https://www.diodes.com/part/view/MMBT5401
+  timestamp_utc: '2026-10-09T13:14:49.250430+00:00'
+  http: 403
+  effective_url: https://www.diodes.com/part/view/MMBT5401
+  mime: text/html; charset=UTF-8
+  file_type: html
+  bytes: 5416
+  sha256: 0c0afb66d3d478c4f3ae057c3d8dce94676ab532c3ed44bb78ea2eae4ca7971a
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/diodes_5401_page/receipt.json
+  original: research/device_sources/local/parts_expansion_001/diodes_5401_page/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: diodes_5551_datasheet
+  url: https://www.diodes.com/datasheet/download/MMBT5551.pdf
+  timestamp_utc: '2026-10-09T13:14:50.032716+00:00'
+  http: 200
+  effective_url: https://www.diodes.com/datasheet/download/MMBT5551.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 413884
+  sha256: f1eb3b2c83a35a2fc8219d9e1d3decfd578facb85b3bd1b04e5fc67f75fca317
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/diodes_5551_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/diodes_5551_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: diodes_5551_page
+  url: https://www.diodes.com/part/view/MMBT5551
+  timestamp_utc: '2026-10-09T13:14:49.233328+00:00'
+  http: 403
+  effective_url: https://www.diodes.com/part/view/MMBT5551
+  mime: text/html; charset=UTF-8
+  file_type: html
+  bytes: 5416
+  sha256: 352acb58bf040183cfd5cd0b98714051e3a0f6f5f134c6032dcafdf151d5722c
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/diodes_5551_page/receipt.json
+  original: research/device_sources/local/parts_expansion_001/diodes_5551_page/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: diodes_mmbf_j113_model_attempt
+  url: https://www.diodes.com/assets/Spice-Models/MMBFJ113.txt
+  timestamp_utc: '2026-10-09T13:16:14.535925+00:00'
+  http: 404
+  effective_url: https://www.diodes.com/assets/Spice-Models/MMBFJ113.txt
+  mime: text/html; charset=utf-8
+  file_type: html
+  bytes: 282449
+  sha256: baff1a0368bc4974104d6eb229df2e01584aacefa0bebadb6180aa4f3c00b428
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/diodes_mmbf_j113_model_attempt/receipt.json
+  original: research/device_sources/local/parts_expansion_001/diodes_mmbf_j113_model_attempt/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: diotec5401_datasheet
+  url: https://diotec.com/request/datasheet/mmbt5401.pdf
+  timestamp_utc: '2026-10-09T13:25:32.858261+00:00'
+  http: 200
+  effective_url: https://diotec.com/request/datasheet/mmbt5401.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 248529
+  sha256: 746482eb2b3b64423e5b1670b06a1c8a116df637962985007dc012f10589112a
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/diotec5401_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/diotec5401_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: diotec5401_page
+  url: https://diotec.com/en/product/MMBT5401.html
+  timestamp_utc: '2026-10-09T13:24:01.260579+00:00'
+  http: 200
+  effective_url: https://diotec.com/en/product/MMBT5401.html
+  mime: text/html; charset=UTF-8
+  file_type: html
+  bytes: 54903
+  sha256: b85d2f611cf301303f0a7587a36e1f3ee7482ee226b85081181273fceea55c33
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/diotec5401_page/receipt.json
+  original: research/device_sources/local/parts_expansion_001/diotec5401_page/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: diotec5551_datasheet
+  url: https://diotec.com/request/datasheet/mmbt5551.pdf
+  timestamp_utc: '2026-10-09T13:25:32.875445+00:00'
+  http: 200
+  effective_url: https://diotec.com/request/datasheet/mmbt5551.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 287061
+  sha256: 227f5fe089670eeeb14ee175c873dee896d74406611c3265defe3b3aa38c61a2
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/diotec5551_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/diotec5551_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: diotec5551_model
+  url: https://diotec.com/request/spice/mmbt5551.zip
+  timestamp_utc: '2026-10-09T13:25:32.526123+00:00'
+  http: 200
+  effective_url: https://diotec.com/request/spice/mmbt5551.zip
+  mime: application/zip
+  file_type: zip
+  bytes: 1435
+  sha256: b756d89d7cf4c83efe760373cb5ff18e8f47f78925736692a2af6f603b422f81
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/diotec5551_model/receipt.json
+  original: research/device_sources/local/parts_expansion_001/diotec5551_model/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: diotec5551_page
+  url: https://diotec.com/en/product/MMBT5551.html
+  timestamp_utc: '2026-10-09T13:24:01.266628+00:00'
+  http: 200
+  effective_url: https://diotec.com/en/product/MMBT5551.html
+  mime: text/html; charset=UTF-8
+  file_type: html
+  bytes: 58094
+  sha256: 6f1ec46707253eceff22c35171e62ffc573642776e122e199fadbb9db377f8d7
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/diotec5551_page/receipt.json
+  original: research/device_sources/local/parts_expansion_001/diotec5551_page/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: interfet_3602_datasheet
+  url: https://www.interfet.com/jfet-datasheets/jfet-if3602-interfet.pdf
+  timestamp_utc: '2026-10-09T13:14:52.066741+00:00'
+  http: 403
+  effective_url: https://interfet.com/jfet-master-table/
+  mime: text/html; charset=UTF-8
+  file_type: html
+  bytes: 5490
+  sha256: 47439ab45823a562c91fcaccefef5d36a5a99981a53da2db01ad985a18b2f739
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/interfet_3602_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/interfet_3602_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: interfet_models
+  url: https://www.interfet.com/jfet-datasheets/jfet-spice-standardjft-ctc-026-interfet.pdf
+  timestamp_utc: '2026-10-09T13:14:51.279715+00:00'
+  http: 403
+  effective_url: https://interfet.com/jfet-master-table/
+  mime: text/html; charset=UTF-8
+  file_type: html
+  bytes: 5490
+  sha256: 0c3ca66d00bad4529bd962e8173dec77285a968ab0aa286b0fb178eb55e02c6a
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/interfet_models/receipt.json
+  original: research/device_sources/local/parts_expansion_001/interfet_models/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: jfe2140_app
+  url: https://www.ti.com/lit/pdf/sboa563
+  timestamp_utc: '2026-10-09T13:14:47.922126+00:00'
+  http: 200
+  effective_url: https://www.ti.com/lit/an/sboa563/sboa563.pdf?ts=1791551687134
+  mime: application/pdf
+  file_type: pdf
+  bytes: 592040
+  sha256: a5353ac351757992ad1d8d490cbaee743a4a35c70a7f972e313650afc5839db2
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/jfe2140_app/receipt.json
+  original: research/device_sources/local/parts_expansion_001/jfe2140_app/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: jfe2140_datasheet
+  url: https://www.ti.com/lit/ds/symlink/jfe2140.pdf
+  timestamp_utc: '2026-10-09T13:14:47.829544+00:00'
+  http: 200
+  effective_url: https://www.ti.com/lit/ds/symlink/jfe2140.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 2540085
+  sha256: baeb38d1596ab468e9c8d0443afc5286e90fe3074001a81c660258767deb46a3
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/jfe2140_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/jfe2140_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: jfe2140_pspice
+  url: https://www.ti.com/lit/zip/slpm355
+  timestamp_utc: '2026-10-09T13:14:47.329140+00:00'
+  http: 200
+  effective_url: https://www.ti.com/lit/mo/slpm355/slpm355.zip?ts=1791551631681
+  mime: application/zip
+  file_type: zip
+  bytes: 54307
+  sha256: c73f18d89a41ee950981736232e0e4b07c5e6bf23eed04d675b9701f4880cf8e
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/jfe2140_pspice/receipt.json
+  original: research/device_sources/local/parts_expansion_001/jfe2140_pspice/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: jfe2140_tina
+  url: https://www.ti.com/lit/zip/slpm357
+  timestamp_utc: '2026-10-09T13:14:47.271396+00:00'
+  http: 200
+  effective_url: https://www.ti.com/lit/mo/slpm357/slpm357.zip?ts=1791551686793
+  mime: application/zip
+  file_type: zip
+  bytes: 2986
+  sha256: 76b5501c9f331d64b7662503b63e3498ba34c1d2cd31320778161470d0d863ba
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/jfe2140_tina/receipt.json
+  original: research/device_sources/local/parts_expansion_001/jfe2140_tina/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: jfet_sensor_app
+  url: https://www.ti.com/lit/pdf/sboa589
+  timestamp_utc: '2026-10-09T13:14:48.284126+00:00'
+  http: 200
+  effective_url: https://www.ti.com/lit/ab/sboa589/sboa589.pdf?ts=1791543728562
+  mime: application/pdf
+  file_type: pdf
+  bytes: 462954
+  sha256: ab80261777885d98d33fbf278d32e7ef7a9c0888eabddac547e4494f84240ad7
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/jfet_sensor_app/receipt.json
+  original: research/device_sources/local/parts_expansion_001/jfet_sensor_app/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: lmp7721_datasheet
+  url: https://www.ti.com/lit/ds/symlink/lmp7721.pdf
+  timestamp_utc: '2026-10-09T13:50:41.020765+00:00'
+  http: 200
+  effective_url: https://www.ti.com/lit/ds/symlink/lmp7721.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 800234
+  sha256: 162b4794e0aee249a75b6f93758cebacab1e5a26fc7eae2f2c9c4a3afdc0562e
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/lmp7721_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/lmp7721_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: lmp7721_model
+  url: https://www.ti.com/lit/zip/snom096d
+  timestamp_utc: '2026-10-09T13:24:02.952164+00:00'
+  http: 200
+  effective_url: https://www.ti.com/lit/mo/snom096d/snom096d.zip?ts=1791552242392
+  mime: application/zip
+  file_type: zip
+  bytes: 31131
+  sha256: bdc5776a44d34d956e499e0605ad5e47a097fc36e990ae12e09503df7114284b
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/lmp7721_model/receipt.json
+  original: research/device_sources/local/parts_expansion_001/lmp7721_model/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: lnd150_datasheet
+  url: https://ww1.microchip.com/downloads/en/DeviceDoc/LND150-LND250-N-Channel-Depletion-Mode-DMOS-FETs-Data-Sheet-20005454A.pdf
+  timestamp_utc: '2026-10-09T13:51:35.414967+00:00'
+  http: 200
+  effective_url: https://ww1.microchip.com/downloads/en/DeviceDoc/LND150-LND250-N-Channel-Depletion-Mode-DMOS-FETs-Data-Sheet-20005454A.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 1263005
+  sha256: 19f2981536ea3fcc9bf88dcf8a5b4531d10b115d55c5b724a84ab9173d64dc57
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/lnd150_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/lnd150_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: lsk170_datasheet
+  url: https://www.linearsystems.com/_files/ugd/7e8069_a086ff7323054b5da3b91e364c90b3d4.pdf
+  timestamp_utc: '2026-10-09T13:14:48.488540+00:00'
+  http: 200
+  effective_url: https://www.linearsystems.com/_files/ugd/7e8069_a086ff7323054b5da3b91e364c90b3d4.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 1176056
+  sha256: a1657555b571914568504f5e90efb1868ef76ec63b4a0e5d1560d710482e0cf3
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/lsk170_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/lsk170_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: lsk170_model_pdf
+  url: https://www.linearsystems.com/_files/ugd/4be30b_c1ab091e16024893879338ec7c8c1db4.pdf
+  timestamp_utc: '2026-10-09T13:16:12.164629+00:00'
+  http: 200
+  effective_url: https://c06d776a-66b9-49fd-bc0b-a9f0bad8162c.filesusr.com/ugd/4be30b_c1ab091e16024893879338ec7c8c1db4.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 34031
+  sha256: 1d384f4ee3510906a80798188a8a35bd8208ab053b81190c6896a329a1ef62a1
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/lsk170_model_pdf/receipt.json
+  original: research/device_sources/local/parts_expansion_001/lsk170_model_pdf/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: lsk170_page
+  url: https://www.linearsystems.com/jfetamplifierssingles/lsk170-series
+  timestamp_utc: '2026-10-09T13:14:48.052780+00:00'
+  http: 200
+  effective_url: https://www.linearsystems.com/jfetamplifierssingles/lsk170-series
+  mime: text/html; charset=UTF-8
+  file_type: html
+  bytes: 898568
+  sha256: 657323560702bea417cd11b8d730698091b8c6abe16ee345d4da82363d64f583
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/lsk170_page/receipt.json
+  original: research/device_sources/local/parts_expansion_001/lsk170_page/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: lsk389_datasheet
+  url: https://www.linearsystems.com/_files/ugd/7e8069_c90834b817214602abcbf263293295f2.pdf
+  timestamp_utc: '2026-10-09T13:17:24.961761+00:00'
+  http: 200
+  effective_url: https://www.linearsystems.com/_files/ugd/7e8069_c90834b817214602abcbf263293295f2.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 567818
+  sha256: da78812493368ad6d54396693d05aa7561b7959e636c5bd52f164a2991b7d7a0
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/lsk389_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/lsk389_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: lsk389_model_pdf
+  url: https://www.linearsystems.com/_files/ugd/4be30b_3b75f40e1a364550ac5a47dd56b4eff6.pdf
+  timestamp_utc: '2026-10-09T13:17:25.467251+00:00'
+  http: 200
+  effective_url: https://c06d776a-66b9-49fd-bc0b-a9f0bad8162c.filesusr.com/ugd/4be30b_3b75f40e1a364550ac5a47dd56b4eff6.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 232947
+  sha256: 66eb1b112b6fc8751e63b59ab0871e81981479aa40f1ba490a498908301d04ce
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/lsk389_model_pdf/receipt.json
+  original: research/device_sources/local/parts_expansion_001/lsk389_model_pdf/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: lsk389_page
+  url: https://www.linearsystems.com/jfet-amplifiers-duals/lsk389-series
+  timestamp_utc: '2026-10-09T13:16:11.649055+00:00'
+  http: 200
+  effective_url: https://www.linearsystems.com/jfet-amplifiers-duals/lsk389-series
+  mime: text/html; charset=UTF-8
+  file_type: html
+  bytes: 899299
+  sha256: 0e2378605c75e73aa119612378610ba9cae5ea33eae4c492bc798e4e838870cf
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/lsk389_page/receipt.json
+  original: research/device_sources/local/parts_expansion_001/lsk389_page/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: mmbfj113_datasheet
+  url: https://www.onsemi.com/download/data-sheet/pdf/mmbfj113-d.pdf
+  timestamp_utc: '2026-10-09T13:14:48.489188+00:00'
+  http: 403
+  effective_url: https://www.onsemi.com/download/data-sheet/pdf/mmbfj113-d.pdf
+  mime: text/html
+  file_type: html
+  bytes: 426
+  sha256: 016795e8ffc68bc3ee05cfcf01712f634b2a3867bf9a8a8c35a6ff0ba06fb796
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/mmbfj113_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/mmbfj113_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: opa1656_datasheet
+  url: https://www.ti.com/lit/ds/symlink/opa1656.pdf
+  timestamp_utc: '2026-10-09T13:24:03.774903+00:00'
+  http: 200
+  effective_url: https://www.ti.com/lit/ds/symlink/opa1656.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 3302860
+  sha256: 4243b58e553e6f27274858637c596596dbb89bba94d05b44fedd32877d988e9d
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/opa1656_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/opa1656_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: opa1656_model
+  url: https://www.ti.com/lit/zip/sbomaw6c
+  timestamp_utc: '2026-10-09T13:24:02.728275+00:00'
+  http: 200
+  effective_url: https://www.ti.com/lit/mo/sbomaw6c/sbomaw6c.zip?ts=1791552242343
+  mime: application/zip
+  file_type: zip
+  bytes: 28584
+  sha256: 8f696ee73bfb9a5d7d15b70ed27629dfe5b92ba54e8da894aa25fe51d3cb312f
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/opa1656_model/receipt.json
+  original: research/device_sources/local/parts_expansion_001/opa1656_model/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: opa928_datasheet
+  url: https://www.ti.com/lit/ds/symlink/opa928.pdf
+  timestamp_utc: '2026-10-09T13:14:51.505507+00:00'
+  http: 200
+  effective_url: https://www.ti.com/lit/ds/symlink/opa928.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 3413882
+  sha256: 06ab87dcd0ffd4d319b164f763bee44707a40593c6df60930d3e1f1fe5a936ad
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/opa928_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/opa928_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: opa928_evm_guide
+  url: https://www.ti.com/lit/pdf/sbou282
+  timestamp_utc: '2026-10-09T13:50:41.197863+00:00'
+  http: 200
+  effective_url: https://www.ti.com/lit/ug/sbou282a/sbou282a.pdf?ts=1791501176407
+  mime: application/pdf
+  file_type: pdf
+  bytes: 1739803
+  sha256: d5b801b7d8403df3c817ba4f0854e6792b4e323071f52f82ac3c3419b610914f
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/opa928_evm_guide/receipt.json
+  original: research/device_sources/local/parts_expansion_001/opa928_evm_guide/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: opa928_model
+  url: https://www.ti.com/lit/zip/sbomcc0a
+  timestamp_utc: '2026-10-09T13:14:50.995160+00:00'
+  http: 200
+  effective_url: https://www.ti.com/lit/mo/sbomcc0a/sbomcc0a.zip?ts=1791551690613
+  mime: application/zip
+  file_type: zip
+  bytes: 96861
+  sha256: b4afe47a29fa45a608298f7af483a90f6dee90903e57445afc2704b5eee468e4
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/opa928_model/receipt.json
+  original: research/device_sources/local/parts_expansion_001/opa928_model/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: panasonic_fr_datasheet
+  url: https://industrial.panasonic.com/cdbs/www-data/pdf/RDF0000/ABA0000C1259.pdf
+  timestamp_utc: '2026-10-09T13:16:48.187385+00:00'
+  http: 0
+  effective_url: https://industrial.panasonic.com/cdbs/www-data/pdf/RDF0000/ABA0000C1259.pdf
+  mime: null
+  file_type: empty_or_other
+  bytes: 0
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/panasonic_fr_datasheet/receipt.json
+  original: null
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: pmbt5551_datasheet
+  url: https://assets.nexperia.com/documents/data-sheet/PMBT5551.pdf
+  timestamp_utc: '2026-10-09T13:14:48.711103+00:00'
+  http: 200
+  effective_url: https://assets.nexperia.com/documents/data-sheet/PMBT5551.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 614139
+  sha256: 481051a143a71fb6223ce52c3f5061525fea4fb70b2a41672a3a22399c114622
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/pmbt5551_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/pmbt5551_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: pmbt5551_model_attempt
+  url: https://assets.nexperia.com/documents/spice-model/PMBT5551.txt?download=1
+  timestamp_utc: '2026-10-09T13:14:48.765303+00:00'
+  http: 200
+  effective_url: https://assets.nexperia.com/documents/spice-model/PMBT5551.txt?download=1
+  mime: text/plain; charset=utf-8
+  file_type: spice_text
+  bytes: 1587
+  sha256: 9f3e7425c5ebd57b8709851f271354dd46ddc42a4503b280d248fd015f27deb0
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/pmbt5551_model_attempt/receipt.json
+  original: research/device_sources/local/parts_expansion_001/pmbt5551_model_attempt/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: stackpole_hva_datasheet
+  url: https://www.seielect.com/catalog/sei-hva.pdf
+  timestamp_utc: '2026-10-09T13:16:13.290686+00:00'
+  http: 403
+  effective_url: https://www.seielect.com/catalog/sei-hva.pdf
+  mime: text/html
+  file_type: html
+  bytes: 1484
+  sha256: 40445306c38088e5566605dd0174b755e9fffc277e2f87f4fbfe2b46b69fcd54
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/stackpole_hva_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/stackpole_hva_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: stackpole_hva_mirror
+  url: https://www.mouser.com/datasheet/2/385/SEI_HVA-3077810.pdf
+  timestamp_utc: '2026-10-09T13:24:03.503421+00:00'
+  http: 200
+  effective_url: https://www.mouser.com/datasheet/2/385/SEI_HVA-3077810.pdf
+  mime: text/html
+  file_type: html
+  bytes: 13897
+  sha256: 53c01d4101d00d7c703da95b762c2787080df9612c2a0abe0cbe529759bcea4f
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/stackpole_hva_mirror/receipt.json
+  original: research/device_sources/local/parts_expansion_001/stackpole_hva_mirror/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: vishay_crhv_datasheet
+  url: https://www.vishay.com/docs/68002/crhv.pdf
+  timestamp_utc: '2026-10-09T13:16:14.099549+00:00'
+  http: 200
+  effective_url: https://www.vishay.com/docs/68002/crhv.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 117230
+  sha256: 8826283500cc095ea3ba24dcf3080bd9072ec90afa8cf7487d68b99bd11b8d6b
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/vishay_crhv_datasheet/receipt.json
+  original: research/device_sources/local/parts_expansion_001/vishay_crhv_datasheet/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: wima_catalogue
+  url: https://www.wima.de/wp-content/uploads/media/WIMA_Main_Catalogue_2026.pdf
+  timestamp_utc: '2026-10-09T13:16:14.099127+00:00'
+  http: 200
+  effective_url: https://www.wima.de/wp-content/uploads/media/WIMA_Main_Catalogue_2026.pdf
+  mime: application/pdf
+  file_type: pdf
+  bytes: 3874754
+  sha256: b1f024d94785a61e36f88393694114d36fcbd66dfb1fbdb3ca75f12a7e3bcf02
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/wima_catalogue/receipt.json
+  original: research/device_sources/local/parts_expansion_001/wima_catalogue/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: wima_mkp2_page
+  url: https://www.wima.de/en/our-product-range/metallized-capacitors/mkp-2/
+  timestamp_utc: '2026-10-09T13:25:34.704617+00:00'
+  http: 200
+  effective_url: https://www.wima.de/en/our-product-range/metallized-capacitors/mkp-2/
+  mime: text/html; charset=UTF-8
+  file_type: html
+  bytes: 104283
+  sha256: d44d5e6081ec1830fca55b562fbef6c83a50798332b6cbea50c2eb3e9099f8c3
+  state: preserved_response_no_acquisition_credit
+  receipt: research/device_sources/local/parts_expansion_001/wima_mkp2_page/receipt.json
+  original: research/device_sources/local/parts_expansion_001/wima_mkp2_page/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+- id: yageo_1nf_spec
+  url: https://yageogroup.com/download/specsheet/CC0603JRNPO0BN102
+  timestamp_utc: '2026-10-09T13:25:33.076803+00:00'
+  http: 200
+  effective_url: https://yageogroup.com/download/specsheet/CC0603JRNPO0BN102
+  mime: application/pdf
+  file_type: pdf
+  bytes: 254572
+  sha256: da1808ed4018b1fc7c68a692449355fcb6461eaa7843a6204760a10adbf0b7b4
+  state: retrieved_pending_behavior
+  receipt: research/device_sources/local/parts_expansion_001/yageo_1nf_spec/receipt.json
+  original: research/device_sources/local/parts_expansion_001/yageo_1nf_spec/response.bin
+  redistribution: unresolved_keep_private
+  notices: original bytes retained
+search_closure: Several complementary exact-name, package, model/dialect, supplier/passive
+  and patent searches. Direct errors and cache dates retained; no access-control bypass,
+  licence acceptance or contact. Diminishing returns for DiodesPNP model paths and
+  historical JFETs; remain gaps.
+initial_network_failure: Unprivileged curl could not resolve TI host; preserved tool
+  observation; subsequent permitted public retrieval succeeded.
+model_alias_check:
+  jfe2140_tina_and_pspice_member_identical: true
+  not_independent_devices: true
+transcriptions:
+- id: lsk170a
+  path: models/semiconductor/vendor/lsk170a.lib
+  sha256: 6eadbfe9c86ef69795852f3f7be8f66fbe25ef8caa4de1fa942f8a4af6347409
+  ancestor_path: research/device_sources/local/parts_expansion_001/lsk170_model_pdf/response.bin
+  ancestor_sha256: 1d384f4ee3510906a80798188a8a35bd8208ab053b81190c6896a329a1ef62a1
+  operation: literal PDF text transcription; line continuations only; no parameter
+    change
+  version: 03/16/2026
+- id: lsk389a
+  path: models/semiconductor/vendor/lsk389a.lib
+  sha256: c458cc0648f4c017d13bbb8454894b06927c934f431d02bb68505f94e8eea8dd
+  ancestor_path: research/device_sources/local/parts_expansion_001/lsk389_model_pdf/response.bin
+  ancestor_sha256: 66eb1b112b6fc8751e63b59ab0871e81981479aa40f1ba490a498908301d04ce
+  operation: literal PDF text transcription; line continuations only; no parameter
+    change
+  version: Rev2 18May2026

@@ -1,0 +1,19 @@
+Meridian prerequisite bc846b_vendor transfer_25
+* SPDX-License-Identifier: CERN-OHL-S-2.0
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/device_models/20261011T175705Z_prerequisites_a7cc0cdb/source/models/semiconductor/vendor/bc846b.lib"
+.temp 25
+.options reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+Vc c 0 5
+Vb in 0 DC 0.65 AC 1
+Vlink in b 0
+Ve e 0 0
+Xq c b e BC846B
+Hout out 0 Vc 1
+.control
+set filetype=ascii
+set numdgt=16
+dc Vb 0.3 0.95 0.0005
+write dc.raw all
+quit
+.endc
+.end

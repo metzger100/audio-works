@@ -12,6 +12,7 @@ Immediate contents and child hubs.
 - [data.py](data.py) — active
 - [device_models.py](device_models.py) — active
 - [metrics.py](metrics.py) — active
+- [nonlinear.py](nonlinear.py) — active
 - [partition.py](partition.py) — active
 - [qualification.py](qualification.py) — active
 - [qualification_ports.py](qualification_ports.py) — active

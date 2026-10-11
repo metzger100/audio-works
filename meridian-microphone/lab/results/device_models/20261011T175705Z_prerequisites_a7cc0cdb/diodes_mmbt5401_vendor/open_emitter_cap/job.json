@@ -1,0 +1,41 @@
+{
+  "model": {
+    "id": "diodes_mmbt5401_vendor",
+    "path": "semiconductor/vendor/diodes_mmbt5401.lib",
+    "sha256": "6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5",
+    "version": "Version2 08FEB2011",
+    "source_url": "https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt",
+    "retrieved_date": "2026-10-09",
+    "acquisition_status": "valid_spice",
+    "syntax": "native .model",
+    "subcircuit": "MMBT5401",
+    "primitive": "Q",
+    "parent_model_id": null,
+    "ngspice_behavior": null,
+    "pin_order": "C B E; macro terminal order separate from physical package",
+    "redistribution": {
+      "status": "not_established_do_not_redistribute",
+      "evidence": "Manufacturer notices retained privately; public access does not grant redistribution."
+    },
+    "runnability": "scoped_success_with_retained_disagreements",
+    "behavior_validation": "only conditioned accepted rows; omissions unresolved",
+    "load_record": "results/device_models/20261009T145346Z_parts2_742caaa3/results.json",
+    "device_id": "diodes_mmbt5401",
+    "manufacturer": "Diodes Incorporated",
+    "model_lineage": [],
+    "file": "models/semiconductor/vendor/diodes_mmbt5401.lib"
+  },
+  "label": "open_emitter_cap",
+  "temperature_c": 25,
+  "directory": "diodes_mmbt5401_vendor/open_emitter_cap",
+  "netlist_sha256": "0f7b1f3bd399de73a0a8351a3513bd147be4628ee3581532d72905b50f0ff5d3",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "timeout_s": 15,
+  "status": "ok",
+  "retained_hashes": {
+    "job.cir": "0f7b1f3bd399de73a0a8351a3513bd147be4628ee3581532d72905b50f0ff5d3",
+    "ac.raw": "c1521ab2c6308f95ff2b31705a42499d799697d84b773e9d76ce736a67353a1e",
+    "simulator.log": "4d71156f80ca4a3f6d9a557b71f5b035494ff45f935874cf39f3daf43c4e253c",
+    "ac.raw.csv": "16ad53b4d9c775366202b8441298bc3fd4f885741444b34ef1e102d33e07fcee"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "archive_members_checked": 85,
+  "batch_inventories": [
+    {
+      "cohort": "20261011T175705Z_prerequisites_a7cc0cdb",
+      "damaged": 0,
+      "declared_files": 567,
+      "inventory_sha256": "53b7be8e27864012707cf1981a0ba87154fbca213bb9039dcaedc404694ee282"
+    },
+    {
+      "cohort": "20261011T180313Z_observer_diagnosis_0f2c5116",
+      "damaged": 0,
+      "declared_files": 233,
+      "inventory_sha256": "cd8ebda6d3f4716ef48cb7d23f6674a657bfd4d959517536a85674835ae704ca"
+    },
+    {
+      "cohort": "20261011T180615Z_high_impedance_de3fa943",
+      "damaged": 0,
+      "declared_files": 134,
+      "inventory_sha256": "7f3d481c1e46d96c17f8d563d0ab9b83fc3b900fcb2f290414bd7f1a1e0d288e"
+    },
+    {
+      "cohort": "20261011T183033Z_extraction_0984d6e6",
+      "damaged": 0,
+      "declared_files": 28,
+      "inventory_sha256": "0c12b35065dd891b23e7051caa708a7420526ecfa3baa7c4cfe66ac706c9c95e"
+    },
+    {
+      "cohort": "20261011T183846Z_extraction_d0b338ed",
+      "damaged": 0,
+      "declared_files": 28,
+      "inventory_sha256": "a076f3070c32158e6af880294a0fe6850a54f33119a59b347f75a28bef6ed11c"
+    }
+  ],
+  "checked_batch_files": 990,
+  "current_runtime_hashes": {
+    "tools/ngspice-run": "7edc9dd914f0e3f9db4e54f15038594f7e53304ee26d6abeab071dce4151bcd2",
+    "tools/ngspice/usr/bin/ngspice": "3e0f126c93dc66ac2b80ac3043eba5c57b0ee545aa323cdc06f59b3d86f6a70e",
+    "tools/ngspice/usr/lib/ngspice/analog.cm": "ebb080afd23f82744dfb7a79202472a66071371a3b3cc44e43fd35fce977bc9c",
+    "tools/ngspice/usr/lib/ngspice/digital.cm": "885ad4ef9ad72069044bc23c95ca1ff2786eef51116202cc98824d7ca7cb274b",
+    "tools/ngspice/usr/lib/ngspice/spice2poly.cm": "840d915c8e5a6878f0d586a261cd2964d72391844eff196d5e9e168209c73a76",
+    "tools/ngspice/usr/lib/ngspice/table.cm": "46969aeef06e0765db6064225d3bcb32435d0a1e03f8a72b285bf93d006ae12e",
+    "tools/ngspice/usr/lib/ngspice/tlines.cm": "62342c4f655473bc8c6ce5fbf5ec37fbcc093dd35f2f5b843259e95b39fad07c",
+    "tools/ngspice/usr/lib/ngspice/xtradev.cm": "860853a4ce24519af3bdd1b946c877773d73d754f17c6f02b3c5961e55cc4519",
+    "tools/ngspice/usr/lib/ngspice/xtraevt.cm": "ddf1535fe6cc5dd88c7228d0f181b247466df228e1fc212a91706082f54872d1"
+  },
+  "model_comparison": [
+    {
+      "byte_identical_to_generic": true,
+      "id": "generic",
+      "nominal_core_equal": true,
+      "sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207"
+    },
+    {
+      "byte_identical_to_generic": false,
+      "id": "pspice",
+      "nominal_core_equal": true,
+      "sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6"
+    },
+    {
+      "byte_identical_to_generic": true,
+      "id": "tina",
+      "nominal_core_equal": true,
+      "sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207"
+    },
+    {
+      "byte_identical_to_generic": false,
+      "id": "transient_reference",
+      "nominal_core_equal": true,
+      "sha256": "283e6443c9288475cae9014eb45b47b5a30bf81e88b7102e3cb17bd750d83db1"
+    }
+  ],
+  "original_evidence_completeness": "Separate root evidence verify receipt; historical missing originals not reconstructed",
+  "originals": [
+    {
+      "id": "jfe150_sheet",
+      "members": 0,
+      "sha256": "925d58a8f0cf7db307325ece12fb2f61a736b2c1440f63928b5e6c1312f39365",
+      "status": "acquired"
+    },
+    {
+      "id": "nexperia_models",
+      "members": 0,
+      "sha256": "6c3f75940d537350916c1de29b2065cfc8a85169862cbe2004c8814a8da5c71c",
+      "status": "non_document_response"
+    },
+    {
+      "id": "ngspice47",
+      "members": 0,
+      "sha256": "6be9ad36be99dc3234dc44464cce6a38ba2e98266539dda5bae3212752e036ca",
+      "status": "acquired"
+    },
+    {
+      "id": "slpm349i",
+      "members": 32,
+      "sha256": "6358de546c957c142c321f30431fa816610a22599a0a3f980646ac6bbe6eace0",
+      "status": "acquired"
+    },
+    {
+      "id": "slpm350b",
+      "members": 7,
+      "sha256": "9f63b8eb89179cabc120c827bfe7c59e39a0f7eb2fdddfeefa3eb96c7105c41f",
+      "status": "acquired"
+    },
+    {
+      "id": "slpm351b",
+      "members": 3,
+      "sha256": "8a909a335a7fed3c8b77eb6a35096b21b85cddf7fbde029e482a55c3b9baaed4",
+      "status": "acquired"
+    },
+    {
+      "id": "slpm358",
+      "members": 40,
+      "sha256": "47c9b2082b002517d61f9c31628d4fbb9bd06aa6eeecf65744689e7227bfdd1a",
+      "status": "acquired"
+    },
+    {
+      "id": "slpm366",
+      "members": 3,
+      "sha256": "1fd7c2ff8ef1c2b1354c98e35537f4d0db56ebb0eea614702bff7610c25e46a1",
+      "status": "acquired"
+    },
+    {
+      "id": "slpu009",
+      "members": 0,
+      "sha256": "ed6334d80c3a39b288b1b6df013effaaa6c590175dcc8a36ce6793af7826bd9e",
+      "status": "acquired"
+    },
+    {
+      "id": "ti_noise",
+      "members": 0,
+      "sha256": "c22344cc96f3ee854fedb788461fe2bcbf0605b73f43fb54820dc0fadb24af3e",
+      "status": "acquired"
+    }
+  ],
+  "private_web_response_hashes": {
+    "research/device_sources/local/20261011_prerequisite_web/final-primary-search.json": "d0650e8ae1871831868584725af77ba040964f325e8eaa7b4f92214120e33dba",
+    "research/device_sources/local/20261011_prerequisite_web/prereqSearch1.txt": "82eeaf4404b4de4ca31c54c1b6fb7e6824ed91ad0e740cce9176fc6de399d083",
+    "research/device_sources/local/20261011_prerequisite_web/prereqSearch2.txt": "3140de02b8f0843939804fadba71ef713fac153fa236c58e8b90d5774086d55c",
+    "research/device_sources/local/20261011_prerequisite_web/prereqSearch4.txt": "73327ca4b465d19b5092283fb67cd9b12bd3282ff40dc799a37c34835602e41c",
+    "research/device_sources/local/20261011_prerequisite_web/prereqSearch5.txt": "a135fe01cac5bab94b2aeef813f054670eca795ce4b2829a5f4a26a377a5d6ab"
+  },
+  "runtime_scope": "Current bytes only; initial cohort did not freeze individual .cm libraries",
+  "timestamp_utc": "2026-10-11T18:39:43.254632+00:00"
+}

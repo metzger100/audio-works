@@ -6,6 +6,7 @@ The 4 October survey/recommendation favors Arienne Audio Flat K47 Cardioid/Omni 
 
 | Evidence | Purpose |
 | --- | --- |
+| [Evidence envelope 001](evidence-envelope-001.md) | Current sources, rejected transfers, unchanged broad assumptions and frozen shared scenarios; no measurements |
 | [Recommendation revision 2](M100%20Capsule%20Recommendation%20%E2%80%94%20Revision%202.md) | Single intended capsule; residual risks and documentary alternatives |
 | [Survey revision 1](M100%20Capsule%20Survey%20%E2%80%94%20Revision%201.md) | Broader market evidence; comparison-purchase proposal superseded |
 | [Reference archive](reference-datasheets/README.md) | Original datasheets, URLs and hashes |

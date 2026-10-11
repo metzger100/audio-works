@@ -5,6 +5,8 @@ tools/cache/
 tools/ngspice/
 tools/downloads/
 tools/config/
+# Frozen downloaded runtimes stay local; their recorded hashes remain in Git.
+results/**/source/tools/ngspice/
 # Keep compact results, decks, logs, parameters, and source/spec snapshots in Git.
 # Raw waveforms and their CSV exports remain on disk, including failures.
 # See results/README.md and the tracked checksum inventories.

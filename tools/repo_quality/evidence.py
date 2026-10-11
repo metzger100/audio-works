@@ -43,7 +43,9 @@ def inventory(view):
             safe_name(relative)
             if not re.fullmatch(r"[0-9a-f]{64}", h):
                 raise ValueError(f"Invalid SHA256 in {p}")
-            path = posixpath.dirname(posixpath.dirname(p)) + "/" + relative
+            # Inventories use laboratory-relative paths, including nested batches.
+            lab_root = p.split("/lab/results/", 1)[0] + "/lab/"
+            path = lab_root + relative
             if path in hashes and hashes[path] != h:
                 raise ValueError(f"Conflicting immutable inventory declarations: {path}")
             hashes[path] = h
@@ -148,6 +150,7 @@ def backup_paths(root, view, r):
         if p.is_file() and (
             "/source/models/semiconductor/vendor/" in relative
             or "/source/research/device_sources/local/" in relative
+            or "/source/tools/ngspice/" in relative
         ):
             paths.add(relative)
     for p in paths:

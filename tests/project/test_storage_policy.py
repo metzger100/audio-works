@@ -8,6 +8,40 @@ from repo_fixture import RepositoryFixture, project
 
 
 class TestStoragePolicy(RepositoryFixture):
+    def test_local_runtime_snapshot_does_not_exempt_authored_wrapper(self):
+        folder = "meridian-microphone/lab/results/device_models/runtime_batch"
+        runtime = "tools/ngspice/usr/bin/ngspice"
+        wrapper = "tools/ngspice-run"
+        data = b"frozen runtime fixture\n"
+        self.put(folder + "/source/" + runtime, data.decode())
+        self.put(folder + "/source/" + wrapper, "authored wrapper\n")
+        self.put(
+            folder + "/results.json",
+            json.dumps(
+                {
+                    "source_manifest": {
+                        runtime: hashlib.sha256(data).hexdigest(),
+                        wrapper: hashlib.sha256(b"authored wrapper\n").hexdigest(),
+                    }
+                }
+            ),
+        )
+        self.put(
+            ".gitignore",
+            (self.root / ".gitignore").read_text()
+            + "meridian-microphone/lab/results/**/source/tools/ngspice/\n",
+        )
+        self.refresh()
+        self.run_git("add", "-A")
+        self.assertNotIn(folder + "/source/" + runtime, project.View(self.root, staged=True).paths)
+        report = self.check(staged=True)
+        self.assertEqual(report["status"], "pass", report["errors"])
+        (self.root / folder / "source" / wrapper).unlink()
+        self.run_git("add", "-A")
+        self.assertIn(
+            "Missing required source snapshot", "\n".join(self.check(staged=True)["errors"])
+        )
+
     def test_storage_policy_cannot_claim_github_covers_ignored_evidence(self):
         for key, value in (
             ("scope", "all_evidence"),

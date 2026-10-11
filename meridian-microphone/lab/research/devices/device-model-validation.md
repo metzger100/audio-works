@@ -1,8 +1,10 @@
-# Device model validity — current review 9 October 2026
+# Device model validity — current review 11 October 2026
 
-**Partial, behavior-specific evidence.** [Latest parts evidence](parts-database-expansion-002.md) covers20 semiconductors/27 files across18 types; this report records the earlier model foundations and their remaining failures. No complete JFET/CMOS/bipolar/P48 population supports production or architectural ranking.
+**Partial evidence.** [Parts002](parts-database-expansion-002.md) covers20 semiconductors/27 files/18 types. No complete JFET/CMOS/bipolar/P48 population supports production or architectural ranking.
 
 [Registry](../../models/semiconductor/registry.yaml) · [independent references](../../models/semiconductor/references.yaml) · [coupled corners](../../models/semiconductor/corners.yaml) · [decisions](device-model-decisions.md)
+
+[Prerequisites001](simulation-prerequisites-001.md): refined numerical follower H2/H3; microphone nonlinear/headroom and floating OPA held. Preserve original models/failures.
 
 ## Supported scope and discrepancies
 

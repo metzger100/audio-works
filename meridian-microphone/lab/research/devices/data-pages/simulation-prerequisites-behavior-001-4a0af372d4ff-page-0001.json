@@ -1,0 +1,44 @@
+{
+  "behaviors": {
+    "$include": "simulation-prerequisites-behavior-001-4a0af372d4ff-0003-behaviors.json"
+  },
+  "checked_frozen_and_job_files": 797,
+  "cohorts": [
+    {
+      "cohort": "20261011T175705Z_prerequisites_a7cc0cdb",
+      "errors": 13,
+      "jobs": 91,
+      "plan_sha256": "8542ca4bdeef5c8538b3e31ca89e1cd981bb54a80f432bce7addf79f0e80ae18",
+      "record_sha256": "a7750714781b144569e2686e40e330a002ae9263a779ef7014b5175af5a025f0",
+      "stable_at_execution": true
+    },
+    {
+      "cohort": "20261011T180313Z_observer_diagnosis_0f2c5116",
+      "errors": 6,
+      "jobs": 19,
+      "plan_sha256": "423fe372a93905d66ec4ab3b638c81c5208cbf9667a001301d67e4f7422c386f",
+      "record_sha256": "b042d2cdcc690d410b0b0d10b74f9e2a9bf97a7fb07d5970259b4f1e4fc63f69",
+      "stable_at_execution": true
+    },
+    {
+      "cohort": "20261011T180615Z_high_impedance_de3fa943",
+      "errors": 0,
+      "jobs": 9,
+      "plan_sha256": "06669ae5a89ca4678771cd5e69c19f9f3aac95190f80a496f40a3bad5195e6f3",
+      "record_sha256": "f85efc99fdd8d858abba2a56eea8c85f028f1dc65184ce0cb65a74a6cc4fbc6a",
+      "stable_at_execution": true
+    }
+  ],
+  "date": "2026-10-11",
+  "eligible": false,
+  "full_microphone_nonlinear_supported": false,
+  "headroom_supported": false,
+  "nonlinear": {
+    "$include": "simulation-prerequisites-behavior-001-4a0af372d4ff-0004-nonlinear.json"
+  },
+  "original_comparison_parents": {
+    "$include": "simulation-prerequisites-behavior-001-4a0af372d4ff-0005-original-comparison-parents.json"
+  },
+  "physical_measurements": [],
+  "uncertainty": "Deterministic timestep/window/sampling spread, not stochastic confidence or model-error bound"
+}

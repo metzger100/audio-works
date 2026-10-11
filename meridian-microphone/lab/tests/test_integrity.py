@@ -100,15 +100,28 @@ def test_spec_numeric_ranges_and_required_measurements():
     assert "physical_measurements" in q["evidence_required"] and not q["missing_or_error_is_pass"]
 
 
+def inject_process_stderr(monkeypatch, message):
+    original = core.subprocess.Popen
+
+    def start(*args, **kwargs):
+        process = original(*args, **kwargs)
+        communicate = process.communicate
+
+        def with_message(*args, **kwargs):
+            stdout, stderr = communicate(*args, **kwargs)
+            return stdout, stderr + message
+
+        process.communicate = with_message
+        return process
+
+    monkeypatch.setattr(core.subprocess, "Popen", start)
+
+
 def test_memory_advisory_with_complete_real_spice_output_is_recorded(tmp_path, monkeypatch):
-    original = core.subprocess.run
-
-    def with_advisory(*a, **kw):
-        run = original(*a, **kw)
-        run.stderr += "\nWarning: memory required (374.06 MB), made of\n       38 nodes and approximately 1.29024e6 time steps,\n       is more than the DRAM memory available (248.73 MB)!\n       Swapping data to SSD may slow down the simulation.\n"
-        return run
-
-    monkeypatch.setattr(core.subprocess, "run", with_advisory)
+    inject_process_stderr(
+        monkeypatch,
+        "\nWarning: memory required (374.06 MB), made of\n       38 nodes and approximately 1.29024e6 time steps,\n       is more than the DRAM memory available (248.73 MB)!\n       Swapping data to SSD may slow down the simulation.\n",
+    )
     sim = Simulator("fixture_0001", tmp_path)
     data = sim.op_ac()
     assert len(data["ac.raw"]["frequency"]) > 100 and sim.jobs[-1]["status"] == "ok"
@@ -116,14 +129,7 @@ def test_memory_advisory_with_complete_real_spice_output_is_recorded(tmp_path, m
 
 
 def test_unknown_warning_is_still_a_failure(tmp_path, monkeypatch):
-    original = core.subprocess.run
-
-    def with_warning(*a, **kw):
-        run = original(*a, **kw)
-        run.stderr += "\nWarning: unrecognized device behavior\n"
-        return run
-
-    monkeypatch.setattr(core.subprocess, "run", with_warning)
+    inject_process_stderr(monkeypatch, "\nWarning: unrecognized device behavior\n")
     with pytest.raises(SimulationError):
         Simulator("fixture_0001", tmp_path).op_ac()
 
