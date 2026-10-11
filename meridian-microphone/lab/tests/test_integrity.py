@@ -144,7 +144,7 @@ def test_partitioned_candidate_data_and_snapshot_manifest(tmp_path):
     assert read_yaml(candidate / "topology.yaml") == original
     manifest = cli.implementation_manifest(candidate)
     assert "topology.yaml" in manifest
-    assert any("-parts/" in path for path in manifest)
+    assert any(path.startswith("data-pages/") for path in manifest)
     snapshot = tmp_path / "snapshot"
     for path in manifest:
         target = snapshot / path

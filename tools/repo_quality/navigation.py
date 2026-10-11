@@ -34,6 +34,7 @@ def navigation_output(path):
         }
         or "/index-pages/" in path
         or path.startswith("docs/evidence-index-parts/")
+        or path.startswith("docs/data-pages/evidence-index-")
         or path.startswith("docs/evidence/")
         or path.startswith("docs/history-pages/")
         or path == "meridian-microphone/lab/research/prompts/prompt-pack.md"
@@ -99,12 +100,11 @@ def pages(outputs, destination, title, introduction, entries):
     if len(groups) == 1:
         outputs[destination] = (header + "\n".join(current) + "\n").encode()
         return
-    directory = (
-        posixpath.dirname(destination) + "/index-pages/" + PurePosixPath(destination).stem.lower()
-    )
+    directory = posixpath.dirname(destination) + "/index-pages"
+    namespace = PurePosixPath(destination).stem.lower()
     pointers = []
     for index, group in enumerate(groups):
-        path = f"{directory}/page-{index + 1:04d}.md"
+        path = f"{directory}/{namespace}-{index + 1:04d}.md"
 
         def rebase(match, path=path):
             from urllib.parse import urlsplit

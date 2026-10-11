@@ -1,0 +1,13 @@
+# Folder consolidation — 2026-10-11
+
+The owner requested fewer, clearer folders after the reading/data cleanup. The baseline selected repository had 206 maintained folders and 16,064 original-only folders. Split structured documents used 85 page folders, despite sharing only 56 parents. Four navigation hubs added an unnecessary wrapper beneath `index-pages/`. Five research folders each held one maintained document.
+
+Mutable JSON/YAML pages now share one `data-pages/` folder per parent. A readable document stem and stable hash of its complete filename separate namespaces, including equal stems with different formats. Writers validate namespace ownership before modifying anything, follow existing includes to remove only obsolete owned pages, and retain unrelated material. The old layout remains readable for migration and original records; it is rejected for maintained output. Both repository and scientific writers use the identical partition implementation.
+
+Index pagination places hub-prefixed pages directly in `index-pages/`. Source interpretation moves into the existing device/architecture hubs; mechanisms, benchmark guidance and phase-zero findings join architectures. The research entry now exposes eight subjects. Original research and experiment trees retain their paths, provenance, hashes and modes. No scientific thresholds, evaluation budgets, candidate identities or readiness gates change.
+
+[Layout guide](../repository-layout.md) explains the boundaries. [Fast fixtures](../../tests/quality/test_efficiency.py) reject redundant page folders and verify selected-view counts. [Partition fixtures](../../tests/quality/test_data.py) cover shared directories, formats and lossless values. [Git fixtures](../../tests/project/test_navigation.py) cover multiple hubs, rebased links and rejection without mutation. [Scientific writer fixtures](../../meridian-microphone/lab/tests/test_reporting.py) preserve sibling documents and reject foreign ownership. [Validation](../validation.md) records measured counts and verification.
+
+The cleanup preserves complete scientific reading and existing evidence obligations. Same-device restoration remains distinct from independent persistent backup, and the 89 known legacy source gaps stay incomplete. Remote publication/settings remain outside this work.
+
+Unsafe-input rejection fixtures intentionally create foreign pages and directory symlinks. Their scratch directories follow the existing private synthetic-fixture policy; verification outcomes/logs and complete source snapshots remain tracked. Earlier fixture bytes stay in the verified private capture and local filesystem. No experimental decks, waveforms or frozen sources are excluded by this addition.

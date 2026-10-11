@@ -4,4 +4,5 @@
 Immediate contents and child hubs.
 
 - [2026-10-10-meridian-reports.md](2026-10-10-meridian-reports.md) — active
+- [2026-10-11-reading-and-data-layout.md](2026-10-11-reading-and-data-layout.md) — active
 - [2026-10-11-research-consolidation.md](2026-10-11-research-consolidation.md) — active

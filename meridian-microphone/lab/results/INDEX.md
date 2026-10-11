@@ -11,6 +11,6 @@ Immediate contents and child hubs.
 - [optimization-console-0004.log](optimization-console-0004.log) — evidence
 - [optimization-console.log](optimization-console.log) — evidence
 - [pareto-front.json](pareto-front.json) — generated
-- [archive-parts/](archive-parts/INDEX.md)
+- [data-pages/](data-pages/INDEX.md)
 - [leaderboard-pages/](leaderboard-pages/INDEX.md)
 - [reports/](reports/INDEX.md)

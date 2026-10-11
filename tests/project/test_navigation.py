@@ -11,6 +11,33 @@ from repo_fixture import RepositoryFixture, project, REPO
 
 
 class TestNavigation(RepositoryFixture):
+    def test_multiple_index_hubs_share_one_flat_page_folder(self):
+        from repo_quality.navigation import pages
+
+        outputs = {}
+        entries = [f"- [Entry {i}](../README.md) " + "x" * 5500 for i in range(6)]
+        for destination in ("docs/first.md", "docs/second.md"):
+            pages(outputs, destination, "Bounded hub", "[Source](../QUALITY.md)", entries)
+        children = [p for p in outputs if "/index-pages/" in p]
+        self.assertEqual(len(children), 6)
+        self.assertTrue(all(p.count("/") == 2 for p in children))
+        self.assertIn(b"[Source](../../QUALITY.md)", outputs[children[0]])
+        self.assertIn(b"[Entry 0](../../README.md)", outputs[children[0]])
+        self.assertTrue(all(len(content.decode()) <= 15000 for content in outputs.values()))
+
+    def test_commit_rejects_document_specific_page_folders_without_changing_content(self):
+        project.install_hook(self.root)
+        self.put("docs/record-parts/page-0001.json", "{}\n")
+        self.refresh()
+        self.run_git("add", "-A")
+        before = self.run_git("diff", "--binary").stdout
+        staged_before = self.run_git("diff", "--cached", "--binary").stdout
+        result = self.run_git("commit", "-m", "Reject redundant page folder", check=False)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("Redundant page directory", result.stdout + result.stderr)
+        self.assertEqual(before, self.run_git("diff", "--binary").stdout)
+        self.assertEqual(staged_before, self.run_git("diff", "--cached", "--binary").stdout)
+
     def test_refresh_prunes_empty_obsolete_hubs_and_preserves_unrelated_material(self):
         directory = "docs/obsolete-parts/metrics-parts"
         self.put(directory + "/INDEX.md", "# Obsolete generated hub\n\nOld pages.\n")

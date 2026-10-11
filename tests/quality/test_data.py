@@ -69,3 +69,17 @@ class DataTests(unittest.TestCase):
         self.assertTrue(all(len(data.decode()) <= 12000 for data in outputs.values()))
         self.assertEqual(value, load(lambda name: outputs[name].decode(), "report.json"))
         self.assertEqual(outputs, bounded_data(value, "report.json"))
+
+    def test_shared_page_folder_separates_documents_and_formats(self):
+        value = [{"id": f"part-{i}", "value": "é" * 700} for i in range(60)]
+        outputs = {}
+        for name in ("candidate/bom.json", "candidate/topology.json", "candidate/bom.yaml"):
+            pages = bounded_data(value, name)
+            self.assertFalse(outputs.keys() & pages.keys())
+            outputs.update(pages)
+        self.assertEqual(
+            {str(Path(name).parent) for name in outputs if "data-pages" in name},
+            {"candidate/data-pages"},
+        )
+        for name in ("candidate/bom.json", "candidate/topology.json", "candidate/bom.yaml"):
+            self.assertEqual(value, load(lambda path: outputs[path].decode(), name))

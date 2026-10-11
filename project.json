@@ -3,7 +3,7 @@
   "as_of": "2026-10-11",
   "phase": "Parts evidence strengthened — research",
   "readiness": {
-    "software": "77 lab tests; 31 Git/recovery and 21 fast regressions pass.",
+    "software": "80 lab tests; 33 Git/recovery and 23 fast regressions pass.",
     "engineering": "20 devices/27 model files; scoped PNP controls; no selection.",
     "procurement": "Realized BOMs; Germany private orderability/costs unresolved.",
     "patents": "Phase 8 claims/status missing; affected gates held.",
@@ -129,12 +129,13 @@
   },
   "quality_change": {
     "date": "2026-10-11",
-    "decision": "docs/decisions/2026-10-11-reading-and-data-layout.md",
+    "decision": "docs/decisions/2026-10-11-folder-layout.md",
     "tests": [
       "tests/quality/test_efficiency.py",
       "tests/quality/test_data.py",
       "tests/project/test_navigation.py",
-      "meridian-microphone/lab/tests/test_reporting.py"
+      "meridian-microphone/lab/tests/test_reporting.py",
+      "meridian-microphone/lab/tests/test_integrity.py"
     ]
   },
   "original_revision": "20c039a5323964520f80da2a3e9c07bd097b5e79"

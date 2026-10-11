@@ -5,4 +5,4 @@ Immediate contents and child hubs.
 
 - [circuit.cir](circuit.cir) — proposal
 - [topology.yaml](topology.yaml) — proposal
-- [topology-parts/](topology-parts/INDEX.md)
+- [data-pages/](data-pages/INDEX.md)

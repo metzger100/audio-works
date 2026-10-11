@@ -1,32 +1,32 @@
-# Repository validation — 2026-10-11
+# Folder-layout validation — 2026-10-11
 
-[Decision](decisions/2026-10-11-reading-and-data-layout.md) · [Earlier consolidation](validation/2026-10-11-research-consolidation.md) · [Earlier reports](validation/2026-10-10-meridian-reports.md)
+[Decision](decisions/2026-10-11-folder-layout.md) · [Folder map](repository-layout.md) · [Previous reading cleanup](validation/2026-10-11-reading-and-data-layout.md)
 
-The follow-up addresses measured reading, duplicate prose and recursive data directories. It changes entry loading and serialization while retaining complete scientific authority and every original evidence record.
+The folder audit identified duplicate page containers and single-document research wrappers. Consolidation reduces the active tree without merging candidate identities, experiments or current findings with originals.
 
-| Engineering entry | Before characters | After characters |
+| Measure | Before | After |
 | --- | --- | --- |
-| Device models | 78,678 | 48,854 |
-| Qualification | 66,143 | 42,910 |
-| Topology | 67,023 | 46,549 |
-| Optimization | 66,620 | 46,146 |
-| Reporting | 70,434 | 47,201 |
+| Maintained folders | 206 | 167 (19% fewer) |
+| Split structured-data folders | 85 | 56 shared `data-pages` folders |
+| Maintained research subjects | 12 | 8 |
+| Maximum maintained directory depth | 8 | 7 |
+| Generated navigation/evidence outputs | 233 | 201 |
 
-Entry reading falls 31–38%; complete specifications/contracts remain loaded. Source metadata resolves the same 29 identities through six subject files; relevant full references and conditions remain required before use. Additional scientific reading is unrestricted. Shared onboarding is 14,795 characters against its 15,000 ceiling; declared entries now have a 50,000 ceiling.
+BOM and topology pages share their candidate's page container; document names and stable hashes prevent namespace overlap. Architecture sources, mechanisms, benchmark guidance and foundation findings belong to the architecture hub; manufacturer-source interpretation belongs to devices. Existing optimization, candidates, models and executable roles retain useful boundaries.
 
-| Acceptance | Verified result |
+The baseline's 16,064 original-only folders remain preserved. New failed/passing verification cohorts add their own frozen snapshots and jobs. Audit reports those folders separately from maintained material, excluding local environments and ignored caches; the total filesystem count is not an active-structure score.
+
+| Verification | Result |
 | --- | --- |
-| Data layout | 85 documents reserialized into one parts directory each; nested partitions absent |
-| Navigation overhead | Generated outputs 367 → 233; maximum maintained directory depth 12 → 8 |
-| Authored duplication | Previously 14 repeated substantial paragraphs; none detected after shared conditions/workflow links |
-| Lossless scientific data | All 151 compared resolved roots unchanged, including values, numeric types, candidate identities and ancestry |
-| Preserved evidence | All 40,099 baseline frozen/original file hashes unchanged; 184 declarations/identities unchanged |
-| Scientific requirements | Acceptance specification hash and evaluation budgets unchanged; no readiness promotion |
-| Repository regressions | 21 fast and 31 Git/recovery tests pass; pinned Python lint/format pass |
-| Laboratory verification | [77 tests pass](../meridian-microphone/lab/results/verification/20261011T115600Z_c3956793/verification.json); source unchanged true; all 872 captured files match current source |
-| Working repository gate | Pass in 11.56s; 1,727/1,727 maintained files reachable; zero size/link/freshness failures |
-| Available original bytes | [142 new files inventoried](../meridian-microphone/lab/results/evidence-20261011T115729Z-64ea6ed6.sha256); zero damaged/uninventoried files; 80,797 captured files restored with matching bytes/modes; independent preservation incomplete |
+| Scientific records | All 157 compared resolved documents retain exact values/types, identities, conditions and parent relationships |
+| Existing originals | All 41,852 baseline files retain hashes and modes; original declarations are identical |
+| Repository regressions | 23 fast and 33 Git/recovery tests pass; pinned lint/format pass |
+| Laboratory verification | [80 tests pass](../meridian-microphone/lab/results/verification/20261011T122931Z_d7b00d15/verification.json); source unchanged true; all 872 captured source files match current files |
+| Generated layout | Deterministic refresh; removed wrappers absent; every maintained file reachable; no stale output, text-size violation or repeated substantial prose |
+| Private evidence | [142 new original files inventoried](../meridian-microphone/lab/results/evidence-20261011T123030Z-defb051e.sha256); zero damaged/uninventoried files; 85,875 captured files restored with matching bytes/modes |
+| Gate runtime | Working check passed in 18.74s while private restoration ran; all four blocking gates use the same checks |
+| Mechanical enforcement | Existing four hooks and CI reject legacy document-specific partitions and nested page wrappers; audits expose folder counts by root |
 
-Rejection fixtures cover oversized entry routes, omitted scientific authority, cross-document visible prose, nested data pages and unsafe prior includes. Real commits reject staged duplicate prose even when working documents are repaired, leaving both states untouched. Data replacement preserves unrelated files and removes only obsolete include-owned pages/empty parents. Frozen history and source snapshots retain their original paths and bytes.
+The [failed verification](../meridian-microphone/lab/results/verification/20261011T122847Z_dfbbc8e8/verification.json) remains intact. One regression expected the previous folder name; its replacement verifies page inclusion and an identical restored implementation manifest. Other fixtures prove independent sibling-page replacement, format separation, rejection of foreign namespaces/symlinks before writes, correct link rebasing and rejected commits leaving staged/working content unchanged.
 
-The earlier 77-test verification also remains recorded; its source cohort predates the final empty-directory cleanup. Completion uses the later source-matching verification. Neither run qualifies a candidate. The 89 known legacy source gaps and independent persistent backup remain unresolved. GitHub publication and required-status settings remain unchanged.
+This changes serialization/navigation, without threshold, budget or qualification changes. New verification evidence is inventoried and integrity-checked; private restoration is verified. Synthetic unsafe-input fixtures remain private under the existing scratch policy, with outcome/log/source records retained. Independent persistent preservation and 89 legacy source gaps remain unresolved. Remote publication and settings are unchanged.

@@ -57,6 +57,29 @@ class EfficiencyTests(unittest.TestCase):
 
     def test_nested_data_layout_is_rejected_but_flat_pages_and_frozen_paths_pass(self):
         bad = "data-parts/metrics-parts/page-0001.json"
-        report = self.inspect({bad: "{}\n", "data-parts/metrics-page-0001.json": "{}\n"})
+        report = self.inspect({bad: "{}\n", "data-pages/metrics-page-0001.json": "{}\n"})
         self.assertEqual(report["nested_data_partitions"], [bad])
         self.assertEqual(self.inspect({bad: "{}\n"}, original_files={bad: {}})["errors"], [])
+
+    def test_page_containers_are_flat_and_folder_counts_exclude_originals(self):
+        files = {
+            "docs/data-pages/record-page-0001.json": "{}\n",
+            "docs/index-pages/history-0001.md": "# History\n",
+            "frozen/source/deep/original.json": "{}\n",
+        }
+        report = self.inspect(files, original_files={"frozen/source/deep/original.json": {}})
+        self.assertEqual(report["errors"], [])
+        self.assertEqual(report["folders"]["maintained"], 3)
+        self.assertEqual(report["folders"]["original_only"], 3)
+        self.assertEqual(report["folders"]["page_containers"], 2)
+        self.assertEqual(report["folders"]["data_page_containers"], 1)
+        self.assertEqual(report["folders"]["navigation_page_containers"], 1)
+        for path in (
+            "docs/record-parts/page-0001.json",
+            "docs/data-pages/record/page-0001.json",
+            "docs/index-pages/history/page-0001.md",
+        ):
+            with self.subTest(path=path):
+                self.assertIn(
+                    "Redundant page directory", "\n".join(self.inspect({path: ""})["errors"])
+                )

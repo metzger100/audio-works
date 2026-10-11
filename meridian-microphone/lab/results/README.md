@@ -6,7 +6,7 @@ Git retains authored source/spec/implementation snapshots, decks, logs, compact 
 
 | Research | Current findings / dated inventory or receipt |
 | --- | --- |
-| Foundation | [Phase 0](../research/architectures/initial/phase0-report.md), [raw inventory](raw-data.sha256) |
+| Foundation | [Phase 0](../research/architectures/phase0-report.md), [raw inventory](raw-data.sha256) |
 | Original device controls | [Validity](../research/devices/device-model-validation.md), [raw](device-model-raw-data.sha256), [CSV](device-model-csv-data.sha256), [integrity](../research/devices/device-model-integrity.json) |
 | MOS follow-up | [258 files](evidence-20261009T070957Z-3092a887.sha256), [integrity](../research/device_model_integrity_2026-10-09.json) |
 | Six mechanisms | [First batch](../research/architectures/first-architecture-batch.md), [1981 files](evidence-20261009T082728Z-78caabc6.sha256), [integrity](../research/first_architecture_integrity_2026-10-09.json) |

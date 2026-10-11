@@ -9,5 +9,4 @@ Immediate contents and child hubs.
 - [original-files.json](original-files.json) — active
 - [path-migrations.json](path-migrations.json) — active
 - [routes.json](routes.json) — active
-- [original-files-parts/](original-files-parts/INDEX.md)
-- [path-migrations-parts/](path-migrations-parts/INDEX.md)
+- [data-pages/](data-pages/INDEX.md)

@@ -44,8 +44,7 @@ Derived same-cohort tables, spectra, netlist connectivity and separate research 
 - [sensitivity-rescaling.csv](sensitivity-rescaling.csv) — generated
 - [tables.md](tables.md) — generated
 - [uncertainty-regions.png](uncertainty-regions.png) — generated
-- [architecture-comparison-001-parts/](architecture-comparison-001-parts/INDEX.md)
 - [bom-lines-pages/](bom-lines-pages/INDEX.md)
+- [data-pages/](data-pages/INDEX.md)
 - [noise-spectra-pages/](noise-spectra-pages/INDEX.md)
-- [provenance-parts/](provenance-parts/INDEX.md)
 - [tables-pages/](tables-pages/INDEX.md)

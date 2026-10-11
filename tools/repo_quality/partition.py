@@ -12,10 +12,16 @@ from .data import canonical
 TARGET = 12000
 
 
+def page_namespace(name):
+    name = PurePosixPath(name).name
+    return PurePosixPath(name).stem + "-" + hashlib.sha256(name.encode()).hexdigest()[:12]
+
+
 def bounded_data(value, name):
     outputs = {}
     suffix = ".yaml" if PurePosixPath(name).suffix in {".yaml", ".yml"} else ".json"
-    directory = str(PurePosixPath(name).with_suffix("")) + "-parts"
+    directory = str(PurePosixPath(name).parent / "data-pages")
+    namespace = page_namespace(name)
 
     def filename(crumbs):
         label = "-".join(
@@ -24,7 +30,7 @@ def bounded_data(value, name):
         # Long paths stay recognizable; the full identity prevents truncated collisions.
         if len(label) > 110:
             label = label[:95].rstrip("-") + "-" + hashlib.sha256(label.encode()).hexdigest()[:12]
-        return directory + "/" + label + suffix
+        return directory + "/" + namespace + "-" + label + suffix
 
     def encode(node):
         return (

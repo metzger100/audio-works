@@ -22,7 +22,7 @@ No prototype is selected. Parts, patent review and physical validation remain se
 
 ## Finding the work
 
-The [hub](docs/INDEX.md) connects projects, branding, tools and evidence. Choose a reading route:
+The [hub](docs/INDEX.md) connects projects, branding, tools and evidence; the [folder map](docs/repository-layout.md) explains their homes. Choose a reading route:
 
 ```sh
 python3 tools/project.py context orientation

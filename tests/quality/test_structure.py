@@ -153,7 +153,7 @@ class StructureTests(unittest.TestCase):
             self.assertLessEqual(len(payload.decode()), 15000)
             self.assertIn("https://example.com", payload.decode())
             if path != "docs/INDEX.md":
-                self.assertIn("../../notes.md", payload.decode())
+                self.assertIn("../notes.md", payload.decode())
 
     def test_unsupported_evidence_promotion(self):
         from repo_quality.records import relationships

@@ -7,18 +7,24 @@ import json
 from pathlib import Path
 import re
 
-from .partition import bounded_data
+from .partition import bounded_data, page_namespace
 from .data import parse
 
 
 def owned_parts(path):
-    """Find prior pages through includes, confined to this document's parts directory."""
+    """Find include-owned pages; shared pages must belong to this document's namespace."""
     path = Path(path)
     directory = path.parent / (path.stem + "-parts")
+    shared = path.parent / "data-pages"
+    suffix = ".yaml" if path.suffix in {".yaml", ".yml"} else ".json"
     found = set()
 
     def visit(source):
-        if source.is_symlink():
+        if source.is_symlink() or any(
+            parent.is_symlink()
+            for parent in source.parents
+            if parent != path.parent and parent.is_relative_to(path.parent)
+        ):
             raise ValueError("Symlink data pages are unsupported")
         node = parse(source.read_text(), source.suffix)
 
@@ -30,7 +36,15 @@ def owned_parts(path):
                         target = source.parent / ref
                         if Path(ref).is_absolute() or ".." in Path(ref).parts:
                             raise ValueError("Unsafe prior data include")
-                        if target.is_relative_to(directory) and target not in found:
+                        if target.is_relative_to(shared) and (
+                            target.parent != shared
+                            or not target.name.startswith(page_namespace(path.name) + "-")
+                            or target.suffix != suffix
+                        ):
+                            raise ValueError("Data page belongs to another document")
+                        if (
+                            target.is_relative_to(directory) or target.is_relative_to(shared)
+                        ) and target not in found:
                             found.add(target)
                             visit(target)
                 else:
@@ -51,15 +65,21 @@ def write_data(path, value):
     path = Path(path)
     previous = owned_parts(path)
     outputs = bounded_data(value, path.name)
+    if (path.parent / "data-pages").is_symlink() or any(
+        (path.parent / name).is_symlink() for name in outputs
+    ):
+        raise ValueError("Symlink data pages are unsupported")
     for name, payload in outputs.items():
         target = path.parent / name
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(payload)
     for obsolete in previous - {path.parent / name for name in outputs}:
         obsolete.unlink()
-    directory = path.parent / (path.stem + "-parts")
     parents = {
-        parent for page in previous for parent in page.parents if parent.is_relative_to(directory)
+        parent
+        for page in previous
+        for parent in page.parents
+        if parent != path.parent and parent.is_relative_to(path.parent)
     }
     for parent in sorted(parents, key=lambda item: len(item.parts), reverse=True):
         try:

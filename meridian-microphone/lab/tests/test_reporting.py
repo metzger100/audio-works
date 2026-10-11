@@ -33,9 +33,7 @@ def test_initial_renderer_preserves_maintained_findings_and_originals(tmp_path, 
     driver = put(tmp_path, "tools/reporting/initial_receipt.py", "driver")
     monkeypatch.setattr(receipt, "__file__", str(driver))
     put(tmp_path, "tools/reporting/render_initial_report.py", "entry")
-    maintained = put(
-        tmp_path, "research/architectures/initial/phase0-report.md", "Maintained findings\n"
-    )
+    maintained = put(tmp_path, "research/architectures/phase0-report.md", "Maintained findings\n")
     baseline = put(tmp_path, f"results/runs/{receipt.BASE}/results.json", {"frozen": "baseline"})
     proposal = put(
         tmp_path, f"results/runs/{receipt.PROPOSAL}/results.json", {"frozen": "proposal"}
@@ -150,11 +148,54 @@ def test_data_writer_replaces_only_prior_owned_pages(tmp_path):
     assert not old.parent.exists()
     assert unrelated.read_bytes() == before
     assert load(lambda name: (tmp_path / name).read_text(), "report.json") == value
-    pages = set((tmp_path / "report-parts").glob("*.json")) - {unrelated}
+    pages = set((tmp_path / "data-pages").glob("*.json"))
     write_data(root, {"current": "compact"})
     assert all(not page.exists() for page in pages)
     assert unrelated.read_bytes() == before
     assert json.loads(root.read_text()) == {"current": "compact"}
+
+
+def test_shared_data_writer_does_not_replace_another_documents_pages(tmp_path):
+    from meridian_lab.bounded import write_data
+    from meridian_lab.data import load
+
+    value = [{"id": f"case-{i}", "value": "é" * 900} for i in range(50)]
+    for name in ("bom.json", "topology.json"):
+        write_data(tmp_path / name, value)
+    topology = {p: p.read_bytes() for p in (tmp_path / "data-pages").glob("topology-*")}
+    assert topology
+    write_data(tmp_path / "bom.json", {"compact": True})
+    assert {p: p.read_bytes() for p in topology} == topology
+    assert load(lambda name: (tmp_path / name).read_text(), "topology.json") == value
+    assert not list((tmp_path / "data-pages").glob("bom-*"))
+
+
+def test_shared_data_writer_rejects_foreign_page_ownership(tmp_path):
+    from meridian_lab.bounded import write_data
+    from meridian_lab.partition import page_namespace
+
+    foreign = "data-pages/" + page_namespace("bom-extra.json") + "-page-0001.json"
+    page = put(tmp_path, foreign, {"original": True})
+    root = put(tmp_path, "bom.json", {"$include": foreign})
+    before = {p: p.read_bytes() for p in (page, root)}
+    with pytest.raises(ValueError, match="another document"):
+        write_data(root, {"replacement": True})
+    assert {p: p.read_bytes() for p in before} == before
+
+
+def test_shared_data_writer_rejects_symlink_container_before_output(tmp_path):
+    from meridian_lab.bounded import write_data
+
+    foreign = tmp_path / "original-evidence"
+    foreign.mkdir()
+    untouched = put(foreign, "retained.json", {"original": True})
+    (tmp_path / "data-pages").symlink_to(foreign, target_is_directory=True)
+    root = put(tmp_path, "bom.json", {"original": True})
+    before = {p: p.read_bytes() for p in (root, untouched)}
+    with pytest.raises(ValueError, match="Symlink"):
+        write_data(root, [{"value": "é" * 900} for _ in range(50)])
+    assert {p: p.read_bytes() for p in before} == before
+    assert list(foreign.iterdir()) == [untouched]
 
 
 def test_data_writer_rejects_unsafe_prior_include_before_writing(tmp_path):

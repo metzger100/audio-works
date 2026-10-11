@@ -3,5 +3,5 @@
 
 Original conditions, statuses, failures and parents remain authoritative. [Structured index](../evidence-index.json).
 
-- [Page 1](index-pages/runs/page-0001.md)
-- [Page 2](index-pages/runs/page-0002.md)
+- [Page 1](index-pages/runs-0001.md)
+- [Page 2](index-pages/runs-0002.md)

@@ -18,5 +18,5 @@ Immediate contents and child hubs.
 - [references.yaml](references.yaml) — active
 - [registry.yaml](registry.yaml) — active
 - [validate_corners.py](validate_corners.py) — active
+- [data-pages/](data-pages/INDEX.md)
 - [proposals/](proposals/INDEX.md)
-- [registry-parts/](registry-parts/INDEX.md)

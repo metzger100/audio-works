@@ -8,7 +8,7 @@ Current implications; dated observations and full conditions remain in [original
 | Numerical success is scoped | Missing vectors, warnings, unclosed noise power, unsettled transients and unsupported parameters fail even with process exit0 |
 | Capsule/electrical behavior differs | Charge observer controls validate imposed equations; no safe bias, mechanical noise/SPL/polar response follows |
 | Loading/power paths matter | P48 current depends on feeds/cable/output. Symmetric resistors alone do not prove balance; polarization feed noise needs separate integration |
-| Optimization is a proposal |202fixture trials improve response3.882→0.994dB while worsening other axes; full suite rejects. [Foundation](../architectures/initial/phase0-report.md) |
+| Optimization is a proposal |202fixture trials improve response3.882→0.994dB while worsening other axes; full suite rejects. [Foundation](../architectures/phase0-report.md) |
 | Device convergence is insufficient | JFE coupled corners miss guarantees; OPA grounded linear agreement does not cover floating/nonlinear; MOS output/cap/leakage/noise gaps remain. [Validity](../devices/device-model-validation.md) |
 | Structural hypotheses preserve ancestry | Backplate filtering32.34→18.34 conditional dBA tests a supported flaw; all other qualification holds remain. [First batch](../architectures/first-architecture-batch.md) |
 | Finite endpoints can reverse nominal niches | Servo flatter nominally; fixed-bias better at several shared adverse endpoints. Both fail1GΩ leakage stress. [Comparison](../architectures/architecture-comparison-001.md) |

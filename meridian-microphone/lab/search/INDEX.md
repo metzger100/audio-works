@@ -15,5 +15,5 @@ Immediate contents and child hubs.
 - [mutate.py](mutate.py) — active
 - [novelty.py](novelty.py) — active
 - [selection.py](selection.py) — active
-- [concepts-parts/](concepts-parts/INDEX.md)
+- [data-pages/](data-pages/INDEX.md)
 - [proposals/](proposals/INDEX.md)

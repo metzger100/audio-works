@@ -28,6 +28,7 @@
 - [legacy-evidence.md](legacy-evidence.md)
 - [maintaining-repository.md](maintaining-repository.md)
 - [quality-rules.md](quality-rules.md)
+- [repository-layout.md](repository-layout.md)
 - [validation.md](validation.md)
 - [config/](config/INDEX.md)
 - [decisions/](decisions/INDEX.md)

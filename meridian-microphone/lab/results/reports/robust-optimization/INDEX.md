@@ -10,5 +10,4 @@ Immediate contents and child hubs.
 - [integrity.json](integrity.json) — generated
 - [provenance.json](provenance.json) — generated
 - [response.png](response.png) — generated
-- [integrity-parts/](integrity-parts/INDEX.md)
-- [provenance-parts/](provenance-parts/INDEX.md)
+- [data-pages/](data-pages/INDEX.md)

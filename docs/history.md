@@ -3,7 +3,7 @@
 
 Original bytes retain SHA256 and baseline Git provenance. Historical embedded links describe their original layout; use current subject hubs for live material.
 
-- [Page 1](index-pages/history/page-0001.md)
-- [Page 2](index-pages/history/page-0002.md)
-- [Page 3](index-pages/history/page-0003.md)
-- [Page 4](index-pages/history/page-0004.md)
+- [Page 1](index-pages/history-0001.md)
+- [Page 2](index-pages/history-0002.md)
+- [Page 3](index-pages/history-0003.md)
+- [Page 4](index-pages/history-0004.md)

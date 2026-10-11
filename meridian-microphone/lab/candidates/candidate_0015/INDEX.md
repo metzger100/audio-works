@@ -10,5 +10,4 @@ Immediate contents and child hubs.
 - [realization.py](realization.py) — active
 - [results.json](results.json) — active
 - [topology.yaml](topology.yaml) — active
-- [bom-parts/](bom-parts/INDEX.md)
-- [topology-parts/](topology-parts/INDEX.md)
+- [data-pages/](data-pages/INDEX.md)

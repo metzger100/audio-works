@@ -1,0 +1,259 @@
+{
+  "bom": {
+    "$include": "architecture-comparison-001-df7e444a4b1d-0005-representatives-0005-candidate-0013-0000-candidate-0013.json"
+  },
+  "candidate": "candidate_0013",
+  "checks": {
+    "balance": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "status": "incomplete"
+    },
+    "carrier_mechanism": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "SimulationError: ngspice exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+      "status": "error"
+    },
+    "distortion": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "status": "incomplete"
+    },
+    "frequency_response": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "status": "incomplete"
+    },
+    "headroom": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "status": "incomplete"
+    },
+    "loading": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "status": "incomplete"
+    },
+    "monte_carlo": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "status": "incomplete"
+    },
+    "noise": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "status": "incomplete"
+    },
+    "operating_point": {
+      "coverage": "DC feasibility screen; device safe operating area remains a separate evidence gate",
+      "metrics": {
+        "conductor_current_mismatch_fraction": 0.0,
+        "current_a": 0.00123425380646283,
+        "current_per_leg_a": [
+          0.0006171269032314149,
+          0.0006171269032314149
+        ],
+        "dc_energy_accounting": {
+          "capsule_leakage_power_w": 1.7057198609746493e-09,
+          "devices": [
+            {
+              "absorbed_power_w": 0.022439685109317195,
+              "instance": "Qreg",
+              "model_id": "bc846b_emitter_r1",
+              "terminal_currents_a": [
+                0.001020833370972696,
+                2.382836459417754e-06,
+                -0.001023216207332922
+              ],
+              "terminal_kcl_residual_a": 9.919167851525049e-14,
+              "terminal_voltages_v": [
+                42.44462361711913,
+                21.10316998558939,
+                20.46438313838371
+              ]
+            }
+          ],
+          "relative_residual": 2.0406035511840986e-12,
+          "residual_w": 1.1032147417822102e-13,
+          "resistors": [
+            {
+              "absorbed_power_w": 0.0008378603523121838,
+              "reference": "Rharvestp"
+            },
+            {
+              "absorbed_power_w": 0.0008378603523121838,
+              "reference": "Rharvestn"
+            },
+            {
+              "absorbed_power_w": 0.004554576431067338,
+              "reference": "Rregtop"
+            },
+            {
+              "absorbed_power_w": 0.004453437834406809,
+              "reference": "Rregbottom"
+            },
+            {
+              "absorbed_power_w": 0.010469714069478137,
+              "reference": "Rmidtop"
+            },
+            {
+              "absorbed_power_w": 0.010469834792424039,
+              "reference": "Rmidbottom"
+            },
+            {
+              "absorbed_power_w": 3.480023442630529e-11,
+              "reference": "Rpolar0"
+            },
+            {
+              "absorbed_power_w": 3.4800234426221456e-11,
+              "reference": "Rpolar1"
+            },
+            {
+              "absorbed_power_w": 3.4800234426221456e-11,
+              "reference": "Rpolar2"
+            },
+            {
+              "absorbed_power_w": 3.4800234426221456e-11,
+              "reference": "Rpolar3"
+            },
+            {
+              "absorbed_power_w": 3.4800234426137626e-11,
+              "reference": "Rpolar4"
+            },
+            {
+              "absorbed_power_w": 3.4800234426137626e-11,
+              "reference": "Rpolar5"
+            },
+            {
+              "absorbed_power_w": 3.480023442605379e-11,
+              "reference": "Rpolar6"
+            },
+            {
+              "absorbed_power_w": 3.4800234426137626e-11,
+              "reference": "Rpolar7"
+            },
+            {
+              "absorbed_power_w": 3.480023442596996e-11,
+              "reference": "Rpolar8"
+            },
+            {
+              "absorbed_power_w": 3.480023442596996e-11,
+              "reference": "Rpolar9"
+            },
+            {
+              "absorbed_power_w": 3.4114397223570463e-15,
+              "reference": "Rback"
+            },
+            {
+              "absorbed_power_w": 8.700061882702978e-09,
+              "reference": "Rbias"
+            },
+            {
+              "absorbed_power_w": 8.700061882702978e-09,
+              "reference": "Rrearbias"
+            },
+            {
+              "absorbed_power_w": 1.135959703518257e-31,
+              "reference": "Rfilter1"
+            },
+            {
+              "absorbed_power_w": 0.0,
+              "reference": "Rfilter2"
+            },
+            {
+              "absorbed_power_w": 0.0,
+              "reference": "Routp"
+            },
+            {
+              "absorbed_power_w": 0.0,
+              "reference": "Routn"
+            },
+            {
+              "absorbed_power_w": 0.0,
+              "reference": "RCbridgefloss"
+            },
+            {
+              "absorbed_power_w": 8.528633419304582e-08,
+              "reference": "RCbridgefinsulation"
+            },
+            {
+              "absorbed_power_w": 0.0,
+              "reference": "RCbridgerloss"
+            },
+            {
+              "absorbed_power_w": 8.528633419304582e-08,
+              "reference": "RCbridgerinsulation"
+            }
+          ],
+          "scope": "DC terminal energy only; vendor macro internals, thermal/SOA and periodic controls unqualified",
+          "summed_absorbed_power_w": 0.05406315896783566,
+          "terminal_power_w": 0.05406315896794598
+        },
+        "device_power_qualification": "Terminal currents/powers recorded; thermal/SOA and vendor power-block fidelity remain unqualified",
+        "internal_rail_v": 20.46438313838371,
+        "mic_terminal_v": [
+          43.80230280421997,
+          43.80230280421997
+        ],
+        "polarization_dc_v": 29.20376569018668,
+        "safe_capsule_bias": "unknown; simulated voltage is not approved for hardware",
+        "supplied_power_w": 0.05924418271021584,
+        "terminal_power_w": 0.05406315896794598
+      },
+      "reason": null,
+      "status": "pass"
+    },
+    "output_impedance": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "status": "incomplete"
+    },
+    "phantom_supply": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "status": "incomplete"
+    },
+    "semiconductor_corners": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "status": "incomplete"
+    },
+    "stability": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "status": "incomplete"
+    },
+    "startup": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "status": "incomplete"
+    },
+    "temperature": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+      "status": "incomplete"
+    }
+  },
+  "choice": {
+    "name": "Floating carrier bridge control",
+    "reason": "Most complete tested passive realization; excitation, demodulator and buffers remain ideals, periodic integration fails."
+  },
+  "claims_and_official_status_evidence": [],
+  "identity": {
+    "$include": "architecture-comparison-001-df7e444a4b1d-0005-representatives-0005-candidate-0013-0005-identity.json"
+  }
+}

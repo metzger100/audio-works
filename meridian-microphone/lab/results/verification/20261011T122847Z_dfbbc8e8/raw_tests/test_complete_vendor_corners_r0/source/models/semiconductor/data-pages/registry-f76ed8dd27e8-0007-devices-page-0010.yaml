@@ -1,0 +1,103 @@
+- id: dmmt5401
+  manufacturer: Diodes Incorporated
+  exact_variant: DMMT5401-7-F
+  family: integrated_dual_pnp_bipolar_adjacent_die
+  package: SOT26
+  circuit_roles:
+  - p48_power
+  - balanced_output
+  lifecycle:
+    status: current_manufacturer_catalogue_no_reserved_stock
+    checked_date: '2026-10-09'
+    source_url: https://www.diodes.com/part/view/DMMT5401/
+  datasheet:
+    url: https://www.diodes.com/datasheet/download/DMMT5401.pdf
+    retrieved_date: '2026-10-09'
+    version: DS30437 Rev9-2 March2024
+    local_path: models/semiconductor/vendor/evidence/parts002_dmmt5401.pdf
+    sha256: 9f6a6294ac8d8f71fa2798d76a9f5504ffc8df01a7c26208197846d83ebdfca8
+  models:
+  - id: dmmt5401_vendor
+    path: semiconductor/vendor/dmmt5401.lib
+    sha256: ba932265a79f5084da2790f45b0397d46182b9e88d81e247296425e30f715b62
+    version: Version2 10FEB2011
+    source_url: https://www.diodes.com/spice/download/3323/DMMT5401.spice.txt
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: self-contained six-terminal subcircuit
+    subcircuit: DMMT5401
+    primitive: X
+    parent_model_id: null
+    ngspice_behavior: null
+    pin_order: C1 B1 B2 C2 E2 E1 = physical1 2 3 4 5 6
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original full notice retained privately
+    runnability: scoped_success_with_retained_disagreements
+    behavior_validation: only conditioned accepted rows; omissions unresolved
+    load_record: results/device_models/20261009T171204Z_dual_pnp_9ff5882e/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+    - behavior: hfe_0.001
+      status: pass
+      evidence: guaranteed_limit
+      condition: DS30437 Rev9-2 March2024 page2 VCE5V25C; pulse-reference isothermal
+        screen
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T171204Z_dual_pnp_9ff5882e/results.json
+    - behavior: hfe_0.01
+      status: pass
+      evidence: guaranteed_limit
+      condition: DS30437 Rev9-2 March2024 page2 VCE5V25C; pulse-reference isothermal
+        screen
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T171204Z_dual_pnp_9ff5882e/results.json
+    - behavior: ccb
+      status: pass
+      evidence: guaranteed_limit
+      condition: VCB10V1MHz emitter1Pohm; finite fixture
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T171204Z_dual_pnp_9ff5882e/results.json
+    - behavior: icbo_100
+      status: pass
+      evidence: guaranteed_limit
+      condition: VCB120V emitter1Pohm
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T171204Z_dual_pnp_9ff5882e/results.json
+    - behavior: nf_density_screen
+      status: fail
+      evidence: conditional_frequency_screen
+      condition: IC200uA VCE5V Rs10ohm f1k25C; unspecified measurement filter; no
+        broadband claim
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T171204Z_dual_pnp_9ff5882e/results.json
+    - behavior: noise_refinement
+      status: pass
+      evidence: numerical_refinement
+      condition: ''
+      scope: Isolated nominal point/screen only
+      record: results/device_models/20261009T171204Z_dual_pnp_9ff5882e/results.json
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  ordinary_production_matching:
+    hfe_mismatch_max_fraction: 0.02
+    hfe_condition: IC10mA VCE5V25C; short pulse note9
+    vsat_mismatch_max_fraction: 0.02
+    source: DS30437 page2 note9
+    limitation: Adjacent same-wafer die, not monolithic assertion. Identical nominal
+      models do not represent mismatch or thermal correlation.
+  ratings:
+    vceo_v: 150
+    ic_max_a_per_half: 0.2
+    power_w_combined: 0.3
+    rthja_k_per_w: 417
+    condition: Minimum recommended pads1oz single-sided1.6mmFR4 still air25C; combined
+      power
+  procurement_register: research/procurement/parts_expansion_002_2026-10-09.yaml
+  patent_status: isolated_device_research_no_candidate_clearance
+  readiness: research_only
+  validation_report: research/parts_database_expansion_002.md
+  validation_record: results/device_models/20261009T171204Z_dual_pnp_9ff5882e/results.json
