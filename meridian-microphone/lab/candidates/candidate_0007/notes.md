@@ -4,4 +4,4 @@ Parent [candidate_0001](../candidate_0001/notes.md) and all failed records are r
 
 Engineer change: Retain gate-bias/source-degeneration voltage conversion; replace failed CMOS output macros with three real NPN stages; realize backordered 10k passives as separately specified AC series.
 
-[Topology and nine questions](topology.yaml) · [Intended-quantity research BOM](bom.yaml). No selection, trimming, substitute-equivalence, production-noise or patent clearance is claimed. Explicit ideal blocks remain ineligible. Nominal passives/tolerance stress are implemented; unmeasured ESR/leakage/excess-noise/temperature laws remain qualification gaps.
+[Topology](topology.yaml) · [BOM](bom.yaml) · [Shared qualification conditions](../README.md#qualification-conditions).

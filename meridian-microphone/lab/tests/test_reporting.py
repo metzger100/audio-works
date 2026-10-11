@@ -129,3 +129,40 @@ def test_derived_comparison_preserves_frozen_identities_and_provenance():
         ):
             assert detail["identity"][key] == record[key]
         assert detail["checks"] == record["checks"]
+
+
+def test_data_writer_replaces_only_prior_owned_pages(tmp_path):
+    from meridian_lab.bounded import write_data
+    from meridian_lab.data import load
+
+    root = tmp_path / "report.json"
+    old = tmp_path / "report-parts/metrics-parts/page-0001.json"
+    old.parent.mkdir(parents=True)
+    old.write_text('[{"value": "original"}]\n')
+    (old.parent.parent / "metrics.json").write_text('{"$include":"metrics-parts/page-0001.json"}\n')
+    root.write_text('{"$include":"report-parts/metrics.json"}\n')
+    unrelated = old.parent.parent / "other-evidence.json"
+    unrelated.write_text('{"original": true}\n')
+    before = unrelated.read_bytes()
+    value = {"cases": [{"id": f"case-{i}", "value": "é" * 800} for i in range(80)]}
+    write_data(root, value)
+    assert not old.exists()
+    assert not old.parent.exists()
+    assert unrelated.read_bytes() == before
+    assert load(lambda name: (tmp_path / name).read_text(), "report.json") == value
+    pages = set((tmp_path / "report-parts").glob("*.json")) - {unrelated}
+    write_data(root, {"current": "compact"})
+    assert all(not page.exists() for page in pages)
+    assert unrelated.read_bytes() == before
+    assert json.loads(root.read_text()) == {"current": "compact"}
+
+
+def test_data_writer_rejects_unsafe_prior_include_before_writing(tmp_path):
+    from meridian_lab.bounded import write_data
+
+    root = tmp_path / "report.json"
+    root.write_text('{"$include":"../outside.json"}\n')
+    before = root.read_bytes()
+    with pytest.raises(ValueError, match="Unsafe prior data include"):
+        write_data(root, {"replacement": True})
+    assert root.read_bytes() == before

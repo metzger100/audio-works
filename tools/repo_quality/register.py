@@ -48,6 +48,26 @@ def load_register(view):
     for name, paths in r["routes"].items():
         if name in ENGINEERING and "meridian-microphone/lab/CONTRACT.md" not in paths:
             raise ValueError(f"Engineering route {name} omits the scientific contract")
+        if name in ENGINEERING:
+            required = {
+                "meridian-microphone/README.md",
+                "meridian-microphone/DECISIONS.md",
+                "meridian-microphone/lab/AGENTS.md",
+                "meridian-microphone/lab/research/reading.md",
+                "meridian-microphone/lab/research/sources.yaml",
+                *(
+                    "meridian-microphone/lab/spec/" + spec + ".yaml"
+                    for spec in (
+                        "microphone-spec",
+                        "capsule-model",
+                        "design-constraints",
+                        "scoring",
+                        "lock",
+                    )
+                ),
+            }
+            if required - set(paths):
+                raise ValueError(f"Engineering route {name} omits project authority/specifications")
     for module in r["modules"]:
         prefix = module["prefix"]
         if not prefix.endswith("/") or not module.get("name") or not module.get("purpose"):

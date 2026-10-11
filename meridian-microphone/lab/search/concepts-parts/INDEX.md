@@ -3,6 +3,8 @@
 
 Immediate contents and child hubs.
 
+- [0003-concepts-page-0001.yaml](0003-concepts-page-0001.yaml) — active
+- [0003-concepts-page-0002.yaml](0003-concepts-page-0002.yaml) — active
+- [0003-concepts-page-0003.yaml](0003-concepts-page-0003.yaml) — active
 - [0003-concepts.yaml](0003-concepts.yaml) — active
 - [page-0001.yaml](page-0001.yaml) — active
-- [0003-concepts-parts/](0003-concepts-parts/INDEX.md)

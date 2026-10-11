@@ -53,3 +53,19 @@ class DataTests(unittest.TestCase):
                 (root / "tools/repo_quality" / name).read_bytes(),
                 (root / "meridian-microphone/lab/src/meridian_lab" / name).read_bytes(),
             )
+
+    def test_deep_records_use_one_directory_and_keep_semantic_identities(self):
+        value = {
+            "representatives": [
+                {
+                    "candidate": "candidate_0023",
+                    "checks": {"monte_carlo": {"cases": [{"value": "é" * 800} for _ in range(60)]}},
+                }
+            ]
+        }
+        outputs = bounded_data(value, "report.json")
+        self.assertTrue(all(len(Path(name).parts) <= 2 for name in outputs))
+        self.assertTrue(any("candidate-0023" in name for name in outputs))
+        self.assertTrue(all(len(data.decode()) <= 12000 for data in outputs.values()))
+        self.assertEqual(value, load(lambda name: outputs[name].decode(), "report.json"))
+        self.assertEqual(outputs, bounded_data(value, "report.json"))

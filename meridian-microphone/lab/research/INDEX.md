@@ -6,6 +6,7 @@ One subject hub for capsule, device, architecture, sourcing, patent and research
 - [README.md](README.md) — active
 - [hypotheses.md](hypotheses.md) — active
 - [parts-model-load-plan-001.yaml](parts-model-load-plan-001.yaml) — active
+- [reading.md](reading.md) — active
 - [sources.yaml](sources.yaml) — active
 - [topology-challenge-0001.md](topology-challenge-0001.md) — active
 - [architecture-sources/](architecture-sources/INDEX.md)
@@ -19,3 +20,4 @@ One subject hub for capsule, device, architecture, sourcing, patent and research
 - [prior-art/](prior-art/INDEX.md)
 - [procurement/](procurement/INDEX.md)
 - [prompts/](prompts/INDEX.md)
+- [sources/](sources/INDEX.md)

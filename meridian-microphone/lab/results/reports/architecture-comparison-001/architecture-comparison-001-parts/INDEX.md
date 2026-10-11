@@ -3,13 +3,7 @@
 
 Immediate contents and child hubs.
 
-- [0003-representatives.json](0003-representatives.json) — generated
-- [0005-optimizers.json](0005-optimizers.json) — generated
-- [0006-paired-endpoints.json](0006-paired-endpoints.json) — generated
-- [0007-noise-contributions.json](0007-noise-contributions.json) — generated
-- [page-0001.json](page-0001.json) — generated
-- [page-0002.json](page-0002.json) — generated
-- [page-0003.json](page-0003.json) — generated
-- [0003-representatives-parts/](0003-representatives-parts/INDEX.md)
-- [0005-optimizers-parts/](0005-optimizers-parts/INDEX.md)
-- [0007-noise-contributions-parts/](0007-noise-contributions-parts/INDEX.md)
+- [Page 1](index-pages/index/page-0001.md)
+- [Page 2](index-pages/index/page-0002.md)
+- [Page 3](index-pages/index/page-0003.md)
+- [Page 4](index-pages/index/page-0004.md)

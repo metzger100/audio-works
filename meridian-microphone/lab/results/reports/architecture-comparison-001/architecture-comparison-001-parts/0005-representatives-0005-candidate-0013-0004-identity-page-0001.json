@@ -1,0 +1,63 @@
+{
+  "backend": "ngspice",
+  "implementation_manifest": {
+    "bom.yaml": "e57ae53f21107a79b34b1821bb913d9fc3295e8cef19a00f54442549ec6ed23a",
+    "circuit.cir": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015",
+    "hypothesis.md": "667cc20c26ea5ff63648fafb4a868d4450c998b402be4685047cb62ffc2c44b6",
+    "notes.md": "b5649da2be3d22d9f9305eefde4c96a316ecb9e4dc6fb54dc30f81d49019d30f",
+    "topology.yaml": "06fda3a1dd8bab0dd71bc656835f0f58b8f3b0a8742c8a0cba26452b5f654e2a"
+  },
+  "models": [
+    {
+      "acquisition_status": "valid_spice",
+      "device_id": "bc846b",
+      "id": "bc846b_emitter_r1",
+      "manufacturer": "Nexperia",
+      "model_lineage": [
+        {
+          "id": "bc846b_vendor",
+          "retrieved_date": "2026-10-05",
+          "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+          "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+          "version": "extraction week 24/2021"
+        }
+      ],
+      "ngspice_behavior": "",
+      "parent_model_id": "bc846b_vendor",
+      "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+      "redistribution": {
+        "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+        "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+        "status": "not_established_do_not_redistribute"
+      },
+      "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/runs/20261009T090547Z_1f85c513/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+      "retrieved_date": "2026-10-05",
+      "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+      "subcircuit": "BC846B",
+      "syntax": "SPICE3 subcircuit",
+      "version": "project structural child r1; Q2 emitter 33 -> 3"
+    }
+  ],
+  "parent_candidates": [
+    "candidate_0009"
+  ],
+  "parent_experiments": [
+    "20261009T082105Z_98724e41"
+  ],
+  "rng_seed": 84047,
+  "source_manifest": {
+    "$include": "0005-representatives-0005-candidate-0013-0004-identity-0006-source-manifest.json"
+  },
+  "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+  "suite_sha256": "75bea8b0ca5302a3b1906d41931149133244dd75b1572f52c557cd7a9ab84df5",
+  "versions": {
+    "matplotlib": "3.10.8",
+    "ngspice": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Wed Aug 19 09:38:31 UTC 2026\n******",
+    "numpy": "2.4.2",
+    "pandas": "3.0.1",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "scipy": "1.17.1",
+    "yaml": "6.0.3"
+  }
+}

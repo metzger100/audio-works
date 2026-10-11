@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "observed_date": "2026-10-09",
+  "kind": "Own primary-page observations, not redistributed manufacturer documents",
+  "sources": [
+    {
+      "url": "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1J470",
+      "retrieval": "Primary web page opened; 2026-10-09 retrieval",
+      "exact_variant": "EEUFR1J470 (supplier punctuation EEU-FR1J470)",
+      "capacitance_f": 0.000047,
+      "tolerance_fraction": 0.20,
+      "voltage_v": 63,
+      "tan_delta_max": 0.09,
+      "leakage_max_a": 0.0000296,
+      "temperature_c": [-40, 105],
+      "impedance_max_ohm_at_100khz": 0.21,
+      "body_mm": [6.3, 11.2],
+      "pitch_mm": 2.5,
+      "factory_pack": 5000,
+      "limits": "Factory packaging is not retail MOQ. No broadband ESR/leakage/temperature/noise distribution supplied."
+    },
+    {
+      "url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDF0000/ABA0000C1259.pdf",
+      "version_observed": "01-Sep-25 FR-A, 13 pages",
+      "retrieval": "Primary PDF opened, specification page 0 inspected",
+      "tan_delta_conditions": "120Hz, 20C",
+      "leakage_conditions": "2 minutes after reaching rated voltage, 20C; 0.01CV microampere",
+      "inference": "Use DF/(2*pi*120*C) as a constant-series-loss stress, and 63V/29.6uA as an ohmic leakage stress; neither is a validated broadband or actual-bias law."
+    },
+    {
+      "url": "https://www.digikey.de/en/products/detail/panasonic-industry/EEU-FR1J470/3072280",
+      "retrieval": "Indexed primary seller result; reported crawl 4 months. Direct open failed (internal error).",
+      "stock_observed": 65991,
+      "live_stock": null,
+      "unit_price_eur_observed": 0.40,
+      "price_quantity": 1,
+      "retail_quantity_break": 1,
+      "packaging": "Bulk individual",
+      "supplier_status_observed": "Active",
+      "confirmed_delivered_eur": null,
+      "limits": "Not live accepted orderability. Existing dated seller/private-Germany terms retained; shipping/VAT/payment/fees require basket quote. No surplus price-break purchase."
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 """Deterministic bounded structured output, without dropping fields or precision."""
 
 from pathlib import PurePosixPath
+import hashlib
 import posixpath
 import re
 import yaml
@@ -14,6 +15,16 @@ TARGET = 12000
 def bounded_data(value, name):
     outputs = {}
     suffix = ".yaml" if PurePosixPath(name).suffix in {".yaml", ".yml"} else ".json"
+    directory = str(PurePosixPath(name).with_suffix("")) + "-parts"
+
+    def filename(crumbs):
+        label = "-".join(
+            re.sub(r"[^a-z0-9]+", "-", str(crumb).lower()).strip("-") or "value" for crumb in crumbs
+        )
+        # Long paths stay recognizable; the full identity prevents truncated collisions.
+        if len(label) > 110:
+            label = label[:95].rstrip("-") + "-" + hashlib.sha256(label.encode()).hexdigest()[:12]
+        return directory + "/" + label + suffix
 
     def encode(node):
         return (
@@ -22,22 +33,27 @@ def bounded_data(value, name):
             else canonical(node)
         )
 
-    def emit(node, destination):
+    def emit(node, destination, crumbs):
         payload = encode(node)
         if len(payload.decode()) <= TARGET:
             outputs[destination] = payload
             return
         if not isinstance(node, (dict, list)):
             raise ValueError(f"Oversized scalar needs editorial restructuring: {destination}")
-        directory = str(PurePosixPath(destination).with_suffix("")) + "-parts"
         entries = list(node.items()) if isinstance(node, dict) else list(enumerate(node))
         adjusted = []
         for index, (key, child) in enumerate(entries):
             if len(encode(child).decode()) > 8000:
-                label = child.get("id", key) if isinstance(child, dict) else key
-                label = re.sub(r"[^a-z0-9]+", "-", str(label).lower()).strip("-")[:64] or "value"
-                child_name = f"{directory}/{index:04d}-{label}{suffix}"
-                emit(child, child_name)
+                identity = (
+                    next(
+                        (child[k] for k in ("id", "candidate", "candidate_id") if child.get(k)), key
+                    )
+                    if isinstance(child, dict)
+                    else key
+                )
+                child_crumbs = (*crumbs, f"{index:04d}", str(identity))
+                child_name = filename(child_crumbs)
+                emit(child, child_name, child_crumbs)
                 child = {"$include": posixpath.relpath(child_name, posixpath.dirname(destination))}
             adjusted.append((key, child))
         groups = []
@@ -55,7 +71,7 @@ def bounded_data(value, name):
             groups.append(current)
         references = []
         for index, group in enumerate(groups):
-            part = f"{directory}/page-{index + 1:04d}{suffix}"
+            part = filename((*crumbs, f"page-{index + 1:04d}"))
 
             # References inside the group were relative to its original parent.
             def relocate(value):
@@ -77,5 +93,5 @@ def bounded_data(value, name):
             raise ValueError(f"Too many include pages: {destination}; group records semantically")
         outputs[destination] = encode(root)
 
-    emit(value, name)
+    emit(value, name, ())
     return outputs

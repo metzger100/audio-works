@@ -3,7 +3,5 @@
 
 Immediate contents and child hubs.
 
-- [0004-input-sha256.json](0004-input-sha256.json) — generated
-- [0005-verified-declared-files.json](0005-verified-declared-files.json) — generated
-- [page-0001.json](page-0001.json) — generated
-- [0005-verified-declared-files-parts/](0005-verified-declared-files-parts/INDEX.md)
+- [Page 1](index-pages/index/page-0001.md)
+- [Page 2](index-pages/index/page-0002.md)

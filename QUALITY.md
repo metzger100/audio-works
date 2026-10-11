@@ -6,7 +6,7 @@ Owner-directed revision: 2026-10-09; repository-wide. Component/patent/scientifi
 
 `project.json` owns current facts/evidence; configuration owns modules/routes/classifications. Decisions retain rationale/originals. Records retain observations, failures, parents, cohorts and hashes; generated views reproduce them without inventing unknowns.
 
-Maintained UTF-8 text, including code/configuration/generated text, has a **15,000-character** ceiling. Shared onboarding includes every mandatory policy and has the same ceiling; current state stays below 300 words. Scientific correctness takes priority over reading size. SVG/media and hash-protected originals/licence material retain their scope; no general waiver exists.
+Maintained UTF-8 text, including code/configuration/generated text, has a **15,000-character** ceiling. Shared onboarding includes every mandatory policy and has the same ceiling; current state stays below 300 words. Entry routes stay within50,000 characters; extra required evidence loads without a cap. Scientific correctness takes priority over reading size. SVG/media and hash-protected originals/licence material retain their scope; no general waiver exists.
 
 Follow the [completion sequence](CONTRIBUTING.md#complete-a-change). Quality/tooling changes need dated decisions and regression coverage. Recurring defects become fixtures; audits use existing records. No scheduled jobs or extra ledger.
 

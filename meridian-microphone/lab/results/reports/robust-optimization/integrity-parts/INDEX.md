@@ -3,5 +3,5 @@
 
 Immediate contents and child hubs.
 
-- [0015-record-hashes.json](0015-record-hashes.json) — generated
+- [0009-record-hashes.json](0009-record-hashes.json) — generated
 - [page-0001.json](page-0001.json) — generated

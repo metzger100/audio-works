@@ -3,6 +3,15 @@
 
 Immediate contents and child hubs.
 
+- [0007-devices-page-0001.yaml](0007-devices-page-0001.yaml) — active
+- [0007-devices-page-0002.yaml](0007-devices-page-0002.yaml) — active
+- [0007-devices-page-0003.yaml](0007-devices-page-0003.yaml) — active
+- [0007-devices-page-0004.yaml](0007-devices-page-0004.yaml) — active
+- [0007-devices-page-0005.yaml](0007-devices-page-0005.yaml) — active
+- [0007-devices-page-0006.yaml](0007-devices-page-0006.yaml) — active
+- [0007-devices-page-0007.yaml](0007-devices-page-0007.yaml) — active
+- [0007-devices-page-0008.yaml](0007-devices-page-0008.yaml) — active
+- [0007-devices-page-0009.yaml](0007-devices-page-0009.yaml) — active
+- [0007-devices-page-0010.yaml](0007-devices-page-0010.yaml) — active
 - [0007-devices.yaml](0007-devices.yaml) — active
 - [page-0001.yaml](page-0001.yaml) — active
-- [0007-devices-parts/](0007-devices-parts/INDEX.md)

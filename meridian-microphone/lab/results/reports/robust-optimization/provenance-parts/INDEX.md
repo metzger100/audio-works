@@ -3,6 +3,7 @@
 
 Immediate contents and child hubs.
 
+- [0000-input-sha256-page-0001.json](0000-input-sha256-page-0001.json) — generated
+- [0000-input-sha256-page-0002.json](0000-input-sha256-page-0002.json) — generated
 - [0000-input-sha256.json](0000-input-sha256.json) — generated
 - [page-0001.json](page-0001.json) — generated
-- [0000-input-sha256-parts/](0000-input-sha256-parts/INDEX.md)

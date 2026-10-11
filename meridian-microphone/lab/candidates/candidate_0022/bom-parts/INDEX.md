@@ -3,6 +3,9 @@
 
 Immediate contents and child hubs.
 
+- [0005-physical-parts-page-0001.yaml](0005-physical-parts-page-0001.yaml) — active
+- [0005-physical-parts-page-0002.yaml](0005-physical-parts-page-0002.yaml) — active
+- [0005-physical-parts-page-0003.yaml](0005-physical-parts-page-0003.yaml) — active
+- [0005-physical-parts-page-0004.yaml](0005-physical-parts-page-0004.yaml) — active
 - [0005-physical-parts.yaml](0005-physical-parts.yaml) — active
 - [page-0001.yaml](page-0001.yaml) — active
-- [0005-physical-parts-parts/](0005-physical-parts-parts/INDEX.md)

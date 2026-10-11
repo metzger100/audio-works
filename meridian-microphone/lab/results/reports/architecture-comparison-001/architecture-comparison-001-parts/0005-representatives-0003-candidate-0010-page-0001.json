@@ -1,0 +1,143 @@
+{
+  "bom": {
+    "$include": "0005-representatives-0003-candidate-0010-0000-candidate-0010.json"
+  },
+  "candidate": "candidate_0010",
+  "checks": {
+    "balance": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "status": "error"
+    },
+    "distortion": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "status": "error"
+    },
+    "frequency_response": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "status": "error"
+    },
+    "headroom": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "status": "error"
+    },
+    "loading": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "status": "error"
+    },
+    "monte_carlo": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "status": "error"
+    },
+    "noise": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "status": "error"
+    },
+    "operating_point": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "status": "error"
+    },
+    "output_impedance": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "status": "error"
+    },
+    "phantom_supply": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "status": "error"
+    },
+    "semiconductor_corners": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "status": "error"
+    },
+    "stability": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "status": "error"
+    },
+    "startup": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "status": "error"
+    },
+    "temperature": {
+      "coverage": null,
+      "metrics": {},
+      "reason": "ngspice exit 0: Warning",
+      "status": "error"
+    }
+  },
+  "choice": {
+    "name": "Guarded CMOS voltage input",
+    "reason": "Retains real CMOS input and guard in tested NPN-output child; convergence hold supplies no usable performance ranking."
+  },
+  "claims_and_official_status_evidence": [],
+  "identity": {
+    "$include": "0005-representatives-0003-candidate-0010-0004-identity.json"
+  },
+  "patent_original_feature_record": {
+    "affected_gate_hold": [
+      "prototype selection",
+      "manufacture",
+      "implementation/build publication"
+    ],
+    "candidate_features": [
+      "front voltage",
+      "midrail through 1 GOhm; guard DC anchored by 1 Mohm",
+      "NPN follower plus emitter-degenerated NPN inverse/follower; finite unequal impedances measured",
+      "unity_voltage_guard",
+      "P48 two-leg power harvest; filtered polarization"
+    ],
+    "candidate_id": "candidate_0010",
+    "candidate_version_or_hash": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9",
+    "checked_date": "2026-10-09",
+    "claim_element_mapping": [],
+    "claims_of_interest": [],
+    "expiration_basis": null,
+    "grant_number": null,
+    "hold_basis": "Required screening not completed; no specific blocking claim or legal non-infringement finding asserted",
+    "intended_activities": "Internal simulation research now; later prototype/manufacture/build-publication not selected or authorized",
+    "licence_scope_if_relied_on": null,
+    "official_status_source": null,
+    "parent_candidates": [
+      "candidate_0003"
+    ],
+    "prepared_search_terms": [
+      "unity_voltage_guard condenser microphone phantom power",
+      "voltage capacitive sensor bias feedback guard bridge"
+    ],
+    "professional_review_required": "Refer any material claim/status uncertainty before affected selection",
+    "publication_number": null,
+    "resolution_evidence": null,
+    "rights_territory": [
+      "DE intended private use; not an exemption claim",
+      "Possible EP/DE rights need official status",
+      "Other manufacture/delivery/publication territories unknown"
+    ],
+    "screening_state": "unscreened_no_clearance",
+    "search_scope_and_limits": "Early structural feature mapping only; no candidate-linked patent database/claim or official legal-status search performed in this batch. Primary instrumentation papers/datasheets are not claim screening.",
+    "uncertainty": "Claim scope, family/territory, expiry/lapse/opposition and implementation mapping unresolved; structural alternatives require their own assessment"
+  }
+}

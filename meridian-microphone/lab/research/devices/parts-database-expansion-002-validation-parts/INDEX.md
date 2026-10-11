@@ -3,6 +3,9 @@
 
 Immediate contents and child hubs.
 
-- [0014-acquisition-audit.json](0014-acquisition-audit.json) — active
+- [0000-acquisition-audit-0000-observations-page-0001.json](0000-acquisition-audit-0000-observations-page-0001.json) — active
+- [0000-acquisition-audit-0000-observations-page-0002.json](0000-acquisition-audit-0000-observations-page-0002.json) — active
+- [0000-acquisition-audit-0000-observations.json](0000-acquisition-audit-0000-observations.json) — active
+- [0000-acquisition-audit-page-0001.json](0000-acquisition-audit-page-0001.json) — active
+- [0000-acquisition-audit.json](0000-acquisition-audit.json) — active
 - [page-0001.json](page-0001.json) — active
-- [0014-acquisition-audit-parts/](0014-acquisition-audit-parts/INDEX.md)

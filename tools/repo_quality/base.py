@@ -9,6 +9,7 @@ import subprocess
 
 MAX_COMMON = 15000
 MAX_FILE = 15000
+MAX_ROUTE = 50000
 
 MANDATORY = {
     "AGENTS.md",

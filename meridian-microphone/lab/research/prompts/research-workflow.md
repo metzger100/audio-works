@@ -3,9 +3,11 @@
 
 Shared by initial prompts01–05 and owner-requested continuation06–13 (drafted9 October 2026). Written tasks are not executed evidence. Audit current progress before extending an existing source, model or child; do not restart completed work from an old prompt pack.
 
+Work from `meridian-microphone/lab` on M100 Meridian MIC-34-M/MIC-34-C with the K47FRB/P48 input. Physics/measurements → SPICE → tests → optimization → reasoning → intuition; no production topology or PCB selection follows from these tasks.
+
 ## Reading and authority
 
-Use the prompt's root `context` route, then read its evidence. Required shared authority: root agent/component/patent/quality/contributor instructions, current facts, [project](../../../README.md), [decisions](../../../DECISIONS.md), [lab instructions](../../AGENTS.md), complete [scientific contract](../../CONTRACT.md), [lab hub](../../README.md), all relevant [specifications](../../spec/INDEX.md), [source register](../sources.yaml), [roles](../memory/roles.md), [discoveries](../memory/discoveries.md), [failures](../memory/rejected-ideas.md), [procurement](../procurement/germany.md) and [patent track](../patents/README.md). Read relevant current reports and original conditions before engineering claims.
+Use the prompt's root `context` route, then follow [scoped required evidence](../reading.md) and the selected task's conditions. The complete scientific contract and acceptance specifications load first. Source groups, research memory, roles, exact sourcing and patent mappings load before work that relies on them. Required evidence is unrestricted; preserve the authority of every linked policy.
 
 Work autonomously on authorized documentary/analytical/numerical research. No purchase, contact, payment, licence acceptance, account creation or publication. Measurement access is deferred: continue evidence-backed scenarios, retaining all physical/safe-bias gates. Similar capsules supply analogies, not K47FRB ratings or stimulus permission.
 

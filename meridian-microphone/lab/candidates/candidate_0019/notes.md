@@ -2,6 +2,6 @@
 
 Parent [candidate_0015](../candidate_0015/notes.md) and all failed records are retained.
 
-Engineer change: Realize output capacitance with actual parallel EEU-FR1J470 parts; count each part and add individually recorded series-loss and leakage controls. Preserve conversion and fixed bias; all gates held. Complete suite and holdout scenarios required.
+Change and required rechecks: [shared output capacitor realization](../README.md#output-capacitor-realization).
 
-[Topology and nine questions](topology.yaml) · [Intended-quantity research BOM](bom.yaml). No selection, trimming, substitute-equivalence, production-noise or patent clearance is claimed. Explicit ideal blocks remain ineligible. Nominal passives/tolerance stress are implemented; unmeasured ESR/leakage/excess-noise/temperature laws remain qualification gaps.
+[Topology](topology.yaml) · [BOM](bom.yaml) · [Shared qualification conditions](../README.md#qualification-conditions).

@@ -7,7 +7,8 @@ from datetime import date
 from pathlib import Path
 import subprocess
 
-from .base import MAX_COMMON, View, git, tree
+from .base import MAX_COMMON, MAX_ROUTE, View, git, tree
+from .efficiency import inspect
 from .data import load
 from .evidence import preservation_status, snapshot_hashes
 from .navigation import navigation_output, render
@@ -40,6 +41,8 @@ def quality_metadata(view, change):
 def check(view, register):
     structural = validate(view, register)
     errors = structural.pop("errors")
+    efficiency = inspect(view, register)
+    errors.extend(efficiency.pop("errors"))
     errors.extend(relationships(view))
     expected = render(view, register)
     stale = []
@@ -182,10 +185,7 @@ def check(view, register):
         "status": "fail" if errors else "pass",
         "errors": errors,
         "organization": "fail" if errors else "pass",
-        "reading_sizes": {
-            route: sum(len(view.text(path)) for path in dict.fromkeys(register["common"] + paths))
-            for route, paths in register["routes"].items()
-        },
+        **efficiency,
         "generated_files": len(expected),
         "known_legacy_source_gaps": len(
             load(view.text, "docs/legacy-source-gaps.json").get("missing_sources", {})
@@ -203,6 +203,7 @@ def check(view, register):
             else "working",
             "character_limit": 15000,
             "onboarding_limit": MAX_COMMON,
+            "route_limit": MAX_ROUTE,
         },
         "common_characters": count,
         "estimated_tokens": round(count / 4),

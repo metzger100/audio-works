@@ -4,6 +4,7 @@
 Immediate contents and child hubs.
 
 - [0004-parameters.yaml](0004-parameters.yaml) — active
+- [0005-population-page-0001.yaml](0005-population-page-0001.yaml) — active
+- [0005-population-page-0002.yaml](0005-population-page-0002.yaml) — active
 - [0005-population.yaml](0005-population.yaml) — active
 - [page-0001.yaml](page-0001.yaml) — active
-- [0005-population-parts/](0005-population-parts/INDEX.md)

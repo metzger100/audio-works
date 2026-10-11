@@ -8,14 +8,64 @@ from pathlib import Path
 import re
 
 from .partition import bounded_data
+from .data import parse
+
+
+def owned_parts(path):
+    """Find prior pages through includes, confined to this document's parts directory."""
+    path = Path(path)
+    directory = path.parent / (path.stem + "-parts")
+    found = set()
+
+    def visit(source):
+        if source.is_symlink():
+            raise ValueError("Symlink data pages are unsupported")
+        node = parse(source.read_text(), source.suffix)
+
+        def includes(value):
+            if isinstance(value, dict):
+                if "$include" in value:
+                    refs = value["$include"]
+                    for ref in [refs] if isinstance(refs, str) else refs:
+                        target = source.parent / ref
+                        if Path(ref).is_absolute() or ".." in Path(ref).parts:
+                            raise ValueError("Unsafe prior data include")
+                        if target.is_relative_to(directory) and target not in found:
+                            found.add(target)
+                            visit(target)
+                else:
+                    for child in value.values():
+                        includes(child)
+            elif isinstance(value, list):
+                for child in value:
+                    includes(child)
+
+        includes(node)
+
+    if path.exists():
+        visit(path)
+    return found
 
 
 def write_data(path, value):
     path = Path(path)
-    for name, payload in bounded_data(value, path.name).items():
+    previous = owned_parts(path)
+    outputs = bounded_data(value, path.name)
+    for name, payload in outputs.items():
         target = path.parent / name
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(payload)
+    for obsolete in previous - {path.parent / name for name in outputs}:
+        obsolete.unlink()
+    directory = path.parent / (path.stem + "-parts")
+    parents = {
+        parent for page in previous for parent in page.parents if parent.is_relative_to(directory)
+    }
+    for parent in sorted(parents, key=lambda item: len(item.parts), reverse=True):
+        try:
+            parent.rmdir()
+        except OSError:
+            pass  # Remaining pages, navigation or unrelated evidence still own this directory.
 
 
 def write_markdown(path, text):

@@ -7,7 +7,7 @@ import subprocess
 import sys
 import tarfile
 
-from .base import ROUTES, View
+from .base import ROUTES, ENGINEERING, MAX_ROUTE, View
 from .checks import check, install_hook
 from .runner import fast_checks
 from .navigation import navigation_output
@@ -73,10 +73,16 @@ def main(argv=None):
                         result["status"] = "fail"
             elif args.command == "refresh":
                 changed = []
+                obsolete_parents = set()
                 expected = render(view, r)
                 for p in view.paths:
                     if navigation_output(p) and not original(p, r) and p not in expected:
                         (root / p).unlink()
+                        obsolete_parents.update(
+                            parent
+                            for parent in (root / p).parents
+                            if parent != root and parent.is_relative_to(root)
+                        )
                         changed.append(p)
                 for p, data in expected.items():
                     target = root / p
@@ -84,12 +90,21 @@ def main(argv=None):
                         target.parent.mkdir(parents=True, exist_ok=True)
                         target.write_bytes(data)
                         changed.append(p)
+                for parent in sorted(
+                    obsolete_parents, key=lambda item: len(item.parts), reverse=True
+                ):
+                    try:
+                        parent.rmdir()
+                    except OSError:
+                        pass  # Only empty parents of obsolete generated navigation are removed.
                 result = {"status": "pass", "updated": changed}
             elif args.command == "context":
                 paths = list(dict.fromkeys(r["common"] + r["routes"][args.route]))
                 common_count = sum(len(view.text(p)) for p in dict.fromkeys(r["common"]))
                 result = {
                     "route": args.route,
+                    "route_characters": sum(len(view.text(p)) for p in paths),
+                    "route_limit": MAX_ROUTE,
                     "common_characters": common_count,
                     "estimated_common_tokens": round(common_count / 4),
                     "reading": [
@@ -103,7 +118,11 @@ def main(argv=None):
                         }
                         for p in paths
                     ],
-                    "note": "Read the listed material before affected work; inspect additional relevant code/evidence on demand. Load one prompt representation.",
+                    "note": (
+                        "Read this entry material, then follow research/reading.md before affected scientific work. Additional required evidence is unrestricted. Load one prompt representation."
+                        if args.route in ENGINEERING
+                        else "Read this entry material and additional relevant evidence before affected work."
+                    ),
                 }
             elif args.command in {"files", "search"}:
                 paths = [

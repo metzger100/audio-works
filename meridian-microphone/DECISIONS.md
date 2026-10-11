@@ -41,4 +41,6 @@ Current operative view, 11 October 2026. [Hashed original rationale](../docs/his
 | D032 /2026-10-10 | [Concise reports and subject/tool separation](../docs/decisions/2026-10-10-meridian-cleanup.md) | Owner-directed cleanup |
 | D033 /2026-10-11 | [One research home, verified original relocation and concise current guides](../docs/decisions/2026-10-11-research-consolidation.md) | Owner-directed completion |
 
+| D034 /2026-10-11 | [Scoped reading, flat data pages and shared candidate conditions](../docs/decisions/2026-10-11-reading-and-data-layout.md) | Owner-directed overhead reduction |
+
 The historical G1 gate still requires intended capsule/variant/use, quantity, Germany delivered quote, interface facts, confidence and acknowledged residual risks before purchasing. Default one capsule; a second needs an intended second microphone. Record batch/serial and calibrated measurements before architecture selection. No purchase/contact authorization follows from this log.

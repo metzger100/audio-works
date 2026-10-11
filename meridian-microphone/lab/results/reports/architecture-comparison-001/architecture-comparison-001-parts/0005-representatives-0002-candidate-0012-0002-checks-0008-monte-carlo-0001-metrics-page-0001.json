@@ -1,0 +1,33 @@
+{
+  "all_requirements_pass_fraction": null,
+  "binomial_95_interval": [
+    0.0,
+    0.2059072142078227
+  ],
+  "cases": {
+    "$include": "0005-representatives-0002-candidate-0012-0002-checks-0008-monte-carlo-0001-metrics-0002-cases.json"
+  },
+  "distributions": "Independent uniform scenario ranges; leakage log-uniform; not manufacturer distributions",
+  "failures": 16,
+  "median": 21.214207220481505,
+  "metric": "response_deviation_db",
+  "metric_sample_count": 16,
+  "missing_metric_count": 0,
+  "observed_pass_fraction": 0.0,
+  "p95": 22.3709607079475,
+  "p99": 22.520367787656678,
+  "passing": 0,
+  "reason": "Assumed scenario distributions and screening coverage; real production statistics unknown.",
+  "samples": 16,
+  "screened_requirements": [
+    "current",
+    "positive_polarization",
+    "frequency_response"
+  ],
+  "seed": 84047,
+  "simulation_error_count": 0,
+  "statistics_conditioned_on_successful_simulation": true,
+  "statistics_include_requirement_failures": true,
+  "worst_observed": 22.557719557583972,
+  "yield_claim": false
+}

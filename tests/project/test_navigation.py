@@ -11,6 +11,51 @@ from repo_fixture import RepositoryFixture, project, REPO
 
 
 class TestNavigation(RepositoryFixture):
+    def test_refresh_prunes_empty_obsolete_hubs_and_preserves_unrelated_material(self):
+        directory = "docs/obsolete-parts/metrics-parts"
+        self.put(directory + "/INDEX.md", "# Obsolete generated hub\n\nOld pages.\n")
+        self.put("docs/other-parts/INDEX.md", "# Obsolete hub\n\nOld pages.\n")
+        self.put("docs/other-parts/retained.log", "Retained independent output.\n")
+        result = subprocess.run(
+            [
+                str(REPO / ".project-local/quality/bin/python"),
+                str(self.root / "tools/project.py"),
+                "--root",
+                str(self.root),
+                "refresh",
+            ],
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertFalse((self.root / directory).exists())
+        self.assertEqual(
+            (self.root / "docs/other-parts/retained.log").read_text(),
+            "Retained independent output.\n",
+        )
+
+    def test_commit_rejects_cross_file_prose_from_index_and_leaves_content_untouched(self):
+        project.install_hook(self.root)
+        prose = (
+            "Preserve original evidence, failures, conditions, seeds and parent relationships. " * 3
+        )
+        self.put("docs/first.md", "# First\n\n" + prose + "[Evidence](../README.md)\n")
+        self.put("docs/second.md", "# Second\n\n" + prose + "[Evidence](../QUALITY.md)\n")
+        self.refresh()
+        self.run_git("add", "-A")
+        self.put("docs/second.md", "# Second\n\n[Shared conditions](first.md).\n")
+        self.assertEqual(self.check()["status"], "pass")
+        self.assertIn(
+            "Repeated prose across documents", "\n".join(self.check(staged=True)["errors"])
+        )
+        before = self.run_git("diff", "--binary").stdout
+        staged_before = self.run_git("diff", "--cached", "--binary").stdout
+        result = self.run_git("commit", "-m", "Reject staged duplication", check=False)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("Repeated prose across documents", result.stdout + result.stderr)
+        self.assertEqual(before, self.run_git("diff", "--binary").stdout)
+        self.assertEqual(staged_before, self.run_git("diff", "--cached", "--binary").stdout)
+
     def test_declared_original_relocation_checks_staged_bytes(self):
         old = "meridian-microphone/research/survey first.md"
         new = "meridian-microphone/lab/research/capsules/survey first.md"
@@ -72,6 +117,16 @@ class TestNavigation(RepositoryFixture):
         self.register["routes"]["topology"].remove("meridian-microphone/lab/CONTRACT.md")
         self.save_register()
         with self.assertRaisesRegex(ValueError, "scientific contract"):
+            project.load_register(project.View(self.root))
+        self.register["routes"]["topology"].append("meridian-microphone/lab/CONTRACT.md")
+        self.register["routes"]["topology"].remove("meridian-microphone/lab/spec/scoring.yaml")
+        self.save_register()
+        with self.assertRaisesRegex(ValueError, "specifications"):
+            project.load_register(project.View(self.root))
+        self.register["routes"]["topology"].append("meridian-microphone/lab/spec/scoring.yaml")
+        self.register["routes"]["topology"].remove("meridian-microphone/lab/research/reading.md")
+        self.save_register()
+        with self.assertRaisesRegex(ValueError, "authority/specifications"):
             project.load_register(project.View(self.root))
 
     def test_broken_active_links_and_missing_headings_fail(self):

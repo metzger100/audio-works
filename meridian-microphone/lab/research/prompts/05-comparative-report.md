@@ -1,10 +1,6 @@
 # Prompt 5 — Produce the first architecture comparison and measurement priorities
 
-Work in `meridian-microphone/lab`, relative to the repository root, on the M100 Meridian MIC-34-M/MIC-34-C research project using the Arienne Audio Flat K47 Cardioid/Omni K47FRB under P48.
-
 Read [the shared execution contract](research-workflow.md) and use the `reporting` context route. Inspect current reports and original evidence before extending work; later stages may already have supplied outputs or preserved corrections.
-
-Preserve the hierarchy: physics/measurements → SPICE → automated tests → numerical optimization → engineering reasoning → LLM intuition. Work autonomously, create files and run applicable checks. Preserve failed experiments, raw data, source snapshots, seeds and parent relationships. Do not relax thresholds, silently narrow uncertainty ranges, hand-select devices, conceal trimming, purchase parts or contact suppliers. Unknown safe capsule polarization is not a simulated hardware rating. Freeze shared sources before running evaluations. No production topology or PCB is to be selected in this task.
 
 Produce an evidence-backed intermediate comparison of the strongest tested representatives from several fundamentally different families. Audit device validation, qualification coverage and optimization records first. If evidence is missing, perform the finite additional analyses needed for a defensible comparison where possible, and expose remaining gaps. Do not fill a table with invented performance or treat unimplemented proposals as explored architectures.
 

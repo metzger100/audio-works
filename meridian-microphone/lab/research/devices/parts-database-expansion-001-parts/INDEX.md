@@ -3,9 +3,14 @@
 
 Immediate contents and child hubs.
 
+- [0008-parts-page-0001.yaml](0008-parts-page-0001.yaml) — active
+- [0008-parts-page-0002.yaml](0008-parts-page-0002.yaml) — active
+- [0008-parts-page-0003.yaml](0008-parts-page-0003.yaml) — active
+- [0008-parts-page-0004.yaml](0008-parts-page-0004.yaml) — active
 - [0008-parts.yaml](0008-parts.yaml) — active
 - [0009-investigated-leads.yaml](0009-investigated-leads.yaml) — active
+- [0011-passives-page-0001.yaml](0011-passives-page-0001.yaml) — active
+- [0011-passives-page-0002.yaml](0011-passives-page-0002.yaml) — active
+- [0011-passives-page-0003.yaml](0011-passives-page-0003.yaml) — active
 - [0011-passives.yaml](0011-passives.yaml) — active
 - [page-0001.yaml](page-0001.yaml) — active
-- [0008-parts-parts/](0008-parts-parts/INDEX.md)
-- [0011-passives-parts/](0011-passives-parts/INDEX.md)

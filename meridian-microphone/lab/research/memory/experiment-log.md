@@ -3,8 +3,6 @@
 
 [All original records](../../../../docs/evidence.md) · [Original narrative](../../../../docs/history/2026-10-09/meridian-microphone/lab/research/experiment_log.md). Statuses and ancestry remain authoritative in original records. Latest twenty records:
 
-- [20261009T075607Z_545151e0](../../results/verification/20261009T075607Z_545151e0/verification.json) — pass; candidate None; parents None
-- [20261009T080418Z_95daea96](../../results/verification/20261009T080418Z_95daea96/verification.json) — pass; candidate None; parents None
 - [20261009T081604Z_d061cec8](../../results/verification/20261009T081604Z_d061cec8/verification.json) — pass; candidate None; parents None
 - [20261009T081709Z_c6b1b105](../../results/verification/20261009T081709Z_c6b1b105/verification.json) — pass; candidate None; parents None
 - [20261009T085345Z_0af11807](../../results/verification/20261009T085345Z_0af11807/verification.json) — fail; candidate None; parents None
@@ -23,3 +21,5 @@
 - [20261009T230035Z_b1f60245](../../results/verification/20261009T230035Z_b1f60245/verification.json) — pass; candidate None; parents None
 - [20261009T230340Z_bbdcf67e](../../results/verification/20261009T230340Z_bbdcf67e/verification.json) — pass; candidate None; parents None
 - [20261010T220036Z_6e3b12f0](../../results/verification/20261010T220036Z_6e3b12f0/verification.json) — pass; candidate None; parents None
+- [20261011T115312Z_1eadafa4](../../results/verification/20261011T115312Z_1eadafa4/verification.json) — pass; candidate None; parents None
+- [20261011T115600Z_c3956793](../../results/verification/20261011T115600Z_c3956793/verification.json) — pass; candidate None; parents None

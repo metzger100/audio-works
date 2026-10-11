@@ -1,0 +1,274 @@
+{
+  "phantom_supply": {
+    "coverage": "8 DC/AC supply/feed extremes. Noise/distortion/abuse at corners pending.",
+    "metrics": {
+      "cases": [
+        {
+          "current_a": 0.003969620686099909,
+          "parameters": {
+            "FM": -0.004,
+            "FT": -0.2,
+            "VS": 44
+          },
+          "polarization_dc_v": 21.73345719013317,
+          "response_deviation_db": 20.92637438702953,
+          "sensitivity_v_per_pa": 1.2773622185999525e-05,
+          "status": "fail"
+        },
+        {
+          "current_a": 0.003969620686099908,
+          "parameters": {
+            "FM": 0.004,
+            "FT": -0.2,
+            "VS": 44
+          },
+          "polarization_dc_v": 21.73345719013317,
+          "response_deviation_db": 20.926235186946506,
+          "sensitivity_v_per_pa": 1.2772454940465932e-05,
+          "status": "fail"
+        },
+        {
+          "current_a": 0.003514576286390364,
+          "parameters": {
+            "FM": -0.004,
+            "FT": 0.2,
+            "VS": 44
+          },
+          "polarization_dc_v": 19.472212036944214,
+          "response_deviation_db": 20.907469064060248,
+          "sensitivity_v_per_pa": 1.1260721438233606e-05,
+          "status": "fail"
+        },
+        {
+          "current_a": 0.003514576286392459,
+          "parameters": {
+            "FM": 0.004,
+            "FT": 0.2,
+            "VS": 44
+          },
+          "polarization_dc_v": 19.472212036936867,
+          "response_deviation_db": 20.907367963728454,
+          "sensitivity_v_per_pa": 1.1260007617089944e-05,
+          "status": "fail"
+        },
+        {
+          "current_a": 0.004732514158211277,
+          "parameters": {
+            "FM": -0.004,
+            "FT": -0.2,
+            "VS": 52
+          },
+          "polarization_dc_v": 25.51055958219001,
+          "response_deviation_db": 20.94704006330253,
+          "sensitivity_v_per_pa": 1.53814476234805e-05,
+          "status": "fail"
+        },
+        {
+          "current_a": 0.004732514158208462,
+          "parameters": {
+            "FM": 0.004,
+            "FT": -0.2,
+            "VS": 52
+          },
+          "polarization_dc_v": 25.510559582198944,
+          "response_deviation_db": 20.94691447895496,
+          "sensitivity_v_per_pa": 1.5380099810943373e-05,
+          "status": "fail"
+        },
+        {
+          "current_a": 0.004189071803478593,
+          "parameters": {
+            "FM": -0.004,
+            "FT": 0.2,
+            "VS": 52
+          },
+          "polarization_dc_v": 22.821646799691692,
+          "response_deviation_db": 20.93416256320049,
+          "sensitivity_v_per_pa": 1.3612717772028767e-05,
+          "status": "fail"
+        },
+        {
+          "current_a": 0.004189071803478593,
+          "parameters": {
+            "FM": 0.004,
+            "FT": 0.2,
+            "VS": 52
+          },
+          "polarization_dc_v": 22.821646799691692,
+          "response_deviation_db": 20.934072756980587,
+          "sensitivity_v_per_pa": 1.3611895335586912e-05,
+          "status": "fail"
+        }
+      ]
+    },
+    "reason": null,
+    "status": "fail"
+  },
+  "semiconductor_corners": {
+    "coverage": null,
+    "metrics": {},
+    "reason": "No manufacturer-bounded semiconductor corners; ideal fixtures cannot demonstrate no-selection yield",
+    "status": "incomplete"
+  },
+  "stability": {
+    "coverage": "HF and cable/load screening",
+    "metrics": {
+      "analyzed_max_hz": 9999999.999999803,
+      "cable_load_cases": [
+        {
+          "current_a": 0.004086379053573679,
+          "parameters": {
+            "LEN": 0,
+            "ZIN": 600,
+            "ZM": -0.05
+          },
+          "polarization_dc_v": 22.31254102825222,
+          "response_deviation_db": 20.914889207125597,
+          "sensitivity_v_per_pa": 1.0806764154692119e-05,
+          "status": "fail"
+        },
+        {
+          "current_a": 0.004086379053573679,
+          "parameters": {
+            "LEN": 0,
+            "ZIN": 600,
+            "ZM": 0.05
+          },
+          "polarization_dc_v": 22.31254102825222,
+          "response_deviation_db": 20.890378249615942,
+          "sensitivity_v_per_pa": 1.061831700610591e-05,
+          "status": "fail"
+        },
+        {
+          "current_a": 0.004086379053573679,
+          "parameters": {
+            "LEN": 0,
+            "ZIN": 10000,
+            "ZM": -0.05
+          },
+          "polarization_dc_v": 22.31254102825222,
+          "response_deviation_db": 20.94074676428675,
+          "sensitivity_v_per_pa": 1.4406894312854734e-05,
+          "status": "fail"
+        },
+        {
+          "current_a": 0.004086379053573679,
+          "parameters": {
+            "LEN": 0,
+            "ZIN": 10000,
+            "ZM": 0.05
+          },
+          "polarization_dc_v": 22.31254102825222,
+          "response_deviation_db": 20.939301625777965,
+          "sensitivity_v_per_pa": 1.4387211731045824e-05,
+          "status": "fail"
+        },
+        {
+          "current_a": 0.004082716011798837,
+          "parameters": {
+            "LEN": 100,
+            "ZIN": 600,
+            "ZM": -0.05
+          },
+          "polarization_dc_v": 22.294440822351564,
+          "response_deviation_db": 20.802149691792053,
+          "sensitivity_v_per_pa": 1.055854958562215e-05,
+          "status": "fail"
+        },
+        {
+          "current_a": 0.004082716011798837,
+          "parameters": {
+            "LEN": 100,
+            "ZIN": 600,
+            "ZM": 0.05
+          },
+          "polarization_dc_v": 22.294440822351564,
+          "response_deviation_db": 20.776152809484266,
+          "sensitivity_v_per_pa": 1.0366579631825749e-05,
+          "status": "fail"
+        },
+        {
+          "current_a": 0.004082716011798837,
+          "parameters": {
+            "LEN": 100,
+            "ZIN": 10000,
+            "ZM": -0.05
+          },
+          "polarization_dc_v": 22.294440822351564,
+          "response_deviation_db": 20.748903971519145,
+          "sensitivity_v_per_pa": 1.4346671726582311e-05,
+          "status": "fail"
+        },
+        {
+          "current_a": 0.004082716011798837,
+          "parameters": {
+            "LEN": 100,
+            "ZIN": 10000,
+            "ZM": 0.05
+          },
+          "polarization_dc_v": 22.294440822351564,
+          "response_deviation_db": 20.747358128344505,
+          "sensitivity_v_per_pa": 1.4325287375487508e-05,
+          "status": "fail"
+        }
+      ],
+      "hf_peaking_db": 51.728069945584835,
+      "loop_phase_margin_deg": null,
+      "oscillation_ruled_out": false,
+      "reason": "Closed-loop AC peaking cannot prove loop stability; declared injection ports/Nyquist or return-ratio tests required."
+    },
+    "reason": null,
+    "status": "fail"
+  },
+  "startup": {
+    "coverage": "Symmetric cold turn-on PWL. Hot-plug, asymmetric pin connection, disconnect, RF/ESD pending.",
+    "metrics": {
+      "differential_output_peak_v": 0.1651366948077424,
+      "rail_final_v": 13.598220069809418,
+      "rail_target_v": 13.598283926480295,
+      "settling_to_1percent_s": 1.644371571388794
+    },
+    "reason": null,
+    "status": "pass"
+  },
+  "temperature": {
+    "coverage": "3 electrical temperatures; no validated mechanical or leakage temperature law",
+    "metrics": {
+      "capsule_temperature_law_known": false,
+      "cases": [
+        {
+          "current_a": 0.004047386833559921,
+          "parameters": {
+            "TEMP": -10
+          },
+          "polarization_dc_v": 22.550180654797032,
+          "response_deviation_db": 20.91974252721114,
+          "sensitivity_v_per_pa": 1.3402850177922837e-05,
+          "status": "fail"
+        },
+        {
+          "current_a": 0.004086004492612225,
+          "parameters": {
+            "TEMP": 25
+          },
+          "polarization_dc_v": 22.310746829065796,
+          "response_deviation_db": 20.930637711817923,
+          "sensitivity_v_per_pa": 1.3223320864779979e-05,
+          "status": "fail"
+        },
+        {
+          "current_a": 0.004111455847336179,
+          "parameters": {
+            "TEMP": 50
+          },
+          "polarization_dc_v": 22.156753839914522,
+          "response_deviation_db": 20.93573924685004,
+          "sensitivity_v_per_pa": 1.3092156716389338e-05,
+          "status": "fail"
+        }
+      ]
+    },
+    "reason": null,
+    "status": "fail"
+  }
+}
