@@ -8,3 +8,4 @@ Authoritative pointers from project.json; read relevant originals and conditions
 - [parts-database-expansion-001.md](../meridian-microphone/lab/research/devices/parts-database-expansion-001.md)
 - [device-model-validation.md](../meridian-microphone/lab/research/devices/device-model-validation.md)
 - [architecture_comparison_001_2026-10-09.yaml](../meridian-microphone/lab/research/patents/architecture_comparison_001_2026-10-09.yaml)
+- [2026-10-11-maintainability.md](validation/2026-10-11-maintainability.md)

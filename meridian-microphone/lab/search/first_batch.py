@@ -11,8 +11,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 
-def main():
-    shared_output = "Real output devices and two 47 ohm/47 uF legs; harvest/cable/load coupling measured, symmetry not presumed"
+def conventional_jfet(shared_output):
     a = Attempt(
         1,
         "conventional_jfet",
@@ -42,18 +41,20 @@ def main():
             10000,
         )
     a.resistor("Rgatebottom", "gatebias", "g", 10000)
-    a.capacitor("Cgatebias", "gatebias", "g", 47e-6)
-    a.resistor("Rbias", "f", "gatebias", 1e9, high=True)
+    a.capacitor("Cgatebias", "gatebias", "g", 4.7e-05)
+    a.resistor("Rbias", "f", "gatebias", 1000000000.0, high=True)
     a.resistor("Rrear", "rear", "g", 1000)
     a.device(
         "Jinput", "JFE150", ["rail", "f", "source", "rail", "g"], "JFE150DBVR", "jfe150_pspice"
     )
     a.resistor("Rsource", "source", "g", 3300)
-    a.capacitor("Caudio", "source", "signal", 1e-6)
+    a.capacitor("Caudio", "source", "signal", 1e-06)
     a.resistor("Rsignal", "signal", "mid", 1000000)
     a.output("signal")
     a.finish()
 
+
+def servo_jfet(shared_output):
     a = Attempt(
         2,
         "unconventional_jfet",
@@ -81,21 +82,23 @@ def main():
         a.resistor(f"Rsettop{i}", previous, node, 10000)
         previous = node
     a.resistor("Rsetbottom", "setpoint", "g", 10000)
-    a.capacitor("Cset", "setpoint", "g", 47e-6)
+    a.capacitor("Cset", "setpoint", "g", 4.7e-05)
     a.resistor("Rsense", "source", "slow", 1000000)
-    a.capacitor("Csense", "slow", "g", 1e-6)
+    a.capacitor("Csense", "slow", "g", 1e-06)
     a.opamp("Uservo", "setpoint", "slow", "servo")
-    a.resistor("Rbias", "f", "servo", 1e9, high=True)
+    a.resistor("Rbias", "f", "servo", 1000000000.0, high=True)
     a.resistor("Rrear", "rear", "g", 1000)
     a.device(
         "Jinput", "JFE150", ["rail", "f", "source", "rail", "g"], "JFE150DBVR", "jfe150_pspice"
     )
     a.resistor("Rsource", "source", "g", 1000)
-    a.capacitor("Caudio", "source", "signal", 1e-6)
+    a.capacitor("Caudio", "source", "signal", 1e-06)
     a.resistor("Rsignal", "signal", "mid", 1000000)
     a.output("signal")
     a.finish()
 
+
+def guarded_cmos(shared_output):
     a = Attempt(
         3,
         "bootstrap",
@@ -117,17 +120,19 @@ def main():
         ),
         ["S06", "S16"],
     )
-    a.resistor("Rbias", "f", "boot", 1e9, high=True)
+    a.resistor("Rbias", "f", "boot", 1000000000.0, high=True)
     a.resistor("Rbootdc", "boot", "mid", 1000000)
     a.opamp("Uinput", "f", "outp", "outp")
     a.opamp("Uguard", "outp", "guard", "guard")
-    a.capacitor("Cboot", "guard", "boot", 1e-6)
+    a.capacitor("Cboot", "guard", "boot", 1e-06)
     a.capacitor("Cguard", "f", "guard", 5e-12, assumed=True)
-    a.resistor("Rguardleak", "f", "guard", 1e12, parasitic=True)
+    a.resistor("Rguardleak", "f", "guard", 1000000000000.0, parasitic=True)
     a.resistor("Rrear", "rear", "g", 1000)
     a.output("outp", buffer=False)
     a.finish()
 
+
+def charge_feedback(shared_output):
     a = Attempt(
         4,
         "charge",
@@ -150,12 +155,14 @@ def main():
         ["S05", "S07", "S16"],
     )
     a.opamp("Uinput", "mid", "f", "outp")
-    a.resistor("Rfeedback", "outp", "f", 1e9, high=True)
+    a.resistor("Rfeedback", "outp", "f", 1000000000.0, high=True)
     a.capacitor("Cfeedback", "outp", "f", 1e-10)
     a.resistor("Rrear", "rear", "g", 1000)
     a.output("outp", buffer=False)
     a.finish()
 
+
+def bipolar_charge(shared_output):
     a = Attempt(
         5,
         "no_fet",
@@ -179,7 +186,7 @@ def main():
     )
     a.resistor("Rreftop", "rail", "ref", 10000)
     a.resistor("Rrefbottom", "ref", "g", 10000)
-    a.capacitor("Cref", "ref", "g", 47e-6)
+    a.capacitor("Cref", "ref", "g", 4.7e-05)
     a.device("Qinput", "BC846B", ["outa", "f", "e1"], "BC846B,215", "bc846b_emitter_r1")
     a.device("Qreference", "BC846B", ["outb", "ref", "e2"], "BC846B,215", "bc846b_emitter_r1")
     a.resistor("Remitter1", "e1", "tail", 1000)
@@ -188,7 +195,7 @@ def main():
     a.resistor("Rcollector1", "rail", "outa", 10000)
     a.resistor("Rcollector2", "rail", "outb", 10000)
     a.resistor("Rfeedback", "outa", "f", 1000000)
-    a.capacitor("Cfeedback", "outa", "f", 1e-7)
+    a.capacitor("Cfeedback", "outa", "f", 1e-07)
     a.device("Qoutp", "BC846B", ["rail", "outa", "outp"], "BC846B,215", "bc846b_emitter_r1")
     a.device("Qoutn", "BC846B", ["rail", "outb", "outn"], "BC846B,215", "bc846b_emitter_r1")
     a.resistor("Routloadp", "outp", "g", 10000)
@@ -197,6 +204,8 @@ def main():
     a.coupling()
     a.finish()
 
+
+def carrier_bridge(shared_output):
     a = Attempt(
         6,
         "floating",
@@ -234,20 +243,30 @@ def main():
         "Bcarrier excite pol V={CARRIER_PEAK*sin(2*PI*CARRIER_HZ*time)}",
         "Banti anti pol V={-CARRIER_PEAK*sin(2*PI*CARRIER_HZ*time)}",
     ]
-    a.capacitor("Cexcite", "excite", "b", 1e-7)
+    a.capacitor("Cexcite", "excite", "b", 1e-07)
     a.capacitor("Cbridgef", "f", "anti", 1e-10)
     a.capacitor("Cbridger", "rear", "anti", 1e-10)
-    a.resistor("Rbias", "f", "mid", 1e9, high=True)
-    a.resistor("Rrearbias", "rear", "mid", 1e9, high=True)
+    a.resistor("Rbias", "f", "mid", 1000000000.0, high=True)
+    a.resistor("Rrearbias", "rear", "mid", 1000000000.0, high=True)
     a.opamp("Ufront", "f", "frontbuf", "frontbuf")
     a.opamp("Urear", "rear", "rearbuf", "rearbuf")
     a.lines.append("Bdemod demod mid V={(v(frontbuf,rearbuf))*2*sin(2*PI*CARRIER_HZ*time)}")
     a.resistor("Rfilter1", "demod", "lp1", 1000)
-    a.capacitor("Cfilter1", "lp1", "mid", 1e-7)
+    a.capacitor("Cfilter1", "lp1", "mid", 1e-07)
     a.resistor("Rfilter2", "lp1", "audio", 1000)
-    a.capacitor("Cfilter2", "audio", "mid", 1e-7)
+    a.capacitor("Cfilter2", "audio", "mid", 1e-07)
     a.output("audio")
     a.finish()
+
+
+def main():
+    shared_output = "Real output devices and two 47 ohm/47 uF legs; harvest/cable/load coupling measured, symmetry not presumed"
+    conventional_jfet(shared_output)
+    servo_jfet(shared_output)
+    guarded_cmos(shared_output)
+    charge_feedback(shared_output)
+    bipolar_charge(shared_output)
+    carrier_bridge(shared_output)
 
 
 from batch_attempt import Attempt as Attempt, questions as questions

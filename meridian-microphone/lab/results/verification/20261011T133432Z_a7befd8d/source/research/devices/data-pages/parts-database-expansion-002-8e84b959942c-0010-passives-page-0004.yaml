@@ -1,0 +1,53 @@
+- exact_mpn: MKP2D031001F00KSSD
+  manufacturer: WIMA
+  roles:
+  - capacitors
+  - carrier
+  - guard_servo
+  states:
+    investigated: true
+    acquired: true
+    characterized: false
+    behavior_validated: []
+    candidate_combination_qualified: false
+    physical_owned_stock: null
+  acquisition_scope: Manufacturer datasheet; no analog model or measurements
+  nominal_f: 1.0e-07
+  tolerance_fraction: 0.1
+  technology: metallized polypropylene
+  polarity: nonpolar
+  rated_dc_v: 100
+  rated_ac_v: 63
+  dimensions_mm:
+    width: 5
+    height: 10
+    length: 7.2
+    pitch: 5
+    pin_length: 6 minus2
+  datasheet:
+    url: https://www.wima.de/wp-content/uploads/media/e_WIMA_MKP_2.pdf
+    revision: 03.26 catalogue section/part-number table
+    sha256: 1c8527fb1fef607bbf2f67997225102f0cc8e0a433816fe65fe4e58064fe0ec4
+  conditioned_limits:
+    insulation_resistance_min_ohm: 100000000000.0
+    insulation_condition: 20C100V1minute
+    dissipation_max_by_hz:
+      1000: 0.0005
+      10000: 0.0008
+      100000: 0.0025
+    dissipation_condition: 20C C<=100nF; discrete frequency limits, no broadband law
+    dielectric_absorption_percent: 0.05
+    absorption_condition: Series figure; method/time constants not specified here
+    temperature_c:
+    - -55
+    - 100
+    dc_derating: 1.35percent/K above85C
+    ac_derating: 1.35percent/K above75C
+  sourcing:
+    register: research/procurement/parts_expansion_002_2026-10-09.yaml
+    implementation_qualified: false
+  gaps:
+  - TME110C versus manufacturer100C; datasheet controls
+  - 0 displayed seller stock, future lead time unknown
+  - No broadband loss/absorption/leakage-temperature model
+  - Each actual combination/substitute requires qualification

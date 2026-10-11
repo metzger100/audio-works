@@ -1,0 +1,53 @@
+{
+  "bootstrap": {
+    "analysis_errors": 3,
+    "best": null,
+    "budget_declared_before_run": 12,
+    "candidate_id": "candidate_0010",
+    "diagnostic_best_infeasible": null,
+    "evaluations": 1,
+    "experiment_id": "20261009T090144Z_robust_63c4aec9",
+    "rng_seed": null,
+    "scenario_attempts": 3,
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "suite_sha256": "15a8be4650d1f6f8ce60c6a9ffec0df9b558ef59bb17224095ab1296d0c21e7f",
+    "termination": "nominal_integration_failure_hold; remaining budget unused"
+  },
+  "charge": {
+    "analysis_errors": 3,
+    "best": null,
+    "budget_declared_before_run": 12,
+    "candidate_id": "candidate_0014",
+    "diagnostic_best_infeasible": null,
+    "evaluations": 1,
+    "experiment_id": "20261009T090150Z_robust_17f23af9",
+    "rng_seed": null,
+    "scenario_attempts": 3,
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "suite_sha256": "15a8be4650d1f6f8ce60c6a9ffec0df9b558ef59bb17224095ab1296d0c21e7f",
+    "termination": "nominal_integration_failure_hold; remaining budget unused"
+  },
+  "conventional_jfet": {
+    "$include": "architecture-comparison-001-df7e444a4b1d-0005-optimizers-0000-candidate-0015.json"
+  },
+  "floating": {
+    "analysis_errors": 0,
+    "best": null,
+    "budget_declared_before_run": 12,
+    "candidate_id": "candidate_0013",
+    "diagnostic_best_infeasible": null,
+    "evaluations": 0,
+    "experiment_id": "20261009T090201Z_robust_8e649cf8",
+    "rng_seed": null,
+    "scenario_attempts": 0,
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "suite_sha256": "15a8be4650d1f6f8ce60c6a9ffec0df9b558ef59bb17224095ab1296d0c21e7f",
+    "termination": "prerequisite_hold"
+  },
+  "no_fet": {
+    "$include": "architecture-comparison-001-df7e444a4b1d-0005-optimizers-0004-candidate-0012.json"
+  },
+  "unconventional_jfet": {
+    "$include": "architecture-comparison-001-df7e444a4b1d-0005-optimizers-0001-candidate-0008.json"
+  }
+}

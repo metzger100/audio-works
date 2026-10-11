@@ -1,0 +1,18 @@
+schema_version: 1
+retrieved_date: 2026-10-05
+sources:
+  $include:
+  - sources/capsule.yaml
+  - sources/standards.yaml
+  - sources/mechanisms.yaml
+  - sources/simulator.yaml
+  - sources/devices.yaml
+  - sources/procurement.yaml
+pending_clause_checks:
+- Obtain controlled full section 9.4/Table 6; verify absolute feed tolerance, rated
+  current 7 mA and 0.8% conductor-current condition.
+- An uncontrolled transcription suggests 10% feed tolerance and 7 mA rated current.
+  These are provisional, not authenticated normative claims; no copy is redistributed.
+rejected_transfer:
+- Arienne regular K47 page lists 70 pF; that is a different product and is not assigned
+  to Flat K47.

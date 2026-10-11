@@ -10,4 +10,3 @@ Immediate contents and child hubs.
 - [Page 5](index-pages/index-0005.md)
 - [Page 6](index-pages/index-0006.md)
 - [Page 7](index-pages/index-0007.md)
-- [Page 8](index-pages/index-0008.md)

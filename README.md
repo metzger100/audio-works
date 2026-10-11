@@ -6,7 +6,7 @@
 
 Working toward open audio hardware for DIY builders: microphones, preamps, amplifiers and loudspeakers. Current work is condenser-microphone research.
 
-[Current state](CURRENT.md) · [Repository index](docs/INDEX.md) · [Contributing](CONTRIBUTING.md)
+[Start here](docs/start-here.md) · [Current state](CURRENT.md) · [Contributing](CONTRIBUTING.md)
 
 ## Projects
 
@@ -16,13 +16,9 @@ Working toward open audio hardware for DIY builders: microphones, preamps, ampli
 
 No prototype is selected. Parts, patent review and physical validation remain separate prerequisites.
 
-## For builders
-
-[Build conventions](CONTRIBUTING.md#documenting-a-hardware-project) cover matched design/fabrication files, BOM/sourcing, assembly, calibration and measurements. Follow [component](COMPONENTS.md), [patent](PATENTS.md) and [quality](QUALITY.md) requirements; retain failures and unknowns.
-
 ## Finding the work
 
-The [hub](docs/INDEX.md) connects projects, branding, tools and evidence; the [folder map](docs/repository-layout.md) explains their homes. Choose a reading route:
+The [task guide](docs/start-here.md) points to the first useful page for each kind of work. The [complete index](docs/INDEX.md) exposes files; the [folder map](docs/repository-layout.md) explains their homes. Choose a reading route:
 
 ```sh
 python3 tools/project.py context orientation

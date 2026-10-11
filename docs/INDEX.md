@@ -29,6 +29,7 @@
 - [maintaining-repository.md](maintaining-repository.md)
 - [quality-rules.md](quality-rules.md)
 - [repository-layout.md](repository-layout.md)
+- [start-here.md](start-here.md)
 - [validation.md](validation.md)
 - [config/](config/INDEX.md)
 - [decisions/](decisions/INDEX.md)

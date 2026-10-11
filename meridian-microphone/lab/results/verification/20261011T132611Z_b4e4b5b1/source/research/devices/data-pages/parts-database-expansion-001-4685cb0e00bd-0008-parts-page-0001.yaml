@@ -1,0 +1,281 @@
+- device_id: jfe150
+  manufacturer: Texas Instruments
+  exact_mpn: JFE150DBVR
+  package: SOT-23-5 DBV
+  roles:
+  - high_impedance
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: active
+    checked_date: '2026-10-05'
+    source_url: https://www.ti.com/product/JFE150
+  model_ids:
+  - jfe150_generic
+  - jfe150_weak
+  - jfe150_strong
+  - jfe150_pspice
+  models:
+  - id: jfe150_generic
+    path: semiconductor/vendor/jfe150_generic.lib
+    sha256: afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207
+    version: Final 1.2; 26SEP2024; SLPM366
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  - id: jfe150_weak
+    path: semiconductor/vendor/jfe150_weak.lib
+    sha256: 494baadcbb362836a513021b47a52b5024043f0ad8f2711a20fee1bcc4377cb4
+    version: Final 1.2 vendor weak
+    parent_model_id: jfe150_generic
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  - id: jfe150_strong
+    path: semiconductor/vendor/jfe150_strong.lib
+    sha256: 832ea0e89d4068a1abc25a13bb820ac01cbc2c2dca3f5f728d63979779223ca8
+    version: Final 1.2 vendor strong
+    parent_model_id: jfe150_generic
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  - id: jfe150_pspice
+    path: semiconductor/vendor/jfe150_pspice.lib
+    sha256: 6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6
+    version: Final 1.2; SLPM349I
+    parent_model_id: jfe150_generic
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/jfe150.pdf
+    retrieved_date: '2026-10-05'
+    version: SLPS732B April 2023
+    local_path: models/semiconductor/vendor/evidence/jfe150.pdf
+    sha256: 925d58a8f0cf7db307325ece12fb2f61a736b2c1440f63928b5e6c1312f39365
+  sourcing_register: research/procurement/semiconductors_2026-10-05.yaml
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  candidate_combination_qualified: false
+- device_id: vishay_2n7002k
+  manufacturer: Vishay Siliconix
+  exact_mpn: 2N7002K-T1-GE3
+  package: SOT-23 TO-236; G=1 S=2 D=3
+  roles:
+  - p48_power
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_manufacturer_catalogue_supplier_active; explicit manufacturer
+      lifecycle label not found
+    checked_date: '2026-10-09'
+    source_url: https://www.vishay.com/en/product/71333/tab/quality/
+    limitation: Current exact order-code listing is not a stock reservation or an
+      assurance of future production.
+  model_ids:
+  - vishay_2n7002k_ps
+  models:
+  - id: vishay_2n7002k_ps
+    path: semiconductor/vendor/vishay_2n7002k.lib
+    sha256: d59ce922b2c814e4aaa63f27459696b8c71494fac61f47c8cf8c093eba273111
+    version: ECN S14-1598 Rev. B, 11-Aug-2014; 2n7002k_ps Rev B.lib
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  datasheet:
+    url: https://www.vishay.com/docs/71333/2n7002k.pdf
+    retrieved_date: '2026-10-09'
+    version: S17-1299 Rev. F, 21-Aug-2017; document 71333
+    local_path: models/semiconductor/vendor/evidence/vishay_2n7002k.pdf
+    sha256: 639ab49255a61576ef6c5cb89c1536e045b44724fb95af12438ba41022e44adf
+  sourcing_register: research/procurement/semiconductors_2026-10-09.yaml
+  validation_record: results/device_models/20261009T070419Z_3bd1122a/results.json
+  candidate_combination_qualified: false
+- device_id: bc846b
+  manufacturer: Nexperia
+  exact_mpn: BC846B,215
+  package: SOT-23
+  roles:
+  - low_noise_bipolar
+  - balanced_output
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: production
+    checked_date: '2026-10-05'
+    source_url: https://www.nexperia.com/product/BC846B
+  model_ids:
+  - bc846b_vendor
+  - bc846b_emitter_r1
+  models:
+  - id: bc846b_vendor
+    path: semiconductor/vendor/bc846b.lib
+    sha256: 4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed
+    version: extraction week 24/2021
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  - id: bc846b_emitter_r1
+    path: semiconductor/vendor/bc846b_emitter_r1.lib
+    sha256: 55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d
+    version: project structural child r1; Q2 emitter 33 -> 3
+    parent_model_id: bc846b_vendor
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/BC846_SER.pdf
+    retrieved_date: '2026-10-05'
+    version: Rev 9; 25 September 2012
+    local_path: models/semiconductor/vendor/evidence/bc846.pdf
+    sha256: 045a6cc21de93ac634aad910567e882926bd6ef154cbd8c59d13201134642a97
+  sourcing_register: research/procurement/semiconductors_2026-10-05.yaml
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  candidate_combination_qualified: false
+- device_id: bc856b
+  manufacturer: Nexperia
+  exact_mpn: BC856B,215
+  package: SOT-23
+  roles:
+  - balanced_output
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: production
+    checked_date: '2026-10-05'
+    source_url: https://www.nexperia.com/product/BC856B
+  model_ids:
+  - bc856b_vendor
+  models:
+  - id: bc856b_vendor
+    path: semiconductor/vendor/bc856b.lib
+    sha256: 580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33
+    version: extraction week 19/2020
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/BC856_BC857_BC858.pdf
+    retrieved_date: '2026-10-05'
+    version: Rev 9; 1 July 2022
+    local_path: models/semiconductor/vendor/evidence/bc856.pdf
+    sha256: d9a836e40dd8f1e788d7dadbfcbe8cf4836ed5debe789c84b8fa574132f84943
+  sourcing_register: research/procurement/semiconductors_2026-10-05.yaml
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  candidate_combination_qualified: false
+- device_id: opa197
+  manufacturer: Texas Instruments
+  exact_mpn: OPA197IDBVR
+  package: SOT-23-5 DBV
+  roles:
+  - guard_servo
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: active
+    checked_date: '2026-10-05'
+    source_url: https://www.ti.com/product/OPA197
+  model_ids:
+  - opa197_pspice
+  models:
+  - id: opa197_pspice
+    path: semiconductor/vendor/opa197.lib
+    sha256: fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5
+    version: Final 1.3; 23JUN2022; SBOMA34D
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/opa197.pdf
+    retrieved_date: '2026-10-05'
+    version: SBOS737C March 2018
+    local_path: models/semiconductor/vendor/evidence/opa197.pdf
+    sha256: 27653a7d5e965cbb2d23f7998919ebd774efd5cd3e126b8f0881469ae91166fd
+  sourcing_register: research/procurement/semiconductors_2026-10-05.yaml
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  candidate_combination_qualified: false
+- device_id: 2n7002
+  manufacturer: Nexperia
+  exact_mpn: 2N7002,215
+  package: SOT-23
+  roles: []
+  states:
+    investigated: true
+    acquired: false
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: production
+    checked_date: '2026-10-05'
+    source_url: https://www.nexperia.com/product/2N7002
+  model_ids:
+  - 2n7002_failed_download
+  models:
+  - id: 2n7002_failed_download
+    path: semiconductor/vendor/2n7002.lib
+    sha256: 4a2a3f7fb1725f12fcfe3f7fef5cc082be2ac58eeb30ee4fdb693398e74abbf5
+    version: not_a_model
+    parent_model_id: null
+    acquisition: invalid_html_challenge
+    behavior: existing scope
+    primitive: X
+    runnability: existing scope
+    load_record: null
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/2N7002.pdf
+    retrieved_date: '2026-10-05'
+    version: Rev 7; 8 September 2011
+    local_path: models/semiconductor/vendor/evidence/2n7002.pdf
+    sha256: cc9c275457670c3cbbf2e56f5a75c800d3b5f0b396fabc798cf18cb639646475
+  sourcing_register: research/procurement/semiconductors_2026-10-05.yaml
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  candidate_combination_qualified: false

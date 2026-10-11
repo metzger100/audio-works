@@ -4,6 +4,8 @@
 Immediate contents and child hubs.
 
 - [test_architectures.py](test_architectures.py) — active
+- [test_batch_registration.py](test_batch_registration.py) — active
+- [test_characterization.py](test_characterization.py) — active
 - [test_comparison.py](test_comparison.py) — active
 - [test_device_models.py](test_device_models.py) — active
 - [test_integrity.py](test_integrity.py) — active

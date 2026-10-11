@@ -6,14 +6,46 @@ Run from lab: .venv/bin/python tools/reporting/compare_architectures.py
 """
 
 from comparison_common import OUT, ROOT, require_common, sha
-
 from meridian_lab.core import read_yaml
-
-
 from pathlib import Path
 
+from dataclasses import dataclass, field
+from collections.abc import Callable
 
-def stage(context):
+
+@dataclass
+class ComparisonData:
+    """Verified inputs and derived collections shared by the four report stages."""
+
+    cfg: dict
+    cfg_path: Path
+    checked: dict
+    comparison_flags: dict
+    evidence: Callable[[Path], Path]
+    index: dict
+    inputs: dict
+    optimizers: dict
+    part_register: dict
+    patent_index: dict
+    records: dict
+    refresh: dict
+    robust_register: dict
+    validation: dict
+    boms: list = field(default_factory=list)
+    contributions: list = field(default_factory=list)
+    details: list = field(default_factory=list)
+    harmonics: list = field(default_factory=list)
+    nominal_rows: list = field(default_factory=list)
+    spectra: list = field(default_factory=list)
+    statuses: list = field(default_factory=list)
+    paired: list = field(default_factory=list)
+    sensitivity: list = field(default_factory=list)
+    actual_rows: list = field(default_factory=list)
+    representative_records: dict = field(default_factory=dict)
+    fronts: dict = field(default_factory=dict)
+
+
+def stage():
     OUT.mkdir(parents=True, exist_ok=True)
     cfg_path = ROOT / "research/architectures/architecture-comparison-001.yaml"
     cfg = read_yaml(cfg_path)
@@ -125,44 +157,19 @@ def stage(context):
     )
     patent_index = {r["candidate_id"]: r for r in flags["records"]}
     patent_index.update({r["candidate"]: r for r in robust_flags["candidates"]})
-    nominal_rows, statuses, boms, details, contributions, spectra, harmonics = (
-        [],
-        [],
-        [],
-        [],
-        [],
-        [],
-        [],
+    return ComparisonData(
+        cfg=cfg,
+        cfg_path=cfg_path,
+        checked=checked,
+        comparison_flags=comparison_flags,
+        evidence=evidence,
+        index=index,
+        inputs=inputs,
+        optimizers=optimizers,
+        part_register=part_register,
+        patent_index=patent_index,
+        records=records,
+        refresh=refresh,
+        robust_register=robust_register,
+        validation=validation,
     )
-    representative_records = {}
-    return {
-        **context,
-        "boms": boms,
-        "candidate": candidate,
-        "cfg": cfg,
-        "cfg_path": cfg_path,
-        "checked": checked,
-        "comparison_flags": comparison_flags,
-        "contributions": contributions,
-        "details": details,
-        "evidence": evidence,
-        "family": family,
-        "folder": folder,
-        "harmonics": harmonics,
-        "index": index,
-        "inputs": inputs,
-        "name": name,
-        "nominal_rows": nominal_rows,
-        "optimizers": optimizers,
-        "part_register": part_register,
-        "patent_index": patent_index,
-        "r": r,
-        "records": records,
-        "refresh": refresh,
-        "representative_records": representative_records,
-        "robust_register": robust_register,
-        "spectra": spectra,
-        "statuses": statuses,
-        "v": v,
-        "validation": validation,
-    }

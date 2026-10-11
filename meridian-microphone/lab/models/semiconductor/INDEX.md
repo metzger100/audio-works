@@ -11,6 +11,7 @@ Immediate contents and child hubs.
 - [characterize_bipolar.py](characterize_bipolar.py) — active
 - [characterize_jfet.py](characterize_jfet.py) — active
 - [characterize_mos.py](characterize_mos.py) — active
+- [characterize_mos_base.py](characterize_mos_base.py) — active
 - [characterize_opa.py](characterize_opa.py) — active
 - [corners.yaml](corners.yaml) — active
 - [dc-bound-controls.cir](dc-bound-controls.cir) — active

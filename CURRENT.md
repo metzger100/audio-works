@@ -3,7 +3,7 @@
 
 As of 2026-10-11: **Parts evidence strengthened — research**.
 
-- **Software:** 80 lab tests; 33 Git/recovery and 23 fast regressions pass.
+- **Software:** 94 lab tests; 33 Git/recovery and 23 fast regressions pass.
 - **Engineering:** 20 devices/27 model files; scoped PNP controls; no selection.
 - **Procurement:** Realized BOMs; Germany private orderability/costs unresolved.
 - **Patents:** Phase 8 claims/status missing; affected gates held.
@@ -12,7 +12,7 @@ As of 2026-10-11: **Parts evidence strengthened — research**.
 
 **Blockers:** Unknown capsule safe polarization, mechanics and noise. Device/nonlinear/production coverage incomplete. Procurement and candidate patent screening unresolved.
 
-**Next:** Resolve08 behavior and11–12 sourcing/patent/preservation prerequisites.
+**Next:** Resolve phase 08 behavior and phases 11–12 sourcing, patent and preservation prerequisites.
 
 Evidence:
 

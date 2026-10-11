@@ -33,19 +33,18 @@ from comparison_common import (
     parse_elements as parse_elements,
     diagram as diagram,
 )
-from comparison_records import stage as stage_1
-from comparison_metrics import stage as stage_2
-from comparison_tables import stage as stage_3
-from comparison_outputs import stage as stage_4
+from comparison_records import stage as load_records
+from comparison_metrics import stage as collect_metrics
+from comparison_tables import stage as render_tables
+from comparison_outputs import stage as render_outputs
 
 
 def run():
-    context = locals().copy()
-    context = stage_1(context)
-    context = stage_2(context)
-    context = stage_3(context)
-    context = stage_4(context)
-    return context
+    data = load_records()
+    collect_metrics(data)
+    render_tables(data)
+    render_outputs(data)
+    return data
 
 
 if __name__ == "__main__":
