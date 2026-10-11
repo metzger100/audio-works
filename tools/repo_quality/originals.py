@@ -10,6 +10,21 @@ def identity(declaration):
     return None
 
 
+def original_destinations(register, prior):
+    """Resolve protected moves; callers still verify original hashes and modes."""
+    destinations = {}
+    for kind in ("original_files", "external_files"):
+        current = register.get(kind, {})
+        origins = {identity(d): path for path, d in current.items() if identity(d) is not None}
+        for path, declaration in current.items():
+            if isinstance(declaration, dict) and declaration.get("original_path"):
+                destinations[declaration["original_path"]] = path
+        for path, declaration in prior.get(kind, {}).items():
+            if identity(declaration) in origins:
+                destinations[path] = origins[identity(declaration)]
+    return destinations
+
+
 def declared_originals(view, register, prior, baseline):
     errors = []
     for kind in ("original_files", "external_files"):

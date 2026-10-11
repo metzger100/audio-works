@@ -6,7 +6,7 @@ Run `python3 tools/project.py context <route>` before changes. Tie claims to evi
 
 ## Complete a change
 
-Update `project.json`, decisions and original evidence. Register modules/routes. Run `refresh`, `audit`, `check` and applicable tests; tooling changes also need Git/recovery tests. Review staged content. Preserve failures, identities, parents, hashes and scientific requirements. Inventory/verify new batches and privately back up/restore them; gaps remain incomplete. [Full procedure](docs/maintaining-repository.md#complete-a-change).
+Update `project.json`, decisions and original evidence. Register modules/routes. Run `refresh`, `audit`, `check` and applicable tests; tooling changes also need Git/recovery tests. Review staged content. Preserve failures, identities, parents, hashes and scientific requirements. Inventory/verify new batches. GitHub is canonical for committed files; private capture/restore is optional. [Full procedure](docs/maintaining-repository.md#complete-a-change).
 
 ## Local setup
 

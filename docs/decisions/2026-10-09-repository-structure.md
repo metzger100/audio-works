@@ -16,7 +16,7 @@ Baseline Git revision and original file hashes are retained in the original-mate
 
 Regression coverage: [data composition](../../tests/quality/test_data.py), [structure](../../tests/quality/test_structure.py), [Git hooks](../../tests/project/test_hooks.py), retained recovery/integrity cases. Actual final counts, runtimes and remaining limits belong in [validation](../validation.md).
 
-Original scientific thresholds, budgets, record identities, failures and snapshot bytes remain protected. No sourcing, patent or physical readiness is promoted. Existing legacy gaps and incomplete independent preservation remain explicit. Deliver locally; no external publication or remote settings change is authorized by this decision.
+Original scientific thresholds, budgets, record identities, failures and snapshot bytes remain protected. No sourcing, patent or physical readiness is promoted. Storage requirements now follow the [GitHub owner decision](2026-10-11-github-canonical.md). Deliver locally; no external publication or remote settings change is authorized by this decision.
 
 ## Migration corrections
 

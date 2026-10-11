@@ -2,7 +2,7 @@
 
 Date: 2026-10-11. The owner requested improvements following the repository review. This authorizes local maintenance and verification; it supplies no purchase, contact, publication or remote-settings authorization.
 
-The review found clear subject boundaries and passing repository checks, with avoidable maintenance costs: large functions, report stages passing incidental local variables, repeated plot rendering and tight shared reading. Independent backup coverage and 89 missing original source files were already incomplete.
+The review found clear subject boundaries and passing repository checks, with avoidable maintenance costs: large functions, report stages passing incidental local variables, repeated plot rendering and tight shared reading.
 
 ## Implementation
 
@@ -20,4 +20,4 @@ Existing fixtures continue covering selected-index/committed-content gates, loss
 
 No scientific thresholds, uncertainty ranges, evaluation budgets, family counts, qualification prerequisites or repository limits change. Model/control disagreement and empty production fronts remain valid retained outcomes. There is no new arbitrary function-length rule or general exemption. The legacy ideal-fixture optimizer remains a separate historical compatibility path.
 
-The owner does not know an independent backup location. Verify a local private capture and restore, report its scope honestly, and keep independent preservation incomplete. Existing missing-source declarations remain frozen; only exact independently retained bytes could recover them. New verification evidence needs its own dated inventory and integrity check. No score or passing gate can substitute for those originals.
+Storage requirements now follow the [GitHub owner decision](2026-10-11-github-canonical.md); private backups are optional. Existing historical declarations remain frozen. New verification evidence needs its own dated inventory and integrity check. Repository status does not establish original-evidence completeness.

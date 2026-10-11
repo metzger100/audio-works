@@ -36,7 +36,7 @@ Preservation verification caught refresh treating source-snapshot indexes as gen
 
 Local hooks are bypassable. Remote settings/publication were not changed. Require `repository-quality` in GitHub branch protection when the owner authorizes those settings. [Git hooks](https://git-scm.com/docs/githooks) define the distinct integration points; selected hygiene patterns come from [CPython](https://github.com/python/cpython/blob/main/.pre-commit-config.yaml) and [Canonical documentation workflows](https://github.com/canonical/documentation-workflows). [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches) describes the server-side requirement.
 
-A fresh clone can run repository checks after installing pinned dependencies, but cannot reconstruct missing private originals by rerunning simulations. [Storage boundaries](../../meridian-microphone/lab/results/README.md) and [legacy gaps](../legacy-evidence.md) remain authoritative. The [pre-migration validation receipt](../history/2026-10-09/docs/VALIDATION.md) retains its original figures and conditions.
+A fresh clone can run repository checks after installing pinned dependencies, but cannot reconstruct missing private originals by rerunning simulations. [Storage boundaries](../../meridian-microphone/lab/results/README.md) and [historical audit](../history/2026-10-11/legacy-evidence.md) remain authoritative. The [pre-migration validation receipt](../history/2026-10-09/docs/VALIDATION.md) retains its original figures and conditions.
 
 ## Meridian cleanup — current completion
 

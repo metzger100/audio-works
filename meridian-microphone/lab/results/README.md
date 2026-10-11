@@ -1,6 +1,6 @@
 # Simulation evidence storage
 
-Git retains authored source/spec/implementation snapshots, decks, logs, compact results/trials, reports and checksum inventories, **including failures**. Original raw waveforms/exports and vendor bytes remain private/ignored; a clone cannot reproduce full original evidence without restoring them. Ignoring evidence never authorizes deletion. Reruns create new experiments, not restored originals.
+GitHub is canonical for authored source/spec/implementation snapshots, decks, logs, compact results/trials, reports and checksum inventories, **including failures**. Original raw waveforms/exports and vendor bytes remain local/ignored supporting evidence. A clone restores the committed repository; affected scientific reproduction also needs those original inputs. Ignoring evidence never authorizes deletion. Reruns create new experiments.
 
 ## Evidence map
 
@@ -25,6 +25,6 @@ Inventory paths are laboratory-relative. For example, from the lab:
 sha256sum -c results/raw-data.sha256
 ```
 
-Use the root [evidence tools](../../../docs/maintaining-repository.md#private-evidence) for additional dated inventories, complete source/job hash verification, idle capture and private restore checks. Do not replace earlier inventories. A same-computer recovery copy does not establish independent persistent preservation. **89pre-existing source gaps and independent backup remain incomplete.** Exact private destinations stay outside Git.
+Use the root [evidence tools](../../../docs/maintaining-repository.md#private-evidence) for additional dated inventories and complete source/job hash verification. Do not replace earlier inventories. Private capture/restore is optional; its result reports actual coverage separately from repository status. Exact private destinations stay outside Git. Historical audit declarations remain preserved, with no current recovery task or qualification credit assigned to them.
 
-The2026-10-06 folder rename preserves relative laboratory paths; original absolute/legacy paths and all frozen bytes remain unchanged. [Path migrations](../../../docs/config/path-migrations.json) resolve current authored locations. Vendor terms/notices remain original; no redistribution permission is inferred. Downloaded runtimes/environments/caches and synthetic provenance fixtures are excluded, while real physics-control decks/logs/failures remain retained. [Licensing](../../../LICENSE) and [legacy gaps](../../../docs/legacy-evidence.md) retain authority.
+The2026-10-06 folder rename preserves relative laboratory paths; original absolute/legacy paths and all frozen bytes remain unchanged. [Path migrations](../../../docs/config/path-migrations.json) resolve current authored locations. Vendor terms/notices remain original; no redistribution permission is inferred. Downloaded runtimes/environments/caches and synthetic provenance fixtures are excluded, while real physics-control decks/logs/failures remain retained. [Licensing](../../../LICENSE) retains authority; [current storage policy](../../../docs/decisions/2026-10-11-github-canonical.md) supersedes earlier recovery requirements.

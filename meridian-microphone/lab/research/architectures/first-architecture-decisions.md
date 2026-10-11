@@ -11,6 +11,6 @@ Owner-directed scope: six completed engineering attempts with honest evidence, a
 7. Resolve backordered passive dependencies through separately recorded AC10kΩ and C0G100pF children with full supported reevaluation, retaining parent dependencies. Same nominal value is not substitute-equivalence evidence; missing loss/noise/rating/source details keep build readiness held.
 8. Freeze the BOM and rationale with netlist/metadata, not just the simulator sources. Add terminal energy closure without lowering existing budgets. Preserve every failed model, registration, initialization and simulation record.
 9. Keep patent screening independent of simulation and technical-source reading. Early candidate-linked features are unscreened; no official claim/status investigation or non-infringement guarantee is asserted. Resolve material legal uncertainty professionally before affected selection.
-10. Verify/inventory new evidence and capture/restore available bytes. Same-device recovery and declared89 legacy-source gaps cannot satisfy independent persistent preservation. Keep that limitation visible in current facts.
+10. Verify/inventory new evidence and retain original experiment bytes. GitHub is canonical for committed records; private capture/restore is optional under D037.
 
 These implementation decisions do not alter the owner requirements or qualify a build. [Parent decisions](../../../DECISIONS.md) retain their original entries.

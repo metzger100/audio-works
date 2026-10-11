@@ -21,6 +21,19 @@ def load_register(view):
     r = load(view.text, "project.json")
     if r.get("schema_version") not in {1, 2}:
         raise ValueError("Unsupported project register schema")
+    storage = r.get("storage_policy")
+    if storage is not None and (
+        storage
+        != {
+            "authority": "github",
+            "scope": "versioned_repository",
+            "private_backups": "optional",
+        }
+        or not re.fullmatch(r"https://github\.com/[^/]+/[^/]+", r.get("repository", ""))
+    ):
+        raise ValueError(
+            "Storage policy must name the GitHub versioned repository and optional private backups"
+        )
     for key in (
         "as_of",
         "phase",

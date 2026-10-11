@@ -18,4 +18,4 @@ The shared gate rejects repeated substantial Markdown paragraphs and empty secti
 
 No specification, thresholds, budgets, resolved scientific values, identities, parents, original failures or frozen hashes change. No sourcing/patent/physical evidence is promoted. Original reports remain indexed and hash-protected. No new exception, scheduled job or process ledger is added.
 
-Measured before/after reading sizes, report sizes, runtimes, verification and private recovery belong in [validation](../validation.md). Independent persistent backup and89legacy source gaps remain incomplete. This decision authorizes local cleanup; pending remote publication is a separate approval.
+Measured before/after reading sizes, report sizes, runtimes, verification and private recovery belong in [validation](../validation.md). Storage requirements now follow the [GitHub owner decision](2026-10-11-github-canonical.md). This decision authorizes local cleanup; pending remote publication is a separate approval.

@@ -25,7 +25,6 @@
 - [current-evidence.md](current-evidence.md)
 - [documenting-hardware.md](documenting-hardware.md)
 - [history.md](history.md)
-- [legacy-evidence.md](legacy-evidence.md)
 - [maintaining-repository.md](maintaining-repository.md)
 - [quality-rules.md](quality-rules.md)
 - [repository-layout.md](repository-layout.md)

@@ -10,12 +10,12 @@ import subprocess
 from .base import MAX_COMMON, MAX_ROUTE, View, git, tree
 from .efficiency import inspect
 from .data import load
-from .evidence import preservation_status, snapshot_hashes
+from .evidence import archived_snapshot_gaps, preservation_status, snapshot_hashes
 from .navigation import navigation_output, render
 from .register import immutable
 from .structure import validate, original
 from .records import relationships
-from .originals import declared_originals
+from .originals import declared_originals, original_destinations
 
 HOOKS = ("pre-commit", "pre-merge-commit", "pre-applypatch", "pre-push")
 
@@ -79,12 +79,13 @@ def check(view, register):
     ):
         errors.append("Original preservation baseline cannot be replaced")
     algorithm = git(view.root, "rev-parse", "--show-object-format").strip()
+    relocations = original_destinations(register, prior)
     for path, (mode, oid) in baseline.items():
         if not (immutable(path, register) or immutable(path, prior)):
             continue
         from .base import current_path
 
-        destination = current_path(path)
+        destination = current_path(relocations.get(path, path))
         if destination not in view.paths:
             errors.append(f"Deleted immutable evidence/history: {path}")
         elif view.staged or view.revision:
@@ -132,14 +133,7 @@ def check(view, register):
                     errors.append(f"Original exclusion outside research/history scope: {path}")
                 if path in external and not (path.startswith("LICENSES/") or "LICENSE" in path):
                     errors.append(f"External exclusion outside original licence scope: {path}")
-    legacy = (
-        load(view.text, "docs/legacy-source-gaps.json").get("missing_sources", {})
-        if "docs/legacy-source-gaps.json" in view.paths
-        else {}
-    )
-    from .base import current_path
-
-    legacy = {current_path(path): value for path, value in legacy.items()}
+    legacy = archived_snapshot_gaps(view)
     for path, expected_hash in snapshot_hashes(view).items():
         private_original = (
             "/source/models/semiconductor/vendor/" in path
@@ -187,11 +181,6 @@ def check(view, register):
         "organization": "fail" if errors else "pass",
         **efficiency,
         "generated_files": len(expected),
-        "known_legacy_source_gaps": len(
-            load(view.text, "docs/legacy-source-gaps.json").get("missing_sources", {})
-        )
-        if "docs/legacy-source-gaps.json" in view.paths
-        else 0,
         "enforcement": {
             "hooks": list(HOOKS),
             "installed": hook_installed(view.root),

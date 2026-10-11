@@ -40,5 +40,6 @@ Current operative view, 11 October 2026. [Original decisions](../docs/history/20
 | D034 / 2026-10-11 | [Scoped reading and shared candidate conditions](../docs/decisions/2026-10-11-reading-and-data-layout.md). | Owner-directed overhead reduction |
 | D035 / 2026-10-11 | [Shared page folders and consolidated subjects](../docs/decisions/2026-10-11-folder-layout.md). | Owner-directed folder cleanup |
 | D036 / 2026-10-11 | [Explicit report stages, smaller controls and contributor entry](../docs/decisions/2026-10-11-maintainability.md). | Authorized repository improvement; scientific requirements retained |
+| D037 / 2026-10-11 | [GitHub authority and archived recovery tasks](../docs/decisions/2026-10-11-github-canonical.md). | Active owner direction; private backups optional |
 
 The historical G1 gate still requires intended capsule/variant/use, quantity, Germany delivered quote, interface facts, confidence and acknowledged residual risks before purchase. A second capsule needs an intended second microphone. Record batch/serial and calibrated measurements before architecture selection. This log authorizes no purchase or supplier contact.

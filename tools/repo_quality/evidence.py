@@ -11,6 +11,21 @@ import uuid
 
 from .base import RECORD_NAMES, canonical, current_path, private, safe_name, sha
 from .register import classify
+from .data import load
+
+
+def archived_snapshot_gaps(view):
+    """Read retained historical declarations, including the old checkout layout."""
+    for path in (
+        "docs/history/2026-10-11/legacy-source-gaps.json",
+        "docs/legacy-source-gaps.json",
+    ):
+        if path in view.paths:
+            return {
+                current_path(name): expected
+                for name, expected in load(view.text, path).get("missing_sources", {}).items()
+            }
+    return {}
 
 
 def inventory(view):
@@ -198,6 +213,16 @@ def write_attestation(root, data):
 
 
 def preservation_status(root, view, r):
+    if r.get("storage_policy", {}).get("authority") == "github":
+        return {
+            "status": "configured",
+            "authority": "github",
+            "repository": r["repository"],
+            "scope": "versioned_repository",
+            "private_backups": "optional",
+            "remote_sync": "not_checked",
+            "note": "GitHub is canonical for committed files. This local gate does not verify remote synchronization or preservation of ignored evidence.",
+        }
     fingerprint = evidence_fingerprint(view)
     folder = root / ".project-local/backups"
     for p in sorted(folder.glob("*.json"), reverse=True):

@@ -30,4 +30,4 @@ python3 tools/project.py search 'startup'
 
 Use the command's `--include-generated`, `--include-evidence` or `--include-history` switch when you need those records. [Research subjects](../meridian-microphone/lab/research/README.md) answer scientific questions; the [complete index](INDEX.md) exposes individual files.
 
-Original raw/vendor bytes require private restoration. Follow [capture and recovery](maintaining-repository.md#private-evidence); [known source gaps](legacy-evidence.md) cannot be repaired with fresh simulations. A passing repository check establishes organizational/software hygiene, while engineering, procurement, patents, measurements and preservation retain separate evidence states.
+GitHub is canonical for committed files. Original raw/vendor bytes are local supporting evidence; [optional capture and recovery](maintaining-repository.md#private-evidence) can preserve them. A passing repository check establishes organizational/software hygiene; scientific, procurement, patent and measurement claims retain their evidence requirements.

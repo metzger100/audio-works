@@ -3,6 +3,7 @@
 
 Original bytes retain SHA256 and baseline Git provenance. Historical embedded links describe their original layout; use current subject hubs for live material.
 
+- [meridian-microphone/lab/research/probes/bom_only_registration_2026-10-09/generator.py](../../meridian-microphone/lab/research/probes/bom_only_registration_2026-10-09/generator.py) — `d4997bc410073678a4ef5554786a5c09865c34deb55e789204f9b129f1754399`
 - [meridian-microphone/lab/research/probes/bom_only_registration_2026-10-09/proposal/circuit.cir](../../meridian-microphone/lab/research/probes/bom_only_registration_2026-10-09/proposal/circuit.cir) — `64b28c3ba47a65edd24c14881949dde86da264ce5889eaa5f100ba2aad678280`
 - [meridian-microphone/lab/research/probes/bom_only_registration_2026-10-09/proposal/topology.yaml](../../meridian-microphone/lab/research/probes/bom_only_registration_2026-10-09/proposal/topology.yaml) — `7d6cd62eec2c3b7e6cf9864c198f9cb32bf82b37653b08b87fafdb8c1d11bd35`
 - [meridian-microphone/lab/research/probes/bom_only_registration_2026-10-09/results.json](../../meridian-microphone/lab/research/probes/bom_only_registration_2026-10-09/results.json) — `4c17950d382ab49368f84a430c961a3d7cafadc12cb3efe3dc6d6f10ed51a59d`

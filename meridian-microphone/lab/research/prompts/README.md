@@ -22,7 +22,7 @@ Read [the shared execution contract](research-workflow.md) with any continuation
 | [09](09-focused-engineering-hypotheses.md) | Test bias/servo authority, a 0023 backplate-filter child and output imbalance/noise | qualification | Supported device/control scopes from 08 |
 | [10](10-diverse-mechanism-prerequisites.md) | Falsify charge feedback; validate CMOS floating macros and carrier periodic noise | topology | Exact family failures and independent oracles |
 | [11](11-candidate-patent-screening.md) | Research actual claims, territory and official status for implemented features | reporting | Exact current candidate/netlist versions |
-| [12](12-sourcing-and-preservation.md) | Resolve Germany private-customer basket costs and independent preservation | reporting | Actual BOMs and original evidence inventories |
+| [12](12-sourcing-and-preservation.md) | Resolve Germany private-customer basket costs and repository evidence scope | reporting | Actual BOMs and original evidence inventories |
 | [13](13-common-cohort-recomparison.md) | Recompare supported realized implementations under one frozen cohort | reporting | Executed evidence from the preceding tasks |
 
 Start with 06 and 07, then 08. Documentary research for 10–12 can proceed alongside those tasks; register source changes only while evaluators are idle. Execute 09's supported calculations and tests as prerequisites become available. In 10, a failed model leads to a reduced prerequisite control. Patent mapping starts early and must be refreshed for actual structural children. Run 13 after the evidence improves, with honest incomplete states for remaining gaps.

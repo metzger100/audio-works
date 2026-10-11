@@ -61,7 +61,10 @@ class TestRecovery(RepositoryFixture):
         )
         report = project.verify_evidence(destination, project.View(destination))
         self.assertEqual(report["status"], "pass")
-        self.assertEqual(self.check()["preservation"]["status"], "incomplete")
+        storage = self.check()["preservation"]
+        self.assertEqual(storage["status"], "configured")
+        self.assertEqual(storage["private_backups"], "optional")
+        self.assertEqual(storage["remote_sync"], "not_checked")
 
     def test_restore_refuses_nonempty_destination_and_corrupted_payload(self):
         source = self.backup()
@@ -210,7 +213,13 @@ class TestRecovery(RepositoryFixture):
         clone = self.parent / "clone"
         subprocess.run(["git", "clone", "--quiet", str(self.root), str(clone)], check=True)
         view = project.View(clone)
-        self.assertEqual(project.check(view, project.load_register(view))["status"], "pass")
+        register = project.load_register(view)
+        report = project.check(view, register)
+        self.assertEqual(report["status"], "pass")
+        self.assertEqual(report["preservation"]["authority"], "github")
+        self.assertEqual(report["preservation"]["private_backups"], "optional")
         self.assertEqual(project.verify_evidence(clone, view)["status"], "incomplete")
+        register.pop("storage_policy")
+        self.assertEqual(project.check(view, register)["preservation"]["status"], "incomplete")
         project.install_hook(clone)
         self.assertTrue(project.hook_installed(clone))

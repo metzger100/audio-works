@@ -32,6 +32,6 @@ All 46 jobs/21 errors and stable source snapshots remain.15s/100job budgets,20% 
 
 Use [parts search/audit](../../tools/controls/parts_database.py) via `--counts`, `--audit`, exact names or `--role`/`--state`. The audit rejects canonical identity/hash/state drift and unconditioned behavior passes. Next: restricted PMBT5551/MMBT5401 feedback/power controls, dual-package mismatch/combined-power sensitivity, independent JFET discrepancy and OPA928 grounded/floating prerequisites. No purchase selection follows.
 
-[Validation](parts-database-expansion-002-validation.json) and [recovery receipt](parts-database-expansion-002-preservation.json) retain14search sessions (13raw records; first timestamp/raw absent),32direct receipts,89 legacy source gaps and incomplete independent backup. Vendor bytes/waveforms remain private.
+[Validation](parts-database-expansion-002-validation.json) and [recovery receipt](parts-database-expansion-002-preservation.json) retain14search sessions (13raw records; first timestamp/raw absent),32direct receipts. GitHub holds committed records; vendor bytes/waveforms remain local.
 
 [Complete dated original](../../../../docs/history/2026-10-09/meridian-microphone/lab/research/parts_database_expansion_002.md) · [Current verification](../../../../docs/validation.md). Original tables, failures, conditions and decisions remain authoritative.

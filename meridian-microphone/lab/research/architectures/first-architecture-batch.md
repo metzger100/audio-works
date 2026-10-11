@@ -22,6 +22,6 @@ Original cohorts preserve source/model/spec hashes, seed 34047,16 envelope scena
 
 [Dated sourcing](../procurement/architecture_parts_2026-10-09.yaml) and per-candidate BOMs retain exact variants, technology/tolerance/package, installed/intended quantities and conditional costs. Alternative BOMs are not a purchase basket. [Patent flags](../patents/first_architecture_batch_2026-10-09.yaml) lack completed claims/current-status screening.
 
-Next: address each mechanism's fastest independent falsification, retain CMOS/carrier prerequisites and validate actual device/loss/leakage/production behavior before ranking. Unknown capsule safety/noise/polarization/overload, live sourcing/delivered totals,89 legacy sources and independent backup remain open.
+Next: address each mechanism's fastest independent falsification, retain CMOS/carrier prerequisites and validate actual device/loss/leakage/production behavior before ranking. Unknown capsule safety/noise/polarization/overload, live sourcing/delivered totals remain open.
 
 [Complete dated original](../../../../docs/history/2026-10-09/meridian-microphone/lab/research/first_architecture_batch.md) · [Current verification](../../../../docs/validation.md). Original tables, failures, conditions and decisions remain authoritative.

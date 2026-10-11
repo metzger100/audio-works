@@ -21,7 +21,7 @@ The installer preserves unrelated hook configurations and reports conflicts. Fre
 2. Classify new modules, register their navigation and update affected reading routes. Edit source documents rather than generated pages.
 3. Run `python3 tools/project.py refresh`, `python3 tools/project.py audit`, then `python3 tools/project.py check`.
 4. Run `python3 -m unittest discover -s tests/project` after tooling changes. Engineering edits require the applicable lab verification/evaluation, unchanged thresholds and retained failures.
-5. For a new research batch, create a separately dated inventory (`evidence inventory`), verify original evidence, update its index and refresh the private backup. Preserve existing manifests and records.
+5. For a new research batch, create a separately dated inventory (`evidence inventory`), verify original evidence and update its index. Preserve existing manifests and records. Private capture/restore is optional.
 6. Review the staged change; `check --staged` and the commit hook inspect the index. Report failures, omissions and unknowns explicitly.
 
 The four hooks inspect commits, merge commits, applied patches and all outgoing push revisions. They run structural checks, Ruff and fast regression tests. The gate does not rewrite/stage files, run simulations or require local waveform archives. A passing repository gate does not establish scientific, sourcing, legal or backup readiness.
@@ -30,15 +30,19 @@ Apply the [repository licences](../LICENSE) to new project-authored material: GP
 
 ## Private evidence
 
-Read [storage boundaries](../meridian-microphone/lab/results/README.md). A clone contains metadata, not all original waveform/vendor bytes. Check them with `python3 tools/project.py evidence verify`. Private backups require idle evaluators:
+The owner designates [GitHub](https://github.com/metzger100/audio-works) as the canonical home for committed code, specifications, compact results, reports and history. Local checks inspect selected Git content; they do not establish that a branch has been pushed. Verify remote synchronization when publishing an authorized change.
+
+Original waveform/vendor bytes remain ignored local supporting evidence. A clone supplies the committed repository; reproducing affected scientific results also needs those original inputs. Their full integrity audit remains available with `python3 tools/project.py evidence verify`, and may report historical or local-file gaps without making GitHub repository status incomplete. See [storage boundaries](../meridian-microphone/lab/results/README.md).
+
+Private backups are optional. For a chosen capture, keep evaluators idle and verify the restoration:
 
 ```sh
 python3 tools/project.py evidence backup --destination /owner/chosen/storage
 python3 tools/project.py evidence restore --source /path/to/backup-directory --destination /empty/restore-directory
 ```
 
-Use `--independent` only for owner-designated persistent storage independent of this checkout's device. Temporary/same-device storage cannot establish full preservation. Verify the restored archive before reporting completeness; keep the original backup. Re-running a simulation creates new evidence rather than recovering the original. Commands do not contact suppliers, accept licences or publish data.
+The optional `--independent` flag still verifies separate persistent storage; a same-device copy cannot receive that classification. Neither an upload nor a restored archive creates missing original bytes. Preserve completeness declarations and never claim that ignored files are on GitHub. Commands do not contact suppliers, accept licences or publish data.
 
-The [legacy-source audit](legacy-evidence.md) records original gaps. Capture/restore reports distinguish available-byte integrity from full original-evidence completeness. Default searches include maintained source/proposals; add `--include-generated`, `--include-evidence` or `--include-history` deliberately.
+Historical audits remain in preserved history. Capture/restore reports distinguish captured-byte integrity from original-evidence completeness. Default searches include maintained source/proposals; add `--include-generated`, `--include-evidence` or `--include-history` deliberately.
 
 Quality/tooling changes require a [dated decision](decisions/INDEX.md) and a regression fixture reproducing the defect. Use `audit` to identify the next focused improvement; update an authoritative record, fix the cause and repeat the completion sequence. No scheduled jobs or separate issue ledger are needed. Configure the CI job `repository-quality` as a required GitHub status check when remote settings changes are authorized. See [mechanical rules](quality-rules.md).

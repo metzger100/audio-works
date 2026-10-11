@@ -22,7 +22,7 @@ The [characterizer](../../models/semiconductor/characterize.py) freezes versions
 
 The9October MOS parent had a wrong drain-observer sign; its corrected child and independent square-law/passive-admittance controls retain all bytes. [38-test original verification](../../results/verification/20261009T070533Z_a602e6d5/verification.json), [integrity](../device_model_integrity_2026-10-09.json) and [258-file inventory](../../results/evidence-20261009T070957Z-3092a887.sha256) cover the original follow-up, not today's test count.
 
-Exact source versions/notices and failed HTML/challenge/403 downloads remain private. [Dated sourcing](../procurement/semiconductors_2026-10-09.yaml) supplies documentary routes, not live stock or delivered totals. [Patent flags](../patents/device_library_2026-10-05.yaml) do not complete claims/status review.89 legacy sources and independent backup remain incomplete.
+Exact source versions/notices and failed HTML/challenge/403 downloads remain private. [Dated sourcing](../procurement/semiconductors_2026-10-09.yaml) supplies documentary routes, not live stock or delivered totals. [Patent flags](../patents/device_library_2026-10-05.yaml) do not complete claims/status review.
 
 Next: acquire independent current/noise/leakage/temperature behavior at intended bias, validate joint bounds and floating integrations, then realize/requalify exact BOMs. Keep every family open while its prerequisites remain unsupported.
 

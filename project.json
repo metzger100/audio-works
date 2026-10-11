@@ -3,26 +3,27 @@
   "as_of": "2026-10-11",
   "phase": "Parts evidence strengthened — research",
   "readiness": {
-    "software": "94 lab tests; 33 Git/recovery and 23 fast regressions pass.",
+    "software": "94 lab tests; 36 Git/recovery and 23 fast regressions pass.",
     "engineering": "20 devices/27 model files; scoped PNP controls; no selection.",
     "procurement": "Realized BOMs; Germany private orderability/costs unresolved.",
     "patents": "Phase 8 claims/status missing; affected gates held.",
     "physical": "No measurements; access deferred; no selected prototype.",
-    "preservation": "Local recovery verified; 89 legacy source gaps; independent backup incomplete."
+    "preservation": "GitHub is canonical for committed files; private evidence is outside the repository."
   },
   "blockers": [
     "Unknown capsule safe polarization, mechanics and noise.",
     "Device/nonlinear/production coverage incomplete.",
     "Procurement and candidate patent screening unresolved."
   ],
-  "next_action": "Resolve phase 08 behavior and phases 11–12 sourcing, patent and preservation prerequisites.",
+  "next_action": "Resolve phase 08 behavior and phases 11–12 sourcing and patent prerequisites.",
   "evidence": [
     "meridian-microphone/lab/research/devices/parts-database-expansion-002.md",
     "meridian-microphone/lab/research/architectures/architecture-comparison-001.md",
     "meridian-microphone/lab/research/devices/parts-database-expansion-001.md",
     "meridian-microphone/lab/research/devices/device-model-validation.md",
     "meridian-microphone/lab/research/patents/architecture_comparison_001_2026-10-09.yaml",
-    "docs/validation/2026-10-11-maintainability.md"
+    "docs/validation/2026-10-11-maintainability.md",
+    "docs/validation/2026-10-11-github-canonical.md"
   ],
   "stages": [
     {
@@ -104,7 +105,6 @@
     "meridian-microphone/lab/results/raw-data.sha256",
     "meridian-microphone/lab/results/device-model-raw-data.sha256",
     "meridian-microphone/lab/results/device-model-csv-data.sha256",
-    "docs/legacy-source-gaps.json",
     "meridian-microphone/lab/research/parts_sources_2026-10-09.yaml",
     "meridian-microphone/lab/research/parts_sources_expansion_002_2026-10-09.yaml"
   ],
@@ -130,14 +130,17 @@
   },
   "quality_change": {
     "date": "2026-10-11",
-    "decision": "docs/decisions/2026-10-11-maintainability.md",
+    "decision": "docs/decisions/2026-10-11-github-canonical.md",
     "tests": [
-      "tests/project/test_navigation.py",
-      "tests/quality/test_data.py",
-      "meridian-microphone/lab/tests/test_characterization.py",
-      "meridian-microphone/lab/tests/test_batch_registration.py",
-      "meridian-microphone/lab/tests/test_comparison.py"
+      "tests/project/test_storage_policy.py",
+      "tests/project/test_recovery.py",
+      "tests/quality/test_originals.py"
     ]
   },
-  "original_revision": "20c039a5323964520f80da2a3e9c07bd097b5e79"
+  "original_revision": "20c039a5323964520f80da2a3e9c07bd097b5e79",
+  "storage_policy": {
+    "authority": "github",
+    "scope": "versioned_repository",
+    "private_backups": "optional"
+  }
 }

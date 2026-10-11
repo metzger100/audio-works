@@ -3,16 +3,16 @@
 
 As of 2026-10-11: **Parts evidence strengthened — research**.
 
-- **Software:** 94 lab tests; 33 Git/recovery and 23 fast regressions pass.
+- **Software:** 94 lab tests; 36 Git/recovery and 23 fast regressions pass.
 - **Engineering:** 20 devices/27 model files; scoped PNP controls; no selection.
 - **Procurement:** Realized BOMs; Germany private orderability/costs unresolved.
 - **Patents:** Phase 8 claims/status missing; affected gates held.
 - **Physical:** No measurements; access deferred; no selected prototype.
-- **Preservation:** Local recovery verified; 89 legacy source gaps; independent backup incomplete.
+- **Preservation:** GitHub is canonical for committed files; private evidence is outside the repository.
 
 **Blockers:** Unknown capsule safe polarization, mechanics and noise. Device/nonlinear/production coverage incomplete. Procurement and candidate patent screening unresolved.
 
-**Next:** Resolve phase 08 behavior and phases 11–12 sourcing, patent and preservation prerequisites.
+**Next:** Resolve phase 08 behavior and phases 11–12 sourcing and patent prerequisites.
 
 Evidence:
 

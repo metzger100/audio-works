@@ -21,6 +21,6 @@ Nine realized/structural children preserve proposal ancestry. One–four indepen
 
 Each child retains full-suite and withheld validation, exact BOM/quantity, errors and parent deltas. [Primary observations](../../architecture_sources/robust_observations_2026-10-09.json) and [dated sourcing](../../procurement/robust_parts_2026-10-09.yaml) distinguish conditioned limits from indexed order observations. Delivered costs and safe capsule operation remain unknown. No cost winner or purchase list follows.
 
-[Original integrity](../../robust_optimization_integrity_2026-10-09.json), [4198-file inventory](../../../results/evidence-20261009T091504Z-58b871ef.sha256) and [private recovery receipt](../../robust_optimization_preservation_2026-10-09.json) preserve failed optimizer/driver controls and repaired successors.57 passing tests describe that batch.89 legacy sources and independent persistent backup remain incomplete.
+[Original integrity](../../robust_optimization_integrity_2026-10-09.json), [4198-file inventory](../../../results/evidence-20261009T091504Z-58b871ef.sha256) and [private recovery receipt](../../robust_optimization_preservation_2026-10-09.json) preserve failed optimizer/driver controls and repaired successors.57 passing tests describe that batch.
 
 [Complete dated original](../../../../../docs/history/2026-10-09/meridian-microphone/lab/research/robust_optimization_report.md) · [Current verification](../../../../../docs/validation.md). Original tables, failures, conditions and decisions remain authoritative.

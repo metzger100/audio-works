@@ -7,3 +7,4 @@ Immediate contents and child hubs.
 - [test_hooks.py](test_hooks.py) — active
 - [test_navigation.py](test_navigation.py) — active
 - [test_recovery.py](test_recovery.py) — active
+- [test_storage_policy.py](test_storage_policy.py) — active

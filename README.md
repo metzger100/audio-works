@@ -16,6 +16,8 @@ Working toward open audio hardware for DIY builders: microphones, preamps, ampli
 
 No prototype is selected. Parts, patent review and physical validation remain separate prerequisites.
 
+[GitHub](https://github.com/metzger100/audio-works) is the canonical home for committed code, specifications and reports. Private simulation/vendor files remain outside Git; [storage scope](docs/maintaining-repository.md#private-evidence) explains recovery.
+
 ## Finding the work
 
 The [task guide](docs/start-here.md) points to the first useful page for each kind of work. The [complete index](docs/INDEX.md) exposes files; the [folder map](docs/repository-layout.md) explains their homes. Choose a reading route:

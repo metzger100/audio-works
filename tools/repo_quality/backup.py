@@ -20,8 +20,9 @@ from .evidence import (
     snapshot_hashes,
     verify_evidence,
     write_attestation,
+    archived_snapshot_gaps,
 )
-from .base import View, canonical, current_path, git, now, private, safe_name, sha, tree
+from .base import View, canonical, git, now, private, safe_name, sha, tree
 from .register import load_register
 
 
@@ -30,14 +31,7 @@ def create_backup(root, destination, independent=False):
     view = View(root)
     r = load_register(view)
     verification = verify_evidence(root, view)
-    legacy = {}
-    if "docs/legacy-source-gaps.json" in view.paths:
-        legacy = {
-            current_path(p): h
-            for p, h in json.loads(view.text("docs/legacy-source-gaps.json"))[
-                "missing_sources"
-            ].items()
-        }
+    legacy = archived_snapshot_gaps(view)
     declarations = snapshot_hashes(view)
     known_missing = all(
         p in legacy and legacy[p] == declarations.get(p) for p in verification["missing"]
@@ -113,7 +107,7 @@ def create_backup(root, destination, independent=False):
             "file_count": len(paths),
             "independent": independent,
             "missing_original_sources": len(verification["missing"]),
-            "note": "Capture verified. Full preservation also requires independent persistent storage and a successful restore.",
+            "note": "Capture verified. Restore verification and original-evidence completeness are reported separately.",
         }
     except BaseException:
         shutil.rmtree(partial, ignore_errors=True)
