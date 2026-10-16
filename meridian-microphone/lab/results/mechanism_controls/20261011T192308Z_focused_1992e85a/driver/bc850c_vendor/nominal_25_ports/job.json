@@ -1,0 +1,44 @@
+{
+  "directory": "bc850c_vendor/nominal_25_ports",
+  "label": "nominal_25_ports",
+  "model": {
+    "acquisition_status": "valid_spice",
+    "behavior_validation": "error",
+    "device_id": "bc850c",
+    "file": "models/semiconductor/vendor/bc850c.lib",
+    "id": "bc850c_vendor",
+    "manufacturer": "Nexperia",
+    "model_lineage": [],
+    "ngspice_behavior": "ps",
+    "parent_model_id": null,
+    "path": "semiconductor/vendor/bc850c.lib",
+    "pin_order": "subcircuit C B E; physical B1 E2 C3",
+    "primitive": "X",
+    "redistribution": {
+      "acquisition": "models/semiconductor/acquire.py; private receipt and acquisition.yaml",
+      "evidence": "Original notices and archive/PDF retained privately; public availability is not redistribution permission.",
+      "status": "not_established_do_not_redistribute"
+    },
+    "retrieved_date": "2026-10-09",
+    "runnability": "scoped_jobs_ok_with_retained_errors",
+    "sha256": "ef3fc2c3776eaf52acbfb5b7955eda8efd9fa714dd2158aa015ac42610bca399",
+    "source_url": "https://assets.nexperia.com/documents/spice-model/BC850C.txt?download=1",
+    "subcircuit": "BC850C",
+    "syntax": "self-contained public subcircuit; dialect compatibility unverified",
+    "validation_record": "results/device_models/20261009T133651Z_parts_d3c30763/results.json",
+    "version": "extraction week42/2018"
+  },
+  "netlist_sha256": "144d7fa1c19fab99c60aefadff3e4aed1610e1b8d67eeab17bc19c236f88a431",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "retained_hashes": {
+    "job.cir": "144d7fa1c19fab99c60aefadff3e4aed1610e1b8d67eeab17bc19c236f88a431",
+    "n.raw": "ed9bab6d1d8fd7188007022f850a883796edcba4c772336e140968654cc78c57",
+    "n.raw.csv": "fa46e423b26b2e0538478dedafa1bd90e35fc4c53a20d993a3afeec5cd80f892",
+    "p.raw": "1ea547d665051f1d68e4ffef91d3a93f2960f0038d696a83ad3e5447e82624b6",
+    "p.raw.csv": "a6cd214fbb020694df6554d23a18b57e6e92228e78585119092ab16043703a37",
+    "simulator.log": "ab216a1c5ea834d6c19575efd3d489ea3474a38c04ee01badcd19883e217c73e"
+  },
+  "status": "ok",
+  "temperature_c": 25,
+  "timeout_s": 15
+}

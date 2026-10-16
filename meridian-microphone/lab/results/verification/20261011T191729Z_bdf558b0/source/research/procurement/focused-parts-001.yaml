@@ -1,0 +1,67 @@
+schema_version: 1
+date: '2026-10-11'
+candidate: candidate_0025
+build_ready: false
+parts:
+- mpn: MKP2D031001F00KSSD
+  manufacturer: WIMA
+  installed_quantity: 1
+  package: radial5x10x7.2mm,5mm pitch
+  value_f: 1.0e-07
+  tolerance: 0.1
+  voltage_v: 100
+  technology: metallized PP
+  lifecycle: present manufacturer product family;exact future lifecycle promise unavailable
+  observations:
+  - seller: AudioTube24
+    url: https://www.audiotube24.de/product_id-00015999
+    price_eur_including_19percent_vat: 0.55
+    quantity_basis: 1
+    lead_time_claim: 2-5working days
+    stock_quantity: null
+    moq_lead: 1
+    pack_size: null
+    private_access: retail price withVAT and basket control;public ordering lead only
+    germany_delivery: supplier Germany;shipping quote not verified
+    conflict: Headline/MPN sayMKP2±10%;detail table mistakenlyFKP2±2.5%;manufacturer
+      exact suffix controls electrical BOM
+    date: '2026-10-11'
+    evidence: private pinned source response;web text corroboration
+    status: documentary retail lead;conflict/delivery unresolved
+  - seller: MouserEurope
+    url: https://eu.mouser.com/en/ProductDetail/WIMA/MKP2D031001F00KSSD?qs=ISKKXg98%252B1nhGooKUIYTqg%3D%3D
+    stock_indexed: 0
+    lead_time_indexed_weeks: 40
+    quantity1_price_indexed_eur: 0.795
+    tax_basis: null
+    date: '2026-10-11'
+    status: indexed not live;backorder not stock
+  confirmed_delivered_eur: null
+  shipping_eur: null
+  intended_use: One additional part in one finished-project microphone hypothesis;no
+    comparison purchases
+driver_alternatives:
+- mpn: BC850C,215
+  manufacturer: Nexperia
+  installed_isolated_quantity: 3
+  model_id: bc850c_vendor
+  package: SOT23B1E2C3
+  production_source: https://www.nexperia.com/product/BC850C
+  germany_routes:
+  - https://www.digikey.de/en/products/detail/nexperia-usa-inc/BC850C-215/2531364
+  - https://de.farnell.com/nexperia/bc850c-215/transistor-npn-45v-sot-23/dp/1081241
+  stock: indexed zero direct stock;marketplace inventory isseparate/unverified
+  private_germany_orderability: null
+  delivered_eur: null
+- mpn: PMBT5551,215
+  manufacturer: Nexperia
+  installed_isolated_quantity: 3
+  model_id: pmbt5551_vendor
+  package: SOT23B1E2C3
+  source: https://assets.nexperia.com/documents/data-sheet/PMBT5551.pdf
+  procurement_parent: parts_expansion_001_2026-10-09.yaml
+  private_germany_orderability: null
+  delivered_eur: null
+inherited_costs: Retain parent exact parts and dated partial scenarios;no combined
+  delivered total
+purchase_authorized: false

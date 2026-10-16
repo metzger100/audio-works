@@ -1,0 +1,98 @@
+{
+  "aggregate": [
+    {
+      "color": "white",
+      "finite_screen_pass": true,
+      "fs_hz": 800000,
+      "independent_seed_95percent_interval": [
+        0.9228523561775493,
+        1.080476767406448
+      ],
+      "mean_ratio": 1.0016645617919986,
+      "samples": 131072
+    },
+    {
+      "color": "colored_10khz",
+      "finite_screen_pass": true,
+      "fs_hz": 800000,
+      "independent_seed_95percent_interval": [
+        0.9532848965719259,
+        1.0702066334589073
+      ],
+      "mean_ratio": 1.0117457650154167,
+      "samples": 131072
+    },
+    {
+      "color": "white",
+      "finite_screen_pass": true,
+      "fs_hz": 800000,
+      "independent_seed_95percent_interval": [
+        0.9676920455467225,
+        1.043630009019069
+      ],
+      "mean_ratio": 1.0056610272828959,
+      "samples": 262144
+    },
+    {
+      "color": "colored_10khz",
+      "finite_screen_pass": true,
+      "fs_hz": 800000,
+      "independent_seed_95percent_interval": [
+        0.938282530868456,
+        1.0693769676424796
+      ],
+      "mean_ratio": 1.0038297492554678,
+      "samples": 262144
+    },
+    {
+      "color": "white",
+      "finite_screen_pass": true,
+      "fs_hz": 1600000,
+      "independent_seed_95percent_interval": [
+        0.9740541732786875,
+        1.0855819575906176
+      ],
+      "mean_ratio": 1.0298180654346525,
+      "samples": 131072
+    },
+    {
+      "color": "colored_10khz",
+      "finite_screen_pass": true,
+      "fs_hz": 1600000,
+      "independent_seed_95percent_interval": [
+        0.9451650237201134,
+        1.0515690652773493
+      ],
+      "mean_ratio": 0.9983670444987314,
+      "samples": 131072
+    },
+    {
+      "color": "white",
+      "finite_screen_pass": true,
+      "fs_hz": 1600000,
+      "independent_seed_95percent_interval": [
+        0.8946127892422401,
+        1.0722477370963963
+      ],
+      "mean_ratio": 0.9834302631693181,
+      "samples": 262144
+    },
+    {
+      "color": "colored_10khz",
+      "finite_screen_pass": true,
+      "fs_hz": 1600000,
+      "independent_seed_95percent_interval": [
+        0.9426908412589667,
+        1.0336831752129103
+      ],
+      "mean_ratio": 0.9881870082359385,
+      "samples": 262144
+    }
+  ],
+  "continuous_white_limit_v2": 4e-13,
+  "rows": {
+    "$include": "results-7c39d6b011c5-0001-results-0005-seeded-0000-rows.json"
+  },
+  "scope": "Ideal seeded discrete LPTV oracle only; no native periodic device noise, P48 current, oscillator/mixer hardware or capsule rating",
+  "zero_shared_source_output": 0.0
+}

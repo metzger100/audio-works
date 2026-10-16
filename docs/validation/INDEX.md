@@ -13,3 +13,8 @@ Immediate contents and child hubs.
 - [2026-10-11-reading-and-data-layout.md](2026-10-11-reading-and-data-layout.md) — active
 - [2026-10-11-research-consolidation.md](2026-10-11-research-consolidation.md) — active
 - [2026-10-11-simulation-prerequisites.md](2026-10-11-simulation-prerequisites.md) — active
+- [2026-10-12-focused-hypotheses.md](2026-10-12-focused-hypotheses.md) — active
+- [2026-10-12-focused-preservation.json](2026-10-12-focused-preservation.json) — active
+- [2026-10-16-diverse-checks.json](2026-10-16-diverse-checks.json) — active
+- [2026-10-16-diverse-prerequisites.md](2026-10-16-diverse-prerequisites.md) — active
+- [2026-10-16-diverse-preservation.json](2026-10-16-diverse-preservation.json) — active

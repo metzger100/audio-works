@@ -1,0 +1,74 @@
+Note: gnd in a subcircuit is not set to 0 automatically
+
+Note: Compatibility modes selected: ps
+
+
+Circuit: meridian prerequisite bc850c_vendor cold_startup
+
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+rail                                         0
+raw                                    29.5293
+in                                           0
+src                                          0
+signal                             7.89183e-17
+mid                                3.92628e-19
+feed                                        48
+p                                      34.0376
+n                                      34.0512
+xp                                     34.0376
+xn                                     34.0512
+pp                                           0
+pn                                           0
+outp                                1.3615e-08
+cp                                  1.3679e-08
+outn                               1.36205e-08
+cn                                 1.36845e-08
+qoutp_t0                                     0
+qoutp_t1                           7.89183e-17
+qoutp_t2                            1.3615e-08
+xqoutp.11                          2.73268e-19
+inverse                            7.85572e-19
+qinvert_t0                         7.85572e-19
+qinvert_t1                         7.89183e-17
+ie                                 4.95657e-26
+qinvert_t2                         4.95657e-26
+xqinvert.11                        7.85572e-19
+qoutn_t0                                     0
+qoutn_t1                           7.85572e-19
+qoutn_t2                           1.36205e-08
+xqoutn.11                          2.73378e-19
+coutp0_loss                            34.0376
+coutp1_loss                            34.0376
+coutp2_loss                            34.0376
+coutp3_loss                            34.0376
+coutn0_loss                            34.0512
+coutn1_loss                            34.0512
+coutn2_loss                            34.0512
+coutn3_loss                            34.0512
+vqoutn_2#branch                    6.35275e-21
+vqoutn_1#branch                   -7.85572e-23
+vqoutn_0#branch                   -6.27499e-21
+vqinvert_2#branch                 -4.95657e-30
+vqinvert_1#branch                  2.37888e-29
+vqinvert_0#branch                 -1.88307e-29
+vqoutp_2#branch                    6.35275e-21
+vqoutp_1#branch                   -7.85257e-23
+vqoutp_0#branch                   -6.27248e-21
+vphantom#branch                     -0.0041046
+vsignal#branch                               0
+vraw#branch                          0.0041046
+vrail#branch                       1.26653e-20
+
+ Reference value :  4.51196e+00
+No. of Data Rows : 5538
+ASCII raw file "start.raw"
+ngspice-47 done
+

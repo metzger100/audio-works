@@ -1,0 +1,31 @@
+{
+  "integrated_substitution_performed": false,
+  "jobs": {
+    "$include": "driver-results-500b28282f6b-0001-jobs.json"
+  },
+  "oracles": [
+    {
+      "ac_relative_error": 9.992007221626409e-16,
+      "kind": "one_pole",
+      "pass_oracle": true,
+      "step_s": 0.001,
+      "transient_max_error_v": 1.2136693541719978e-05
+    },
+    {
+      "ac_relative_error": 9.992007221626409e-16,
+      "kind": "one_pole",
+      "pass_oracle": true,
+      "step_s": 0.0005,
+      "transient_max_error_v": 3.0483245138102077e-06
+    },
+    {
+      "kind": "bilateral_twoport",
+      "max_error_ohm": 2.842170943040401e-14,
+      "pass_oracle": true
+    }
+  ],
+  "qualification": "Incomplete full-model spectra/process/thermal/protection; no production alternative pass",
+  "rows": {
+    "$include": "driver-results-500b28282f6b-0000-rows.json"
+  }
+}

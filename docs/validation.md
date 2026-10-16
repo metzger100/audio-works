@@ -36,3 +36,5 @@ Latest continuation: [GitHub storage-policy checks](validation/2026-10-11-github
 Latest capsule continuation: [documentary envelope and integrity checks](validation/2026-10-11-capsule-envelope.md), retaining the historical original-byte limitations separately from repository checks.
 
 Latest device continuation: [simulation prerequisites and preservation](validation/2026-10-11-simulation-prerequisites.md);109 lab tests pass, scoped follower H2/H3 supported, microphone nonlinear/headroom held.
+
+Latest focused engineering continuation: [A/B/C hypotheses and completion checks](validation/2026-10-12-focused-hypotheses.md);0025 supplies a resolved conditional filter benefit while bias/startup and qualification failures remain.

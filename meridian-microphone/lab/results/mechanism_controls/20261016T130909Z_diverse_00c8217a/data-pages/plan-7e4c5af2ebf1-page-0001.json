@@ -1,0 +1,184 @@
+{
+  "models": [
+    {
+      "acquisition_status": "valid_spice",
+      "device_id": "bc846b",
+      "file": "models/semiconductor/vendor/bc846b_emitter_r1.lib",
+      "id": "bc846b_emitter_r1",
+      "manufacturer": "Nexperia",
+      "model_lineage": [
+        {
+          "id": "bc846b_vendor",
+          "retrieved_date": "2026-10-05",
+          "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+          "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+          "version": "extraction week 24/2021"
+        }
+      ],
+      "ngspice_behavior": "",
+      "parent_model_id": "bc846b_vendor",
+      "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+      "redistribution": {
+        "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+        "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+        "status": "not_established_do_not_redistribute"
+      },
+      "retrieved_date": "2026-10-05",
+      "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+      "subcircuit": "BC846B",
+      "syntax": "SPICE3 subcircuit",
+      "version": "project structural child r1; Q2 emitter 33 -> 3"
+    },
+    {
+      "acquisition_status": "valid_spice",
+      "device_id": "opa197",
+      "file": "models/semiconductor/vendor/opa197.lib",
+      "id": "opa197_pspice",
+      "manufacturer": "Texas Instruments",
+      "model_lineage": [],
+      "ngspice_behavior": "ps",
+      "parent_model_id": null,
+      "path": "semiconductor/vendor/opa197.lib",
+      "redistribution": {
+        "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+        "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+        "status": "not_established_do_not_redistribute"
+      },
+      "retrieved_date": "2026-10-05",
+      "sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "source_url": "https://www.ti.com/lit/zip/sboma34d",
+      "subcircuit": "OPAx197",
+      "syntax": "SPICE3 subcircuit with PSpice extensions",
+      "version": "Final 1.3; 23JUN2022; SBOMA34D"
+    },
+    {
+      "acquisition_status": "valid_spice",
+      "behavior_validation": "only conditioned accepted rows; omissions unresolved",
+      "device_id": "opa928",
+      "file": "models/semiconductor/vendor/opa928.lib",
+      "id": "opa928_vendor",
+      "load_record": "results/device_models/20261009T145346Z_parts2_742caaa3/results.json",
+      "manufacturer": "Texas Instruments",
+      "model_lineage": [],
+      "ngspice_behavior": "ps",
+      "parent_model_id": null,
+      "path": "semiconductor/vendor/opa928.lib",
+      "pin_order": "IN+ IN- V+ V- OUT GRD1 GRD2; physical 4 5 6 3 1 2 7; NC8",
+      "primitive": "X",
+      "redistribution": {
+        "acquisition": "models/semiconductor/acquire.py; private receipt and acquisition.yaml",
+        "evidence": "Original notices and archive/PDF retained privately; public availability is not redistribution permission.",
+        "status": "not_established_do_not_redistribute"
+      },
+      "retrieved_date": "2026-10-09",
+      "runnability": "scoped_success_with_retained_disagreements",
+      "sha256": "f4f9d38efc4aa2a31676c84a351d2ee9379baad88abab8b5afad550c7f99c616",
+      "source_url": "https://www.ti.com/lit/zip/sbomcc0a",
+      "subcircuit": "OPAX928",
+      "syntax": "self-contained public subcircuit; dialect compatibility unverified",
+      "validation_record": "results/device_models/20261009T133651Z_parts_d3c30763/results.json",
+      "version": "1.1 01Apr2024"
+    }
+  ],
+  "plan": {
+    "acceptance_or_budget_changes": "none",
+    "budget_relationship": "Separate finite diagnostic jobs, zero optimizer vectors; no reuse of exhausted reservations",
+    "date": "2026-10-16",
+    "maximum_jobs": 60,
+    "models": [
+      "bc846b_emitter_r1",
+      "opa197_pspice",
+      "opa928_vendor"
+    ],
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "oracle_screens": {
+      "complex_relative_error": 0.01,
+      "note": "Local diagnostic screens only, no microphone thresholds amended; all failures retained",
+      "reset_absolute_error_v": 1e-05,
+      "seeded_power_fraction": 0.1,
+      "translation_current_fraction": 0.01,
+      "translation_relative_voltage_error_v": 0.001
+    },
+    "parents": [
+      "candidate_0012",
+      "candidate_0024",
+      "candidate_0010",
+      "candidate_0014",
+      "candidate_0013"
+    ],
+    "schema_version": 1,
+    "scope": "Prompt10 isolated prerequisite controls; no periodic Inventor challenge or optimization",
+    "timeout_s_per_job": 15,
+    "tracks": {
+      "bjt": {
+        "analyses": [
+          "independent_complex_KCL",
+          "finite_gain_AC",
+          "DC_reset",
+          "exponential_reset",
+          "noise_envelope",
+          "exact_parent_nominal_DC_AC"
+        ],
+        "conditions": "Cf100nF/99.9001pF; R500k/100M; Ctotal45/70/100pF plus2pF; A0=10, pole100kHz",
+        "hypothesis": "Finite gain, reset conductance and base current jointly constrain charge conversion; smaller Cf alone cannot rescue LF",
+        "jobs": 18,
+        "stop": "No structural child until DC authority, LF conversion and independent noise prerequisites support it; preserve no-FET niche"
+      },
+      "carrier": {
+        "analyses": [
+          "deterministic_recovery_zero_carrier_off",
+          "independent_frequency_shift_covariance",
+          "seeded_ensemble_PSD",
+          "source_calibration",
+          "window_sampling_settling_refinement"
+        ],
+        "conditions": "Retain four island controls; fc100kHz, fa1kHz, R1k,C100nF; seeded discrete periodic calculation separate from native device noise",
+        "hypothesis": "A seeded ideal noisy bridge/mixer/filter agrees with independent sideband and covariance power calculations",
+        "jobs": 4,
+        "numerical_sizes": [
+          131072,
+          262144
+        ],
+        "sample_rates_hz": [
+          800000,
+          1600000
+        ],
+        "seeds": [
+          34047,
+          44047,
+          54047,
+          64047
+        ],
+        "stop": "Seeded ideal mechanism gets no native device/microphone noise rating; absent periodic device protocol stays explicit"
+      },
+      "cmos": {
+        "analyses": [
+          "DC_AC_terminal_currents",
+          "ideal_gauge_control",
+          "grounded_charge",
+          "translated_charge",
+          "guard_load_AC",
+          "guard_positive_feedback_oracle",
+          "reset_settling"
+        ],
+        "conditions": "OPA197/OPA928; 16V rail; CM8V; shifts0,+20,-20V; CM0.1/15.9 grounded; charge70pF,Cf100pF,R1G",
+        "hypothesis": "Complete terminal/reference translation leaves physical relative voltages and supply currents invariant",
+        "jobs": 28,
+        "stop": "No vendor internal edits, nodeset search or tolerances search; warning/timeout is unsupported behavior, never family rejection"
+      }
+    }
+  },
+  "source_manifest": {
+    "$include": "plan-7e4c5af2ebf1-0002-source-manifest.json"
+  },
+  "versions": {
+    "matplotlib": "3.10.8",
+    "ngspice": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Wed Aug 19 09:38:31 UTC 2026\n******",
+    "numpy": "2.4.2",
+    "pandas": "3.0.1",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "scipy": "1.17.1",
+    "yaml": "6.0.3"
+  }
+}

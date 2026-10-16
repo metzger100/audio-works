@@ -10,9 +10,28 @@ Mechanisms, benchmarks, primary-source conditions, experiments, comparisons and 
 - [architecture-comparison-001.yaml](architecture-comparison-001.yaml) — active
 - [benchmarks.md](benchmarks.md) — active
 - [carrier-protocol.md](carrier-protocol.md) — active
+- [diverse-analysis-001.json](diverse-analysis-001.json) — active
+- [diverse-behavior-001.csv](diverse-behavior-001.csv) — active
+- [diverse-coverage-001.md](diverse-coverage-001.md) — active
+- [diverse-derivations-001.md](diverse-derivations-001.md) — active
+- [diverse-knowledge-001.json](diverse-knowledge-001.json) — active
+- [diverse-plan-001.yaml](diverse-plan-001.yaml) — active
+- [diverse-prerequisites-001.md](diverse-prerequisites-001.md) — active
+- [diverse-source-notes-001.md](diverse-source-notes-001.md) — active
+- [diverse-sources-001.json](diverse-sources-001.json) — active
 - [first-architecture-batch.md](first-architecture-batch.md) — active
 - [first-architecture-decisions.md](first-architecture-decisions.md) — active
+- [focused-children-001.json](focused-children-001.json) — active
+- [focused-decisions-001.md](focused-decisions-001.md) — active
+- [focused-derivations-001.md](focused-derivations-001.md) — active
+- [focused-driver-diagram-001.md](focused-driver-diagram-001.md) — active
+- [focused-hypotheses-001.md](focused-hypotheses-001.md) — active
+- [focused-integrity-001.json](focused-integrity-001.json) — active
+- [focused-plan-001.yaml](focused-plan-001.yaml) — active
+- [focused-queries-001.json](focused-queries-001.json) — active
+- [focused-sources-001.json](focused-sources-001.json) — active
 - [mechanisms.md](mechanisms.md) — active
 - [phase0-report.md](phase0-report.md) — active
 - [sources.md](sources.md) — active
+- [data-pages/](data-pages/INDEX.md)
 - [optimization/](optimization/INDEX.md)

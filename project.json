@@ -1,21 +1,21 @@
 {
   "schema_version": 2,
-  "as_of": "2026-10-11",
-  "phase": "Simulation prerequisite diagnosis — research",
+  "as_of": "2026-10-16",
+  "phase": "Independent mechanism prerequisites",
   "readiness": {
-    "software": "109 lab,39 Git/recovery and23 fast regressions pass.",
-    "engineering": "Isolated follower H2/H3 supported; full microphone nonlinear/headroom held.",
+    "software": "109 lab,40 Git/recovery and23 fast tests pass.",
+    "engineering": "Charge/reset and seeded carrier oracles; floating CMOS held; all unqualified.",
     "procurement": "Realized BOMs; Germany private orderability/costs unresolved.",
-    "patents": "Phase 8 claims/status missing; affected gates held.",
-    "physical": "No measurements; access deferred; no selected prototype.",
-    "preservation": "GitHub is canonical for committed files; private evidence is outside the repository."
+    "patents": "Two early claim inspections;official status and screening unresolved.",
+    "physical": "Unmeasured;access deferred;no selected prototype.",
+    "preservation": "GitHub: canonical committed records;private originals local."
   },
   "blockers": [
     "Unknown capsule safe polarization, mechanics and noise.",
     "Device/nonlinear/production coverage incomplete.",
     "Procurement and candidate patent screening unresolved."
   ],
-  "next_action": "Reduce the coupled failed JFET DUT under a frozen plan; validate floating OPA and settled BJT behavior before a common full comparison.",
+  "next_action": "Validate grounded CMOS charge and real reset noise; continue JFET loop/leakage work.",
   "evidence": [
     "meridian-microphone/lab/research/capsules/evidence-envelope-001.md",
     "meridian-microphone/lab/research/devices/parts-database-expansion-002.md",
@@ -28,7 +28,11 @@
     "docs/decisions/2026-10-11-capsule-inventories.md",
     "docs/validation/2026-10-11-capsule-envelope.md",
     "meridian-microphone/lab/research/devices/simulation-prerequisites-001.md",
-    "docs/validation/2026-10-11-simulation-prerequisites.md"
+    "docs/validation/2026-10-11-simulation-prerequisites.md",
+    "meridian-microphone/lab/research/architectures/focused-hypotheses-001.md",
+    "docs/validation/2026-10-12-focused-hypotheses.md",
+    "meridian-microphone/lab/research/architectures/diverse-prerequisites-001.md",
+    "docs/validation/2026-10-16-diverse-prerequisites.md"
   ],
   "stages": [
     {
@@ -115,7 +119,8 @@
   ],
   "backup_evidence_prefixes": [
     "meridian-microphone/lab/models/semiconductor/vendor/",
-    "meridian-microphone/lab/research/device_sources/local/"
+    "meridian-microphone/lab/research/device_sources/local/",
+    "meridian-microphone/lab/research/architecture_sources/local/"
   ],
   "inventory_prefix": "meridian-microphone/lab/results/",
   "local_directory": ".project-local",
@@ -134,10 +139,9 @@
     "$include": "docs/config/external-files.json"
   },
   "quality_change": {
-    "date": "2026-10-11",
-    "decision": "docs/decisions/2026-10-11-runtime-storage.md",
+    "date": "2026-10-16",
+    "decision": "docs/decisions/2026-10-16-private-architecture-sources.md",
     "tests": [
-      "tests/project/test_recovery.py",
       "tests/project/test_storage_policy.py"
     ]
   },

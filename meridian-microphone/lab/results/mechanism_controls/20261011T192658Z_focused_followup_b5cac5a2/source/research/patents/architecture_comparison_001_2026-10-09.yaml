@@ -1,0 +1,56 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+schema_version: 1
+date: '2026-10-09'
+scope: Internal candidate comparison; early feature reconciliation, Phase 8 not performed
+policy: ../../../../PATENTS.md
+parent_records:
+  - first_architecture_batch_2026-10-09.yaml
+  - robust_optimization_2026-10-09.yaml
+actual_claim_status_evidence: []
+official_database_searches_performed_this_task: []
+screened_patent_ids: []
+search_limits: No candidate-linked official database searches, claim inspection or official territorial status verification in this comparison. Earlier technical publications and prepared queries supply no such evidence.
+territories: [DE, applicable EP rights; member-state effect unresolved]
+additional_territories: Manufacture/supply/distribution locations must be established before screening; US/WO family search is not worldwide clearance
+hold_basis: Required screening incomplete; no specific credible blocking claim has yet been identified or ruled out
+professional_review: Material claim interpretation, equivalents, territory or official-status uncertainty must be resolved professionally before affected implementation gates
+records:
+  - candidate: candidate_0019
+    circuit_sha256: 1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da
+    features: [fixed-divider source-degenerated JFET voltage sensing, filtered backplate, P48 two-leg common-mode extraction, discrete phase inverter and differential outputs, parallel output capacitors]
+    alternative_to_investigate: Lower-count fixed-bias child 0017 retains all feature holds; different transformer or impedance-balanced output would require actual implementation and claim remapping
+  - candidate: candidate_0023
+    circuit_sha256: d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816
+    features: [source-current DC servo using NPN error pair, JFET voltage sensing, P48 common-mode extraction, discrete phase inverter and differential output, parallel capacitors]
+    alternative_to_investigate: Fixed divider/source degeneration in 0019 removes the source-current servo, but is not an assessed design-around; common features require screening
+  - candidate: candidate_0012
+    circuit_sha256: f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968
+    features: [bipolar displacement-charge input, capacitive feedback with two parallel resistive DC resets, NPN-only power and balanced audio outputs]
+    alternative_to_investigate: Voltage sensing rather than capacitive feedback changes the mechanism; only a new implemented and tested child can support engineering comparison and claim mapping
+  - candidate: candidate_0010
+    circuit_sha256: 72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9
+    features: [CMOS voltage follower, separately driven guard, AC-bootstrapped high-resistance return, P48 common-mode extraction, discrete inverter and balanced outputs]
+    alternative_to_investigate: Short passive insulated leads without driven guard remove that feature; physical leakage/noise and claims of remaining features still require review
+  - candidate: candidate_0014
+    circuit_sha256: cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6
+    features: [CMOS capacitive-feedback charge sensing, resistive reset, P48 common-mode extraction, discrete inverter and balanced outputs]
+    alternative_to_investigate: Unguarded voltage follower changes conversion; not implemented or claim-assessed here
+  - candidate: candidate_0013
+    circuit_sha256: 7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015
+    features: [floating anti-phase excitation, capacitive bridge, synchronous product demodulation, passive lowpass filters, P48 common-mode extraction, ideal voltage buffers and ideal differential outputs]
+    metadata_correction: Original first-batch flag says real output devices; exact 0013 netlist has ideal Eoutp/Eoutn. Preserve original flag and use this correction in the comparison.
+    alternative_to_investigate: Direct charge/voltage sensing removes RF demodulation but remains separately unscreened; alternative carrier encodings require a new netlist and claim mapping
+all_record_states:
+  publication_grant_family_ids: null
+  claims: null
+  claim_element_mapping: null
+  official_status_source_and_date: null
+  term_or_expiry_evidence: null
+  licence_authorization: null
+  screening: incomplete_phase8
+  prototype_selection: hold
+  manufacture: hold
+  implementation_build_publication: hold
+  resolution_evidence: null
+legal_non_infringement_conclusion: null
+contact_payment_licence_acceptance_publication_authorized: false

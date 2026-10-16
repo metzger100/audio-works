@@ -1,0 +1,209 @@
+{
+  "candidate": "candidate_0025",
+  "current_a": 0.005150433724346845,
+  "dc": {
+    "active_channel_authority": true,
+    "board_dc_current_a": 0.0,
+    "error_vce_v": 2.1079201946741617,
+    "filter_dc_current_a": 2.481464723254142e-10,
+    "front_leakage_current_a": 2.2543432130458436e-11,
+    "gate_bias_path_current_a": 3.624030699663727e-11,
+    "gate_terminal_current_a": -1.369687486617862e-11,
+    "independent_linear_solution_v": [
+      24.8146472588438,
+      2.271215102109263,
+      2.481464723402915e-08,
+      2.23497479508635
+    ],
+    "max_node_error_v": 2.6302377165166035e-08,
+    "polarization_v": 22.543432130458434,
+    "rail_v": 11.010303277198375,
+    "rear_leakage_current_a": 2.4814647207726775e-11,
+    "reference_base_current_a": 1.124364570779866e-07,
+    "reference_kcl_a": -1.367164116427644e-20,
+    "reference_vce_v": 10.883248676786186,
+    "regbase_v": 11.699305646675125,
+    "regulator_base_current_a": 1.419286515565855e-05,
+    "regulator_kcl_a": 5.321060974651515e-18,
+    "sense_base_current_a": 3.14566775167336e-07,
+    "sense_kcl_a": -1.7215944652943654e-19,
+    "servo_v": 2.23497479508635,
+    "setpoint_v": 0.6870898630397921,
+    "simulated_nodes_v": [
+      24.81464723254142,
+      2.271215102082987,
+      2.481464720814272e-08,
+      2.23497479508635
+    ],
+    "slow_v": 0.7133356278159152,
+    "source_current_a": 0.002947712543813913,
+    "source_error_unloaded_v": 0.1951367245143194,
+    "source_kcl_a": -9.147955830346444e-20,
+    "source_target_unloaded_v": 2.7525758192995937,
+    "terminal_static_limits_pass": true,
+    "vds_v": 8.06259073338446,
+    "vgs_v": -0.676497441730926
+  },
+  "declared_scenario": {
+    "id": "capsule_adverse",
+    "parameters": {
+      "CF": 4.5e-11,
+      "CR": 4.5e-11,
+      "CROSS": 5e-12,
+      "PAR": 1e-11
+    }
+  },
+  "jobs": [
+    {
+      "advisories": [],
+      "files": {
+        "ac.raw": "4b5c0365b67bb0e321b6538425cedac620bba6352fa52e811cb8a7f1d128ffa3",
+        "op.raw": "9c3031fdf891790ab4511ec67aa10e1b820f70aef148f262a05edf405295eef0"
+      },
+      "folder": "results/mechanism_controls/20261011T192308Z_focused_1992e85a/candidate_0025/capsule_adverse/0001_matched",
+      "netlist_sha256": "b8885734067c65f76bb92a234b8daae302b9b8c3f32641493edcd3411d9fd7d7",
+      "semiconductor_models": [
+        {
+          "acquisition_status": "valid_spice",
+          "device_id": "bc846b",
+          "id": "bc846b_emitter_r1",
+          "manufacturer": "Nexperia",
+          "model_lineage": [
+            {
+              "id": "bc846b_vendor",
+              "retrieved_date": "2026-10-05",
+              "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+              "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+              "version": "extraction week 24/2021"
+            }
+          ],
+          "ngspice_behavior": "",
+          "parent_model_id": "bc846b_vendor",
+          "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+          "redistribution": {
+            "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+            "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+            "status": "not_established_do_not_redistribute"
+          },
+          "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/mechanism_controls/20261011T192308Z_focused_1992e85a/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+          "retrieved_date": "2026-10-05",
+          "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+          "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+          "subcircuit": "BC846B",
+          "syntax": "SPICE3 subcircuit",
+          "version": "project structural child r1; Q2 emitter 33 -> 3"
+        },
+        {
+          "acquisition_status": "valid_spice",
+          "device_id": "jfe150",
+          "id": "jfe150_pspice",
+          "manufacturer": "Texas Instruments",
+          "model_lineage": [
+            {
+              "id": "jfe150_generic",
+              "retrieved_date": "2026-10-05",
+              "sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+              "source_url": "https://www.ti.com/lit/zip/slpm366",
+              "version": "Final 1.2; 26SEP2024; SLPM366"
+            }
+          ],
+          "ngspice_behavior": "ps",
+          "parent_model_id": "jfe150_generic",
+          "path": "semiconductor/vendor/jfe150_pspice.lib",
+          "redistribution": {
+            "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+            "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+            "status": "not_established_do_not_redistribute"
+          },
+          "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/mechanism_controls/20261011T192308Z_focused_1992e85a/source/models/semiconductor/vendor/jfe150_pspice.lib",
+          "retrieved_date": "2026-10-05",
+          "sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+          "source_url": "https://www.ti.com/lit/zip/slpm349i",
+          "subcircuit": "JFE150",
+          "syntax": "SPICE3 subcircuit with PSpice extensions",
+          "version": "Final 1.2; SLPM349I"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "advisories": [],
+      "files": {
+        "noise.raw": "092c152a33033c842a9eda384160b1c3e19b18271ac6cad13fe835f6d218cf78"
+      },
+      "folder": "results/mechanism_controls/20261011T192308Z_focused_1992e85a/candidate_0025/capsule_adverse/0002_matched_noise",
+      "netlist_sha256": "fcc54ad363ff14184a7416cc28b15590dd531b5734ea5720e049f11103349879",
+      "semiconductor_models": [
+        {
+          "acquisition_status": "valid_spice",
+          "device_id": "bc846b",
+          "id": "bc846b_emitter_r1",
+          "manufacturer": "Nexperia",
+          "model_lineage": [
+            {
+              "id": "bc846b_vendor",
+              "retrieved_date": "2026-10-05",
+              "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+              "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+              "version": "extraction week 24/2021"
+            }
+          ],
+          "ngspice_behavior": "",
+          "parent_model_id": "bc846b_vendor",
+          "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+          "redistribution": {
+            "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+            "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+            "status": "not_established_do_not_redistribute"
+          },
+          "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/mechanism_controls/20261011T192308Z_focused_1992e85a/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+          "retrieved_date": "2026-10-05",
+          "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+          "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+          "subcircuit": "BC846B",
+          "syntax": "SPICE3 subcircuit",
+          "version": "project structural child r1; Q2 emitter 33 -> 3"
+        },
+        {
+          "acquisition_status": "valid_spice",
+          "device_id": "jfe150",
+          "id": "jfe150_pspice",
+          "manufacturer": "Texas Instruments",
+          "model_lineage": [
+            {
+              "id": "jfe150_generic",
+              "retrieved_date": "2026-10-05",
+              "sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+              "source_url": "https://www.ti.com/lit/zip/slpm366",
+              "version": "Final 1.2; 26SEP2024; SLPM366"
+            }
+          ],
+          "ngspice_behavior": "ps",
+          "parent_model_id": "jfe150_generic",
+          "path": "semiconductor/vendor/jfe150_pspice.lib",
+          "redistribution": {
+            "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+            "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+            "status": "not_established_do_not_redistribute"
+          },
+          "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/mechanism_controls/20261011T192308Z_focused_1992e85a/source/models/semiconductor/vendor/jfe150_pspice.lib",
+          "retrieved_date": "2026-10-05",
+          "sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+          "source_url": "https://www.ti.com/lit/zip/slpm349i",
+          "subcircuit": "JFE150",
+          "syntax": "SPICE3 subcircuit with PSpice extensions",
+          "version": "Final 1.2; SLPM349I"
+        }
+      ],
+      "status": "ok"
+    }
+  ],
+  "noise_pa_rms_conditional": 0.0005279896966497663,
+  "noise_power_closure_relative": 2.722344792735199e-15,
+  "polarization_v": 22.543432130458434,
+  "response_db": 0.5776512481082254,
+  "scenario": "capsule_adverse",
+  "sensitivity_v_per_pa": 0.008368982197681143,
+  "status": "pass",
+  "validation": false
+}

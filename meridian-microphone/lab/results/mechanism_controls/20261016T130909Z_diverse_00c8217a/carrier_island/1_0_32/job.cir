@@ -1,0 +1,25 @@
+Meridian prerequisite carrier_island 1_0_32
+* SPDX-License-Identifier: CERN-OHL-S-2.0
+.temp 25
+.options reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/mechanism_controls/20261016T130909Z_diverse_00c8217a/source/models/capsule/flat-k47.cir"
+Vrf bb 0 DC 40 SIN(40 0 100k)
+Vanti aa 0 DC 40 SIN(40 0 100k)
+Vpressure pf 0 SIN(0 1 1k)
+Vrearpressure pr 0 0
+Xisland ff bb rr pf pr 0 FLAT_K47 CF=70p CR=70p PAR=1f CROSS=1f LEAK=1e14
+Ccomparef ff aa 100p
+Ccomparer rr aa 100p
+Rreturnf ff 0 1e12
+Rreturnr rr 0 1e12
+Bproduct dd 0 V=2*(v(ff)-v(rr))*sin(2*pi*100k*time)
+Rlp dd recovered 1k
+Clp recovered 0 100n
+.control
+set filetype=ascii
+set numdgt=16
+tran 3.125e-07 .03 0 3.125e-07
+write tran.raw time v(ff) v(rr) v(recovered)
+quit
+.endc
+.end

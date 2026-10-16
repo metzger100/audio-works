@@ -15,6 +15,8 @@ GitHub is canonical for authored source/spec/implementation snapshots, decks, lo
 | Parts001/002 | [001](../research/devices/parts-database-expansion-001.md), [002](../research/devices/parts-database-expansion-002.md), source-stable controls and original failures |
 | Capsule001 | [Envelope](../research/capsules/evidence-envelope-001.md), [finite cohorts and integrity receipt](../research/capsules/analysis-001.md); original assumed ranges and prior failures retained |
 | Prerequisites001 | [Findings](../research/devices/simulation-prerequisites-001.md), [three frozen cohorts and integrity](../research/devices/simulation-prerequisites-integrity-001.json);119 jobs,19 execution errors, scoped follower H2/H3 only |
+| Focused001 | [Bias/filter/driver findings](../research/architectures/focused-hypotheses-001.md), [new-byte integrity](../research/architectures/focused-integrity-001.json);parents,preflight and recovery failures preserved |
+| Diverse001 | [Independent mechanisms](../research/architectures/diverse-prerequisites-001.md),53 simulator attempts/15 retained errors,32 seeded ideal records; inventories in each frozen cohort |
 | Latest repository/lab checks | [Validation](../../../docs/validation.md), [generated evidence index](../../../docs/evidence.md) |
 
 [Complete navigation](INDEX.md) links every retained record/inventory. Historical test counts belong to their original cohorts; current counts are in validation. Derived archive/fronts are rebuildable views, never replacement evidence. Every implementation remains unqualified.

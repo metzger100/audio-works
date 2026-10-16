@@ -1,0 +1,103 @@
+{
+  "complete": true,
+  "eligible": false,
+  "experiment_id": "20261016T130909Z_diverse_00c8217a",
+  "jobs": {
+    "$include": "results-7c39d6b011c5-0002-jobs.json"
+  },
+  "plan": {
+    "acceptance_or_budget_changes": "none",
+    "budget_relationship": "Separate finite diagnostic jobs, zero optimizer vectors; no reuse of exhausted reservations",
+    "date": "2026-10-16",
+    "maximum_jobs": 60,
+    "models": [
+      "bc846b_emitter_r1",
+      "opa197_pspice",
+      "opa928_vendor"
+    ],
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "oracle_screens": {
+      "complex_relative_error": 0.01,
+      "note": "Local diagnostic screens only, no microphone thresholds amended; all failures retained",
+      "reset_absolute_error_v": 1e-05,
+      "seeded_power_fraction": 0.1,
+      "translation_current_fraction": 0.01,
+      "translation_relative_voltage_error_v": 0.001
+    },
+    "parents": [
+      "candidate_0012",
+      "candidate_0024",
+      "candidate_0010",
+      "candidate_0014",
+      "candidate_0013"
+    ],
+    "schema_version": 1,
+    "scope": "Prompt10 isolated prerequisite controls; no periodic Inventor challenge or optimization",
+    "timeout_s_per_job": 15,
+    "tracks": {
+      "bjt": {
+        "analyses": [
+          "independent_complex_KCL",
+          "finite_gain_AC",
+          "DC_reset",
+          "exponential_reset",
+          "noise_envelope",
+          "exact_parent_nominal_DC_AC"
+        ],
+        "conditions": "Cf100nF/99.9001pF; R500k/100M; Ctotal45/70/100pF plus2pF; A0=10, pole100kHz",
+        "hypothesis": "Finite gain, reset conductance and base current jointly constrain charge conversion; smaller Cf alone cannot rescue LF",
+        "jobs": 18,
+        "stop": "No structural child until DC authority, LF conversion and independent noise prerequisites support it; preserve no-FET niche"
+      },
+      "carrier": {
+        "analyses": [
+          "deterministic_recovery_zero_carrier_off",
+          "independent_frequency_shift_covariance",
+          "seeded_ensemble_PSD",
+          "source_calibration",
+          "window_sampling_settling_refinement"
+        ],
+        "conditions": "Retain four island controls; fc100kHz, fa1kHz, R1k,C100nF; seeded discrete periodic calculation separate from native device noise",
+        "hypothesis": "A seeded ideal noisy bridge/mixer/filter agrees with independent sideband and covariance power calculations",
+        "jobs": 4,
+        "numerical_sizes": [
+          131072,
+          262144
+        ],
+        "sample_rates_hz": [
+          800000,
+          1600000
+        ],
+        "seeds": [
+          34047,
+          44047,
+          54047,
+          64047
+        ],
+        "stop": "Seeded ideal mechanism gets no native device/microphone noise rating; absent periodic device protocol stays explicit"
+      },
+      "cmos": {
+        "analyses": [
+          "DC_AC_terminal_currents",
+          "ideal_gauge_control",
+          "grounded_charge",
+          "translated_charge",
+          "guard_load_AC",
+          "guard_positive_feedback_oracle",
+          "reset_settling"
+        ],
+        "conditions": "OPA197/OPA928; 16V rail; CM8V; shifts0,+20,-20V; CM0.1/15.9 grounded; charge70pF,Cf100pF,R1G",
+        "hypothesis": "Complete terminal/reference translation leaves physical relative voltages and supply currents invariant",
+        "jobs": 28,
+        "stop": "No vendor internal edits, nodeset search or tolerances search; warning/timeout is unsupported behavior, never family rejection"
+      }
+    }
+  },
+  "results": {
+    "$include": "results-7c39d6b011c5-0001-results.json"
+  },
+  "source_manifest": {
+    "$include": "results-7c39d6b011c5-0003-source-manifest.json"
+  },
+  "source_unchanged": true
+}

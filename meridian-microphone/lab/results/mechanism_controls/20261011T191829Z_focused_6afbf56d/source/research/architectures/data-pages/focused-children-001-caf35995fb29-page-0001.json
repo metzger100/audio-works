@@ -1,0 +1,64 @@
+{
+  "A_structural_children": [],
+  "B_child": "candidate_0025",
+  "B_parent": "candidate_0023",
+  "C_integrated_children": [],
+  "child_circuit_sha256": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf",
+  "complete": false,
+  "date": "2026-10-11",
+  "inventory": {
+    "$include": "focused-children-001-caf35995fb29-0002-inventory.json"
+  },
+  "original_comparison": [
+    {
+      "candidate": "candidate_0019",
+      "checks": {
+        "balance": "fail",
+        "distortion": "error",
+        "frequency_response": "pass",
+        "headroom": "incomplete",
+        "loading": "fail",
+        "monte_carlo": "incomplete",
+        "noise": "fail",
+        "operating_point": "pass",
+        "output_impedance": "fail",
+        "phantom_supply": "pass",
+        "semiconductor_corners": "incomplete",
+        "stability": "fail",
+        "startup": "pass",
+        "temperature": "pass"
+      },
+      "current_matches": true,
+      "experiment": "20261009T090737Z_40e6a493",
+      "frozen_netlist_sha256": "1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da",
+      "job_count": 64,
+      "results_sha256": "561906da020708af7b315fe0515c2bd68852276f65cd525d6c595834115da67a"
+    },
+    {
+      "candidate": "candidate_0023",
+      "checks": {
+        "balance": "fail",
+        "distortion": "error",
+        "frequency_response": "pass",
+        "headroom": "incomplete",
+        "loading": "fail",
+        "monte_carlo": "incomplete",
+        "noise": "fail",
+        "operating_point": "pass",
+        "output_impedance": "fail",
+        "phantom_supply": "pass",
+        "semiconductor_corners": "incomplete",
+        "stability": "fail",
+        "startup": "fail",
+        "temperature": "pass"
+      },
+      "current_matches": true,
+      "experiment": "20261009T090930Z_1acba093",
+      "frozen_netlist_sha256": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+      "job_count": 64,
+      "results_sha256": "64b15e016788c534ca6352b48da18a361f7134ede42a9a386d4d4a91448658b7"
+    }
+  ],
+  "reason": "Finite execution remains required",
+  "schema_version": 1
+}

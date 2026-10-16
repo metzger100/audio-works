@@ -1,0 +1,51 @@
+{
+  "directory": "bc846b_emitter_r1/nominal_25",
+  "label": "nominal_25",
+  "model": {
+    "acquisition_status": "valid_spice",
+    "device_id": "bc846b",
+    "file": "models/semiconductor/vendor/bc846b_emitter_r1.lib",
+    "id": "bc846b_emitter_r1",
+    "manufacturer": "Nexperia",
+    "model_lineage": [
+      {
+        "id": "bc846b_vendor",
+        "retrieved_date": "2026-10-05",
+        "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+        "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+        "version": "extraction week 24/2021"
+      }
+    ],
+    "ngspice_behavior": "",
+    "parent_model_id": "bc846b_vendor",
+    "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+    "redistribution": {
+      "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+      "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+      "status": "not_established_do_not_redistribute"
+    },
+    "retrieved_date": "2026-10-05",
+    "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+    "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+    "subcircuit": "BC846B",
+    "syntax": "SPICE3 subcircuit",
+    "version": "project structural child r1; Q2 emitter 33 -> 3"
+  },
+  "netlist_sha256": "2f9998b9a24dbead7b72e577e7ab98c25a4d3c321737cb6f9896ccfb79b67963",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "retained_hashes": {
+    "audio.raw": "bf8782f6d2b790d7a90508c4ecc024faaf6e9b678262debfb377b4b680f9e9f8",
+    "audio.raw.csv": "89c079651eb5f21d4b15d431c51114bc362c737420bddfcfeb23bb67a7f1ff60",
+    "job.cir": "2f9998b9a24dbead7b72e577e7ab98c25a4d3c321737cb6f9896ccfb79b67963",
+    "noise.raw": "7a76ce5c13a71e9204c8edeefa29b9ec3b2814e987a8878fb0f238a22148beef",
+    "noise.raw.csv": "d89fcbf3d62760297720be57f7e9ec04bf9989af065a49e70a0c95053b829ae5",
+    "op.raw": "3ca2045fcbb50c858989709db7273bb3fc05148648c99bd13acf6f4767a3288d",
+    "op.raw.csv": "ff1170c3664d20f04e86c9498112c5aa10852c842e31c48676ec44523bbc5ef4",
+    "simulator.log": "0f3a9b261f0fc4719a0ea1ff5c86f38d0958c14d5c8f0664353b24d32b2cf834",
+    "supply.raw": "2eb8f4b4a831e0f40dc60b08e91c39df29eac18bfb5742c5ea846189bf44fc13",
+    "supply.raw.csv": "135c72a2ccb5bcec1dcca8f42f9404c61421402c3e82cd4fb2bb6efb19aa6ff1"
+  },
+  "status": "ok",
+  "temperature_c": 25,
+  "timeout_s": 15
+}

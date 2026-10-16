@@ -1,0 +1,18 @@
+* Two electrical diaphragms; pressure scalar voltages relative to global 0 represent Pa.
+* Pressure is a non-electrical stimulus, independent of microphone ground/shield potential.
+* Series-source charge realization; r1/r2 numerical implementations retained as failure records.
+* No rshunt: see simulator issue 848. Do not suppress floating-node failures.
+.subckt FLAT_K47 f b r pf pr g params: CF=70p CR=70p SREF=0.02 VREF=60 LEAK=1e12 PAR=2p CROSS=0.5p LIN=0 POLDC=60
+* Exact charge-law realization with a fixed capacitor and series motion voltage.
+* Cfront charge = CF*(v(f,b)-v(mf,b)) = prescribed Q.
+* No derivative helper, hidden virtual inductance, or non-physical shunt is required.
+Bmotionf mf b V='-(1-LIN)*SREF/VREF*v(pf)*v(f,b)+LIN*SREF/VREF*POLDC*v(pf)'
+Cfront f mf {CF}
+Bmotionr mr b V='-(1-LIN)*SREF/VREF*v(pr)*v(r,b)+LIN*SREF/VREF*POLDC*v(pr)'
+Crear_electrode r mr {CR}
+Rfront f b {LEAK}
+Rrear r b {LEAK}
+Cparf f g {PAR}
+Cparr r g {PAR}
+Ccross f r {CROSS}
+.ends FLAT_K47

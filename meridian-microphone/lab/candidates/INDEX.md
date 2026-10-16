@@ -28,4 +28,5 @@ Exact conversion/BOM/parent records with shared conditions and individually reta
 - [candidate_0022/](candidate_0022/INDEX.md)
 - [candidate_0023/](candidate_0023/INDEX.md)
 - [candidate_0024/](candidate_0024/INDEX.md)
+- [candidate_0025/](candidate_0025/INDEX.md)
 - [fixture_0001/](fixture_0001/INDEX.md)

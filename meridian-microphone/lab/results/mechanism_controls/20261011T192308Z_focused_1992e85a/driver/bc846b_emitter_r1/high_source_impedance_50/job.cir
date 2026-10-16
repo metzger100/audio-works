@@ -1,0 +1,172 @@
+Meridian prerequisite bc846b_emitter_r1 high_source_impedance_50
+* SPDX-License-Identifier: CERN-OHL-S-2.0
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/mechanism_controls/20261011T192308Z_focused_1992e85a/driver/source/models/semiconductor/vendor/bc846b_emitter_r1.lib"
+.temp 50
+.options reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+.param RHARVESTP_VALUE=2200
+.param RHARVESTN_VALUE=2200
+.param CRAW_VALUE=4.7e-05
+.param RREGTOP_VALUE=100000
+.param RREGBOTTOM_VALUE=100000
+.param CREGBASE_VALUE=1e-06
+.param CRAIL_VALUE=4.7e-05
+.param RMIDTOP_VALUE=10000
+.param RMIDBOTTOM_VALUE=10000
+.param CMID_VALUE=4.7e-05
+.param RPOLAR0_VALUE=1000000
+.param RPOLAR1_VALUE=1000000
+.param RPOLAR2_VALUE=1000000
+.param RPOLAR3_VALUE=1000000
+.param RPOLAR4_VALUE=1000000
+.param RPOLAR5_VALUE=1000000
+.param RPOLAR6_VALUE=1000000
+.param RPOLAR7_VALUE=1000000
+.param RPOLAR8_VALUE=1000000
+.param RPOLAR9_VALUE=1000000
+.param CPOL_VALUE=1e-07
+.param RBACK_VALUE=1000000
+.param RBIAS_VALUE=1000000000
+.param CBIASSTRAY_VALUE=2e-13
+.param RREAR_VALUE=1000
+.param RSOURCE_VALUE=1000
+.param CAUDIO_VALUE=1e-06
+.param RSIGNAL_VALUE=1000000
+.param ROUTP_VALUE=47
+.param ROUTN_VALUE=47
+.param RSERVOREF0_VALUE=10000
+.param RSERVOREF1_VALUE=10000
+.param RSERVOREF2_VALUE=10000
+.param RSERVOREF3_VALUE=10000
+.param RSERVOREF4_VALUE=10000
+.param RSERVOREF5_VALUE=10000
+.param RSERVOREF6_VALUE=10000
+.param RSERVOREF7_VALUE=10000
+.param RSERVOREF8_VALUE=10000
+.param RSERVOREF9_VALUE=10000
+.param RSERVOREF10_VALUE=10000
+.param RSERVOREF11_VALUE=10000
+.param RSERVOREF12_VALUE=10000
+.param RSERVOREF13_VALUE=10000
+.param RSERVOREF14_VALUE=10000
+.param RSERVOREFGROUND_VALUE=10000
+.param CSERVOREF_VALUE=4.7e-05
+.param RSERVOSENSE0_VALUE=100000
+.param RSERVOSENSE1_VALUE=100000
+.param RSERVOSENSE2_VALUE=100000
+.param RSERVOSENSEGROUND_VALUE=100000
+.param CSERVOSLOW_VALUE=4.7e-05
+.param RSERVOTAIL_VALUE=1000
+.param RSERVOOUT_VALUE=100000
+.param RINVEMITTER_VALUE=10000
+.param RINVCOLLECTOR_VALUE=10000
+.param ROUTLOADP_VALUE=10000
+.param ROUTLOADN_VALUE=10000
+.param COUTP0_VALUE=4.7e-05
+.param RCOUTP0LOSS_VALUE=2.539706538700458
+.param RCOUTP0LEAK_VALUE=100000000000000
+.param COUTP1_VALUE=4.7e-05
+.param RCOUTP1LOSS_VALUE=2.539706538700458
+.param RCOUTP1LEAK_VALUE=100000000000000
+.param COUTP2_VALUE=4.7e-05
+.param RCOUTP2LOSS_VALUE=2.539706538700458
+.param RCOUTP2LEAK_VALUE=100000000000000
+.param COUTP3_VALUE=4.7e-05
+.param RCOUTP3LOSS_VALUE=2.539706538700458
+.param RCOUTP3LEAK_VALUE=100000000000000
+.param COUTN0_VALUE=4.7e-05
+.param RCOUTN0LOSS_VALUE=2.539706538700458
+.param RCOUTN0LEAK_VALUE=100000000000000
+.param COUTN1_VALUE=4.7e-05
+.param RCOUTN1LOSS_VALUE=2.539706538700458
+.param RCOUTN1LEAK_VALUE=100000000000000
+.param COUTN2_VALUE=4.7e-05
+.param RCOUTN2LOSS_VALUE=2.539706538700458
+.param RCOUTN2LEAK_VALUE=100000000000000
+.param COUTN3_VALUE=4.7e-05
+.param RCOUTN3LOSS_VALUE=2.539706538700458
+.param RCOUTN3LEAK_VALUE=100000000000000
+Vrail rail 0 DC 13.5557796 AC 0
+Vraw raw 0 29.5293276
+Vsignal in 0 DC 0 AC 1
+Rsrc in src 100000
+Caudio src signal 1u
+Rsignal signal mid 1Meg
+Rmidtop rail mid 10k
+Rmidbottom mid 0 10k
+Cmid mid 0 47u
+Vphantom feed 0 48
+Rfeedp feed p 6813.6
+Rfeedn feed n 6786.4
+Rharvestp p raw 2200
+Rharvestn n raw 2200
+Rwp p xp 10
+Rwn n xn 10
+Cdiff p n 6n
+Cp p 0 8n
+Cn n 0 8n
+Cpreamp_p xp pp 22u
+Cpreamp_n xn pn 22u
+Rloadp pp 0 1000
+Rloadn pn 0 1000
+Iportp 0 p DC 0 AC 0
+Iportn 0 n DC 0 AC 0
+Routp outp cp {ROUTP_VALUE}
+Routn outn cn {ROUTN_VALUE}
+VQoutp_0 rail Qoutp_t0 0
+VQoutp_1 signal Qoutp_t1 0
+VQoutp_2 outp Qoutp_t2 0
+XQoutp Qoutp_t0 Qoutp_t1 Qoutp_t2 BC846B
+VQinvert_0 inverse Qinvert_t0 0
+VQinvert_1 signal Qinvert_t1 0
+VQinvert_2 ie Qinvert_t2 0
+XQinvert Qinvert_t0 Qinvert_t1 Qinvert_t2 BC846B
+Rinvemitter ie 0 {RINVEMITTER_VALUE}
+Rinvcollector rail inverse {RINVCOLLECTOR_VALUE}
+VQoutn_0 rail Qoutn_t0 0
+VQoutn_1 inverse Qoutn_t1 0
+VQoutn_2 outn Qoutn_t2 0
+XQoutn Qoutn_t0 Qoutn_t1 Qoutn_t2 BC846B
+Routloadp outp 0 {ROUTLOADP_VALUE}
+Routloadn outn 0 {ROUTLOADN_VALUE}
+Coutp0 coutp0_loss cp {COUTP0_VALUE}
+RCoutp0loss p coutp0_loss {RCOUTP0LOSS_VALUE}
+RCoutp0leak p cp {RCOUTP0LEAK_VALUE}
+Coutp1 coutp1_loss cp {COUTP1_VALUE}
+RCoutp1loss p coutp1_loss {RCOUTP1LOSS_VALUE}
+RCoutp1leak p cp {RCOUTP1LEAK_VALUE}
+Coutp2 coutp2_loss cp {COUTP2_VALUE}
+RCoutp2loss p coutp2_loss {RCOUTP2LOSS_VALUE}
+RCoutp2leak p cp {RCOUTP2LEAK_VALUE}
+Coutp3 coutp3_loss cp {COUTP3_VALUE}
+RCoutp3loss p coutp3_loss {RCOUTP3LOSS_VALUE}
+RCoutp3leak p cp {RCOUTP3LEAK_VALUE}
+Coutn0 coutn0_loss cn {COUTN0_VALUE}
+RCoutn0loss n coutn0_loss {RCOUTN0LOSS_VALUE}
+RCoutn0leak n cn {RCOUTN0LEAK_VALUE}
+Coutn1 coutn1_loss cn {COUTN1_VALUE}
+RCoutn1loss n coutn1_loss {RCOUTN1LOSS_VALUE}
+RCoutn1leak n cn {RCOUTN1LEAK_VALUE}
+Coutn2 coutn2_loss cn {COUTN2_VALUE}
+RCoutn2loss n coutn2_loss {RCOUTN2LOSS_VALUE}
+RCoutn2leak n cn {RCOUTN2LEAK_VALUE}
+Coutn3 coutn3_loss cn {COUTN3_VALUE}
+RCoutn3loss n coutn3_loss {RCOUTN3LOSS_VALUE}
+RCoutn3leak n cn {RCOUTN3LEAK_VALUE}
+
+.control
+set filetype=ascii
+set numdgt=16
+op
+write op.raw all
+ac dec 64 20 20k
+write audio.raw all
+noise v(pp,pn) Vsignal dec 128 20 20k 1
+setplot noise1
+write noise.raw all
+alter Vsignal ac=0
+alter Vrail ac=1
+ac dec 64 20 20k
+write supply.raw all
+quit
+.endc
+.end

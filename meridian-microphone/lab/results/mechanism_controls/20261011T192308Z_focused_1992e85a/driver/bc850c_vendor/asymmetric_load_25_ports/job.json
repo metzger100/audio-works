@@ -1,0 +1,44 @@
+{
+  "directory": "bc850c_vendor/asymmetric_load_25_ports",
+  "label": "asymmetric_load_25_ports",
+  "model": {
+    "acquisition_status": "valid_spice",
+    "behavior_validation": "error",
+    "device_id": "bc850c",
+    "file": "models/semiconductor/vendor/bc850c.lib",
+    "id": "bc850c_vendor",
+    "manufacturer": "Nexperia",
+    "model_lineage": [],
+    "ngspice_behavior": "ps",
+    "parent_model_id": null,
+    "path": "semiconductor/vendor/bc850c.lib",
+    "pin_order": "subcircuit C B E; physical B1 E2 C3",
+    "primitive": "X",
+    "redistribution": {
+      "acquisition": "models/semiconductor/acquire.py; private receipt and acquisition.yaml",
+      "evidence": "Original notices and archive/PDF retained privately; public availability is not redistribution permission.",
+      "status": "not_established_do_not_redistribute"
+    },
+    "retrieved_date": "2026-10-09",
+    "runnability": "scoped_jobs_ok_with_retained_errors",
+    "sha256": "ef3fc2c3776eaf52acbfb5b7955eda8efd9fa714dd2158aa015ac42610bca399",
+    "source_url": "https://assets.nexperia.com/documents/spice-model/BC850C.txt?download=1",
+    "subcircuit": "BC850C",
+    "syntax": "self-contained public subcircuit; dialect compatibility unverified",
+    "validation_record": "results/device_models/20261009T133651Z_parts_d3c30763/results.json",
+    "version": "extraction week42/2018"
+  },
+  "netlist_sha256": "be99f9445d97166f00966cd1743db3a84ba551a8448807d8f176c8d3ce46b8bd",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "retained_hashes": {
+    "job.cir": "be99f9445d97166f00966cd1743db3a84ba551a8448807d8f176c8d3ce46b8bd",
+    "n.raw": "0926269012b4754321298970d8cec4c23bb01ab41cda62d57d5d3c783adc8bcd",
+    "n.raw.csv": "a7184cf349a42bad5ec15b77a6aa8971e097c09bc795285c6e0d84a823b13d27",
+    "p.raw": "d266ee2d6cc4388cc4ccc3f062f0a34f7738f1cf82596f7468922ecc6dfc676b",
+    "p.raw.csv": "37dfeb676ef9635856f6a9d51a109de6d05e45647c56be2ae3b840f97d96d909",
+    "simulator.log": "1a74506b5a68a3442337d8e6166b960d553ab24227838cb3f31e50717a0f64dc"
+  },
+  "status": "ok",
+  "temperature_c": 25,
+  "timeout_s": 15
+}

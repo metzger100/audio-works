@@ -1,0 +1,303 @@
+{
+  "date": "2026-10-16",
+  "laboratory_verifications": [
+    {
+      "file": "meridian-microphone/lab/results/verification/20261016T132317Z_3ffbea3f/verification.json",
+      "status": "pass",
+      "source_unchanged": true,
+      "tests_passed": 109
+    },
+    {
+      "file": "meridian-microphone/lab/results/verification/20261016T132825Z_9feec475/verification.json",
+      "status": "pass",
+      "source_unchanged": true,
+      "tests_passed": 109
+    }
+  ],
+  "repository_regressions": {
+    "tests": 40,
+    "status": "pass",
+    "new_fixture": "tests/project/test_storage_policy.py::test_private_architecture_snapshot_keeps_original_integrity_required",
+    "before_fix": "fail: required private original snapshot absent from selected Git content",
+    "after_fix": "pass including damaged-original detection and required authored controls"
+  },
+  "root_gates": {
+    "audit": {
+      "status": "pass",
+      "errors": [],
+      "organization": "pass",
+      "reading_sizes": {
+        "branding": 31691,
+        "device-models": 46638,
+        "documentation": 28054,
+        "optimization": 46165,
+        "orientation": 14817,
+        "qualification": 42929,
+        "reporting": 49623,
+        "topology": 47956
+      },
+      "repeated_prose": [],
+      "nested_data_partitions": [],
+      "noncanonical_page_directories": [],
+      "folders": {
+        "maintained": 177,
+        "original_only": 22473,
+        "page_containers": 64,
+        "data_page_containers": 61,
+        "navigation_page_containers": 3,
+        "by_root": {
+          ".githooks": 1,
+          ".github": 2,
+          "LICENSES": 1,
+          "branding": 5,
+          "docs": 9,
+          "meridian-microphone": 154,
+          "tests": 3,
+          "tools": 2
+        }
+      },
+      "maximum_maintained_directory_depth": 7,
+      "generated_files": 212,
+      "enforcement": {
+        "hooks": [
+          "pre-commit",
+          "pre-merge-commit",
+          "pre-applypatch",
+          "pre-push"
+        ],
+        "installed": true,
+        "ci": true,
+        "selected_content": "working",
+        "character_limit": 15000,
+        "onboarding_limit": 15000,
+        "route_limit": 50000
+      },
+      "common_characters": 14817,
+      "estimated_tokens": 3704,
+      "current_words": 108,
+      "context_status": "pass",
+      "hook_installed": true,
+      "continued_quality": "pass",
+      "stale_generated": [],
+      "oversized": [],
+      "unreachable": [],
+      "maintained_text_files": 1902,
+      "indexed_maintained_files": 1983,
+      "preserved_original_files": 64422,
+      "preservation": {
+        "status": "configured",
+        "authority": "github",
+        "repository": "https://github.com/metzger100/audio-works",
+        "scope": "versioned_repository",
+        "private_backups": "optional",
+        "remote_sync": "not_checked",
+        "note": "GitHub is canonical for committed files. This local gate does not verify remote synchronization or preservation of ignored evidence."
+      },
+      "note": "Repository checks do not establish scientific, procurement or legal qualification; character counts estimate tokens."
+    },
+    "check": {
+      "status": "pass",
+      "errors": [],
+      "organization": "pass",
+      "reading_sizes": {
+        "branding": 31691,
+        "device-models": 46638,
+        "documentation": 28054,
+        "optimization": 46165,
+        "orientation": 14817,
+        "qualification": 42929,
+        "reporting": 49623,
+        "topology": 47956
+      },
+      "repeated_prose": [],
+      "nested_data_partitions": [],
+      "noncanonical_page_directories": [],
+      "folders": {
+        "maintained": 177,
+        "original_only": 22564,
+        "page_containers": 64,
+        "data_page_containers": 61,
+        "navigation_page_containers": 3,
+        "by_root": {
+          ".githooks": 1,
+          ".github": 2,
+          "LICENSES": 1,
+          "branding": 5,
+          "docs": 9,
+          "meridian-microphone": 154,
+          "tests": 3,
+          "tools": 2
+        }
+      },
+      "maximum_maintained_directory_depth": 7,
+      "generated_files": 212,
+      "enforcement": {
+        "hooks": [
+          "pre-commit",
+          "pre-merge-commit",
+          "pre-applypatch",
+          "pre-push"
+        ],
+        "installed": true,
+        "ci": true,
+        "selected_content": "working",
+        "character_limit": 15000,
+        "onboarding_limit": 15000,
+        "route_limit": 50000
+      },
+      "common_characters": 14817,
+      "estimated_tokens": 3704,
+      "current_words": 108,
+      "context_status": "pass",
+      "hook_installed": true,
+      "continued_quality": "pass",
+      "stale_generated": [],
+      "oversized": [],
+      "unreachable": [],
+      "maintained_text_files": 1902,
+      "indexed_maintained_files": 1983,
+      "preserved_original_files": 64835,
+      "preservation": {
+        "status": "configured",
+        "authority": "github",
+        "repository": "https://github.com/metzger100/audio-works",
+        "scope": "versioned_repository",
+        "private_backups": "optional",
+        "remote_sync": "not_checked",
+        "note": "GitHub is canonical for committed files. This local gate does not verify remote synchronization or preservation of ignored evidence."
+      },
+      "note": "Repository checks do not establish scientific, procurement or legal qualification; character counts estimate tokens.",
+      "fast_checks": {
+        "status": "pass",
+        "checks": [
+          {
+            "check": "import importlib.metadata as m; expected={'ruff': '0.16.10', 'PyYAML': '6.0.3', 'markdown-it-py': '4.2.0', 'mdurl': '0.1.2'}; assert all(m.version(k)==v for k,v in expected.items()), 'Install the pinned quality dependencies before using the gate'",
+            "status": "pass",
+            "output": ""
+          },
+          {
+            "check": "ruff check --no-cache",
+            "status": "pass",
+            "output": "All checks passed!\n"
+          },
+          {
+            "check": "ruff format --check",
+            "status": "pass",
+            "output": "137 files already formatted\n"
+          },
+          {
+            "check": "unittest discover -s",
+            "status": "pass",
+            "output": "----------------------------------------------------------------------\nRan 23 tests in 2.955s\n\nOK\n"
+          }
+        ]
+      }
+    },
+    "staged-check": {
+      "status": "pass",
+      "errors": [],
+      "organization": "pass",
+      "reading_sizes": {
+        "branding": 31658,
+        "device-models": 49994,
+        "documentation": 28021,
+        "optimization": 45947,
+        "orientation": 14784,
+        "qualification": 42711,
+        "reporting": 48615,
+        "topology": 47146
+      },
+      "repeated_prose": [],
+      "nested_data_partitions": [],
+      "noncanonical_page_directories": [],
+      "folders": {
+        "maintained": 177,
+        "original_only": 22046,
+        "page_containers": 64,
+        "data_page_containers": 61,
+        "navigation_page_containers": 3,
+        "by_root": {
+          ".githooks": 1,
+          ".github": 2,
+          "LICENSES": 1,
+          "branding": 5,
+          "docs": 9,
+          "meridian-microphone": 154,
+          "tests": 3,
+          "tools": 2
+        }
+      },
+      "maximum_maintained_directory_depth": 7,
+      "generated_files": 212,
+      "enforcement": {
+        "hooks": [
+          "pre-commit",
+          "pre-merge-commit",
+          "pre-applypatch",
+          "pre-push"
+        ],
+        "installed": true,
+        "ci": true,
+        "selected_content": "index",
+        "character_limit": 15000,
+        "onboarding_limit": 15000,
+        "route_limit": 50000
+      },
+      "common_characters": 14784,
+      "estimated_tokens": 3696,
+      "current_words": 102,
+      "context_status": "pass",
+      "hook_installed": true,
+      "continued_quality": "pass",
+      "stale_generated": [],
+      "oversized": [],
+      "unreachable": [],
+      "maintained_text_files": 1817,
+      "indexed_maintained_files": 1898,
+      "preserved_original_files": 62631,
+      "preservation": {
+        "status": "configured",
+        "authority": "github",
+        "repository": "https://github.com/metzger100/audio-works",
+        "scope": "versioned_repository",
+        "private_backups": "optional",
+        "remote_sync": "not_checked",
+        "note": "GitHub is canonical for committed files. This local gate does not verify remote synchronization or preservation of ignored evidence."
+      },
+      "note": "Repository checks do not establish scientific, procurement or legal qualification; character counts estimate tokens.",
+      "fast_checks": {
+        "status": "pass",
+        "checks": [
+          {
+            "check": "import importlib.metadata as m; expected={'ruff': '0.16.10', 'PyYAML': '6.0.3', 'markdown-it-py': '4.2.0', 'mdurl': '0.1.2'}; assert all(m.version(k)==v for k,v in expected.items()), 'Install the pinned quality dependencies before using the gate'",
+            "status": "pass",
+            "output": ""
+          },
+          {
+            "check": "ruff check --no-cache",
+            "status": "pass",
+            "output": "All checks passed!\n"
+          },
+          {
+            "check": "ruff format --check",
+            "status": "pass",
+            "output": "131 files already formatted\n"
+          },
+          {
+            "check": "unittest discover -s",
+            "status": "pass",
+            "output": "----------------------------------------------------------------------\nRan 23 tests in 4.721s\n\nOK\n"
+          }
+        ]
+      }
+    }
+  },
+  "inventory": {
+    "status": "pass",
+    "new_files": 142,
+    "inventory": "meridian-microphone/lab/results/evidence-20261016T133042Z-7bed8249.sha256"
+  },
+  "source_receipt_inventory_entries": 57,
+  "cohort_inventory_entries": 1033,
+  "scientific_eligibility": false
+}

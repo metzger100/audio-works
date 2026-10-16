@@ -1,0 +1,48 @@
+{
+  "carrier_off": {
+    "demod_peak_v": {
+      "1000": 3.4227989711159766e-09,
+      "100000": 1.2024090095695256e-08,
+      "101000": 8.558862069327264e-05,
+      "102000": 5.8296819816184994e-09,
+      "198000": 3.708665386759872e-12,
+      "199000": 5.924753055996479e-11,
+      "2000": 4.2698182796345087e-10,
+      "200000": 7.876220076051083e-12,
+      "201000": 7.543440947773396e-11,
+      "202000": 1.0173034193983482e-11,
+      "98000": 6.046342871826941e-09,
+      "99000": 8.732183945149135e-05
+    },
+    "status": "executed"
+  },
+  "eligible": false,
+  "frozen_source_unchanged": true,
+  "jobs": [
+    {
+      "directory": "carrier_off/saved_window",
+      "label": "saved_window",
+      "model": {
+        "id": "carrier_off"
+      },
+      "netlist_sha256": "7ce5e60a74fbce0375f1bc717caf744616a32fb4dd5bb617e7aecbd7fa901f05",
+      "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+      "retained_hashes": {
+        "job.cir": "7ce5e60a74fbce0375f1bc717caf744616a32fb4dd5bb617e7aecbd7fa901f05",
+        "simulator.log": "cac3a5ef654fa6fb8efceb42702d0bb358c7bd506402255f19122356e971e5e0",
+        "tran.raw": "2c2350798aedfff95755e31f8a04ea0819ede3a6a6a733eb49cebe3cfc3a7352",
+        "tran.raw.csv": "57e4505b9c2188c4c6bbccc53416d49f2ca5e5738c0ad70dd58f4e11ab40c395"
+      },
+      "status": "ok",
+      "temperature_c": 25,
+      "timeout_s": 15
+    }
+  ],
+  "parent_experiment": "20261016T130909Z_diverse_00c8217a",
+  "parents": {
+    "$include": "results-7c39d6b011c5-0000-parents.json"
+  },
+  "source_manifest": {
+    "$include": "results-7c39d6b011c5-0003-source-manifest.json"
+  }
+}

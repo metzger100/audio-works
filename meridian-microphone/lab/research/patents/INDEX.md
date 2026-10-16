@@ -5,4 +5,6 @@ Candidate-linked feature flags, claim/status research and unresolved implementat
 
 - [README.md](README.md) — active
 - [capsule-envelope-001-leads.yaml](capsule-envelope-001-leads.yaml) — active
+- [diverse-prerequisites-001.md](diverse-prerequisites-001.md) — active
+- [focused-hypotheses-001.yaml](focused-hypotheses-001.yaml) — active
 - [register.yaml](register.yaml) — active

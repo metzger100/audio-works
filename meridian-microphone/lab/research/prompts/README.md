@@ -30,3 +30,5 @@ Start with 06 and 07, then 08. Documentary research for 10–12 can proceed alon
 Execute one numbered task at a time against the current workspace unless a separate workflow explicitly coordinates shared-source ownership and freezing. Do not run overlapping tasks that mutate registries/models while evaluations use them. Preserve 0019/0017 and 0023 as the immediate focus, 0012 as a charge-feedback control, and CMOS/carrier families as distinct research tracks. Output-capacitor optimization remains lower priority than unresolved bias, noise and impedance failures.
 
 The [dated plan rationale](DECISIONS.md) records the owner instruction and evidence boundaries. Keep initial stages and continuation work within the scientific contract, unchanged thresholds/budgets, component/patent policies and root completion gate. A written prompt is a planned task, not an executed experiment or screened patent.
+
+Prompt09 executed12October2026: [bias/filter/driver findings](../architectures/focused-hypotheses-001.md). Filter child0025 remains unqualified;later tasks still need their own executed evidence.

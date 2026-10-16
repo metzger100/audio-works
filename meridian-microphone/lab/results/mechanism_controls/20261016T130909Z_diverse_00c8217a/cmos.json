@@ -1,0 +1,337 @@
+{
+  "guard_oracles": [
+    {
+      "gain": 0,
+      "poles_per_s": [
+        [
+          -62831.853071795864,
+          0.0
+        ],
+        [
+          -5.813953488372094,
+          0.0
+        ]
+      ],
+      "relative_error": 6.682336423780092e-16,
+      "stable_analytic": true
+    },
+    {
+      "gain": 0.99,
+      "poles_per_s": [
+        [
+          -26659.11867815259,
+          0.0
+        ],
+        [
+          -13.702683714260163,
+          0.0
+        ]
+      ],
+      "relative_error": 9.154867068886226e-16,
+      "stable_analytic": true
+    },
+    {
+      "gain": 2,
+      "poles_per_s": [
+        [
+          10186.766850392458,
+          0.0
+        ],
+        [
+          35.860393853382114,
+          0.0
+        ]
+      ],
+      "relative_error": 2.335288697034573e-15,
+      "stable_analytic": false
+    }
+  ],
+  "reset": [
+    {
+      "expected_tau_s": 0.1,
+      "one_percent_s": 0.460517,
+      "shift_v": 0,
+      "status": "unsupported"
+    },
+    {
+      "expected_tau_s": 0.1,
+      "one_percent_s": 0.460517,
+      "shift_v": 20,
+      "status": "unsupported"
+    }
+  ],
+  "terminals": [
+    {
+      "kind": "ideal_gauge",
+      "no_cmos_power_or_noise_credit": true,
+      "relative_output_v": 8.0,
+      "shift_v": 0
+    },
+    {
+      "kind": "ideal_gauge",
+      "no_cmos_power_or_noise_credit": true,
+      "relative_output_v": 8.0,
+      "shift_v": 20
+    },
+    {
+      "kind": "ideal_gauge",
+      "no_cmos_power_or_noise_credit": true,
+      "relative_output_v": 8.0,
+      "shift_v": -20
+    },
+    {
+      "ac_gain_1khz": 0.9999998748031476,
+      "cm_v": 8,
+      "currents_a": {
+        "vg": -8.534744308855147e-12,
+        "vm": 1.95762211410884e-09,
+        "vn": 0.001000000048000078,
+        "vp": -0.001000002014156937
+      },
+      "kind": "follower_0",
+      "model": "opa197_pspice",
+      "rail_power_w": 0.01600003222651099,
+      "relative_output_v": 8.000019622442778,
+      "shift_v": 0,
+      "status": "supported_execution"
+    },
+    {
+      "cm_v": 8,
+      "kind": "follower_20",
+      "model": "opa197_pspice",
+      "shift_v": 20,
+      "status": "unsupported_execution"
+    },
+    {
+      "ac_gain_1khz": 0.9999998748031476,
+      "cm_v": 8,
+      "currents_a": {
+        "vg": -7.189735352214344e-12,
+        "vm": 1.956409168999904e-09,
+        "vn": 0.001000000048000079,
+        "vp": -0.001000002011598983
+      },
+      "kind": "follower_-20",
+      "model": "opa197_pspice",
+      "rail_power_w": 0.016000032185583726,
+      "relative_output_v": 8.000019621104,
+      "shift_v": -20,
+      "status": "supported_execution"
+    },
+    {
+      "ac_gain_1khz": 0.9999998748031476,
+      "cm_v": 0.1,
+      "currents_a": {
+        "vg": 7.794901536238119e-12,
+        "vm": 2.036663646635807e-09,
+        "vn": 0.00100000000060008,
+        "vp": -0.001000002029468825
+      },
+      "kind": "cm_0.1",
+      "model": "opa197_pspice",
+      "rail_power_w": 0.0160000324715012,
+      "relative_output_v": 0.100020022073295,
+      "shift_v": 0,
+      "status": "supported_execution"
+    },
+    {
+      "ac_gain_1khz": 0.9999998748031476,
+      "cm_v": 15.9,
+      "currents_a": {
+        "vg": -2.477910780208925e-11,
+        "vm": 1.878580599672802e-09,
+        "vn": 0.001000000095400077,
+        "vp": -0.001000001998759785
+      },
+      "kind": "cm_15.9",
+      "model": "opa197_pspice",
+      "rail_power_w": 0.01600003198015656,
+      "relative_output_v": 15.90001922281226,
+      "shift_v": 0,
+      "status": "supported_execution"
+    },
+    {
+      "cm_v": 8,
+      "kind": "charge_0",
+      "model": "opa197_pspice",
+      "shift_v": 0,
+      "status": "unsupported_execution"
+    },
+    {
+      "cm_v": 8,
+      "kind": "charge_20",
+      "model": "opa197_pspice",
+      "shift_v": 20,
+      "status": "unsupported_execution"
+    },
+    {
+      "cm_v": 8,
+      "kind": "guard_0",
+      "model": "opa197_pspice",
+      "shift_v": 0,
+      "status": "unsupported_execution"
+    },
+    {
+      "cm_v": 8,
+      "kind": "guard_1e-10",
+      "model": "opa197_pspice",
+      "shift_v": 0,
+      "status": "unsupported_execution"
+    },
+    {
+      "cm_v": 8,
+      "kind": "guard_1e-09",
+      "model": "opa197_pspice",
+      "shift_v": 0,
+      "status": "unsupported_execution"
+    },
+    {
+      "ac_gain_1khz": 1.0000001268476015,
+      "cm_v": 8,
+      "currents_a": {
+        "vg": 2.735905577609665e-13,
+        "vm": -1.538328228906441e-10,
+        "vn": 0.0002750001541314771,
+        "vp": -0.0002750000000250637
+      },
+      "kind": "follower_0",
+      "model": "opa928_vendor",
+      "rail_power_w": 0.004400000000401019,
+      "relative_output_v": 7.999998461663999,
+      "shift_v": 0,
+      "status": "supported_execution"
+    },
+    {
+      "cm_v": 8,
+      "kind": "follower_20",
+      "model": "opa928_vendor",
+      "shift_v": 20,
+      "status": "unsupported_execution"
+    },
+    {
+      "cm_v": 8,
+      "kind": "follower_-20",
+      "model": "opa928_vendor",
+      "shift_v": -20,
+      "status": "unsupported_execution"
+    },
+    {
+      "ac_gain_1khz": 1.0000001277813837,
+      "cm_v": 0.1,
+      "currents_a": {
+        "vg": 2.578395396496402e-15,
+        "vm": -3.442582389844722e-10,
+        "vn": 0.000275000344309581,
+        "vp": -0.0002750000000487636
+      },
+      "kind": "cm_0.1",
+      "model": "opa928_vendor",
+      "rail_power_w": 0.004400000000780217,
+      "relative_output_v": 0.0999965574263987,
+      "shift_v": 0,
+      "status": "supported_execution"
+    },
+    {
+      "ac_gain_1khz": 0.9504469334459005,
+      "cm_v": 15.9,
+      "currents_a": {
+        "vg": 5.522545853779703e-13,
+        "vm": 1.642497921526542e-11,
+        "vn": 0.00027500000056827,
+        "vp": -0.0002750000164409946
+      },
+      "kind": "cm_15.9",
+      "model": "opa928_vendor",
+      "rail_power_w": 0.004400000263055913,
+      "relative_output_v": 15.90000016422537,
+      "shift_v": 0,
+      "status": "supported_execution"
+    },
+    {
+      "cm_v": 8,
+      "kind": "charge_0",
+      "model": "opa928_vendor",
+      "shift_v": 0,
+      "status": "unsupported_execution"
+    },
+    {
+      "cm_v": 8,
+      "kind": "charge_20",
+      "model": "opa928_vendor",
+      "shift_v": 20,
+      "status": "unsupported_execution"
+    },
+    {
+      "ac_gain_1khz": 1.00000014802564,
+      "cm_v": 8,
+      "currents_a": {
+        "vg": 5.21603918911262e-13,
+        "vm": -1.538537122139014e-10,
+        "vn": 0.0005500001544265468,
+        "vp": -0.0005500000000512306
+      },
+      "guard_tracking_20khz": [
+        0.9999055873364346,
+        -0.014465485337560686
+      ],
+      "input_admittance_20khz": [
+        -2.8020186404052515e-08,
+        7.542050876889341e-07
+      ],
+      "kind": "guard_0",
+      "model": "opa928_vendor",
+      "rail_power_w": 0.00880000000081969,
+      "relative_output_v": 7.999998461455107,
+      "shift_v": 0,
+      "status": "supported_execution"
+    },
+    {
+      "ac_gain_1khz": 1.000000148025633,
+      "cm_v": 8,
+      "currents_a": {
+        "vg": 5.21603918911262e-13,
+        "vm": -1.538537122139014e-10,
+        "vn": 0.0005500001544265468,
+        "vp": -0.0005500000000512306
+      },
+      "guard_tracking_20khz": [
+        0.9996907392051014,
+        -0.02703817512745846
+      ],
+      "input_admittance_20khz": [
+        -4.382556457500555e-08,
+        7.544752490422899e-07
+      ],
+      "kind": "guard_1e-10",
+      "model": "opa928_vendor",
+      "rail_power_w": 0.00880000000081969,
+      "relative_output_v": 7.999998461455107,
+      "shift_v": 0,
+      "status": "supported_execution"
+    },
+    {
+      "ac_gain_1khz": 1.0000001480255771,
+      "cm_v": 8,
+      "currents_a": {
+        "vg": 5.21603918911262e-13,
+        "vm": -1.538537122139014e-10,
+        "vn": 0.0005500001544265468,
+        "vp": -0.0005500000000512306
+      },
+      "guard_tracking_20khz": [
+        0.9837412705620693,
+        -0.13832543987184542
+      ],
+      "input_admittance_20khz": [
+        -1.8372577549455802e-07,
+        7.745307480249809e-07
+      ],
+      "kind": "guard_1e-09",
+      "model": "opa928_vendor",
+      "rail_power_w": 0.00880000000081969,
+      "relative_output_v": 7.999998461455107,
+      "shift_v": 0,
+      "status": "supported_execution"
+    }
+  ]
+}

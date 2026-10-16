@@ -1,0 +1,177 @@
+[
+  {
+    "candidate": "candidate_0023",
+    "declared_scenario": {
+      "board_leakage_ohm": "1.0e11",
+      "id": "board_leakage",
+      "parameters": {
+        "LEAK": 1000000000.0
+      }
+    },
+    "jobs": [
+      {
+        "advisories": [],
+        "files": {
+          "ac.raw": "e2d0b455d495a4fa96d0a632aed78d8597668b8ea74ecdf8b91f16d7808dd1c3",
+          "op.raw": "eb19a388016bbc9da35f1e194ebaae57863b7f6a03e63c8e9d2cb4cb19cc16a0"
+        },
+        "folder": "results/mechanism_controls/20261011T192308Z_focused_1992e85a/candidate_0023/board_leakage/0001_matched",
+        "netlist_sha256": "42a05bca758007820a40bca0700fe65e6fdb1ae201af0ecb7dbd43df3bc5d5b7",
+        "semiconductor_models": [
+          {
+            "acquisition_status": "valid_spice",
+            "device_id": "bc846b",
+            "id": "bc846b_emitter_r1",
+            "manufacturer": "Nexperia",
+            "model_lineage": [
+              {
+                "id": "bc846b_vendor",
+                "retrieved_date": "2026-10-05",
+                "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+                "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+                "version": "extraction week 24/2021"
+              }
+            ],
+            "ngspice_behavior": "",
+            "parent_model_id": "bc846b_vendor",
+            "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+            "redistribution": {
+              "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+              "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+              "status": "not_established_do_not_redistribute"
+            },
+            "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/mechanism_controls/20261011T192308Z_focused_1992e85a/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+            "retrieved_date": "2026-10-05",
+            "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+            "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+            "subcircuit": "BC846B",
+            "syntax": "SPICE3 subcircuit",
+            "version": "project structural child r1; Q2 emitter 33 -> 3"
+          },
+          {
+            "acquisition_status": "valid_spice",
+            "device_id": "jfe150",
+            "id": "jfe150_pspice",
+            "manufacturer": "Texas Instruments",
+            "model_lineage": [
+              {
+                "id": "jfe150_generic",
+                "retrieved_date": "2026-10-05",
+                "sha256": "afe3d619d2a318dd4b83d05cccf76921a884aaf77e2620dc5eadf909db0e8207",
+                "source_url": "https://www.ti.com/lit/zip/slpm366",
+                "version": "Final 1.2; 26SEP2024; SLPM366"
+              }
+            ],
+            "ngspice_behavior": "ps",
+            "parent_model_id": "jfe150_generic",
+            "path": "semiconductor/vendor/jfe150_pspice.lib",
+            "redistribution": {
+              "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+              "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+              "status": "not_established_do_not_redistribute"
+            },
+            "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/mechanism_controls/20261011T192308Z_focused_1992e85a/source/models/semiconductor/vendor/jfe150_pspice.lib",
+            "retrieved_date": "2026-10-05",
+            "sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+            "source_url": "https://www.ti.com/lit/zip/slpm349i",
+            "subcircuit": "JFE150",
+            "syntax": "SPICE3 subcircuit with PSpice extensions",
+            "version": "Final 1.2; SLPM349I"
+          }
+        ],
+        "status": "ok"
+      }
+    ],
+    "reason": "TypeError: unsupported operand type(s) for /: 'int' and 'str'",
+    "scenario": "board_leakage",
+    "status": "error",
+    "validation": false
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0042-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0043-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0044-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0045-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0046-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0047-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0048-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0049-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0050-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0051-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0052-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0053-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0054-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0055-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0056-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0057-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0058-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0059-candidate-0023.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0060-candidate-0025.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0061-candidate-0025.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0062-candidate-0025.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0063-candidate-0025.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0064-candidate-0025.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0065-candidate-0025.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0066-candidate-0025.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0067-candidate-0025.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0068-candidate-0025.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0069-candidate-0025.json"
+  },
+  {
+    "$include": "results-7c39d6b011c5-0002-rows-0070-candidate-0025.json"
+  }
+]

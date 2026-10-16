@@ -1,0 +1,183 @@
+[
+  {
+    "analysis_backend_prerequisite": "Winding loss, magnetic range, RF force",
+    "assumption_inverted": "The first device must be a FET",
+    "conversion_principle": "Capacitance-induced bridge imbalance",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "no_fet",
+      "minimal",
+      "instrumentation"
+    ],
+    "id": "concept_0009",
+    "independent_analytical_oracle": "Lossy transformer bridge and synchronous recovery",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "instrumentation"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Balanced transformer secondary or line buffer",
+      "dc_bias": "Carrier transformer isolation plus independent DC bias",
+      "expected_dominant_distortion": "Core/carrier nonlinearity",
+      "expected_dominant_noise": "Winding loss and detector noise",
+      "fastest_falsification": "Lossy coupled-inductor bridge across C/cable/temperature",
+      "gain_or_impedance_transformation": "Passive transformer then BJT detector",
+      "likely_fatal_flaw": "Useful bandwidth and carrier-noise rejection are incompatible",
+      "loading_control": "Resonant impedance transformation and symmetric coupling",
+      "sensed_quantity": "Capacitance-induced bridge imbalance"
+    },
+    "real_part_dependencies": "Documented transformer, BJT detector, amplitude control",
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "smallest_experiment": "Lossy coupled-inductor bridge across C/cable/temperature",
+    "source_links": [
+      "https://designers-guide.org/theory/cyclo-paper.pdf"
+    ],
+    "sources": [
+      "S09"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Transformer resonant bridge with bipolar detector"
+  },
+  {
+    "analysis_backend_prerequisite": "Grounded charge and translated reference tests",
+    "assumption_inverted": "The capsule must be voltage sensed",
+    "conversion_principle": "Charge/current integral",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "charge",
+      "no_jfet",
+      "instrumentation"
+    ],
+    "id": "concept_0010",
+    "independent_analytical_oracle": "Finite charge gain and reset pole",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "charge",
+      "instrumentation"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Independent balanced output",
+      "dc_bias": "Feedback bleed resistor and midrail reference",
+      "expected_dominant_distortion": "Input compliance and finite loop gain",
+      "expected_dominant_noise": "Feedback resistor, voltage noise times noise gain",
+      "fastest_falsification": "Noise gain and return ratio across C/leakage and feedback-C tolerance",
+      "gain_or_impedance_transformation": "Charge-to-voltage in feedback C",
+      "likely_fatal_flaw": "Bleed noise or required compensation ruins audio range",
+      "loading_control": "Virtual potential and feedback capacitance",
+      "sensed_quantity": "Charge/current integral"
+    },
+    "real_part_dependencies": "OPA197/OPA928 or electrometer; real Cf and Rreset",
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "smallest_experiment": "Noise gain and return ratio across C/leakage and feedback-C tolerance",
+    "source_links": [
+      "https://www.ti.com/lit/an/sloa033a/sloa033a.pdf"
+    ],
+    "sources": [
+      "S05"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "CMOS charge amplifier with resistive bleed"
+  },
+  {
+    "analysis_backend_prerequisite": "LF noise and reset/clipping across interfaces",
+    "assumption_inverted": "The capsule must be voltage sensed",
+    "conversion_principle": "Displacement current",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "current",
+      "servo",
+      "instrumentation"
+    ],
+    "id": "concept_0011",
+    "independent_analytical_oracle": "TIA × leaky-integrator transfer and current noise",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "current",
+      "servo",
+      "instrumentation"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Differential integration/output stage",
+      "dc_bias": "DC servo removes leakage without passing it through audio",
+      "expected_dominant_distortion": "Integrator saturation and TIA slew",
+      "expected_dominant_noise": "TIA voltage/current noise and feedback R",
+      "fastest_falsification": "DC leakage steps, integrated LF noise and corner clipping",
+      "gain_or_impedance_transformation": "Resistive TIA then frequency-shaped integrator",
+      "likely_fatal_flaw": "Extra stages cost current/noise and drift into clipping",
+      "loading_control": "Virtual input voltage defines capsule loading",
+      "sensed_quantity": "Displacement current"
+    },
+    "real_part_dependencies": "Two independently qualified stages plus slow servo",
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "smallest_experiment": "DC leakage steps, integrated LF noise and corner clipping",
+    "source_links": [
+      "https://arxiv.org/pdf/2007.00615"
+    ],
+    "sources": [
+      "S07",
+      "S08"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "TIA followed by leaky integrator"
+  },
+  {
+    "analysis_backend_prerequisite": "Terminal current and power closure before audio",
+    "assumption_inverted": "The capsule must be referenced to a fixed potential",
+    "conversion_principle": "Voltage/charge between capsule electrodes",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "floating",
+      "no_jfet",
+      "instrumentation"
+    ],
+    "id": "concept_0012",
+    "independent_analytical_oracle": "Rail/input/output/load gauge transform",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "floating",
+      "instrumentation"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Level-shifting differential current outputs",
+      "dc_bias": "Controlled floating rail and slow common-mode servo",
+      "expected_dominant_distortion": "Common-mode loop and output compliance",
+      "expected_dominant_noise": "Isolation/reference and input noise",
+      "fastest_falsification": "Full DC solvability and power/current sweep before audio metrics",
+      "gain_or_impedance_transformation": "Floating CMOS error amplifier",
+      "likely_fatal_flaw": "No stable power extraction/common-mode solution under P48",
+      "loading_control": "Float local reference with capsule rather than case",
+      "sensed_quantity": "Voltage/charge between capsule electrodes"
+    },
+    "real_part_dependencies": "Floating rail, CMOS, level-shifting current outputs",
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "smallest_experiment": "Full DC solvability and power/current sweep before audio metrics",
+    "source_links": [
+      "https://www.ti.com/lit/ds/symlink/opa197.pdf"
+    ],
+    "sources": [
+      "S09"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Floating powered sensor island"
+  }
+]

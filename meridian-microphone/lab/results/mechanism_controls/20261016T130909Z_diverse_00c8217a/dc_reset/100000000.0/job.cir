@@ -1,0 +1,15 @@
+Meridian prerequisite dc_reset 100000000.0
+* SPDX-License-Identifier: CERN-OHL-S-2.0
+.temp 25
+.options reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+Ib f 0 .5u
+Rf out f 100000000.0
+Ee out 0 f 0 -10
+.control
+set filetype=ascii
+set numdgt=16
+op
+write op.raw all
+quit
+.endc
+.end

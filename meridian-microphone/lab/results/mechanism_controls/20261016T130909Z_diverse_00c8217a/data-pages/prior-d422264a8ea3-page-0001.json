@@ -1,0 +1,222 @@
+[
+  {
+    "$include": "prior-d422264a8ea3-0000-0012.json"
+  },
+  {
+    "$include": "prior-d422264a8ea3-0001-0024.json"
+  },
+  {
+    "candidate": "0010",
+    "checks": {
+      "balance": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "distortion": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "frequency_response": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "headroom": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "loading": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "monte_carlo": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "noise": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "operating_point": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "output_impedance": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "phantom_supply": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "semiconductor_corners": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "stability": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "startup": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "temperature": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      }
+    },
+    "circuit_sha256": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9",
+    "eligible": false,
+    "noise_metrics": {},
+    "original_result_sha256": "ff2080330500ca442e4bdb1795c52b7814fa12e21ff429ee9466fd50af22705a",
+    "prior_experiment": "20261009T090436Z_496da267",
+    "response_metrics": {}
+  },
+  {
+    "candidate": "0014",
+    "checks": {
+      "balance": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "distortion": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "frequency_response": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "headroom": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "loading": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "monte_carlo": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "noise": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "operating_point": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "output_impedance": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "phantom_supply": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "semiconductor_corners": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "stability": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "startup": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      },
+      "temperature": {
+        "reason": "ngspice exit 0: Warning",
+        "status": "error"
+      }
+    },
+    "circuit_sha256": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+    "eligible": false,
+    "noise_metrics": {},
+    "original_result_sha256": "946d9a31799ea4a6bd5cc1e8e264e17f79416bcb5bd47c236247e0d9607e10bb",
+    "prior_experiment": "20261009T090439Z_77e9f0c9",
+    "response_metrics": {}
+  },
+  {
+    "candidate": "0013",
+    "checks": {
+      "balance": {
+        "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+        "status": "incomplete"
+      },
+      "carrier_mechanism": {
+        "reason": "SimulationError: ngspice exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+        "status": "error"
+      },
+      "distortion": {
+        "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+        "status": "incomplete"
+      },
+      "frequency_response": {
+        "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+        "status": "incomplete"
+      },
+      "headroom": {
+        "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+        "status": "incomplete"
+      },
+      "loading": {
+        "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+        "status": "incomplete"
+      },
+      "monte_carlo": {
+        "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+        "status": "incomplete"
+      },
+      "noise": {
+        "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+        "status": "incomplete"
+      },
+      "operating_point": {
+        "reason": null,
+        "status": "pass"
+      },
+      "output_impedance": {
+        "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+        "status": "incomplete"
+      },
+      "phantom_supply": {
+        "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+        "status": "incomplete"
+      },
+      "semiconductor_corners": {
+        "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+        "status": "incomplete"
+      },
+      "stability": {
+        "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+        "status": "incomplete"
+      },
+      "startup": {
+        "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+        "status": "incomplete"
+      },
+      "temperature": {
+        "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+        "status": "incomplete"
+      }
+    },
+    "circuit_sha256": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015",
+    "eligible": false,
+    "noise_metrics": {},
+    "original_result_sha256": "9a7eb58e29f669f6d47861cf9d4eedbe903e5b99a9d14ea08c17ffe3c060eb99",
+    "prior_experiment": "20261009T090547Z_1f85c513",
+    "response_metrics": {}
+  },
+  {
+    "$include": "prior-d422264a8ea3-0005-0019.json"
+  },
+  {
+    "$include": "prior-d422264a8ea3-0006-0023.json"
+  },
+  {
+    "$include": "prior-d422264a8ea3-0007-0025.json"
+  }
+]

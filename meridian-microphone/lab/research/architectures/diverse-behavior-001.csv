@@ -1,0 +1,56 @@
+cohort,model,label,status,reason
+20261016T130909Z_diverse_00c8217a,charge_oracle,charge_1e-07_500000_4.5e-11,ok,
+20261016T130909Z_diverse_00c8217a,charge_oracle,charge_1e-07_500000_7e-11,ok,
+20261016T130909Z_diverse_00c8217a,charge_oracle,charge_1e-07_500000_1e-10,ok,
+20261016T130909Z_diverse_00c8217a,charge_oracle,charge_1e-07_1e+08_4.5e-11,ok,
+20261016T130909Z_diverse_00c8217a,charge_oracle,charge_1e-07_1e+08_7e-11,ok,
+20261016T130909Z_diverse_00c8217a,charge_oracle,charge_1e-07_1e+08_1e-10,ok,
+20261016T130909Z_diverse_00c8217a,charge_oracle,charge_9.99001e-11_500000_4.5e-11,ok,
+20261016T130909Z_diverse_00c8217a,charge_oracle,charge_9.99001e-11_500000_7e-11,ok,
+20261016T130909Z_diverse_00c8217a,charge_oracle,charge_9.99001e-11_500000_1e-10,ok,
+20261016T130909Z_diverse_00c8217a,charge_oracle,charge_9.99001e-11_1e+08_4.5e-11,ok,
+20261016T130909Z_diverse_00c8217a,charge_oracle,charge_9.99001e-11_1e+08_7e-11,ok,
+20261016T130909Z_diverse_00c8217a,charge_oracle,charge_9.99001e-11_1e+08_1e-10,ok,
+20261016T130909Z_diverse_00c8217a,reset_oracle,reset_1e-07,ok,
+20261016T130909Z_diverse_00c8217a,reset_oracle,reset_9.99001e-11,ok,
+20261016T130909Z_diverse_00c8217a,dc_reset,500000.0,ok,
+20261016T130909Z_diverse_00c8217a,dc_reset,100000000.0,ok,
+20261016T130909Z_diverse_00c8217a,ideal_gauge,0,ok,
+20261016T130909Z_diverse_00c8217a,ideal_gauge,20,ok,
+20261016T130909Z_diverse_00c8217a,ideal_gauge,-20,ok,
+20261016T130909Z_diverse_00c8217a,opa197_pspice,follower_0,ok,
+20261016T130909Z_diverse_00c8217a,opa197_pspice,follower_20,error,15s process-group timeout; partial log/waveform retained
+20261016T130909Z_diverse_00c8217a,opa197_pspice,follower_-20,ok,
+20261016T130909Z_diverse_00c8217a,opa197_pspice,cm_0.1,ok,
+20261016T130909Z_diverse_00c8217a,opa197_pspice,cm_15.9,ok,
+20261016T130909Z_diverse_00c8217a,opa197_pspice,charge_0,error,15s process-group timeout; partial log/waveform retained
+20261016T130909Z_diverse_00c8217a,opa197_pspice,charge_20,error,15s process-group timeout; partial log/waveform retained
+20261016T130909Z_diverse_00c8217a,opa197_pspice,guard_0,error,15s process-group timeout; partial log/waveform retained
+20261016T130909Z_diverse_00c8217a,opa197_pspice,guard_1e-10,error,15s process-group timeout; partial log/waveform retained
+20261016T130909Z_diverse_00c8217a,opa197_pspice,guard_1e-09,error,15s process-group timeout; partial log/waveform retained
+20261016T130909Z_diverse_00c8217a,opa928_vendor,follower_0,ok,
+20261016T130909Z_diverse_00c8217a,opa928_vendor,follower_20,error,exit 0: Warning
+20261016T130909Z_diverse_00c8217a,opa928_vendor,follower_-20,error,exit 0: Warning
+20261016T130909Z_diverse_00c8217a,opa928_vendor,cm_0.1,ok,
+20261016T130909Z_diverse_00c8217a,opa928_vendor,cm_15.9,ok,
+20261016T130909Z_diverse_00c8217a,opa928_vendor,charge_0,error,exit 0: Warning
+20261016T130909Z_diverse_00c8217a,opa928_vendor,charge_20,error,exit 0: Warning
+20261016T130909Z_diverse_00c8217a,opa928_vendor,guard_0,ok,
+20261016T130909Z_diverse_00c8217a,opa928_vendor,guard_1e-10,ok,
+20261016T130909Z_diverse_00c8217a,opa928_vendor,guard_1e-09,ok,
+20261016T130909Z_diverse_00c8217a,guard_oracle,0,ok,
+20261016T130909Z_diverse_00c8217a,guard_oracle,0.99,ok,
+20261016T130909Z_diverse_00c8217a,guard_oracle,2,ok,
+20261016T130909Z_diverse_00c8217a,opa197_pspice,charge_reset_0,error,exit 0: Warning
+20261016T130909Z_diverse_00c8217a,opa197_pspice,charge_reset_20,error,exit 0: Warning
+20261016T130909Z_diverse_00c8217a,carrier_island,0_0.2_32,ok,
+20261016T130909Z_diverse_00c8217a,carrier_island,1_0_32,error,15s process-group timeout; partial log/waveform retained
+20261016T130909Z_diverse_00c8217a,carrier_island,1_0.2_32,ok,
+20261016T130909Z_diverse_00c8217a,carrier_island,1_0.2_64,ok,
+20261016T130909Z_diverse_00c8217a,candidate_0012,exact_parent_DC_AC,error,"SimulationError: ngspice exit 1: 
+Error"
+20261016T130909Z_diverse_00c8217a,candidate_0024,exact_parent_DC_AC,error,"SimulationError: ngspice exit 1: 
+Error"
+20261016T131328Z_diverse_followup_2834cfe4,candidate_0012,exact_parent_DC_AC,executed,
+20261016T131328Z_diverse_followup_2834cfe4,candidate_0024,exact_parent_DC_AC,executed,
+20261016T131328Z_diverse_followup_2834cfe4,carrier_off,saved_window,ok,

@@ -1,0 +1,60 @@
+{
+  "catalogue_generation_preserved": "2026-10-05",
+  "catalogue_parent": "search/concepts.yaml",
+  "concepts": {
+    "$include": "diverse-knowledge-001-c0253eee396b-0008-concepts.json"
+  },
+  "date": "2026-10-16",
+  "existing_counts": {
+    "concepts": 22,
+    "nonconventional": 20,
+    "scientific": 17
+  },
+  "family_tasks": {
+    "$include": "diverse-knowledge-001-c0253eee396b-0009-family-tasks.json"
+  },
+  "new_part_leads": [
+    {
+      "manufacturer": "Analog Devices",
+      "model_state": "Official link redirects to explicit licence agreement; no acceptance/acquisition",
+      "mpn": "ADA4530-1ARZ",
+      "nominal_power_w": null,
+      "package": "8-lead SOIC",
+      "procurement": "Germany private orderability and delivered EUR cost not researched",
+      "purpose": "Low-bias charge amplifier/quiet guard alternative",
+      "qualification": "Unqualified; grounded/floating/charge/guard/current-noise tests required",
+      "source_url": "https://www.analog.com/en/products/ADA4530-1.html"
+    },
+    {
+      "manufacturer": "Hamamatsu Photonics",
+      "model_state": "No near-zero-bias or current/flicker model acquired; test-condition contradiction retained",
+      "mpn": "S5973-01",
+      "nominal_power_w": null,
+      "package": "TO-18 with lens",
+      "procurement": "Germany private orderability and delivered EUR cost not researched",
+      "purpose": "Ordinary photodiode reset-actuator limit/control; not demonstrated useful",
+      "qualification": "Unqualified; dark current, temperature, optical actuator noise/authority needed",
+      "source_url": "https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/s5971_etc_kpin1025e.pdf"
+    }
+  ],
+  "no_family_retired": true,
+  "periodic_challenge_executed": false,
+  "periodic_requirements_unchanged": {
+    "concepts": 20,
+    "instrumentation": 5,
+    "nonconventional_jfet": 10
+  },
+  "qualified_front": [],
+  "question_fields": [
+    "sensed_quantity",
+    "loading_control",
+    "dc_bias",
+    "gain_or_impedance_transformation",
+    "balanced_output",
+    "expected_dominant_noise",
+    "expected_dominant_distortion",
+    "likely_fatal_flaw",
+    "fastest_falsification"
+  ],
+  "schema_version": 1
+}

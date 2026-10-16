@@ -1,0 +1,22 @@
+Meridian prerequisite opa197_pspice follower_-20
+* SPDX-License-Identifier: CERN-OHL-S-2.0
+.include "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/mechanism_controls/20261016T130909Z_diverse_00c8217a/source/models/semiconductor/vendor/opa197.lib"
+.temp 25
+.options reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+Vg g 0 -20
+Vp p g 16
+Vn n g 0
+Vm ref g 8
+Rl out ref 10k
+Vin in ref DC 0 AC 1
+Xq in out p n out OPAx197
+.control
+set filetype=ascii
+set numdgt=16
+op
+write op.raw all
+ac dec 64 10 10Meg
+write ac.raw all
+quit
+.endc
+.end

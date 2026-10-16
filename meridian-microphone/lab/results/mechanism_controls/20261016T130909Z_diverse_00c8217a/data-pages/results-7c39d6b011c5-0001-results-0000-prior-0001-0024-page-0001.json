@@ -1,0 +1,71 @@
+{
+  "candidate": "0024",
+  "checks": {
+    "balance": {
+      "reason": null,
+      "status": "fail"
+    },
+    "distortion": {
+      "reason": "SimulationError: Command '['/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/tools/ngspice-run', '-n', '-b', 'job.cir']' timed out after 60 seconds",
+      "status": "error"
+    },
+    "frequency_response": {
+      "reason": null,
+      "status": "fail"
+    },
+    "headroom": {
+      "reason": "No valid distortion bracket",
+      "status": "incomplete"
+    },
+    "loading": {
+      "reason": null,
+      "status": "fail"
+    },
+    "monte_carlo": {
+      "reason": "Initial Monte Carlo runs DC/AC screens only; all-requirement manufacturing yield is not established",
+      "status": "incomplete"
+    },
+    "noise": {
+      "reason": null,
+      "status": "fail"
+    },
+    "operating_point": {
+      "reason": null,
+      "status": "pass"
+    },
+    "output_impedance": {
+      "reason": null,
+      "status": "fail"
+    },
+    "phantom_supply": {
+      "reason": null,
+      "status": "fail"
+    },
+    "semiconductor_corners": {
+      "reason": "No manufacturer-bounded semiconductor corners; ideal fixtures cannot demonstrate no-selection yield",
+      "status": "incomplete"
+    },
+    "stability": {
+      "reason": null,
+      "status": "fail"
+    },
+    "startup": {
+      "reason": null,
+      "status": "pass"
+    },
+    "temperature": {
+      "reason": null,
+      "status": "fail"
+    }
+  },
+  "circuit_sha256": "65bab5628d9b477584e38c3afb3d7cafef3012a7a2f2198de4886374a617e9f8",
+  "eligible": false,
+  "noise_metrics": {
+    "$include": "results-7c39d6b011c5-0001-results-0000-prior-0001-0024-0006-noise-metrics.json"
+  },
+  "original_result_sha256": "3a7b97132bbf8cd0d432be6eded2defabaa8b0bfc6f059fecde905a64bb2b4d1",
+  "prior_experiment": "20261009T091002Z_36aac551",
+  "response_metrics": {
+    "$include": "results-7c39d6b011c5-0001-results-0000-prior-0001-0024-0005-response-metrics.json"
+  }
+}

@@ -1,0 +1,291 @@
+family: no_fet
+concept_parent: concept_0007
+ideal_devices: false
+semiconductor_models:
+- bc846b_emitter_r1
+parameters:
+  $include: topology-dac33064b494-0004-parameters.yaml
+population:
+  $include: topology-dac33064b494-0005-population.yaml
+device_models: []
+qualification_evidence: []
+noise_groups: {}
+dc_probes: []
+loop_probes: []
+power_devices:
+- instance: Qreg
+  model_id: bc846b_emitter_r1
+  nodes:
+  - raw
+  - regbase
+  - rail
+  currents:
+  - i(v.xdut.vqreg_0)
+  - i(v.xdut.vqreg_1)
+  - i(v.xdut.vqreg_2)
+- instance: Qinput
+  model_id: bc846b_emitter_r1
+  nodes:
+  - outa
+  - f
+  - e1
+  currents:
+  - i(v.xdut.vqinput_0)
+  - i(v.xdut.vqinput_1)
+  - i(v.xdut.vqinput_2)
+- instance: Qreference
+  model_id: bc846b_emitter_r1
+  nodes:
+  - outb
+  - ref
+  - e2
+  currents:
+  - i(v.xdut.vqreference_0)
+  - i(v.xdut.vqreference_1)
+  - i(v.xdut.vqreference_2)
+- instance: Qoutp
+  model_id: bc846b_emitter_r1
+  nodes:
+  - rail
+  - outa
+  - outp
+  currents:
+  - i(v.xdut.vqoutp_0)
+  - i(v.xdut.vqoutp_1)
+  - i(v.xdut.vqoutp_2)
+- instance: Qoutn
+  model_id: bc846b_emitter_r1
+  nodes:
+  - rail
+  - outb
+  - outn
+  currents:
+  - i(v.xdut.vqoutn_0)
+  - i(v.xdut.vqoutn_1)
+  - i(v.xdut.vqoutn_2)
+power_resistors:
+- reference: Rharvestp
+  nodes:
+  - p
+  - raw
+  parameter: RHARVESTP_VALUE
+- reference: Rharvestn
+  nodes:
+  - n
+  - raw
+  parameter: RHARVESTN_VALUE
+- reference: Rregtop
+  nodes:
+  - raw
+  - regbase
+  parameter: RREGTOP_VALUE
+- reference: Rregbottom
+  nodes:
+  - regbase
+  - g
+  parameter: RREGBOTTOM_VALUE
+- reference: Rmidtop
+  nodes:
+  - rail
+  - mid
+  parameter: RMIDTOP_VALUE
+- reference: Rmidbottom
+  nodes:
+  - mid
+  - g
+  parameter: RMIDBOTTOM_VALUE
+- reference: Rpolar0
+  nodes:
+  - raw
+  - pol_0
+  parameter: RPOLAR0_VALUE
+- reference: Rpolar1
+  nodes:
+  - pol_0
+  - pol_1
+  parameter: RPOLAR1_VALUE
+- reference: Rpolar2
+  nodes:
+  - pol_1
+  - pol_2
+  parameter: RPOLAR2_VALUE
+- reference: Rpolar3
+  nodes:
+  - pol_2
+  - pol_3
+  parameter: RPOLAR3_VALUE
+- reference: Rpolar4
+  nodes:
+  - pol_3
+  - pol_4
+  parameter: RPOLAR4_VALUE
+- reference: Rpolar5
+  nodes:
+  - pol_4
+  - pol_5
+  parameter: RPOLAR5_VALUE
+- reference: Rpolar6
+  nodes:
+  - pol_5
+  - pol_6
+  parameter: RPOLAR6_VALUE
+- reference: Rpolar7
+  nodes:
+  - pol_6
+  - pol_7
+  parameter: RPOLAR7_VALUE
+- reference: Rpolar8
+  nodes:
+  - pol_7
+  - pol_8
+  parameter: RPOLAR8_VALUE
+- reference: Rpolar9
+  nodes:
+  - pol_8
+  - pol
+  parameter: RPOLAR9_VALUE
+- reference: Rback
+  nodes:
+  - pol
+  - b
+  parameter: RBACK_VALUE
+- reference: Rreftop
+  nodes:
+  - rail
+  - ref
+  parameter: RREFTOP_VALUE
+- reference: Rrefbottom
+  nodes:
+  - ref
+  - g
+  parameter: RREFBOTTOM_VALUE
+- reference: Remitter1
+  nodes:
+  - e1
+  - tail
+  parameter: REMITTER1_VALUE
+- reference: Remitter2
+  nodes:
+  - e2
+  - tail
+  parameter: REMITTER2_VALUE
+- reference: Rtail
+  nodes:
+  - tail
+  - g
+  parameter: RTAIL_VALUE
+- reference: Rcollector1
+  nodes:
+  - rail
+  - outa
+  parameter: RCOLLECTOR1_VALUE
+- reference: Rcollector2
+  nodes:
+  - rail
+  - outb
+  parameter: RCOLLECTOR2_VALUE
+- reference: Routloadp
+  nodes:
+  - outp
+  - g
+  parameter: ROUTLOADP_VALUE
+- reference: Routloadn
+  nodes:
+  - outn
+  - g
+  parameter: ROUTLOADN_VALUE
+- reference: Rrear
+  nodes:
+  - rear
+  - g
+  parameter: RREAR_VALUE
+- reference: Routp
+  nodes:
+  - outp
+  - cp
+  parameter: ROUTP_VALUE
+- reference: Routn
+  nodes:
+  - outn
+  - cn
+  parameter: ROUTN_VALUE
+- reference: Rfeedbacka
+  nodes:
+  - outa
+  - f
+  parameter: RFEEDBACKA_VALUE
+- reference: Rfeedbackb
+  nodes:
+  - outa
+  - f
+  parameter: RFEEDBACKB_VALUE
+- reference: RCfeedbackseriesloss
+  nodes:
+  - feedback_series
+  - cfeedbackseries_loss
+  parameter: RCFEEDBACKSERIESLOSS_VALUE
+- reference: RCfeedbackseriesinsulation
+  nodes:
+  - feedback_series
+  - f
+  parameter: RCFEEDBACKSERIESINSULATION_VALUE
+questions:
+  sensed_quantity: front displacement charge at a bipolar summing input
+  loading: finite differential-pair loop; base shot noise remains
+  dc_bias: Two parallel ordinary 1Mohm feedback resistors (500kohm nominal) increase
+    DC base-current authority; fixed discrete pair/tail, no trimming
+  gain_or_impedance_transformation: discrete differential error amplifier, 100 nF
+    feedback and emitter followers
+  balanced_output: Real output devices and two 47 ohm/47 uF legs; harvest/cable/load
+    coupling measured, symmetry not presumed
+  expected_noise: base-current shot noise, feedback resistor and collector/output
+    noise; missing KF explicitly unknown
+  expected_distortion: differential pair curvature, finite loop gain, unequal follower
+    bias
+  likely_fatal_flaw: low reset resistance requires very large Cfb and loses sensitivity/SNR
+  quickest_falsification: base current/feedback authority, pressure-referred shot
+    noise and finite-loop response
+  hypothesis: A series 100pF C0G caps the effective feedback capacitance instead of
+    an unavailable arbitrary optimized value; unchanged 500kohm DC reset retains BJT
+    base-current authority. It may expose whether the frequency/noise limitation is
+    reset conductance or large feedback C.
+sources:
+- S05
+- S07
+- S17
+- S24
+- S25
+input_device_class: BJT
+fet_audio_path: false
+fet_power_circuitry: false
+internal_device_classes: NPN only
+procurement_state: research_BOM_live_orderability_and_delivered_quote_unverified
+patent_state: unscreened_no_clearance
+prototype_gate: hold
+manufacture_gate: hold
+build_publication_gate: hold
+niche:
+  input_device: BJT
+  sensing: charge
+  reference: single_ended
+  feedback: bipolar_capacitive_feedback
+  bias: fixed_parts
+  active_device_count: 5
+  servo: false
+  output: differential_real_devices
+  common_mode: divider
+  bootstrap: false
+id: candidate_0024
+kind: research_candidate
+parents:
+- candidate_0012
+hypothesis: A series 100pF C0G caps the effective feedback capacitance instead of
+  an unavailable arbitrary optimized value; unchanged 500kohm DC reset retains BJT
+  base-current authority. It may expose whether the frequency/noise limitation is
+  reset conductance or large feedback C.
+structural_changes: Add sourced 100pF C0G in series with preserved 100nF feedback;
+  include separately documented IR/DF controls; unchanged DC reset/device bias, no
+  trimming. A structural child, not a family rescue or a qualified substitute.
+eligible: false
+state: engineering_ready
+patent_record: ../../research/patents/robust_optimization_2026-10-09.yaml

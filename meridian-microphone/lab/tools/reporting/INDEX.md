@@ -13,6 +13,9 @@ Reproducible bounded tables/plots that preserve findings and originals.
 - [comparison_outputs.py](comparison_outputs.py) — active
 - [comparison_records.py](comparison_records.py) — active
 - [comparison_tables.py](comparison_tables.py) — active
+- [diverse_report.py](diverse_report.py) — active
+- [focused_integrity.py](focused_integrity.py) — active
+- [focused_report.py](focused_report.py) — active
 - [initial_common.py](initial_common.py) — active
 - [initial_plots.py](initial_plots.py) — active
 - [initial_receipt.py](initial_receipt.py) — active

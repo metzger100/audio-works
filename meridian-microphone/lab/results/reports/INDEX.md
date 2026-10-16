@@ -9,4 +9,5 @@ Immediate contents and child hubs.
 - [initial-summary.md](initial-summary.md) — generated
 - [measurement-adapter-smoke.json](measurement-adapter-smoke.json) — generated
 - [architecture-comparison-001/](architecture-comparison-001/INDEX.md)
+- [focused-hypotheses-001/](focused-hypotheses-001/INDEX.md)
 - [robust-optimization/](robust-optimization/INDEX.md)

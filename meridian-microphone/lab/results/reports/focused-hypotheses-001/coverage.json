@@ -1,0 +1,64 @@
+{
+  "A_B": {
+    "board_successors": 3,
+    "candidates": [
+      "candidate_0019",
+      "candidate_0023",
+      "candidate_0025"
+    ],
+    "differing_source_resistors_ohm": {
+      "candidate_0019": 3300,
+      "candidate_0023": 1000,
+      "candidate_0025": 1000
+    },
+    "followup_cells": 9,
+    "full_suite_checks_per_candidate": 14,
+    "identical_external_conditions": true,
+    "independent_holdouts_per_candidate": 16,
+    "original_board_extraction_errors": 3,
+    "original_cells": 90,
+    "original_full_spec_envelope_preserved": true,
+    "shared_quantiles": true,
+    "temperature_endpoint_c": [
+      -10,
+      50
+    ]
+  },
+  "C": {
+    "cells": 27,
+    "deembedded_DUT": "Three complete microphone suites separately",
+    "exact_full_models": 3,
+    "finite_interface": true,
+    "fixtures": 3,
+    "jobs": 60,
+    "loaded_twoport": true,
+    "noise_scope": "Total native fixture-plus-driver PSD, missing full physical spectra",
+    "startup_controls": 3,
+    "temperatures_c": [
+      -10,
+      25,
+      50
+    ]
+  },
+  "loop": {
+    "bilateral_current_injection": false,
+    "open_loop_RHP_poles_known": false,
+    "stability_proof": false,
+    "voltage_orientation_checks": 2,
+    "voltage_return_diagnostics": 2
+  },
+  "nonlinear": "Full DUT distortion errors/headroom incomplete retained; Prompt8 isolated follower scope only",
+  "unsupported": [
+    "joint process distribution",
+    "complete noise spectra",
+    "temperature dielectric/board leakage laws",
+    "thermal/SOA",
+    "hot_plug",
+    "protection/ESD",
+    "distributed_RF",
+    "capsule safe bias",
+    "mechanical acoustic measurements",
+    "full candidate patent status",
+    "delivered Germany basket"
+  ]
+}

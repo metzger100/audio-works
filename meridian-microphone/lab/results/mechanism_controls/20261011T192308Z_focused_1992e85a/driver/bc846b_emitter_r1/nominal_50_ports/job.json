@@ -1,0 +1,47 @@
+{
+  "directory": "bc846b_emitter_r1/nominal_50_ports",
+  "label": "nominal_50_ports",
+  "model": {
+    "acquisition_status": "valid_spice",
+    "device_id": "bc846b",
+    "file": "models/semiconductor/vendor/bc846b_emitter_r1.lib",
+    "id": "bc846b_emitter_r1",
+    "manufacturer": "Nexperia",
+    "model_lineage": [
+      {
+        "id": "bc846b_vendor",
+        "retrieved_date": "2026-10-05",
+        "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+        "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+        "version": "extraction week 24/2021"
+      }
+    ],
+    "ngspice_behavior": "",
+    "parent_model_id": "bc846b_vendor",
+    "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+    "redistribution": {
+      "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+      "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+      "status": "not_established_do_not_redistribute"
+    },
+    "retrieved_date": "2026-10-05",
+    "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+    "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+    "subcircuit": "BC846B",
+    "syntax": "SPICE3 subcircuit",
+    "version": "project structural child r1; Q2 emitter 33 -> 3"
+  },
+  "netlist_sha256": "7fdd6e759f8422198db3e9dcaf37b26c48074946a30671ddc82db3ec9b49a78e",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "retained_hashes": {
+    "job.cir": "7fdd6e759f8422198db3e9dcaf37b26c48074946a30671ddc82db3ec9b49a78e",
+    "n.raw": "42592e1d96bf445bff4d0ac9e4827ec38a49afb41773dda0f7b4541a0214a0a6",
+    "n.raw.csv": "9e05527faf10a89745b83b5f6a02394c3234f60cd670d86119bef892e4e519c3",
+    "p.raw": "0e944fa9b1c1af909739e0bf54469ad2dbdadc0fab1e78cb983fa9ba817d4db5",
+    "p.raw.csv": "88f4a7a733f9f11ece4633c3a96112a985ee1473802c8358a2d856a6e96f8a1f",
+    "simulator.log": "bc360aafb42d5500cc8ae5326131682818a9a838fb0c40feb6b22d37e5843bfa"
+  },
+  "status": "ok",
+  "temperature_c": 50,
+  "timeout_s": 15
+}

@@ -45,3 +45,8 @@ Original conditions, statuses, failures and parents remain authoritative. [Struc
 - [20261011T182754Z_eeb18626 / verification.json](../../meridian-microphone/lab/results/verification/20261011T182754Z_eeb18626/verification.json) — pass
 - [20261011T183122Z_d34845b1 / verification.json](../../meridian-microphone/lab/results/verification/20261011T183122Z_d34845b1/verification.json) — pass
 - [20261011T183943Z_8f8299de / verification.json](../../meridian-microphone/lab/results/verification/20261011T183943Z_8f8299de/verification.json) — pass
+- [20261011T191729Z_bdf558b0 / verification.json](../../meridian-microphone/lab/results/verification/20261011T191729Z_bdf558b0/verification.json) — pass
+- [20261012T203859Z_9b1ce483 / verification.json](../../meridian-microphone/lab/results/verification/20261012T203859Z_9b1ce483/verification.json) — fail; source changed — no completion credit
+- [20261012T204021Z_989645cf / verification.json](../../meridian-microphone/lab/results/verification/20261012T204021Z_989645cf/verification.json) — pass
+- [20261016T132317Z_3ffbea3f / verification.json](../../meridian-microphone/lab/results/verification/20261016T132317Z_3ffbea3f/verification.json) — pass
+- [20261016T132825Z_9feec475 / verification.json](../../meridian-microphone/lab/results/verification/20261016T132825Z_9feec475/verification.json) — pass

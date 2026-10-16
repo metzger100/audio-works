@@ -1,0 +1,34 @@
+schema_version: 1
+power:
+  standard: IEC 61938:2018 edition 3
+  catalogue_checked: 2026-10-05
+  source: S02
+  supply_v: {nominal: 48, range: [44, 52], status: primary_manufacturer_standard_summary, source: S03}
+  feed_per_leg_ohm: {nominal: 6800, status: standard_typical_value, source: S03}
+  feed_pair_mismatch_fraction: {range: [-0.004, 0.004], status: primary_manufacturer_standard_summary, source: S03}
+  feed_absolute_tolerance_fraction: {range: [-0.20, 0.20], status: conservative_legacy_coverage, source: S03, note: 2014 manual says 20%; uncontrolled 2018 transcription says 10%. Full current clause verification pending. Wider stress envelope deliberately retained.}
+  conductor_current_mismatch_fraction: {maximum: 0.008, status: provisional_clause_transcription, note: Report and flag; verify section 9.4.3 against controlled full standard.}
+  current_a: {maximum: 0.010, preferred: 0.007, source: S03}
+  voltage_inside_microphone: Calculated from loaded feed/cable network; never assumed to equal 48 V.
+environment:
+  temperature_c: {nominal: 25, range: [-10, 50], stress: [-20, 70], status: assumed_application_envelope}
+  cable_length_m: {nominal: 10, range: [0, 100], stress_max: 300, status: assumed_application_envelope}
+  cable_resistance_ohm_per_m_per_conductor: {nominal: 0.10, range: [0.03, 0.20], status: assumed}
+  shield_resistance_ohm_per_m: {nominal: 0.05, status: assumed}
+  cable_direct_capacitance_f_per_m: {nominal: 6.0e-11, range: [3.0e-11, 1.0e-10], status: assumed}
+  cable_each_leg_to_shield_f_per_m: {nominal: 8.0e-11, range: [4.0e-11, 2.0e-10], status: assumed, note: Nominal effective differential capacitance 100 pF/m, informed by S03; decomposition is assumed.}
+  preamp_differential_load_ohm: {nominal: 2000, range: [1000, 10000], stress_min: 600, status: assumed}
+  preamp_leg_mismatch_fraction: {range: [-0.05, 0.05], status: assumed_stress}
+  preamp_coupling_f_per_leg: {nominal: 2.2e-5, status: assumed}
+  preamp_input_capacitance_f_per_leg: {nominal: 2.0e-10, status: assumed}
+  cable_model: Lumped pi; valid for initial audio loading; RF/distributed-line conclusions require replacement.
+component_policy:
+  selection: prohibited
+  bias_adjustment: No per-device trimming as a concealed substitute for selection.
+  model_population: Manufacturer limits or measurements required for yield qualification; assumed stress populations must be labelled.
+  protection: Noise/loading/distortion must be rerun after adding protection.
+  procurement: Ordinary current parts; no purchases authorized by this workspace task.
+phase_gates:
+  production_topology: Requires comparisons across several fundamental families and verified robustness.
+  pcb: Only after topology maturity.
+  physical_prototype: Requires safe polarization data, realistic devices and a measurement plan.

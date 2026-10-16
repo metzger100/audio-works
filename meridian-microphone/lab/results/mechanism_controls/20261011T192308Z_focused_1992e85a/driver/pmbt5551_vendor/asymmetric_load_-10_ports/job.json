@@ -1,0 +1,44 @@
+{
+  "directory": "pmbt5551_vendor/asymmetric_load_-10_ports",
+  "label": "asymmetric_load_-10_ports",
+  "model": {
+    "acquisition_status": "valid_spice",
+    "behavior_validation": "error",
+    "device_id": "pmbt5551",
+    "file": "models/semiconductor/vendor/pmbt5551.lib",
+    "id": "pmbt5551_vendor",
+    "manufacturer": "Nexperia",
+    "model_lineage": [],
+    "ngspice_behavior": "ps",
+    "parent_model_id": null,
+    "path": "semiconductor/vendor/pmbt5551.lib",
+    "pin_order": "subcircuit C B E; physical B1 E2 C3",
+    "primitive": "X",
+    "redistribution": {
+      "acquisition": "models/semiconductor/acquire.py; private receipt and acquisition.yaml",
+      "evidence": "Original notices and archive/PDF retained privately; public availability is not redistribution permission.",
+      "status": "not_established_do_not_redistribute"
+    },
+    "retrieved_date": "2026-10-09",
+    "runnability": "scoped_jobs_ok_with_retained_errors",
+    "sha256": "9f3e7425c5ebd57b8709851f271354dd46ddc42a4503b280d248fd015f27deb0",
+    "source_url": "https://assets.nexperia.com/documents/spice-model/PMBT5551.txt?download=1",
+    "subcircuit": "PMBT5551",
+    "syntax": "self-contained public subcircuit; dialect compatibility unverified",
+    "validation_record": "results/device_models/20261009T133651Z_parts_d3c30763/results.json",
+    "version": "extraction week42/2018"
+  },
+  "netlist_sha256": "d211b962b387a9b61e177ff7d6fded406d93cff9888642d05f5869ffe472ec9c",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "retained_hashes": {
+    "job.cir": "d211b962b387a9b61e177ff7d6fded406d93cff9888642d05f5869ffe472ec9c",
+    "n.raw": "1b1a8656a69b70c2c52050a96cfac1470064a1420f93671ce6751cb906bd2632",
+    "n.raw.csv": "b7e3832b92b291586f040c3345ae219aef93e2399bead033ab109cba4b9fd461",
+    "p.raw": "4e8ce836295db78c97f57ae4764dfa55543d019ccbb225dda8562b4f70b8f7cb",
+    "p.raw.csv": "e9dc3457d2d702eb3ee8fd5dee775ef88a616b551738888625b46d1157ca1e9c",
+    "simulator.log": "a72f2025a944559267d9b519ca3675ae1228e86253de86bb629d4e5fa14f0ad5"
+  },
+  "status": "ok",
+  "temperature_c": -10,
+  "timeout_s": 15
+}

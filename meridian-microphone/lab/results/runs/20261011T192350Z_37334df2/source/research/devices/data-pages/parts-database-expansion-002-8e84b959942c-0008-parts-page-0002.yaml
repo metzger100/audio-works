@@ -1,0 +1,179 @@
+- device_id: 2n7002
+  manufacturer: Nexperia
+  exact_mpn: 2N7002,215
+  package: SOT-23
+  roles: []
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+    characterization_attempted: true
+  lifecycle:
+    status: production
+    checked_date: '2026-10-05'
+    source_url: https://www.nexperia.com/product/2N7002
+  model_ids:
+  - 2n7002_failed_download
+  models:
+  - id: 2n7002_failed_download
+    path: semiconductor/vendor/2n7002.lib
+    sha256: 4a2a3f7fb1725f12fcfe3f7fef5cc082be2ac58eeb30ee4fdb693398e74abbf5
+    version: not_a_model
+    parent_model_id: null
+    acquisition: invalid_html_challenge
+    behavior: null
+    primitive: X
+    runnability: null
+    load_record: null
+    external_parameter_dependencies: []
+    compatibility_omissions: []
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/2N7002.pdf
+    retrieved_date: '2026-10-05'
+    version: Rev 7; 8 September 2011
+    local_path: models/semiconductor/vendor/evidence/2n7002.pdf
+    sha256: cc9c275457670c3cbbf2e56f5a75c800d3b5f0b396fabc798cf18cb639646475
+  sourcing_register: research/procurement/semiconductors_2026-10-05.yaml
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  candidate_combination_qualified: false
+  sourcing:
+    register: research/procurement/semiconductors_2026-10-05.yaml
+    implementation_qualified: false
+    delivered_cost_confirmed_eur: null
+  state_erratum: Earlier characterized=true described an invalid-HTML load attempt.
+    No accepted model behavior; original attempt/report retained.
+- device_id: mmbfj113
+  manufacturer: onsemi
+  exact_mpn: MMBFJ113
+  package: SOT-23
+  roles:
+  - high_impedance
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: unverified_exact_order_code
+    checked_date: '2026-10-05'
+    source_url: https://www.onsemi.com/design/tools-software/product-recommendation-tools-plus/jfet/products
+  model_ids: []
+  models: []
+  datasheet:
+    url: https://www.onsemi.com/download/data-sheet/pdf/mmbfj113-d.pdf
+    retrieved_date: '2026-10-05'
+    local_path: null
+    sha256: null
+  sourcing_register: research/procurement/semiconductors_2026-10-05.yaml
+  validation_record: null
+  candidate_combination_qualified: false
+  sourcing:
+    register: research/procurement/semiconductors_2026-10-05.yaml
+    implementation_qualified: false
+    delivered_cost_confirmed_eur: null
+- device_id: jfe2140
+  manufacturer: Texas Instruments
+  exact_mpn: JFE2140DR
+  package: SOIC-8 D
+  roles:
+  - high_impedance
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      jfe2140_vendor:
+      - behavior: idss_25c
+        status: pass
+        evidence: guaranteed_limit
+        condition: SLPS730B table6.5 VDS10V VGS0 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.0001_10
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.0001_1000
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_10
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_1000
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: current_noise_1khz
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: JFE2140 table6.5 VDS5V ID2mA 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: reverse_gate_leak
+        status: fail
+        evidence: guaranteed_limit
+        condition: 25C VDS0 VGS-30V TI or -10V Linear; bound includes fixture GMIN
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://www.ti.com/product/JFE2140
+  model_ids:
+  - jfe2140_vendor
+  models:
+  - id: jfe2140_vendor
+    path: semiconductor/vendor/jfe2140.lib
+    sha256: b872775746e2be5b00347664128b41c86c1483be224be8bc3780dc533c5fc2e0
+    version: Final 1.0 16AUG2021
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: disagreement
+    primitive: X
+    runnability: all_planned_jobs_run
+    load_record: null
+    external_parameter_dependencies: []
+    compatibility_omissions: []
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/jfe2140.pdf
+    version: SLPS730B August 2023
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_jfe2140.pdf
+    sha256: baeb38d1596ab468e9c8d0443afc5286e90fe3074001a81c660258767deb46a3
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  candidate_combination_qualified: false
+  sourcing:
+    register: research/procurement/parts_expansion_001_2026-10-09.yaml
+    implementation_qualified: false
+    delivered_cost_confirmed_eur: null

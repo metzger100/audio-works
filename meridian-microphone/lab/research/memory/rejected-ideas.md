@@ -21,7 +21,11 @@ Retain failure scope: software/model/integration failure does not reject an enti
 | Missing KF/leakage/film laws as zero | No favorable noise/leakage/transient credit; discrete limits cannot supply broadband/temperature laws |
 | Capsule analogy as measurement or safety | [Envelope001](../capsules/parameters-001.yaml) rejects regular/Flat, variant, system/capsule, dual-backplate/dual-diaphragm and normalization/approved-bias transfers; dimensional source errors and unsuitable tiny-value absolute tolerance corrected explicitly |
 | Source/cost/claim inference | HTML200 is not model acquisition; indexed stock is not live supply; K47FBSB price is not K47FRB; flags/absent searches are not claim/status clearance |
+| Filter benefit as leakage or stability qualification | [Focused001](../architectures/focused-hypotheses-001.md):1GΩ authority/startup remain failed;voltage orientation invariance is not bilateral multi-loop proof |
+| Shared variable names as identical component populations | Actual0019/0023 source resistors differ3.3k/1k. Preserve their own ranges with matched quantiles;do not narrow or pool them |
 
 [Device evidence](../devices/INDEX.md), [architecture evidence](../architectures/INDEX.md) and [immutable records](../../results/README.md) retain exact failed parents, repaired descendants and raw hashes. No thresholds, budgets or families are removed to get a pass.
 
 [Capsule material controls](../capsules/physics-001.md#material-consistency-and-center-constrained-examples) reject unqualified physical feasibility of the simple3µm polyester disk and two low-sensitivity material transfers. Retain both the original calculations and adverse sensitivity range; center-constraint/film-grade data remain unknown.
+
+[Diverse001](../architectures/diverse-prerequisites-001.md) rejects treating a small charge-node voltage as lost conversion, DC current cancellation as shot-noise cancellation, converged guard AC as stability proof, or seeded ideal mixer agreement as native periodic-device qualification. Failed macros and unaudited ideal power cannot retire families.

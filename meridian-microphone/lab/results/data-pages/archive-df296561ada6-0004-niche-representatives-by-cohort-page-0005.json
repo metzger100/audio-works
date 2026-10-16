@@ -71,5 +71,50 @@
   "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd|8911ebc19b0dc9ab81b57862f0ed3dc99c787b1c1b400c4be6b87814523aece5|ngspice|stationary_audio|{\"active_device_count\": 6, \"bias\": \"fixed_parts\", \"bootstrap\": true, \"common_mode\": \"divider\", \"feedback\": \"unity_voltage_guard\", \"input_device\": \"CMOS\", \"output\": \"discrete_NPN_differential_fixed_degeneration\", \"reference\": \"single_ended\", \"sensing\": \"voltage\", \"servo\": false}": {
     "axes": {},
     "scope": "model-conditional niche evidence only; no global winner"
+  },
+  "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd|c2076f7a791e983f5c78454e21df129bfc0a33c3fa4843f9dae13cb22f51c3eb|ngspice|stationary_audio|{\"active_device_count\": 5, \"bias\": \"fixed_parts\", \"bootstrap\": false, \"common_mode\": \"divider\", \"feedback\": \"source_degeneration\", \"input_device\": \"JFET\", \"output\": \"discrete_NPN_differential_fixed_degeneration\", \"reference\": \"single_ended\", \"sensing\": \"voltage\", \"servo\": false}": {
+    "axes": {
+      "current_a": {
+        "experiment_id": "20261011T192334Z_91abee84",
+        "qualified": false,
+        "value": 0.00410354597772711
+      },
+      "response_deviation_db": {
+        "experiment_id": "20261011T192334Z_91abee84",
+        "qualified": false,
+        "value": 0.6605551221272248
+      }
+    },
+    "scope": "model-conditional niche evidence only; no global winner"
+  },
+  "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd|c2076f7a791e983f5c78454e21df129bfc0a33c3fa4843f9dae13cb22f51c3eb|ngspice|stationary_audio|{\"active_device_count\": 7, \"bias\": \"source_servo\", \"bootstrap\": false, \"common_mode\": \"divider\", \"feedback\": \"slow_source_current_servo\", \"input_device\": \"JFET\", \"output\": \"discrete_NPN_differential_fixed_degeneration\", \"reference\": \"single_ended\", \"sensing\": \"voltage\", \"servo\": true}": {
+    "axes": {
+      "current_a": {
+        "experiment_id": "20261011T192341Z_519a5793",
+        "qualified": false,
+        "value": 0.005150433656145151
+      },
+      "response_deviation_db": {
+        "experiment_id": "20261011T192341Z_519a5793",
+        "qualified": false,
+        "value": 0.47212318350849386
+      }
+    },
+    "scope": "model-conditional niche evidence only; no global winner"
+  },
+  "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd|c2076f7a791e983f5c78454e21df129bfc0a33c3fa4843f9dae13cb22f51c3eb|ngspice|stationary_audio|{\"active_device_count\": 7, \"bias\": \"source_servo\", \"bootstrap\": false, \"common_mode\": \"divider\", \"feedback\": \"slow_source_current_servo\", \"input_device\": \"JFET\", \"output\": \"discrete_NPN_differential_fixed_degeneration\", \"reference\": \"single_ended_final_backplate_filtered\", \"sensing\": \"voltage\", \"servo\": true}": {
+    "axes": {
+      "current_a": {
+        "experiment_id": "20261011T192350Z_37334df2",
+        "qualified": false,
+        "value": 0.005150433724346845
+      },
+      "response_deviation_db": {
+        "experiment_id": "20261011T192350Z_37334df2",
+        "qualified": false,
+        "value": 0.5750659993174511
+      }
+    },
+    "scope": "model-conditional niche evidence only; no global winner"
   }
 }

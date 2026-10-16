@@ -1,0 +1,99 @@
+[
+  {
+    "analysis_backend_prerequisite": "Authority, LF crossover, bias ramp and noise",
+    "assumption_inverted": "The capsule must be voltage sensed",
+    "conversion_principle": "AC charge while DC electrode voltage is independently regulated",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "charge",
+      "floating",
+      "servo",
+      "high_feedback"
+    ],
+    "id": "concept_0021",
+    "independent_analytical_oracle": "Separate AC/DC loop return determinant",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "charge",
+      "floating",
+      "servo",
+      "high_feedback"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Differential current-output transformation",
+      "dc_bias": "Independent low-bandwidth polarization/leakage loop",
+      "expected_dominant_distortion": "Loop crossover intermodulation and finite authority",
+      "expected_dominant_noise": "Loop crossover/reference and charge amplifier noise",
+      "fastest_falsification": "AC/DC return ratios, slow ramps, leakage steps and audio injection together",
+      "gain_or_impedance_transformation": "Capacitive audio feedback plus DC loop",
+      "likely_fatal_flaw": "Two loops fight at LF or violate safe electrode bias",
+      "loading_control": "AC virtual potential, DC reference floats as needed",
+      "sensed_quantity": "AC charge while DC electrode voltage is independently regulated"
+    },
+    "real_part_dependencies": "Charge stage, independent electrode actuator, bias control",
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "smallest_experiment": "AC/DC return ratios, slow ramps, leakage steps and audio injection together",
+    "source_links": [
+      "https://www.ti.com/lit/an/sloa033a/sloa033a.pdf"
+    ],
+    "sources": [
+      "S05",
+      "S06"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Separate AC charge loop and DC electrode-voltage loop"
+  },
+  {
+    "analysis_backend_prerequisite": "Current copying noise/compliance at low current",
+    "assumption_inverted": "The first device must be a FET",
+    "conversion_principle": "Capsule displacement current translated to a remote integration node",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "no_fet",
+      "current",
+      "instrumentation",
+      "high_feedback"
+    ],
+    "id": "concept_0022",
+    "independent_analytical_oracle": "Current-copy gain and shot/current correlation",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "current",
+      "instrumentation",
+      "high_feedback"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Complementary differential output currents",
+      "dc_bias": "Degenerated current conveyor and slow offset loop",
+      "expected_dominant_distortion": "Current-copy nonlinearity and Early effect",
+      "expected_dominant_noise": "Base-current fluctuations, mirror/current-copy noise",
+      "fastest_falsification": "Current-noise floor and transimpedance linearity before complete output design",
+      "gain_or_impedance_transformation": "Current copying then charge integration",
+      "likely_fatal_flaw": "Current copying amplifies shot noise and loses LF charge",
+      "loading_control": "Feedback makes controlled input potential; remote capacitor sets gain",
+      "sensed_quantity": "Capsule displacement current translated to a remote integration node"
+    },
+    "real_part_dependencies": "BJT current conveyor/mirror + remote integration capacitor",
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "smallest_experiment": "Current-noise floor and transimpedance linearity before complete output design",
+    "source_links": [
+      "https://arxiv.org/pdf/2007.00615"
+    ],
+    "sources": [
+      "S07",
+      "S08"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Bipolar current-conveyor charge translator"
+  }
+]

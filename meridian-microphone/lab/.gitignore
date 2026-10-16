@@ -30,6 +30,10 @@ models/semiconductor/vendor/
 results/**/source/models/semiconductor/vendor/
 research/device_sources/local/
 results/**/source/research/device_sources/local/
+research/architecture_sources/local/
+results/**/source/research/architecture_sources/local/
+# Explicit seeded source/output arrays are original waveform evidence.
+results/**/seeded/*.npz
 
 # Analytic optimizer-oracle scratch; verification JUnit/failure/source records remain.
 results/verification/**/raw_tests/test_budget_counts_failures_an*/

@@ -4,5 +4,5 @@
 [Structured index](evidence-index.json). Select a subject hub; a repository pass establishes no hardware qualification.
 
 - [Device model controls](evidence/device-models.md) — 38 records
-- [Qualification and optimization attempts](evidence/runs.md) — 99 records
-- [Verification batches](evidence/verification.md) — 42 records
+- [Qualification and optimization attempts](evidence/runs.md) — 102 records
+- [Verification batches](evidence/verification.md) — 47 records

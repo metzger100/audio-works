@@ -8,6 +8,45 @@ from repo_fixture import RepositoryFixture, project
 
 
 class TestStoragePolicy(RepositoryFixture):
+    def test_private_architecture_snapshot_keeps_original_integrity_required(self):
+        folder = "meridian-microphone/lab/results/verification/architecture_batch"
+        document = "research/architecture_sources/local/batch/paper.bin"
+        authored = "tools/controls/authored.py"
+        payload = b"original private document\n"
+        self.put(folder + "/source/" + document, payload.decode())
+        self.put(folder + "/source/" + authored, "# authored control\n")
+        self.put(
+            folder + "/verification.json",
+            json.dumps(
+                {
+                    "source_manifest": {
+                        document: hashlib.sha256(payload).hexdigest(),
+                        authored: hashlib.sha256(b"# authored control\n").hexdigest(),
+                    }
+                }
+            ),
+        )
+        self.put(
+            ".gitignore",
+            (self.root / ".gitignore").read_text()
+            + "meridian-microphone/lab/results/**/source/research/architecture_sources/local/\n",
+        )
+        self.refresh()
+        self.run_git("add", "-A")
+        report = self.check(staged=True)
+        self.assertEqual(report["status"], "pass", report["errors"])
+        integrity = project.verify_evidence(self.root, project.View(self.root, staged=True))
+        self.assertEqual(integrity["status"], "pass")
+        self.put(folder + "/source/" + document, "damaged document\n")
+        integrity = project.verify_evidence(self.root, project.View(self.root, staged=True))
+        self.assertIn(folder + "/source/" + document, integrity["damaged"])
+        self.put(folder + "/source/" + document, payload.decode())
+        (self.root / folder / "source" / authored).unlink()
+        self.run_git("add", "-A")
+        self.assertIn(
+            "Missing required source snapshot", "\n".join(self.check(staged=True)["errors"])
+        )
+
     def test_local_runtime_snapshot_does_not_exempt_authored_wrapper(self):
         folder = "meridian-microphone/lab/results/device_models/runtime_batch"
         runtime = "tools/ngspice/usr/bin/ngspice"

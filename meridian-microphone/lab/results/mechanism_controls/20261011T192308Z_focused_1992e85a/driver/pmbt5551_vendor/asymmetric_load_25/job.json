@@ -1,0 +1,48 @@
+{
+  "directory": "pmbt5551_vendor/asymmetric_load_25",
+  "label": "asymmetric_load_25",
+  "model": {
+    "acquisition_status": "valid_spice",
+    "behavior_validation": "error",
+    "device_id": "pmbt5551",
+    "file": "models/semiconductor/vendor/pmbt5551.lib",
+    "id": "pmbt5551_vendor",
+    "manufacturer": "Nexperia",
+    "model_lineage": [],
+    "ngspice_behavior": "ps",
+    "parent_model_id": null,
+    "path": "semiconductor/vendor/pmbt5551.lib",
+    "pin_order": "subcircuit C B E; physical B1 E2 C3",
+    "primitive": "X",
+    "redistribution": {
+      "acquisition": "models/semiconductor/acquire.py; private receipt and acquisition.yaml",
+      "evidence": "Original notices and archive/PDF retained privately; public availability is not redistribution permission.",
+      "status": "not_established_do_not_redistribute"
+    },
+    "retrieved_date": "2026-10-09",
+    "runnability": "scoped_jobs_ok_with_retained_errors",
+    "sha256": "9f3e7425c5ebd57b8709851f271354dd46ddc42a4503b280d248fd015f27deb0",
+    "source_url": "https://assets.nexperia.com/documents/spice-model/PMBT5551.txt?download=1",
+    "subcircuit": "PMBT5551",
+    "syntax": "self-contained public subcircuit; dialect compatibility unverified",
+    "validation_record": "results/device_models/20261009T133651Z_parts_d3c30763/results.json",
+    "version": "extraction week42/2018"
+  },
+  "netlist_sha256": "b259a4b8bd7aab87c4a4518351be496afd1dea9b77d9af2a7b1b30431efdff68",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "retained_hashes": {
+    "audio.raw": "aa3e72f9b72971567dce2bdd8d4de40ecb7301518c2a5733cc4b38d2096bfefc",
+    "audio.raw.csv": "c1d20d10d99c826c7606d2b67db74c2942ffc47db4c99b200da5bcd83ab6ead5",
+    "job.cir": "b259a4b8bd7aab87c4a4518351be496afd1dea9b77d9af2a7b1b30431efdff68",
+    "noise.raw": "52025fb91acbada098da19b2311094f02cafb813a67de217e10b8726b7cd85d5",
+    "noise.raw.csv": "24c0822879a7475ad3a6569d951c27f7817534541fc4187cf9895e19a858d140",
+    "op.raw": "2c34af83172991cc8db0120ce65c37112555211bd7a89846087b7054fce4ecc7",
+    "op.raw.csv": "e6f40620319de052e68b7b48587d129e0f0c41a4522fc64fabdfab229b48570c",
+    "simulator.log": "7e4452a2fd45bb7df9f1eec0a575c26c8146f1a7da3f5514ee8e590830ef9923",
+    "supply.raw": "06b526a2515a4a71e18336c344fa9b8f9062bd82efd15ef57f75e0dc222ce39d",
+    "supply.raw.csv": "a8540e8d3d9b674bf4c91589359457607bd389998b2830cf0afe0ba57a05b109"
+  },
+  "status": "ok",
+  "temperature_c": 25,
+  "timeout_s": 15
+}

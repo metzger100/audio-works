@@ -1,0 +1,218 @@
+{
+  "cmos": {
+    "$include": "results-7c39d6b011c5-0001-results-0003-cmos.json"
+  },
+  "island": [
+    {
+      "carrier_peak_v": 0.2,
+      "demod_peak_v": {
+        "1000": 6.951589301369639e-16,
+        "100000": 1.6070757575949364e-13,
+        "101000": 4.389196794119318e-16,
+        "102000": 2.358184434038528e-16,
+        "198000": 5.043299197569855e-18,
+        "199000": 1.1437508708573651e-17,
+        "2000": 1.6241592499876393e-16,
+        "200000": 8.1099132991593e-18,
+        "201000": 4.285585102893932e-18,
+        "202000": 4.007363726688291e-18,
+        "98000": 2.4049399982132134e-16,
+        "99000": 4.535041496379133e-16
+      },
+      "density": 32,
+      "expected_demod_peak_v": 2.7345472257226357e-05,
+      "pressure_peak_pa": 0,
+      "recovered_ratio": 2.5421353984964006e-11,
+      "sidebands_peak_v": {
+        "1000": 4.475031091738729e-14,
+        "100000": 6.701561446560476e-16,
+        "101000": 2.878329929841234e-16,
+        "102000": 4.477992888088017e-16,
+        "198000": 1.1706654584416536e-16,
+        "199000": 1.7642939897722105e-16,
+        "2000": 4.3990642617305646e-15,
+        "200000": 2.417303144977024e-16,
+        "201000": 3.1683567507482043e-16,
+        "202000": 1.636228958090413e-16,
+        "98000": 3.0346179319874077e-16,
+        "99000": 8.958318042405923e-16
+      },
+      "status": "executed"
+    },
+    {
+      "carrier_peak_v": 0,
+      "density": 32,
+      "pressure_peak_pa": 1,
+      "status": "unsupported"
+    },
+    {
+      "carrier_peak_v": 0.2,
+      "demod_peak_v": {
+        "1000": 2.744127188873878e-05,
+        "100000": 1.2017845388171581e-08,
+        "101000": 8.558640296408037e-05,
+        "102000": 5.826635024412491e-09,
+        "198000": 2.702664718745257e-11,
+        "199000": 1.281335566132295e-07,
+        "2000": 2.1636394546013805e-10,
+        "200000": 2.5460794382743612e-11,
+        "201000": 1.3011084364513622e-07,
+        "202000": 2.0168232537616285e-11,
+        "98000": 6.075686291199113e-09,
+        "99000": 8.731942482413119e-05
+      },
+      "density": 32,
+      "expected_demod_peak_v": 2.7345472257226357e-05,
+      "pressure_peak_pa": 1,
+      "recovered_ratio": 1.0035033087236995,
+      "sidebands_peak_v": {
+        "1000": 0.005435741831004935,
+        "100000": 2.216299161487501e-09,
+        "101000": 1.6147690466637143e-05,
+        "102000": 1.1081582851664065e-09,
+        "198000": 1.2965128388445168e-12,
+        "199000": 5.5709715547767985e-12,
+        "2000": 3.730356591889004e-07,
+        "200000": 7.724820969961417e-13,
+        "201000": 7.337394577594967e-12,
+        "202000": 9.161034682701503e-13,
+        "98000": 1.1081113050773736e-09,
+        "99000": 1.6146993096069634e-05
+      },
+      "status": "executed"
+    },
+    {
+      "carrier_peak_v": 0.2,
+      "demod_peak_v": {
+        "1000": 2.748979746259913e-05,
+        "100000": 1.2012503874851093e-08,
+        "101000": 8.558503025775668e-05,
+        "102000": 5.771883069766156e-09,
+        "198000": 1.954400023213198e-11,
+        "199000": 1.2800672581672417e-07,
+        "2000": 3.3987158598162176e-09,
+        "200000": 6.223382422488054e-11,
+        "201000": 1.2986993326934214e-07,
+        "202000": 1.927825058985734e-11,
+        "98000": 6.015514469261475e-09,
+        "99000": 8.731862441409006e-05
+      },
+      "density": 64,
+      "expected_demod_peak_v": 2.7345472257226357e-05,
+      "pressure_peak_pa": 1,
+      "recovered_ratio": 1.0052778465120358,
+      "sidebands_peak_v": {
+        "1000": 0.005435741809452842,
+        "100000": 2.216451271055956e-09,
+        "101000": 1.614771291309327e-05,
+        "102000": 1.1074538474701218e-09,
+        "198000": 3.7729505080398127e-13,
+        "199000": 2.574269943147677e-11,
+        "2000": 3.730364195808115e-07,
+        "200000": 1.322631976423867e-12,
+        "201000": 2.314874752693845e-11,
+        "202000": 1.3322993452940109e-12,
+        "98000": 1.1082881533427381e-09,
+        "99000": 1.6146980962888442e-05
+      },
+      "status": "executed"
+    }
+  ],
+  "parents": [
+    {
+      "candidate": "candidate_0012",
+      "jobs": [
+        {
+          "folder": "results/mechanism_controls/20261016T130909Z_diverse_00c8217a/candidate_0012/0001_nominal",
+          "netlist_sha256": "1ca54a9478c02dac712362e30b1f65d54a8e16c4ad98bd0d035fa82532ada84f",
+          "reason": "ngspice exit 1: \nError",
+          "semiconductor_models": [
+            {
+              "acquisition_status": "valid_spice",
+              "device_id": "bc846b",
+              "id": "bc846b_emitter_r1",
+              "manufacturer": "Nexperia",
+              "model_lineage": [
+                {
+                  "id": "bc846b_vendor",
+                  "retrieved_date": "2026-10-05",
+                  "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+                  "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+                  "version": "extraction week 24/2021"
+                }
+              ],
+              "ngspice_behavior": "",
+              "parent_model_id": "bc846b_vendor",
+              "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+              "redistribution": {
+                "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+                "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+                "status": "not_established_do_not_redistribute"
+              },
+              "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/mechanism_controls/20261016T130909Z_diverse_00c8217a/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+              "retrieved_date": "2026-10-05",
+              "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+              "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+              "subcircuit": "BC846B",
+              "syntax": "SPICE3 subcircuit",
+              "version": "project structural child r1; Q2 emitter 33 -> 3"
+            }
+          ],
+          "status": "error"
+        }
+      ],
+      "reason": "SimulationError: ngspice exit 1: \nError",
+      "scope": "unchanged nominal full-DUT DC/AC diagnostic only",
+      "status": "error"
+    },
+    {
+      "candidate": "candidate_0024",
+      "jobs": [
+        {
+          "folder": "results/mechanism_controls/20261016T130909Z_diverse_00c8217a/candidate_0024/0001_nominal",
+          "netlist_sha256": "9b744d77f03e563176339298cddad64a59a4e441d22eebb44479b59abb6d4844",
+          "reason": "ngspice exit 1: \nError",
+          "semiconductor_models": [
+            {
+              "acquisition_status": "valid_spice",
+              "device_id": "bc846b",
+              "id": "bc846b_emitter_r1",
+              "manufacturer": "Nexperia",
+              "model_lineage": [
+                {
+                  "id": "bc846b_vendor",
+                  "retrieved_date": "2026-10-05",
+                  "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+                  "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+                  "version": "extraction week 24/2021"
+                }
+              ],
+              "ngspice_behavior": "",
+              "parent_model_id": "bc846b_vendor",
+              "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+              "redistribution": {
+                "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+                "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+                "status": "not_established_do_not_redistribute"
+              },
+              "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/mechanism_controls/20261016T130909Z_diverse_00c8217a/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+              "retrieved_date": "2026-10-05",
+              "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+              "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+              "subcircuit": "BC846B",
+              "syntax": "SPICE3 subcircuit",
+              "version": "project structural child r1; Q2 emitter 33 -> 3"
+            }
+          ],
+          "status": "error"
+        }
+      ],
+      "reason": "SimulationError: ngspice exit 1: \nError",
+      "scope": "unchanged nominal full-DUT DC/AC diagnostic only",
+      "status": "error"
+    }
+  ],
+  "seeded": {
+    "$include": "results-7c39d6b011c5-0001-results-0005-seeded.json"
+  }
+}

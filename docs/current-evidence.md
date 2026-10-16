@@ -15,3 +15,7 @@ Authoritative pointers from project.json; read relevant originals and conditions
 - [2026-10-11-capsule-envelope.md](validation/2026-10-11-capsule-envelope.md)
 - [simulation-prerequisites-001.md](../meridian-microphone/lab/research/devices/simulation-prerequisites-001.md)
 - [2026-10-11-simulation-prerequisites.md](validation/2026-10-11-simulation-prerequisites.md)
+- [focused-hypotheses-001.md](../meridian-microphone/lab/research/architectures/focused-hypotheses-001.md)
+- [2026-10-12-focused-hypotheses.md](validation/2026-10-12-focused-hypotheses.md)
+- [diverse-prerequisites-001.md](../meridian-microphone/lab/research/architectures/diverse-prerequisites-001.md)
+- [2026-10-16-diverse-prerequisites.md](validation/2026-10-16-diverse-prerequisites.md)

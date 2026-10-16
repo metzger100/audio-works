@@ -1,0 +1,781 @@
+schema_version: 1
+date: '2026-10-09'
+scope: Continuation002 own observations; original bytes private; no orders/contacts/licence
+  acceptance
+question_source_matrix:
+- role: high_impedance
+  question: Only JFE150 at baseline; J113 no model. New dual and independent maker
+    allow DC comparisons, but current/flicker/high-field leakage and process correlation
+    block complete noise/charge controls. LSK389 child exposes ignored ISR/NR/ALPHA/VK;
+    no accepted behavior credit.
+  primary_routes:
+  - https://www.ti.com/product/JFE2140
+  - https://www.linearsystems.com/jfet-amplifiers-duals/lsk389-series
+  - https://www.onsemi.com/
+  followup: Freeze reduced charge-input oracle before candidate0012 alternatives;
+    compare actual100uA/2mA spectra and capsule45-100pF envelope.
+- role: low_noise_bipolar
+  question: BC850C adds ordinary high-beta/NF evidence; base-current authority still
+    conflicts with1Gohm leakage; no KF in either model.
+  primary_routes:
+  - https://www.nexperia.com/product/BC850C
+  - https://www.ti.com/lit/pdf/SBOA345
+  followup: Separate200uA Rs2k narrowband NF from voltage/current noise spectra and
+    low-current charge authority.
+- role: p48_power
+  question: Complementary exact PNP model gap closed for limited DC/cap/leak controls.
+    Flicker, breakdown/SOA, P48 electrothermal feedback and production variation remain
+    unresolved; Diotec backend warnings block accepted behavior.
+  primary_routes:
+  - https://www.nexperia.com/product/PMBT5551
+  - https://www.diodes.com/part/view/MMBT5401/
+  - https://diotec.com/en/product/2N5551.html
+  followup: DC current regulator with real resistor feedback, P48 feed drop, coupled
+    temperature, startup/reversal and dissipation oracle first.
+- role: balanced_output
+  question: DMMT5401 ordinary adjacent-die2percent matching documented; package300mW
+    combined. Nominal halves do not validate matching/noise/thermal correlation, actual
+    output loading or the complete P48 budget.
+  primary_routes:
+  - https://www.diodes.com/part/view/DMMT5401/
+  - https://www.ti.com/product/OPA1656
+  - https://www.ti.com/lit/pdf/SBOA320
+  followup: Derive total quiescent + load currents; exact complementary BJT model
+    prerequisite before balanced HV output experiments.
+- role: guard_servo
+  question: OPA928 supports grounded follower/noise at some supply/temperature points,
+    others warn/timeout. ADA4530 licence gate. No floating/guard-loaded/charge/noise
+    validation. Explicit nodeset preserves grounded OPA928 point but translated+20V
+    fails; OPA1656/LMP7721 still time out.
+  primary_routes:
+  - https://www.ti.com/product/OPA928
+  - https://www.ti.com/product/LMP7721
+  followup: Grounded versus floating identical oracle and common-mode/guard load sweep;
+    humidity/board leakage remains physical unknown.
+- role: carrier
+  question: TMUX1102 adds conditioned injection/Ron/leak test method; IBIS is not
+    analog SPICE. No acquired periodic-noise model, regulator/startup/common-mode
+    or demodulator validation.
+  primary_routes:
+  - https://www.ti.com/product/TMUX1102
+  - https://www.ti.com/product/CD74HC4053
+  - https://www.analog.com/en/products/ad630.html
+  followup: Continue isolated carrier oracle; real switch charge injection/Ron/leakage,
+    oscillator and demodulator synchronous noise prerequisite; no ideal-block credit.
+- role: protection
+  question: BAV199 one-diode syntax child passes75V25C leakage bound and0V1MHz cap
+    bound. Double package plus humidity/high-T/turn-on/recovery not qualified.
+  primary_routes:
+  - https://www.nexperia.com/product/BAV199
+  followup: Add protection only after actual node voltage and leakage-noise budget;5nA
+    worst bound forbids assuming femtoampere loading.
+- role: high_r
+  question: ExistingHVA12JA1G00 thickfilm high-V resistor; excess noise and surface
+    leakage unknown.500M series and CRHV are leads, no substitute qualification.
+  primary_routes:
+  - https://www.ohmite.com/catalog/rx-1m-hi-meg/RX-1M1007FE/
+  - https://www.vishay.com/docs/68002/crhv.pdf
+  followup: Couple gate leak, DC authority, VCR, board leakage, TCR and dielectric
+    losses; documented limits are not a broadband law.
+- role: capacitors
+  question: Exact WIMA100nF100V10percent PP dimensions/IR/DF documented; seller shows0stock
+    and temperature conflict. Existing1nF C0G loss methods and parallel electrolytic
+    law/combination qualification unresolved.
+  primary_routes:
+  - https://www.wima.de/wp-content/uploads/media/e_WIMA_MKP_2.pdf
+  - https://yageogroup.com/download/specsheet/CC0603JRNPO0BN102
+  followup: C0G1nF feedback/compensation control and PP series research; output electrolytic
+    optimization stays below bias/noise gaps.
+search_sessions:
+- id: web_01
+  timestamp_utc: null
+  date: '2026-10-09'
+  raw_record: null
+  queries:
+  - site.onsemi.com 2N5401 SPICE model 2N5551
+  - site.diodes.com MMBT5401 spice model file
+  - site.diotec.com MMBT5401 SPICE
+  - site.tme.eu de 2N5551 2N5401 lager privat versandkosten
+  limitation: First raw provider output not saved; exact UTC unknown. Subsequent direct/source
+    records preserved.
+- record: research/device_sources/local/parts_expansion_002/web_02.json
+  sha256: a73047f649c5c3a80e56768a2677642770239118279cd8ce9a5b70964af7c55c
+  timestamp_utc:
+    current_time: 2026-10-09 14:34:53 UTC
+  actions:
+    open:
+    - ref_id: https://www.diodes.com/part/view/MMBT5401/
+    - ref_id: https://www.diodes.com/design/tools/spice-models
+    - ref_id: https://diotec.com/en/product/2N5401.html
+    - ref_id: https://diotec.com/en/product/2N5551.html
+    response_length: long
+  limitation: Crawl/index observations are not live stock or official legal status
+- record: research/device_sources/local/parts_expansion_002/web_03.json
+  sha256: 7544d28582dc88809622ed53e8b13f3f38ddcc5946c81dd35c7e35b5a341f751
+  timestamp_utc:
+    current_time: 2026-10-09 14:35:09 UTC
+  actions:
+    click:
+    - ref_id: turn25view0
+      id: 40
+    - ref_id: turn25view0
+      id: 31
+    find:
+    - ref_id: turn25view2
+      pattern: Spice
+    - ref_id: turn25view3
+      pattern: Spice
+    response_length: long
+  limitation: Crawl/index observations are not live stock or official legal status
+- record: research/device_sources/local/parts_expansion_002/web_04.json
+  sha256: 55c2a29bd74a7e57632f686fdeeaf48510c547bd6d85231e823e099c9797e5a9
+  timestamp_utc:
+    current_time: 2026-10-09 14:35:53 UTC
+  actions:
+    open:
+    - ref_id: https://www.diodes.com/part/view/MMBT5551/
+    click:
+    - ref_id: turn25view3
+      id: 65
+    - ref_id: turn25view3
+      id: 63
+    search_query:
+    - q: site.tme.eu de lieferkosten private kunden EUR DHL 2026
+    - q: site.ngspice.sourceforge.io ngbehavior ltpsa mfg bvcbo vceo
+    - q: site.ti.com OPA1656 ngspice model convergence OPA928 simulation
+    response_length: long
+  limitation: Crawl/index observations are not live stock or official legal status
+- record: research/device_sources/local/parts_expansion_002/web_05.json
+  sha256: 96379b4415b283585230a1c91ccd5099846e8aa521b2995b6368751c9cb26edf
+  timestamp_utc:
+    current_time: 2026-10-09 14:37:36 UTC
+  actions:
+    search_query:
+    - q: site.ti.com TMUX1102 SPICE model leakage charge injection datasheet
+    - q: site.onsemi.com J113 SPICE download model J113
+    - q: site.vishay.com JFET J113 spice model SILICONIX
+    - q: site.linearsystems.com LSK389 SPICE model MFG NLEV 2026
+    response_length: long
+  limitation: Crawl/index observations are not live stock or official legal status
+- record: research/device_sources/local/parts_expansion_002/web_06.json
+  sha256: ea8a577dff8049354f5e1534588dbdbac99ce3364c53d32c30b6dbca3748b93c
+  timestamp_utc:
+    current_time: 2026-10-09 14:38:50 UTC
+  actions:
+    search_query:
+    - q: site.vishay.com 1 GOhm CRHV order 1G00
+    - q: site.ohmite.com 1 GOhm resistor datasheet RX1M
+    - q: site.tme.eu de PMBT5551 MMBT5401 EUR lager
+    - q: site.tme.eu de HVA12JA1G00 1G Ohm
+    open:
+    - ref_id: https://www.diodes.com/part/view/MMBT5551
+    response_length: long
+  limitation: Crawl/index observations are not live stock or official legal status
+- record: research/device_sources/local/parts_expansion_002/web_07.json
+  sha256: e4de17912359b79c7258c77cfba3997a21ae670997486ba81436ad501f9f6774
+  timestamp_utc:
+    current_time: 2026-10-09 14:40:13 UTC
+  actions:
+    search_query:
+    - q: site:diodes.com/spice/download MMBT5551
+    - q: site:diodes.com/spice/download DMMT5401
+    - q: site:diodes.com/design/tools/spice-models "MMBT5551"
+    - q: site:tme.eu/de/details "PMBT5551"
+    response_length: long
+  limitation: Crawl/index observations are not live stock or official legal status
+- record: research/device_sources/local/parts_expansion_002/web_08.json
+  sha256: 27e9143ef2c62e1f14e729034a55b8a01ed7361d31a4dfb73566f5590520caa9
+  timestamp_utc:
+    current_time: 2026-10-09 14:42:18 UTC
+  actions:
+    open:
+    - ref_id: turn30search0
+    - ref_id: https://www.diodes.com/part/view/DMMT5401/
+    search_query:
+    - q: '"MMBT5551" "spice/download/2588"'
+    - q: site.tme.eu/de/details "MMBT5401-7-F"
+    - q: site.digikey.de "RX-1M1007FE"
+    - q: site.ti.com OPA1656 TINA model SBOMAW
+    response_length: long
+  limitation: Crawl/index observations are not live stock or official legal status
+- record: research/device_sources/local/parts_expansion_002/web_09.json
+  sha256: 5bbde354316ab598900ea9590ccfbeb802af01bcea56bc3ca740465edef9faaf
+  timestamp_utc:
+    current_time: 2026-10-09 14:48:44 UTC
+  actions:
+    find:
+    - ref_id: https://www.diodes.com/part/view/DMMT5401/
+      pattern: SPICE
+    - ref_id: https://www.diodes.com/part/view/MMBT5551
+      pattern: SPICE
+    search_query:
+    - q: site.ngspice.sourceforge.io ngspice-47-manual.pdf
+    - q: site.tme.eu/de/details "MMBT5401"
+    - q: site.tme.eu/de/details "RX-1M1007"
+    response_length: long
+  limitation: Crawl/index observations are not live stock or official legal status
+- record: research/device_sources/local/parts_expansion_002/web_10.json
+  sha256: 9565c5deb9cf4190a7505732d8c386058171c3681b54346c171a7ac47fe66978
+  timestamp_utc:
+    current_time: 2026-10-09 14:49:28 UTC
+  actions:
+    open:
+    - ref_id: https://www.ti.com/product/OPA1656
+    - ref_id: https://www.tme.eu/de/details/mmbt5401-dio/pnp-smd-transistoren/diotec-semiconductor/mmbt5401/
+    - ref_id: https://www.tme.eu/de/details/2n5551/transistoren-npn-tht/diotec-semiconductor/
+    - ref_id: https://www.ohmite.com/catalog/rx-1m-hi-meg/RX-1M1007FE/
+    click:
+    - ref_id: turn32view0
+      id: 45
+    response_length: long
+  limitation: Crawl/index observations are not live stock or official legal status
+- record: research/device_sources/local/parts_expansion_002/web_11.json
+  sha256: fc88dbfed9ca20620753c46a991c5a5c9938bf422e2671a8e43b1089378cee7e
+  timestamp_utc:
+    current_time: 2026-10-09 14:49:49 UTC
+  actions:
+    click:
+    - ref_id: turn33view0
+      id: 27
+    - ref_id: turn33view0
+      id: 28
+    - ref_id: turn33view0
+      id: 21
+    - ref_id: turn33view0
+      id: 14
+    search_query:
+    - q: site.ohmite.com "rx-1m-hi-meg.pdf"
+    - q: site.wima.de MKP2 polypropylene dielectric absorption 100n 63V
+    response_length: short
+  limitation: Crawl/index observations are not live stock or official legal status
+- record: research/device_sources/local/parts_expansion_002/web_12.json
+  sha256: 38f3b2fa7945f63e4e7ad1302e7bc1cfdd130c6a358c56a4e6ec230971dc5544
+  timestamp_utc:
+    current_time: 2026-10-09 14:54:50 UTC
+  actions:
+    search_query:
+    - q: site.digikey.de/de/products/detail/diodes-incorporated/ "MMBT5401-7-F"
+    - q: site.mouser.de "MMBT5401-7-F" "Auf Lager"
+    - q: site.tme.eu/de "2N5551" "EUR"
+    - q: site.tme.eu/de "MKP2" "100nF" "WIMA"
+    open:
+    - ref_id: https://www.wima.de/wp-content/uploads/media/e_WIMA_MKP_2.pdf
+    response_length: long
+  limitation: Crawl/index observations are not live stock or official legal status
+- record: research/device_sources/local/parts_expansion_002/web_13.json
+  sha256: c466545639806587c4b841c612ecc56a0e8be47a81941ff5616c1a657a9d5791
+  timestamp_utc:
+    current_time: 2026-10-09 17:08:12 UTC
+  actions:
+    open:
+    - ref_id: https://www.tme.eu/de/details/2n5551-dio/npn-tht-transistoren/diotec-semiconductor/2n5551/
+    - ref_id: turn35search0
+    - ref_id: turn35search1
+    - ref_id: https://www.tme.eu/de/how-to-buy/7345/Transportart-und-Transportkosten/
+    response_length: short
+  limitation: Crawl/index observations are not live stock or official legal status
+- record: research/device_sources/local/parts_expansion_002/web_14.json
+  sha256: d1f8bb876fd5a8a769615e677348840addf1441d7ad099980696ce3921a77a36
+  timestamp_utc:
+    current_time: 2026-10-09 17:08:38 UTC
+  actions:
+    search_query:
+    - q: site.register.epo.org "12021490"
+    - q: site.dpma.de "Guard" "Mikrofon" Patent
+    - q: site.ti.com "JFE2140" "patent"
+    open:
+    - ref_id: https://patents.google.com/patent/US12021490B2/en
+    - ref_id: https://register.epo.org/smartSearch?query=US12021490
+    response_length: short
+  limitation: Crawl/index observations are not live stock or official legal status
+acquisitions:
+- id: digikey_5401_route
+  timestamp_utc: '2026-10-09T17:08:11.336258+00:00'
+  requested_url: https://www.digikey.de/de/products/detail/diodes-incorporated/MMBT5401-7-F/804904
+  effective_url: https://www.digikey.de/de/products/detail/diodes-incorporated/MMBT5401-7-F/804904
+  http: 403
+  reported_mime: text/html; charset=UTF-8
+  signature: <!DOCTYPE html><html lang="en-US
+  bytes: 5621
+  sha256: 0781c2528b3113a0a4aefa0284d10f37219164f072758a0bdbadd6614ee7360e
+  private_response: research/device_sources/local/parts_expansion_002/digikey_5401_route/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/digikey_5401_route/receipt.json
+  receipt_sha256: 5475fe52568c554f8f3aff38a0a16dc2695df7e45837b424195adcbaf774f850
+  failure_preserved: true
+- id: diodes_5401_datasheet
+  timestamp_utc: '2026-10-09T14:36:39.108268+00:00'
+  requested_url: https://www.diodes.com/datasheet/download/MMBT5401.pdf
+  effective_url: https://www.diodes.com/datasheet/download/MMBT5401.pdf
+  http: 200
+  reported_mime: application/pdf
+  signature: "%PDF-1.5\r\n%����\r\n1 0 obj\r\n<</Typ"
+  bytes: 395677
+  sha256: 1515e425149f78c5e350f8c09aa98ab5ed6b1745420c8f7ef40811d783f71ab2
+  private_response: research/device_sources/local/parts_expansion_002/diodes_5401_datasheet/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/diodes_5401_datasheet/receipt.json
+  receipt_sha256: 4f4db6d3114ea0614f45fede0dfb4cdef5b58b26799fe819930fff97546825d0
+  failure_preserved: false
+- id: diodes_5401_model
+  timestamp_utc: '2026-10-09T14:36:39.458132+00:00'
+  requested_url: https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt
+  effective_url: https://www.diodes.com/spice/download/2587/MMBT5401.spice.txt
+  http: 200
+  reported_mime: text/plain; name="MMBT5401.spice.txt";charset=UTF-8
+  signature: '* DIODES INCORPORATED AND ITS AF'
+  bytes: 1609
+  sha256: 6c56762cb7a91a530c9d9cf92160b1a6e774c34d79c3016249bba2e2e6b080d5
+  private_response: research/device_sources/local/parts_expansion_002/diodes_5401_model/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/diodes_5401_model/receipt.json
+  receipt_sha256: e013ddedde69e9c1c63c2cd3f4292299bb5f789b8dab87a7e9387c87f9a7289a
+  failure_preserved: false
+- id: diodes_5551_product
+  timestamp_utc: '2026-10-09T14:36:38.932745+00:00'
+  requested_url: https://www.diodes.com/part/view/MMBT5551/
+  effective_url: https://www.diodes.com/part/view/MMBT5551/
+  http: 403
+  reported_mime: text/html; charset=UTF-8
+  signature: <!DOCTYPE html><html lang="en-US
+  bytes: 5419
+  sha256: 0df72596c7f565b844ad58666f2ca25199bfeddb35c06c97e649085e10a45ff1
+  private_response: research/device_sources/local/parts_expansion_002/diodes_5551_product/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/diodes_5551_product/receipt.json
+  receipt_sha256: 795e15b806c7e985ea7fd7b9f14767bf322194e289b8623a424746e0fea84300
+  failure_preserved: true
+- id: diodes_spice_table_hv
+  timestamp_utc: '2026-10-09T14:39:20.792422+00:00'
+  requested_url: https://www.diodes.com/design/tools/spice-models?category-id=38
+  effective_url: https://www.diodes.com/design/tools/spice-models?category-id=38
+  http: 403
+  reported_mime: text/html; charset=UTF-8
+  signature: <!DOCTYPE html><html lang="en-US
+  bytes: 5540
+  sha256: 8fdddf7bae18a817f72fbda67a18261ddd776a88ebc93b214db4ed243c506473
+  private_response: research/device_sources/local/parts_expansion_002/diodes_spice_table_hv/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/diodes_spice_table_hv/receipt.json
+  receipt_sha256: 7885169b82ffc8132dc81d6842c17f57e57c7672f679722ec808bf46a4a0c05f
+  failure_preserved: true
+- id: diotec_5401_datasheet
+  timestamp_utc: '2026-10-09T14:39:21.358573+00:00'
+  requested_url: https://diotec.com/request/datasheet/2n5400.pdf
+  effective_url: https://diotec.com/request/datasheet/2n5400.pdf
+  http: 200
+  reported_mime: application/pdf
+  signature: '%PDF-1.7
+
+    %����
+
+    2 0 obj
+
+    <<
+
+    /Lengt'
+  bytes: 391133
+  sha256: c8b45db06869b93bae32d8ff0f60504a6d84e050691cdd359c08416f94074ed4
+  private_response: research/device_sources/local/parts_expansion_002/diotec_5401_datasheet/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/diotec_5401_datasheet/receipt.json
+  receipt_sha256: 6a8a26cd26f2b7ec11ff36b365469c3997632af0e540a2e398edb16a05ce0216
+  failure_preserved: false
+- id: diotec_5401_product
+  timestamp_utc: '2026-10-09T14:36:39.747473+00:00'
+  requested_url: https://diotec.com/en/product/2N5401.html
+  effective_url: https://diotec.com/en/product/2N5401.html
+  http: 200
+  reported_mime: text/html; charset=UTF-8
+  signature: '<!DOCTYPE html>
+
+    <html lang="en">'
+  bytes: 53871
+  sha256: 663b8addb691138ffd94f553ee73088e01fbdb96daa2fd60a81d107b461db66d
+  private_response: research/device_sources/local/parts_expansion_002/diotec_5401_product/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/diotec_5401_product/receipt.json
+  receipt_sha256: 3b99e93552a36bf350f886356b41edbc12ee632dc326b8c4bc490b949fad405a
+  failure_preserved: false
+- id: diotec_5551_datasheet
+  timestamp_utc: '2026-10-09T14:39:21.969044+00:00'
+  requested_url: https://diotec.com/request/datasheet/2n5551.pdf
+  effective_url: https://diotec.com/request/datasheet/2n5551.pdf
+  http: 200
+  reported_mime: application/pdf
+  signature: '%PDF-1.7
+
+    %����
+
+    2 0 obj
+
+    <<
+
+    /Lengt'
+  bytes: 826138
+  sha256: ad8bc6032ca2856fa638cffcaa8aa27cbc470ca3b7aba2016edb55906e02d06e
+  private_response: research/device_sources/local/parts_expansion_002/diotec_5551_datasheet/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/diotec_5551_datasheet/receipt.json
+  receipt_sha256: 3560f6b7bfa6e268ec39b16bdd6e27bf8d8d73c76cb78f4881c46919e4a69164
+  failure_preserved: false
+- id: diotec_5551_model
+  timestamp_utc: '2026-10-09T14:39:20.869802+00:00'
+  requested_url: https://diotec.com/request/spice/2n5551.zip
+  effective_url: https://diotec.com/request/spice/2n5551.zip
+  http: 200
+  reported_mime: application/zip
+  signature: "PK\x03\x04\x14\0\0\0\b\0�m�KE��GI\x01\0\0�\x02\0\0\n\0\x1C\02n"
+  bytes: 1419
+  sha256: 2eb921dc430669d046b1ff2c925c1409efa41571b78ec00e06caa7394245e658
+  private_response: research/device_sources/local/parts_expansion_002/diotec_5551_model/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/diotec_5551_model/receipt.json
+  receipt_sha256: b4693d0caac581419caeeae811c0a3e2579f07f6b29fddcd9d1908ce2043de6e
+  failure_preserved: false
+- id: diotec_5551_product
+  timestamp_utc: '2026-10-09T14:36:39.251998+00:00'
+  requested_url: https://diotec.com/en/product/2N5551.html
+  effective_url: https://diotec.com/en/product/2N5551.html
+  http: 200
+  reported_mime: text/html; charset=UTF-8
+  signature: '<!DOCTYPE html>
+
+    <html lang="en">'
+  bytes: 54643
+  sha256: 07895c892d563ff2ade1d949f864abc4336c97be2fd6521ce1c8d9bba37d6b60
+  private_response: research/device_sources/local/parts_expansion_002/diotec_5551_product/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/diotec_5551_product/receipt.json
+  receipt_sha256: 335d609409cfb8c86867e673ae1e500d586952ab60862885718486e6e05f9943
+  failure_preserved: false
+- id: dmmt5401_datasheet
+  timestamp_utc: '2026-10-09T17:10:27.221358+00:00'
+  requested_url: https://www.diodes.com/datasheet/download/DMMT5401.pdf
+  effective_url: https://www.diodes.com/datasheet/download/DMMT5401.pdf
+  http: 200
+  reported_mime: application/pdf
+  signature: "%PDF-1.7\r\n%����\r\n1 0 obj\r\n<</Typ"
+  bytes: 422420
+  sha256: 9f6a6294ac8d8f71fa2798d76a9f5504ffc8df01a7c26208197846d83ebdfca8
+  private_response: research/device_sources/local/parts_expansion_002/dmmt5401_datasheet/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/dmmt5401_datasheet/receipt.json
+  receipt_sha256: b692e69049659e5e6d6655bf63489d4e87abeecc840aebe182d3c035ab7808bd
+  failure_preserved: false
+- id: dmmt5401_model
+  timestamp_utc: '2026-10-09T14:54:58.583039+00:00'
+  requested_url: https://www.diodes.com/spice/download/3323/DMMT5401.spice.txt
+  effective_url: https://www.diodes.com/spice/download/3323/DMMT5401.spice.txt
+  http: 200
+  reported_mime: text/plain; name="DMMT5401.spice.txt";charset=UTF-8
+  signature: '* DIODES INCORPORATED AND ITS AF'
+  bytes: 1745
+  sha256: ba932265a79f5084da2790f45b0397d46182b9e88d81e247296425e30f715b62
+  private_response: research/device_sources/local/parts_expansion_002/dmmt5401_model/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/dmmt5401_model/receipt.json
+  receipt_sha256: 3c4c4bf6a93a128cb95019e626644b94e1f1d6ddb0b6091a3a11a7668195fe1b
+  failure_preserved: false
+- id: jfe2140_evmguide
+  timestamp_utc: '2026-10-09T17:10:26.654988+00:00'
+  requested_url: https://www.ti.com/lit/ug/slpu010/slpu010.pdf
+  effective_url: https://www.ti.com/lit/ug/slpu010/slpu010.pdf
+  http: 200
+  reported_mime: application/pdf
+  signature: '%PDF-1.4
+
+    %����
+
+    2 0 obj
+
+    <</Length'
+  bytes: 1922448
+  sha256: da829c28b574c71dc4f8c91d95c45f30685f27f1ed22faace9ad08991f5f7e02
+  private_response: research/device_sources/local/parts_expansion_002/jfe2140_evmguide/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/jfe2140_evmguide/receipt.json
+  receipt_sha256: c878659c1918a937c220cfcaf6cca700a94a7342872628d04ee15449af7d63d1
+  failure_preserved: false
+- id: ngspice_47_manual
+  timestamp_utc: '2026-10-09T14:48:55.349010+00:00'
+  requested_url: https://ngspice.sourceforge.io/docs/ngspice-47-manual.pdf
+  effective_url: https://ngspice.sourceforge.io/docs/ngspice-47-manual.pdf
+  http: 200
+  reported_mime: application/pdf
+  signature: '%PDF-1.5
+
+    %����
+
+    2 0 obj
+
+    <<
+
+    /Type '
+  bytes: 2717143
+  sha256: 6be9ad36be99dc3234dc44464cce6a38ba2e98266539dda5bae3212752e036ca
+  private_response: research/device_sources/local/parts_expansion_002/ngspice_47_manual/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/ngspice_47_manual/receipt.json
+  receipt_sha256: 1847fdd1ab4ec1917ef3cfc4d7c103df613020e55e0735e0ad63f1aedbdbd021
+  failure_preserved: false
+- id: ngspice_manual
+  timestamp_utc: '2026-10-09T14:36:40.403587+00:00'
+  requested_url: https://ngspice.sourceforge.io/docs/ngspice-manual.pdf
+  effective_url: https://ngspice.sourceforge.io/docs/ngspice-manual.pdf
+  http: 200
+  reported_mime: application/pdf
+  signature: '%PDF-1.5
+
+    %����
+
+    2 0 obj
+
+    <<
+
+    /Type '
+  bytes: 2719607
+  sha256: 15a08f05e9551555989b3d7ce2d8a83bb826d62ee34168803d056009c57a3619
+  private_response: research/device_sources/local/parts_expansion_002/ngspice_manual/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/ngspice_manual/receipt.json
+  receipt_sha256: df65da4a3aa7e8a26e21842f7ea85bcd0dfeca0b21f4096f02fc6c4594669d93
+  failure_preserved: false
+- id: ohmite_1g_datasheet
+  timestamp_utc: '2026-10-09T14:48:55.718614+00:00'
+  requested_url: https://www.ohmite.com/assets/files/Datasheets/rx-1m-hi-meg.pdf
+  effective_url: https://www.ohmite.com/assets/files/Datasheets/rx-1m-hi-meg.pdf
+  http: 200
+  reported_mime: text/html; charset=UTF-8
+  signature: '<!doctype html>
+
+    <!--[if lt IE 7]'
+  bytes: 72661
+  sha256: f9b75e4aede011e5c0e8dfd10c10833043f7cf2e419746d6fdf1a51843038ef4
+  private_response: research/device_sources/local/parts_expansion_002/ohmite_1g_datasheet/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/ohmite_1g_datasheet/receipt.json
+  receipt_sha256: 495dba8aeaafcea21abb2d961ba20ffc5393401e0b448da368ee333b87042c81
+  failure_preserved: true
+- id: ohmite_1g_product
+  timestamp_utc: '2026-10-09T14:39:22.393829+00:00'
+  requested_url: https://www.ohmite.com/catalog/rx-1m-hi-meg/RX-1M1007FE/
+  effective_url: https://www.ohmite.com/catalog/rx-1m-hi-meg/RX-1M1007FE/
+  http: 200
+  reported_mime: text/html; charset=utf-8
+  signature: <script src='https://ohmite.comp
+  bytes: 80270
+  sha256: 223d5e776309cdda279678d3008bf8323b27b79ab7e31107ae3aedbd1c4250b6
+  private_response: research/device_sources/local/parts_expansion_002/ohmite_1g_product/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/ohmite_1g_product/receipt.json
+  receipt_sha256: 2c688ea539112ac14178adfe87b5caa70c8fb95e633b712bbca26171612f3bad
+  failure_preserved: false
+- id: opa1656_product
+  timestamp_utc: '2026-10-09T14:54:57.873579+00:00'
+  requested_url: https://www.ti.com/product/OPA1656
+  effective_url: https://www.ti.com/product/OPA1656
+  http: 200
+  reported_mime: text/html;charset=UTF-8
+  signature: "<!DOCTYPE html>\n<html\n  lang=\"en"
+  bytes: 296780
+  sha256: 12e80dd5e0c2b44b3e7cc3a3322cb4496d6988531ca0a431827c58528d7b0c92
+  private_response: research/device_sources/local/parts_expansion_002/opa1656_product/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/opa1656_product/receipt.json
+  receipt_sha256: 11f04e5a34ea40a3738f78fa81882ef364983bd9d3f49aa864221d99efe42575
+  failure_preserved: false
+- id: opa1656_tina_model
+  timestamp_utc: '2026-10-09T14:48:55.176884+00:00'
+  requested_url: https://www.ti.com/lit/zip/sbomaw8a
+  effective_url: https://www.ti.com/lit/zip/sbomaw8a
+  http: 404
+  reported_mime: text/html; charset=utf-8
+  signature: "<!DOCTYPE html>\r\n<html lang=en c"
+  bytes: 3385
+  sha256: ffdc0dac9748112da8cf8df6b078495beeb34d4348d3ab1cac8a502357560b8e
+  private_response: research/device_sources/local/parts_expansion_002/opa1656_tina_model/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/opa1656_tina_model/receipt.json
+  receipt_sha256: a8e1ba45bb2625dc462321eded22d430fa376153964cf877910c8c3417d07d6f
+  failure_preserved: true
+- id: opa1656_tina_model_primary
+  timestamp_utc: '2026-10-09T17:08:12.481328+00:00'
+  requested_url: https://www.ti.com/lit/zip/SBOMAW8
+  effective_url: https://www.ti.com/lit/mo/sbomaw8b/sbomaw8b.zip?ts=1791565692858
+  http: 200
+  reported_mime: application/zip
+  signature: "PK\x03\x04\x14\0\0\0\b\0\x03��R�Eڕ�\x13\0\0vE\0\0\v\0\0\0OP"
+  bytes: 11709
+  sha256: a702113427f9f7e7ccdbf113cd4d70cfeb6c54ff24a116cf9f3e26588c165858
+  private_response: research/device_sources/local/parts_expansion_002/opa1656_tina_model_primary/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/opa1656_tina_model_primary/receipt.json
+  receipt_sha256: 32371b25b41dcb15638d305f5b6b5940442aa0310e427466f56480f691109fae
+  failure_preserved: false
+- id: opa1656_tina_reference
+  timestamp_utc: '2026-10-09T14:48:54.943490+00:00'
+  requested_url: https://www.ti.com/lit/zip/sbomaw7a
+  effective_url: https://www.ti.com/lit/zip/sbomaw7a
+  http: 404
+  reported_mime: text/html; charset=utf-8
+  signature: "<!DOCTYPE html>\r\n<html lang=en c"
+  bytes: 3385
+  sha256: ffdc0dac9748112da8cf8df6b078495beeb34d4348d3ab1cac8a502357560b8e
+  private_response: research/device_sources/local/parts_expansion_002/opa1656_tina_reference/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/opa1656_tina_reference/receipt.json
+  receipt_sha256: ac0c31a6b25cebd3dbea2862dbc627f86364c37e944a915adb1b1fcfe0adaa27
+  failure_preserved: true
+- id: opa1656_tina_reference_primary
+  timestamp_utc: '2026-10-09T17:08:12.771717+00:00'
+  requested_url: https://www.ti.com/lit/tsc/SBOMAW7
+  effective_url: https://www.ti.com/lit/mo/sbomaw7b/sbomaw7b.tsc?ts=1791565692770
+  http: 200
+  reported_mime: application/octet-stream
+  signature: "OBSS\x1A\x01\0\0\0\0\0\x02\0\0\0�\0\0\0\x14Circuit Desc"
+  bytes: 320684
+  sha256: 443f465c1f7246c54fb3163ef87be26cb06d446fdf9ea2743f4dc99fc55052ef
+  private_response: research/device_sources/local/parts_expansion_002/opa1656_tina_reference_primary/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/opa1656_tina_reference_primary/receipt.json
+  receipt_sha256: 9c43832167c01c22bd6586df178233e1b3edaff49e143af6d0f030665f710670
+  failure_preserved: false
+- id: opa928_reference
+  timestamp_utc: '2026-10-09T14:36:41.065518+00:00'
+  requested_url: https://www.ti.com/lit/zip/sbomcd9
+  effective_url: https://www.ti.com/lit/mo/sbomcd9/sbomcd9.zip?ts=1791556600578
+  http: 200
+  reported_mime: application/zip
+  signature: "PK\x03\x04\x14\0\0\0\b\0/r�U��;\f\n\x12\0\08w\0\0\v\0\0\0OP"
+  bytes: 67628
+  sha256: 34baed18208ffda7e7e5b6f1f63dccc97fa9abb222b7f199eac07c7ae14262cf
+  private_response: research/device_sources/local/parts_expansion_002/opa928_reference/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/opa928_reference/receipt.json
+  receipt_sha256: 69f90c1ed3b90f1401e40eb311179852de9acc992bf8d4a0d02a4b7c8bdbf823
+  failure_preserved: false
+- id: opa928_tina_model
+  timestamp_utc: '2026-10-09T14:36:40.971047+00:00'
+  requested_url: https://www.ti.com/lit/zip/sbomcc1a
+  effective_url: https://www.ti.com/lit/mo/sbomcc1a/sbomcc1a.zip?ts=1791556600570
+  http: 200
+  reported_mime: application/zip
+  signature: "PK\x03\x04\x14\0\0\0\b\0憁X\x02�L�B\x15\0\0_�\0\0\v\0\0\0OP"
+  bytes: 12511
+  sha256: 0a62804930b4c1cccd7b83ab6cea705b5f70bffc09bb1165c5ad53ab555d7e17
+  private_response: research/device_sources/local/parts_expansion_002/opa928_tina_model/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/opa928_tina_model/receipt.json
+  receipt_sha256: bd3f472999fbf2430e9910d50caa13bc3a42f88c5c459f53c226f75a1f2a5380
+  failure_preserved: false
+- id: ti_audio_noise_note
+  timestamp_utc: '2026-10-09T14:54:58.082147+00:00'
+  requested_url: https://www.ti.com/lit/pdf/SBOA345
+  effective_url: https://www.ti.com/lit/ab/sboa345/sboa345.pdf?ts=1791532227077
+  http: 200
+  reported_mime: application/pdf
+  signature: '%PDF-1.4
+
+    %����
+
+    2 0 obj
+
+    <</Length'
+  bytes: 661782
+  sha256: 223778e5aea4fe4c664c6d9c410127547734f321a6e3cc5ecefa58b37e7fb951
+  private_response: research/device_sources/local/parts_expansion_002/ti_audio_noise_note/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/ti_audio_noise_note/receipt.json
+  receipt_sha256: 11b9fcefcd6481f6e1a8b76ed8f01b10a6b57ea52d08b9002ec6595374da323b
+  failure_preserved: false
+- id: ti_phantom_note
+  timestamp_utc: '2026-10-09T14:54:57.912131+00:00'
+  requested_url: https://www.ti.com/lit/pdf/SBOA320
+  effective_url: https://www.ti.com/lit/an/sboa320a/sboa320a.pdf?ts=1791554701905&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FOPA1662%253Futm_source%253Dgoogle%2526utm_medium%253Dcpc%2526utm_campaign%253Dasc-tech-inno-dynpf_amp-cpc-pf-google-eu_en_int%2526utm_content%253Dprodfolddynamic%2526gclsrc%253Daw.ds%2526gad_source%253D1%2526gad_campaignid%253D23906084824%2526gclid%253DCjwKCAjwoaLWBhAWEiwAnyitu_r056VVfaq8e5nc2Qzch_QFvynQ1Ml5DdPfyx08yy5LODpi5chX2xoCsqwQAvD_BwE
+  http: 200
+  reported_mime: application/pdf
+  signature: '%PDF-1.4
+
+    %����
+
+    2 0 obj
+
+    <</Length'
+  bytes: 100669
+  sha256: 4e0cdeff9b402e29c789c4edc751dc686a4b3ab63d4e0c8eb576fd92d53b422b
+  private_response: research/device_sources/local/parts_expansion_002/ti_phantom_note/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/ti_phantom_note/receipt.json
+  receipt_sha256: e2beccfd6bedfacd4cefaedd7b6507a31ef1ada82746d2e316964415ead20c0f
+  failure_preserved: false
+- id: tme_2n5551_route
+  timestamp_utc: '2026-10-09T17:08:11.279016+00:00'
+  requested_url: https://www.tme.eu/de/details/2n5551-dio/npn-tht-transistoren/diotec-semiconductor/2n5551/
+  effective_url: https://www.tme.eu/de/details/2n5551-dio/npn-tht-transistoren/diotec-semiconductor/2n5551/
+  http: 403
+  reported_mime: text/html; charset=UTF-8
+  signature: <!DOCTYPE html><html lang="en-US
+  bytes: 5661
+  sha256: 569148048f0ccdcf01b2fb8c6b464d64ac561798c056cfb065b6216d84b5a84d
+  private_response: research/device_sources/local/parts_expansion_002/tme_2n5551_route/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/tme_2n5551_route/receipt.json
+  receipt_sha256: 6c4719c1d86f10a8100b90b80025cb9affcdf3c750a9d5f2356210a6c0699579
+  failure_preserved: true
+- id: tme_consumer_terms
+  timestamp_utc: '2026-10-09T14:36:41.274892+00:00'
+  requested_url: https://static.cs.tme.eu/2025/01/677d16e64f859/de.pdf
+  effective_url: https://static.cs.tme.eu/2025/01/677d16e64f859/de.pdf
+  http: 200
+  reported_mime: application/pdf
+  signature: '%PDF-1.4
+
+    1 0 obj
+
+    <<
+
+    /Title (��)
+
+    '
+  bytes: 95596
+  sha256: da75faa38211a173428e9e3027de3cf02e5425280a08c3ce8a321945ff0f0f0a
+  private_response: research/device_sources/local/parts_expansion_002/tme_consumer_terms/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/tme_consumer_terms/receipt.json
+  receipt_sha256: e6b2d3bbc1eb74b3393b4b000a44cb9f710757270cbca8f730d40ec9a275a14e
+  failure_preserved: false
+- id: tme_delivery
+  timestamp_utc: '2026-10-09T14:36:39.988848+00:00'
+  requested_url: https://www.tme.eu/de/how-to-buy/7345/Transportart-und-Transportkosten/
+  effective_url: https://www.tme.eu/de/how-to-buy/7345/Transportart-und-Transportkosten/
+  http: 403
+  reported_mime: text/html; charset=UTF-8
+  signature: <!DOCTYPE html><html lang="en-US
+  bytes: 5561
+  sha256: 02182b431c64d612fd05497a2b79c57d9568f68f4d53af113fb626a604eb2516
+  private_response: research/device_sources/local/parts_expansion_002/tme_delivery/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/tme_delivery/receipt.json
+  receipt_sha256: d05b0888b847ed624302130c59d6882a94a1db5e57d5659823151ed508669125
+  failure_preserved: true
+- id: tme_wima_route
+  timestamp_utc: '2026-10-09T17:08:11.476487+00:00'
+  requested_url: https://www.tme.eu/de/details/mkp2-100n_100/tht-folienkondensatoren/wima/mkp2d031001f00kssd/
+  effective_url: https://www.tme.eu/de/details/mkp2-100n_100/tht-folienkondensatoren/wima/mkp2d031001f00kssd/
+  http: 403
+  reported_mime: text/html; charset=UTF-8
+  signature: <!DOCTYPE html><html lang="en-US
+  bytes: 5667
+  sha256: e5a4526367e0e93856f60593e7ef0d2d0395bfe5c256a443eeda7c2251d2d2e7
+  private_response: research/device_sources/local/parts_expansion_002/tme_wima_route/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/tme_wima_route/receipt.json
+  receipt_sha256: 211e2a9600a6d640046a5b470c4549a33374ebf312921e5487746923442156dd
+  failure_preserved: true
+- id: tmux1102_datasheet
+  timestamp_utc: '2026-10-09T14:39:21.690745+00:00'
+  requested_url: https://www.ti.com/lit/ds/symlink/tmux1102.pdf
+  effective_url: https://www.ti.com/lit/ds/symlink/tmux1102.pdf
+  http: 200
+  reported_mime: application/pdf
+  signature: '%PDF-1.4
+
+    %����
+
+    2 0 obj
+
+    <</Length'
+  bytes: 1432403
+  sha256: c1b3a8da1ddef89f535f615c9fb92a3cff4c096b1a75d546e7b57d6a9aa64155
+  private_response: research/device_sources/local/parts_expansion_002/tmux1102_datasheet/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/tmux1102_datasheet/receipt.json
+  receipt_sha256: 8952eb9743a0c73ccce9cabe59d3d4fb100552d65bac50a29ef8a54ecb7bd780
+  failure_preserved: false
+- id: wima_mkp2_datasheet
+  timestamp_utc: '2026-10-09T14:54:57.750537+00:00'
+  requested_url: https://www.wima.de/wp-content/uploads/media/e_WIMA_MKP_2.pdf
+  effective_url: https://www.wima.de/wp-content/uploads/media/e_WIMA_MKP_2.pdf
+  http: 200
+  reported_mime: application/pdf
+  signature: "%PDF-1.5\r%����\r\n165 0 obj\r<</Lin"
+  bytes: 463673
+  sha256: 1c8527fb1fef607bbf2f67997225102f0cc8e0a433816fe65fe4e58064fe0ec4
+  private_response: research/device_sources/local/parts_expansion_002/wima_mkp2_datasheet/response.bin
+  receipt: research/device_sources/local/parts_expansion_002/wima_mkp2_datasheet/receipt.json
+  receipt_sha256: 23f56b507fb8cda452824bc7fb77cf9e277cc60b12ed8ec855947d81addad321
+  failure_preserved: false
+counts:
+  web_sessions: 14
+  saved_web_records: 13
+  direct_response_receipts: 32

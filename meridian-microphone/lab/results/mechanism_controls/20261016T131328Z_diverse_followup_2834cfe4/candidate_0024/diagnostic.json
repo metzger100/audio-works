@@ -1,0 +1,135 @@
+{
+  "ac_nodes": {
+    "1000": {
+      "v(b)": [
+        -0.0016395644732223405,
+        -0.001774841383365528
+      ],
+      "v(f)": [
+        0.00011563318381176881,
+        0.00017241808498747564
+      ],
+      "v(pn)": [
+        0.00038303221815599647,
+        0.0005826247316507317
+      ],
+      "v(pp)": [
+        -0.00042273466235046947,
+        -0.0006337263732441965
+      ],
+      "v(xdut.outa)": [
+        -0.00048813637598411224,
+        -0.0007153686270296214
+      ]
+    },
+    "20": {
+      "v(b)": [
+        -6.391969187952103e-06,
+        -6.526105451683992e-05
+      ],
+      "v(f)": [
+        3.122751587217242e-08,
+        5.301441537719705e-06
+      ],
+      "v(pn)": [
+        -7.849897695834186e-06,
+        1.3857072883937905e-05
+      ],
+      "v(pp)": [
+        8.61882446411936e-06,
+        -1.51275504362435e-05
+      ],
+      "v(xdut.outa)": [
+        -4.2082920871002376e-07,
+        -2.2259430265102835e-05
+      ]
+    },
+    "20000": {
+      "v(b)": [
+        -0.003486433162380001,
+        -0.00016106111089664638
+      ],
+      "v(f)": [
+        0.00044448414083943753,
+        0.00010505469295966677
+      ],
+      "v(pn)": [
+        0.001501744691625576,
+        0.00030347580914588825
+      ],
+      "v(pp)": [
+        -0.0016620621867711627,
+        -9.031532480500977e-05
+      ],
+      "v(xdut.outa)": [
+        -0.0018861177253803967,
+        -0.00013869170255078128
+      ]
+    }
+  },
+  "base_ac_current_1khz": [
+    2.0881366398709743e-10,
+    3.424913661974253e-10
+  ],
+  "base_current_a": 1.933829578641416e-06,
+  "base_to_feedback_1khz_magnitude_ratio": 0.1782273515210435,
+  "candidate": "candidate_0024",
+  "dc_nodes": {
+    "v(b)": 29.61036567132772,
+    "v(f)": 7.299618842193041,
+    "v(rail)": 13.60032692877259,
+    "v(xdut.outa)": 8.266522476170532,
+    "v(xdut.ref)": 6.799870371906621
+  },
+  "feedback_current_1khz_a_per_pa": [
+    -6.503441676644199e-10,
+    -2.154643204203341e-09
+  ],
+  "jobs": [
+    {
+      "advisories": [],
+      "files": {
+        "ac.raw": "01f5f4e8df1a1799cbc7f2cc1954239a5d7d4032e15b8f1d203bdb360b7a190c",
+        "op.raw": "c8ae7da3eb358a16e2856eb6b0c6b2966b45bf3e500107daf6d6dc3d29f240cf"
+      },
+      "folder": "results/mechanism_controls/20261016T131328Z_diverse_followup_2834cfe4/candidate_0024/0001_nominal",
+      "netlist_sha256": "ae91e8f9861c6e330ef447f0779adb931df665d23c4178e3ed3847eeaa011e07",
+      "semiconductor_models": [
+        {
+          "acquisition_status": "valid_spice",
+          "device_id": "bc846b",
+          "id": "bc846b_emitter_r1",
+          "manufacturer": "Nexperia",
+          "model_lineage": [
+            {
+              "id": "bc846b_vendor",
+              "retrieved_date": "2026-10-05",
+              "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+              "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+              "version": "extraction week 24/2021"
+            }
+          ],
+          "ngspice_behavior": "",
+          "parent_model_id": "bc846b_vendor",
+          "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+          "redistribution": {
+            "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+            "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+            "status": "not_established_do_not_redistribute"
+          },
+          "resolved_path": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab/results/mechanism_controls/20261016T131328Z_diverse_followup_2834cfe4/source/models/semiconductor/vendor/bc846b_emitter_r1.lib",
+          "retrieved_date": "2026-10-05",
+          "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+          "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+          "subcircuit": "BC846B",
+          "syntax": "SPICE3 subcircuit",
+          "version": "project structural child r1; Q2 emitter 33 -> 3"
+        }
+      ],
+      "status": "ok"
+    }
+  ],
+  "reset_current_dc_a": 1.9338072679549824e-06,
+  "scope": "unchanged nominal full-DUT DC/AC diagnostic only",
+  "status": "executed"
+}

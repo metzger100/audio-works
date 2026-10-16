@@ -1,0 +1,75 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+schema_version: 1
+date: '2026-10-11'
+scope: Prompt 9 finite model-conditional A/B/C tests; no topology or PCB selection
+authority: ../prompts/research-workflow.md
+acceptance_or_uncertainty_changes: none
+optimizer_evaluations: 0
+budget_relationship: No extension or transfer of exhausted optimization slots. A uses no design search; B one owner-requested structural hypothesis; C three isolated controls, each below the existing 12-vector reservation. Unused designs are not searched.
+seed: 94047
+independent_seed: 104047
+full_suite_samples: 16
+maximum_jobs: 60
+timeout_s_per_job: 15
+options: reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+hypotheses:
+  A:
+    parents: [candidate_0019, candidate_0023]
+    question: Does source-voltage feedback materially enlarge no-trim authority under equal capsule, interface and coupled model stresses?
+    falsification: A claimed full-envelope authority region is falsified by retained leakage1G failures, transistor loss of active region, missing process coverage or saturation. Local scenario feasibility is distinct.
+    design_vectors: 0
+    analyses: [loaded_DC_KCL, terminal_limits, AC_response, conditional_noise, full_suite_startup, source_recovery, conditional_return_ratio]
+    stop: Execute the predeclared finite grid once; retain all failed cells. No bias fit, trimming or threshold change. No structural A child without an independently supported remedy.
+  B:
+    parent: candidate_0023
+    question: Does a final-backplate 100nF PP filter reduce conditional electronics noise without losing DC authority or audio response?
+    falsification: No resolved nominal noise reduction, >1dB response, adverse authority loss, startup failure, or unavailable loop evidence prevents the respective improvement/qualification claim.
+    design_vectors: 1
+    part: WIMA MKP2D031001F00KSSD
+    capacitance_f: 1.0e-7
+    tolerance_fraction: 0.10
+    rating_v: 100
+    insulation_ohm: [1.0e11, 1.0e14]
+    series_loss_ohm: [0.01, 0.7957747154594768]
+    series_inductance_h: [1.0e-8, 5.0e-8]
+    caveat: Constant IR/ESR and 10-50nH are explicit supplementary assumptions; discrete 20C IR/DF does not bound broadband/temperature/excess noise. Nominal uses adverse source-anchored IR/DF, not omitted losses.
+    analyses: [filter_oracle, DC_KCL, matched_AC_noise, passive_endpoints, complete_suite, startup, recovery, conditional_return_ratio]
+    stop: One value only, no optimization. Preserve unfiltered parent. Unknown physical capsule bias remains unknown.
+  C:
+    source_parent: candidate_0023
+    models: [bc846b_emitter_r1, bc850c_vendor, pmbt5551_vendor]
+    question: Can ordinary full manufacturer driver alternatives reduce noise and conductor impedance imbalance at unchanged bias/passives?
+    falsification: Two-port mismatch or native-noise regression rejects simultaneous benefit; missing KF/process/thermal or startup prevents qualification.
+    design_vectors: 3
+    temperature_c: [-10, 25, 50]
+    fixtures: [nominal, asymmetric_load, high_source_impedance]
+    analyses: [DC, signal_phase, two_port_Z_matrix, common_supply_transfer, native_noise_power, RC_oracle, cold_startup]
+    stop: Three exact full files, three temperatures, three finite loads. No model borrowing or parameter fitting. Only integrate an alternative if all supported port/noise screens improve; otherwise retain isolated failed alternatives.
+matched_candidates: [candidate_0019, candidate_0023, dynamically_registered_B_child]
+scenarios:
+  - {id: nominal, parameters: {}}
+  - {id: leakage1G, parameters: {LEAK: 1.0e9}}
+  - {id: leakage10G, parameters: {LEAK: 1.0e10}}
+  - {id: leakage100G, parameters: {LEAK: 1.0e11}}
+  - {id: leakage100T, parameters: {LEAK: 1.0e14}}
+  - {id: capsule_adverse, parameters: {CF: 4.5e-11, CR: 4.5e-11, PAR: 1.0e-11, CROSS: 5.0e-12}}
+  - {id: supply_low_load, parameters: {VS: 44, FT: 0.20, FM: -0.004, LEN: 100, ZIN: 600, ZM: 0.05, TEMP: -10}}
+  - {id: supply_high_load, parameters: {VS: 52, FT: -0.20, FM: 0.004, LEN: 100, ZIN: 10000, ZM: -0.05, TEMP: 50}}
+  - {id: leaky_coupled, parameters: {LEAK: 1.0e9, CF: 4.5e-11, CR: 1.0e-10, PAR: 1.0e-11, CROSS: 5.0e-12, VS: 44, FT: 0.20, FM: 0.004, LEN: 100, ZIN: 1000, ZM: 0.05, TEMP: 50}}
+  - {id: weak_coupled, model_replacement: jfe150_weak, parameters: {LEAK: 1.0e9, VS: 44, TEMP: -10}}
+  - {id: strong_coupled, model_replacement: jfe150_strong, parameters: {LEAK: 1.0e14, VS: 52, TEMP: 50}}
+  - {id: board_leakage, board_leakage_ohm: 1.0e11, parameters: {LEAK: 1.0e9}}
+validation:
+  deterministic: Shared capsule/interface endpoints plus complete weak/strong files and two tolerance/TCR endpoints; no joint process/yield interpretation.
+  independent: 16 scenarios; generate common quantiles once by union key; equal external/shared-part ranges give identical values, different source-resistor designs keep their own ranges; artificial uniform/log-uniform only. Holdouts are not used for value selection.
+  passive: Child C ±10%, Rback ±1%, documented output capacitors ±20% independent/opposed, source-anchored film IR/loss plus assumed inductance endpoints.
+refinement: Nominal noise 64/128 points per decade and AC 32/64; retain deltas, no tiny-difference ranking.
+return_ratio: Preserve DC through a zero-DC injection at the sense path; compare both orientations/loading. Report voltage-return diagnostic only unless bilateral injection and open-loop pole prerequisites are satisfied. Quiet closed-loop traces never pass stability.
+recovery: Source pressure-free supply dip; 0-5s fixed observation/1ms maximum step, same original timeout60s; retain final source/servo/backplate residuals and censoring.
+prerequisites:
+  nonlinear: Prompt8 full DUT remains unsupported; complete-suite errors retained, no harmonics/headroom claim.
+  production: No measured joint device population, complete spectra, SOA or physical measurements.
+  unsupported: [hot_plug, RF_distributed_cable, ESD_protection, self_heating, capsule_safe_bias, mechanical_noise_SPL_polar_response]
+families_retained: 14
+production_front: []
+physical_front: []

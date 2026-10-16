@@ -7,11 +7,11 @@
   "family_counts": {
     "bootstrap": 9,
     "charge": 12,
-    "conventional_jfet": 16,
+    "conventional_jfet": 17,
     "floating": 12,
     "ideal_voltage_control": 17,
     "no_fet": 9,
-    "unconventional_jfet": 14
+    "unconventional_jfet": 16
   },
   "niche_representatives_by_cohort": {
     "$include": "archive-df296561ada6-0004-niche-representatives-by-cohort.json"
@@ -97,7 +97,8 @@
       "20261009T090628Z_d87c22bb",
       "20261009T090650Z_595690f6",
       "20261009T090713Z_3965ee56",
-      "20261009T090737Z_40e6a493"
+      "20261009T090737Z_40e6a493",
+      "20261011T192334Z_91abee84"
     ],
     "{\"active_device_count\": 5, \"bias\": \"fixed_parts\", \"bootstrap\": false, \"common_mode\": \"divider\", \"feedback\": \"synchronous_demodulation_control\", \"input_device\": \"CMOS\", \"output\": \"differential_real_devices\", \"reference\": \"floating_bridge\", \"sensing\": \"carrier_capacitance\", \"servo\": false}": [
       "20261009T073519Z_7e3ec6c2",
@@ -128,7 +129,11 @@
       "20261009T090802Z_0b46cfbc",
       "20261009T090831Z_ea375e10",
       "20261009T090859Z_5f41d82e",
-      "20261009T090930Z_1acba093"
+      "20261009T090930Z_1acba093",
+      "20261011T192341Z_519a5793"
+    ],
+    "{\"active_device_count\": 7, \"bias\": \"source_servo\", \"bootstrap\": false, \"common_mode\": \"divider\", \"feedback\": \"slow_source_current_servo\", \"input_device\": \"JFET\", \"output\": \"discrete_NPN_differential_fixed_degeneration\", \"reference\": \"single_ended_final_backplate_filtered\", \"sensing\": \"voltage\", \"servo\": true}": [
+      "20261011T192350Z_37334df2"
     ]
   },
   "schema_version": 1

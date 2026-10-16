@@ -1,0 +1,45 @@
+{
+  "directory": "opa928_vendor/guard_1e-10",
+  "label": "guard_1e-10",
+  "model": {
+    "acquisition_status": "valid_spice",
+    "behavior_validation": "only conditioned accepted rows; omissions unresolved",
+    "device_id": "opa928",
+    "file": "models/semiconductor/vendor/opa928.lib",
+    "id": "opa928_vendor",
+    "load_record": "results/device_models/20261009T145346Z_parts2_742caaa3/results.json",
+    "manufacturer": "Texas Instruments",
+    "model_lineage": [],
+    "ngspice_behavior": "ps",
+    "parent_model_id": null,
+    "path": "semiconductor/vendor/opa928.lib",
+    "pin_order": "IN+ IN- V+ V- OUT GRD1 GRD2; physical 4 5 6 3 1 2 7; NC8",
+    "primitive": "X",
+    "redistribution": {
+      "acquisition": "models/semiconductor/acquire.py; private receipt and acquisition.yaml",
+      "evidence": "Original notices and archive/PDF retained privately; public availability is not redistribution permission.",
+      "status": "not_established_do_not_redistribute"
+    },
+    "retrieved_date": "2026-10-09",
+    "runnability": "scoped_success_with_retained_disagreements",
+    "sha256": "f4f9d38efc4aa2a31676c84a351d2ee9379baad88abab8b5afad550c7f99c616",
+    "source_url": "https://www.ti.com/lit/zip/sbomcc0a",
+    "subcircuit": "OPAX928",
+    "syntax": "self-contained public subcircuit; dialect compatibility unverified",
+    "validation_record": "results/device_models/20261009T133651Z_parts_d3c30763/results.json",
+    "version": "1.1 01Apr2024"
+  },
+  "netlist_sha256": "bac653cfe6ba2617930d3d7fe903f11a8749f50755e494ac683beb39575d7206",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "retained_hashes": {
+    "ac.raw": "9bd93acb8888a3a65377bd800c11b4f9c5d54c9b754b00691f7e48f3760de309",
+    "ac.raw.csv": "a1ed7004b77add0c58b5a08b6801ad0c36e257f622af028f6dabd2272a9c3434",
+    "job.cir": "bac653cfe6ba2617930d3d7fe903f11a8749f50755e494ac683beb39575d7206",
+    "op.raw": "90f9c771d659cb7d3a525e947531842b30002b0c55e48ba0f989c1dc7a4dfae2",
+    "op.raw.csv": "4aba73ad097b3e37be013e525314f59f2ac2f527a3b208a82f9cdc1d91b415b3",
+    "simulator.log": "0a6c82a24ce5f79e73f101342bd1b329330b544ba31f7cf9c52b5d456a3cb27f"
+  },
+  "status": "ok",
+  "temperature_c": 25,
+  "timeout_s": 15
+}

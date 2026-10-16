@@ -1,0 +1,208 @@
+power_resistors:
+- reference: Rharvestp
+  nodes:
+  - p
+  - raw
+  parameter: RHARVESTP_VALUE
+- reference: Rharvestn
+  nodes:
+  - n
+  - raw
+  parameter: RHARVESTN_VALUE
+- reference: Rregtop
+  nodes:
+  - raw
+  - regbase
+  parameter: RREGTOP_VALUE
+- reference: Rregbottom
+  nodes:
+  - regbase
+  - g
+  parameter: RREGBOTTOM_VALUE
+- reference: Rmidtop
+  nodes:
+  - rail
+  - mid
+  parameter: RMIDTOP_VALUE
+- reference: Rmidbottom
+  nodes:
+  - mid
+  - g
+  parameter: RMIDBOTTOM_VALUE
+- reference: Rpolar0
+  nodes:
+  - raw
+  - pol_0
+  parameter: RPOLAR0_VALUE
+- reference: Rpolar1
+  nodes:
+  - pol_0
+  - pol_1
+  parameter: RPOLAR1_VALUE
+- reference: Rpolar2
+  nodes:
+  - pol_1
+  - pol_2
+  parameter: RPOLAR2_VALUE
+- reference: Rpolar3
+  nodes:
+  - pol_2
+  - pol_3
+  parameter: RPOLAR3_VALUE
+- reference: Rpolar4
+  nodes:
+  - pol_3
+  - pol_4
+  parameter: RPOLAR4_VALUE
+- reference: Rpolar5
+  nodes:
+  - pol_4
+  - pol_5
+  parameter: RPOLAR5_VALUE
+- reference: Rpolar6
+  nodes:
+  - pol_5
+  - pol_6
+  parameter: RPOLAR6_VALUE
+- reference: Rpolar7
+  nodes:
+  - pol_6
+  - pol_7
+  parameter: RPOLAR7_VALUE
+- reference: Rpolar8
+  nodes:
+  - pol_7
+  - pol_8
+  parameter: RPOLAR8_VALUE
+- reference: Rpolar9
+  nodes:
+  - pol_8
+  - pol
+  parameter: RPOLAR9_VALUE
+- reference: Rback
+  nodes:
+  - pol
+  - b
+  parameter: RBACK_VALUE
+- reference: Rreftop
+  nodes:
+  - rail
+  - ref
+  parameter: RREFTOP_VALUE
+- reference: Rrefbottom
+  nodes:
+  - ref
+  - g
+  parameter: RREFBOTTOM_VALUE
+- reference: Remitter1
+  nodes:
+  - e1
+  - tail
+  parameter: REMITTER1_VALUE
+- reference: Remitter2
+  nodes:
+  - e2
+  - tail
+  parameter: REMITTER2_VALUE
+- reference: Rtail
+  nodes:
+  - tail
+  - g
+  parameter: RTAIL_VALUE
+- reference: Rcollector1
+  nodes:
+  - rail
+  - outa
+  parameter: RCOLLECTOR1_VALUE
+- reference: Rcollector2
+  nodes:
+  - rail
+  - outb
+  parameter: RCOLLECTOR2_VALUE
+- reference: Routloadp
+  nodes:
+  - outp
+  - g
+  parameter: ROUTLOADP_VALUE
+- reference: Routloadn
+  nodes:
+  - outn
+  - g
+  parameter: ROUTLOADN_VALUE
+- reference: Rrear
+  nodes:
+  - rear
+  - g
+  parameter: RREAR_VALUE
+- reference: Routp
+  nodes:
+  - outp
+  - cp
+  parameter: ROUTP_VALUE
+- reference: Routn
+  nodes:
+  - outn
+  - cn
+  parameter: ROUTN_VALUE
+- reference: Rfeedbacka
+  nodes:
+  - outa
+  - f
+  parameter: RFEEDBACKA_VALUE
+- reference: Rfeedbackb
+  nodes:
+  - outa
+  - f
+  parameter: RFEEDBACKB_VALUE
+questions:
+  sensed_quantity: front displacement charge at a bipolar summing input
+  loading: finite differential-pair loop; base shot noise remains
+  dc_bias: Two parallel ordinary 1Mohm feedback resistors (500kohm nominal) increase
+    DC base-current authority; fixed discrete pair/tail, no trimming
+  gain_or_impedance_transformation: discrete differential error amplifier, 100 nF
+    feedback and emitter followers
+  balanced_output: Real output devices and two 47 ohm/47 uF legs; harvest/cable/load
+    coupling measured, symmetry not presumed
+  expected_noise: base-current shot noise, feedback resistor and collector/output
+    noise; missing KF explicitly unknown
+  expected_distortion: differential pair curvature, finite loop gain, unequal follower
+    bias
+  likely_fatal_flaw: low reset resistance requires very large Cfb and loses sensitivity/SNR
+  quickest_falsification: base current/feedback authority, pressure-referred shot
+    noise and finite-loop response
+  hypothesis: An entirely BJT audio/power path can perform charge feedback without
+    a FET, but base-current noise and DC authority may dominate the LF budget.
+sources:
+- S05
+- S07
+- S17
+input_device_class: BJT
+fet_audio_path: false
+fet_power_circuitry: false
+internal_device_classes: NPN only
+procurement_state: research_BOM_live_orderability_and_delivered_quote_unverified
+patent_state: unscreened_no_clearance
+prototype_gate: hold
+manufacture_gate: hold
+build_publication_gate: hold
+niche:
+  input_device: BJT
+  sensing: charge
+  reference: single_ended
+  feedback: bipolar_capacitive_feedback
+  bias: fixed_parts
+  active_device_count: 5
+  servo: false
+  output: differential_real_devices
+  common_mode: divider
+  bootstrap: false
+id: candidate_0005
+kind: research_candidate
+parents:
+- candidate_0005
+hypothesis: An entirely BJT audio/power path can perform charge feedback without a
+  FET, but base-current noise and DC authority may dominate the LF budget.
+structural_changes: Independent BJT-only discrete charge-feedback input mechanism
+  child of interface fixture; not a copied production microphone.
+eligible: false
+state: engineering_ready

@@ -4,6 +4,18 @@
 Finite isolated experiments and canonical parts search/audit.
 
 - [carrier_island_control.py](carrier_island_control.py) — active
+- [diverse_carrier.py](diverse_carrier.py) — active
+- [diverse_fixtures.py](diverse_fixtures.py) — active
+- [diverse_followup.py](diverse_followup.py) — active
+- [diverse_prerequisites.py](diverse_prerequisites.py) — active
+- [diverse_sources.py](diverse_sources.py) — active
+- [focused_driver.py](focused_driver.py) — active
+- [focused_followup.py](focused_followup.py) — active
+- [focused_hypotheses.py](focused_hypotheses.py) — active
+- [focused_interaction.py](focused_interaction.py) — active
+- [focused_math.py](focused_math.py) — active
+- [focused_prepare.py](focused_prepare.py) — active
+- [focused_sources.py](focused_sources.py) — active
 - [parts_bipolar_control.py](parts_bipolar_control.py) — active
 - [parts_constant_control.py](parts_constant_control.py) — active
 - [parts_control_math.py](parts_control_math.py) — active

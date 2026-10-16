@@ -1,0 +1,160 @@
+[
+  {
+    "directory": "filter_oracle/rc_0.001",
+    "label": "rc_0.001",
+    "model": {
+      "id": "filter_oracle"
+    },
+    "netlist_sha256": "0475f333db2b901d76bdf445b11508736c1f19a0303635ce8a0aba2bdc2c3f98",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "ac.raw": "1b401575ec06f9df548338c31c102d3e00ec704de9e7cdf67bc35fd794da4822",
+      "ac.raw.csv": "a3a25dd89d464c738649f048725a561c5485d2310cde6a5de45d29d1b649a4d6",
+      "job.cir": "0475f333db2b901d76bdf445b11508736c1f19a0303635ce8a0aba2bdc2c3f98",
+      "simulator.log": "faeebcab98027f20c94ce52c4b31acdcdfb8d94fe458cf65c76cf8ddaf5bfca7",
+      "tran.raw": "5a07487ead4650157f2c180b32e6d319245108e518b89c1cb8960a5140e63969",
+      "tran.raw.csv": "d3e776b469ab9879cfc5a94acefe01fd2613347467158861d98f2448c04dd3d1"
+    },
+    "status": "ok",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "filter_oracle/rc_0.0005",
+    "label": "rc_0.0005",
+    "model": {
+      "id": "filter_oracle"
+    },
+    "netlist_sha256": "d5fa57de47d7a78904ddb16236b78c1c3ae7cec947b16d093f660b2ee8f55210",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "ac.raw": "4ced68c10c540cac1bfa478638b7a400f13484ba188ce3cb2773beaf7c7e8817",
+      "ac.raw.csv": "a3a25dd89d464c738649f048725a561c5485d2310cde6a5de45d29d1b649a4d6",
+      "job.cir": "d5fa57de47d7a78904ddb16236b78c1c3ae7cec947b16d093f660b2ee8f55210",
+      "simulator.log": "cb346a56aa3539c59991b79b17da5a9328884c4a225943da9018fcda9942e26b",
+      "tran.raw": "00b5de8df7bf2fc9e34d2586a0d075e6ef8819fb67e2d67b51e483534f3534b0",
+      "tran.raw.csv": "87a17fc0f3b6c1b19ab031728208975f700ae3c89cbff5550f32e47ab601be08"
+    },
+    "status": "ok",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "port_oracle/bilateral",
+    "label": "bilateral",
+    "model": {
+      "id": "port_oracle"
+    },
+    "netlist_sha256": "55ae47d4c50c8464ce9ce60110276035c62bacd53eecbba35c83510c23eb3017",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "job.cir": "55ae47d4c50c8464ce9ce60110276035c62bacd53eecbba35c83510c23eb3017",
+      "n.raw": "f228f3f777e604735f26d83fae4c4548658717685516fd9f343628ec525c5f88",
+      "n.raw.csv": "167dcbd8ceefc1c92c2c453cfcf39c17e07d5b7a924e028e373732eeddc8bfdb",
+      "p.raw": "a0e8812760c060f9756f9075a80527d9c81048cd2b87e6ce754e3e54c406743d",
+      "p.raw.csv": "167dcbd8ceefc1c92c2c453cfcf39c17e07d5b7a924e028e373732eeddc8bfdb",
+      "simulator.log": "696573b51196a52ecc436a04fd0ecd3b1c2cd84aa15156726bf3c0e9b59ed287"
+    },
+    "status": "ok",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "bc846b_emitter_r1/nominal_-10",
+    "label": "nominal_-10",
+    "model": {
+      "acquisition_status": "valid_spice",
+      "device_id": "bc846b",
+      "file": "models/semiconductor/vendor/bc846b_emitter_r1.lib",
+      "id": "bc846b_emitter_r1",
+      "manufacturer": "Nexperia",
+      "model_lineage": [
+        {
+          "id": "bc846b_vendor",
+          "retrieved_date": "2026-10-05",
+          "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+          "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+          "version": "extraction week 24/2021"
+        }
+      ],
+      "ngspice_behavior": "",
+      "parent_model_id": "bc846b_vendor",
+      "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+      "redistribution": {
+        "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+        "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+        "status": "not_established_do_not_redistribute"
+      },
+      "retrieved_date": "2026-10-05",
+      "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+      "subcircuit": "BC846B",
+      "syntax": "SPICE3 subcircuit",
+      "version": "project structural child r1; Q2 emitter 33 -> 3"
+    },
+    "netlist_sha256": "686228a75ef01c590fe175ab8e7902085ba8bccf93a3f0446f85a5624f4ca048",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "audio.raw": "967c4b4243fb28d79e944c3a8836b11866c40e3db807f3a0a640253cb219dc1c",
+      "audio.raw.csv": "30f845558fbd5874b4cbdf65b8606a6dbf0f35a33c8a5c7210bf9028dd7460df",
+      "job.cir": "686228a75ef01c590fe175ab8e7902085ba8bccf93a3f0446f85a5624f4ca048",
+      "noise.raw": "e05d5f564556eadce43c72c3ed99dd19dfe5d8e959598ff093582f59a21a43d5",
+      "noise.raw.csv": "8aab8aa9bce8988c61e5595865fe4fc0c9521a68ede95f1b18a72139b0609b20",
+      "op.raw": "bcac5e66d03ca21de9adf8f91aea3d070f1a8861a81e2ebf70db8440d25da224",
+      "op.raw.csv": "b2c96a00669e0b7aed8b4efcd4c6ac0556e80362b9e379ffef597ed4616907ce",
+      "simulator.log": "f6505742372b7699484111d3559540313dc2563a1eea04edf074bef0b70b2b87",
+      "supply.raw": "820f9fc2743fd73f399f670a9593466bc109153ddcec4ac4b73cb1460f3bc949",
+      "supply.raw.csv": "725002fb84247842851f2c32454ddcb10baf2df6168f108c9e5fb0fa406c5d62"
+    },
+    "status": "ok",
+    "temperature_c": -10,
+    "timeout_s": 15
+  },
+  {
+    "directory": "bc846b_emitter_r1/nominal_-10_ports",
+    "label": "nominal_-10_ports",
+    "model": {
+      "acquisition_status": "valid_spice",
+      "device_id": "bc846b",
+      "file": "models/semiconductor/vendor/bc846b_emitter_r1.lib",
+      "id": "bc846b_emitter_r1",
+      "manufacturer": "Nexperia",
+      "model_lineage": [
+        {
+          "id": "bc846b_vendor",
+          "retrieved_date": "2026-10-05",
+          "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+          "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+          "version": "extraction week 24/2021"
+        }
+      ],
+      "ngspice_behavior": "",
+      "parent_model_id": "bc846b_vendor",
+      "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+      "redistribution": {
+        "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+        "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+        "status": "not_established_do_not_redistribute"
+      },
+      "retrieved_date": "2026-10-05",
+      "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+      "subcircuit": "BC846B",
+      "syntax": "SPICE3 subcircuit",
+      "version": "project structural child r1; Q2 emitter 33 -> 3"
+    },
+    "netlist_sha256": "e04caba7cb4e6e347f62099fc4dfda76f5037cb06cbbeaffbc8ad540bbf2b41a",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "job.cir": "e04caba7cb4e6e347f62099fc4dfda76f5037cb06cbbeaffbc8ad540bbf2b41a",
+      "n.raw": "ce2c2bc36dc462c144b37156d1a4dd180204eec1955eea9a1bf9ca9bb4831fa5",
+      "n.raw.csv": "ea8fc3de98816a1965186a6d380db2ff3ef8de0ed7ac0be04e3a8a40956cb326",
+      "p.raw": "009e6f335a07af696f3844a6e2b366b78699165186483d20f796b5e5ae2c34af",
+      "p.raw.csv": "1e627f554176dc904a944b2e626f8b6a57c1d558840a445e3ff8886f1990cbbb",
+      "simulator.log": "33e7537c9756b8bdccba5445c490305195b78e5432becf47b97268115e24bbcd"
+    },
+    "status": "ok",
+    "temperature_c": -10,
+    "timeout_s": 15
+  }
+]

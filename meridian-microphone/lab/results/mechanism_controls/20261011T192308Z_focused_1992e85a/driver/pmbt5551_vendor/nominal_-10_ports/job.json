@@ -1,0 +1,44 @@
+{
+  "directory": "pmbt5551_vendor/nominal_-10_ports",
+  "label": "nominal_-10_ports",
+  "model": {
+    "acquisition_status": "valid_spice",
+    "behavior_validation": "error",
+    "device_id": "pmbt5551",
+    "file": "models/semiconductor/vendor/pmbt5551.lib",
+    "id": "pmbt5551_vendor",
+    "manufacturer": "Nexperia",
+    "model_lineage": [],
+    "ngspice_behavior": "ps",
+    "parent_model_id": null,
+    "path": "semiconductor/vendor/pmbt5551.lib",
+    "pin_order": "subcircuit C B E; physical B1 E2 C3",
+    "primitive": "X",
+    "redistribution": {
+      "acquisition": "models/semiconductor/acquire.py; private receipt and acquisition.yaml",
+      "evidence": "Original notices and archive/PDF retained privately; public availability is not redistribution permission.",
+      "status": "not_established_do_not_redistribute"
+    },
+    "retrieved_date": "2026-10-09",
+    "runnability": "scoped_jobs_ok_with_retained_errors",
+    "sha256": "9f3e7425c5ebd57b8709851f271354dd46ddc42a4503b280d248fd015f27deb0",
+    "source_url": "https://assets.nexperia.com/documents/spice-model/PMBT5551.txt?download=1",
+    "subcircuit": "PMBT5551",
+    "syntax": "self-contained public subcircuit; dialect compatibility unverified",
+    "validation_record": "results/device_models/20261009T133651Z_parts_d3c30763/results.json",
+    "version": "extraction week42/2018"
+  },
+  "netlist_sha256": "57cb199ff93d451ae734d467e3f5d7fe81942bf6bbf13cb1b8d6b44c35bfea0d",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "retained_hashes": {
+    "job.cir": "57cb199ff93d451ae734d467e3f5d7fe81942bf6bbf13cb1b8d6b44c35bfea0d",
+    "n.raw": "ae2c04aa120be20ca1995a2c451ebf8f9d0c7a0ccc1e29156492379edabff66d",
+    "n.raw.csv": "0b1f42ae4ea2367333bc863f8dd190d97d522196b081acd6a0c7e7c94039209b",
+    "p.raw": "a96626df2d4cd16fbb58d1e18ddec6a612489a89aded4660b6bb704d9ecec75e",
+    "p.raw.csv": "64098b786b8011ec96d2c65ba6b97f1591f19bc2aea16915e73aac3a6bbf7c5b",
+    "simulator.log": "a8233f5525786b49123856bbea5acf45dc19779aee6187cb6e395cf78fadbc53"
+  },
+  "status": "ok",
+  "temperature_c": -10,
+  "timeout_s": 15
+}

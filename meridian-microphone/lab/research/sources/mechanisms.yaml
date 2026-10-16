@@ -39,3 +39,22 @@ S24:
   snapshot: architecture_sources/observations_2026-10-09.json
   limitation: Instrumentation analogies; no transferred chip/microphone performance
     or capsule rating
+S33:
+  title: Primary focused leakage/filter/loop/driver sources,11October2026
+  kind: primary_manufacturer_instrumentation_and_official_patent
+  evidence_date: '2026-10-11'
+  observations: architectures/focused-sources-001.json
+  queries: architectures/focused-queries-001.json
+  mechanism: Loaded high-impedance DC,final backplate RC,finite driver two-port/supply
+    transfer; independent equations and exact full files
+  limitation: No schematic cloning/performance transfer; incomplete spectra,procurement
+    and current official patent status
+S34:
+  title: Independent charge/reset, floating CMOS and seeded periodic mechanism prerequisites
+  kind: primary_manufacturer_original_instrumentation_doctoral_and_official_patent
+  evidence_date: '2026-10-16'
+  observations: architectures/diverse-sources-001.json
+  methods: architectures/diverse-source-notes-001.md
+  findings: architectures/diverse-prerequisites-001.md
+  limitation: Ideal controls remain separate from native periodic device noise;
+    floating/charge CMOS, real reset noise, procurement and patent status remain incomplete

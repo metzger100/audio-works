@@ -1,0 +1,187 @@
+[
+  {
+    "directory": "bc846b_emitter_r1/cold_startup",
+    "label": "cold_startup",
+    "model": {
+      "acquisition_status": "valid_spice",
+      "device_id": "bc846b",
+      "file": "models/semiconductor/vendor/bc846b_emitter_r1.lib",
+      "id": "bc846b_emitter_r1",
+      "manufacturer": "Nexperia",
+      "model_lineage": [
+        {
+          "id": "bc846b_vendor",
+          "retrieved_date": "2026-10-05",
+          "sha256": "4912d730e03f4ea9dd83f779b09323942516c951a8fc1b2266a4b8b1c9397aed",
+          "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+          "version": "extraction week 24/2021"
+        }
+      ],
+      "ngspice_behavior": "",
+      "parent_model_id": "bc846b_vendor",
+      "path": "semiconductor/vendor/bc846b_emitter_r1.lib",
+      "redistribution": {
+        "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+        "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+        "status": "not_established_do_not_redistribute"
+      },
+      "retrieved_date": "2026-10-05",
+      "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "source_url": "https://assets.nexperia.com/documents/spice-model/BC846B.txt?download=1",
+      "subcircuit": "BC846B",
+      "syntax": "SPICE3 subcircuit",
+      "version": "project structural child r1; Q2 emitter 33 -> 3"
+    },
+    "netlist_sha256": "58392221347d6ed420e24543c5fc5f2adbf6b6557027511920a3dfc1b29cb1eb",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "job.cir": "58392221347d6ed420e24543c5fc5f2adbf6b6557027511920a3dfc1b29cb1eb",
+      "simulator.log": "c171f4882c66bd9278067dc7dddd3f0df046ff5d207e892922a374e31bbc075b",
+      "start.raw": "94b96a9ca8ae4335e48a90efa501e20d463fbf20a5a2eae500beab85dcfe7ca0",
+      "start.raw.csv": "ab51df7d4798447350e44ce57087f0b701b3d29e107319ad7e6179ef12fe518e"
+    },
+    "status": "ok",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "bc850c_vendor/nominal_-10",
+    "label": "nominal_-10",
+    "model": {
+      "acquisition_status": "valid_spice",
+      "behavior_validation": "error",
+      "device_id": "bc850c",
+      "file": "models/semiconductor/vendor/bc850c.lib",
+      "id": "bc850c_vendor",
+      "manufacturer": "Nexperia",
+      "model_lineage": [],
+      "ngspice_behavior": "ps",
+      "parent_model_id": null,
+      "path": "semiconductor/vendor/bc850c.lib",
+      "pin_order": "subcircuit C B E; physical B1 E2 C3",
+      "primitive": "X",
+      "redistribution": {
+        "acquisition": "models/semiconductor/acquire.py; private receipt and acquisition.yaml",
+        "evidence": "Original notices and archive/PDF retained privately; public availability is not redistribution permission.",
+        "status": "not_established_do_not_redistribute"
+      },
+      "retrieved_date": "2026-10-09",
+      "runnability": "scoped_jobs_ok_with_retained_errors",
+      "sha256": "ef3fc2c3776eaf52acbfb5b7955eda8efd9fa714dd2158aa015ac42610bca399",
+      "source_url": "https://assets.nexperia.com/documents/spice-model/BC850C.txt?download=1",
+      "subcircuit": "BC850C",
+      "syntax": "self-contained public subcircuit; dialect compatibility unverified",
+      "validation_record": "results/device_models/20261009T133651Z_parts_d3c30763/results.json",
+      "version": "extraction week42/2018"
+    },
+    "netlist_sha256": "f207690e06a139a22cccc0e8c6ee5e8a754d658ab30ef642429624e869fc5f7b",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "audio.raw": "ae5dc17d88610728620aad72edecd589ae6d84d4bdb9a6809db5abd7590550a3",
+      "audio.raw.csv": "0ee9ebba7212704646b48463ed78b92f6180a95e3a633635ca6cc2989b3cd5bb",
+      "job.cir": "f207690e06a139a22cccc0e8c6ee5e8a754d658ab30ef642429624e869fc5f7b",
+      "noise.raw": "71557538070c9e5ff85d9e764199b970d06035da97fcfd8f010c7f5bb72bbd3b",
+      "noise.raw.csv": "29cc86a43bee6563d6469db1f8620d6baaea259d33bb14e4d7f34bbd1fabdcbd",
+      "op.raw": "924269258d8a81f868ed7995d1e609b27b708ebfd5802d8ac8dc67a262d30586",
+      "op.raw.csv": "6b2630b9cf714d3b00bbc568e05eebd46797227e1e5b10d9252ad190b545dda4",
+      "simulator.log": "bba8f4eb2c0e22a671af31963bbd9d75075759bee6c285c8a05a5c9a8f0434ae",
+      "supply.raw": "69eba2252627c477a7c69b79d1ddef705bf809722ed38e30fde530141071f327",
+      "supply.raw.csv": "b804b412f92007c2a2744173c95dfb84561b7be6c1c70516a39c15423afcba50"
+    },
+    "status": "ok",
+    "temperature_c": -10,
+    "timeout_s": 15
+  },
+  {
+    "directory": "bc850c_vendor/nominal_-10_ports",
+    "label": "nominal_-10_ports",
+    "model": {
+      "acquisition_status": "valid_spice",
+      "behavior_validation": "error",
+      "device_id": "bc850c",
+      "file": "models/semiconductor/vendor/bc850c.lib",
+      "id": "bc850c_vendor",
+      "manufacturer": "Nexperia",
+      "model_lineage": [],
+      "ngspice_behavior": "ps",
+      "parent_model_id": null,
+      "path": "semiconductor/vendor/bc850c.lib",
+      "pin_order": "subcircuit C B E; physical B1 E2 C3",
+      "primitive": "X",
+      "redistribution": {
+        "acquisition": "models/semiconductor/acquire.py; private receipt and acquisition.yaml",
+        "evidence": "Original notices and archive/PDF retained privately; public availability is not redistribution permission.",
+        "status": "not_established_do_not_redistribute"
+      },
+      "retrieved_date": "2026-10-09",
+      "runnability": "scoped_jobs_ok_with_retained_errors",
+      "sha256": "ef3fc2c3776eaf52acbfb5b7955eda8efd9fa714dd2158aa015ac42610bca399",
+      "source_url": "https://assets.nexperia.com/documents/spice-model/BC850C.txt?download=1",
+      "subcircuit": "BC850C",
+      "syntax": "self-contained public subcircuit; dialect compatibility unverified",
+      "validation_record": "results/device_models/20261009T133651Z_parts_d3c30763/results.json",
+      "version": "extraction week42/2018"
+    },
+    "netlist_sha256": "31e4064ba0ca55321b4dc5d8e0f0eedb2df5e6ca47f7b04d9bdc892b9393a927",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "job.cir": "31e4064ba0ca55321b4dc5d8e0f0eedb2df5e6ca47f7b04d9bdc892b9393a927",
+      "n.raw": "ae65bfedca8b78229a7bcb1906256e896b31e85d85a4974cadacd22066d4ae10",
+      "n.raw.csv": "3af71588a3a35f2d97608617846ebaf42c5e70873f76a80cc51bfa6d48f2b046",
+      "p.raw": "0169b65324061f3f027b3a2f8693b5bcd20fea0dd687d6c4a5a9d620317754c9",
+      "p.raw.csv": "6509d4b72ba4c67c7ca0d533e7dcb49bffb643da08772e71e98435a23b529c0d",
+      "simulator.log": "2b424ddf0b78ee24f0dabe193d2f62ce469ea3b72049db68fa1a8f3365ba8bf6"
+    },
+    "status": "ok",
+    "temperature_c": -10,
+    "timeout_s": 15
+  },
+  {
+    "directory": "bc850c_vendor/asymmetric_load_-10",
+    "label": "asymmetric_load_-10",
+    "model": {
+      "acquisition_status": "valid_spice",
+      "behavior_validation": "error",
+      "device_id": "bc850c",
+      "file": "models/semiconductor/vendor/bc850c.lib",
+      "id": "bc850c_vendor",
+      "manufacturer": "Nexperia",
+      "model_lineage": [],
+      "ngspice_behavior": "ps",
+      "parent_model_id": null,
+      "path": "semiconductor/vendor/bc850c.lib",
+      "pin_order": "subcircuit C B E; physical B1 E2 C3",
+      "primitive": "X",
+      "redistribution": {
+        "acquisition": "models/semiconductor/acquire.py; private receipt and acquisition.yaml",
+        "evidence": "Original notices and archive/PDF retained privately; public availability is not redistribution permission.",
+        "status": "not_established_do_not_redistribute"
+      },
+      "retrieved_date": "2026-10-09",
+      "runnability": "scoped_jobs_ok_with_retained_errors",
+      "sha256": "ef3fc2c3776eaf52acbfb5b7955eda8efd9fa714dd2158aa015ac42610bca399",
+      "source_url": "https://assets.nexperia.com/documents/spice-model/BC850C.txt?download=1",
+      "subcircuit": "BC850C",
+      "syntax": "self-contained public subcircuit; dialect compatibility unverified",
+      "validation_record": "results/device_models/20261009T133651Z_parts_d3c30763/results.json",
+      "version": "extraction week42/2018"
+    },
+    "netlist_sha256": "517d04e0aaf155124aa3279fddaed67a0df394b3065f1adfd0c27173a8fffc16",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "audio.raw": "4ea62b2d9d7d8bcb31692476e1bcbe1f0a0d4b8a8cec1106f42ca6f5a4bc6e07",
+      "audio.raw.csv": "f4d54170746bba95e991fe07c8083a7bc154c7420b7086b8ea0f876c2fad6fb2",
+      "job.cir": "517d04e0aaf155124aa3279fddaed67a0df394b3065f1adfd0c27173a8fffc16",
+      "noise.raw": "69d3d38c3e027e653c2976021e832a4c1a827c33121adbe913762ad98f445468",
+      "noise.raw.csv": "5f12e7d2d03e36243ec920387df963666405c0d33870c81a7818c1547c3809ad",
+      "op.raw": "ffb559b91d7a3c954ed7feb603a47a7dd469e3469b427582728a9cdc1b27d2f7",
+      "op.raw.csv": "6b2630b9cf714d3b00bbc568e05eebd46797227e1e5b10d9252ad190b545dda4",
+      "simulator.log": "338cfd3478b234c13acf1fa9cc7dc288d7c2763e2112e6f93651bbe203643700",
+      "supply.raw": "4a44dec1c92241b6186f0369f175aa2dbf20c53ce4228f3882d3db9dc1aa8507",
+      "supply.raw.csv": "46fbfac34716113ae6a93aeaff329dd36c60905eb95cb244a3f20b3474001904"
+    },
+    "status": "ok",
+    "temperature_c": -10,
+    "timeout_s": 15
+  }
+]

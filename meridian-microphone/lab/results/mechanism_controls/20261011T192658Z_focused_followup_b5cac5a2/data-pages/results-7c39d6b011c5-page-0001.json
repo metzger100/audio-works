@@ -1,0 +1,104 @@
+{
+  "C_boundary_correction": "13.5557796V rail and29.5293276V raw are observed0019 fixed-parent boundary, not0023 servo; equations/results unchanged",
+  "complete": true,
+  "eligible": false,
+  "jobs": [
+    {
+      "directory": "final_network_oracle/unfiltered",
+      "label": "unfiltered",
+      "model": {
+        "id": "final_network_oracle"
+      },
+      "netlist_sha256": "1b6559b92d9e989d06063b304a2b1988560a2b066d795aba68d6d0e0692a2fd5",
+      "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+      "retained_hashes": {
+        "back.raw": "d43caec5559e56eec4127a0540cb46c6bbe0b40edf5d381530cf433d00c78d1d",
+        "back.raw.csv": "39034a41f2743e9a093b588c544e4b575a7c0969282f816ed9e01b15145f585b",
+        "job.cir": "1b6559b92d9e989d06063b304a2b1988560a2b066d795aba68d6d0e0692a2fd5",
+        "raw.raw": "be8fd4b0c8454f4535453eba833f3f9ab12150c8b0c0547fc1c2b9ee79be86bb",
+        "raw.raw.csv": "39034a41f2743e9a093b588c544e4b575a7c0969282f816ed9e01b15145f585b",
+        "simulator.log": "fd00684e2c6df20d8ba756b258bfe43ea26a3e33549623401a77fd21df228df4"
+      },
+      "status": "ok",
+      "temperature_c": 25,
+      "timeout_s": 15
+    },
+    {
+      "directory": "final_network_oracle/filtered",
+      "label": "filtered",
+      "model": {
+        "id": "final_network_oracle"
+      },
+      "netlist_sha256": "f3071ea14d9781df4cae26b174361a7771e195f9e2124889117480e9e297de02",
+      "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+      "retained_hashes": {
+        "back.raw": "ec95f62b3f53548f2ecd2b24771020fd40368e9f14a2957876c4a6ed53308483",
+        "back.raw.csv": "39034a41f2743e9a093b588c544e4b575a7c0969282f816ed9e01b15145f585b",
+        "job.cir": "f3071ea14d9781df4cae26b174361a7771e195f9e2124889117480e9e297de02",
+        "raw.raw": "d0c6d0f84d6a44a8c275adac4f478f179755ea7e003773c7b0dc922db70c67cb",
+        "raw.raw.csv": "39034a41f2743e9a093b588c544e4b575a7c0969282f816ed9e01b15145f585b",
+        "simulator.log": "73824544a8ede16c44aa7ba68d08521e54f660107927def5d4234f26f25f2256"
+      },
+      "status": "ok",
+      "temperature_c": 25,
+      "timeout_s": 15
+    },
+    {
+      "directory": "final_network_oracle/filtered_adverse",
+      "label": "filtered_adverse",
+      "model": {
+        "id": "final_network_oracle"
+      },
+      "netlist_sha256": "8706b4815e6f08a0b9a256c170e368492a3c4708aee50813fdb45aecb820b70c",
+      "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+      "retained_hashes": {
+        "back.raw": "a4c3e1e73d295dd9b1532dc8f09eb9c3ad804bc7457de2cab74fa353b96244a7",
+        "back.raw.csv": "39034a41f2743e9a093b588c544e4b575a7c0969282f816ed9e01b15145f585b",
+        "job.cir": "8706b4815e6f08a0b9a256c170e368492a3c4708aee50813fdb45aecb820b70c",
+        "raw.raw": "6472b468c66391785364bdec530ab628a44a75e5d640e3892de18c1389b8b08b",
+        "raw.raw.csv": "39034a41f2743e9a093b588c544e4b575a7c0969282f816ed9e01b15145f585b",
+        "simulator.log": "4fe2b592cb0a1f9edcd683e4ed44e6071a9d47d8b36b753f3d38c7d50684abed"
+      },
+      "status": "ok",
+      "temperature_c": 25,
+      "timeout_s": 15
+    }
+  ],
+  "oracles": [
+    {
+      "label": "unfiltered",
+      "maximum_relative_errors": {
+        "back.raw": 1.824509876452133e-15,
+        "raw.raw": 3.780118086638916e-15
+      },
+      "scope": "Actual local polarization R/C/IR/ESR/ESL two-node network; no capsule/nonlinear transfer substitution",
+      "status": "pass"
+    },
+    {
+      "label": "filtered",
+      "maximum_relative_errors": {
+        "back.raw": 1.868362490009271e-09,
+        "raw.raw": 1.86836384535085e-09
+      },
+      "scope": "Actual local polarization R/C/IR/ESR/ESL two-node network; no capsule/nonlinear transfer substitution",
+      "status": "pass"
+    },
+    {
+      "label": "filtered_adverse",
+      "maximum_relative_errors": {
+        "back.raw": 1.814752408665981e-09,
+        "raw.raw": 1.8147527466591865e-09
+      },
+      "scope": "Actual local polarization R/C/IR/ESR/ESL two-node network; no capsule/nonlinear transfer substitution",
+      "status": "pass"
+    }
+  ],
+  "parent_batch": "results/mechanism_controls/20261011T192308Z_focused_1992e85a",
+  "reverse_return": {
+    "$include": "results-7c39d6b011c5-0003-reverse-return.json"
+  },
+  "rows": {
+    "$include": "results-7c39d6b011c5-0000-rows.json"
+  },
+  "source_unchanged": true
+}

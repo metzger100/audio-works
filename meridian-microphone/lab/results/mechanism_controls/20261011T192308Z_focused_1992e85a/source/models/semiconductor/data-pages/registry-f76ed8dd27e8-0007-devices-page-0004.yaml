@@ -1,0 +1,156 @@
+- id: mmbfj113
+  manufacturer: onsemi
+  exact_variant: MMBFJ113
+  family: discrete_n_jfet
+  package: SOT-23
+  lifecycle:
+    status: unverified_exact_order_code
+    checked_date: '2026-10-05'
+    source_url: https://www.onsemi.com/design/tools-software/product-recommendation-tools-plus/jfet/products
+  datasheet:
+    url: https://www.onsemi.com/download/data-sheet/pdf/mmbfj113-d.pdf
+    retrieved_date: '2026-10-05'
+    local_path: null
+    sha256: null
+  ratings:
+    gate_breakdown_min_v: 35
+    idss_min_a: 0.002
+    vgs_off_magnitude_v:
+    - 0.5
+    - 3
+    condition: manufacturer sheet at25C; no Idss upper/noise spectrum established
+      here
+  models: []
+  represented_behavior: {}
+  unqualified_behavior:
+  - all device model behaviors
+  - exact active small-quantity variant
+  procurement_register: research/procurement/semiconductors_2026-10-05.yaml
+  readiness: unsupported_alternative_investigation
+  substitutes: []
+  patent_status: no_implementation_selected
+  validation_report: research/device_model_validation.md
+  evidence_states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+- id: jfe2140
+  manufacturer: Texas Instruments
+  exact_variant: JFE2140DR
+  family: integrated_dual_n_jfet
+  package: SOIC-8 D
+  circuit_roles:
+  - high_impedance
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://www.ti.com/product/JFE2140
+  models:
+  - id: jfe2140_vendor
+    path: semiconductor/vendor/jfe2140.lib
+    sha256: b872775746e2be5b00347664128b41c86c1483be224be8bc3780dc533c5fc2e0
+    version: Final 1.0 16AUG2021
+    source_url: https://www.ti.com/lit/zip/slpm355
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: self-contained public subcircuit; dialect compatibility unverified
+    subcircuit: JFEx140
+    primitive: X
+    parent_model_id: null
+    ngspice_behavior: ps
+    pin_order: D G S VCH VCL; one half, physical pins 2 4 1 3 7; second half 6 8 5
+      3 7
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: all_planned_jobs_run
+    behavior_validation: disagreement
+    validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      jfe2140_vendor:
+      - behavior: idss_25c
+        status: pass
+        evidence: guaranteed_limit
+        condition: SLPS730B table6.5 VDS10V VGS0 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.0001_10
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.0001_1000
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.0001_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_10
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_0.002_1000
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: VDS10V 25C at explicitly interpolated ID; SLPS730B table6.5
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_10
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: noise_refinement_0.002_1000
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: current_noise_1khz
+        status: fail
+        evidence: typical_accuracy_screen
+        condition: JFE2140 table6.5 VDS5V ID2mA 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: reverse_gate_leak
+        status: fail
+        evidence: guaranteed_limit
+        condition: 25C VDS0 VGS-30V TI or -10V Linear; bound includes fixture GMIN
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  procurement_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  readiness: research_only_no_blanket_behavior_qualification
+  patent_status: technical_feature_flags_only_exact_claim_status_screen_incomplete
+  validation_report: research/parts_database_expansion_001.md
+  unqualified_behavior:
+  - production correlated variation
+  - model omissions are not zero
+  - candidate combination
+  - physical P48 implementation
+  - capsule coupling
+  represented_behavior:
+    scope: model equations/header inspected; behavior evidence is independent from
+      loading
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/jfe2140.pdf
+    version: SLPS730B August 2023
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_jfe2140.pdf
+    sha256: baeb38d1596ab468e9c8d0443afc5286e90fe3074001a81c660258767deb46a3
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json

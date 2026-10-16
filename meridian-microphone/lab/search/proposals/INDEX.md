@@ -27,4 +27,5 @@ Immediate contents and child hubs.
 - [candidate_0022/](candidate_0022/INDEX.md)
 - [candidate_0023/](candidate_0023/INDEX.md)
 - [candidate_0024/](candidate_0024/INDEX.md)
+- [candidate_0025/](candidate_0025/INDEX.md)
 - [concept_0010/](concept_0010/INDEX.md)

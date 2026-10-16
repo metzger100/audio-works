@@ -1,0 +1,181 @@
+[
+  {
+    "directory": "guard_oracle/0.99",
+    "label": "0.99",
+    "model": {
+      "id": "guard_oracle"
+    },
+    "netlist_sha256": "96cd7b790d100c5997e030a240f96b4ce54a119386446fe444ef74e84daea16f",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "ac.raw": "6607bb6f5a1e8c5d01037f6588a47a30a040b42a7e5ef890009d989ea350ba34",
+      "ac.raw.csv": "edc32369f7eea30607655ca526d489179c8a21e49a56489a2f756b8314c40f27",
+      "job.cir": "96cd7b790d100c5997e030a240f96b4ce54a119386446fe444ef74e84daea16f",
+      "simulator.log": "0d66b45aca117f3631f37a36befff6601e48272aa8d6faaf845d68c932ab688c"
+    },
+    "status": "ok",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "guard_oracle/2",
+    "label": "2",
+    "model": {
+      "id": "guard_oracle"
+    },
+    "netlist_sha256": "defdf6f5bb12e4d2a92125d2c0c95b0a4e8bba77537f717263e26f185299ecdc",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "ac.raw": "7cc6eede1db60084e5b9d4acf09df372f0ef1586b549793707e03c73ada676d8",
+      "ac.raw.csv": "edc32369f7eea30607655ca526d489179c8a21e49a56489a2f756b8314c40f27",
+      "job.cir": "defdf6f5bb12e4d2a92125d2c0c95b0a4e8bba77537f717263e26f185299ecdc",
+      "simulator.log": "4ed012ede98019669be848853920c5ea41376fb4bdc417a95c3843854e6b3464"
+    },
+    "status": "ok",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "opa197_pspice/charge_reset_0",
+    "label": "charge_reset_0",
+    "model": {
+      "acquisition_status": "valid_spice",
+      "device_id": "opa197",
+      "file": "models/semiconductor/vendor/opa197.lib",
+      "id": "opa197_pspice",
+      "manufacturer": "Texas Instruments",
+      "model_lineage": [],
+      "ngspice_behavior": "ps",
+      "parent_model_id": null,
+      "path": "semiconductor/vendor/opa197.lib",
+      "redistribution": {
+        "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+        "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+        "status": "not_established_do_not_redistribute"
+      },
+      "retrieved_date": "2026-10-05",
+      "sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "source_url": "https://www.ti.com/lit/zip/sboma34d",
+      "subcircuit": "OPAx197",
+      "syntax": "SPICE3 subcircuit with PSpice extensions",
+      "version": "Final 1.3; 23JUN2022; SBOMA34D"
+    },
+    "netlist_sha256": "dd2a10d6e6c056f328395adf886b60d156612c9b1d232824277cafd9e203509f",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "reason": "exit 0: Warning",
+    "retained_hashes": {
+      "job.cir": "dd2a10d6e6c056f328395adf886b60d156612c9b1d232824277cafd9e203509f",
+      "simulator.log": "a4e6a6119c3f30368569b2e987ace0c194006158d4679f5e303e9d2ae811294f"
+    },
+    "status": "error",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "opa197_pspice/charge_reset_20",
+    "label": "charge_reset_20",
+    "model": {
+      "acquisition_status": "valid_spice",
+      "device_id": "opa197",
+      "file": "models/semiconductor/vendor/opa197.lib",
+      "id": "opa197_pspice",
+      "manufacturer": "Texas Instruments",
+      "model_lineage": [],
+      "ngspice_behavior": "ps",
+      "parent_model_id": null,
+      "path": "semiconductor/vendor/opa197.lib",
+      "redistribution": {
+        "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+        "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+        "status": "not_established_do_not_redistribute"
+      },
+      "retrieved_date": "2026-10-05",
+      "sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "source_url": "https://www.ti.com/lit/zip/sboma34d",
+      "subcircuit": "OPAx197",
+      "syntax": "SPICE3 subcircuit with PSpice extensions",
+      "version": "Final 1.3; 23JUN2022; SBOMA34D"
+    },
+    "netlist_sha256": "3a5236735aa074a3d70344e93a620ce647ccc34396933a0faa60d96b4465a219",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "reason": "exit 0: Warning",
+    "retained_hashes": {
+      "job.cir": "3a5236735aa074a3d70344e93a620ce647ccc34396933a0faa60d96b4465a219",
+      "simulator.log": "845a99f812dfabfffa2eccaf638e84a418fa4f6268016382f8ac790494854317"
+    },
+    "status": "error",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "carrier_island/0_0.2_32",
+    "label": "0_0.2_32",
+    "model": {
+      "id": "carrier_island"
+    },
+    "netlist_sha256": "508d6043165870b566ddd6a0e1497cfdc94db0c0ee265ac058d084c7b1ae5799",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "job.cir": "508d6043165870b566ddd6a0e1497cfdc94db0c0ee265ac058d084c7b1ae5799",
+      "simulator.log": "2c3ec04d16a1bc8773bc6ad0cbe5803798926535b90e2a05f74f4fc8fe1e82b3",
+      "tran.raw": "e4cb4e61c34da8b2237bc4f82a2f088b150e3058f4af409ae74d2c65c19d7841",
+      "tran.raw.csv": "7c3278023c1b3fb73d7637105a60a02ce25ef1b2cc7435a20f6a6a21edddc9d2"
+    },
+    "status": "ok",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "carrier_island/1_0_32",
+    "label": "1_0_32",
+    "model": {
+      "id": "carrier_island"
+    },
+    "netlist_sha256": "c63186247c671a2f3d63c2ebb39066546da49a2661d9206f9097ff2b3de0d4f4",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "reason": "15s process-group timeout; partial log/waveform retained",
+    "retained_hashes": {
+      "job.cir": "c63186247c671a2f3d63c2ebb39066546da49a2661d9206f9097ff2b3de0d4f4",
+      "simulator.log": "fce40b9ed15b7e2d6fa37c60e013667ecd0dd501c0f9ca9b7613d2e34d042efa"
+    },
+    "status": "error",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "carrier_island/1_0.2_32",
+    "label": "1_0.2_32",
+    "model": {
+      "id": "carrier_island"
+    },
+    "netlist_sha256": "97ba69869d99d68644a8f05f784816159fe9e1a342ec8665239a5188555163e2",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "job.cir": "97ba69869d99d68644a8f05f784816159fe9e1a342ec8665239a5188555163e2",
+      "simulator.log": "9fa68b6752887cd40cdb0dddf8c2199e668f6e0ec658099974b5078901b00cfe",
+      "tran.raw": "c54de764088b1b241865b0b03d041e31f216980430ad2134c9982d225d510a6d",
+      "tran.raw.csv": "68fc8a1ea312628e5d6d907a3ff34916386a6907fdb65f808efa16dbfd6ae7b4"
+    },
+    "status": "ok",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "carrier_island/1_0.2_64",
+    "label": "1_0.2_64",
+    "model": {
+      "id": "carrier_island"
+    },
+    "netlist_sha256": "c7339c1202e80077025a163cd3ffa003628c14ed7030bbd9bd987a9b480fd1f9",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "job.cir": "c7339c1202e80077025a163cd3ffa003628c14ed7030bbd9bd987a9b480fd1f9",
+      "simulator.log": "b8c95b4d44dd93ace4e2adf227b37149594b14d6fe11effc32866cbb9fd27015",
+      "tran.raw": "8ef7c8c6db415503d3c71de37f2538fef2b8e9846156a2c4f86b8725568f2db8",
+      "tran.raw.csv": "1eb7ea042171faa03ce06838ac34ddf9a5e7ebf012ecf219648daae5cdd23c71"
+    },
+    "status": "ok",
+    "temperature_c": 25,
+    "timeout_s": 15
+  }
+]

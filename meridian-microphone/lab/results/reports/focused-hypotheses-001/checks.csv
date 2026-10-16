@@ -1,0 +1,46 @@
+candidate,check,status,reason,coverage,experiment
+candidate_0019,operating_point,pass,,DC feasibility screen; device safe operating area remains a separate evidence gate,20261011T192334Z_91abee84
+candidate_0019,frequency_response,pass,,"1 Hz to 10 MHz, nominal environment; electrical model only",20261011T192334Z_91abee84
+candidate_0019,noise,fail,,Resistive fixture noise; conditional capsule sensitivity. Semiconductor and capsule mechanical noise unresolved.,20261011T192334Z_91abee84
+candidate_0019,distortion,error,"SimulationError: ngspice exit 0: 
+doAnalyses: TRAN:  Timestep too small",,20261011T192334Z_91abee84
+candidate_0019,headroom,incomplete,No valid distortion bracket,,20261011T192334Z_91abee84
+candidate_0019,output_impedance,fail,,,20261011T192334Z_91abee84
+candidate_0019,balance,fail,,,20261011T192334Z_91abee84
+candidate_0019,phantom_supply,pass,,8 DC/AC supply/feed extremes. Noise/distortion/abuse at corners pending.,20261011T192334Z_91abee84
+candidate_0019,temperature,pass,,3 electrical temperatures; no validated mechanical or leakage temperature law,20261011T192334Z_91abee84
+candidate_0019,semiconductor_corners,incomplete,No manufacturer-bounded semiconductor corners; ideal fixtures cannot demonstrate no-selection yield,,20261011T192334Z_91abee84
+candidate_0019,monte_carlo,incomplete,Initial Monte Carlo runs DC/AC screens only; all-requirement manufacturing yield is not established,,20261011T192334Z_91abee84
+candidate_0019,loading,fail,,Electrical loading and 16 assumed capsule corners; not an acoustic polar or mechanical model,20261011T192334Z_91abee84
+candidate_0019,startup,pass,,"Symmetric cold turn-on PWL. Hot-plug, asymmetric pin connection, disconnect, RF/ESD pending.",20261011T192334Z_91abee84
+candidate_0019,stability,fail,,HF and cable/load screening,20261011T192334Z_91abee84
+candidate_0023,operating_point,pass,,DC feasibility screen; device safe operating area remains a separate evidence gate,20261011T192341Z_519a5793
+candidate_0023,frequency_response,pass,,"1 Hz to 10 MHz, nominal environment; electrical model only",20261011T192341Z_519a5793
+candidate_0023,noise,fail,,Resistive fixture noise; conditional capsule sensitivity. Semiconductor and capsule mechanical noise unresolved.,20261011T192341Z_519a5793
+candidate_0023,distortion,error,"SimulationError: ngspice exit 0: 
+doAnalyses: TRAN:  Timestep too small",,20261011T192341Z_519a5793
+candidate_0023,headroom,incomplete,No valid distortion bracket,,20261011T192341Z_519a5793
+candidate_0023,output_impedance,fail,,,20261011T192341Z_519a5793
+candidate_0023,balance,fail,,,20261011T192341Z_519a5793
+candidate_0023,phantom_supply,pass,,8 DC/AC supply/feed extremes. Noise/distortion/abuse at corners pending.,20261011T192341Z_519a5793
+candidate_0023,temperature,pass,,3 electrical temperatures; no validated mechanical or leakage temperature law,20261011T192341Z_519a5793
+candidate_0023,semiconductor_corners,incomplete,No manufacturer-bounded semiconductor corners; ideal fixtures cannot demonstrate no-selection yield,,20261011T192341Z_519a5793
+candidate_0023,monte_carlo,incomplete,Initial Monte Carlo runs DC/AC screens only; all-requirement manufacturing yield is not established,,20261011T192341Z_519a5793
+candidate_0023,loading,fail,,Electrical loading and 16 assumed capsule corners; not an acoustic polar or mechanical model,20261011T192341Z_519a5793
+candidate_0023,startup,fail,,"Symmetric cold turn-on PWL. Hot-plug, asymmetric pin connection, disconnect, RF/ESD pending.",20261011T192341Z_519a5793
+candidate_0023,stability,fail,,HF and cable/load screening,20261011T192341Z_519a5793
+candidate_0025,operating_point,pass,,DC feasibility screen; device safe operating area remains a separate evidence gate,20261011T192350Z_37334df2
+candidate_0025,frequency_response,pass,,"1 Hz to 10 MHz, nominal environment; electrical model only",20261011T192350Z_37334df2
+candidate_0025,noise,fail,,Resistive fixture noise; conditional capsule sensitivity. Semiconductor and capsule mechanical noise unresolved.,20261011T192350Z_37334df2
+candidate_0025,distortion,error,"SimulationError: ngspice exit 0: 
+doAnalyses: TRAN:  Timestep too small",,20261011T192350Z_37334df2
+candidate_0025,headroom,incomplete,No valid distortion bracket,,20261011T192350Z_37334df2
+candidate_0025,output_impedance,fail,,,20261011T192350Z_37334df2
+candidate_0025,balance,fail,,,20261011T192350Z_37334df2
+candidate_0025,phantom_supply,pass,,8 DC/AC supply/feed extremes. Noise/distortion/abuse at corners pending.,20261011T192350Z_37334df2
+candidate_0025,temperature,pass,,3 electrical temperatures; no validated mechanical or leakage temperature law,20261011T192350Z_37334df2
+candidate_0025,semiconductor_corners,incomplete,No manufacturer-bounded semiconductor corners; ideal fixtures cannot demonstrate no-selection yield,,20261011T192350Z_37334df2
+candidate_0025,monte_carlo,incomplete,Initial Monte Carlo runs DC/AC screens only; all-requirement manufacturing yield is not established,,20261011T192350Z_37334df2
+candidate_0025,loading,fail,,Electrical loading and 16 assumed capsule corners; not an acoustic polar or mechanical model,20261011T192350Z_37334df2
+candidate_0025,startup,fail,,"Symmetric cold turn-on PWL. Hot-plug, asymmetric pin connection, disconnect, RF/ESD pending.",20261011T192350Z_37334df2
+candidate_0025,stability,fail,,HF and cable/load screening,20261011T192350Z_37334df2

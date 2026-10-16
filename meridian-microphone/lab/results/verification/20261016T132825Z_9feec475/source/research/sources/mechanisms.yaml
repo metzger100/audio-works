@@ -1,0 +1,60 @@
+S05:
+  title: TI SLOA033A, Signal Conditioning Piezoelectric Sensors, James Karki, 2000
+  url: https://www.ti.com/lit/an/sloa033a/sloa033a.pdf
+  kind: primary_application_report
+  mechanism: Charge-to-voltage feedback reduces dependence on sensor/interconnect
+    capacitance; bleed path prevents DC saturation.
+S06:
+  title: Analog Devices ADA4530-1 Rev C datasheet
+  url: https://www.analog.com/media/en/technical-documentation/data-sheets/ADA4530-1.pdf
+  kind: primary_datasheet
+  mechanism: Low bias current and a driven guard isolate leakage at high-impedance
+    sensor nodes. Voltage noise, current, supply and layout must still be evaluated
+    for audio use.
+S07:
+  title: Analog Devices, Transimpedance Amplifier Noise Considerations, 2015
+  url: https://www.analog.com/en/resources/technical-articles/transimpedance-amplifier-noise-considerations.html
+  kind: primary_manufacturer_application_article
+  mechanism: Voltage/current noise, total input capacitance and feedback impedance
+    jointly determine TIA noise and stability.
+S08:
+  title: Fast low-noise transimpedance amplifier for scanning tunneling microscopy
+    and beyond, 2020
+  url: https://arxiv.org/abs/2007.00615
+  kind: primary_research_paper
+  mechanism: High-resistance feedback with low-current sensing; evaluate Johnson noise,
+    capacitance, bandwidth and dynamic range together.
+S09:
+  title: Analog Devices AD7745/AD7746 datasheet Rev 0
+  url: https://www.analog.com/media/en/technical-documentation/data-sheets/AD7745_7746.pdf
+  kind: primary_datasheet
+  mechanism: Excitation and differential floating capacitance sensing reject some
+    parasitic effects.
+  limitation: This particular CDC has insufficient audio sample rate and capacitance
+    range; borrow the sensing mechanism, not the chip as the audio signal path.
+S24:
+  title: Primary charge/guard/TIA/floating sensing mechanisms
+  kind: primary_cross_domain
+  evidence_date: '2026-10-09'
+  snapshot: architecture_sources/observations_2026-10-09.json
+  limitation: Instrumentation analogies; no transferred chip/microphone performance
+    or capsule rating
+S33:
+  title: Primary focused leakage/filter/loop/driver sources,11October2026
+  kind: primary_manufacturer_instrumentation_and_official_patent
+  evidence_date: '2026-10-11'
+  observations: architectures/focused-sources-001.json
+  queries: architectures/focused-queries-001.json
+  mechanism: Loaded high-impedance DC,final backplate RC,finite driver two-port/supply
+    transfer; independent equations and exact full files
+  limitation: No schematic cloning/performance transfer; incomplete spectra,procurement
+    and current official patent status
+S34:
+  title: Independent charge/reset, floating CMOS and seeded periodic mechanism prerequisites
+  kind: primary_manufacturer_original_instrumentation_doctoral_and_official_patent
+  evidence_date: '2026-10-16'
+  observations: architectures/diverse-sources-001.json
+  methods: architectures/diverse-source-notes-001.md
+  findings: architectures/diverse-prerequisites-001.md
+  limitation: Ideal controls remain separate from native periodic device noise;
+    floating/charge CMOS, real reset noise, procurement and patent status remain incomplete

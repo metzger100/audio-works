@@ -1,0 +1,42 @@
+{
+  "directory": "opa928_vendor/charge_0",
+  "label": "charge_0",
+  "model": {
+    "acquisition_status": "valid_spice",
+    "behavior_validation": "only conditioned accepted rows; omissions unresolved",
+    "device_id": "opa928",
+    "file": "models/semiconductor/vendor/opa928.lib",
+    "id": "opa928_vendor",
+    "load_record": "results/device_models/20261009T145346Z_parts2_742caaa3/results.json",
+    "manufacturer": "Texas Instruments",
+    "model_lineage": [],
+    "ngspice_behavior": "ps",
+    "parent_model_id": null,
+    "path": "semiconductor/vendor/opa928.lib",
+    "pin_order": "IN+ IN- V+ V- OUT GRD1 GRD2; physical 4 5 6 3 1 2 7; NC8",
+    "primitive": "X",
+    "redistribution": {
+      "acquisition": "models/semiconductor/acquire.py; private receipt and acquisition.yaml",
+      "evidence": "Original notices and archive/PDF retained privately; public availability is not redistribution permission.",
+      "status": "not_established_do_not_redistribute"
+    },
+    "retrieved_date": "2026-10-09",
+    "runnability": "scoped_success_with_retained_disagreements",
+    "sha256": "f4f9d38efc4aa2a31676c84a351d2ee9379baad88abab8b5afad550c7f99c616",
+    "source_url": "https://www.ti.com/lit/zip/sbomcc0a",
+    "subcircuit": "OPAX928",
+    "syntax": "self-contained public subcircuit; dialect compatibility unverified",
+    "validation_record": "results/device_models/20261009T133651Z_parts_d3c30763/results.json",
+    "version": "1.1 01Apr2024"
+  },
+  "netlist_sha256": "4c8c13a43c30835b89acadf13f891e760bff3d1a52a9a289a3d28aad33eb0e40",
+  "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+  "reason": "exit 0: Warning",
+  "retained_hashes": {
+    "job.cir": "4c8c13a43c30835b89acadf13f891e760bff3d1a52a9a289a3d28aad33eb0e40",
+    "simulator.log": "44f715bab8ada414987717fc69ffc2663ae9f1ad28176f41aeb2470e97fb1f14"
+  },
+  "status": "error",
+  "temperature_c": 25,
+  "timeout_s": 15
+}

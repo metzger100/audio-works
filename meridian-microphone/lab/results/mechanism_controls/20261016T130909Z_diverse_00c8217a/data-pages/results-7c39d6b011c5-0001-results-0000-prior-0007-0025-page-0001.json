@@ -1,0 +1,71 @@
+{
+  "candidate": "0025",
+  "checks": {
+    "balance": {
+      "reason": null,
+      "status": "fail"
+    },
+    "distortion": {
+      "reason": "SimulationError: ngspice exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+      "status": "error"
+    },
+    "frequency_response": {
+      "reason": null,
+      "status": "pass"
+    },
+    "headroom": {
+      "reason": "No valid distortion bracket",
+      "status": "incomplete"
+    },
+    "loading": {
+      "reason": null,
+      "status": "fail"
+    },
+    "monte_carlo": {
+      "reason": "Initial Monte Carlo runs DC/AC screens only; all-requirement manufacturing yield is not established",
+      "status": "incomplete"
+    },
+    "noise": {
+      "reason": null,
+      "status": "fail"
+    },
+    "operating_point": {
+      "reason": null,
+      "status": "pass"
+    },
+    "output_impedance": {
+      "reason": null,
+      "status": "fail"
+    },
+    "phantom_supply": {
+      "reason": null,
+      "status": "pass"
+    },
+    "semiconductor_corners": {
+      "reason": "No manufacturer-bounded semiconductor corners; ideal fixtures cannot demonstrate no-selection yield",
+      "status": "incomplete"
+    },
+    "stability": {
+      "reason": null,
+      "status": "fail"
+    },
+    "startup": {
+      "reason": null,
+      "status": "fail"
+    },
+    "temperature": {
+      "reason": null,
+      "status": "pass"
+    }
+  },
+  "circuit_sha256": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf",
+  "eligible": false,
+  "noise_metrics": {
+    "$include": "results-7c39d6b011c5-0001-results-0000-prior-0007-0025-0006-noise-metrics.json"
+  },
+  "original_result_sha256": "341c604eb237296c18365ec4d09cf7c23ae95ed04846667e9c6c8472d573c44a",
+  "prior_experiment": "20261011T192350Z_37334df2",
+  "response_metrics": {
+    "$include": "results-7c39d6b011c5-0001-results-0000-prior-0007-0025-0005-response-metrics.json"
+  }
+}

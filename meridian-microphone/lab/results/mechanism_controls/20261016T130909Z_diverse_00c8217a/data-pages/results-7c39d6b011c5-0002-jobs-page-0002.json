@@ -1,0 +1,210 @@
+[
+  {
+    "directory": "reset_oracle/reset_1e-07",
+    "label": "reset_1e-07",
+    "model": {
+      "id": "reset_oracle"
+    },
+    "netlist_sha256": "8954ea010b5cd3038a323360fb937da687f8d24edeb5988471db289b2b96f0c5",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "job.cir": "8954ea010b5cd3038a323360fb937da687f8d24edeb5988471db289b2b96f0c5",
+      "simulator.log": "23e9e70f86be33b93afe2114cb2e57e6a28b3ccf3be85d00201e610b94aa4cf0",
+      "tran.raw": "0596bc342fc7f5f57f20a7bba6656e5d9a6036dd052f35af9fcafde633c8fc0e",
+      "tran.raw.csv": "0877e9dde5070560a07fdbd0559d91738673800e7c7c7bd16f57104cc7239525"
+    },
+    "status": "ok",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "reset_oracle/reset_9.99001e-11",
+    "label": "reset_9.99001e-11",
+    "model": {
+      "id": "reset_oracle"
+    },
+    "netlist_sha256": "a676d4f4ded78b6e6813f44a0906dbefd5770ab368d4cc6d13e50e03746a6c71",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "job.cir": "a676d4f4ded78b6e6813f44a0906dbefd5770ab368d4cc6d13e50e03746a6c71",
+      "simulator.log": "0ad06cdb81ef17682a2ac71d46b24f769967d8b2770b21d9dea5fef26c8f9afb",
+      "tran.raw": "e606612536b1e2d93fb56605288c7778eb4d9f14b4260957d601175fc274b5b2",
+      "tran.raw.csv": "bf0233cd75abbf4efbacdd5505133cf2945754b641af7444aa737910abfa394c"
+    },
+    "status": "ok",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "dc_reset/500000.0",
+    "label": "500000.0",
+    "model": {
+      "id": "dc_reset"
+    },
+    "netlist_sha256": "3ca8d840d71cf4ebb1756dce5088554d4c88bd25c4f3458719f7cbb57d81d333",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "job.cir": "3ca8d840d71cf4ebb1756dce5088554d4c88bd25c4f3458719f7cbb57d81d333",
+      "op.raw": "c730a6dc86ae5226059e5fccaf9c1a0913b6398c297ed456d31a02c2b416dbb0",
+      "op.raw.csv": "920ce8c14772168eccd33334c59be4013e1dc6fa62a845ea9ffef30bfc5494bc",
+      "simulator.log": "c4adc47e3712b5fd3ed86320b0674f7660ccb5ec8a0a558ad319eefda4131797"
+    },
+    "status": "ok",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "dc_reset/100000000.0",
+    "label": "100000000.0",
+    "model": {
+      "id": "dc_reset"
+    },
+    "netlist_sha256": "4add9796bd19a9cb44a4388cdae4f3cad6913de42830b1f6205631a63b1b9c6b",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "job.cir": "4add9796bd19a9cb44a4388cdae4f3cad6913de42830b1f6205631a63b1b9c6b",
+      "op.raw": "42cee1a548ac6e67624c55720b5e7db785940a021fa7a9bbc5531531011554b7",
+      "op.raw.csv": "2f6d94b655eaa0540333d4bb588fffdee7fb1a6b74b4672abd92e85965d053d7",
+      "simulator.log": "7669ac09ed8fe3ad64fc78e13457aebf0791434b6deaded6a148cc62f9a1e005"
+    },
+    "status": "ok",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "ideal_gauge/0",
+    "label": "0",
+    "model": {
+      "id": "ideal_gauge"
+    },
+    "netlist_sha256": "36097e6168d3cc0b5baa0033b832be71d5a582222d82e3661dafb423ed38677e",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "ac.raw": "09a6d87480227e67bd444f5b247b4dffb512dc2409bea2deac3399011dd4f683",
+      "ac.raw.csv": "46e2d04d7859a4f1da85115acb1ab7044a7e801b7fb9bc4387f1186b23263533",
+      "job.cir": "36097e6168d3cc0b5baa0033b832be71d5a582222d82e3661dafb423ed38677e",
+      "op.raw": "b8fed1881bff57731646174cc3ada99b879f2bf2a2c3d612ab1d13be453d5b85",
+      "op.raw.csv": "5c8acdaaed39aa77f654a306394757f6b697ba18288bba3ffe335bb9ac832702",
+      "simulator.log": "5fd60b5c078acc0a189790b0f872baa74831bbfab548b6a2a9bac3b6e9ff7ab9"
+    },
+    "status": "ok",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "ideal_gauge/20",
+    "label": "20",
+    "model": {
+      "id": "ideal_gauge"
+    },
+    "netlist_sha256": "2b212ea286e630d2b4cb98638934b30aaa598d2f7b07aa72c2b11c0593e8684e",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "ac.raw": "c616be452c150d011af2a14a38654eb328861fc14c98a4261b5a46995b8396e3",
+      "ac.raw.csv": "46e2d04d7859a4f1da85115acb1ab7044a7e801b7fb9bc4387f1186b23263533",
+      "job.cir": "2b212ea286e630d2b4cb98638934b30aaa598d2f7b07aa72c2b11c0593e8684e",
+      "op.raw": "40f2bb23c1c9b29dadcd6feeb450ea68b1e61b1e8124824c4ce416fb4d11fae8",
+      "op.raw.csv": "0b7a2f8a15d3ceb88afc88820bde84b66e4133d3f5b172125d5a0ced39ee7514",
+      "simulator.log": "4ba24f5d4c045d6b4170b7cb383dc9b42146c12f080ed12c3b0d297d509cba7f"
+    },
+    "status": "ok",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "ideal_gauge/-20",
+    "label": "-20",
+    "model": {
+      "id": "ideal_gauge"
+    },
+    "netlist_sha256": "12404edd74b772ec5e03ad3116c0cd78203e963a0a2ab0ab33836a8ed1bbf4b1",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "ac.raw": "0e78e077edf11ade9d9ea8d1810b5cb5e3a534125ecf2568812c2813c76ef6db",
+      "ac.raw.csv": "46e2d04d7859a4f1da85115acb1ab7044a7e801b7fb9bc4387f1186b23263533",
+      "job.cir": "12404edd74b772ec5e03ad3116c0cd78203e963a0a2ab0ab33836a8ed1bbf4b1",
+      "op.raw": "e3bfc8cfb60b22574e40c7339e941a73933a48ab3e870ffcdce6c87496a9deb8",
+      "op.raw.csv": "4cf3b8a4e36da394099a9cafb454fbb6cc834f59d28f33e1f2ea70aac2084b9d",
+      "simulator.log": "c574691938a291fd069b2ffd8a6ee1be9f41a43c02ffc916eb1753231f1d7dd5"
+    },
+    "status": "ok",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "opa197_pspice/follower_0",
+    "label": "follower_0",
+    "model": {
+      "acquisition_status": "valid_spice",
+      "device_id": "opa197",
+      "file": "models/semiconductor/vendor/opa197.lib",
+      "id": "opa197_pspice",
+      "manufacturer": "Texas Instruments",
+      "model_lineage": [],
+      "ngspice_behavior": "ps",
+      "parent_model_id": null,
+      "path": "semiconductor/vendor/opa197.lib",
+      "redistribution": {
+        "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+        "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+        "status": "not_established_do_not_redistribute"
+      },
+      "retrieved_date": "2026-10-05",
+      "sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "source_url": "https://www.ti.com/lit/zip/sboma34d",
+      "subcircuit": "OPAx197",
+      "syntax": "SPICE3 subcircuit with PSpice extensions",
+      "version": "Final 1.3; 23JUN2022; SBOMA34D"
+    },
+    "netlist_sha256": "33de7b262ac58bdf2991b3ca6a09799233ce651d3f5cf7b072b75f2108b9b0e5",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "retained_hashes": {
+      "ac.raw": "dbbcecca63366b0f9f419363f17482aba44c4f6354d9da93eca30d7a1f362c0f",
+      "ac.raw.csv": "2439b8b28f4dc21f328fca87ad1290ced9625d71f18c64e307a194d5bc02db7f",
+      "job.cir": "33de7b262ac58bdf2991b3ca6a09799233ce651d3f5cf7b072b75f2108b9b0e5",
+      "op.raw": "840c75a36cbc35837d40e06c002b87a54915a4a1764c6d1b7e9c012fe87b6efd",
+      "op.raw.csv": "93412502469511c3ff20b3c498758b2d6eb18493288fddd6aed1143b6a1e8016",
+      "simulator.log": "cd9cc88d17802b5e999bf1607a6989e1059aaedd6662b403cb32143ee58eb0f7"
+    },
+    "status": "ok",
+    "temperature_c": 25,
+    "timeout_s": 15
+  },
+  {
+    "directory": "opa197_pspice/follower_20",
+    "label": "follower_20",
+    "model": {
+      "acquisition_status": "valid_spice",
+      "device_id": "opa197",
+      "file": "models/semiconductor/vendor/opa197.lib",
+      "id": "opa197_pspice",
+      "manufacturer": "Texas Instruments",
+      "model_lineage": [],
+      "ngspice_behavior": "ps",
+      "parent_model_id": null,
+      "path": "semiconductor/vendor/opa197.lib",
+      "redistribution": {
+        "acquisition": "models/semiconductor/acquire.py; audited hashes in acquisition.yaml",
+        "evidence": "Vendor notices retained locally; no open redistribution permission established.",
+        "status": "not_established_do_not_redistribute"
+      },
+      "retrieved_date": "2026-10-05",
+      "sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "source_url": "https://www.ti.com/lit/zip/sboma34d",
+      "subcircuit": "OPAx197",
+      "syntax": "SPICE3 subcircuit with PSpice extensions",
+      "version": "Final 1.3; 23JUN2022; SBOMA34D"
+    },
+    "netlist_sha256": "04bbd7565c764b0a10d994ad4699220379e69f18a861c63844a89cc8e737fc75",
+    "options": "reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2",
+    "reason": "15s process-group timeout; partial log/waveform retained",
+    "retained_hashes": {
+      "job.cir": "04bbd7565c764b0a10d994ad4699220379e69f18a861c63844a89cc8e737fc75",
+      "op.raw": "6a04dc7ca0f042bf5d40a8cf67b83cae6301bc325c0389696a82a6873cdd90d1",
+      "simulator.log": "cb39e1a2724aa5dfc0150f67649cbe64084fd83e37c0846dc62cafa915557c35"
+    },
+    "status": "error",
+    "temperature_c": 25,
+    "timeout_s": 15
+  }
+]

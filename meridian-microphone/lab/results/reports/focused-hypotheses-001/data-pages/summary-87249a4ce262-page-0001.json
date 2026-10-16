@@ -1,0 +1,140 @@
+{
+  "all_families_retained": 14,
+  "checks": {
+    "$include": "summary-87249a4ce262-0005-checks.json"
+  },
+  "children": {
+    "$include": "summary-87249a4ce262-0003-children.json"
+  },
+  "complete_execution": true,
+  "date": "2026-10-12",
+  "driver_boundary": {
+    "correction": "Held diagnostic values near0019 operating point; raw equals rounded0019 backplate,0.000612V below actual raw. Original comment called this0023 incorrectly. No integrated operating-point or supply-feedback claim.",
+    "rail_v": 13.5557796,
+    "raw_v": 29.5293276
+  },
+  "followup_batch": "results/mechanism_controls/20261011T192658Z_focused_followup_b5cac5a2",
+  "holdouts": {
+    "candidate_0019": {
+      "interpretation": "Paired artificial external/shared-quantile specimens, not yield or probability",
+      "pass_count": 15,
+      "total": 16
+    },
+    "candidate_0023": {
+      "interpretation": "Paired artificial external/shared-quantile specimens, not yield or probability",
+      "pass_count": 6,
+      "total": 16
+    },
+    "candidate_0025": {
+      "interpretation": "Paired artificial external/shared-quantile specimens, not yield or probability",
+      "pass_count": 15,
+      "total": 16
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "A",
+      "remedy_child": null,
+      "state": "full-envelope no-trim claim falsified; finite local useful cases"
+    },
+    {
+      "child": "candidate_0025",
+      "id": "B",
+      "state": "resolved conditional nominal noise benefit; leakage/startup/qualification fail"
+    },
+    {
+      "id": "C",
+      "integrated_child": null,
+      "state": "neither alternative improves all supported noise/port comparisons"
+    }
+  ],
+  "nominal": {
+    "candidate_0019": {
+      "current_a": 0.00410354597772711,
+      "noise_pa_rms_conditional": 0.00030984008604072,
+      "polarization_v": 26.100123549450668,
+      "response_db": 0.6586148658340395
+    },
+    "candidate_0023": {
+      "current_a": 0.005150433656145151,
+      "noise_pa_rms_conditional": 0.0010516584520570114,
+      "polarization_v": 22.546161869188385,
+      "response_db": 0.4721285752447003
+    },
+    "candidate_0025": {
+      "current_a": 0.005150433724346845,
+      "noise_pa_rms_conditional": 0.00036276222857590856,
+      "polarization_v": 22.543432130458434,
+      "response_db": 0.5733129556894477
+    }
+  },
+  "oracles": [
+    {
+      "ac_relative_error": 9.992007221626409e-16,
+      "kind": "one_pole",
+      "pass_oracle": true,
+      "step_s": 0.001,
+      "transient_max_error_v": 1.2136693541719978e-05
+    },
+    {
+      "ac_relative_error": 9.992007221626409e-16,
+      "kind": "one_pole",
+      "pass_oracle": true,
+      "step_s": 0.0005,
+      "transient_max_error_v": 3.0483245138102077e-06
+    },
+    {
+      "kind": "bilateral_twoport",
+      "max_error_ohm": 2.842170943040401e-14,
+      "pass_oracle": true
+    },
+    {
+      "label": "unfiltered",
+      "maximum_relative_errors": {
+        "back.raw": 1.824509876452133e-15,
+        "raw.raw": 3.780118086638916e-15
+      },
+      "scope": "Actual local polarization R/C/IR/ESR/ESL two-node network; no capsule/nonlinear transfer substitution",
+      "status": "pass"
+    },
+    {
+      "label": "filtered",
+      "maximum_relative_errors": {
+        "back.raw": 1.868362490009271e-09,
+        "raw.raw": 1.86836384535085e-09
+      },
+      "scope": "Actual local polarization R/C/IR/ESR/ESL two-node network; no capsule/nonlinear transfer substitution",
+      "status": "pass"
+    },
+    {
+      "label": "filtered_adverse",
+      "maximum_relative_errors": {
+        "back.raw": 1.814752408665981e-09,
+        "raw.raw": 1.8147527466591865e-09
+      },
+      "scope": "Actual local polarization R/C/IR/ESR/ESL two-node network; no capsule/nonlinear transfer substitution",
+      "status": "pass"
+    }
+  ],
+  "physical_front": [],
+  "primary_batch": "results/mechanism_controls/20261011T192308Z_focused_1992e85a",
+  "production_front": [],
+  "qualified": false,
+  "refinement": [
+    {
+      "candidate": "candidate_0019",
+      "noise_64_to_128_relative": -0.00017828453082979756,
+      "response_32_to_64_change_db": -0.001940256293185283
+    },
+    {
+      "candidate": "candidate_0023",
+      "noise_64_to_128_relative": -8.093775302442374e-05,
+      "response_32_to_64_change_db": 5.391736206450393e-06
+    },
+    {
+      "candidate": "candidate_0025",
+      "noise_64_to_128_relative": -0.00017332945104142627,
+      "response_32_to_64_change_db": -0.0017530436280033257
+    }
+  ]
+}
