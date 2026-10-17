@@ -1,0 +1,212 @@
+[
+  {
+    "cases": [
+      {
+        "assessment": "unimplemented_physical_housing",
+        "basis": "No housing/production assembly selected; physical claims cannot be cleared by a subcircuit.",
+        "candidate_ids": [
+          "candidate_0010",
+          "candidate_0012",
+          "candidate_0013",
+          "candidate_0014",
+          "candidate_0017",
+          "candidate_0019",
+          "candidate_0023",
+          "candidate_0024",
+          "candidate_0025"
+        ],
+        "exact_versions": {
+          "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9",
+          "candidate_0012": "f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968",
+          "candidate_0013": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015",
+          "candidate_0014": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+          "candidate_0017": "06d104a8f60e29e4214fe42130a8109dd0e870e26ce30e64bdce9fd525495922",
+          "candidate_0019": "1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da",
+          "candidate_0023": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+          "candidate_0024": "65bab5628d9b477584e38c3afb3d7cafef3012a7a2f2198de4886374a617e9f8",
+          "candidate_0025": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+        },
+        "netlist_references": [
+          "f",
+          "b"
+        ],
+        "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+      }
+    ],
+    "claim_numbers": [
+      1,
+      6,
+      15
+    ],
+    "id": "housing_mic",
+    "requirement_paraphrase": "Housing, microphone and internal preamplification circuit"
+  },
+  {
+    "cases": [
+      {
+        "assessment": "apparent_absence_top_level",
+        "basis": "JFET candidates use one source follower, not the two-JFET common-source pair; BJT/CMOS/carrier paths do not add it.",
+        "candidate_ids": [
+          "candidate_0010",
+          "candidate_0012",
+          "candidate_0013",
+          "candidate_0014",
+          "candidate_0017",
+          "candidate_0019",
+          "candidate_0023",
+          "candidate_0024",
+          "candidate_0025"
+        ],
+        "exact_versions": {
+          "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9",
+          "candidate_0012": "f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968",
+          "candidate_0013": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015",
+          "candidate_0014": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+          "candidate_0017": "06d104a8f60e29e4214fe42130a8109dd0e870e26ce30e64bdce9fd525495922",
+          "candidate_0019": "1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da",
+          "candidate_0023": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+          "candidate_0024": "65bab5628d9b477584e38c3afb3d7cafef3012a7a2f2198de4886374a617e9f8",
+          "candidate_0025": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+        },
+        "netlist_references": [
+          "XJinput",
+          "XQinput",
+          "XUinput"
+        ],
+        "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+      }
+    ],
+    "claim_numbers": [
+      1,
+      6,
+      15
+    ],
+    "id": "matched_JFET_pair",
+    "requirement_paraphrase": "Matched common-source differential JFET pair receiving input at gates and output at drains"
+  },
+  {
+    "cases": [
+      {
+        "assessment": "apparent_absence",
+        "basis": "Output followers and source-servo error pair are not this parallel JFET/BJT feedback pair.",
+        "candidate_ids": [
+          "candidate_0010",
+          "candidate_0012",
+          "candidate_0013",
+          "candidate_0014",
+          "candidate_0017",
+          "candidate_0019",
+          "candidate_0023",
+          "candidate_0024",
+          "candidate_0025"
+        ],
+        "exact_versions": {
+          "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9",
+          "candidate_0012": "f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968",
+          "candidate_0013": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015",
+          "candidate_0014": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+          "candidate_0017": "06d104a8f60e29e4214fe42130a8109dd0e870e26ce30e64bdce9fd525495922",
+          "candidate_0019": "1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da",
+          "candidate_0023": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+          "candidate_0024": "65bab5628d9b477584e38c3afb3d7cafef3012a7a2f2198de4886374a617e9f8",
+          "candidate_0025": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+        },
+        "netlist_references": [
+          "XQoutp",
+          "XQoutn",
+          "XQservoerror"
+        ],
+        "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+      }
+    ],
+    "claim_numbers": [
+      1,
+      6,
+      15
+    ],
+    "id": "parallel_BJT_feedback",
+    "requirement_paraphrase": "BJT pair parallel to JFETs with claimed collector/source, base/drain and emitter/output-resistor relationships"
+  },
+  {
+    "cases": [
+      {
+        "assessment": "mixed_or_absent",
+        "basis": "P48 fixture present; no matched pair/common sink or internal24/48V generation circuit. Claim15 does not require every sink/phantom limitation of1/6.",
+        "candidate_ids": [
+          "candidate_0010",
+          "candidate_0012",
+          "candidate_0013",
+          "candidate_0014",
+          "candidate_0017",
+          "candidate_0019",
+          "candidate_0023",
+          "candidate_0024",
+          "candidate_0025"
+        ],
+        "exact_versions": {
+          "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9",
+          "candidate_0012": "f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968",
+          "candidate_0013": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015",
+          "candidate_0014": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+          "candidate_0017": "06d104a8f60e29e4214fe42130a8109dd0e870e26ce30e64bdce9fd525495922",
+          "candidate_0019": "1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da",
+          "candidate_0023": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+          "candidate_0024": "65bab5628d9b477584e38c3afb3d7cafef3012a7a2f2198de4886374a617e9f8",
+          "candidate_0025": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+        },
+        "netlist_references": [
+          "Rsource",
+          "Rharvestp",
+          "Rharvestn"
+        ],
+        "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+      }
+    ],
+    "claim_numbers": [
+      1,
+      6
+    ],
+    "id": "sink_and_phantom",
+    "requirement_paraphrase": "Common sink maintains fixed total JFET/BJT current;24/48V phantom generation and circuit bias"
+  },
+  {
+    "cases": [
+      {
+        "assessment": "apparent_absence",
+        "basis": "Condenser model; independent1/15 are not limited by this dynamic clause.",
+        "candidate_ids": [
+          "candidate_0010",
+          "candidate_0012",
+          "candidate_0013",
+          "candidate_0014",
+          "candidate_0017",
+          "candidate_0019",
+          "candidate_0023",
+          "candidate_0024",
+          "candidate_0025"
+        ],
+        "exact_versions": {
+          "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9",
+          "candidate_0012": "f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968",
+          "candidate_0013": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015",
+          "candidate_0014": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+          "candidate_0017": "06d104a8f60e29e4214fe42130a8109dd0e870e26ce30e64bdce9fd525495922",
+          "candidate_0019": "1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da",
+          "candidate_0023": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+          "candidate_0024": "65bab5628d9b477584e38c3afb3d7cafef3012a7a2f2198de4886374a617e9f8",
+          "candidate_0025": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+        },
+        "netlist_references": [
+          "f",
+          "b"
+        ],
+        "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+      }
+    ],
+    "claim_numbers": [
+      6
+    ],
+    "id": "dynamic_type",
+    "requirement_paraphrase": "Dynamic-type microphone"
+  }
+]

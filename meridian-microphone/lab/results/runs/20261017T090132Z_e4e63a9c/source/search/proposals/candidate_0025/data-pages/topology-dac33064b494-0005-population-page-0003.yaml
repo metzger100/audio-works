@@ -1,0 +1,112 @@
+RCOUTN0LEAK_VALUE:
+  range:
+  - 2128378.378378378
+  - 100000000000000.0
+  distribution: log_uniform
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+  interpretation: independent tolerance stress, not a measured production distribution
+COUTN1_VALUE:
+  range:
+  - 3.76e-05
+  - 5.6399999999999995e-05
+  distribution: uniform
+  provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+    partial
+  interpretation: independent tolerance stress, not a measured production distribution
+RCOUTN1LOSS_VALUE:
+  range:
+  - 0.01
+  - 2.539706538700458
+  distribution: uniform
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+  interpretation: independent tolerance stress, not a measured production distribution
+RCOUTN1LEAK_VALUE:
+  range:
+  - 2128378.378378378
+  - 100000000000000.0
+  distribution: log_uniform
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+  interpretation: independent tolerance stress, not a measured production distribution
+COUTN2_VALUE:
+  range:
+  - 3.76e-05
+  - 5.6399999999999995e-05
+  distribution: uniform
+  provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+    partial
+  interpretation: independent tolerance stress, not a measured production distribution
+RCOUTN2LOSS_VALUE:
+  range:
+  - 0.01
+  - 2.539706538700458
+  distribution: uniform
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+  interpretation: independent tolerance stress, not a measured production distribution
+RCOUTN2LEAK_VALUE:
+  range:
+  - 2128378.378378378
+  - 100000000000000.0
+  distribution: log_uniform
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+  interpretation: independent tolerance stress, not a measured production distribution
+COUTN3_VALUE:
+  range:
+  - 3.76e-05
+  - 5.6399999999999995e-05
+  distribution: uniform
+  provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+    partial
+  interpretation: independent tolerance stress, not a measured production distribution
+RCOUTN3LOSS_VALUE:
+  range:
+  - 0.01
+  - 2.539706538700458
+  distribution: uniform
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+  interpretation: independent tolerance stress, not a measured production distribution
+RCOUTN3LEAK_VALUE:
+  range:
+  - 2128378.378378378
+  - 100000000000000.0
+  distribution: log_uniform
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+  interpretation: independent tolerance stress, not a measured production distribution
+CBACKFILTER_VALUE:
+  range:
+  - 9.0e-08
+  - 1.1e-07
+  distribution: uniform
+  provenance: focused-plan-001 B; WIMA 20C discrete IR/DF anchors; constant law/ESL
+    assumptions
+  interpretation: assumption stress, not a production distribution
+RCBACKFILTERLOSS_VALUE:
+  range:
+  - 0.01
+  - 0.7957747154594768
+  distribution: uniform
+  provenance: focused-plan-001 B; WIMA 20C discrete IR/DF anchors; constant law/ESL
+    assumptions
+  interpretation: assumption stress, not a production distribution
+RCBACKFILTERINSULATION_VALUE:
+  range:
+  - 100000000000.0
+  - 100000000000000.0
+  distribution: log_uniform
+  provenance: focused-plan-001 B; WIMA 20C discrete IR/DF anchors; constant law/ESL
+    assumptions
+  interpretation: assumption stress, not a production distribution
+LBACKFILTER_VALUE:
+  range:
+  - 1.0e-08
+  - 5.0e-08
+  distribution: uniform
+  provenance: focused-plan-001 B; WIMA 20C discrete IR/DF anchors; constant law/ESL
+    assumptions
+  interpretation: assumption stress, not a production distribution

@@ -1,0 +1,62 @@
+{
+  "models": {
+    "$include": "provenance-c7bc716846e7-0002-input-sha256-tree-0000-results-0002-runs-0008-20261017t090340z-19f315d1-0007-source-0000-models.json"
+  },
+  "optimization": {
+    "optimize_bias.py": "0af081b3485971f486736b0641666d22b2214720a12ea3372460a5a50ab86ca3",
+    "optimize_values.py": "0309d8bb5c2edcb300144c5b24d2ef4840f3eaa40670d7118378fbe535c03e76",
+    "robust-plan.yaml": "568ea19148f9aae688af910cce0851c03a4b1b4323bb828cc49e71493e5066e9",
+    "robust_batch.py": "dc9fcbd62e80f50b4299d7508b1083a570bdddcfde347ec6c1a2ea1d646a977d",
+    "robust_realization.py": "cf741dc1b35b0ad7d5055f4762402194d2b83b1b41705f09a27c339f148ca956"
+  },
+  "requirements.txt": "f2162d13822ff575becaab0e43a96dcce42f33a9e3cd4aacbc88d3ae1e4ff3c3",
+  "research": {
+    "$include": "provenance-c7bc716846e7-0002-input-sha256-tree-0000-results-0002-runs-0008-20261017t090340z-19f315d1-0007-source-0003-research.json"
+  },
+  "search": {
+    "$include": "provenance-c7bc716846e7-0002-input-sha256-tree-0000-results-0002-runs-0008-20261017t090340z-19f315d1-0007-source-0004-search.json"
+  },
+  "spec": {
+    "capsule-model.yaml": "169983f2601ee39a59496e0e4d2d337deb14e7e4ec7bf38a92f6ca89b59bc696",
+    "design-constraints.yaml": "48d03f7b8d6302aeca14efda4de5c12cf491c393e212e6842f04da60c344dc43",
+    "lock.yaml": "0a5ac00e5d73b720b0c0926c6987ab6b8cb2dca6ac3d1513039db9f3a05c8d07",
+    "microphone-spec.yaml": "ea5a6f973f17f907c5b76f9d17a35cfa784903bcfcd8d7f1d08cd538b65636cd",
+    "scoring.yaml": "6aa6b8620a4700220ac952472f150396599ca67a2918f6f114e1b283a158c0af"
+  },
+  "src": {
+    "meridian_lab": {
+      "__init__.py": "70778163075ec49235b8cf725bce58f9cef39892880a46ccc9fa58a9aeb98f52",
+      "architectures.py": "ffd97a4cdd928329a56f8f5d3a042fa2f413e12e979d8cc36926f0cebe2f3183",
+      "archive.py": "7cdf9fff8dc59d7244849f63506f2f97b0604ccfc64d7a7997fc5ee777d4ae79",
+      "bounded.py": "2f211f0205de3d92953bfcb9c336560e7de4abd24cce13a29785763482a47dcc",
+      "cli.py": "883c8dff0bf192003702df6e1d98633e9aadc5a0cc51c3893933002f25eed866",
+      "core.py": "f1dffe8c0e6d44bebd141c869f78e453fab1fc83d1a90de79c5b15aca41b4371",
+      "data.py": "66897ef3b08484797af07d3c70eb0c1afe7e96a1c49e7cc293ab726e5ff5478a",
+      "device_models.py": "54f79414d40c0303a8982bf179d2f8ef48dde57a727d16dbd955cb92cf3add36",
+      "metrics.py": "a1e64935a4f65b0751295dee29be72ffdcb4fcc8d412584bc780d8b742ca3bcf",
+      "nonlinear.py": "53bd98568e6070284a9825fc459e28c32cba3ea3b59dfd32278d2852514f4216",
+      "partition.py": "f0ebce060ed755395861caf3f1889ac23345f138fd317f26f895aa02a9dedbb7",
+      "qualification.py": "4659b0f6f019a340bb1bd01604891ec5d525f9feb21f84bb6f08805913006ff7",
+      "qualification_ports.py": "9fe5cc0c70c9cf0e578bdc276942c2c4e1b7ea8837e36fc6601fddec143035bd",
+      "qualification_signal.py": "5a0e7d5b24cb2a75545e25d06cc95cbe364d3b6e9f7e113e30971b68a2024f82",
+      "robust.py": "bba114c1302f9d1a84faab93c8e5904368df6412cbd87feff2eedfb7257a800a",
+      "robust_measure.py": "25d1d936e038f189f155658b3f57ea8a01bb428e4366aefa7602edc01a37b478",
+      "robust_scenarios.py": "aa9e5698da48098fadb67eff1f1836364e24a45d0455a6dacc9fa97bd2d5d6da"
+    }
+  },
+  "tests": {
+    "test_architectures.py": "4ffec05c4d9f411e2d1fd48f59b14a9c0882b4af2cac995262ec7391fdf4a974",
+    "test_batch_registration.py": "9604b8f1b465f310a80628a5e78c5784136f4ed772145b5928b38a1bcc057044",
+    "test_characterization.py": "c0793875c566a008a247a839c4114d31439c41a09737bbaf3a8a2d4fe18f97ea",
+    "test_comparison.py": "981ba9f90f565cd2cbb7f32ff4723a35e96eb5c576cd4761d56a0645ced8bba0",
+    "test_device_models.py": "b2e5f97e7556b7cff0cd22c7de096225413c3dcd6e95559770bed9169cda58d8",
+    "test_integrity.py": "15f0606ddaad4cba8c42a7e5233c9e2ebcaed5ee3028f8e8de5090210e1bebd0",
+    "test_nonlinear_prerequisites.py": "42848f377353c021a8769cf2e583ce80d95c971cb66c35436e215bb7d39a19a0",
+    "test_parts_controls.py": "10249f2c559e5a716fd2bf75007d8b19d0970e4b1548658416a764a02f1287ee",
+    "test_parts_database.py": "1dc9c1ddc87dfa57ef487ea26dc905e63427a4d030016ef636915f7d5a14bf27",
+    "test_physics.py": "f8c7381444718f0ae8cd5496773ea700982e0de84c13c649f63dc4ab15fc84a5",
+    "test_reporting.py": "f07fe430574cb5e4587355b66012b0a616536644fd70b9b3a21a5deeb66b92b4",
+    "test_robust.py": "2b7e8d10cc6802e42930368b4664b22ae96c27eec7ec695b1f385f3a52730391",
+    "test_search_and_numerics.py": "5209dc5b2bf6fd6e901d98699738094b5345752a734aefc0f9c5f87d1106cd55"
+  }
+}

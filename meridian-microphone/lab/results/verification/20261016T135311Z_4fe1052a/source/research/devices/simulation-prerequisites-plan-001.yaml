@@ -1,0 +1,30 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+schema_version: 1
+declared_date: '2026-10-11'
+revision: isolated-prerequisites-r1
+maximum_jobs: 100
+timeout_s_per_job: 15
+options: reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+compatibility: ps initialized before parsing for TI models; native for others
+temperatures_c: [-10, 25, 50]
+transient: {frequency_hz: 1000, stop_s: 0.064, save_start_s: 0, max_steps_s: [2e-6, 1e-6], settled_after_s: 0.032}
+acceptance: {typical_fraction: 0.20, refinement_fraction: 0.01, settling_fraction: 0.001}
+models: [jfe150_generic, jfe150_weak, jfe150_strong, jfe150_pspice, jfe150_tina_isolated, bc846b_vendor, bc846b_emitter_r1, pmbt5551_vendor, bc850c_vendor, diotec_mmbt5551_vendor, diodes_mmbt5401_vendor, opa197_pspice, opa928_vendor]
+source_receipts: research/device_sources/local/20261011T175127Z_prerequisites_40132801
+failed_retrieval_parent: research/device_sources/local/20261011T175114Z_prerequisites_16a27a15
+parent_experiments:
+  - results/device_models/20261005T185102Z_95a6dda5/results.json
+  - results/device_models/20261009T145346Z_parts2_742caaa3/results.json
+  - results/device_models/20261009T170734Z_constant_ae3a9e1d/results.json
+  - results/device_models/20261009T171204Z_dual_pnp_9ff5882e/results.json
+  - results/reports/architecture-comparison-001/architecture-comparison-001.json
+hypotheses:
+  - Complete JFE files share nominal cores; compare exact bytes before identical terminal tests.
+  - Zero-volt terminal observers may change numerical convergence; direct and observed fixtures form explicit children.
+  - BC846B dangling secondary emitter must remain failed; current/base authority across biases differs from one beta fit.
+  - Global-ground macro circuitry may fail translation independently of microphone feedback or capsule motion.
+  - Linear RC and analytic nonlinear harmonic oracles must pass before granting any nonlinear credit.
+stopping: One frozen pass; no fitting, tolerance search, budget increase, clamp deletion or hidden bias assist.
+microscope_scope: terminal diagnostic conditions are not a realized microphone BOM or physical test authorization
+production_qualification: false
+capsule_measurements: absent

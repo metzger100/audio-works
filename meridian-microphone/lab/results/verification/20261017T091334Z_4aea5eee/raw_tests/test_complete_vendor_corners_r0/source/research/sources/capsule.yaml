@@ -1,0 +1,220 @@
+S01:
+  title: Arienne Audio Flat K47 Cardioid/Omni K47FRB product page
+  url: https://store.arienneaudio.com/microphone-capsules/20-26-arienne-audio-flat-k47-microphone-capsule.html#/12-options-cardioid_omni
+  kind: primary_manufacturer
+  supports: Exact variant, product reference, modified tuning, changed manufacturing
+    facility, included mount.
+  does_not_supply: Current capacitance, sensitivity, safe bias, leakage, noise, diaphragm
+    mechanics, production statistics.
+S04:
+  title: DIY RF Condenser Mics community estimate, page 21, April 2024
+  url: https://groupdiy.com/threads/diy-rf-condenser-mics.71586/page-21
+  kind: third_party_unmeasured_estimate
+  supports: Historical suggestion of 120–150 pF for combined sides; not a calibration
+    or current batch guarantee.
+  use: Context for a wider assumed capacitance bracket only.
+
+# Documentary refresh; detailed conditions and byte receipts share these identities.
+SC01:
+  title: Historical K47 designer estimate
+  url: https://groupdiy.com/threads/soliloqueens-k87-k67-and-k47-capsules.81968/page-19
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: About -36 dB at unity gain/60 V; 70 pF +/-3 pF; underventing and next-revision warning. Informal estimate,
+    dB reference/fixture/batch not documented; historical identity ambiguous.
+SC02:
+  title: Arienne regular K47 listing
+  url: https://store.arienneaudio.com/microphone-capsules/33-arienne-audio-k47-microphone-capsule.html
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: 70 pF listing belongs to regular K47. No test bias/fixture or per-side definition. Rejected exact-product
+    transfer.
+SC03:
+  title: Unique Directional Properties of Dual-Diaphragm Microphones
+  url: https://www.shure.com/damfiles/default/global/documents/publications/en/performance-production/us_pro_dual_diaphragm_paper_ea.pdf-ff7e23c323c72be3deac4ffd742c1d26.pdf
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: Experimental dual capsule, then rear diaphragm removed; distances 8 ft/2 ft/6 in. Acoustic-network
+    mechanism; no K47FRB calibration or batch identity.
+SC04:
+  title: Microphone Handbook Volume 1 Theory, BE1447-12
+  url: https://www.bksv.com/media/doc/be1447.pdf
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: Measurement-microphone transfer/loading, thermal-noise and condensation methods. Their polarizations,
+    humidity coefficients and noise ratings do not transfer.
+SC05:
+  title: New Technology-Driven Approaches in the Design of Preamplifiers for Condenser Microphones
+  url: https://backend.orbit.dtu.dk/ws/files/5037185/PhD-thesis_jhc.pdf
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: 'MEMS sensing mechanisms and finite gain/reset analysis. Eq.3 prints F=P/A: dimensional error; use
+    F=p*A independently. Resonance sqrt(k/m) is angular frequency.'
+SC06:
+  title: Condenser microphone capsule backplate, US9549236B2
+  url: https://patents.google.com/patent/US9549236B2/en
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: Example 6 um diaphragm/40 um gap and tab/mount manufacture. Not K47FRB dimensions, safe bias or current
+    legal status.
+SC07:
+  title: Dual Backplate Microphone, US20130044899A1
+  url: https://patents.google.com/patent/US20130044899A1/en
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: One diaphragm between two backplates, ECM/MEMS embodiments. Mechanically distinct from two K47 diaphragms
+    around a common backplate.
+SC08:
+  title: Mechanical-Thermal Noise in Micromachined Acoustic and Vibration Sensors
+  url: https://zenodo.org/records/1260557/files/article.pdf
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: Fluctuation-dissipation ties force/pressure noise to mechanical/acoustic resistance. No K47FRB damping
+    or noise value.
+SC09:
+  title: CM47LE owner manual / AK47 capsule
+  url: https://advancedaudio.ca/pages/cm47le-owner-manual
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: Manufacturer states 78-83 pF for its AK47, unspecified bias/fixture/batch. Complete microphone claims
+    remain system results.
+SC10:
+  title: RK-47 microphone capsule listing
+  url: https://microphone-parts.com/products/rk47-microphone-capsule
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: Single backplate, dual diaphragms; 34 mm body, 27 mm diaphragm, 3 um film. Gap, electrode area, tension
+    and calibration absent; geometry analogy only.
+SC11:
+  title: Self-Noise Reduction via Photoelectric DC Servo
+  url: https://arxiv.org/pdf/2604.18969v1
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: RC noise redistribution and kT/C; dummy 12 pF/ECM circuit study, not K47FRB intrinsic noise. Circuit
+    performance not transplanted.
+SC12:
+  title: Reduction of Nonlinear Distortion in Condenser Microphones
+  url: https://arxiv.org/pdf/2407.17250v1
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: CUI CMM-2718AB-38308-TR system with GRAS40DP/RME fixture. Nonlinear loading mechanisms only; no transferred
+    overload. Declares FR2404994 filing 2024-05-16, status unchecked.
+SC13:
+  title: Axisymmetric Condenser Microphone application
+  url: https://doc.comsol.com/6.3/doc/com.comsol.help.models.aco.condenser_microphone/condenser_microphone.html
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: Generic unperforated 2 mm radius, 18 um gap, 3150 N/m membrane; coupled electrostatic/thermoviscous
+    model. Not K47FRB. Surface-density text appears inverted; use rho*t.
+SC14:
+  title: Replaced capsule, only figure 8 works
+  url: https://groupdiy.com/threads/replaced-capsule-in-3-pattern-mic-but-only-figure-8-is-working.89509/
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: Anecdotal Flat K47 red front/white rear/black backplate; second mic worked while first had wiring/socket
+    faults. Discovery only, no authoritative current lead map.
+SC15:
+  title: Wayback CDX revision discovery
+  url: https://web.archive.org/cdx/search/cdx?url=store.arienneaudio.com/microphone-capsules/20*&output=json&filter=statuscode:200&collapse=timestamp:6
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: HTTP429 retained. Archive revision history unresolved; no historical bytes or false revision match.
+SC16:
+  title: Dual diaphragm paper alternate manufacturer-hosted copy
+  url: https://content-files.shure.com/Pubs/dual-diaphragm-microphone-properties/pdf_ea_dual_diaphragm_mics.pdf
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: Different PDF hash/file size retained. SC03 used for page locators; alternate copy not an independent
+    capsule experiment.
+SC17:
+  title: Arienne news index
+  url: https://store.arienneaudio.com/news
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: Index leads to site-rebuild announcement 2026-05-19; no current wiring/calibration/batch dossier found.
+SC18:
+  title: The MKH Story
+  url: https://www.sennheiser.com/globalassets/digizuite/43785-en-mkh-story_whitepaper_en.pdf
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: RF impedance and humidity mechanism; distinct push-pull construction. No licensed design copied, K47FRB
+    RF amplitude/safety or humidity performance transferred.
+SC19:
+  title: Analytical-numerical mechanical response of a condenser microphone
+  url: https://ws2.binghamton.edu/me/MSL/PDF_Paper/2011Dec%20JASA%20Analytical_Condensor%20Mic.pdf
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: B&K4134 fluid/diaphragm calculation versus prior vibrometer measurements; geometry-specific damping/noise.
+    Membrane equation transfers, acoustic rating does not.
+SC20:
+  title: Condenser microphone with non-circular membrane EP3114857B1
+  url: https://data.epo.org/publication-server/rest/v1.2/publication-dates/20171227/patents/EP3114857NWB1/document.pdf
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: Official published dual-backplate MEMS mechanism; non-circular film unlike K47. Publication is not
+    current register/status or clearance evidence.
+SC21:
+  title: Detection/control of diaphragm collapse US7548626B2
+  url: https://patents.google.com/patent/US7548626B2/en
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: Charge monitor/probe and bias reduction/reset lead; arbitrary safety thresholds require actual sensor
+    evidence. Aggregator status not relied on.
+SC22:
+  title: Condenser microphone US8787601B2
+  url: https://patents.google.com/patent/US8787601B2/en
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: Guard electrode and driven insulation mechanism lead; no K47 mount equivalence or current official
+    legal status.
+SC23:
+  title: Large-diaphragm capsule measurements catalogue
+  url: https://recordinghacks.com/capsules/
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: 'Author averages separately measured diaphragm-to-backplate C: GK47 78.9 pF; GK49 77.3 pF; CEK47 49.3
+    pF at0V versus manufacturer56pF at65V. Instrument/calibration/batch absent; no deembedding.'
+SC24:
+  title: U47 historical product description
+  url: https://www.neumann.com/en-us/products/historical/u-47
+  kind: capsule_envelope_documentary_evidence
+  evidence_date: '2026-10-11'
+  details: capsules/sources-001.yaml
+  limitation: M7 PVC versus K47 polyester revision distinction. Complete-microphone system behavior supplies no
+    present bare-capsule numerical rating.
+S30:
+  title: Capsule envelope 001 frozen finite literature/physics cohort
+  kind: model_conditional_research
+  evidence_date: 2026-10-11
+  report: capsules/evidence-envelope-001.md
+  limitation: No capsule measurements, safe bias, production distribution or acoustic rating.
+
+SC25:
+  title: DuPont Teijin Mylar H-37232-3, June2003, Table1
+  url: https://stenbacka.fi/wp-content/uploads/sites/3/2016/07/mylar_a_fysikaaliset_ominaisuudet.pdf
+  kind: primary manufacturer bulletin hosted by distributor
+  supports: Grade-specific tensile units and material plausibility check; capsule-film allowable stress remains unknown
+  details: capsules/sources-001.yaml

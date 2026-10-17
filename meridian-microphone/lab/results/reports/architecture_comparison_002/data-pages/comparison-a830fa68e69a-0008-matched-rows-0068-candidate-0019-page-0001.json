@@ -1,0 +1,149 @@
+{
+  "candidate": "candidate_0019",
+  "contributions": {
+    "capsule Johnson surrogate (excluded)": {
+      "output_v_rms": 3.6077641053197696e-07,
+      "pressure_a_pa_rms": 8.461149927311048e-05,
+      "pressure_pa_rms": 0.000368386981990268,
+      "roots": [
+        "onoise_r.xcap.rfront",
+        "onoise_r.xcap.rrear"
+      ]
+    },
+    "environment (excluded)": {
+      "output_v_rms": 6.739655729330325e-08,
+      "pressure_a_pa_rms": 5.395529369375085e-05,
+      "pressure_pa_rms": 6.84749925304519e-05,
+      "roots": [
+        "onoise_r.xenv.rfeedn",
+        "onoise_r.xenv.rfeedp",
+        "onoise_r.xenv.rinn",
+        "onoise_r.xenv.rinp",
+        "onoise_r.xenv.rshield",
+        "onoise_r.xenv.rwiren",
+        "onoise_r.xenv.rwirep"
+      ]
+    },
+    "input bias, reset and degeneration": {
+      "output_v_rms": 4.877113886380372e-07,
+      "pressure_a_pa_rms": 0.00011531112730544259,
+      "pressure_pa_rms": 0.0004979958504124418,
+      "roots": [
+        "onoise_r.xdut.rbias",
+        "onoise_r.xdut.rgatebottom",
+        "onoise_r.xdut.rgatetop0",
+        "onoise_r.xdut.rgatetop1",
+        "onoise_r.xdut.rgatetop2",
+        "onoise_r.xdut.rrear",
+        "onoise_r.xdut.rsignal",
+        "onoise_r.xdut.rsource"
+      ]
+    },
+    "input semiconductor": {
+      "output_v_rms": 1.1582916941381715e-07,
+      "pressure_a_pa_rms": 8.070882774297158e-05,
+      "pressure_pa_rms": 0.00011783831851863602,
+      "roots": [
+        "onoise_d.xdut.xjinput.d_d1",
+        "onoise_j.xdut.xjinput.j_j1"
+      ]
+    },
+    "output drive and coupling": {
+      "output_v_rms": 2.6957586247807005e-06,
+      "pressure_a_pa_rms": 0.0021629423727741125,
+      "pressure_pa_rms": 0.0027388239333896226,
+      "roots": [
+        "onoise_d.xdut.xqinvert.d1",
+        "onoise_d.xdut.xqoutn.d1",
+        "onoise_d.xdut.xqoutp.d1",
+        "onoise_q.xdut.xqinvert.q1",
+        "onoise_q.xdut.xqinvert.q2",
+        "onoise_q.xdut.xqoutn.q1",
+        "onoise_q.xdut.xqoutn.q2",
+        "onoise_q.xdut.xqoutp.q1",
+        "onoise_q.xdut.xqoutp.q2",
+        "onoise_r.xdut.rcoutn0leak",
+        "onoise_r.xdut.rcoutn0loss",
+        "onoise_r.xdut.rcoutn1leak",
+        "onoise_r.xdut.rcoutn1loss",
+        "onoise_r.xdut.rcoutn2leak",
+        "onoise_r.xdut.rcoutn2loss",
+        "onoise_r.xdut.rcoutn3leak",
+        "onoise_r.xdut.rcoutn3loss",
+        "onoise_r.xdut.rcoutp0leak",
+        "onoise_r.xdut.rcoutp0loss",
+        "onoise_r.xdut.rcoutp1leak",
+        "onoise_r.xdut.rcoutp1loss",
+        "onoise_r.xdut.rcoutp2leak",
+        "onoise_r.xdut.rcoutp2loss",
+        "onoise_r.xdut.rcoutp3leak",
+        "onoise_r.xdut.rcoutp3loss",
+        "onoise_r.xdut.rinvcollector",
+        "onoise_r.xdut.rinvemitter",
+        "onoise_r.xdut.routloadn",
+        "onoise_r.xdut.routloadp",
+        "onoise_r.xdut.routn",
+        "onoise_r.xdut.routp",
+        "onoise_r.xdut.xqinvert.rq",
+        "onoise_r.xdut.xqoutn.rq",
+        "onoise_r.xdut.xqoutp.rq"
+      ]
+    },
+    "polarization network": {
+      "output_v_rms": 7.329062591942912e-09,
+      "pressure_a_pa_rms": 1.7234220753702464e-06,
+      "pressure_pa_rms": 7.483464989966099e-06,
+      "roots": [
+        "onoise_r.xdut.rback",
+        "onoise_r.xdut.rpolar0",
+        "onoise_r.xdut.rpolar1",
+        "onoise_r.xdut.rpolar2",
+        "onoise_r.xdut.rpolar3",
+        "onoise_r.xdut.rpolar4",
+        "onoise_r.xdut.rpolar5",
+        "onoise_r.xdut.rpolar6",
+        "onoise_r.xdut.rpolar7",
+        "onoise_r.xdut.rpolar8",
+        "onoise_r.xdut.rpolar9"
+      ]
+    },
+    "power and midpoint": {
+      "output_v_rms": 8.32182141491868e-08,
+      "pressure_a_pa_rms": 5.56735612385469e-05,
+      "pressure_pa_rms": 8.467999388871042e-05,
+      "roots": [
+        "onoise_d.xdut.xqreg.d1",
+        "onoise_q.xdut.xqreg.q1",
+        "onoise_q.xdut.xqreg.q2",
+        "onoise_r.xdut.rharvestn",
+        "onoise_r.xdut.rharvestp",
+        "onoise_r.xdut.rmidbottom",
+        "onoise_r.xdut.rmidtop",
+        "onoise_r.xdut.rregbottom",
+        "onoise_r.xdut.rregtop",
+        "onoise_r.xdut.xqreg.rq"
+      ]
+    }
+  },
+  "current_a": 0.005490864744671487,
+  "declared": {
+    "$include": "comparison-a830fa68e69a-0008-matched-rows-0068-candidate-0019-0002-holdout-09.json"
+  },
+  "density": 64,
+  "holdout": true,
+  "input_diagnostic_1khz": {
+    "boundary": "observed semiconductor plus actual moving Rbias/Cbiasstray return; driven capsule boundary; not independent port",
+    "equivalent_capacitance_f": 1.966591951707423e-11,
+    "imag_s": 1.2356461656185706e-07,
+    "real_s": 1.0555328609148983e-09
+  },
+  "noise_a_pa_rms": 0.002168232643076484,
+  "noise_pa_rms": 0.0027875202202065482,
+  "noise_partition_closure": 8.663892955744763e-16,
+  "noise_scope": "conditional stationary modeled sources; incomplete physical spectra",
+  "original_record": "results/mechanism_controls/20261017T090130Z_comparison002_9392cebd/matched/candidate_0019/holdout_09/result.json",
+  "original_status": "pass",
+  "response_deviation_db": 0.1682458460097255,
+  "scenario": "holdout_09",
+  "status": "pass"
+}

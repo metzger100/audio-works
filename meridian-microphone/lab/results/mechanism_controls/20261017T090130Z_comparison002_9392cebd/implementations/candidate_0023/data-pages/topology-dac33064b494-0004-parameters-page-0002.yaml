@@ -1,0 +1,232 @@
+RSERVOOUT_VALUE:
+  default: 100000
+  range:
+  - 99000.0
+  - 101000.0
+  scale: log
+  provenance: BOM RC0603FR-07100KL; catalogue tolerance; excess noise/voltage coefficient
+    unqualified
+RINVEMITTER_VALUE:
+  default: 10000
+  range:
+  - 9900.0
+  - 10100.0
+  scale: log
+  provenance: BOM AC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+    unqualified
+RINVCOLLECTOR_VALUE:
+  default: 10000
+  range:
+  - 9900.0
+  - 10100.0
+  scale: log
+  provenance: BOM AC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+    unqualified
+ROUTLOADP_VALUE:
+  default: 10000
+  range:
+  - 9900.0
+  - 10100.0
+  scale: log
+  provenance: BOM AC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+    unqualified
+ROUTLOADN_VALUE:
+  default: 10000
+  range:
+  - 9900.0
+  - 10100.0
+  scale: log
+  provenance: BOM AC0603FR-0710KL; catalogue tolerance; excess noise/voltage coefficient
+    unqualified
+COUTP0_VALUE:
+  default: 4.7e-05
+  range:
+  - 3.76e-05
+  - 5.6399999999999995e-05
+  scale: log
+  provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+    partial
+RCOUTP0LOSS_VALUE:
+  default: 2.539706538700458
+  range:
+  - 0.01
+  - 2.539706538700458
+  scale: log
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+RCOUTP0LEAK_VALUE:
+  default: 100000000000000.0
+  range:
+  - 2128378.378378378
+  - 100000000000000.0
+  scale: log
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+COUTP1_VALUE:
+  default: 4.7e-05
+  range:
+  - 3.76e-05
+  - 5.6399999999999995e-05
+  scale: log
+  provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+    partial
+RCOUTP1LOSS_VALUE:
+  default: 2.539706538700458
+  range:
+  - 0.01
+  - 2.539706538700458
+  scale: log
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+RCOUTP1LEAK_VALUE:
+  default: 100000000000000.0
+  range:
+  - 2128378.378378378
+  - 100000000000000.0
+  scale: log
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+COUTP2_VALUE:
+  default: 4.7e-05
+  range:
+  - 3.76e-05
+  - 5.6399999999999995e-05
+  scale: log
+  provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+    partial
+RCOUTP2LOSS_VALUE:
+  default: 2.539706538700458
+  range:
+  - 0.01
+  - 2.539706538700458
+  scale: log
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+RCOUTP2LEAK_VALUE:
+  default: 100000000000000.0
+  range:
+  - 2128378.378378378
+  - 100000000000000.0
+  scale: log
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+COUTP3_VALUE:
+  default: 4.7e-05
+  range:
+  - 3.76e-05
+  - 5.6399999999999995e-05
+  scale: log
+  provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+    partial
+RCOUTP3LOSS_VALUE:
+  default: 2.539706538700458
+  range:
+  - 0.01
+  - 2.539706538700458
+  scale: log
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+RCOUTP3LEAK_VALUE:
+  default: 100000000000000.0
+  range:
+  - 2128378.378378378
+  - 100000000000000.0
+  scale: log
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+COUTN0_VALUE:
+  default: 4.7e-05
+  range:
+  - 3.76e-05
+  - 5.6399999999999995e-05
+  scale: log
+  provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+    partial
+RCOUTN0LOSS_VALUE:
+  default: 2.539706538700458
+  range:
+  - 0.01
+  - 2.539706538700458
+  scale: log
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+RCOUTN0LEAK_VALUE:
+  default: 100000000000000.0
+  range:
+  - 2128378.378378378
+  - 100000000000000.0
+  scale: log
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+COUTN1_VALUE:
+  default: 4.7e-05
+  range:
+  - 3.76e-05
+  - 5.6399999999999995e-05
+  scale: log
+  provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+    partial
+RCOUTN1LOSS_VALUE:
+  default: 2.539706538700458
+  range:
+  - 0.01
+  - 2.539706538700458
+  scale: log
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+RCOUTN1LEAK_VALUE:
+  default: 100000000000000.0
+  range:
+  - 2128378.378378378
+  - 100000000000000.0
+  scale: log
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+COUTN2_VALUE:
+  default: 4.7e-05
+  range:
+  - 3.76e-05
+  - 5.6399999999999995e-05
+  scale: log
+  provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+    partial
+RCOUTN2LOSS_VALUE:
+  default: 2.539706538700458
+  range:
+  - 0.01
+  - 2.539706538700458
+  scale: log
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+RCOUTN2LEAK_VALUE:
+  default: 100000000000000.0
+  range:
+  - 2128378.378378378
+  - 100000000000000.0
+  scale: log
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+COUTN3_VALUE:
+  default: 4.7e-05
+  range:
+  - 3.76e-05
+  - 5.6399999999999995e-05
+  scale: log
+  provenance: BOM EEU-FR1J470; capacitance tolerance; dielectric/leakage/ESR coverage
+    partial
+RCOUTN3LOSS_VALUE:
+  default: 2.539706538700458
+  range:
+  - 0.01
+  - 2.539706538700458
+  scale: log
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior
+RCOUTN3LEAK_VALUE:
+  default: 100000000000000.0
+  range:
+  - 2128378.378378378
+  - 100000000000000.0
+  scale: log
+  provenance: S26 Panasonic FR-A DF/leakage anchor; explicit constant-law scenario
+    only, not validated broadband/temperature/noise behavior

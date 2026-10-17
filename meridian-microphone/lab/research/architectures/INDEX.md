@@ -3,15 +3,27 @@
 
 Mechanisms, benchmarks, primary-source conditions, experiments, comparisons and scoped optimization findings.
 
+- [README.md](README.md) — active
 - [architecture-comparison-001-decisions.md](architecture-comparison-001-decisions.md) — active
 - [architecture-comparison-001-preservation.json](architecture-comparison-001-preservation.json) — active
 - [architecture-comparison-001-validation.json](architecture-comparison-001-validation.json) — active
 - [architecture-comparison-001.md](architecture-comparison-001.md) — active
 - [architecture-comparison-001.yaml](architecture-comparison-001.yaml) — active
+- [architecture-comparison-002.md](architecture-comparison-002.md) — active
+- [architecture-comparison-002.yaml](architecture-comparison-002.yaml) — active
 - [benchmarks.md](benchmarks.md) — active
 - [carrier-protocol.md](carrier-protocol.md) — active
+- [comparison-audit-002.json](comparison-audit-002.json) — active
+- [comparison-queries-002.json](comparison-queries-002.json) — active
+- [comparison-reproduction-002.md](comparison-reproduction-002.md) — active
+- [comparison-source-notes-002.md](comparison-source-notes-002.md) — active
+- [comparison-sources-002-followup.json](comparison-sources-002-followup.json) — active
+- [comparison-sources-002.json](comparison-sources-002.json) — active
 - [diverse-analysis-001.json](diverse-analysis-001.json) — active
+- [diverse-audit-sources-001.json](diverse-audit-sources-001.json) — active
 - [diverse-behavior-001.csv](diverse-behavior-001.csv) — active
+- [diverse-continuation-audit-001.json](diverse-continuation-audit-001.json) — active
+- [diverse-continuation-audit-001.md](diverse-continuation-audit-001.md) — active
 - [diverse-coverage-001.md](diverse-coverage-001.md) — active
 - [diverse-derivations-001.md](diverse-derivations-001.md) — active
 - [diverse-knowledge-001.json](diverse-knowledge-001.json) — active

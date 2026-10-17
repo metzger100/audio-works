@@ -50,7 +50,7 @@ def noise_group(vector):
     ref = vector.split(".xdut.", 1)[1].split(".")[0]
     if ref.startswith(("xqout", "xqinvert", "rout", "rinv", "rcout")):
         return "output drive and coupling"
-    if ref.startswith(("rpolar", "rback")):
+    if ref.startswith(("rpolar", "rback", "rcbackfilter")):
         return "polarization network"
     if ref.startswith(("xqreg", "rharvest", "rreg", "rmid")):
         return "power and midpoint"
@@ -133,7 +133,7 @@ def parse_elements(circuit, params):
         kind = ref[0].upper()
         if kind == "X":
             nodes, value = tokens[1:-1], tokens[-1]
-        elif kind in {"R", "C", "V", "B"}:
+        elif kind in {"R", "C", "L", "V", "B"}:
             nodes, value = tokens[1:3], " ".join(tokens[3:])
         elif kind == "E":
             nodes = tokens[1:3] if "VOL=" in line else tokens[1:5]
@@ -154,7 +154,7 @@ def parse_elements(circuit, params):
     return rows
 
 
-def diagram(candidate, elements):
+def diagram(candidate, elements, compact=False):
     """Full bipartite connectivity diagram; only zero-V observers collapse.
 
     All physical and behavioral elements remain explicit. The companion CSV
@@ -181,10 +181,10 @@ def diagram(candidate, elements):
         lines.append(
             f'{json.dumps("n_" + n)} [label={json.dumps(n)}, shape=ellipse, color="#6a8295"];'
         )
-    for e in elements:
+    for index, e in enumerate(elements):
         if e["kind"] == "V" and e["value_or_model"] == "0":
             continue
-        name = "e_" + e["reference"]
+        name = "e" + str(index) if compact else "e_" + e["reference"]
         value = e["value_or_model"]
         if len(value) > 65:
             value = value[:62] + "..."

@@ -1,0 +1,73 @@
+schema_version: 1
+date: '2026-10-09'
+scope: Intended one-slot quantities only; no shopping list or recommendation
+parent_register: parts_expansion_001_2026-10-09.yaml
+seller_contracts:
+  tme_germany:
+    consumer_terms: https://static.cs.tme.eu/2025/01/677d16e64f859/de.pdf
+    terms_version: Effective07Mar2024 until replacement; primary linkedPDF retrieved09Oct2026
+    private_consumer_access: Explicit§4h guest consumer option; no account/order entered
+    quantity_rule: §4i minimum table quantity and multiples, default1
+    shipping_url: https://www.tme.eu/de/how-to-buy/7345/Transportart-und-Transportkosten/
+    standard_shipping_gross_eur: 9.4
+    standard_shipping_net_eur: 7.9
+    shipping_condition: Actual/volumetric weight max<=15kg; approximate1–2working
+      days after advance payment received
+    bank_fees: §8f customer bears transfer fees; amount unknown
+    catalogue_status: Invitation only, not binding offer; stock reservation/acceptance
+      unverified
+observations:
+- exact_mpn: MMBT5401-7-F
+  url: https://www.digikey.de/de/products/detail/diodes-incorporated/MMBT5401-7-F/804904
+  observed_date: '2026-10-09'
+  source_age: lastweek primary indexed; direct403
+  stock_observed: 177052
+  live_stock: null
+  moq_observed: 1
+  order_multiple_observed: 1
+  retail_pack_observed: 1
+  factory_pack: 3000
+  unit_net_eur_observed: 0.21
+  unit_gross_eur_displayed: 0.2499
+  intended_quantity: 1
+  intended_use: One support/output or coupling position in a future qualified equipment
+    revision; no comparison stock
+  delivered_cost_confirmed_eur: null
+  conditional_total_eur: null
+  conditional_total_note: 25EUR parentshipping tax basis and fees unresolved; no confirmed
+    delivered price
+  implementation_qualified: false
+- exact_mpn: MKP2D031001F00KSSD
+  url: https://www.tme.eu/de/details/mkp2-100n_100/tht-folienkondensatoren/wima/mkp2d031001f00kssd/
+  observed_date: '2026-10-09'
+  source_age: public indexed/open page lastmonth; direct403
+  stock_observed: 0
+  live_stock: null
+  moq_observed: 1
+  order_multiple_observed: 1
+  retail_pack_observed: 1
+  factory_pack: 3500
+  unit_net_eur_observed: 0.5
+  unit_gross_eur_displayed: 0.59
+  intended_quantity: 1
+  intended_use: One support/output or coupling position in a future qualified equipment
+    revision; no comparison stock
+  delivered_cost_confirmed_eur: null
+  conditional_total_eur: 9.99
+  conditional_total_note: 0.59+9.40 shown scenario only; item0stock, futureavailability
+    and bankfees unknown
+  implementation_qualified: false
+other_routes:
+- exact_mpn: 2N5551
+  manufacturer: Diotec
+  url: https://www.tme.eu/fr/details/2n5551-dio/transistors-npn-tht/diotec-semiconductor/2n5551/
+  observation: 11189 indexed France,0.13EURnet; German exact route403; FrenchVAT not
+    Germanyprice
+  live_germany_orderability: null
+- exact_mpn: DMMT5401-7-F
+  source: https://www.diodes.com/part/view/DMMT5401/
+  observation: Exact ordinary production ordercode and catalogue; exactGermany retailer
+    quote not obtained
+  delivered_cost_confirmed_eur: null
+single_source_note: Different retailer routes share same manufacturer/die. DiscretePNP
+  and dualPNP or another5551 maker/package are separate unqualified alternatives.

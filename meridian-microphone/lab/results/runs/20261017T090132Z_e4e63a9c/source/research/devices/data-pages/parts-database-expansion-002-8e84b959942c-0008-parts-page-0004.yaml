@@ -1,0 +1,179 @@
+- device_id: diotec_mmbt5551
+  manufacturer: Diotec Semiconductor
+  exact_mpn: MMBT5551
+  package: SOT-23
+  roles:
+  - p48_power
+  states:
+    investigated: true
+    acquired: true
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://diotec.com/en/product/MMBT5551.html
+  model_ids:
+  - diotec_mmbt5551_vendor
+  models:
+  - id: diotec_mmbt5551_vendor
+    path: semiconductor/vendor/diotec_mmbt5551.lib
+    sha256: 96f44107a0eff47851731646952f0ac47cf1d794ad13cd29ca4055f2b81ba2aa
+    version: 13Dec2017 parameterized example
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: only conditioned accepted rows; omissions unresolved
+    primitive: X
+    runnability: failed_strict_control
+    load_record: results/device_models/20261009T170734Z_constant_ae3a9e1d/results.json
+    external_parameter_dependencies:
+    - pi undefined by original file; fixture constant only
+    compatibility_omissions:
+    - bvcbo and bvbe warned/ignored; other rating metadata transformed, no breakdown
+      credit
+  datasheet:
+    url: https://diotec.com/request/datasheet/mmbt5551.pdf
+    version: 19Nov2025
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_diotec_mmbt5551.pdf
+    sha256: 227f5fe089670eeeb14ee175c873dee896d74406611c3265defe3b3aa38c61a2
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: null
+  candidate_combination_qualified: false
+  sourcing:
+    register: research/procurement/parts_expansion_001_2026-10-09.yaml
+    implementation_qualified: false
+    delivered_cost_confirmed_eur: null
+- device_id: bc850c
+  manufacturer: Nexperia
+  exact_mpn: BC850C,215
+  package: SOT-23
+  roles:
+  - low_noise_bipolar
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      bc850c_vendor:
+      - behavior: hfe_0.002
+        status: pass
+        evidence: guaranteed_limit
+        condition: BC850C table7 VCE5V 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: nf_1khz_density_screen
+        status: pass
+        evidence: conditional_frequency_screen
+        condition: Rs2kohm IC200uA VCE5V25C; local density approximation to narrowband
+          NF; exact measurement filter unmodeled
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: nf_refinement_ratio
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.nexperia.com/product/BC850C
+  model_ids:
+  - bc850c_vendor
+  models:
+  - id: bc850c_vendor
+    path: semiconductor/vendor/bc850c.lib
+    sha256: ef3fc2c3776eaf52acbfb5b7955eda8efd9fa714dd2158aa015ac42610bca399
+    version: extraction week42/2018
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: error
+    primitive: X
+    runnability: scoped_jobs_ok_with_retained_errors
+    load_record: null
+    external_parameter_dependencies: []
+    compatibility_omissions: []
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/BC850C.pdf
+    version: current public sheet; revision in original PDF
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_bc850c.pdf
+    sha256: 7be422c96ed19a0c874334d24811f714d8634a65d2f83505b5974f23257ed5c1
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  candidate_combination_qualified: false
+  sourcing:
+    register: research/procurement/parts_expansion_001_2026-10-09.yaml
+    implementation_qualified: false
+    delivered_cost_confirmed_eur: null
+- device_id: bav199
+  manufacturer: Nexperia
+  exact_mpn: BAV199,215
+  package: SOT-23
+  roles:
+  - protection
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      bav199_syntax_r1:
+      - behavior: reverse_leak
+        status: pass
+        evidence: guaranteed_limit
+        condition: BAV199 VR75V 25C one diode
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: cap
+        status: pass
+        evidence: guaranteed_limit
+        condition: BAV199 VR0 f1MHz table
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.nexperia.com/product/BAV199
+  model_ids:
+  - bav199_vendor
+  - bav199_syntax_r1
+  models:
+  - id: bav199_vendor
+    path: semiconductor/vendor/bav199.lib
+    sha256: 37ca9619403894293238c41fbe05a9748c1d4d7d0a17b71ddde6dc2a8ba104e6
+    version: extraction date unspecified in vendor header
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: not_yet_characterized
+    primitive: D
+    runnability: not_yet_tested
+    load_record: null
+    external_parameter_dependencies: []
+    compatibility_omissions: []
+  - id: bav199_syntax_r1
+    path: semiconductor/vendor/bav199_metadata_r1.lib
+    sha256: ed3a4386d3632c91917c88cbd5d168b943cfd1f5a16133cd0bc6c145cac3f1cc
+    version: extraction date unspecified in vendor header; authored metadata r1
+    parent_model_id: bav199_vendor
+    acquisition: valid_spice
+    behavior: scoped_agreement
+    primitive: D
+    runnability: all_planned_jobs_run
+    load_record: null
+    external_parameter_dependencies: []
+    compatibility_omissions: []
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/BAV199.pdf
+    version: current public sheet; revision in original PDF
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_bav199.pdf
+    sha256: ab2f26d003e3c1d8f7e4e7ac674ae055849970bf7b392a7d5d31eca443aab9e2
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  candidate_combination_qualified: false
+  sourcing:
+    register: research/procurement/parts_expansion_001_2026-10-09.yaml
+    implementation_qualified: false
+    delivered_cost_confirmed_eur: null

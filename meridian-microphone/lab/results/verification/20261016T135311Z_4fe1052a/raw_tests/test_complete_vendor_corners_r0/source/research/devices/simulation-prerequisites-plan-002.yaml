@@ -1,0 +1,19 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+schema_version: 1
+revision: observer-diagnosis-r2
+declared_date: '2026-10-11'
+parent: results/device_models/20261011T175705Z_prerequisites_a7cc0cdb/results.json
+maximum_jobs: 36
+timeout_s_per_job: 15
+options: reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+candidate_options: reltol=1e-6 method=gear maxord=2 abstol=1e-15 vntol=1e-9 gmin=1e-15
+candidate_timeout_s: 60
+candidate_ids: [candidate_0019, candidate_0023, candidate_0012]
+candidate_controls: [original, terminal_observers_collapsed, charge_observer_reference_child]
+isolated_charge_controls: [original, global_signal_reference_child]
+charge_common_mode_v: [0, 20]
+charge_steps_s: [2e-6, 1e-6]
+charge_assumptions: CF=CR70p,PAR2p,CROSS0,LEAK1T,Rload1G,Rrear1k,POLDC40,LIN1; mathematical conditions only
+clamp_control: Source-limited gate ramp -1..1V,100kohm,all original clamp elements retained; VCH=VCL=0 for explicit clamp exercise
+stopping: One finite pass; no retries or altered tolerances. Original candidate DC/short-transient failures block microphone nonlinear claims. Children are numerical diagnostic decks, not hidden canonical edits or scored candidates.
+supported_claims: Only independently controlled scopes; typical/noise/production/physical/patent gates remain separate

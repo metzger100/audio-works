@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-16",
+  "purpose": "Continuation audit of completed Prompt10; complement the original extensive source and citation-chain ledger without restarting experiments.",
+  "provider": "web.run",
+  "time_precision": "Date; provider returned no per-query UTC timestamp. This is a new observation, not a replacement retrieval receipt.",
+  "queries": [
+    "site.ngspice.sourceforge.io ngspice 47 manual periodic steady state noise PSS transient noise",
+    "site.ti.com SLOA033A charge amplifier feedback capacitor",
+    "site.ti.com OPA928 guard buffer transimpedance common-mode"
+  ],
+  "filters": "Primary official documentation and original author manuscript only relied upon; other search hits excluded.",
+  "inspected": [
+    {
+      "author": "James Karki / Texas Instruments",
+      "title": "Signal Conditioning Piezoelectric Sensors",
+      "revision": "SLOA033A, September 2000",
+      "url": "https://www.ti.com/lit/an/sloa033a/sloa033a.pdf",
+      "provider_mime": "application/pdf",
+      "pages": 6,
+      "section": "3.2 and Appendix A",
+      "observation": "Charge balance, feedback bleed and finite impedances support the existing independent charge oracle. Piezoelectric mechanics and circuit performance are not condenser-microphone results.",
+      "new_original_sha256": null
+    },
+    {
+      "author": "Texas Instruments",
+      "title": "OPA928 datasheet",
+      "revision": "SBOSA77A, March 2023, revised April 2024",
+      "url": "https://www.ti.com/lit/ds/symlink/opa928.pdf",
+      "provider_mime": "application/pdf",
+      "pages": 50,
+      "section": "5.6, 6.3, 6.4, 7.1.2 and 7.1.3",
+      "observation": "16V/8V fixture matches midpoint reference conditions. Near-rail operation cannot inherit midpoint noise/guard specifications. Internal guard can be left floating with an external driver. Guard headroom, isolation and board leakage require separate controls.",
+      "new_original_sha256": null
+    },
+    {
+      "author": "ngspice project",
+      "title": "ngspice User's Manual",
+      "revision": "47",
+      "url": "https://ngspice.sourceforge.io/docs/ngspice-47-manual.pdf",
+      "provider_mime": "application/pdf",
+      "pages": 763,
+      "section": "1.2.8, 4.1.7, 11.3.11, 11.3.12 and 13.5.77",
+      "observation": "Manual distinguishes seeded source injection from stationary device noise. PSS is experimental; section11.3.12 also describes it as not publicly available. This documentation does not establish a supported periodically biased device-noise analysis for Meridian.",
+      "documentation_crosscheck": "https://ngspice.sourceforge.io/docs.html",
+      "release_crosscheck": "https://ngspice.sourceforge.io/news.html",
+      "crosscheck_limit": "Release47 news mentions a PSS update; the manual's availability statement alone is not an executable capability test. No new solver/PSS/noise run was performed in this audit.",
+      "new_original_sha256": null
+    },
+    {
+      "author": "Joel Phillips and Ken Kundert",
+      "title": "Noise in Mixers, Oscillators, Samplers, and Logic: An Introduction to Cyclostationary Noise",
+      "revision": "Version1a, May2000; front matter last updated10March2019; see original receipt for exact bytes",
+      "url": "https://designers-guide.org/theory/cyclo-paper.pdf",
+      "provider_mime": "application/pdf",
+      "pages": 17,
+      "observation": "Periodic translation and folding retain the need for sideband covariance. Existing seeded LPTV arm sources do not establish noise spectra under periodic transistor bias.",
+      "new_original_sha256": null
+    }
+  ],
+  "preservation": "Provider extracts expose no original-file bytes or redirect chain; no new original SHA256 is invented. Earlier direct acquisitions, hashes, failures, notices and inaccessible-original limits remain in diverse-sources-001.json and results/diverse-sources-20261016.sha256.",
+  "patent_scope": "Existing official-publication feature mappings retained. No new status or clearance claim, agreement, model acquisition or external publication.",
+  "stopping_rule": "The source checks support a protocol-equation correction and confirm the recorded prerequisite limits. Further identical circuit runs would not resolve real reset spectra, macro reference-backend validation or periodically biased device noise. Those remain separately finite future tasks."
+}

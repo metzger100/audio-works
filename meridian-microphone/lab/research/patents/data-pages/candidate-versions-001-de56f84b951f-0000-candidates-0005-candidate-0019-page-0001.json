@@ -1,0 +1,135 @@
+{
+  "activities_ref": "shared_activity_matrix",
+  "bom_expanded_sha256": "a93f52a7fcbb99e9ecc2536d46293603d07c57f6cf113e2af2d8b0f12cdccafc",
+  "bom_path": "candidates/candidate_0019/bom.yaml",
+  "candidate_id": "candidate_0019",
+  "circuit_path": "candidates/candidate_0019/circuit.cir",
+  "circuit_sha256": "1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da",
+  "feature_ids": [
+    "P48",
+    "regulation",
+    "differential_output",
+    "fixed_bias",
+    "backplate_filter"
+  ],
+  "gate_holds": [
+    "prototype_selection",
+    "manufacture",
+    "implementation_build_publication"
+  ],
+  "implementation_sha256": "f55d87766fcc951854c70c164e068d038bd573e349e75f4be36f21d56fcafb12",
+  "mechanical_manufacture": "Purchased K47FRB assumed; no custom capsule manufacture/geometry implemented; acoustic/electrode/mount construction unknown",
+  "netlist_elements": {
+    "Cbackfilter": {
+      "line": 65,
+      "text": "Cbackfilter b g {CBACKFILTER_VALUE}"
+    },
+    "Crail": {
+      "line": 14,
+      "text": "Crail rail g {CRAIL_VALUE}"
+    },
+    "Craw": {
+      "line": 6,
+      "text": "Craw raw g {CRAW_VALUE}"
+    },
+    "Rback": {
+      "line": 29,
+      "text": "Rback pol b {RBACK_VALUE}"
+    },
+    "Rbias": {
+      "line": 35,
+      "text": "Rbias f gatebias {RBIAS_VALUE}"
+    },
+    "Rgatebottom": {
+      "line": 33,
+      "text": "Rgatebottom gatebias g {RGATEBOTTOM_VALUE}"
+    },
+    "Rgatetop0": {
+      "line": 30,
+      "text": "Rgatetop0 rail gate_div0 {RGATETOP0_VALUE}"
+    },
+    "Rharvestn": {
+      "line": 5,
+      "text": "Rharvestn n raw {RHARVESTN_VALUE}"
+    },
+    "Rharvestp": {
+      "line": 4,
+      "text": "Rharvestp p raw {RHARVESTP_VALUE}"
+    },
+    "Rmidbottom": {
+      "line": 16,
+      "text": "Rmidbottom mid g {RMIDBOTTOM_VALUE}"
+    },
+    "Rmidtop": {
+      "line": 15,
+      "text": "Rmidtop rail mid {RMIDTOP_VALUE}"
+    },
+    "Routn": {
+      "line": 48,
+      "text": "Routn outn cn {ROUTN_VALUE}"
+    },
+    "Routp": {
+      "line": 47,
+      "text": "Routp outp cp {ROUTP_VALUE}"
+    },
+    "Rpolar0": {
+      "line": 18,
+      "text": "Rpolar0 raw pol_0 {RPOLAR0_VALUE}"
+    },
+    "Rregbottom": {
+      "line": 8,
+      "text": "Rregbottom regbase g {RREGBOTTOM_VALUE}"
+    },
+    "Rregtop": {
+      "line": 7,
+      "text": "Rregtop raw regbase {RREGTOP_VALUE}"
+    },
+    "Rsource": {
+      "line": 44,
+      "text": "Rsource source g {RSOURCE_VALUE}"
+    },
+    "XJinput": {
+      "line": 43,
+      "text": "XJinput Jinput_t0 Jinput_t1 Jinput_t2 Jinput_t3 Jinput_t4 JFE150"
+    },
+    "XQoutn": {
+      "line": 62,
+      "text": "XQoutn Qoutn_t0 Qoutn_t1 Qoutn_t2 BC846B"
+    },
+    "XQoutp": {
+      "line": 52,
+      "text": "XQoutp Qoutp_t0 Qoutp_t1 Qoutp_t2 BC846B"
+    },
+    "XQreg": {
+      "line": 13,
+      "text": "XQreg Qreg_t0 Qreg_t1 Qreg_t2 BC846B"
+    }
+  },
+  "parents": [
+    "candidate_0015"
+  ],
+  "patent_screening": "partial scoped claim inspection; holds retained",
+  "semantic_hash_method": "SHA256 of UTF-8 JSON, sorted keys, ensure_ascii=False, separators comma/colon; explicit includes resolved with meridian_lab.core.read_yaml",
+  "source_files": {
+    "candidates/candidate_0019/INDEX.md": "444d3eac10d23c2c16deb54fb31e1230d3a3637884556f6fe04d5a2bbadecf68",
+    "candidates/candidate_0019/bom.yaml": "263776f4a0ca381d7978c8128de6f465f72c13f191c11928ad9cd638df550fe6",
+    "candidates/candidate_0019/circuit.cir": "1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da",
+    "candidates/candidate_0019/data-pages/INDEX.md": "2e8a739ed502f2ecef970776f12c2d8f6bfbb4a58135cc8061048fe50f172972",
+    "candidates/candidate_0019/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0001.yaml": "d983ec2a454e29d597c2fa54b56ee9396225bfeb3dc6957d9aec02d00516a93f",
+    "candidates/candidate_0019/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0002.yaml": "0d52dbe1637691628f8f9d22cc8b7cace889307fbd6d0d54b0981f7792353c02",
+    "candidates/candidate_0019/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0003.yaml": "8e0c562840ab8faf890bae5af8d24d049cfaa276c3b534e8cac2e10637d04d6c",
+    "candidates/candidate_0019/data-pages/bom-9c5f3963535c-0005-physical-parts.yaml": "a52d77ff436e907d73a74f0df5cf1c15a693d7af5473f191ab454a46dec086a6",
+    "candidates/candidate_0019/data-pages/bom-9c5f3963535c-page-0001.yaml": "03b0cbed8e93e5ac67faea7517d79690c0a013297ab971cf4da1c66e8c56abaf",
+    "candidates/candidate_0019/data-pages/topology-dac33064b494-0004-parameters-page-0001.yaml": "0b20e4a23c09246bdaf80689818b241ecdeb86d385e61cf0c3691061eeb2f91e",
+    "candidates/candidate_0019/data-pages/topology-dac33064b494-0004-parameters-page-0002.yaml": "39a6f9d3d613da9acb5cf0b1372872192bd8a0b9477f73f7e8fef56a3da9172d",
+    "candidates/candidate_0019/data-pages/topology-dac33064b494-0004-parameters.yaml": "ce1e555f3af1429217664bb8723fb5387f58aeb7a3b0b1bc75d5531049b28fab",
+    "candidates/candidate_0019/data-pages/topology-dac33064b494-0005-population-page-0001.yaml": "fb3b050fcce94bb35e61cec3e7c837af2078bc7119a1dc749a6a6e072e44e80a",
+    "candidates/candidate_0019/data-pages/topology-dac33064b494-0005-population-page-0002.yaml": "2827cd3acc09ce1e1f23639c810a3174d5bb042f122fd23cece17ea9f8ea0aef",
+    "candidates/candidate_0019/data-pages/topology-dac33064b494-0005-population.yaml": "47d13ffffda1348e3483eb12682846e2e49c473fa639b50ca82f72fd42b18af7",
+    "candidates/candidate_0019/data-pages/topology-dac33064b494-page-0001.yaml": "879fc4f43a8c2b83d13cdf697a728445d47e08cdfabf30fef7dc04c107c34077",
+    "candidates/candidate_0019/hypothesis.md": "29bdfa0689b6b48f3d110b2a8b94b637ce204694a81ecc3c15194c813e23168d",
+    "candidates/candidate_0019/notes.md": "77647315f41dfbfb3dac086b616d3e803eda2b58e6983452dba4ba89c1dbe484",
+    "candidates/candidate_0019/topology.yaml": "a2dd2d74e37fb610572a6286d642a2e0f247f594c6d7fde70349dfd4b6a0f2d9"
+  },
+  "topology_expanded_sha256": "565b7720867ea605b4119abbc84b60b2b0beb95d2d01944e804a06fb144d2088"
+}

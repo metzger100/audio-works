@@ -56,5 +56,28 @@ S34:
   observations: architectures/diverse-sources-001.json
   methods: architectures/diverse-source-notes-001.md
   findings: architectures/diverse-prerequisites-001.md
+  continuation_audit: architectures/diverse-continuation-audit-001.md
+  refreshed_source_checks: architectures/diverse-audit-sources-001.json
   limitation: Ideal controls remain separate from native periodic device noise;
     floating/charge CMOS, real reset noise, procurement and patent status remain incomplete
+S35:
+  title: Candidate-linked patent claims and dated German status research001
+  kind: official_patent_publications_and_registers_with_separate_discovery_leads
+  evidence_date: '2026-10-17'
+  observations: patents/sources-screening-001.json
+  queries: patents/queries-official-001.json
+  web_discovery: patents/queries-web-001.json
+  findings: patents/candidate-screening-001.md
+  limitation: Official status observations16October; partial claim/family/territory coverage;
+    mirrored US claims provisional; all implementation holds retained; no legal opinion
+S36:
+  title: Frozen common-cohort architecture comparison002 source refresh
+  kind: primary_manufacturer_methodological_and_official_register
+  evidence_date: '2026-10-17'
+  observations: architectures/comparison-sources-002-followup.json
+  initial_failures: architectures/comparison-sources-002.json
+  queries: architectures/comparison-queries-002.json
+  methods: architectures/comparison-source-notes-002.md
+  audit: architectures/comparison-audit-002.json
+  limitation: Conditional numerical research; incomplete spectra, private Germany delivered quotes,
+    official rights coverage and physical measurements; all implementation holds retained

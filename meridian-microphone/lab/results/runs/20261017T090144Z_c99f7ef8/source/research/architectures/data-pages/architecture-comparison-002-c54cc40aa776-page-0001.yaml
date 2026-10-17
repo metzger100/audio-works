@@ -1,0 +1,283 @@
+schema_version: 1
+date: '2026-10-17'
+scope: Prompt13 finite conditional research; no physical qualification or production
+  selection
+authority: ../prompts/research-workflow.md
+seed: 134047
+independent_seed: 144047
+full_suite_samples: 16
+representatives:
+  candidate_0017:
+    role: lower-count fixed-bias JFET
+    parents:
+    - candidate_0015
+    parent_experiments:
+    - 20261009T090650Z_595690f6
+    netlist_sha256: 06d104a8f60e29e4214fe42130a8109dd0e870e26ce30e64bdce9fd525495922
+    bom_sha256: 263776f4a0ca381d7978c8128de6f465f72c13f191c11928ad9cd638df550fe6
+    topology_sha256: a2dd2d74e37fb610572a6286d642a2e0f247f594c6d7fde70349dfd4b6a0f2d9
+    selection_basis: Actual completed prior suite/control; no new value search
+    missing_gates:
+    - complete device/noise/nonlinear/process validation
+    - safe capsule bias and physical measurements
+    - procurement and patent holds
+  candidate_0019:
+    role: filtered fixed-bias JFET
+    parents:
+    - candidate_0015
+    parent_experiments:
+    - 20261011T192334Z_91abee84
+    netlist_sha256: 1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da
+    bom_sha256: 263776f4a0ca381d7978c8128de6f465f72c13f191c11928ad9cd638df550fe6
+    topology_sha256: a2dd2d74e37fb610572a6286d642a2e0f247f594c6d7fde70349dfd4b6a0f2d9
+    selection_basis: Actual completed prior suite/control; no new value search
+    missing_gates:
+    - complete device/noise/nonlinear/process validation
+    - safe capsule bias and physical measurements
+    - procurement and patent holds
+  candidate_0023:
+    role: unfiltered servo JFET
+    parents:
+    - candidate_0008
+    parent_experiments:
+    - 20261011T192341Z_519a5793
+    netlist_sha256: d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816
+    bom_sha256: 263776f4a0ca381d7978c8128de6f465f72c13f191c11928ad9cd638df550fe6
+    topology_sha256: a2dd2d74e37fb610572a6286d642a2e0f247f594c6d7fde70349dfd4b6a0f2d9
+    selection_basis: Actual completed prior suite/control; no new value search
+    missing_gates:
+    - complete device/noise/nonlinear/process validation
+    - safe capsule bias and physical measurements
+    - procurement and patent holds
+  candidate_0025:
+    role: realized final-backplate filter child
+    parents:
+    - candidate_0023
+    parent_experiments:
+    - 20261011T192350Z_37334df2
+    netlist_sha256: cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf
+    bom_sha256: 263776f4a0ca381d7978c8128de6f465f72c13f191c11928ad9cd638df550fe6
+    topology_sha256: a2dd2d74e37fb610572a6286d642a2e0f247f594c6d7fde70349dfd4b6a0f2d9
+    selection_basis: Actual completed prior suite/control; no new value search
+    missing_gates:
+    - complete device/noise/nonlinear/process validation
+    - safe capsule bias and physical measurements
+    - procurement and patent holds
+  candidate_0012:
+    role: no-FET charge/reset control
+    parents:
+    - candidate_0005
+    parent_experiments:
+    - 20261009T090439Z_c6d23a08
+    netlist_sha256: f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968
+    bom_sha256: 263776f4a0ca381d7978c8128de6f465f72c13f191c11928ad9cd638df550fe6
+    topology_sha256: 35d58ebf1afb6592c8b29741b050aca1bf2ff9841c1a48478b4ac313c89c9b2d
+    selection_basis: Actual completed prior suite/control; no new value search
+    missing_gates:
+    - complete device/noise/nonlinear/process validation
+    - safe capsule bias and physical measurements
+    - procurement and patent holds
+  candidate_0010:
+    role: held CMOS guard integration
+    parents:
+    - candidate_0003
+    parent_experiments:
+    - 20261009T090436Z_496da267
+    netlist_sha256: 72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9
+    bom_sha256: 263776f4a0ca381d7978c8128de6f465f72c13f191c11928ad9cd638df550fe6
+    topology_sha256: 35d58ebf1afb6592c8b29741b050aca1bf2ff9841c1a48478b4ac313c89c9b2d
+    selection_basis: Actual completed prior suite/control; no new value search
+    missing_gates:
+    - complete device/noise/nonlinear/process validation
+    - safe capsule bias and physical measurements
+    - procurement and patent holds
+  candidate_0014:
+    role: held CMOS charge integration
+    parents:
+    - candidate_0011
+    parent_experiments:
+    - 20261009T090439Z_77e9f0c9
+    netlist_sha256: cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6
+    bom_sha256: 263776f4a0ca381d7978c8128de6f465f72c13f191c11928ad9cd638df550fe6
+    topology_sha256: 35d58ebf1afb6592c8b29741b050aca1bf2ff9841c1a48478b4ac313c89c9b2d
+    selection_basis: Actual completed prior suite/control; no new value search
+    missing_gates:
+    - complete device/noise/nonlinear/process validation
+    - safe capsule bias and physical measurements
+    - procurement and patent holds
+  candidate_0013:
+    role: ideal carrier integration control
+    parents:
+    - candidate_0009
+    parent_experiments:
+    - 20261009T090547Z_1f85c513
+    netlist_sha256: 7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015
+    bom_sha256: 263776f4a0ca381d7978c8128de6f465f72c13f191c11928ad9cd638df550fe6
+    topology_sha256: a2dd2d74e37fb610572a6286d642a2e0f247f594c6d7fde70349dfd4b6a0f2d9
+    selection_basis: Actual completed prior suite/control; no new value search
+    missing_gates:
+    - complete device/noise/nonlinear/process validation
+    - safe capsule bias and physical measurements
+    - procurement and patent holds
+matched_realized:
+- candidate_0017
+- candidate_0019
+- candidate_0023
+- candidate_0025
+- candidate_0012
+scenarios:
+- id: baseline
+  state: direct_fact
+  parameters: {}
+  transformation: Locked model values are assumed; direct fact is their present repository
+    identity.
+  references:
+  - S01
+  - spec/capsule-model.yaml
+- id: historical_unity_estimate
+  state: analog_derived_central_scenario
+  parameters:
+    SREF: 0.015848931924611134
+  transformation: SREF=10^(-36/20) V/Pa IF dB reference is1V/Pa; no amplifier correction
+    possible.
+  references:
+  - SC01
+- id: gap_large_both
+  state: analog_derived_central_scenario
+  parameters:
+    CF: 4.5e-11
+    CR: 4.5e-11
+    SREF: 0.012857142857142857
+  transformation: 'Fixed area/fraction/tension: d/d0=70/45; S/S0=C/C0.'
+  references:
+  - SC05
+  - SC10
+  - SC19
+- id: gap_small_both
+  state: analog_derived_central_scenario
+  parameters:
+    CF: 1.0e-10
+    CR: 1.0e-10
+    SREF: 0.02857142857142857
+  transformation: 'Fixed area/fraction/tension: d/d0=70/100; S/S0=C/C0.'
+  references:
+  - SC05
+  - SC10
+  - SC19
+- id: rear_low
+  state: retained_adverse_coverage
+  parameters:
+    CR: 4.5e-11
+  transformation: Independent rear endpoint; no inferred sensitivity correlation.
+  references:
+  - spec/capsule-model.yaml
+- id: opposed_front_low
+  state: analog_derived_central_scenario
+  parameters:
+    CF: 4.5e-11
+    CR: 1.0e-10
+    SREF: 0.012857142857142857
+  transformation: Front gap drives common SREF; rear derivative remains model assumption,
+    not measured.
+  references:
+  - SC05
+  - SC19
+- id: opposed_front_high
+  state: analog_derived_central_scenario
+  parameters:
+    CF: 1.0e-10
+    CR: 4.5e-11
+    SREF: 0.02857142857142857
+  transformation: Opposite gap ordering, same proviso on rear common SREF.
+  references:
+  - SC05
+  - SC19
+- id: parasitic_high
+  state: retained_adverse_coverage
+  parameters:
+    PAR: 1.0e-11
+    CROSS: 5.0e-12
+  transformation: Unchanged case/cross endpoints.
+  references:
+  - spec/capsule-model.yaml
+- id: leakage_low
+  state: retained_adverse_coverage
+  parameters:
+    LEAK: 1000000000.0
+  transformation: Unchanged adverse leakage; Johnson-only surrogate incomplete.
+  references:
+  - spec/capsule-model.yaml
+  - SC04
+- id: leakage_high
+  state: retained_adverse_coverage
+  parameters:
+    LEAK: 100000000000000.0
+  transformation: Unchanged high resistance; not guaranteed humidity performance.
+  references:
+  - spec/capsule-model.yaml
+- id: sensitivity_low
+  state: retained_adverse_coverage
+  parameters:
+    SREF: 0.005
+  transformation: Original5mV/Pa; independent tension hypothesisT/T0=4.
+  references:
+  - spec/capsule-model.yaml
+  - SC19
+- id: sensitivity_high
+  state: retained_adverse_coverage
+  parameters:
+    SREF: 0.04
+  transformation: Original40mV/Pa; independent tension hypothesisT/T0=.5.
+  references:
+  - spec/capsule-model.yaml
+  - SC19
+- id: rear_parasitic_adverse
+  state: retained_adverse_coverage
+  parameters:
+    CR: 4.5e-11
+    PAR: 1.0e-11
+    CROSS: 5.0e-12
+  transformation: Paired capsule-only combination; no cable change or probability.
+  references:
+  - spec/capsule-model.yaml
+- id: coupled_leaky_sensitive
+  state: retained_adverse_coverage
+  parameters:
+    CF: 1.0e-10
+    CR: 1.0e-10
+    SREF: 0.02857142857142857
+    LEAK: 1000000000.0
+    PAR: 1.0e-11
+    CROSS: 5.0e-12
+  transformation: Small gap coupling plus retained leakage/parasitic endpoints; remains
+    artificial.
+  references:
+  - SC05
+  - SC19
+  - spec/capsule-model.yaml
+- id: leakage10G
+  parameters:
+    LEAK: 10000000000.0
+  state: retained_intermediate_stress
+- id: leakage100G
+  parameters:
+    LEAK: 100000000000.0
+  state: retained_intermediate_stress
+- id: supply_low_load
+  parameters:
+    VS: 44
+    FT: 0.2
+    FM: -0.004
+    LEN: 100
+    ZIN: 600
+    ZM: 0.05
+    TEMP: -10
+- id: supply_high_load
+  parameters:
+    VS: 52
+    FT: -0.2
+    FM: 0.004
+    LEN: 100
+    ZIN: 10000
+    ZM: -0.05
+    TEMP: 50

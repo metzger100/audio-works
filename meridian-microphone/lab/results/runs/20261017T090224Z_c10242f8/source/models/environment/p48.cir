@@ -1,0 +1,23 @@
+* Real phantom source/feed, lumped pi cable, nonzero shield resistance,
+* AC-coupled finite/mismatched preamp load. This is an interface environment.
+.subckt P48 p n g pp pn cm params: VS=48 FT=0 FM=0 LEN=10 RW=0.1 RS=0.05 CD=60p CS=80p ZIN=2000 ZM=0 CC=22u CP=200p START=0 CMAC=0
+Vphantom feed 0 DC {VS*(1-START)} PWL(0 {VS*(1-START)} 1m {VS*(1-START)} 2m {VS})
+Rfeedp feed xp {6800*(1+FT)*(1+FM/2)}
+Rfeedn feed xn {6800*(1+FT)*(1-FM/2)}
+Rwirep xp p {max(1u,LEN*RW)}
+Rwiren xn n {max(1u,LEN*RW)}
+Rshield g 0 {max(1u,LEN*RS)}
+Cdiffnear xp xn {max(1f,LEN*CD/2)}
+Cdiffmic p n {max(1f,LEN*CD/2)}
+Cpnear xp 0 {max(1f,LEN*CS/2)}
+Cnnear xn 0 {max(1f,LEN*CS/2)}
+Cpmic p g {max(1f,LEN*CS/2)}
+Cnmic n g {max(1f,LEN*CS/2)}
+Cblockp xp pp {CC}
+Cblockn xn pn {CC}
+VCM cm 0 DC 0 AC {CMAC}
+Rinp pp cm {ZIN/2*(1+ZM/2)}
+Rinn pn cm {ZIN/2*(1-ZM/2)}
+Cinp pp cm {CP}
+Cinn pn cm {CP}
+.ends P48

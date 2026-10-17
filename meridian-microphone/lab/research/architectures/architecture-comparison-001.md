@@ -27,7 +27,7 @@ Noise root-vector integration closes numerical power: unfiltered servo backplate
 
 ## Gates and next action
 
-Exact ordinary-part costs remain incomplete catalogue scenarios; all delivered totals are unknown. K47FBSB Cardioid-only EUR pricing cannot price K47FRB. Carrier0013 has ideal outputs despite older patent-feature wording; a dated correction retains that original error. Candidate claims, territory and current official status remain missing; affected implementation gates stay held.
+Exact ordinary-part costs remain incomplete catalogue scenarios; all delivered totals are unknown. K47FBSB Cardioid-only EUR pricing cannot price K47FRB. Carrier0013 has ideal outputs despite older patent-feature wording; the dated correction retains that original. [Patent screening001](../patents/candidate-screening-001.md) adds exact-version claim mappings and13 dated German records. Official US/current amended-claim/family coverage and material interpretation remain incomplete; affected implementation gates stay held. These documentary findings do not replace this comparison's engineering cohort.
 
 Reproduce with [comparison tool](../../tools/reporting/compare_architectures.py) using original private waveforms. [Provenance](../../results/reports/architecture-comparison-001/provenance.json) identifies checked sources/cohort and outputs. Follow [measurement priorities](../../measurement/priority-plan.md), repair independent behavior prerequisites, then recompute a shared cohort without weakening bounds.
 

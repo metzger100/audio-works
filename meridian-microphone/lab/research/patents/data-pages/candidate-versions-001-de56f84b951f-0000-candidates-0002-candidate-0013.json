@@ -1,0 +1,409 @@
+{
+  "activities_ref": "shared_activity_matrix",
+  "bom_expanded_sha256": "acc475a0e16497a3556c5297a0019b68fcfad8edac75673cba71bec22be178b5",
+  "bom_path": "candidates/candidate_0013/bom.yaml",
+  "candidate_id": "candidate_0013",
+  "circuit_path": "candidates/candidate_0013/circuit.cir",
+  "circuit_sha256": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015",
+  "combined_implementation_context_sha256": "e37c63b93e3538a8455a7a816fc3fd839b75a7a23d0f5c55b6a6e63e0ca9906f",
+  "feature_ids": [
+    "P48",
+    "regulation",
+    "carrier"
+  ],
+  "gate_holds": [
+    "prototype_selection",
+    "manufacture",
+    "implementation_build_publication"
+  ],
+  "implementation_sha256": "2e26d576ea9d121b122b7b656515bf3f38208db581491b39d0c3ba7c7dd01cbe",
+  "mechanical_manufacture": "Purchased K47FRB assumed; no custom capsule manufacture/geometry implemented; acoustic/electrode/mount construction unknown",
+  "netlist_elements": {
+    "Banti": {
+      "line": 31,
+      "text": "Banti anti pol V={-CARRIER_PEAK*sin(2*PI*CARRIER_HZ*time)}"
+    },
+    "Bcarrier": {
+      "line": 30,
+      "text": "Bcarrier excite pol V={CARRIER_PEAK*sin(2*PI*CARRIER_HZ*time)}"
+    },
+    "Bdemod": {
+      "line": 39,
+      "text": "Bdemod demod mid V={(v(frontbuf,rearbuf))*2*sin(2*PI*CARRIER_HZ*time)}"
+    },
+    "Cbridgef": {
+      "line": 33,
+      "text": "Cbridgef cbridgef_loss anti {CBRIDGEF_VALUE}"
+    },
+    "Cbridger": {
+      "line": 34,
+      "text": "Cbridger cbridger_loss anti {CBRIDGER_VALUE}"
+    },
+    "Cexcite": {
+      "line": 32,
+      "text": "Cexcite excite b {CEXCITE_VALUE}"
+    },
+    "Crail": {
+      "line": 14,
+      "text": "Crail rail g {CRAIL_VALUE}"
+    },
+    "Craw": {
+      "line": 6,
+      "text": "Craw raw g {CRAW_VALUE}"
+    },
+    "Efront": {
+      "line": 48,
+      "text": "Efront frontbuf g f g 1"
+    },
+    "Eoutn": {
+      "line": 51,
+      "text": "Eoutn outn g VOL='2*v(mid,g)-v(audio,g)'"
+    },
+    "Eoutp": {
+      "line": 50,
+      "text": "Eoutp outp g audio g 1"
+    },
+    "Erear": {
+      "line": 49,
+      "text": "Erear rearbuf g rear g 1"
+    },
+    "Rback": {
+      "line": 29,
+      "text": "Rback pol b {RBACK_VALUE}"
+    },
+    "Rfilter1": {
+      "line": 40,
+      "text": "Rfilter1 demod lp1 {RFILTER1_VALUE}"
+    },
+    "Rfilter2": {
+      "line": 42,
+      "text": "Rfilter2 lp1 audio {RFILTER2_VALUE}"
+    },
+    "Rharvestn": {
+      "line": 5,
+      "text": "Rharvestn n raw {RHARVESTN_VALUE}"
+    },
+    "Rharvestp": {
+      "line": 4,
+      "text": "Rharvestp p raw {RHARVESTP_VALUE}"
+    },
+    "Rmidbottom": {
+      "line": 16,
+      "text": "Rmidbottom mid g {RMIDBOTTOM_VALUE}"
+    },
+    "Rmidtop": {
+      "line": 15,
+      "text": "Rmidtop rail mid {RMIDTOP_VALUE}"
+    },
+    "Rpolar0": {
+      "line": 18,
+      "text": "Rpolar0 raw pol_0 {RPOLAR0_VALUE}"
+    },
+    "Rregbottom": {
+      "line": 8,
+      "text": "Rregbottom regbase g {RREGBOTTOM_VALUE}"
+    },
+    "Rregtop": {
+      "line": 7,
+      "text": "Rregtop raw regbase {RREGTOP_VALUE}"
+    },
+    "XQreg": {
+      "line": 13,
+      "text": "XQreg Qreg_t0 Qreg_t1 Qreg_t2 BC846B"
+    }
+  },
+  "parents": [
+    "candidate_0009"
+  ],
+  "patent_screening": "partial scoped claim inspection; holds retained",
+  "physical_part_references": [
+    {
+      "part_id": "RC0603FR-072K2L",
+      "quantity": 1,
+      "reference": "Rharvestp",
+      "unit": "ohm",
+      "value": 2200
+    },
+    {
+      "part_id": "RC0603FR-072K2L",
+      "quantity": 1,
+      "reference": "Rharvestn",
+      "unit": "ohm",
+      "value": 2200
+    },
+    {
+      "part_id": "EEU-FR1J470",
+      "quantity": 1,
+      "reference": "Craw",
+      "unit": "F",
+      "value": 4.7e-05
+    },
+    {
+      "part_id": "RC0603FR-07100KL",
+      "quantity": 1,
+      "reference": "Rregtop",
+      "unit": "ohm",
+      "value": 100000
+    },
+    {
+      "part_id": "RC0603FR-07100KL",
+      "quantity": 1,
+      "reference": "Rregbottom",
+      "unit": "ohm",
+      "value": 100000
+    },
+    {
+      "part_id": "R82EC4100DQ70J",
+      "quantity": 1,
+      "reference": "Cregbase",
+      "unit": "F",
+      "value": 1e-06
+    },
+    {
+      "part_id": "BC846B,215",
+      "quantity": 1,
+      "reference": "Qreg",
+      "unit": "device",
+      "value": "BC846B"
+    },
+    {
+      "part_id": "EEU-FR1J470",
+      "quantity": 1,
+      "reference": "Crail",
+      "unit": "F",
+      "value": 4.7e-05
+    },
+    {
+      "part_id": "AC0603FR-0710KL",
+      "quantity": 1,
+      "reference": "Rmidtop",
+      "unit": "ohm",
+      "value": 10000
+    },
+    {
+      "part_id": "AC0603FR-0710KL",
+      "quantity": 1,
+      "reference": "Rmidbottom",
+      "unit": "ohm",
+      "value": 10000
+    },
+    {
+      "part_id": "EEU-FR1J470",
+      "quantity": 1,
+      "reference": "Cmid",
+      "unit": "F",
+      "value": 4.7e-05
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar0",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar1",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar2",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar3",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar4",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar5",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar6",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar7",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar8",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar9",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "R82EC3100DQ70J",
+      "quantity": 1,
+      "reference": "Cpol",
+      "unit": "F",
+      "value": 1e-07
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rback",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "R82EC3100DQ70J",
+      "quantity": 1,
+      "reference": "Cexcite",
+      "unit": "F",
+      "value": 1e-07
+    },
+    {
+      "part_id": "CC0603JRNPO0BN101",
+      "quantity": 1,
+      "reference": "Cbridgef",
+      "unit": "F",
+      "value": 1e-10
+    },
+    {
+      "part_id": "CC0603JRNPO0BN101",
+      "quantity": 1,
+      "reference": "Cbridger",
+      "unit": "F",
+      "value": 1e-10
+    },
+    {
+      "part_id": "HVA12JA1G00",
+      "quantity": 1,
+      "reference": "Rbias",
+      "unit": "ohm",
+      "value": 1000000000.0
+    },
+    {
+      "part_id": "HVA12JA1G00",
+      "quantity": 1,
+      "reference": "Rrearbias",
+      "unit": "ohm",
+      "value": 1000000000.0
+    },
+    {
+      "part_id": "RC0603FR-071KL",
+      "quantity": 1,
+      "reference": "Rfilter1",
+      "unit": "ohm",
+      "value": 1000
+    },
+    {
+      "part_id": "R82EC3100DQ70J",
+      "quantity": 1,
+      "reference": "Cfilter1",
+      "unit": "F",
+      "value": 1e-07
+    },
+    {
+      "part_id": "RC0603FR-071KL",
+      "quantity": 1,
+      "reference": "Rfilter2",
+      "unit": "ohm",
+      "value": 1000
+    },
+    {
+      "part_id": "R82EC3100DQ70J",
+      "quantity": 1,
+      "reference": "Cfilter2",
+      "unit": "F",
+      "value": 1e-07
+    },
+    {
+      "part_id": "RC0603FR-0747RL",
+      "quantity": 1,
+      "reference": "Routp",
+      "unit": "ohm",
+      "value": 47
+    },
+    {
+      "part_id": "RC0603FR-0747RL",
+      "quantity": 1,
+      "reference": "Routn",
+      "unit": "ohm",
+      "value": 47
+    },
+    {
+      "part_id": "EEU-FR1J470",
+      "quantity": 1,
+      "reference": "Coutp",
+      "unit": "F",
+      "value": 4.7e-05
+    },
+    {
+      "part_id": "EEU-FR1J470",
+      "quantity": 1,
+      "reference": "Coutn",
+      "unit": "F",
+      "value": 4.7e-05
+    }
+  ],
+  "protection": "No top-level external clamp/reset switch/protection circuit; internal IC structures are not resolved by this schematic.",
+  "qualification": "All unqualified; existing engineering evidence unchanged; no electrical test run in this documentary task",
+  "referenced_semiconductor_models": [
+    {
+      "id": "bc846b_emitter_r1",
+      "path": "models/semiconductor/vendor/bc846b_emitter_r1.lib",
+      "registry_expected_sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "subcircuit": "BC846B",
+      "version": "project structural child r1; Q2 emitter 33 -> 3"
+    }
+  ],
+  "semantic_hash_method": "SHA256 of UTF-8 JSON, sorted keys, ensure_ascii=False, separators comma/colon; explicit includes resolved with meridian_lab.core.read_yaml",
+  "source_files": {
+    "candidates/candidate_0013/INDEX.md": "5b065897460acd63375abdf714c749301d8e6d0dff77488cd1147c0258e062c4",
+    "candidates/candidate_0013/bom.yaml": "263776f4a0ca381d7978c8128de6f465f72c13f191c11928ad9cd638df550fe6",
+    "candidates/candidate_0013/circuit.cir": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015",
+    "candidates/candidate_0013/data-pages/INDEX.md": "100f94595f383428cd77d791175b3ab5bfa56e07041cf17e60d9ff11b5872e32",
+    "candidates/candidate_0013/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0001.yaml": "56d9164f670374312db0abdc6c3e20857473f8a7f8a00bff50db3d3b8018b8ad",
+    "candidates/candidate_0013/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0002.yaml": "21ca44db7ea07bf1709891f6f281b7b8d89418e09b4f500530a7d03190e46b4f",
+    "candidates/candidate_0013/data-pages/bom-9c5f3963535c-0005-physical-parts.yaml": "a44e624e0f0480e92ee236b4be0d93f76277626e4ba12240e2e7106bc2d1d834",
+    "candidates/candidate_0013/data-pages/bom-9c5f3963535c-page-0001.yaml": "de80cdcb84cde126e1dc5d61a6724dd84a571d995874df1393298050bcbc4650",
+    "candidates/candidate_0013/data-pages/topology-dac33064b494-0004-parameters.yaml": "8cbe86915e4e10b85a385d27ba657a15b3d3558bc037c46613fddbb6635ae116",
+    "candidates/candidate_0013/data-pages/topology-dac33064b494-0005-population.yaml": "4ce70b99463538f13dd656940c78e32d9c9afaa41680d147d6d1fa77c92b5f25",
+    "candidates/candidate_0013/data-pages/topology-dac33064b494-page-0001.yaml": "7f7964487a2f6998fcf43e606b2358fb69da75dc2fbd05075a61bca0bd30bb59",
+    "candidates/candidate_0013/hypothesis.md": "a4c119225f5df666aecc587ddbaca8849887081d923fd5ff16f21a2b7bea143b",
+    "candidates/candidate_0013/notes.md": "8bc64b2149db7325b4810551b28896c9982f8b0e478ea48cf5a96cdae3157d06",
+    "candidates/candidate_0013/topology.yaml": "a2dd2d74e37fb610572a6286d642a2e0f247f594c6d7fde70349dfd4b6a0f2d9"
+  },
+  "territorial_scope": [
+    "DE",
+    "relevant EP national/possible unitary rights: incomplete",
+    "US/WO family discovery: incomplete",
+    "all other manufacture/supply/publication territories unresolved"
+  ],
+  "topology_expanded_sha256": "6a0991dae9be8012d5d249ff04d805ab990a3b8f2c293f65aa44275fb2ce1264"
+}

@@ -1,0 +1,75 @@
+documentary_inputs:
+- research/architectures/comparison-sources-002.json
+- research/architectures/comparison-sources-002-followup.json
+- research/architectures/comparison-queries-002.json
+- research/architectures/comparison-audit-002.json
+- research/architectures/comparison-source-notes-002.md
+- research/patents/candidate-versions-001.json
+- research/patents/claim-mappings-001.json
+- research/patents/territory-status-001.json
+- research/patents/holds-screening-001.json
+- research/patents/sources-screening-001.json
+- research/patents/queries-official-001.json
+- research/patents/queries-web-001.json
+- research/architectures/diverse-knowledge-001.json
+- research/architectures/diverse-analysis-001.json
+- research/architectures/diverse-sources-001.json
+- research/architectures/diverse-audit-sources-001.json
+- research/architectures/focused-children-001.json
+- research/architectures/focused-integrity-001.json
+- research/architectures/focused-sources-001.json
+- research/capsules/sources-001.yaml
+- research/capsules/scenarios-001.yaml
+- research/capsules/parameters-001.yaml
+- research/procurement/focused-parts-001.yaml
+- research/procurement/architecture_parts_2026-10-09.yaml
+- research/procurement/robust_parts_2026-10-09.yaml
+- research/comparison_procurement_observations_2026-10-09.yaml
+- research/devices/simulation-prerequisites-behavior-001.json
+- results/reports/architecture-comparison-001/provenance.json
+- search/families.yaml
+- search/concepts.yaml
+- results/optimization_batches/20261009T090126Z_4735cd2a/evaluation.json
+training: No new training/optimization; previous proposals and cohorts remain separate
+holdout: 16 common external uniform/log-uniform quantiles, union-key ordering; own
+  actual passive ranges; independent seed144047; no selection after inspection
+device_scope: JFET with same exact JFE150 and BC846B-emitter-r1 only for joint nominal
+  DC/AC/count projection. BJT is separate; no cross-device noise/production dominance.
+supported:
+- complete existing 14-check suite attempt per representative
+- 18 matched named scenarios and16 holdouts per realized candidate; DC/AC/conditional
+  stationary noise
+- 4 tolerance/TCR/opposed output-cap endpoints per realized candidate
+- 2 full coupled vendor JFE stresses per JFET only
+- nominal AC64->128 and noise128->256 per decade refinement
+missing:
+- full DUT settled harmonics/clipping
+- bilateral multi-loop margins
+- broadband temperature/excess-noise and SOA laws
+- joint production populations
+- RF/ESD/hotplug physical qualification
+- capsule mechanics/safe bias/measurement
+budgets:
+  optimizer_evaluations: 0
+  full_suites: 8
+  matched_cells: 203
+  maximum_simulator_jobs: 1200
+  timeout_s_per_job: 60
+  stopping: Execute finite reservation once; retain every failed/error job. Stop after
+    plan, no retries/value/tolerance changes to gain pass.
+spec_sha256: f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd
+backend: Existing ngspice47 binary/wrapper/XSPICE module bytes frozen before first
+  run; no backend pooling
+numerics: Unchanged evaluator reltol1e-6 abstol1e-15 vntol1e-9 gmin1e-15 Gear2. No
+  revised acceptance limits.
+statistical_scope: Retain every scenario in denominators; exact95% binomial interval
+  conditional only on artificial holdout sampler. No manufacturing yield.
+unchanged:
+- all14 families
+- specification thresholds
+- original uncertain envelope
+- optimization reservations
+- comparison001 and frozen originals
+physical_measurements: []
+production_front: []
+physical_front: []

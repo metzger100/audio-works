@@ -1,0 +1,17 @@
+Behavioral derivative AC oracle reproducer
+Vpol b 0 60
+VP p 0 DC 0 AC 1
+.param c0=70p k=0.0003333333333
+Bcap f b I=ddt(c0*(1+k*v(p))*v(f,b))
+Rleak f b 1e12
+Rbias f 0 1e9
+Cpar f 0 2p
+.control
+set filetype=ascii
+op
+write op.raw all
+ac dec 16 20 20k
+write ac.raw all
+quit
+.endc
+.end

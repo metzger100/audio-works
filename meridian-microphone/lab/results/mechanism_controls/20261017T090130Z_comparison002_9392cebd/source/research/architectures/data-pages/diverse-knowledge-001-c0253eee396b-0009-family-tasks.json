@@ -1,0 +1,236 @@
+[
+  {
+    "conditions": "0019 at leakage1/10/100G/100TΩ; retain measured-in-simulation boundary currents",
+    "executed_in_this_batch": false,
+    "falsification_or_stop": "Remedy must supply demanded gate voltage without forward conduction; prior1G failure retained",
+    "family": "conventional_jfet",
+    "finite_cases": 4,
+    "implemented_candidates_unchanged": [
+      "candidate_0001",
+      "candidate_0007",
+      "candidate_0015"
+    ],
+    "independent_task": "DC_KCL",
+    "minimum_retained": 1,
+    "retired": false,
+    "status": "See exact per-track rows; other cells are next declared tasks, not results"
+  },
+  {
+    "conditions": "0023/0025 voltage/current injection at original bias",
+    "executed_in_this_batch": false,
+    "falsification_or_stop": "Compare both injection orientations plus multiple unity crossings; RHP counts missing",
+    "family": "unconventional_jfet",
+    "finite_cases": 2,
+    "implemented_candidates_unchanged": [
+      "candidate_0002",
+      "candidate_0008"
+    ],
+    "independent_task": "bilateral_loop",
+    "minimum_retained": 1,
+    "retired": false,
+    "status": "See exact per-track rows; other cells are next declared tasks, not results"
+  },
+  {
+    "conditions": "OPA197 andOPA928 at0/+20/−20V complete translation",
+    "executed_in_this_batch": true,
+    "falsification_or_stop": "Invariant terminal differences/currents; solver failures stay model-scoped",
+    "family": "mosfet",
+    "finite_cases": 6,
+    "implemented_candidates_unchanged": [
+      "candidate_0003",
+      "candidate_0004",
+      "candidate_0006",
+      "candidate_0010",
+      "candidate_0011",
+      "candidate_0014"
+    ],
+    "independent_task": "macro_gauge",
+    "minimum_retained": 1,
+    "retired": false,
+    "status": "See exact per-track rows; other cells are next declared tasks, not results"
+  },
+  {
+    "conditions": "OPA197/OPA928,Cf100pF,R1G,Ct70pF",
+    "executed_in_this_batch": true,
+    "falsification_or_stop": "DC authority and finite signal gain; no ideal substitute gets CMOS rating",
+    "family": "no_jfet",
+    "finite_cases": 2,
+    "implemented_candidates_unchanged": [
+      "candidate_0003",
+      "candidate_0004",
+      "candidate_0005",
+      "candidate_0006",
+      "candidate_0010",
+      "candidate_0011",
+      "candidate_0012",
+      "candidate_0014"
+    ],
+    "independent_task": "grounded_charge",
+    "minimum_retained": 1,
+    "retired": false,
+    "status": "See exact per-track rows; other cells are next declared tasks, not results"
+  },
+  {
+    "conditions": "Rf500k/100M at assumed0.5µA plus actual parent IB",
+    "executed_in_this_batch": true,
+    "falsification_or_stop": "Demanded DC drop and current/flicker floor before structural child",
+    "family": "no_fet",
+    "finite_cases": 2,
+    "implemented_candidates_unchanged": [
+      "candidate_0005",
+      "candidate_0012"
+    ],
+    "independent_task": "base_reset",
+    "minimum_retained": 1,
+    "retired": false,
+    "status": "See exact per-track rows; other cells are next declared tasks, not results"
+  },
+  {
+    "conditions": "2Cf×2Rf×3capsule C, finite A0=10/pole100k",
+    "executed_in_this_batch": true,
+    "falsification_or_stop": "Compare complex KCL without tiny-SI absolute tolerance",
+    "family": "charge",
+    "finite_cases": 12,
+    "implemented_candidates_unchanged": [
+      "candidate_0004",
+      "candidate_0005",
+      "candidate_0011",
+      "candidate_0012",
+      "candidate_0014"
+    ],
+    "independent_task": "charge_oracle",
+    "minimum_retained": 1,
+    "retired": false,
+    "status": "See exact per-track rows; other cells are next declared tasks, not results"
+  },
+  {
+    "conditions": "Ideal resistive TIA and following leaky integrator at20Hz/20kHz",
+    "executed_in_this_batch": false,
+    "falsification_or_stop": "Pressure differentiation cancels only inside verified pole interval",
+    "family": "current",
+    "finite_cases": 2,
+    "implemented_candidates_unchanged": [
+      "candidate_0005",
+      "candidate_0012"
+    ],
+    "independent_task": "TIA_integrator",
+    "minimum_retained": 1,
+    "retired": false,
+    "status": "See exact per-track rows; other cells are next declared tasks, not results"
+  },
+  {
+    "conditions": "Local reference0/+20/−20V, both rails and output load together",
+    "executed_in_this_batch": true,
+    "falsification_or_stop": "Rail/ground currents and actual macro internal references",
+    "family": "floating",
+    "finite_cases": 3,
+    "implemented_candidates_unchanged": [
+      "candidate_0006",
+      "candidate_0009",
+      "candidate_0013"
+    ],
+    "independent_task": "floating_power",
+    "minimum_retained": 1,
+    "retired": false,
+    "status": "See exact per-track rows; other cells are next declared tasks, not results"
+  },
+  {
+    "conditions": "Cross capacitance0/5pF and front/rear correlation+1/−1",
+    "executed_in_this_batch": false,
+    "falsification_or_stop": "Full admittance/covariance matrix; no polar-performance inference",
+    "family": "differential",
+    "finite_cases": 4,
+    "implemented_candidates_unchanged": [
+      "candidate_0006",
+      "candidate_0009",
+      "candidate_0013"
+    ],
+    "independent_task": "mutual_charge",
+    "minimum_retained": 1,
+    "retired": false,
+    "status": "See exact per-track rows; other cells are next declared tasks, not results"
+  },
+  {
+    "conditions": "Ideal gain0/.99/2 withCg100pF andCt72pF",
+    "executed_in_this_batch": true,
+    "falsification_or_stop": "Independent roots include adverse RHP case despite AC convergence",
+    "family": "bootstrap",
+    "finite_cases": 3,
+    "implemented_candidates_unchanged": [
+      "candidate_0003",
+      "candidate_0010"
+    ],
+    "independent_task": "guard",
+    "minimum_retained": 1,
+    "retired": false,
+    "status": "See exact per-track rows; other cells are next declared tasks, not results"
+  },
+  {
+    "conditions": "Grounded/+20V charge-reset impulse with unchanged macro",
+    "executed_in_this_batch": true,
+    "falsification_or_stop": "Require complete settling and DC authority; unsupported stays unknown",
+    "family": "servo",
+    "finite_cases": 2,
+    "implemented_candidates_unchanged": [
+      "candidate_0002",
+      "candidate_0008"
+    ],
+    "independent_task": "reset_settling",
+    "minimum_retained": 1,
+    "retired": false,
+    "status": "See exact per-track rows; other cells are next declared tasks, not results"
+  },
+  {
+    "conditions": "Nominal and documented worst winding/core loss after exact model acquisition",
+    "executed_in_this_batch": false,
+    "falsification_or_stop": "No NOS/matching; unavailable transformer remains prerequisite",
+    "family": "minimal",
+    "finite_cases": 2,
+    "implemented_candidates_unchanged": [],
+    "independent_task": "transformer_loss",
+    "minimum_retained": 1,
+    "retired": false,
+    "status": "See exact per-track rows; other cells are next declared tasks, not results"
+  },
+  {
+    "conditions": "Ct45/100pF at fixed feedback, then actual A(s)",
+    "executed_in_this_batch": false,
+    "falsification_or_stop": "HF noise gain/return roots and common-mode loop before claimed bandwidth",
+    "family": "high_feedback",
+    "finite_cases": 2,
+    "implemented_candidates_unchanged": [
+      "candidate_0003",
+      "candidate_0004",
+      "candidate_0010",
+      "candidate_0011",
+      "candidate_0014"
+    ],
+    "independent_task": "noise_gain",
+    "minimum_retained": 1,
+    "retired": false,
+    "status": "See exact per-track rows; other cells are next declared tasks, not results"
+  },
+  {
+    "conditions": "4seeds×2sample rates×2record sizes×white/colored; covariance oracle",
+    "executed_in_this_batch": true,
+    "falsification_or_stop": "Check source calibration, images, rho, Parseval, confidence; native periodic hardware still missing",
+    "family": "instrumentation",
+    "finite_cases": 32,
+    "implemented_candidates_unchanged": [
+      "candidate_0003",
+      "candidate_0004",
+      "candidate_0005",
+      "candidate_0006",
+      "candidate_0009",
+      "candidate_0010",
+      "candidate_0011",
+      "candidate_0012",
+      "candidate_0013",
+      "candidate_0014"
+    ],
+    "independent_task": "periodic_noise",
+    "minimum_retained": 1,
+    "retired": false,
+    "status": "See exact per-track rows; other cells are next declared tasks, not results"
+  }
+]

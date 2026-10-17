@@ -1,6 +1,6 @@
 # Meridian decisions
 
-Current operative view, 16 October 2026. [Original decisions](../docs/history/2026-10-09/meridian-microphone/DECISIONS.md) preserve dated rationale and conditions. The table records their present authority; follow linked policies and evidence before affected work.
+17 October 2026. [Original rationale/conditions](../docs/history/2026-10-09/meridian-microphone/DECISIONS.md). Linked policies/evidence govern affected work.
 
 | ID / date | Decision | Current authority |
 | --- | --- | --- |
@@ -43,5 +43,8 @@ Current operative view, 16 October 2026. [Original decisions](../docs/history/20
 | D037 / 2026-10-11 | [GitHub authority and archived recovery tasks](../docs/decisions/2026-10-11-github-canonical.md). | Active owner direction; private backups optional |
 | D038 / 2026-10-12 | [Focused tests](lab/research/architectures/focused-decisions-001.md). | All gates retained |
 | D039 / 2026-10-16 | [Independent diverse prerequisites](lab/research/architectures/diverse-prerequisites-001.md). | Finite controls; all14 families and qualification gates retained |
+| D040 / 2026-10-16 | [Audit](lab/research/architectures/diverse-continuation-audit-001.md). | Prose corrected; gates retained |
+| D041 / 2026-10-17 | [Claims/status](lab/research/patents/candidate-screening-001.md) | Holds retained |
+| D042 / 2026-10-17 | [Common cohort002](lab/research/architectures/architecture-comparison-002.md) | Conditional research; no selection |
 
 The historical G1 gate still requires intended capsule/variant/use, quantity, Germany delivered quote, interface facts, confidence and acknowledged residual risks before purchase. A second capsule needs an intended second microphone. Record batch/serial and calibrated measurements before architecture selection. This log authorizes no purchase or supplier contact.

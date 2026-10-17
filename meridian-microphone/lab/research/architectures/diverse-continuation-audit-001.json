@@ -1,0 +1,203 @@
+{
+  "baseline_commit": "b4741414",
+  "catalogue": {
+    "all_concept_performance_claims_false": true,
+    "all_nominal_concept_powers_unknown": true,
+    "canonical_resolved_matrix_sha256": "dfbb0042a56420672ddd773d587f5a133a084d43cedb3fd6ffa2e7a903d50fbe",
+    "concepts": 22,
+    "families": 14,
+    "family_task_counts": {
+      "bootstrap": 3,
+      "charge": 12,
+      "conventional_jfet": 4,
+      "current": 2,
+      "differential": 4,
+      "floating": 3,
+      "high_feedback": 2,
+      "instrumentation": 32,
+      "minimal": 2,
+      "mosfet": 6,
+      "no_fet": 2,
+      "no_jfet": 2,
+      "servo": 2,
+      "unconventional_jfet": 2
+    },
+    "periodic_challenge_executed": false,
+    "periodic_requirements_unchanged": {
+      "concepts": 20,
+      "instrumentation": 5,
+      "nonconventional_jfet": 10
+    },
+    "physical_answer_mismatches": [],
+    "question_fields": [
+      "sensed_quantity",
+      "loading_control",
+      "dc_bias",
+      "gain_or_impedance_transformation",
+      "balanced_output",
+      "expected_dominant_noise",
+      "expected_dominant_distortion",
+      "likely_fatal_flaw",
+      "fastest_falsification"
+    ],
+    "source_links_and_oracles_present": true
+  },
+  "date": "2026-10-16",
+  "derived_analysis": {
+    "carrier_pass": true,
+    "errors": 15,
+    "integrity": {
+      "20261016T130909Z_diverse_00c8217a": {
+        "checked": 730,
+        "failures": []
+      },
+      "20261016T131328Z_diverse_followup_2834cfe4": {
+        "checked": 303,
+        "failures": []
+      }
+    },
+    "jobs": 53,
+    "kcl": [
+      {
+        "candidate": "candidate_0012",
+        "disclaimer": "Macro base current is observed boundary data; KCL does not independently validate semiconductor laws",
+        "kcl_pass": true,
+        "maximum_relative_input_kcl_residual": 9.428727231124802e-13,
+        "motional_charge_c_per_pa": 5.205840926782019e-13,
+        "polarization_v": 22.310746829065796,
+        "response_deviation_db": 20.92655982166391,
+        "sensitivity_1khz_v_per_pa": 1.3223320864780096e-05,
+        "signal_conversion_1khz_v_per_c": 25400931.47439691
+      },
+      {
+        "candidate": "candidate_0024",
+        "disclaimer": "Macro base current is observed boundary data; KCL does not independently validate semiconductor laws",
+        "kcl_pass": true,
+        "maximum_relative_input_kcl_residual": 2.835158916923314e-14,
+        "motional_charge_c_per_pa": 5.205840926798092e-13,
+        "polarization_v": 22.31074682913468,
+        "response_deviation_db": 32.82286854165916,
+        "sensitivity_1khz_v_per_pa": 0.0014590305946416045,
+        "signal_conversion_1khz_v_per_c": 2802679941.9301443
+      }
+    ]
+  },
+  "global_evidence": {
+    "damaged": 0,
+    "earlier_gap_receipt": "docs/validation/2026-10-16-diverse-preservation.json",
+    "historical_gap_set_unchanged": true,
+    "missing": 89,
+    "new_missing_originals": 0,
+    "status": "incomplete",
+    "uninventoried": 0
+  },
+  "inventories": [
+    {
+      "checked": 730,
+      "failures": [],
+      "path": "results/mechanism_controls/20261016T130909Z_diverse_00c8217a/batch.sha256"
+    },
+    {
+      "checked": 303,
+      "failures": [],
+      "path": "results/mechanism_controls/20261016T131328Z_diverse_followup_2834cfe4/batch.sha256"
+    },
+    {
+      "checked": 57,
+      "failures": [],
+      "path": "results/diverse-sources-20261016.sha256"
+    }
+  ],
+  "models": [
+    {
+      "current_byte_identical": true,
+      "model": "bc846b_emitter_r1",
+      "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d"
+    },
+    {
+      "current_byte_identical": true,
+      "model": "opa197_pspice",
+      "sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5"
+    },
+    {
+      "current_byte_identical": true,
+      "model": "opa928_vendor",
+      "sha256": "f4f9d38efc4aa2a31676c84a351d2ee9379baad88abab8b5afad550c7f99c616"
+    }
+  ],
+  "no_threshold_budget_or_model_changes": true,
+  "parents": [
+    {
+      "current_byte_identical": true,
+      "path": "candidates/candidate_0010/circuit.cir",
+      "sha256": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9"
+    },
+    {
+      "current_byte_identical": true,
+      "path": "candidates/candidate_0012/circuit.cir",
+      "sha256": "f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968"
+    },
+    {
+      "current_byte_identical": true,
+      "path": "candidates/candidate_0013/circuit.cir",
+      "sha256": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015"
+    },
+    {
+      "current_byte_identical": true,
+      "path": "candidates/candidate_0014/circuit.cir",
+      "sha256": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6"
+    },
+    {
+      "current_byte_identical": true,
+      "path": "candidates/candidate_0019/circuit.cir",
+      "sha256": "1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da"
+    },
+    {
+      "current_byte_identical": true,
+      "path": "candidates/candidate_0023/circuit.cir",
+      "sha256": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816"
+    },
+    {
+      "current_byte_identical": true,
+      "path": "candidates/candidate_0024/circuit.cir",
+      "sha256": "65bab5628d9b477584e38c3afb3d7cafef3012a7a2f2198de4886374a617e9f8"
+    },
+    {
+      "current_byte_identical": true,
+      "path": "candidates/candidate_0025/circuit.cir",
+      "sha256": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+    }
+  ],
+  "qualified_front": [],
+  "retained_attempts": 53,
+  "retained_execution_errors": 15,
+  "schema_version": 1,
+  "scope": "Read-only retained-evidence and documentation audit; zero new prerequisite simulations or optimizer vectors",
+  "specifications": [
+    {
+      "current_byte_identical": true,
+      "path": "spec/capsule-model.yaml",
+      "sha256": "169983f2601ee39a59496e0e4d2d337deb14e7e4ec7bf38a92f6ca89b59bc696"
+    },
+    {
+      "current_byte_identical": true,
+      "path": "spec/design-constraints.yaml",
+      "sha256": "48d03f7b8d6302aeca14efda4de5c12cf491c393e212e6842f04da60c344dc43"
+    },
+    {
+      "current_byte_identical": true,
+      "path": "spec/lock.yaml",
+      "sha256": "0a5ac00e5d73b720b0c0926c6987ab6b8cb2dca6ac3d1513039db9f3a05c8d07"
+    },
+    {
+      "current_byte_identical": true,
+      "path": "spec/microphone-spec.yaml",
+      "sha256": "ea5a6f973f17f907c5b76f9d17a35cfa784903bcfcd8d7f1d08cd538b65636cd"
+    },
+    {
+      "current_byte_identical": true,
+      "path": "spec/scoring.yaml",
+      "sha256": "6aa6b8620a4700220ac952472f150396599ca67a2918f6f114e1b283a158c0af"
+    }
+  ]
+}

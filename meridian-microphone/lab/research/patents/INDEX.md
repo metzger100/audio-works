@@ -4,7 +4,18 @@
 Candidate-linked feature flags, claim/status research and unresolved implementation holds.
 
 - [README.md](README.md) — active
+- [candidate-screening-001.json](candidate-screening-001.json) — active
+- [candidate-screening-001.md](candidate-screening-001.md) — active
+- [candidate-versions-001.json](candidate-versions-001.json) — active
 - [capsule-envelope-001-leads.yaml](capsule-envelope-001-leads.yaml) — active
+- [claim-mappings-001.json](claim-mappings-001.json) — active
 - [diverse-prerequisites-001.md](diverse-prerequisites-001.md) — active
 - [focused-hypotheses-001.yaml](focused-hypotheses-001.yaml) — active
+- [holds-screening-001.json](holds-screening-001.json) — active
+- [queries-official-001.json](queries-official-001.json) — active
+- [queries-web-001.json](queries-web-001.json) — active
 - [register.yaml](register.yaml) — active
+- [screening-audit-001.json](screening-audit-001.json) — active
+- [sources-screening-001.json](sources-screening-001.json) — active
+- [territory-status-001.json](territory-status-001.json) — active
+- [data-pages/](data-pages/INDEX.md)

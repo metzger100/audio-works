@@ -1,0 +1,289 @@
+[
+  {
+    "command": "python3 tools/project.py evidence inventory",
+    "exit_code": 0,
+    "receipt_mtime_utc": "2026-10-17T08:44:21.191015+00:00",
+    "result": {
+      "new_files": 0,
+      "note": "All existing original waveforms already inventoried.",
+      "status": "pass"
+    }
+  },
+  {
+    "command": "python3 tools/project.py refresh",
+    "exit_code": 0,
+    "receipt_mtime_utc": "2026-10-17T08:46:37.324904+00:00",
+    "result": {
+      "status": "pass",
+      "updated": [
+        "docs/current-evidence.md",
+        "docs/validation/INDEX.md",
+        "docs/validation/data-pages/INDEX.md"
+      ]
+    }
+  },
+  {
+    "command": "python3 tools/project.py audit (initial, retained failure)",
+    "exit_code": 1,
+    "receipt_mtime_utc": "2026-10-17T08:40:26.760465+00:00",
+    "result": {
+      "common_characters": 14814,
+      "context_status": "pass",
+      "continued_quality": "pass",
+      "current_words": 109,
+      "enforcement": {
+        "character_limit": 15000,
+        "ci": true,
+        "hooks": [
+          "pre-commit",
+          "pre-merge-commit",
+          "pre-applypatch",
+          "pre-push"
+        ],
+        "installed": true,
+        "onboarding_limit": 15000,
+        "route_limit": 50000,
+        "selected_content": "working"
+      },
+      "errors": [
+        "Reading route reporting: 50128 > 50000 characters; scope references through hubs"
+      ],
+      "estimated_tokens": 3704,
+      "folders": {
+        "by_root": {
+          ".githooks": 1,
+          ".github": 2,
+          "LICENSES": 1,
+          "branding": 5,
+          "docs": 9,
+          "meridian-microphone": 156,
+          "tests": 3,
+          "tools": 2
+        },
+        "data_page_containers": 62,
+        "maintained": 179,
+        "navigation_page_containers": 4,
+        "original_only": 23049,
+        "page_containers": 66
+      },
+      "generated_files": 215,
+      "hook_installed": true,
+      "indexed_maintained_files": 2110,
+      "maintained_text_files": 2029,
+      "maximum_maintained_directory_depth": 7,
+      "nested_data_partitions": [],
+      "noncanonical_page_directories": [],
+      "note": "Repository checks do not establish scientific, procurement or legal qualification; character counts estimate tokens.",
+      "organization": "fail",
+      "oversized": [],
+      "preservation": {
+        "authority": "github",
+        "note": "GitHub is canonical for committed files. This local gate does not verify remote synchronization or preservation of ignored evidence.",
+        "private_backups": "optional",
+        "remote_sync": "not_checked",
+        "repository": "https://github.com/metzger100/audio-works",
+        "scope": "versioned_repository",
+        "status": "configured"
+      },
+      "preserved_original_files": 66468,
+      "reading_sizes": {
+        "branding": 31688,
+        "device-models": 46899,
+        "documentation": 28051,
+        "optimization": 46426,
+        "orientation": 14814,
+        "qualification": 43190,
+        "reporting": 50128,
+        "topology": 48461
+      },
+      "repeated_prose": [],
+      "stale_generated": [],
+      "status": "fail",
+      "unreachable": []
+    }
+  },
+  {
+    "command": "python3 tools/project.py audit",
+    "exit_code": 0,
+    "receipt_mtime_utc": "2026-10-17T08:47:05.714088+00:00",
+    "result": {
+      "common_characters": 14814,
+      "context_status": "pass",
+      "continued_quality": "pass",
+      "current_words": 109,
+      "enforcement": {
+        "character_limit": 15000,
+        "ci": true,
+        "hooks": [
+          "pre-commit",
+          "pre-merge-commit",
+          "pre-applypatch",
+          "pre-push"
+        ],
+        "installed": true,
+        "onboarding_limit": 15000,
+        "route_limit": 50000,
+        "selected_content": "working"
+      },
+      "errors": [],
+      "estimated_tokens": 3704,
+      "folders": {
+        "by_root": {
+          ".githooks": 1,
+          ".github": 2,
+          "LICENSES": 1,
+          "branding": 5,
+          "docs": 10,
+          "meridian-microphone": 156,
+          "tests": 3,
+          "tools": 2
+        },
+        "data_page_containers": 63,
+        "maintained": 180,
+        "navigation_page_containers": 4,
+        "original_only": 23049,
+        "page_containers": 67
+      },
+      "generated_files": 216,
+      "hook_installed": true,
+      "indexed_maintained_files": 2120,
+      "maintained_text_files": 2039,
+      "maximum_maintained_directory_depth": 7,
+      "nested_data_partitions": [],
+      "noncanonical_page_directories": [],
+      "note": "Repository checks do not establish scientific, procurement or legal qualification; character counts estimate tokens.",
+      "organization": "pass",
+      "oversized": [],
+      "preservation": {
+        "authority": "github",
+        "note": "GitHub is canonical for committed files. This local gate does not verify remote synchronization or preservation of ignored evidence.",
+        "private_backups": "optional",
+        "remote_sync": "not_checked",
+        "repository": "https://github.com/metzger100/audio-works",
+        "scope": "versioned_repository",
+        "status": "configured"
+      },
+      "preserved_original_files": 66469,
+      "reading_sizes": {
+        "branding": 31688,
+        "device-models": 46763,
+        "documentation": 28051,
+        "optimization": 46290,
+        "orientation": 14814,
+        "qualification": 43054,
+        "reporting": 49992,
+        "topology": 48325
+      },
+      "repeated_prose": [],
+      "stale_generated": [],
+      "status": "pass",
+      "unreachable": []
+    }
+  },
+  {
+    "command": "python3 tools/project.py check",
+    "exit_code": 0,
+    "receipt_mtime_utc": "2026-10-17T08:47:23.582205+00:00",
+    "result": {
+      "common_characters": 14814,
+      "context_status": "pass",
+      "continued_quality": "pass",
+      "current_words": 109,
+      "enforcement": {
+        "character_limit": 15000,
+        "ci": true,
+        "hooks": [
+          "pre-commit",
+          "pre-merge-commit",
+          "pre-applypatch",
+          "pre-push"
+        ],
+        "installed": true,
+        "onboarding_limit": 15000,
+        "route_limit": 50000,
+        "selected_content": "working"
+      },
+      "errors": [],
+      "estimated_tokens": 3704,
+      "fast_checks": {
+        "checks": [
+          {
+            "check": "import importlib.metadata as m; expected={'ruff': '0.16.10', 'PyYAML': '6.0.3', 'markdown-it-py': '4.2.0', 'mdurl': '0.1.2'}; assert all(m.version(k)==v for k,v in expected.items()), 'Install the pinned quality dependencies before using the gate'",
+            "output": "",
+            "status": "pass"
+          },
+          {
+            "check": "ruff check --no-cache",
+            "output": "All checks passed!\n",
+            "status": "pass"
+          },
+          {
+            "check": "ruff format --check",
+            "output": "137 files already formatted\n",
+            "status": "pass"
+          },
+          {
+            "check": "unittest discover -s",
+            "output": "----------------------------------------------------------------------\nRan 23 tests in 1.865s\n\nOK\n",
+            "status": "pass"
+          }
+        ],
+        "status": "pass"
+      },
+      "folders": {
+        "by_root": {
+          ".githooks": 1,
+          ".github": 2,
+          "LICENSES": 1,
+          "branding": 5,
+          "docs": 10,
+          "meridian-microphone": 156,
+          "tests": 3,
+          "tools": 2
+        },
+        "data_page_containers": 63,
+        "maintained": 180,
+        "navigation_page_containers": 4,
+        "original_only": 23049,
+        "page_containers": 67
+      },
+      "generated_files": 216,
+      "hook_installed": true,
+      "indexed_maintained_files": 2120,
+      "maintained_text_files": 2039,
+      "maximum_maintained_directory_depth": 7,
+      "nested_data_partitions": [],
+      "noncanonical_page_directories": [],
+      "note": "Repository checks do not establish scientific, procurement or legal qualification; character counts estimate tokens.",
+      "organization": "pass",
+      "oversized": [],
+      "preservation": {
+        "authority": "github",
+        "note": "GitHub is canonical for committed files. This local gate does not verify remote synchronization or preservation of ignored evidence.",
+        "private_backups": "optional",
+        "remote_sync": "not_checked",
+        "repository": "https://github.com/metzger100/audio-works",
+        "scope": "versioned_repository",
+        "status": "configured"
+      },
+      "preserved_original_files": 66469,
+      "reading_sizes": {
+        "branding": 31688,
+        "device-models": 46763,
+        "documentation": 28051,
+        "optimization": 46290,
+        "orientation": 14814,
+        "qualification": 43054,
+        "reporting": 49992,
+        "topology": 48325
+      },
+      "repeated_prose": [],
+      "stale_generated": [],
+      "status": "pass",
+      "unreachable": []
+    }
+  },
+  {
+    "$include": "2026-10-17-patent-screening-checks-c3d5394ebd87-0000-checks-0005-5.json"
+  }
+]

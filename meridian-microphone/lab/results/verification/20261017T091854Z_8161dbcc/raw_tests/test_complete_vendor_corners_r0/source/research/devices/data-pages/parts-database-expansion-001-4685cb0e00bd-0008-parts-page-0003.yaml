@@ -1,0 +1,206 @@
+- device_id: lsk389a
+  manufacturer: Linear Systems
+  exact_mpn: LSK389A SOIC 8L ROHS
+  package: SOIC-8
+  roles:
+  - high_impedance
+  states:
+    investigated: true
+    acquired: true
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.linearsystems.com/jfet-amplifiers-duals/lsk389-series
+  model_ids:
+  - lsk389a_vendor
+  models:
+  - id: lsk389a_vendor
+    path: semiconductor/vendor/lsk389a.lib
+    sha256: c458cc0648f4c017d13bbb8454894b06927c934f431d02bb68505f94e8eea8dd
+    version: Rev2 18May2026
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: uncharacterized_load_failed
+    primitive: J
+    runnability: failed_isolated_load_check
+    load_record: results/device_models/20261009T135500Z_partsload_551b10d1/results.json
+    pin_order: native J D G S one half; verify physical substrate pins before candidate
+      integration
+  datasheet:
+    url: https://www.linearsystems.com/_files/ugd/7e8069_c90834b817214602abcbf263293295f2.pdf
+    version: Doc201122 A27 23Jun2023
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_lsk389a.pdf
+    sha256: da78812493368ad6d54396693d05aa7561b7959e636c5bd52f164a2991b7d7a0
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: null
+  candidate_combination_qualified: false
+- device_id: pmbt5551
+  manufacturer: Nexperia
+  exact_mpn: PMBT5551,215
+  package: SOT-23
+  roles:
+  - p48_power
+  - balanced_output
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      pmbt5551_vendor:
+      - behavior: hfe_0.001
+        status: pass
+        evidence: guaranteed_limit
+        condition: PMBT5551 table7 12Oct2023 VCE5V 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: hfe_0.01
+        status: pass
+        evidence: guaranteed_limit
+        condition: PMBT5551 table7 12Oct2023 VCE5V 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: nf_1khz_density_screen
+        status: pass
+        evidence: conditional_frequency_screen
+        condition: Rs2kohm IC200uA VCE5V25C; local density approximation to narrowband
+          NF; exact measurement filter unmodeled
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: nf_refinement_ratio
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: icbo_100
+        status: pass
+        evidence: guaranteed_limit
+        condition: VCB120V open emitter1Pohm; PMBT5551 table
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.nexperia.com/product/PMBT5551
+  model_ids:
+  - pmbt5551_vendor
+  models:
+  - id: pmbt5551_vendor
+    path: semiconductor/vendor/pmbt5551.lib
+    sha256: 9f3e7425c5ebd57b8709851f271354dd46ddc42a4503b280d248fd015f27deb0
+    version: extraction week42/2018
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: error
+    primitive: X
+    runnability: scoped_jobs_ok_with_retained_errors
+    load_record: null
+    pin_order: subcircuit C B E; physical B1 E2 C3
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/PMBT5551.pdf
+    version: 12Oct2023
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_pmbt5551.pdf
+    sha256: 481051a143a71fb6223ce52c3f5061525fea4fb70b2a41672a3a22399c114622
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  candidate_combination_qualified: false
+- device_id: diotec_mmbt5551
+  manufacturer: Diotec Semiconductor
+  exact_mpn: MMBT5551
+  package: SOT-23
+  roles:
+  - p48_power
+  states:
+    investigated: true
+    acquired: true
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://diotec.com/en/product/MMBT5551.html
+  model_ids:
+  - diotec_mmbt5551_vendor
+  models:
+  - id: diotec_mmbt5551_vendor
+    path: semiconductor/vendor/diotec_mmbt5551.lib
+    sha256: 96f44107a0eff47851731646952f0ac47cf1d794ad13cd29ca4055f2b81ba2aa
+    version: 13Dec2017 parameterized example
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: uncharacterized_load_failed
+    primitive: X
+    runnability: failed_isolated_load_check
+    load_record: results/device_models/20261009T135500Z_partsload_551b10d1/results.json
+    pin_order: subcircuit C B E; physical B1 E2 C3
+  datasheet:
+    url: https://diotec.com/request/datasheet/mmbt5551.pdf
+    version: 19Nov2025
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_diotec_mmbt5551.pdf
+    sha256: 227f5fe089670eeeb14ee175c873dee896d74406611c3265defe3b3aa38c61a2
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: null
+  candidate_combination_qualified: false
+- device_id: bc850c
+  manufacturer: Nexperia
+  exact_mpn: BC850C,215
+  package: SOT-23
+  roles:
+  - low_noise_bipolar
+  states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      bc850c_vendor:
+      - behavior: hfe_0.002
+        status: pass
+        evidence: guaranteed_limit
+        condition: BC850C table7 VCE5V 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: nf_1khz_density_screen
+        status: pass
+        evidence: conditional_frequency_screen
+        condition: Rs2kohm IC200uA VCE5V25C; local density approximation to narrowband
+          NF; exact measurement filter unmodeled
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: nf_refinement_ratio
+        status: pass
+        evidence: numerical_refinement
+        condition: ''
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.nexperia.com/product/BC850C
+  model_ids:
+  - bc850c_vendor
+  models:
+  - id: bc850c_vendor
+    path: semiconductor/vendor/bc850c.lib
+    sha256: ef3fc2c3776eaf52acbfb5b7955eda8efd9fa714dd2158aa015ac42610bca399
+    version: extraction week42/2018
+    parent_model_id: null
+    acquisition: valid_spice
+    behavior: error
+    primitive: X
+    runnability: scoped_jobs_ok_with_retained_errors
+    load_record: null
+    pin_order: subcircuit C B E; physical B1 E2 C3
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/BC850C.pdf
+    version: current public sheet; revision in original PDF
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_bc850c.pdf
+    sha256: 7be422c96ed19a0c874334d24811f714d8634a65d2f83505b5974f23257ed5c1
+  sourcing_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  candidate_combination_qualified: false

@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-17",
+  "baseline": {
+    "files": 86457,
+    "protected_files": 82758,
+    "common_characters": 14784,
+    "reading_sizes": {
+      "branding": 31658,
+      "device-models": 46797,
+      "documentation": 28021,
+      "optimization": 46324,
+      "orientation": 14784,
+      "qualification": 43088,
+      "reporting": 49947,
+      "topology": 48961
+    },
+    "default_discovery_files": 1263,
+    "default_discovery_text_characters": 6191594,
+    "default_discovery_binary_files": 3,
+    "default_data_pages": 626,
+    "resolved_scientific_documents": 227
+  },
+  "preservation": {
+    "protected_files": 82758,
+    "protected_changed": [],
+    "baseline_files_missing": [],
+    "scientific_documents": 227,
+    "scientific_values_changed": [],
+    "protection_removed": []
+  },
+  "baseline_manifest_sha256": "f1f14ce731c3bbfbe85bcbed15ba79f36e6fb87fb77c8f83b0bfe047f3422ac2",
+  "index_unchanged": true,
+  "head_unchanged": true,
+  "project_register_changes": [
+    "quality_change",
+    "evidence: append validation receipt",
+    "readiness.software: current repository tests; previous lab result labelled"
+  ],
+  "fast_regressions": {
+    "status": "pass",
+    "tests": 32
+  },
+  "git_recovery_regressions": {
+    "status": "pass",
+    "tests": 44,
+    "seconds": 95.151,
+    "log_sha256": "eaead576599ff0a2f124ae36cbc1b0034d9a6412a35063046badda4548556680"
+  },
+  "scientific_verification": {
+    "run_for_this_cleanup": false,
+    "reason": "Scientific executable code, specifications, model/candidate data and numerical results retain baseline bytes."
+  },
+  "original_evidence": {
+    "status": "incomplete",
+    "declared_waveforms": 67565,
+    "snapshot_files": 47202,
+    "damaged": [],
+    "uninventoried": []
+  },
+  "known_archived_missing": 89,
+  "new_missing_originals": 0,
+  "attempts": [
+    {
+      "step": "Initial baseline measurement",
+      "result": "Non-UTF-8 image rejected by an all-text counter; the baseline was completed using explicit binary counts before repository edits."
+    },
+    {
+      "step": "Initial command regression run",
+      "tests": 4,
+      "failed": 1,
+      "reason": "Substring counting treated a nested README filename as the root README; exact-line assertions fixed the test oracle. Subsequent full suite passed."
+    }
+  ],
+  "limits": {
+    "ignored_bytes": "Not covered by the Git-visible preservation baseline; separately inspected against retained inventories.",
+    "remote_sync": "Not checked; local delivery only.",
+    "private_logs": "Full baseline and command logs retained locally under .project-local/token-cleanup-20261017/; not asserted uploaded."
+  },
+  "after": {
+    "common_characters": 11983,
+    "reading_sizes": {
+      "branding": 28857,
+      "device-models": 41303,
+      "documentation": 25269,
+      "optimization": 43523,
+      "orientation": 11983,
+      "qualification": 40287,
+      "reporting": 45144,
+      "topology": 44158
+    },
+    "default_discovery_files": 646,
+    "explicit_data_page_files": 626,
+    "maintained_folders": 189,
+    "original_only_folders": 26199,
+    "output_measurements": {
+      "before_files": 1263,
+      "after_files": 646,
+      "before_listing_characters": 108280,
+      "after_listing_characters": 37617,
+      "orientation_json_characters": 1202,
+      "orientation_text_characters": 312,
+      "reporting_json_characters": 3728,
+      "reporting_text_characters": 1112
+    }
+  },
+  "repository_check": {
+    "status": "pass",
+    "errors": [],
+    "source_checks": [
+      {
+        "check": "import importlib.metadata as m; expected={'ruff': '0.16.10', 'PyYAML': '6.0.3', 'markdown-it-py': '4.2.0', 'mdurl': '0.1.2'}; assert all(m.version(k)==v for k,v in expected.items()), 'Install the pinned quality dependencies before using the gate'",
+        "status": "pass",
+        "output": ""
+      },
+      {
+        "check": "ruff check --no-cache",
+        "status": "pass",
+        "output": "All checks passed!\n"
+      },
+      {
+        "check": "ruff format --check",
+        "status": "pass",
+        "output": "147 files already formatted\n"
+      },
+      {
+        "check": "unittest discover -s",
+        "status": "pass",
+        "output": "----------------------------------------------------------------------\nRan 32 tests in 1.873s\n\nOK\n"
+      }
+    ],
+    "generated_files": 252,
+    "unreachable": [],
+    "stale_generated": [],
+    "enforcement": {
+      "hooks": [
+        "pre-commit",
+        "pre-merge-commit",
+        "pre-applypatch",
+        "pre-push"
+      ],
+      "installed": true,
+      "ci": true,
+      "selected_content": "working",
+      "character_limit": 15000,
+      "onboarding_limit": 15000,
+      "route_limit": 50000
+    }
+  }
+}

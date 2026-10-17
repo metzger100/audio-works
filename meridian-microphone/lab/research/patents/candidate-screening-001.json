@@ -1,0 +1,45 @@
+{
+  "all_affected_gates": "hold",
+  "audit": "screening-audit-001.json",
+  "candidate_matrix": "candidate-versions-001.json",
+  "claim_mappings": "claim-mappings-001.json",
+  "compiled_date": "2026-10-17",
+  "counts": {
+    "DEPATIS_family_searches": 1,
+    "DEPATIS_keyword_number_searches": 15,
+    "DE_official_record_observations": 13,
+    "candidate_inventory": 25,
+    "candidate_versions": 9,
+    "official_pdfs": 15,
+    "official_publication_claim_sets_mapped": 14,
+    "provisional_US_mirror_claim_sets": 9,
+    "web_discovery_queries": 34
+  },
+  "discovery_dates": [
+    "2026-10-16",
+    "2026-10-17"
+  ],
+  "engineering_tests_run": 0,
+  "freshness": "Official observations16October2026; compiled17October. Failed/unexecuted refresh does not establish fresh17October status.",
+  "holds": "holds-screening-001.json",
+  "legal_non_infringement_conclusion": null,
+  "official_queries": "queries-official-001.json",
+  "original_bytes": "Private ignored source files; hashes/references retained in Git; no assumption that GitHub restores those bytes",
+  "preservation": {
+    "integrity_receipt": "../../../../docs/validation/2026-10-17-patent-screening-preservation.json",
+    "inventory_sha256": "731104d2e9282b93ce495fa368bf3be90237eb7856d3f6c0966cc8ccecbde145",
+    "original_inventory": "../../results/evidence-20261017T084357Z-cecb52ec.sha256",
+    "private_batch_bytes": 23680963,
+    "private_batch_files": 219,
+    "repository_checks": "../../../../docs/validation/2026-10-17-patent-screening-checks.json",
+    "validation_report": "../../../../docs/validation/2026-10-17-patent-screening.md"
+  },
+  "prototype_selected": null,
+  "research_date": "2026-10-16",
+  "schema_version": 1,
+  "scope": "M100 Meridian MIC-34-M/MIC-34-C,K47FRB/P48; nine exact candidate implementations; internal documentary research",
+  "screening_complete": false,
+  "source_ledger": "sources-screening-001.json",
+  "territory_status": "territory-status-001.json",
+  "web_queries": "queries-web-001.json"
+}

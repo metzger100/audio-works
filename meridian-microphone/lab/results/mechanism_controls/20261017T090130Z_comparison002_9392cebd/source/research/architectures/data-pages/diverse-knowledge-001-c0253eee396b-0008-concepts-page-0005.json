@@ -1,0 +1,183 @@
+[
+  {
+    "analysis_backend_prerequisite": "Macro translation then coupled return matrix",
+    "assumption_inverted": null,
+    "conversion_principle": "Voltage error referenced to controlled electrode",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "high_feedback",
+      "mosfet",
+      "no_jfet"
+    ],
+    "id": "concept_0017",
+    "independent_analytical_oracle": "MIMO noise-gain/CM loop determinant",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "high_feedback"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Fully differential output with shared CM controller",
+      "dc_bias": "Common-mode feedback plus slow DC servo",
+      "expected_dominant_distortion": "Loop gain loss and saturation recovery",
+      "expected_dominant_noise": "Error amplifier and reference/servo noise",
+      "fastest_falsification": "MIMO return-ratio/Nyquist and transient recovery at all loads",
+      "gain_or_impedance_transformation": "High-gain error amplifier",
+      "likely_fatal_flaw": "Interacting loops unstable under cable and capsule variation",
+      "loading_control": "Feedback, guarding and deliberately compensated input C",
+      "sensed_quantity": "Voltage error referenced to controlled electrode"
+    },
+    "real_part_dependencies": "CMOS error stage, CM actuator, real line output",
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "smallest_experiment": "MIMO return-ratio/Nyquist and transient recovery at all loads",
+    "source_links": [
+      "https://www.ti.com/lit/ds/symlink/opa197.pdf"
+    ],
+    "sources": [
+      "S07"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "High-feedback CMOS amplifier with common-mode control"
+  },
+  {
+    "analysis_backend_prerequisite": "Reset current/noise/settling before performance",
+    "assumption_inverted": "The capsule must be voltage sensed",
+    "conversion_principle": "Continuous motional charge",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "instrumentation",
+      "charge",
+      "servo",
+      "no_jfet"
+    ],
+    "id": "concept_0018",
+    "independent_analytical_oracle": "Charge balance plus continuous-reset current PSD",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "instrumentation",
+      "charge",
+      "servo"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Charge output then differential buffer",
+      "dc_bias": "Ultra-slow continuous reset rather than abrupt switching",
+      "expected_dominant_distortion": "Reset nonlinearity leaking into audio",
+      "expected_dominant_noise": "Reset element excess noise and voltage-noise gain",
+      "fastest_falsification": "Reset-element noise injection and audio sidebands over leakage extremes",
+      "gain_or_impedance_transformation": "Electrometer error amplifier",
+      "likely_fatal_flaw": "Reset/servo noise worse than passive bleed",
+      "loading_control": "Virtual node and feedback C with guarded leakage paths",
+      "sensed_quantity": "Continuous motional charge"
+    },
+    "real_part_dependencies": "Electrometer, real reset element, quiet fixed guard",
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "smallest_experiment": "Reset-element noise injection and audio sidebands over leakage extremes",
+    "source_links": [
+      "https://arxiv.org/pdf/1307.5233"
+    ],
+    "sources": [
+      "S06",
+      "S08"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Continuous-reset electrometer charge front end"
+  },
+  {
+    "analysis_backend_prerequisite": "Noise folding and dynamic switching current",
+    "assumption_inverted": "The first device must be a FET",
+    "conversion_principle": "Carrier-synchronous capacitance change",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "instrumentation",
+      "no_fet",
+      "floating"
+    ],
+    "id": "concept_0019",
+    "independent_analytical_oracle": "Correlated sideband bridge power",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "instrumentation",
+      "floating"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Differential synchronous detector plus low-pass driver",
+      "dc_bias": "Carrier zero mean, separate controlled polarization",
+      "expected_dominant_distortion": "Charge injection and detector compression",
+      "expected_dominant_noise": "Switch shot noise and carrier feedthrough",
+      "fastest_falsification": "Periodic steady-state surrogate/time-domain carrier simulation and noise folding study",
+      "gain_or_impedance_transformation": "Analog bipolar switching/detection",
+      "likely_fatal_flaw": "Carrier residue or flicker folding exceeds noise budget",
+      "loading_control": "Floating excitation and differential parasitic rejection",
+      "sensed_quantity": "Carrier-synchronous capacitance change"
+    },
+    "real_part_dependencies": "Bipolar switch detector/oscillator plus filters",
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "smallest_experiment": "Periodic steady-state surrogate/time-domain carrier simulation and noise folding study",
+    "source_links": [
+      "https://designers-guide.org/theory/cyclo-paper.pdf"
+    ],
+    "sources": [
+      "S09"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Bipolar synchronous capacitive bridge"
+  },
+  {
+    "analysis_backend_prerequisite": "Phase-noise envelope and RF force/pulling",
+    "assumption_inverted": "The first device must be a FET",
+    "conversion_principle": "Capacitance-to-frequency modulation",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "no_fet",
+      "instrumentation",
+      "minimal"
+    ],
+    "id": "concept_0020",
+    "independent_analytical_oracle": "d(fc)/dC and oscillator phase diffusion",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "instrumentation"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Balanced audio driver after discriminator",
+      "dc_bias": "Carrier amplitude servo and separately verified DC bias",
+      "expected_dominant_distortion": "Oscillator pulling and discriminator curvature",
+      "expected_dominant_noise": "Oscillator phase noise and amplitude-to-frequency noise",
+      "fastest_falsification": "Sideband sensitivity and phase-noise envelope across realistic C/leakage",
+      "gain_or_impedance_transformation": "Oscillator plus all-analog frequency discriminator",
+      "likely_fatal_flaw": "Audible phase noise or excessive electrostatic back-action",
+      "loading_control": "Low carrier voltage limits electrical force; resonant transformation",
+      "sensed_quantity": "Capacitance-to-frequency modulation"
+    },
+    "real_part_dependencies": "Bipolar resonator oscillator + frequency discriminator",
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "smallest_experiment": "Sideband sensitivity and phase-noise envelope across realistic C/leakage",
+    "source_links": [
+      "https://designers-guide.org/theory/cyclo-paper.pdf"
+    ],
+    "sources": [
+      "S09"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Bipolar capacitance-controlled oscillator readout"
+  }
+]

@@ -1,0 +1,183 @@
+[
+  {
+    "activities": [
+      "private DE manufacture/use scenario",
+      "supply/import scenario with territories unresolved",
+      "implementation/build-publication scenario for professional review"
+    ],
+    "application_id": "DE102010000686.6",
+    "claim_version": "DE102010000686B4 as published; no assertion that this is the latest amended/litigated version",
+    "earliest_identified_priority": null,
+    "elements": [
+      {
+        "cases": [
+          {
+            "assessment": "demonstrated_present_ideal_model",
+            "basis": "Behavioral anti-phase sources plus passive bridge; implementation/power/noise not qualified.",
+            "candidate_ids": [
+              "candidate_0013"
+            ],
+            "exact_versions": {
+              "candidate_0013": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015"
+            },
+            "netlist_references": [
+              "Bcarrier",
+              "Banti",
+              "Cbridgef",
+              "Cbridger",
+              "Cexcite"
+            ],
+            "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+          }
+        ],
+        "claim_numbers": [
+          1
+        ],
+        "id": "capacitor_and_HF_bridge",
+        "requirement_paraphrase": "Capacitive transducer coupled to HF bridge"
+      },
+      {
+        "cases": [
+          {
+            "assessment": "unimplemented",
+            "basis": "No coil/transformer in exact0013; ideal sources/buffers do not instantiate them.",
+            "candidate_ids": [
+              "candidate_0013"
+            ],
+            "exact_versions": {
+              "candidate_0013": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015"
+            },
+            "netlist_references": [
+              "Bcarrier",
+              "Banti",
+              "Efront",
+              "Erear"
+            ],
+            "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+          }
+        ],
+        "claim_numbers": [
+          1
+        ],
+        "id": "HF_coil_and_transformer",
+        "requirement_paraphrase": "HF coil coupled to bridge and HF transformer"
+      },
+      {
+        "cases": [
+          {
+            "assessment": "demonstrated_present_ideal_model",
+            "basis": "Ideal synchronous product and passive lowpasses; ideal output sources retained.",
+            "candidate_ids": [
+              "candidate_0013"
+            ],
+            "exact_versions": {
+              "candidate_0013": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015"
+            },
+            "netlist_references": [
+              "Bdemod",
+              "Rfilter1",
+              "Rfilter2",
+              "Eoutp",
+              "Eoutn"
+            ],
+            "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+          }
+        ],
+        "claim_numbers": [
+          1
+        ],
+        "id": "sync_demod_and_LF_output",
+        "requirement_paraphrase": "Synchronous demodulator and LF output"
+      },
+      {
+        "cases": [
+          {
+            "assessment": "unimplemented",
+            "basis": "No LED or physical HF stabilizer; fixed ideal carrier amplitude is not a demonstrated physical stabilizer at that node.",
+            "candidate_ids": [
+              "candidate_0013"
+            ],
+            "exact_versions": {
+              "candidate_0013": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015"
+            },
+            "netlist_references": [
+              "Bdemod",
+              "Rfilter1",
+              "Cfilter1"
+            ],
+            "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+          }
+        ],
+        "claim_numbers": [
+          1
+        ],
+        "id": "stabilizer_location_and_LEDs",
+        "requirement_paraphrase": "HF-voltage stabilizer between demodulator and LF output with one or series LEDs including at least one green LED"
+      }
+    ],
+    "family_chain": [
+      "DE102010000686A1/B4",
+      "US20110176692A1 / US8515099B2 discovery/mirrored grant only; narrower DE green-LED limitation must not be imported into US claim1"
+    ],
+    "filing_date_as_printed": "2010-01-05",
+    "grant_number": "DE102010000686B4",
+    "independent_claims_inspected": [
+      1
+    ],
+    "interpretation_hold": "Description/drawings were considered; literal circuit distinctions do not decide claim construction or equivalents. No legal non-infringement opinion. Holds remain.",
+    "material_dependent_limitations": [
+      {
+        "cases": [
+          {
+            "assessment": "unimplemented",
+            "basis": "No implemented stabilizer; generic ideal constant amplitude does not satisfy this automatically.",
+            "candidate_ids": [
+              "candidate_0013"
+            ],
+            "exact_versions": {
+              "candidate_0013": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015"
+            },
+            "netlist_references": [
+              "Bcarrier"
+            ],
+            "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+          }
+        ],
+        "claim_numbers": [
+          2
+        ],
+        "id": "steep_characteristic",
+        "requirement_paraphrase": "HF stabilizer with steep current-voltage characteristic"
+      }
+    ],
+    "official_original_verified": true,
+    "priority_limit": "Only printed identified priority/filing and linked official records inspected; earlier/further family priorities not exhaustively excluded",
+    "publication_date_as_printed": "2018-05-09",
+    "publication_number": "DE102010000686B4",
+    "publication_sha256": "c2d0400e7ce8ec194c757cf89176722703fccb02d6d65bb72fee01592bc9c456",
+    "screening_state": "partial_official_claim_inspection_and_scoped_DE_record",
+    "source_id": "DE102010000686B4-sessionPDF",
+    "status_of_other_territories": "Unresolved; no worldwide conclusion",
+    "technical_context_read": "German grant description0001–0023, claims and Figs1/2 visually inspected; obtained original full4-page PDF after retaining expired-session HTML failure.",
+    "territorial_status_record": "DPMA-DE102010000686",
+    "wording_reference": {
+      "claims": [
+        1
+      ],
+      "printed_pages": [
+        3
+      ],
+      "reference_rule": "Read entire numbered claim in the exact hashed PDF; table entries paraphrase limitations, not substitutes for claim wording",
+      "source": "https://register.dpma.de/DPMAregister/pat/register?AKZ=1020100006866"
+    }
+  },
+  {
+    "$include": "claim-mappings-001-cb246106396d-0003-documents-0014-14.json"
+  },
+  {
+    "$include": "claim-mappings-001-cb246106396d-0003-documents-0015-15.json"
+  },
+  {
+    "$include": "claim-mappings-001-cb246106396d-0003-documents-0016-16.json"
+  }
+]

@@ -5,7 +5,7 @@
 
 Start with an inventory of existing and borrowed equipment, calibration records and facilities. **Access is unknown for every item below.** Borrowing/access may require later owner arrangements; no contact is made here. Needed functions, not purchase recommendations, are listed. If equipment or capsule limits cannot be established, retain the blocked measurement and continue the independent model/control work.
 
-The priority order is dependency-driven: interface/safety → electrical parameters → sensitivity/noise → acoustic limits → integrated qualification. The high-leakage capsule endpoint defeats both JFET implementations; rear C/parasitics reverse their response order. Missing CMOS/carrier metrics primarily need simulation/backend repair before comparison hardware is useful.
+The priority order is interface/safety → electrical parameters → sensitivity/noise → acoustic limits → integrated qualification. [Comparison002 handoff](comparison-002-handoff.md) adds filtered-servo/paired-holdout findings. Leakage defeats every JFET implementation; CMOS/carrier still need simulation prerequisites.
 
 
 ## Common raw-data and calibration contract

@@ -13,3 +13,5 @@ Dated owner instructions and mechanical regression coverage.
 - [2026-10-11-research-consolidation.md](2026-10-11-research-consolidation.md) — active
 - [2026-10-11-runtime-storage.md](2026-10-11-runtime-storage.md) — active
 - [2026-10-16-private-architecture-sources.md](2026-10-16-private-architecture-sources.md) — active
+- [2026-10-17-comparison-reporting.md](2026-10-17-comparison-reporting.md) — active
+- [2026-10-17-token-efficient-navigation.md](2026-10-17-token-efficient-navigation.md) — active

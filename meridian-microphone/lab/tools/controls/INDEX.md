@@ -4,6 +4,8 @@
 Finite isolated experiments and canonical parts search/audit.
 
 - [carrier_island_control.py](carrier_island_control.py) — active
+- [comparison_cohort_002.py](comparison_cohort_002.py) — active
+- [comparison_sources_002.py](comparison_sources_002.py) — active
 - [diverse_carrier.py](diverse_carrier.py) — active
 - [diverse_fixtures.py](diverse_fixtures.py) — active
 - [diverse_followup.py](diverse_followup.py) — active

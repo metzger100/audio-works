@@ -1,0 +1,169 @@
+[
+  {
+    "analysis_backend_prerequisite": "DC/leakage and bilateral loop; existing0019 reference",
+    "assumption_inverted": null,
+    "conversion_principle": "Open-circuit capsule voltage",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "conventional_jfet"
+    ],
+    "id": "concept_0001",
+    "independent_analytical_oracle": "Loaded gate/leakage KCL",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": false,
+    "patent_feature_flags": [],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Differential or impedance-balanced driver",
+      "dc_bias": "Source degeneration and ordinary device bounds",
+      "expected_dominant_distortion": "JFET curvature and output swing",
+      "expected_dominant_noise": "Gate/bias-network current noise and channel voltage noise",
+      "fastest_falsification": "DC/noise/distortion sweep across manufacturer JFET bounds",
+      "gain_or_impedance_transformation": "JFET buffer and separate driver",
+      "likely_fatal_flaw": "Idss/VTO spread exceeds self-bias authority",
+      "loading_control": "Low input C and high bias R",
+      "sensed_quantity": "Open-circuit capsule voltage"
+    },
+    "real_part_dependencies": "JFE150 + fixed resistors + documented output devices",
+    "role": "Inventor",
+    "scientific_transfer": false,
+    "smallest_experiment": "DC/noise/distortion sweep across manufacturer JFET bounds",
+    "source_links": [
+      "https://www.ti.com/lit/ds/symlink/jfe150.pdf"
+    ],
+    "sources": [],
+    "status": "proposed_not_simulated",
+    "title": "Conventional self-biased JFET voltage reference"
+  },
+  {
+    "analysis_backend_prerequisite": "Open-stage two-port and return ratio",
+    "assumption_inverted": null,
+    "conversion_principle": "Capsule voltage error",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "unconventional_jfet",
+      "high_feedback"
+    ],
+    "id": "concept_0002",
+    "independent_analytical_oracle": "Finite A and Miller admittance",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "high_feedback"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Resistor-defined differential driver",
+      "dc_bias": "Controlled current and local DC feedback",
+      "expected_dominant_distortion": "Finite loop gain and drain modulation",
+      "expected_dominant_noise": "Input channel noise and feedback/bias noise",
+      "fastest_falsification": "Extract input admittance, gain and return ratio across capacitance corners",
+      "gain_or_impedance_transformation": "Common-source gain inside feedback",
+      "likely_fatal_flaw": "Feedback increases input C or oscillates",
+      "loading_control": "Feedback and a controlled drain voltage reduce Miller effects",
+      "sensed_quantity": "Capsule voltage error"
+    },
+    "real_part_dependencies": "JFE150 common-source + feedback network",
+    "role": "Inventor",
+    "scientific_transfer": false,
+    "smallest_experiment": "Extract input admittance, gain and return ratio across capacitance corners",
+    "source_links": [
+      "https://www.ti.com/lit/ds/symlink/jfe150.pdf"
+    ],
+    "sources": [],
+    "status": "proposed_not_simulated",
+    "title": "JFET closed-loop common-source conversion"
+  },
+  {
+    "analysis_backend_prerequisite": "Guard tracking, noise and multiple-loop return",
+    "assumption_inverted": null,
+    "conversion_principle": "Capsule voltage",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "unconventional_jfet",
+      "bootstrap",
+      "instrumentation"
+    ],
+    "id": "concept_0003",
+    "independent_analytical_oracle": "Yg(1-Hg) and cascode Cgd current",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "bootstrap",
+      "instrumentation"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Independent low-impedance line stage",
+      "dc_bias": "Source degeneration, drain-voltage servo",
+      "expected_dominant_distortion": "Cascode nonlinearity and bootstrap error",
+      "expected_dominant_noise": "JFET 1/f and guard amplifier noise",
+      "fastest_falsification": "Sweep guard delay, Cgd and parasitic coupling, including return ratio",
+      "gain_or_impedance_transformation": "JFET transconductance plus cascode",
+      "likely_fatal_flaw": "Guard noise or positive feedback dominates",
+      "loading_control": "Track drain and surrounding guard to reduce displacement/loading",
+      "sensed_quantity": "Capsule voltage"
+    },
+    "real_part_dependencies": "JFE150 plus independently powered guard/cascode",
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "smallest_experiment": "Sweep guard delay, Cgd and parasitic coupling, including return ratio",
+    "source_links": [
+      "https://www.analog.com/media/en/technical-documentation/data-sheets/ada4530-1.pdf"
+    ],
+    "sources": [
+      "S06"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "JFET cascode with driven drain/guard"
+  },
+  {
+    "analysis_backend_prerequisite": "Cross-channel transfer and joint device bounds",
+    "assumption_inverted": null,
+    "conversion_principle": "Front/rear electrode voltages",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "unconventional_jfet",
+      "differential",
+      "servo"
+    ],
+    "id": "concept_0004",
+    "independent_analytical_oracle": "Two-input capacitance matrix and individual DC loops",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "differential",
+      "servo"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Early differential representation drives line outputs",
+      "dc_bias": "Individual current loops and common-mode servo",
+      "expected_dominant_distortion": "Unequal device nonlinearities",
+      "expected_dominant_noise": "Two input devices plus current-control noise",
+      "fastest_falsification": "Two-electrode admittance and uncorrelated device-corner sweeps",
+      "gain_or_impedance_transformation": "Degenerated differential conversion",
+      "likely_fatal_flaw": "Common backplate or unequal sensitivities defeats differential benefit",
+      "loading_control": "Two high-impedance ports with finite mutual C",
+      "sensed_quantity": "Front/rear electrode voltages"
+    },
+    "real_part_dependencies": "Two unselected JFE150, independent actuators",
+    "role": "Inventor",
+    "scientific_transfer": false,
+    "smallest_experiment": "Two-electrode admittance and uncorrelated device-corner sweeps",
+    "source_links": [
+      "https://www.ti.com/lit/ds/symlink/jfe150.pdf"
+    ],
+    "sources": [],
+    "status": "proposed_not_simulated",
+    "title": "Differential JFET sensing without pair selection"
+  }
+]

@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+schema_version: 1
+revision: high-impedance-reproducer-r3
+declared_date: '2026-10-11'
+parent: results/device_models/20261011T180313Z_observer_diagnosis_0f2c5116/results.json
+maximum_jobs: 12
+timeout_s_per_job: 15
+options: reltol=1e-6 abstol=1e-16 vntol=1e-10 gmin=1e-15 method=gear maxord=2
+model: jfe150_generic
+source_resistance_ohm: [0, 1000, 1e9]
+excitations: [voltage, current_phase_0, current_phase_90]
+conditions: Candidate0019 extracted nominal local rail13.5557796144973V, gate-bias3.3889452055659V, backplate29.5293276326911V, source3300ohm; fixed ideal rails are explicit diagnostic terminal fixtures, not a microphone replacement.
+physical_nodes: All JFE clamp pins retained; gate70pF to backplate,1T leakage and1G bias where declared. No hidden bias assist.
+transient: {frequency_hz: 1000, voltage_peak_v: 0.01, injected_current_peak_a: 8.29380490383245e-9, stop_s: 0.004, save_start_s: 0, max_step_s: 2e-6}
+stopping: One pass; no relaxed tolerance, parameter repair, population fit or increase to existing budgets. Four-millisecond controls receive no settled nonlinear/headroom credit.

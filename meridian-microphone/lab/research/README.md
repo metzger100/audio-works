@@ -5,8 +5,8 @@ All maintained Meridian research has one home here. The [project overview](../..
 | Question | Start here |
 | --- | --- |
 | What is known about the capsule? | [Capsules](capsules/README.md) |
-| Which parts and models support which behavior? | [Devices](devices/INDEX.md), [primary sources](devices/sources.md) |
-| What worked, failed or remains unqualified? | [Architectures](architectures/INDEX.md) |
+| Which parts and models support which behavior? | [Device guide](devices/README.md), [primary sources](devices/sources.md) |
+| What worked, failed or remains unqualified? | [Architecture guide](architectures/README.md) |
 | What can be sourced, and what remains held? | [Procurement](procurement/INDEX.md), [patents](patents/INDEX.md) |
 | What should the next task retain or test? | [Memory](memory/INDEX.md), [task prompts](prompts/README.md) |
 

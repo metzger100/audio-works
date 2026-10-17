@@ -1,0 +1,262 @@
+{
+  "all14_families": {
+    "families": [
+      {
+        "id": "conventional_jfet",
+        "implemented_candidates": [
+          "candidate_0001",
+          "candidate_0007",
+          "candidate_0015"
+        ],
+        "minimum_retained": 1,
+        "name": "Conventional high-impedance JFET architectures",
+        "qualification": "no family retired; coverage is a mechanism attempt, never proof of qualification",
+        "retirement_evidence": null,
+        "state": "engineering_attempts_registered"
+      },
+      {
+        "id": "unconventional_jfet",
+        "implemented_candidates": [
+          "candidate_0002",
+          "candidate_0008"
+        ],
+        "minimum_retained": 1,
+        "name": "Unconventional JFET architectures",
+        "qualification": "no family retired; coverage is a mechanism attempt, never proof of qualification",
+        "retirement_evidence": null,
+        "state": "engineering_attempts_registered"
+      },
+      {
+        "id": "mosfet",
+        "implemented_candidates": [
+          "candidate_0003",
+          "candidate_0004",
+          "candidate_0006",
+          "candidate_0010",
+          "candidate_0011",
+          "candidate_0014"
+        ],
+        "minimum_retained": 1,
+        "name": "MOSFET input architectures",
+        "qualification": "no family retired; coverage is a mechanism attempt, never proof of qualification",
+        "retirement_evidence": null,
+        "state": "engineering_attempts_registered"
+      },
+      {
+        "id": "no_jfet",
+        "implemented_candidates": [
+          "candidate_0003",
+          "candidate_0004",
+          "candidate_0005",
+          "candidate_0006",
+          "candidate_0010",
+          "candidate_0011",
+          "candidate_0012",
+          "candidate_0014"
+        ],
+        "minimum_retained": 1,
+        "name": "No-JFET architectures",
+        "qualification": "no family retired; coverage is a mechanism attempt, never proof of qualification",
+        "retirement_evidence": null,
+        "state": "engineering_attempts_registered"
+      },
+      {
+        "id": "no_fet",
+        "implemented_candidates": [
+          "candidate_0005",
+          "candidate_0012"
+        ],
+        "minimum_retained": 1,
+        "name": "No-FET architectures",
+        "qualification": "no family retired; coverage is a mechanism attempt, never proof of qualification",
+        "retirement_evidence": null,
+        "state": "engineering_attempts_registered"
+      },
+      {
+        "id": "charge",
+        "implemented_candidates": [
+          "candidate_0004",
+          "candidate_0005",
+          "candidate_0011",
+          "candidate_0012",
+          "candidate_0014"
+        ],
+        "minimum_retained": 1,
+        "name": "Charge-sensitive architectures",
+        "qualification": "no family retired; coverage is a mechanism attempt, never proof of qualification",
+        "retirement_evidence": null,
+        "state": "engineering_attempts_registered"
+      },
+      {
+        "id": "current",
+        "implemented_candidates": [
+          "candidate_0005",
+          "candidate_0012"
+        ],
+        "minimum_retained": 1,
+        "name": "Transimpedance/current-mode architectures",
+        "qualification": "no family retired; coverage is a mechanism attempt, never proof of qualification",
+        "retirement_evidence": null,
+        "state": "engineering_attempts_registered"
+      },
+      {
+        "id": "floating",
+        "implemented_candidates": [
+          "candidate_0006",
+          "candidate_0009",
+          "candidate_0013"
+        ],
+        "minimum_retained": 1,
+        "name": "Floating input architectures",
+        "qualification": "no family retired; coverage is a mechanism attempt, never proof of qualification",
+        "retirement_evidence": null,
+        "state": "engineering_attempts_registered"
+      },
+      {
+        "id": "differential",
+        "implemented_candidates": [
+          "candidate_0006",
+          "candidate_0009",
+          "candidate_0013"
+        ],
+        "minimum_retained": 1,
+        "name": "Differential capsule sensing",
+        "qualification": "no family retired; coverage is a mechanism attempt, never proof of qualification",
+        "retirement_evidence": null,
+        "state": "engineering_attempts_registered"
+      },
+      {
+        "id": "bootstrap",
+        "implemented_candidates": [
+          "candidate_0003",
+          "candidate_0010"
+        ],
+        "minimum_retained": 1,
+        "name": "Bootstrapped input architectures",
+        "qualification": "no family retired; coverage is a mechanism attempt, never proof of qualification",
+        "retirement_evidence": null,
+        "state": "engineering_attempts_registered"
+      },
+      {
+        "id": "servo",
+        "implemented_candidates": [
+          "candidate_0002",
+          "candidate_0008"
+        ],
+        "minimum_retained": 1,
+        "name": "Servo-controlled operating-point architectures",
+        "qualification": "no family retired; coverage is a mechanism attempt, never proof of qualification",
+        "retirement_evidence": null,
+        "state": "engineering_attempts_registered"
+      },
+      {
+        "id": "minimal",
+        "implemented_candidates": [],
+        "minimum_retained": 1,
+        "name": "Minimal-active-device architectures",
+        "qualification": "no family retired; coverage is a mechanism attempt, never proof of qualification",
+        "retirement_evidence": null,
+        "state": "awaiting_engineering"
+      },
+      {
+        "id": "high_feedback",
+        "implemented_candidates": [
+          "candidate_0003",
+          "candidate_0004",
+          "candidate_0010",
+          "candidate_0011",
+          "candidate_0014"
+        ],
+        "minimum_retained": 1,
+        "name": "High-feedback architectures",
+        "qualification": "no family retired; coverage is a mechanism attempt, never proof of qualification",
+        "retirement_evidence": null,
+        "state": "engineering_attempts_registered"
+      },
+      {
+        "id": "instrumentation",
+        "implemented_candidates": [
+          "candidate_0003",
+          "candidate_0004",
+          "candidate_0005",
+          "candidate_0006",
+          "candidate_0009",
+          "candidate_0010",
+          "candidate_0011",
+          "candidate_0012",
+          "candidate_0013",
+          "candidate_0014"
+        ],
+        "minimum_retained": 1,
+        "name": "Architectures borrowed from scientific instrumentation",
+        "qualification": "no family retired; coverage is a mechanism attempt, never proof of qualification",
+        "retirement_evidence": null,
+        "state": "engineering_attempts_registered"
+      }
+    ],
+    "policy": "Persistent independent families; no retirement based on another family winning. Record physics or simulation failures per concept.",
+    "schema_version": 1
+  },
+  "audited_before_evaluation": true,
+  "date": "2026-10-17",
+  "limitations": [
+    "89 historical missing snapshots per previous global audit; new global audit required",
+    "No procurement/measurement/patent qualification inferred from documentation"
+  ],
+  "original_comparison": {
+    "generator_sha256": "f157703889a2388b6b274663074f7639d395021272ba2ec5e84900446998ce68",
+    "provenance_sha256": "29cdd0f8118c5b53eab2e87fa0f64ae33414172f3f87001b03993cf8b2cdfec8",
+    "report_sha256": "c3e48edf016c8f8c562db5601465a49ab108b819e0dbb4f9e25d848ca82de1a8"
+  },
+  "prompts": [
+    {
+      "completed_all_gates": false,
+      "finding": "Executed finite device tests; behavior-specific gaps remain",
+      "path": "research/devices/parts-database-expansion-002.md",
+      "prompt": 6,
+      "sha256": "a7c5c792500e53f5403684c29db3da6488eb4e345e590c04d37b929867de3034"
+    },
+    {
+      "completed_all_gates": false,
+      "finding": "Executed electrical/literature scenario cohort; no K47FRB hardware measurements",
+      "path": "research/capsules/evidence-envelope-001.md",
+      "prompt": 7,
+      "sha256": "94329567e66193e1de2713aaaef98d2ec498e8fe64946cb11f6cd44245401443"
+    },
+    {
+      "completed_all_gates": false,
+      "finding": "119 jobs; full-DUT nonlinear prerequisites unsupported",
+      "path": "research/devices/simulation-prerequisites-001.md",
+      "prompt": 8,
+      "sha256": "41d5d63d8a7a7e2ac2282c17df4c96200275b374ba91bbdee34e3708a9ff62d8"
+    },
+    {
+      "completed_all_gates": false,
+      "finding": "Actual0025 child; complete suite failures,1G leakage and loop holds preserved",
+      "path": "research/architectures/focused-hypotheses-001.md",
+      "prompt": 9,
+      "sha256": "1d9e3dcb2106c3d32033cec37d77c303d377fadb42015c6c1c54e0c6686d74ae"
+    },
+    {
+      "completed_all_gates": false,
+      "finding": "53 simulator attempts/15 errors plus32 separate ideal seeded records; CMOS/carrier physical prerequisites incomplete",
+      "path": "research/architectures/diverse-continuation-audit-001.md",
+      "prompt": 10,
+      "sha256": "6c24ab91c918daca439843bde136a5d72a48dba6540b3ec485d44e3936750f7e"
+    },
+    {
+      "completed_all_gates": false,
+      "finding": "Executed scoped candidate claims/13 DE observations16October; holds retained",
+      "path": "research/patents/candidate-screening-001.md",
+      "prompt": 11,
+      "sha256": "0868e8cc39299a826be762a4164a680fe550f0a0b18355036421ab51c813bf07"
+    },
+    {
+      "completed_all_gates": false,
+      "finding": "Prompt exists; no executed sourcing-and-preservation report located. Earlier sourcing receipts/inventories are not completion of Prompt12.",
+      "path": "research/prompts/12-sourcing-and-preservation.md",
+      "prompt": 12,
+      "sha256": "8073ddb325a92adaa774d2f0897256a4cffb31f09fc7b327c34a8462bbe40ca4"
+    }
+  ]
+}

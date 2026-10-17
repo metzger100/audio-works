@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-17",
+  "evidence": [
+    "docs/validation/2026-10-17-comparison-002-values.json",
+    "docs/validation/2026-10-17-comparison-002-batch-integrity.json",
+    "docs/validation/2026-10-17-comparison-002-inventory.json",
+    "docs/validation/2026-10-17-comparison-002-preservation.json",
+    "docs/validation/2026-10-17-comparison-002-attempts.json"
+  ],
+  "fast_tests": {
+    "passed": 24,
+    "status": "pass"
+  },
+  "git_recovery_tests": {
+    "passed": 40,
+    "status": "pass"
+  },
+  "historical_missing_unchanged": true,
+  "lab_tests": {
+    "passed": 114,
+    "record": "meridian-microphone/lab/results/verification/20261017T092212Z_38ea58ae/verification.json",
+    "record_sha256": "5ec2c504cdb5eca07f829c936d24690dadaeb276fd4e2b72250b7eca74f52631",
+    "source_unchanged": true,
+    "status": "pass"
+  },
+  "no_production_selection": true,
+  "original_comparison_audit": {
+    "files": 9117,
+    "status": "pass"
+  },
+  "original_evidence": {
+    "damaged": 0,
+    "historical_missing": 89,
+    "new_batch_integrity": "pass;42029 files",
+    "status": "incomplete",
+    "uninventoried": 0
+  },
+  "physical_measurements": "deferred",
+  "rendered_declared_files": 15849,
+  "repository": "pass;working tree refresh,audit,check;24 pinned fast regressions",
+  "root_gates": {
+    "audit": {
+      "errors": [],
+      "hook_installed": true,
+      "reading_sizes": {
+        "branding": 31658,
+        "device-models": 46797,
+        "documentation": 28021,
+        "optimization": 46324,
+        "orientation": 14784,
+        "qualification": 43088,
+        "reporting": 49947,
+        "topology": 48961
+      },
+      "receipt_sha256": "80d5431d4ea60049355fcf5ebff870de8dcc6c65e87172e40d6f1967ea5150ec",
+      "status": "pass"
+    },
+    "check": {
+      "errors": [],
+      "hook_installed": true,
+      "reading_sizes": {
+        "branding": 31658,
+        "device-models": 46797,
+        "documentation": 28021,
+        "optimization": 46324,
+        "orientation": 14784,
+        "qualification": 43088,
+        "reporting": 49947,
+        "topology": 48961
+      },
+      "receipt_sha256": "f2db232b6be2bb625d97efb99a59613f100bf4bc72e9dbc4cbb713b0957ed4c7",
+      "status": "pass"
+    },
+    "refresh": {
+      "receipt_sha256": "a49526f444744d582429cd96f876c9e25a7ed692dec356e28aa54b6e2af4c2a1",
+      "status": "pass"
+    },
+    "staged": {
+      "errors": [],
+      "hook_installed": true,
+      "reading_sizes": {
+        "branding": 31691,
+        "device-models": 46638,
+        "documentation": 28054,
+        "optimization": 46165,
+        "orientation": 14817,
+        "qualification": 42929,
+        "reporting": 49623,
+        "topology": 47956
+      },
+      "receipt_sha256": "b49ce72ec09748a9abfb80f507f541590fde5d12ff55542f6c93739d649977d8",
+      "status": "pass"
+    }
+  },
+  "staged_index": "pass;existing index only;no changes staged",
+  "staged_scope": "Existing index only; no changes staged",
+  "status": "pass"
+}

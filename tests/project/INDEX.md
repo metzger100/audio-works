@@ -4,6 +4,7 @@
 Immediate contents and child hubs.
 
 - [repo_fixture.py](repo_fixture.py) — active
+- [test_discovery_cli.py](test_discovery_cli.py) — active
 - [test_hooks.py](test_hooks.py) — active
 - [test_navigation.py](test_navigation.py) — active
 - [test_recovery.py](test_recovery.py) — active

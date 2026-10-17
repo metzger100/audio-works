@@ -8,6 +8,10 @@ Reproducible bounded tables/plots that preserve findings and originals.
 - [capsule_excess_controls.py](capsule_excess_controls.py) — active
 - [capsule_material_controls.py](capsule_material_controls.py) — active
 - [compare_architectures.py](compare_architectures.py) — active
+- [compare_architectures_002.py](compare_architectures_002.py) — active
+- [comparison_002_diagrams.py](comparison_002_diagrams.py) — active
+- [comparison_002_recovery.py](comparison_002_recovery.py) — active
+- [comparison_002_tables.py](comparison_002_tables.py) — active
 - [comparison_common.py](comparison_common.py) — active
 - [comparison_metrics.py](comparison_metrics.py) — active
 - [comparison_outputs.py](comparison_outputs.py) — active

@@ -1,0 +1,100 @@
+{
+  "classification_provenance": [
+    {
+      "document": "EP2675188A1/B1 cover and DPMA record",
+      "symbols": [
+        "H04R19/04",
+        "H03F1/34"
+      ]
+    },
+    {
+      "document": "EP2002273B1 cover and DPMA record",
+      "symbols": [
+        "G01R29/12",
+        "G01R19/00"
+      ]
+    },
+    {
+      "document": "EP2955936B1 cover and DPMA record",
+      "symbols": [
+        "G01R27/26",
+        "G01R1/30"
+      ]
+    },
+    {
+      "document": "US12021490B2 mirrored cover CPC visually read; web complementary query executed; official US source unverified",
+      "symbols": [
+        "H03F3/1855"
+      ]
+    }
+  ],
+  "compiled_date": "2026-10-17",
+  "coverage_limits": [
+    "Same-paragraph wording/classification/language limitations can omit relevant publications.",
+    "No date filter was used; unpublished applications remain invisible.",
+    "DE/EP/US/WO searching and some other-country hits do not establish worldwide coverage.",
+    "Full result exports not retained for broad searches; only identified samples and review scope are claimed.",
+    "Prepared keywords from prior tasks are excluded from executed counts."
+  ],
+  "entry_urls": {
+    "DEPATISnet": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=basis&switchToLang=en",
+    "DPMAregister": "https://register.dpma.de/DPMAregister/pat/basis",
+    "EPO": "https://www.epo.org/en/searching-for-patents",
+    "PATENTSCOPE": "https://patentscope.wipo.int/search/",
+    "USPTO": "https://www.uspto.gov/patents/search"
+  },
+  "execution_date": "2026-10-16",
+  "inaccessible": [
+    {
+      "actual_query": "EP12171634",
+      "database": "European Patent Register",
+      "id": "UI08",
+      "observed_utc": "2026-10-16T14:07:04.573Z",
+      "outcome": "security interstitial; HTTP403 receipts also retained for EP12171634,EP07712718,EP04450073; no prosecution/amended claims/status retrieved",
+      "url": "https://register.epo.org/application?number=EP12171634"
+    },
+    {
+      "actual_fields": {
+        "All serial/ID numbers": "WO2011054671"
+      },
+      "database": "WIPO PATENTSCOPE Simple",
+      "id": "UI09",
+      "observed_utc": "2026-10-16T14:07:21.042Z",
+      "outcome": "image-selection challenge; not solved; no patent detail/national-phase/examination record",
+      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2011054671"
+    },
+    {
+      "actual_query": "pn=EP2675188",
+      "database": "Espacenet",
+      "id": "UI32",
+      "observed_utc": "2026-10-16T14:12:01.975Z",
+      "outcome": "security interstitial; no result data",
+      "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP2675188"
+    },
+    {
+      "actual_query": "application18/135060",
+      "database": "USPTO Patent Center",
+      "id": "UI33",
+      "observed_utc": "2026-10-16T14:14:13.654Z",
+      "outcome": "blank app; no prosecution/current status. Public Search landing script-only via web; six original-PDF endpoints HTTP403. These are access gaps, not negative searches.",
+      "url": "https://patentcenter.uspto.gov/applications/18135060"
+    }
+  ],
+  "observations": {
+    "$include": "queries-official-001-8a17ad4ab431-0006-observations.json"
+  },
+  "schema_version": 1,
+  "timestamp_limit": "Browser times transcribed from the task observations; source retrieval UTC is exact in source receipts. UI final2648333 time rounded to minute; not a fresh17October status check.",
+  "unexecuted_attempts": [
+    {
+      "action": "Refresh13 exact DPMA records by HTTP",
+      "date": "2026-10-17",
+      "state": "cancelled before command execution after no tool result; zero refresh files exist; no17October fresh status asserted"
+    },
+    {
+      "action": "Initial ambiguous Start search button click",
+      "date": "2026-10-16",
+      "state": "locator failed before submission; not counted as an executed database query"
+    }
+  ]
+}

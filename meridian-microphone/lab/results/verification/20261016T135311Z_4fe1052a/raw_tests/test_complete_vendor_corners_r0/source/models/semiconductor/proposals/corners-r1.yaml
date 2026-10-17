@@ -1,0 +1,91 @@
+schema_version: 1
+probability_distribution: null
+vendor_jfe150_corners:
+  ids:
+  - jfe150_weak
+  - jfe150_generic
+  - jfe150_strong
+  state: coupled_vendor_proposals_must_check_against_limits_not_assumed_bounded
+  preserve:
+  - BETA
+  - VTO
+  - RD
+  - RS
+  - BETATCE
+  - VTOTC
+  - LAMBDA
+  sampling: no statistical distribution
+coupled_dc_controls:
+- id: jfe150_dc_bound_0
+  kind: coupled_analytic_dc_bound_control
+  manufacturer_evidence: JFE150 table6.5 at25C VDS10V; no joint distribution provided
+  idss_a: 0.024
+  gfs_s: 0.055
+  vto_v: -0.8727272727272728
+  beta_a_per_v2: 0.031510416666666666
+  lambda_per_v: 0
+  vgs_at_2ma_v: -0.6207926098081634
+  vgs_at_100ua_v: -0.8163929695097104
+  coverage: Feasible tuples only; not exhaustive correlated process coverage; no hardware
+    selection.
+  not_covered:
+  - leakage
+  - capacitance
+  - temperature
+  - noise
+  - output modulation
+  - SOA
+- id: jfe150_dc_bound_1
+  kind: coupled_analytic_dc_bound_control
+  manufacturer_evidence: JFE150 table6.5 at25C VDS10V; no joint distribution provided
+  idss_a: 0.035
+  gfs_s: 0.068
+  vto_v: -1.0294117647058825
+  beta_a_per_v2: 0.03302857142857143
+  lambda_per_v: 0
+  vgs_at_2ma_v: -0.7833352863135074
+  vgs_at_100ua_v: -0.9743873913709716
+  coverage: Feasible tuples only; not exhaustive correlated process coverage; no hardware
+    selection.
+  not_covered:
+  - leakage
+  - capacitance
+  - temperature
+  - noise
+  - output modulation
+  - SOA
+- id: jfe150_dc_bound_2
+  kind: coupled_analytic_dc_bound_control
+  manufacturer_evidence: JFE150 table6.5 at25C VDS10V; no joint distribution provided
+  idss_a: 0.046
+  gfs_s: 0.08
+  vto_v: -1.15
+  beta_a_per_v2: 0.034782608695652174
+  lambda_per_v: 0
+  vgs_at_2ma_v: -0.910208423834364
+  vgs_at_100ua_v: -1.0963809735261818
+  coverage: Feasible tuples only; not exhaustive correlated process coverage; no hardware
+    selection.
+  not_covered:
+  - leakage
+  - capacitance
+  - temperature
+  - noise
+  - output modulation
+  - SOA
+bipolar:
+  policy: Use complete vendor model at explicit temperatures; no independent BF/IS/noise
+    perturbations.
+  guaranteed_base_current_bounds_at_2ma:
+    BC846B:
+    - 4.444444444444444e-06
+    - 1.0e-05
+    BC856B:
+    - 4.210526315789474e-06
+    - 9.090909090909091e-06
+exploratory_stresses:
+  status: not_manufacturer_corners
+  temperatures_c:
+  - -20
+  - 70
+  instruction: If later used, preserve separate IDs and do not infer yield.

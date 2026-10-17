@@ -9,7 +9,7 @@
 
 Inspected all contracts/specifications,22 concepts/14 families, exact0012/0010/0014/0013 and0024 netlists/failures, comparison001, carrier protocol and actual Prompts6–9. Their device identities, capsule envelopes, nonlinear limits, leakage/startup/driver failures and full-suite states remain authoritative.
 
-The catalogue retains22 concepts:20 nonconventional inputs and17 instrumentation transfers. This batch is **not a periodic Inventor challenge**: the20/10/5 minimums remain unchanged. The matrix retains all nine physical answers and proposal/performance flags. New prerequisite columns imply no implementation or inherited performance.
+The catalogue retains22 concepts:20 nonconventional inputs and17 instrumentation transfers. This is **not a periodic Inventor challenge**: the20/10/5 minimums remain unchanged. All nine physical answers and proposal/performance flags survive. [Continuation audit](diverse-continuation-audit-001.md) verifies the retained evidence; no implementation or performance is inherited.
 
 | Cohort | Actual finite execution / retention |
 | --- | --- |
@@ -36,7 +36,7 @@ Exact0012/0024 replay uses the complete original P48/capsule/output circuit. Ind
 | Differential output conversion at1kHz |25.4009MV/C |2.80268GV/C |
 |1Hz-origin64/dec response deviation, exact20Hz/20kHz edges |20.9266dB |32.8229dB |
 
-These diagnostics supplement, rather than replace, the original32/dec full-suite deviations20.9306/32.8192dB. They use the exact simulated polarization22.3107V and motional charge0.520584pC/Pa. Global node voltages in raw tables include microphone-ground offset; conversion/KCL use differences. Tiny electrode voltage is not treated as loss of charge. The parent has low charge-to-voltage scale; the smaller-C child gains output but moves the bleed corner into audio. Device base conductance/capacitance, finite differential-stage gain and coupled supply/backplate/output loading remain relevant.
+These diagnostics supplement the original32/dec full-suite deviations20.9306/32.8192dB. They use simulated polarization22.3107V and motional charge0.520584pC/Pa. Raw global voltages include microphone-ground offset; conversion/KCL use differences. Tiny electrode voltage is not treated as loss of charge. The parent has low charge-to-voltage scale; the smaller-C child gains output but moves the bleed corner into audio. Base conductance/capacitance, finite differential-stage gain and coupled supply/backplate/output loading remain relevant.
 
 The independent hypothetical current-noise example at IB0.5µA,Vp40V yields15.26–16.75mPa RMS over20Hz–20kHz for white shot+reset noise, rising28.55–29.38mPa with an assumed100Hz current-flicker corner. These are conditional mathematical scales, **not0012 noise results**. Actual KF/current spectra and production coverage remain missing. Raising reset resistance to100MΩ at the observed1.934µA would require about193V; mean-current cancellation alone cannot eliminate shot noise.
 

@@ -67,6 +67,104 @@ def test_connectivity_retains_macro_pin_order_and_ideals():
     assert elements[3]["kind"] == "E" and elements[3]["nodes"] == ["out", "g"]
 
 
+def test_realized_filter_inductor_and_disjoint_losses():
+    elements = comparison.parse_elements(
+        "Lback b cb_ind {L}\nRCbackfilterloss cb_ind cb_loss 0.8\n", {"L": 3e-8}
+    )
+    assert elements[0]["nodes"] == ["b", "cb_ind"]
+    assert elements[0]["value_or_model"] == "3e-08"
+    assert comparison.noise_group("onoise_r.xdut.rcbackfilterloss") == "polarization network"
+    assert comparison.noise_group("onoise_r.xdut.rcbackfilterinsulation") == "polarization network"
+
+
+def test_common_cohort_statistics_retain_errors_in_holdout_denominator():
+    from comparison_002_tables import finite_summary
+
+    rows = [
+        {"candidate": "a", "holdout": True, "status": "pass", "response_deviation_db": 0.2},
+        {"candidate": "a", "holdout": True, "status": "fail", "response_deviation_db": 40},
+        {"candidate": "a", "holdout": True, "status": "error"},
+    ]
+    result = next(r for r in finite_summary(rows) if r["holdout"])
+    assert result["attempts"] == 3 and result["screens_pass"] == 1
+    assert result["error_count"] == 1 and result["worst_response_db"] == 40
+    assert result["artificial_screen_fraction"] == 1 / 3
+    assert result["all_requirement_yield"] is None
+    lo, hi = result["exact_95percent_interval"]
+    assert lo < 1 / 3 < hi
+
+
+def test_input_admittance_uses_actual_servo_return_node():
+    from comparison_002_recovery import input_admittance
+    from meridian_lab.core import Raw
+
+    f = np.array([1000.0])
+    raw = Raw(
+        {
+            "frequency": f,
+            "v(f)": np.array([1.0]),
+            "v(mic_g)": np.array([0.0]),
+            "v(xdut.servo)": np.array([0.75]),
+            "i(v.xdut.vjinput_1)": np.array([2e-9]),
+        },
+        "AC",
+    )
+    result = input_admittance(
+        raw,
+        {"RBIAS_VALUE": 1e9, "CBIASSTRAY_VALUE": 4e-12},
+        "Rbias f servo {RBIAS_VALUE}\nCbiasstray f servo {CBIASSTRAY_VALUE}\n",
+    )
+    assert result["actual_bias_return"] == "servo"
+    assert result["real_s"] == pytest.approx(2.25e-9)
+    assert result["equivalent_capacitance_f"] == pytest.approx(1e-12, abs=0)
+
+
+def test_realized_filter_diagram_preserves_elements_within_text_budget(tmp_path, monkeypatch):
+    import comparison_common
+    from meridian_lab.core import ROOT, read_yaml
+
+    folder = ROOT / "candidates/candidate_0025"
+    params = {k: v["default"] for k, v in read_yaml(folder / "topology.yaml")["parameters"].items()}
+    elements = comparison.parse_elements((folder / "circuit.cir").read_text(), params)
+    monkeypatch.setattr(comparison_common, "OUT", tmp_path)
+    comparison_common.diagram("candidate_0025", elements, compact=True)
+    payload = (tmp_path / "candidate-0025-connectivity.dot").read_text()
+    expected = sum(not (e["kind"] == "V" and e["value_or_model"] == "0") for e in elements)
+    assert payload.count("[shape=box,") == expected
+    assert "RCbackfilterloss" in payload and "Lbackfilter" in payload
+    assert len(payload) <= 15000
+
+
+def test_manifest_path_tree_retains_all_hashes_under_unchanged_page_limit(tmp_path):
+    from compare_architectures_002 import hash_tree
+    from meridian_lab.partition import bounded_data
+    from meridian_lab.bounded import write_data
+    from meridian_lab.core import read_yaml
+
+    records = {
+        f"results/runs/experiment_{i % 8}/source/research/long_documentary_subject_name/retained_original_references_with_exact_identity/files/file_{i:05}.py": f"{i:064x}"
+        for i in range(12000)
+    }
+    with pytest.raises(ValueError, match="Too many include pages"):
+        bounded_data(records, "manifest.json")
+    tree = hash_tree(records)
+    path = tmp_path / "manifest.json"
+    write_data(path, tree)
+    assert read_yaml(path) == tree
+    assert all(len(p.read_text()) <= 15000 for p in tmp_path.rglob("*.json"))
+    recovered = {}
+
+    def visit(node, parts=()):
+        for key, value in node.items():
+            if isinstance(value, dict):
+                visit(value, (*parts, key))
+            else:
+                recovered["/".join((*parts, key))] = value
+
+    visit(read_yaml(path))
+    assert recovered == records
+
+
 def test_paired_endpoints_reject_missing_coverage_and_keep_unknowns():
     from comparison_metrics import paired_endpoints
 

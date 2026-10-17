@@ -29,3 +29,5 @@ Retain failure scope: software/model/integration failure does not reject an enti
 [Capsule material controls](../capsules/physics-001.md#material-consistency-and-center-constrained-examples) reject unqualified physical feasibility of the simple3µm polyester disk and two low-sensitivity material transfers. Retain both the original calculations and adverse sensitivity range; center-constraint/film-grade data remain unknown.
 
 [Diverse001](../architectures/diverse-prerequisites-001.md) rejects treating a small charge-node voltage as lost conversion, DC current cancellation as shot-noise cancellation, converged guard AC as stability proof, or seeded ideal mixer agreement as native periodic-device qualification. Failed macros and unaudited ideal power cannot retire families.
+
+[Comparison002](../architectures/architecture-comparison-002.md) rejects a universal nominal winner, tiny0017/0019 noise ranking below refinement,13/16 artificial screen passes as manufacturing yield, and a fixed-bias node name as a servo input-admittance boundary. Original annotation errors remain beside corrected extractions; no simulator failure earns a pass.

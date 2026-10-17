@@ -1,0 +1,21 @@
+{
+  "original_attempts": 203,
+  "original_bytes_modified": false,
+  "original_errors": 82,
+  "plan": {
+    "date": "2026-10-17",
+    "hypotheses": "Servo uses f-servo Rbias/Cbiasstray; fixed bias uses f-gatebias. Saved DC/AC/noise completed before diagnostic exception.",
+    "parent": "results/mechanism_controls/20261017T090130Z_comparison002_9392cebd",
+    "scope": "Optional input-admittance node lookup only",
+    "simulations": 0,
+    "source": "tools/reporting/comparison_002_recovery.py",
+    "source_sha256": "2cfdf51687a87cca8f7e8ef71dfe2a27806f5bf2fdf4fe3bebdd2161e833190a",
+    "stopping": "Read all203 original rows once; recover only exact known missing-node error when every job succeeded and independent response reconstruction agrees. Preserve all original states/reasons/denominators.",
+    "threshold_changes": false
+  },
+  "recovered": {
+    "$include": "recovery-f0753606c183-0001-recovered.json"
+  },
+  "same_scenarios": true,
+  "successor_errors": 0
+}

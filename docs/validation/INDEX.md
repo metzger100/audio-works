@@ -16,5 +16,21 @@ Immediate contents and child hubs.
 - [2026-10-12-focused-hypotheses.md](2026-10-12-focused-hypotheses.md) — active
 - [2026-10-12-focused-preservation.json](2026-10-12-focused-preservation.json) — active
 - [2026-10-16-diverse-checks.json](2026-10-16-diverse-checks.json) — active
+- [2026-10-16-diverse-continuation-checks.json](2026-10-16-diverse-continuation-checks.json) — active
+- [2026-10-16-diverse-continuation-preservation.json](2026-10-16-diverse-continuation-preservation.json) — active
+- [2026-10-16-diverse-continuation.md](2026-10-16-diverse-continuation.md) — active
 - [2026-10-16-diverse-prerequisites.md](2026-10-16-diverse-prerequisites.md) — active
 - [2026-10-16-diverse-preservation.json](2026-10-16-diverse-preservation.json) — active
+- [2026-10-17-comparison-002-attempts.json](2026-10-17-comparison-002-attempts.json) — active
+- [2026-10-17-comparison-002-batch-integrity.json](2026-10-17-comparison-002-batch-integrity.json) — active
+- [2026-10-17-comparison-002-checks.json](2026-10-17-comparison-002-checks.json) — active
+- [2026-10-17-comparison-002-inventory.json](2026-10-17-comparison-002-inventory.json) — active
+- [2026-10-17-comparison-002-preservation.json](2026-10-17-comparison-002-preservation.json) — active
+- [2026-10-17-comparison-002-values.json](2026-10-17-comparison-002-values.json) — active
+- [2026-10-17-comparison-002.md](2026-10-17-comparison-002.md) — active
+- [2026-10-17-patent-screening-checks.json](2026-10-17-patent-screening-checks.json) — active
+- [2026-10-17-patent-screening-preservation.json](2026-10-17-patent-screening-preservation.json) — active
+- [2026-10-17-patent-screening.md](2026-10-17-patent-screening.md) — active
+- [2026-10-17-token-efficient-navigation-checks.json](2026-10-17-token-efficient-navigation-checks.json) — active
+- [2026-10-17-token-efficient-navigation.md](2026-10-17-token-efficient-navigation.md) — active
+- [data-pages/](data-pages/INDEX.md)

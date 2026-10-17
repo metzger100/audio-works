@@ -1,0 +1,307 @@
+{
+  "coverage": "DC feasibility screen; device safe operating area remains a separate evidence gate",
+  "metrics": {
+    "conductor_current_mismatch_fraction": 0.004196240315444558,
+    "current_a": 0.004153232750883347,
+    "current_per_leg_a": [
+      0.0020722593847645045,
+      0.002080973366118845
+    ],
+    "dc_energy_accounting": {
+      "capsule_leakage_power_w": 5.109581939559041e-10,
+      "devices": [
+        {
+          "absorbed_power_w": 0.06408058263118191,
+          "instance": "Qreg",
+          "model_id": "bc846b_emitter_r1",
+          "terminal_currents_a": [
+            0.004000362049083606,
+            1.02427760846739e-05,
+            -0.004010604825115394
+          ],
+          "terminal_kcl_residual_a": 5.2885874255196794e-14,
+          "terminal_voltages_v": [
+            29.671201934606227,
+            14.315212090530745,
+            13.654198665455706
+          ]
+        },
+        {
+          "absorbed_power_w": 0.01217965190893493,
+          "instance": "Jinput",
+          "model_id": "jfe150_pspice",
+          "terminal_currents_a": [
+            0.001290645877214034,
+            -1.659997644860306e-11,
+            -0.001290645857245146,
+            3.92773175095229e-11,
+            -4.264785757619044e-11
+          ],
+          "terminal_kcl_residual_a": -1.6284270474292972e-15,
+          "terminal_voltages_v": [
+            13.654198665455706,
+            3.452396516959243,
+            4.217333324809621,
+            13.654198665455706,
+            0.0
+          ]
+        },
+        {
+          "absorbed_power_w": 0.0037879230468015053,
+          "instance": "Qoutp",
+          "model_id": "bc846b_emitter_r1",
+          "terminal_currents_a": [
+            0.0003878207917225041,
+            1.101536595344427e-06,
+            -0.0003889223282822485
+          ],
+          "terminal_kcl_residual_a": 3.5600049595862896e-14,
+          "terminal_voltages_v": [
+            13.654198665455706,
+            4.4870595183631865,
+            3.8886986944582724
+          ]
+        },
+        {
+          "absorbed_power_w": 0.0022864493841500554,
+          "instance": "Qinvert",
+          "model_id": "bc846b_emitter_r1",
+          "terminal_currents_a": [
+            0.0003889257021043591,
+            1.211895896389287e-06,
+            -0.0003901375979884492
+          ],
+          "terminal_kcl_residual_a": 1.2299189656433799e-14,
+          "terminal_voltages_v": [
+            9.763191388718305,
+            4.4870595183631865,
+            3.8861789745998574
+          ]
+        },
+        {
+          "absorbed_power_w": 0.00414953845448544,
+          "instance": "Qoutn",
+          "model_id": "bc846b_emitter_r1",
+          "terminal_currents_a": [
+            0.0009184082697402118,
+            2.98059723115307e-06,
+            -0.0009213888669332704
+          ],
+          "terminal_kcl_residual_a": 3.809452710893421e-14,
+          "terminal_voltages_v": [
+            13.654198665455706,
+            9.763191388718305,
+            9.138042535492296
+          ]
+        }
+      ],
+      "relative_residual": 1.7562414496286075e-11,
+      "residual_w": 2.4977520052260616e-12,
+      "resistors": [
+        {
+          "absorbed_power_w": 0.009481400635288092,
+          "reference": "Rharvestp"
+        },
+        {
+          "absorbed_power_w": 0.009507443306485789,
+          "reference": "Rharvestn"
+        },
+        {
+          "absorbed_power_w": 0.0023434678935166445,
+          "reference": "Rregtop"
+        },
+        {
+          "absorbed_power_w": 0.0020380079470583958,
+          "reference": "Rregbottom"
+        },
+        {
+          "absorbed_power_w": 0.004654638668896217,
+          "reference": "Rmidtop"
+        },
+        {
+          "absorbed_power_w": 0.004621005291821731,
+          "reference": "Rmidbottom"
+        },
+        {
+          "absorbed_power_w": 3.339542008169948e-16,
+          "reference": "Rpolar0"
+        },
+        {
+          "absorbed_power_w": 3.3007042823646095e-16,
+          "reference": "Rpolar1"
+        },
+        {
+          "absorbed_power_w": 3.291539855329461e-16,
+          "reference": "Rpolar2"
+        },
+        {
+          "absorbed_power_w": 3.2930137870862873e-16,
+          "reference": "Rpolar3"
+        },
+        {
+          "absorbed_power_w": 3.3176318186744174e-16,
+          "reference": "Rpolar4"
+        },
+        {
+          "absorbed_power_w": 3.331782523219364e-16,
+          "reference": "Rpolar5"
+        },
+        {
+          "absorbed_power_w": 3.3496981375804626e-16,
+          "reference": "Rpolar6"
+        },
+        {
+          "absorbed_power_w": 3.295792788995399e-16,
+          "reference": "Rpolar7"
+        },
+        {
+          "absorbed_power_w": 3.2950737804683644e-16,
+          "reference": "Rpolar8"
+        },
+        {
+          "absorbed_power_w": 3.2866602365276155e-16,
+          "reference": "Rpolar9"
+        },
+        {
+          "absorbed_power_w": 3.3440972124279326e-16,
+          "reference": "Rback"
+        },
+        {
+          "absorbed_power_w": 0.0011720015949238014,
+          "reference": "Rgatetop0"
+        },
+        {
+          "absorbed_power_w": 0.0011565689404298177,
+          "reference": "Rgatetop1"
+        },
+        {
+          "absorbed_power_w": 0.0011621817343342538,
+          "reference": "Rgatetop2"
+        },
+        {
+          "absorbed_power_w": 0.0011700219213981533,
+          "reference": "Rgatebottom"
+        },
+        {
+          "absorbed_power_w": 6.211256616514107e-13,
+          "reference": "Rbias"
+        },
+        {
+          "absorbed_power_w": 9.388652678253446e-20,
+          "reference": "Rrear"
+        },
+        {
+          "absorbed_power_w": 0.0054430837842874375,
+          "reference": "Rsource"
+        },
+        {
+          "absorbed_power_w": 5.383148229954389e-06,
+          "reference": "Rsignal"
+        },
+        {
+          "absorbed_power_w": 2.6271741261408363e-12,
+          "reference": "Routp"
+        },
+        {
+          "absorbed_power_w": 2.981464459263513e-14,
+          "reference": "Routn"
+        },
+        {
+          "absorbed_power_w": 0.0015161445305046282,
+          "reference": "Rinvemitter"
+        },
+        {
+          "absorbed_power_w": 0.0015249102625439306,
+          "reference": "Rinvcollector"
+        },
+        {
+          "absorbed_power_w": 0.0015133199432092086,
+          "reference": "Routloadp"
+        },
+        {
+          "absorbed_power_w": 0.008419920917720716,
+          "reference": "Routloadn"
+        },
+        {
+          "absorbed_power_w": 0.0,
+          "reference": "RCoutp0loss"
+        },
+        {
+          "absorbed_power_w": 2.307210596689732e-09,
+          "reference": "RCoutp0leak"
+        },
+        {
+          "absorbed_power_w": 0.0,
+          "reference": "RCoutp1loss"
+        },
+        {
+          "absorbed_power_w": 8.798506126873051e-10,
+          "reference": "RCoutp1leak"
+        },
+        {
+          "absorbed_power_w": 0.0,
+          "reference": "RCoutp2loss"
+        },
+        {
+          "absorbed_power_w": 4.862294985900782e-09,
+          "reference": "RCoutp2leak"
+        },
+        {
+          "absorbed_power_w": 0.0,
+          "reference": "RCoutp3loss"
+        },
+        {
+          "absorbed_power_w": 7.1601262899742245e-06,
+          "reference": "RCoutp3leak"
+        },
+        {
+          "absorbed_power_w": 0.0,
+          "reference": "RCoutn0loss"
+        },
+        {
+          "absorbed_power_w": 1.0490939221120125e-11,
+          "reference": "RCoutn0leak"
+        },
+        {
+          "absorbed_power_w": 0.0,
+          "reference": "RCoutn1loss"
+        },
+        {
+          "absorbed_power_w": 3.6766881946915033e-07,
+          "reference": "RCoutn1leak"
+        },
+        {
+          "absorbed_power_w": 0.0,
+          "reference": "RCoutn2loss"
+        },
+        {
+          "absorbed_power_w": 2.64791712357657e-07,
+          "reference": "RCoutn2leak"
+        },
+        {
+          "absorbed_power_w": 0.0,
+          "reference": "RCoutn3loss"
+        },
+        {
+          "absorbed_power_w": 4.7002461546577986e-11,
+          "reference": "RCoutn3leak"
+        }
+      ],
+      "scope": "DC terminal energy only; vendor macro internals, thermal/SOA and periodic controls unqualified",
+      "summed_absorbed_power_w": 0.14222144715411397,
+      "terminal_power_w": 0.14222144715661172
+    },
+    "device_power_qualification": "Terminal currents/powers recorded; thermal/SOA and vendor power-block fidelity remain unqualified",
+    "internal_rail_v": 13.654198665455706,
+    "mic_terminal_v": [
+      34.247116109329205,
+      34.240005450346246
+    ],
+    "polarization_dc_v": 26.218605332872013,
+    "safe_capsule_bias": "unknown; simulated voltage is not approved for hardware",
+    "supplied_power_w": 0.18997177773365637,
+    "terminal_power_w": 0.14222144715661172
+  },
+  "reason": null,
+  "status": "pass"
+}

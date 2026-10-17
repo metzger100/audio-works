@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+revision: nonlinear-extraction-replay-r1
+declared_date: '2026-10-11'
+purpose: Freeze the finite extraction/refinement replay separately from SPICE execution.
+parent_scope: Earlier unfrozen report replay is exploratory; this record supplies the frozen successor.
+simulator_jobs: 0
+models: [jfe150_generic, jfe150_weak, jfe150_strong, jfe150_pspice, jfe150_tina_isolated]
+waveforms: [follower_direct, follower_refined]
+maximum_fits: 60
+frequency_hz: 1000
+settled_after_s: 0.032
+cycles: [8, 16]
+samples_per_cycle: [128, 256, 512]
+maximum_steps_s: [2e-6, 1e-6]
+acceptance: {refinement_fraction: 0.01, settling_fraction: 0.001}
+uncertainty: Deterministic spread only, no stochastic confidence or measured model-error bound.
+stopping: One replay of retained waves; no simulations, favorable selection or budget increase.

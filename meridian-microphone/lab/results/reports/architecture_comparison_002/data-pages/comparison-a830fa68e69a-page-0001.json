@@ -1,0 +1,284 @@
+{
+  "batch": "results/mechanism_controls/20261017T090130Z_comparison002_9392cebd",
+  "bom": {
+    "$include": "comparison-a830fa68e69a-0006-bom.json"
+  },
+  "coverage": {
+    "$include": "comparison-a830fa68e69a-0005-coverage.json"
+  },
+  "date": "2026-10-17",
+  "finite_summaries": [
+    {
+      "all_requirement_yield": null,
+      "artificial_screen_fraction": 0.0,
+      "attempts": 23,
+      "candidate": "candidate_0012",
+      "empirical_p95_db": 21.85206445471006,
+      "error_count": 0,
+      "exact_95percent_interval": null,
+      "failed_count": 23,
+      "finite_responses": 23,
+      "holdout": false,
+      "original_error_count": 0,
+      "scope": "DC/AC feasibility of finite artificial scenarios only; noise availability does not qualify it",
+      "screens_pass": 0,
+      "statuses": {
+        "fail": 23
+      },
+      "worst_response_db": 23.149107691662103
+    },
+    {
+      "all_requirement_yield": null,
+      "artificial_screen_fraction": 0.0,
+      "attempts": 16,
+      "candidate": "candidate_0012",
+      "empirical_p95_db": 22.474130197490393,
+      "error_count": 0,
+      "exact_95percent_interval": [
+        0.0,
+        0.2059072142078227
+      ],
+      "failed_count": 16,
+      "finite_responses": 16,
+      "holdout": true,
+      "original_error_count": 0,
+      "scope": "DC/AC feasibility of finite artificial scenarios only; noise availability does not qualify it",
+      "screens_pass": 0,
+      "statuses": {
+        "fail": 16
+      },
+      "worst_response_db": 22.60135142568009
+    },
+    {
+      "all_requirement_yield": null,
+      "artificial_screen_fraction": 0.88,
+      "attempts": 25,
+      "candidate": "candidate_0017",
+      "empirical_p95_db": 16.830879869895305,
+      "error_count": 0,
+      "exact_95percent_interval": null,
+      "failed_count": 3,
+      "finite_responses": 25,
+      "holdout": false,
+      "original_error_count": 0,
+      "scope": "DC/AC feasibility of finite artificial scenarios only; noise availability does not qualify it",
+      "screens_pass": 22,
+      "statuses": {
+        "fail": 3,
+        "pass": 22
+      },
+      "worst_response_db": 22.934670322281917
+    },
+    {
+      "all_requirement_yield": null,
+      "artificial_screen_fraction": 0.8125,
+      "attempts": 16,
+      "candidate": "candidate_0017",
+      "empirical_p95_db": 1.6688408366098046,
+      "error_count": 0,
+      "exact_95percent_interval": [
+        0.5435434537683883,
+        0.9595262660940541
+      ],
+      "failed_count": 3,
+      "finite_responses": 16,
+      "holdout": true,
+      "original_error_count": 0,
+      "scope": "DC/AC feasibility of finite artificial scenarios only; noise availability does not qualify it",
+      "screens_pass": 13,
+      "statuses": {
+        "fail": 3,
+        "pass": 13
+      },
+      "worst_response_db": 1.6827462098397512
+    },
+    {
+      "all_requirement_yield": null,
+      "artificial_screen_fraction": 0.88,
+      "attempts": 25,
+      "candidate": "candidate_0019",
+      "empirical_p95_db": 16.647533163827564,
+      "error_count": 0,
+      "exact_95percent_interval": null,
+      "failed_count": 3,
+      "finite_responses": 25,
+      "holdout": false,
+      "original_error_count": 0,
+      "scope": "DC/AC feasibility of finite artificial scenarios only; noise availability does not qualify it",
+      "screens_pass": 22,
+      "statuses": {
+        "fail": 3,
+        "pass": 22
+      },
+      "worst_response_db": 22.80753412438647
+    },
+    {
+      "all_requirement_yield": null,
+      "artificial_screen_fraction": 0.8125,
+      "attempts": 16,
+      "candidate": "candidate_0019",
+      "empirical_p95_db": 1.4166891278017213,
+      "error_count": 0,
+      "exact_95percent_interval": [
+        0.5435434537683883,
+        0.9595262660940541
+      ],
+      "failed_count": 3,
+      "finite_responses": 16,
+      "holdout": true,
+      "original_error_count": 0,
+      "scope": "DC/AC feasibility of finite artificial scenarios only; noise availability does not qualify it",
+      "screens_pass": 13,
+      "statuses": {
+        "fail": 3,
+        "pass": 13
+      },
+      "worst_response_db": 1.4213258572801006
+    },
+    {
+      "all_requirement_yield": null,
+      "artificial_screen_fraction": 0.8,
+      "attempts": 25,
+      "candidate": "candidate_0023",
+      "empirical_p95_db": 12.858479426438471,
+      "error_count": 0,
+      "exact_95percent_interval": null,
+      "failed_count": 5,
+      "finite_responses": 25,
+      "holdout": false,
+      "original_error_count": 25,
+      "scope": "DC/AC feasibility of finite artificial scenarios only; noise availability does not qualify it",
+      "screens_pass": 20,
+      "statuses": {
+        "fail": 5,
+        "pass": 20
+      },
+      "worst_response_db": 18.462095039007522
+    },
+    {
+      "all_requirement_yield": null,
+      "artificial_screen_fraction": 0.125,
+      "attempts": 16,
+      "candidate": "candidate_0023",
+      "empirical_p95_db": 1.7602785488148824,
+      "error_count": 0,
+      "exact_95percent_interval": [
+        0.015513603815413885,
+        0.38347623684926346
+      ],
+      "failed_count": 14,
+      "finite_responses": 16,
+      "holdout": true,
+      "original_error_count": 16,
+      "scope": "DC/AC feasibility of finite artificial scenarios only; noise availability does not qualify it",
+      "screens_pass": 2,
+      "statuses": {
+        "fail": 14,
+        "pass": 2
+      },
+      "worst_response_db": 1.8270059626444373
+    },
+    {
+      "all_requirement_yield": null,
+      "artificial_screen_fraction": 0.88,
+      "attempts": 25,
+      "candidate": "candidate_0025",
+      "empirical_p95_db": 13.763517403371026,
+      "error_count": 0,
+      "exact_95percent_interval": null,
+      "failed_count": 3,
+      "finite_responses": 25,
+      "holdout": false,
+      "original_error_count": 25,
+      "scope": "DC/AC feasibility of finite artificial scenarios only; noise availability does not qualify it",
+      "screens_pass": 22,
+      "statuses": {
+        "fail": 3,
+        "pass": 22
+      },
+      "worst_response_db": 19.307977857569515
+    },
+    {
+      "all_requirement_yield": null,
+      "artificial_screen_fraction": 0.8125,
+      "attempts": 16,
+      "candidate": "candidate_0025",
+      "empirical_p95_db": 1.293288556587181,
+      "error_count": 0,
+      "exact_95percent_interval": [
+        0.5435434537683883,
+        0.9595262660940541
+      ],
+      "failed_count": 3,
+      "finite_responses": 16,
+      "holdout": true,
+      "original_error_count": 16,
+      "scope": "DC/AC feasibility of finite artificial scenarios only; noise availability does not qualify it",
+      "screens_pass": 13,
+      "statuses": {
+        "fail": 3,
+        "pass": 13
+      },
+      "worst_response_db": 1.2983757350009042
+    }
+  ],
+  "harmonics_headroom": {
+    "$include": "comparison-a830fa68e69a-0012-harmonics-headroom.json"
+  },
+  "matched_rows": {
+    "$include": "comparison-a830fa68e69a-0008-matched-rows.json"
+  },
+  "noise_contributions": {
+    "$include": "comparison-a830fa68e69a-0009-noise-contributions.json"
+  },
+  "nominal_metrics": {
+    "$include": "comparison-a830fa68e69a-0004-nominal-metrics.json"
+  },
+  "procurement": {
+    "$include": "comparison-a830fa68e69a-0007-procurement.json"
+  },
+  "records": {
+    "$include": "comparison-a830fa68e69a-0003-records.json"
+  },
+  "refinement": [
+    {
+      "candidate": "candidate_0017",
+      "noise128_to256_relative": -4.8092089141138494e-05,
+      "numerical_only": true,
+      "physical_model_error_bound": null,
+      "response64_to128_db_delta": -0.000394215803677489
+    },
+    {
+      "candidate": "candidate_0019",
+      "noise128_to256_relative": -4.627832818493438e-05,
+      "numerical_only": true,
+      "physical_model_error_bound": null,
+      "response64_to128_db_delta": -0.0003414572414356387
+    },
+    {
+      "candidate": "candidate_0023",
+      "noise128_to256_relative": -2.044814708224152e-05,
+      "numerical_only": true,
+      "physical_model_error_bound": null,
+      "response64_to128_db_delta": 8.251012366677912e-07
+    },
+    {
+      "candidate": "candidate_0025",
+      "noise128_to256_relative": -4.4876442258035e-05,
+      "numerical_only": true,
+      "physical_model_error_bound": null,
+      "response64_to128_db_delta": -0.0003085610954772777
+    },
+    {
+      "candidate": "candidate_0012",
+      "noise128_to256_relative": -1.1042508603065215e-06,
+      "numerical_only": true,
+      "physical_model_error_bound": null,
+      "response64_to128_db_delta": -0.0007521311354068416
+    }
+  ],
+  "scope": "Prompt13 finite conditional research; no physical qualification or production selection",
+  "spectra": {
+    "$include": "comparison-a830fa68e69a-0010-spectra.json"
+  }
+}

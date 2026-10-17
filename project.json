@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
-  "as_of": "2026-10-16",
-  "phase": "Independent mechanism prerequisites",
+  "as_of": "2026-10-17",
+  "phase": "Frozen architecture comparison",
   "readiness": {
-    "software": "109 lab,40 Git/recovery and23 fast tests pass.",
-    "engineering": "Charge/reset and seeded carrier oracles; floating CMOS held; all unqualified.",
-    "procurement": "Realized BOMs; Germany private orderability/costs unresolved.",
-    "patents": "Two early claim inspections;official status and screening unresolved.",
+    "software": "32 fast and 44 Git/recovery pass; 114 lab previously.",
+    "engineering": "Eight common suites,203 paired cells; all unqualified.",
+    "procurement": "Exact BOMs; private Germany delivered totals unresolved.",
+    "patents": "Exact claims bindings;3 DE statuses refreshed; all holds retained.",
     "physical": "Unmeasured;access deferred;no selected prototype.",
     "preservation": "GitHub: canonical committed records;private originals local."
   },
@@ -15,7 +15,7 @@
     "Device/nonlinear/production coverage incomplete.",
     "Procurement and candidate patent screening unresolved."
   ],
-  "next_action": "Validate grounded CMOS charge and real reset noise; continue JFET loop/leakage work.",
+  "next_action": "Resolve JFET leakage/loops and full-DUT transient prerequisites; measurements deferred.",
   "evidence": [
     "meridian-microphone/lab/research/capsules/evidence-envelope-001.md",
     "meridian-microphone/lab/research/devices/parts-database-expansion-002.md",
@@ -32,7 +32,14 @@
     "meridian-microphone/lab/research/architectures/focused-hypotheses-001.md",
     "docs/validation/2026-10-12-focused-hypotheses.md",
     "meridian-microphone/lab/research/architectures/diverse-prerequisites-001.md",
-    "docs/validation/2026-10-16-diverse-prerequisites.md"
+    "docs/validation/2026-10-16-diverse-prerequisites.md",
+    "meridian-microphone/lab/research/architectures/diverse-continuation-audit-001.md",
+    "docs/validation/2026-10-16-diverse-continuation.md",
+    "meridian-microphone/lab/research/patents/candidate-screening-001.md",
+    "docs/validation/2026-10-17-patent-screening.md",
+    "meridian-microphone/lab/research/architectures/architecture-comparison-002.md",
+    "docs/validation/2026-10-17-comparison-002.md",
+    "docs/validation/2026-10-17-token-efficient-navigation.md"
   ],
   "stages": [
     {
@@ -58,7 +65,7 @@
     {
       "id": "reporting",
       "state": "partial",
-      "evidence": "meridian-microphone/lab/research/architectures/architecture-comparison-001.md"
+      "evidence": "meridian-microphone/lab/research/architectures/architecture-comparison-002.md"
     }
   ],
   "common": [
@@ -139,10 +146,14 @@
     "$include": "docs/config/external-files.json"
   },
   "quality_change": {
-    "date": "2026-10-16",
-    "decision": "docs/decisions/2026-10-16-private-architecture-sources.md",
+    "date": "2026-10-17",
+    "decision": "docs/decisions/2026-10-17-token-efficient-navigation.md",
     "tests": [
-      "tests/project/test_storage_policy.py"
+      "tests/quality/test_discovery.py",
+      "tests/project/test_navigation.py",
+      "tests/quality/test_structure.py",
+      "meridian-microphone/lab/tests/test_comparison.py",
+      "tests/project/test_discovery_cli.py"
     ]
   },
   "original_revision": "20c039a5323964520f80da2a3e9c07bd097b5e79",

@@ -1,0 +1,215 @@
+[
+  {
+    "assumption_inverted": "The capsule must be voltage sensed",
+    "balanced_output": "Independent balanced output",
+    "dc_bias": "Feedback bleed resistor and midrail reference",
+    "expected_dominant_distortion": "Input compliance and finite loop gain",
+    "expected_dominant_noise": "Feedback resistor, voltage noise times noise gain",
+    "families": [
+      "charge",
+      "no_jfet",
+      "instrumentation"
+    ],
+    "fastest_falsification": "Noise gain and return ratio across C/leakage and feedback-C tolerance",
+    "gain_or_impedance_transformation": "Charge-to-voltage in feedback C",
+    "id": "concept_0010",
+    "likely_fatal_flaw": "Bleed noise or required compensation ruins audio range",
+    "loading_control": "Virtual potential and feedback capacitance",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "sensed_quantity": "Charge/current integral",
+    "sources": [
+      "S05"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "CMOS charge amplifier with resistive bleed"
+  },
+  {
+    "assumption_inverted": "The capsule must be voltage sensed",
+    "balanced_output": "Differential integration/output stage",
+    "dc_bias": "DC servo removes leakage without passing it through audio",
+    "expected_dominant_distortion": "Integrator saturation and TIA slew",
+    "expected_dominant_noise": "TIA voltage/current noise and feedback R",
+    "families": [
+      "current",
+      "servo",
+      "instrumentation"
+    ],
+    "fastest_falsification": "DC leakage steps, integrated LF noise and corner clipping",
+    "gain_or_impedance_transformation": "Resistive TIA then frequency-shaped integrator",
+    "id": "concept_0011",
+    "likely_fatal_flaw": "Extra stages cost current/noise and drift into clipping",
+    "loading_control": "Virtual input voltage defines capsule loading",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "sensed_quantity": "Displacement current",
+    "sources": [
+      "S07",
+      "S08"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "TIA followed by leaky integrator"
+  },
+  {
+    "assumption_inverted": "The capsule must be referenced to a fixed potential",
+    "balanced_output": "Level-shifting differential current outputs",
+    "dc_bias": "Controlled floating rail and slow common-mode servo",
+    "expected_dominant_distortion": "Common-mode loop and output compliance",
+    "expected_dominant_noise": "Isolation/reference and input noise",
+    "families": [
+      "floating",
+      "no_jfet",
+      "instrumentation"
+    ],
+    "fastest_falsification": "Full DC solvability and power/current sweep before audio metrics",
+    "gain_or_impedance_transformation": "Floating CMOS error amplifier",
+    "id": "concept_0012",
+    "likely_fatal_flaw": "No stable power extraction/common-mode solution under P48",
+    "loading_control": "Float local reference with capsule rather than case",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "sensed_quantity": "Voltage/charge between capsule electrodes",
+    "sources": [
+      "S09"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Floating powered sensor island"
+  },
+  {
+    "assumption_inverted": "The capsule must be voltage sensed",
+    "balanced_output": "Analog sum/difference into balanced line driver",
+    "dc_bias": "Two slow DC loops and controlled backplate",
+    "expected_dominant_distortion": "Mismatch and interchannel feedback",
+    "expected_dominant_noise": "Two front ends and backplate-reference noise",
+    "families": [
+      "differential",
+      "charge",
+      "instrumentation"
+    ],
+    "fastest_falsification": "Verify electrical isolation and sweep arbitrary front/rear phase/correlation",
+    "gain_or_impedance_transformation": "Two charge conversion loops",
+    "id": "concept_0013",
+    "likely_fatal_flaw": "Electrode access or acoustic correlation differs from assumed model",
+    "loading_control": "Separate virtual nodes, account for shared backplate",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "sensed_quantity": "Independent front/rear charges",
+    "sources": [
+      "S05",
+      "S09"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Dual front/rear charge channels"
+  },
+  {
+    "assumption_inverted": "The first device must be a FET",
+    "balanced_output": "Impedance-balanced line driver",
+    "dc_bias": "Controlled base current and slow cancellation",
+    "expected_dominant_distortion": "Bootstrap tracking and base-emitter curvature",
+    "expected_dominant_noise": "Base shot noise; cancellation may not remove fluctuations",
+    "families": [
+      "bootstrap",
+      "no_fet"
+    ],
+    "fastest_falsification": "Noise with cancellation on/off plus guard loop stability",
+    "gain_or_impedance_transformation": "Degenerated bipolar follower with auxiliary guard loop",
+    "id": "concept_0014",
+    "likely_fatal_flaw": "Bias cancellation removes mean but leaves excessive shot noise",
+    "loading_control": "Drive bias/guard to reduce effective capacitance and DC loading",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "sensed_quantity": "Capsule voltage",
+    "sources": [
+      "S06"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Bootstrapped bipolar voltage input"
+  },
+  {
+    "assumption_inverted": null,
+    "balanced_output": "Feedback-controlled line stage",
+    "dc_bias": "Servo adjusts source current/DC voltage",
+    "expected_dominant_distortion": "Servo modulation and finite audio feedback",
+    "expected_dominant_noise": "JFET noise and servo leakage/sidebands",
+    "families": [
+      "servo",
+      "unconventional_jfet"
+    ],
+    "fastest_falsification": "Leakage/device spread, startup and audio/servo loop interaction",
+    "gain_or_impedance_transformation": "JFET transconductance and local feedback",
+    "id": "concept_0015",
+    "likely_fatal_flaw": "Servo actuator injects noise or cannot start reliably",
+    "loading_control": "High-impedance audio node; DC loop filtered far below audio",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "sensed_quantity": "Capsule voltage",
+    "sources": [
+      "S06"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "JFET audio path with separate ultra-slow bias servo"
+  },
+  {
+    "assumption_inverted": null,
+    "balanced_output": "Transformer with DC-separated P48 extraction",
+    "dc_bias": "Source degeneration without specimen selection",
+    "expected_dominant_distortion": "Device curvature and transformer magnetic behavior",
+    "expected_dominant_noise": "Input device and transformer loss",
+    "families": [
+      "minimal",
+      "conventional_jfet"
+    ],
+    "fastest_falsification": "Device corners then lossy transformer headroom and LF response",
+    "gain_or_impedance_transformation": "One JFET gain/current stage",
+    "id": "concept_0016",
+    "likely_fatal_flaw": "No-selection bias or required transformer drive fails",
+    "loading_control": "Low-C input with passive bias",
+    "nonconventional_jfet_buffer": false,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": false,
+    "sensed_quantity": "Capsule voltage",
+    "sources": [],
+    "status": "proposed_not_simulated",
+    "title": "Single active JFET with passive balanced transformation"
+  },
+  {
+    "assumption_inverted": null,
+    "balanced_output": "Fully differential output with shared CM controller",
+    "dc_bias": "Common-mode feedback plus slow DC servo",
+    "expected_dominant_distortion": "Loop gain loss and saturation recovery",
+    "expected_dominant_noise": "Error amplifier and reference/servo noise",
+    "families": [
+      "high_feedback",
+      "mosfet",
+      "no_jfet"
+    ],
+    "fastest_falsification": "MIMO return-ratio/Nyquist and transient recovery at all loads",
+    "gain_or_impedance_transformation": "High-gain error amplifier",
+    "id": "concept_0017",
+    "likely_fatal_flaw": "Interacting loops unstable under cable and capsule variation",
+    "loading_control": "Feedback, guarding and deliberately compensated input C",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "sensed_quantity": "Voltage error referenced to controlled electrode",
+    "sources": [
+      "S07"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "High-feedback CMOS amplifier with common-mode control"
+  }
+]

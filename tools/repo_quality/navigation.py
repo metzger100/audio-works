@@ -243,34 +243,9 @@ def render_modules(outputs, files, directories, register):
 
 
 def render_root(outputs, files, directories):
-    """Assemble the repository entry from root modules and shared documents."""
-    root_entries = [f"- [{path}]({link(path)})" for path in sorted(files) if "/" not in path]
-    root_entries += [
-        f"- [{directory}/]({link(directory + '/INDEX.md')})"
-        for directory in sorted(directories)
-        if "/" not in directory and directory != "docs"
-    ]
-    root_entries += [
-        f"- [{PurePosixPath(path).name}]({link(path)})"
-        for path in sorted(files)
-        if str(PurePosixPath(path).parent) == "docs"
-    ]
-    root_entries += [
-        f"- [{PurePosixPath(d).name}/]({link(d + '/INDEX.md')})"
-        for d in sorted(directories)
-        if str(PurePosixPath(d).parent) == "docs"
-    ]
-    root_entries += [
-        "- [Original experiment metadata](evidence.md)",
-        "- [Current supporting records](current-evidence.md)",
-    ]
-    pages(
-        outputs,
-        "docs/INDEX.md",
-        "Repository index",
-        "[Current state](../CURRENT.md) · [Quality](../QUALITY.md). Follow child hubs; load relevant evidence on demand.",
-        root_entries,
-    )
+    from .entry import render_root as render_entry
+
+    render_entry(outputs, files, directories)
 
 
 def render_evidence(outputs, view, register):

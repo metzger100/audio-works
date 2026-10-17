@@ -192,6 +192,14 @@ def validate(view, register):
         folded[folded_path] = path
         components = PurePosixPath(path).parts
         for index, component in enumerate(components):
+            # Owner's Prompt13 explicitly names this output directory. Keep this
+            # exception at the exact requested path; ordinary names stay kebab-case.
+            if (
+                "/".join(components[: index + 1])
+                == ("meridian-microphone/lab/results/reports/architecture_comparison_002")
+                and index < len(components) - 1
+            ):
+                continue
             package = "/".join(components[: index + 1]) + "/__init__.py" in view.paths
             if not valid_component(
                 component,

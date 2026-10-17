@@ -1,0 +1,302 @@
+[
+  {
+    "candidate": "candidate_0012",
+    "contributions": {
+      "capsule Johnson surrogate (excluded)": {
+        "output_v_rms": 5.722267054371818e-11,
+        "pressure_a_pa_rms": 2.367218253425602e-06,
+        "pressure_pa_rms": 9.391997200492113e-06,
+        "roots": [
+          "onoise_r.xcap.rfront",
+          "onoise_r.xcap.rrear"
+        ]
+      },
+      "environment (excluded)": {
+        "output_v_rms": 1.183698407427606e-07,
+        "pressure_a_pa_rms": 0.004945284893665826,
+        "pressure_pa_rms": 0.0066738580394596556,
+        "roots": [
+          "onoise_r.xenv.rfeedn",
+          "onoise_r.xenv.rfeedp",
+          "onoise_r.xenv.rinn",
+          "onoise_r.xenv.rinp",
+          "onoise_r.xenv.rshield",
+          "onoise_r.xenv.rwiren",
+          "onoise_r.xenv.rwirep"
+        ]
+      },
+      "input bias, reset and degeneration": {
+        "output_v_rms": 1.797079093153482e-06,
+        "pressure_a_pa_rms": 0.07498452594811705,
+        "pressure_pa_rms": 0.08846094787774025,
+        "roots": [
+          "onoise_r.xdut.rcollector1",
+          "onoise_r.xdut.rcollector2",
+          "onoise_r.xdut.remitter1",
+          "onoise_r.xdut.remitter2",
+          "onoise_r.xdut.rfeedbacka",
+          "onoise_r.xdut.rfeedbackb",
+          "onoise_r.xdut.rrear",
+          "onoise_r.xdut.rrefbottom",
+          "onoise_r.xdut.rreftop",
+          "onoise_r.xdut.rtail"
+        ]
+      },
+      "input semiconductor": {
+        "output_v_rms": 6.533032567910186e-07,
+        "pressure_a_pa_rms": 0.02680107327157966,
+        "pressure_pa_rms": 0.06604259312349954,
+        "roots": [
+          "onoise_d.xdut.xqinput.d1",
+          "onoise_d.xdut.xqreference.d1",
+          "onoise_q.xdut.xqinput.q1",
+          "onoise_q.xdut.xqinput.q2",
+          "onoise_q.xdut.xqreference.q1",
+          "onoise_q.xdut.xqreference.q2",
+          "onoise_r.xdut.xqinput.rq",
+          "onoise_r.xdut.xqreference.rq"
+        ]
+      },
+      "output drive and coupling": {
+        "output_v_rms": 1.2316666485456952e-06,
+        "pressure_a_pa_rms": 0.051376114333013714,
+        "pressure_pa_rms": 0.059934314094209275,
+        "roots": [
+          "onoise_d.xdut.xqoutn.d1",
+          "onoise_d.xdut.xqoutp.d1",
+          "onoise_q.xdut.xqoutn.q1",
+          "onoise_q.xdut.xqoutn.q2",
+          "onoise_q.xdut.xqoutp.q1",
+          "onoise_q.xdut.xqoutp.q2",
+          "onoise_r.xdut.routloadn",
+          "onoise_r.xdut.routloadp",
+          "onoise_r.xdut.routn",
+          "onoise_r.xdut.routp",
+          "onoise_r.xdut.xqoutn.rq",
+          "onoise_r.xdut.xqoutp.rq"
+        ]
+      },
+      "polarization network": {
+        "output_v_rms": 2.7455388805714456e-08,
+        "pressure_a_pa_rms": 0.0010048508704930685,
+        "pressure_pa_rms": 0.0010530414795670905,
+        "roots": [
+          "onoise_r.xdut.rback",
+          "onoise_r.xdut.rpolar0",
+          "onoise_r.xdut.rpolar1",
+          "onoise_r.xdut.rpolar2",
+          "onoise_r.xdut.rpolar3",
+          "onoise_r.xdut.rpolar4",
+          "onoise_r.xdut.rpolar5",
+          "onoise_r.xdut.rpolar6",
+          "onoise_r.xdut.rpolar7",
+          "onoise_r.xdut.rpolar8",
+          "onoise_r.xdut.rpolar9"
+        ]
+      },
+      "power and midpoint": {
+        "output_v_rms": 6.541397382658561e-08,
+        "pressure_a_pa_rms": 0.0033874863130586848,
+        "pressure_pa_rms": 0.011960266769733715,
+        "roots": [
+          "onoise_d.xdut.xqreg.d1",
+          "onoise_q.xdut.xqreg.q1",
+          "onoise_q.xdut.xqreg.q2",
+          "onoise_r.xdut.rharvestn",
+          "onoise_r.xdut.rharvestp",
+          "onoise_r.xdut.rmidbottom",
+          "onoise_r.xdut.rmidtop",
+          "onoise_r.xdut.rregbottom",
+          "onoise_r.xdut.rregtop",
+          "onoise_r.xdut.xqreg.rq"
+        ]
+      }
+    },
+    "current_a": 0.003477322921150749,
+    "declared": {
+      "id": "supply_low_load",
+      "parameters": {
+        "FM": -0.004,
+        "FT": 0.2,
+        "LEN": 100,
+        "TEMP": -10,
+        "VS": 44,
+        "ZIN": 600,
+        "ZM": 0.05
+      }
+    },
+    "density": 64,
+    "holdout": false,
+    "noise_a_pa_rms": 0.09483125314433218,
+    "noise_pa_rms": 0.1261873301461308,
+    "noise_partition_closure": 8.2529754501812e-16,
+    "noise_scope": "conditional stationary modeled sources; incomplete physical spectra",
+    "original_record": "results/mechanism_controls/20261017T090130Z_comparison002_9392cebd/matched/candidate_0012/supply_low_load/result.json",
+    "original_status": "fail",
+    "response_deviation_db": 20.702944467734135,
+    "scenario": "supply_low_load",
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0012",
+    "contributions": {
+      "capsule Johnson surrogate (excluded)": {
+        "output_v_rms": 9.558825082395869e-11,
+        "pressure_a_pa_rms": 2.039086599480848e-06,
+        "pressure_pa_rms": 8.089751391700223e-06,
+        "roots": [
+          "onoise_r.xcap.rfront",
+          "onoise_r.xcap.rrear"
+        ]
+      },
+      "environment (excluded)": {
+        "output_v_rms": 9.341203371153857e-08,
+        "pressure_a_pa_rms": 0.0020993537011721906,
+        "pressure_pa_rms": 0.0026274939600183767,
+        "roots": [
+          "onoise_r.xenv.rfeedn",
+          "onoise_r.xenv.rfeedp",
+          "onoise_r.xenv.rinn",
+          "onoise_r.xenv.rinp",
+          "onoise_r.xenv.rshield",
+          "onoise_r.xenv.rwiren",
+          "onoise_r.xenv.rwirep"
+        ]
+      },
+      "input bias, reset and degeneration": {
+        "output_v_rms": 2.7323256762597397e-06,
+        "pressure_a_pa_rms": 0.061439206907330075,
+        "pressure_pa_rms": 0.07458505720568881,
+        "roots": [
+          "onoise_r.xdut.rcollector1",
+          "onoise_r.xdut.rcollector2",
+          "onoise_r.xdut.remitter1",
+          "onoise_r.xdut.remitter2",
+          "onoise_r.xdut.rfeedbacka",
+          "onoise_r.xdut.rfeedbackb",
+          "onoise_r.xdut.rrear",
+          "onoise_r.xdut.rrefbottom",
+          "onoise_r.xdut.rreftop",
+          "onoise_r.xdut.rtail"
+        ]
+      },
+      "input semiconductor": {
+        "output_v_rms": 9.393088176986776e-07,
+        "pressure_a_pa_rms": 0.02030384506539789,
+        "pressure_pa_rms": 0.05219171547269593,
+        "roots": [
+          "onoise_d.xdut.xqinput.d1",
+          "onoise_d.xdut.xqreference.d1",
+          "onoise_q.xdut.xqinput.q1",
+          "onoise_q.xdut.xqinput.q2",
+          "onoise_q.xdut.xqreference.q1",
+          "onoise_q.xdut.xqreference.q2",
+          "onoise_r.xdut.xqinput.rq",
+          "onoise_r.xdut.xqreference.rq"
+        ]
+      },
+      "output drive and coupling": {
+        "output_v_rms": 1.7224556309323533e-06,
+        "pressure_a_pa_rms": 0.038737472812823366,
+        "pressure_pa_rms": 0.04651428424147259,
+        "roots": [
+          "onoise_d.xdut.xqoutn.d1",
+          "onoise_d.xdut.xqoutp.d1",
+          "onoise_q.xdut.xqoutn.q1",
+          "onoise_q.xdut.xqoutn.q2",
+          "onoise_q.xdut.xqoutp.q1",
+          "onoise_q.xdut.xqoutp.q2",
+          "onoise_r.xdut.routloadn",
+          "onoise_r.xdut.routloadp",
+          "onoise_r.xdut.routn",
+          "onoise_r.xdut.routp",
+          "onoise_r.xdut.xqoutn.rq",
+          "onoise_r.xdut.xqoutp.rq"
+        ]
+      },
+      "polarization network": {
+        "output_v_rms": 4.444171542146585e-08,
+        "pressure_a_pa_rms": 0.0008655647346811432,
+        "pressure_pa_rms": 0.0009070742120104421,
+        "roots": [
+          "onoise_r.xdut.rback",
+          "onoise_r.xdut.rpolar0",
+          "onoise_r.xdut.rpolar1",
+          "onoise_r.xdut.rpolar2",
+          "onoise_r.xdut.rpolar3",
+          "onoise_r.xdut.rpolar4",
+          "onoise_r.xdut.rpolar5",
+          "onoise_r.xdut.rpolar6",
+          "onoise_r.xdut.rpolar7",
+          "onoise_r.xdut.rpolar8",
+          "onoise_r.xdut.rpolar9"
+        ]
+      },
+      "power and midpoint": {
+        "output_v_rms": 1.087033972550923e-07,
+        "pressure_a_pa_rms": 0.0030128907536784173,
+        "pressure_pa_rms": 0.010719011922574805,
+        "roots": [
+          "onoise_d.xdut.xqreg.d1",
+          "onoise_q.xdut.xqreg.q1",
+          "onoise_q.xdut.xqreg.q2",
+          "onoise_r.xdut.rharvestn",
+          "onoise_r.xdut.rharvestp",
+          "onoise_r.xdut.rmidbottom",
+          "onoise_r.xdut.rmidtop",
+          "onoise_r.xdut.rregbottom",
+          "onoise_r.xdut.rregtop",
+          "onoise_r.xdut.xqreg.rq"
+        ]
+      }
+    },
+    "current_a": 0.004756720127916463,
+    "declared": {
+      "id": "supply_high_load",
+      "parameters": {
+        "FM": 0.004,
+        "FT": -0.2,
+        "LEN": 100,
+        "TEMP": 50,
+        "VS": 52,
+        "ZIN": 10000,
+        "ZM": -0.05
+      }
+    },
+    "density": 64,
+    "holdout": false,
+    "noise_a_pa_rms": 0.07548139361968055,
+    "noise_pa_rms": 0.10279204522275846,
+    "noise_partition_closure": 8.644004410051313e-16,
+    "noise_scope": "conditional stationary modeled sources; incomplete physical spectra",
+    "original_record": "results/mechanism_controls/20261017T090130Z_comparison002_9392cebd/matched/candidate_0012/supply_high_load/result.json",
+    "original_status": "fail",
+    "response_deviation_db": 20.77758684222685,
+    "scenario": "supply_high_load",
+    "status": "fail"
+  },
+  {
+    "$include": "comparison-a830fa68e69a-0008-matched-rows-0182-candidate-0012.json"
+  },
+  {
+    "$include": "comparison-a830fa68e69a-0008-matched-rows-0183-candidate-0012.json"
+  },
+  {
+    "$include": "comparison-a830fa68e69a-0008-matched-rows-0184-candidate-0012.json"
+  },
+  {
+    "$include": "comparison-a830fa68e69a-0008-matched-rows-0185-candidate-0012.json"
+  },
+  {
+    "$include": "comparison-a830fa68e69a-0008-matched-rows-0186-candidate-0012.json"
+  },
+  {
+    "$include": "comparison-a830fa68e69a-0008-matched-rows-0187-candidate-0012.json"
+  },
+  {
+    "$include": "comparison-a830fa68e69a-0008-matched-rows-0188-candidate-0012.json"
+  },
+  {
+    "$include": "comparison-a830fa68e69a-0008-matched-rows-0189-candidate-0012.json"
+  }
+]

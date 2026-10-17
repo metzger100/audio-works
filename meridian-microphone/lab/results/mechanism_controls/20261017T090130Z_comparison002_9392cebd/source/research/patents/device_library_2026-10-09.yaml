@@ -1,0 +1,25 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+schema_version: 1
+checked_date: '2026-10-09'
+parent_record: device_library_2026-10-05.yaml
+scope: Isolated nominal MOSFET model characterization; no microphone implementation or topology selected.
+model_id: vishay_2n7002k_ps
+model_sha256: d59ce922b2c814e4aaa63f27459696b8c71494fac61f47c8cf8c093eba273111
+candidate_ids: []
+intended_activities: Internal research/documentation; no prototype, manufacture or build-publication advancement.
+intended_initial_territories: [DE, relevant_EP_rights]
+feature_flags:
+- feature: Future MOS capsule input, nonlinear gate protection, guarding or bootstrapping
+  state: Model omits gate ESD/leakage; actual protection/sensing connectivity must be recorded and screened separately.
+- feature: Future P48 MOS output or common-mode power extraction
+  state: A60V component rating and conventional part number do not clear the actual power/output implementation; map candidate-version claim elements before affected gates.
+claim_search_performed: false
+claim_numbers: []
+official_status_evidence: []
+official_status_state: Not assessed; no inferred expiry or clearance.
+credible_blocking_claim_identified: null
+screening_state: Early flags only; candidate-linked claim/territory/current official-status screening remains pending.
+clearance_state: Not assessed; no legal non-infringement guarantee.
+affected_implementation_gate: Applicable screening and resolution of credible blocking risks required before affected prototype/manufacture/build-publication selection.
+professional_review: Refer material claim/status/territory interpretation for professional review before held implementation release.
+external_actions_authorized: false

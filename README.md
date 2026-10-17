@@ -4,26 +4,12 @@
 
 # M100 Audio Works
 
-Working toward open audio hardware for DIY builders: microphones, preamps, amplifiers and loudspeakers. Current work is condenser-microphone research.
+Working toward open DIY microphones, preamps, amplifiers and loudspeakers. Current work: condenser-microphone research.
 
 [Start here](docs/start-here.md) · [Current state](CURRENT.md) · [Contributing](CONTRIBUTING.md)
 
 ## Projects
 
-| Project | Work | Release |
-| --- | --- | --- |
-| [M100 Meridian](meridian-microphone/README.md) | Flat K47/P48 microphone research | Not released |
+[M100 Meridian](meridian-microphone/README.md): Flat K47/P48 research, **not released**. No selected prototype; parts, patents and physical validation remain separate prerequisites.
 
-No prototype is selected. Parts, patent review and physical validation remain separate prerequisites.
-
-[GitHub](https://github.com/metzger100/audio-works) is the canonical home for committed code, specifications and reports. Private simulation/vendor files remain outside Git; [storage scope](docs/maintaining-repository.md#private-evidence) explains recovery.
-
-## Finding the work
-
-The [task guide](docs/start-here.md) points to the first useful page for each kind of work. The [complete index](docs/INDEX.md) exposes files; the [folder map](docs/repository-layout.md) explains their homes. Choose a reading route:
-
-```sh
-python3 tools/project.py context orientation
-```
-
-Software/general material: **GPL-3.0-or-later**. Hardware/design documentation: **CERN-OHL-S-2.0**. [LICENSE](LICENSE) defines scope and third-party terms.
+[GitHub](https://github.com/metzger100/audio-works) is canonical for committed files; [private evidence](docs/maintaining-repository.md#private-evidence) has separate storage limits. **GPL-3.0-or-later** software/general; **CERN-OHL-S-2.0** hardware/design documentation. [Licence scope/third-party terms](LICENSE).

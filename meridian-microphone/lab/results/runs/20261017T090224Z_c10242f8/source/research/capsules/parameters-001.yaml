@@ -1,0 +1,277 @@
+# SPDX-License-Identifier: CERN-OHL-S-2.0
+schema_version: 1
+revision: evidence-envelope-001-r1
+date: '2026-10-11'
+identity: M100 Meridian MIC-34-M/MIC-34-C, K47FRB under P48
+states:
+- direct_fact
+- analog_derived_central_scenario
+- retained_adverse_coverage
+- new_supplementary_stress
+- unknown
+- not_transferable
+production_distribution: null
+approved_bias_V: null
+physical_measurements: []
+locked_model_modified: false
+source_index: sources-001.yaml
+similarity_matrix: similarity-001.csv
+scenarios: scenarios-001.yaml
+parameters:
+  identity:
+    state: direct_fact
+    value: Arienne Flat K47 Cardioid/Omni, reference K47FRB
+    source: S01
+    conditions: Current retrieved selected-variant page, Product Details; manufacturer
+      identity claim, no measured specimen.
+    confidence: high_for_document_identity_only
+  repository_nominal:
+    state: direct_fact
+    value:
+      CF_F: 7.0e-11
+      CR_F: 7.0e-11
+      Sref_V_per_Pa: 0.02
+      Vref_V: 60
+      Rleak_ohm: 1.0e12
+      Ccase_F: 2.0e-12
+      Ccross_F: 5.0e-13
+    source: ../../spec/capsule-model.yaml
+    conditions: Direct fact about repository settings; all numerical physical values
+      remain assumed, not direct capsule data.
+    confidence: assumed_physics_not_calibrated
+  capacitance:
+    state: retained_adverse_coverage
+    per_side_range_F:
+    - 4.5e-11
+    - 1.0e-10
+    source:
+    - ../../spec/capsule-model.yaml
+    - S04
+    conditions: Existing independent and paired coverage retained; no production tolerance.
+    conflicting_values:
+    - SC01_historical_70pF_plusminus3pF
+    - S04_combined_estimate_120to150pF
+    - SC02_regular_K47_70pF
+    - SC09_other_AK47_78to83pF
+    - SC23_unbiased_other_capsules_49.3to78.9pF
+    confidence: broad_assumption_context_only
+  historical_sensitivity:
+    state: analog_derived_central_scenario
+    value_V_per_Pa: 0.015848931924611134
+    source: SC01
+    locator: 2023-03-10 post569
+    equation: 10^(-36/20) V/Pa IF the omitted dB reference is 1V/Pa
+    conditions: Unity gain/60V informal estimate; unknown revision/batch/input loading/calibration.
+      No deembedding. Not adopted as model nominal.
+    confidence: low_qualified_analogy
+  sensitivity_coverage:
+    state: retained_adverse_coverage
+    range_V_per_Pa:
+    - 0.005
+    - 0.04
+    mathematical_reference_V: 60
+    source: ../../spec/capsule-model.yaml
+    confidence: assumed_not_population
+  geometry_witness:
+    state: not_transferable
+    analog_radius_m: 0.0135
+    assumed_electrode_fraction: 0.55
+    derived_gap_m: 3.983187854748425e-05
+    derived_tension_N_per_m: 1715.8053421589511
+    derived_mean_compliance_m_per_Pa: 1.3277292849161416e-08
+    source:
+    - SC10
+    - SC05
+    - SC19
+    - physics-001.md
+    equations:
+    - C=epsilon0*eta*pi*a^2/d
+    - mean_x_per_p=a^2/(8*T)
+    - Sref=60*mean_x_per_p/d
+    conditions: Hypothetical perimeter-clamped disk; not actual K47 center constraint/perforations
+      or acoustic network. Matches assumed C/S by construction.
+    confidence: internally_consistent_example_not_identified_geometry
+    material_limit: At3um, T/thickness=571.935MPa exceeds other grade92A typical ultimate;
+      reject casual physical feasibility of perimeter-only polyester analogy. Retain
+      calculation; capsule geometry/allowable stress unknown.
+  leakage:
+    state: retained_adverse_coverage
+    range_ohm:
+    - 1.0e9
+    - 1.0e14
+    source:
+    - ../../spec/capsule-model.yaml
+    - SC04
+    equation: I=V/R for the resistive surrogate only
+    conditions: No I-V, time, RH, temperature or polarity law known. Model Johnson
+      noise is separately incomplete.
+    confidence: stress_envelope_not_material_bound
+  parasitics:
+    state: retained_adverse_coverage
+    case_range_F:
+    - 5.0e-13
+    - 1.0e-11
+    cross_range_F:
+    - 0
+    - 5.0e-12
+    source: ../../spec/capsule-model.yaml
+    conditions: Case/lead/mount lumping assumed; branch allocation may change with
+      electrode map. No measured drawing or dielectric loss.
+    confidence: assumed
+  front_rear_correlation:
+    state: unknown
+    value: null
+    source:
+    - S01
+    - SC03
+    - SC19
+    conditions: Paired/opposed scenarios are hypotheses. Shared manufacture does not
+      supply a covariance or equal acoustic transfer.
+  lead_map:
+    state: unknown
+    value: null
+    source:
+    - S01
+    - SC14
+    conditions: Historical red/front white/rear black/backplate forum report is a
+      discovery lead. No authoritative current-batch electrode/lead/isolation diagram
+      acquired.
+  mechanics_acoustics:
+    state: unknown
+    values:
+      active_area_m2: null
+      gap_m: null
+      tension_N_per_m: null
+      damping: null
+      intrinsic_noise_Pa2_per_Hz: null
+      overload_Pa: null
+      polar_transfer: null
+    source:
+    - SC03
+    - SC08
+    - SC19
+    conditions: Acoustic resistance/network, reference pressure, distance and headbasket
+      missing; retain nulls and qualification gates.
+  losses_excess_noise:
+    state: new_supplementary_stress
+    loss_tangent_values:
+    - 0.0001
+    - 0.001
+    excess_i_ASD_at_100Hz_A_per_sqrt_Hz:
+    - 1.0e-15
+    - 1.0e-14
+    equations:
+    - G_loss=2*pi*f*C*tan_delta
+    - Si_thermal=4*kB*T*G_loss
+    - Si_excess=A^2*100Hz/f
+    source:
+    - SC08
+    - SC04
+    - physics-001.md
+    conditions: Analytic hypotheses only. Amplitudes/laws not evidenced for K47FRB;
+      future spectral falsification required, no absolute acoustic result.
+    confidence: mechanism_supported_amplitudes_assumed
+  electrostatic_softening:
+    state: new_supplementary_stress
+    lambda_values:
+    - 0.1
+    - 0.3
+    equation: S_ratio=1/(1-lambda), lambda=Ke/Km for local constant-voltage piston
+      equilibrium
+    source:
+    - SC13
+    - SC21
+    - physics-001.md
+    conditions: Boundary-dependent diagnostic; not a physical safe-bias calculation.
+      Actual equilibrium/geometry not known.
+    confidence: hypothesis_only
+  material_screened_annular_examples:
+    state: analog_derived_central_scenario
+    source:
+    - SC19
+    - SC25
+    - SC10
+    - SC23
+    - material-controls-001.yaml
+    assumed_inner_outer_ratios:
+    - 0.4
+    - 0.6
+    analog_film_thickness_m:
+    - 6.0e-06
+    - 3.0e-06
+    derived_stress_Pa:
+    - 82814978.57627022
+    - 95733250.9864837
+    equations:
+    - annular mean_x=(a^2+b^2-(a^2-b^2)/ln(a/b))/(8*T)
+    - C=epsilon0*eta*pi*(a^2-b^2)/d
+    conditions: Hypothetical center constraints; material screen uses different industrial
+      film grade typical data, not allowable stress or actual capsule mechanics. Positive
+      coupled gap examples; low-S versions fail that material analogy and remain adverse
+      coverage.
+    confidence: mechanism_consistent_examples_not_identified_geometry
+rejected_transfers:
+- state: not_transferable
+  source: SC02
+  from: regular_K47_70pF
+  to: Flat_K47FRB_per_side_capacitance
+  reason: Different tuning/product; test conditions and per-side definition absent.
+- state: not_transferable
+  source: S01
+  from: Cardioid_only_K47FBSB
+  to: Cardioid_Omni_K47FRB
+  reason: Different variant; price/lead topology/results cannot be silently pooled.
+- state: not_transferable
+  source:
+  - SC09
+  - SC11
+  - SC12
+  - SC18
+  - SC24
+  from: complete_microphone_or_fixture_noise_sensitivity_overload
+  to: bare_K47FRB_rating
+  reason: Gain/loading/noise/headbasket/calibration uncertainty prevents deembedding.
+- state: not_transferable
+  source:
+  - SC01
+  - SC13
+  - SC18
+  - SC21
+  from: other_capsule_voltage_or_60V_normalization
+  to: approved_K47FRB_bias
+  reason: No applicable safety limit or measured unit.
+- state: not_transferable
+  source:
+  - SC07
+  - SC20
+  from: one_diaphragm_two_backplates_push_pull
+  to: two_K47_diaphragms_common_backplate
+  reason: Mechanical/electrode topology differs; cancellation is not established.
+- state: not_transferable
+  source: SC23
+  from: historical_CEK47_name
+  to: K47_equivalence
+  reason: Author identifies dual-backplate K67-derived construction despite K47-style
+    voicing.
+- state: not_transferable
+  source:
+  - SC06
+  - SC21
+  - SC22
+  from: patent_embodiment_or_status_badge
+  to: capsule_geometry_rating_or_current_clearance
+  reason: Published examples and aggregator labels are neither unit data nor dated
+    official legal status.
+- state: not_transferable
+  source: SC25
+  from: industrial_Mylar92A_typical_strength
+  to: K47FRB_film_allowable_stress_or_safe_bias
+  reason: Unknown film grade/thickness/constraints; typical tensile data are not capsule
+    qualification.
+revision_proposal:
+  requested_lock_change: none
+  tighter_central_estimate_supported: false
+  new_outside_numeric_C_S_R_ranges: false
+  action: Retain old envelope and failures. Supplementary loss/softening/excess terms
+    stay a separate analytic ledger; measured revisions need owner direction and a
+    dated impact analysis.

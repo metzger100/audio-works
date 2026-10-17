@@ -1,0 +1,232 @@
+- id: bc856b
+  manufacturer: Nexperia
+  exact_variant: BC856B,215
+  family: discrete_pnp
+  package: SOT-23
+  lifecycle:
+    status: production
+    checked_date: '2026-10-05'
+    source_url: https://www.nexperia.com/product/BC856B
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/BC856_BC857_BC858.pdf
+    retrieved_date: '2026-10-05'
+    version: Rev 9; 1 July 2022
+    local_path: models/semiconductor/vendor/evidence/bc856.pdf
+    sha256: d9a836e40dd8f1e788d7dadbfcbe8cf4836ed5debe789c84b8fa574132f84943
+  ratings:
+    abs_vce_v: 65
+    abs_vcb_v: 80
+    abs_veb_v: 5
+    abs_ic_a: 0.1
+    abs_power_w: 0.25
+    thermal_rthja_k_per_w: 500
+    thermal_condition: manufacturer standard FR4 footprint at 25 C; derate
+    temp_c:
+    - -65
+    - 150
+    hfe_grade:
+    - 220
+    - 475
+    hfe_condition: VCE magnitude=5 V, IC magnitude=2 mA,25 C
+  models:
+  - id: bc856b_vendor
+    path: semiconductor/vendor/bc856b.lib
+    sha256: 580ae98768fa1b6fc66d0e3e1daaaf5745d63f8cff4614fcef840055789b7b33
+    version: extraction week 19/2020
+    source_url: https://assets.nexperia.com/documents/spice-model/BC856B.txt?download=1
+    retrieved_date: '2026-10-05'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: SPICE3 subcircuit
+    ngspice_behavior: ''
+    subcircuit: BC856B
+    parent_model_id: null
+  represented_behavior:
+    dc: Gummel-Poon + quasi-saturation network
+    capacitance: CJE/CJC voltage laws and TF/TR
+    temperature: XTI, XTB, EG junction equations
+    leakage: junction saturation currents only
+    noise: native shot and resistor thermal; KF absent so 1/f absent
+    clipping: saturation/reverse network
+    supply_current: native collector/base/emitter currents
+  unqualified_behavior:
+  - 1/f noise and separate voltage/current spectra
+  - manufacturing correlations
+  - self-heating/SOA/avalanche
+  - full temperature and leakage validation
+  - model header hFE 125-250 contradicts B-grade datasheet 220-475
+  substitutes:
+  - part: BC856BLT1G
+    manufacturer: onsemi
+    state: supplier-listed_available_unvalidated_model_not_interchangeable
+  procurement_register: research/procurement/semiconductors_2026-10-05.yaml
+  readiness: partial_nominal_dc_saturation_bandwidth_caps_flicker_unqualified_sourcing_hold
+  patent_status: isolated_device_research_only_no_architecture_claim_screen_no_clearance
+  validation_report: research/device_model_validation.md
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+- id: opa197
+  manufacturer: Texas Instruments
+  exact_variant: OPA197IDBVR
+  family: cmos_opamp
+  package: SOT-23-5 DBV
+  lifecycle:
+    status: active
+    checked_date: '2026-10-05'
+    source_url: https://www.ti.com/product/OPA197
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/opa197.pdf
+    retrieved_date: '2026-10-05'
+    version: SBOS737C March 2018
+    local_path: models/semiconductor/vendor/evidence/opa197.pdf
+    sha256: 27653a7d5e965cbb2d23f7998919ebd774efd5cd3e126b8f0881469ae91166fd
+  ratings:
+    recommended_supply_v:
+    - 4.5
+    - 36
+    abs_supply_v: 40
+    operating_temp_c:
+    - -40
+    - 125
+    iq_25c_max_a: 0.0013
+    input_bias_25c_max_a: 2.0e-11
+    thermal_rthja_k_per_w: 158.8
+    condition: SBOS737C; do not connect directly to unloaded P48
+  models:
+  - id: opa197_pspice
+    path: semiconductor/vendor/opa197.lib
+    sha256: fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5
+    version: Final 1.3; 23JUN2022; SBOMA34D
+    source_url: https://www.ti.com/lit/zip/sboma34d
+    retrieved_date: '2026-10-05'
+    acquisition_status: valid_spice
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: SPICE3 subcircuit with PSpice extensions
+    ngspice_behavior: ps
+    subcircuit: OPAx197
+    parent_model_id: null
+  represented_behavior:
+    dc: Green-Williams-Lis macro; fixed bias/offset/current
+    capacitance: common/differential RC input impedances
+    temperature: offset drift block; bias and noise temperature fidelity unproven
+    leakage: fixed input bias + input/ESD resistance; no realistic temperature population
+    noise: explicit voltage flicker/white and current white sources
+    clipping: output swing/current/slew/overload blocks
+    supply_current: fixed Iq plus output supply-current blocks
+  unqualified_behavior:
+  - THD transistor physics
+  - production noise maxima
+  - bias/Iq temperature and distribution
+  - thermal shutdown/SOA
+  - full common-mode crossover noise
+  - ngspice47 clipping/loaded-supply convergence failures
+  - floating common-mode operation; macro has global-ground referenced internals
+  substitutes:
+  - part: OPA197ID
+    state: same_die_SOIC8_package_requires_layout_thermal_requalification
+  - part: OPA140
+    state: JFET_input_alternative_not_validated
+  procurement_register: research/procurement/semiconductors_2026-10-05.yaml
+  readiness: scoped_mid_common_mode_small_signal_noise_dc_bandwidth_agreement_nonlinear_unqualified
+  patent_status: isolated_device_research_only_no_architecture_claim_screen_no_clearance
+  validation_report: research/device_model_validation.md
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+- id: 2n7002
+  manufacturer: Nexperia
+  exact_variant: 2N7002,215
+  family: discrete_n_mosfet
+  package: SOT-23
+  lifecycle:
+    status: production
+    checked_date: '2026-10-05'
+    source_url: https://www.nexperia.com/product/2N7002
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/2N7002.pdf
+    retrieved_date: '2026-10-05'
+    version: Rev 7; 8 September 2011
+    local_path: models/semiconductor/vendor/evidence/2n7002.pdf
+    sha256: cc9c275457670c3cbbf2e56f5a75c800d3b5f0b396fabc798cf18cb639646475
+  ratings:
+    abs_vds_v: 60
+    abs_vgs_v:
+    - -30
+    - 30
+    abs_id_a: 0.3
+    abs_power_w: 0.83
+    condition: current/power at solder point 25 C; not free-air power; see derating/SOA
+  models:
+  - id: 2n7002_failed_download
+    path: semiconductor/vendor/2n7002.lib
+    sha256: 4a2a3f7fb1725f12fcfe3f7fef5cc082be2ac58eeb30ee4fdb693398e74abbf5
+    version: not_a_model
+    source_url: https://assets.nexperia.com/documents/spice-model/2N7002.txt?download=1
+    retrieved_date: '2026-10-05'
+    acquisition_status: invalid_html_challenge
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Vendor notices retained locally; no open redistribution permission
+        established.
+      acquisition: models/semiconductor/acquire.py; audited hashes in acquisition.yaml
+    syntax: unavailable_invalid_HTML_response
+    ngspice_behavior: ''
+    subcircuit: unavailable
+    parent_model_id: null
+  represented_behavior:
+    dc: not_acquired
+    capacitance: not_acquired
+    temperature: not_acquired
+    leakage: not_acquired
+    noise: not_acquired
+    clipping: not_acquired
+    supply_current: not_acquired
+  unqualified_behavior:
+  - vendor model acquisition
+  - low-current transfer
+  - all noise including 1/f
+  - low-current production corners
+  substitutes:
+  - part: 2N7002ET1G
+    manufacturer: onsemi
+    state: available_supplier_listing_not_model_validated
+  - part: 2N7002-7-F
+    manufacturer: Diodes Incorporated
+    state: available_supplier_listing_not_model_validated
+  - part: Vishay 2N7002K-T1-GE3
+    state: manufacturer model route and indexed Germany supplier alternative identified;
+      unacquired/unvalidated
+  procurement_register: research/procurement/semiconductors_2026-10-05.yaml
+  readiness: model_acquisition_failed_unsupported
+  patent_status: isolated_device_research_only_no_architecture_claim_screen_no_clearance
+  validation_report: research/device_model_validation.md
+  validation_record: results/device_models/20261005T185102Z_95a6dda5/results.json
+  evidence_states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+    characterization_attempted: true
+  state_erratum: Earlier characterized=true described an invalid-HTML load attempt.
+    No accepted model behavior; original attempt/report retained.

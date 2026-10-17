@@ -1,0 +1,168 @@
+[
+  {
+    "candidate": "candidate_0012",
+    "contributions": {
+      "capsule Johnson surrogate (excluded)": {
+        "output_v_rms": 7.909682437247066e-11,
+        "pressure_a_pa_rms": 2.0623782544646823e-06,
+        "pressure_pa_rms": 8.173339444812649e-06,
+        "roots": [
+          "onoise_r.xcap.rfront",
+          "onoise_r.xcap.rrear"
+        ]
+      },
+      "environment (excluded)": {
+        "output_v_rms": 6.873873184998369e-08,
+        "pressure_a_pa_rms": 0.001866010583409636,
+        "pressure_pa_rms": 0.0027468770470585233,
+        "roots": [
+          "onoise_r.xenv.rfeedn",
+          "onoise_r.xenv.rfeedp",
+          "onoise_r.xenv.rinn",
+          "onoise_r.xenv.rinp",
+          "onoise_r.xenv.rshield",
+          "onoise_r.xenv.rwiren",
+          "onoise_r.xenv.rwirep"
+        ]
+      },
+      "input bias, reset and degeneration": {
+        "output_v_rms": 2.3111189616663467e-06,
+        "pressure_a_pa_rms": 0.0627868346633061,
+        "pressure_pa_rms": 0.0756971460245412,
+        "roots": [
+          "onoise_r.xdut.rcollector1",
+          "onoise_r.xdut.rcollector2",
+          "onoise_r.xdut.remitter1",
+          "onoise_r.xdut.remitter2",
+          "onoise_r.xdut.rfeedbacka",
+          "onoise_r.xdut.rfeedbackb",
+          "onoise_r.xdut.rrear",
+          "onoise_r.xdut.rrefbottom",
+          "onoise_r.xdut.rreftop",
+          "onoise_r.xdut.rtail"
+        ]
+      },
+      "input semiconductor": {
+        "output_v_rms": 8.436421220428001e-07,
+        "pressure_a_pa_rms": 0.022030470466107937,
+        "pressure_pa_rms": 0.06021198058229139,
+        "roots": [
+          "onoise_d.xdut.xqinput.d1",
+          "onoise_d.xdut.xqreference.d1",
+          "onoise_q.xdut.xqinput.q1",
+          "onoise_q.xdut.xqinput.q2",
+          "onoise_q.xdut.xqreference.q1",
+          "onoise_q.xdut.xqreference.q2",
+          "onoise_r.xdut.xqinput.rq",
+          "onoise_r.xdut.xqreference.rq"
+        ]
+      },
+      "output drive and coupling": {
+        "output_v_rms": 1.7018413367206418e-06,
+        "pressure_a_pa_rms": 0.04623182434503832,
+        "pressure_pa_rms": 0.05512383749895297,
+        "roots": [
+          "onoise_d.xdut.xqoutn.d1",
+          "onoise_d.xdut.xqoutp.d1",
+          "onoise_q.xdut.xqoutn.q1",
+          "onoise_q.xdut.xqoutn.q2",
+          "onoise_q.xdut.xqoutp.q1",
+          "onoise_q.xdut.xqoutp.q2",
+          "onoise_r.xdut.routloadn",
+          "onoise_r.xdut.routloadp",
+          "onoise_r.xdut.routn",
+          "onoise_r.xdut.routp",
+          "onoise_r.xdut.xqoutn.rq",
+          "onoise_r.xdut.xqoutp.rq"
+        ]
+      },
+      "polarization network": {
+        "output_v_rms": 3.700092787891677e-08,
+        "pressure_a_pa_rms": 0.0008742878633212607,
+        "pressure_pa_rms": 0.0009167777350209146,
+        "roots": [
+          "onoise_r.xdut.rback",
+          "onoise_r.xdut.rpolar0",
+          "onoise_r.xdut.rpolar1",
+          "onoise_r.xdut.rpolar2",
+          "onoise_r.xdut.rpolar3",
+          "onoise_r.xdut.rpolar4",
+          "onoise_r.xdut.rpolar5",
+          "onoise_r.xdut.rpolar6",
+          "onoise_r.xdut.rpolar7",
+          "onoise_r.xdut.rpolar8",
+          "onoise_r.xdut.rpolar9"
+        ]
+      },
+      "power and midpoint": {
+        "output_v_rms": 9.449386198450029e-08,
+        "pressure_a_pa_rms": 0.0030823813538498482,
+        "pressure_pa_rms": 0.011485631904859569,
+        "roots": [
+          "onoise_d.xdut.xqreg.d1",
+          "onoise_q.xdut.xqreg.q1",
+          "onoise_q.xdut.xqreg.q2",
+          "onoise_r.xdut.rharvestn",
+          "onoise_r.xdut.rharvestp",
+          "onoise_r.xdut.rmidbottom",
+          "onoise_r.xdut.rmidtop",
+          "onoise_r.xdut.rregbottom",
+          "onoise_r.xdut.rregtop",
+          "onoise_r.xdut.xqreg.rq"
+        ]
+      }
+    },
+    "current_a": 0.004009725873273507,
+    "declared": {
+      "id": "TCR_-10_1",
+      "kind": "coupled tolerance/TCR endpoint stress; cap temperature/noise laws unknown",
+      "parameters": {
+        "COUTN_VALUE": 3.76e-05,
+        "COUTP_VALUE": 5.6399999999999995e-05,
+        "RBACK_VALUE": 1013535.0000000001,
+        "RCOLLECTOR1_VALUE": 10135.35,
+        "RCOLLECTOR2_VALUE": 10135.35,
+        "REMITTER1_VALUE": 1013.5350000000001,
+        "REMITTER2_VALUE": 1013.5350000000001,
+        "RFEEDBACKA_VALUE": 1013535.0000000001,
+        "RFEEDBACKB_VALUE": 1013535.0000000001,
+        "RHARVESTN_VALUE": 2229.777,
+        "RHARVESTP_VALUE": 2229.777,
+        "RMIDBOTTOM_VALUE": 10135.35,
+        "RMIDTOP_VALUE": 10135.35,
+        "ROUTLOADN_VALUE": 10135.35,
+        "ROUTLOADP_VALUE": 10135.35,
+        "ROUTN_VALUE": 47.636145,
+        "ROUTP_VALUE": 47.636145,
+        "RPOLAR0_VALUE": 1013535.0000000001,
+        "RPOLAR1_VALUE": 1013535.0000000001,
+        "RPOLAR2_VALUE": 1013535.0000000001,
+        "RPOLAR3_VALUE": 1013535.0000000001,
+        "RPOLAR4_VALUE": 1013535.0000000001,
+        "RPOLAR5_VALUE": 1013535.0000000001,
+        "RPOLAR6_VALUE": 1013535.0000000001,
+        "RPOLAR7_VALUE": 1013535.0000000001,
+        "RPOLAR8_VALUE": 1013535.0000000001,
+        "RPOLAR9_VALUE": 1013535.0000000001,
+        "RREAR_VALUE": 1013.5350000000001,
+        "RREFBOTTOM_VALUE": 10135.35,
+        "RREFTOP_VALUE": 10135.35,
+        "RREGBOTTOM_VALUE": 101353.5,
+        "RREGTOP_VALUE": 101353.5,
+        "RTAIL_VALUE": 10135.35,
+        "TEMP": -10
+      }
+    },
+    "density": 64,
+    "holdout": false,
+    "noise_a_pa_rms": 0.08108745446950708,
+    "noise_pa_rms": 0.11192380535070848,
+    "noise_partition_closure": 1.0304965233659481e-15,
+    "noise_scope": "conditional stationary modeled sources; incomplete physical spectra",
+    "original_record": "results/mechanism_controls/20261017T090130Z_comparison002_9392cebd/matched/candidate_0012/TCR_-10_1/result.json",
+    "original_status": "fail",
+    "response_deviation_db": 20.973706033656153,
+    "scenario": "TCR_-10_1",
+    "status": "fail"
+  }
+]

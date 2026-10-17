@@ -1,0 +1,149 @@
+{
+  "candidates": {
+    "$include": "candidate-versions-001-de56f84b951f-0000-candidates.json"
+  },
+  "compiled_date": "2026-10-17",
+  "features": {
+    "P48": {
+      "claim_search": "power/output",
+      "meaning": "two-leg common-mode resistor extraction",
+      "refs": [
+        "Rharvestp",
+        "Rharvestn",
+        "Craw"
+      ]
+    },
+    "backplate_filter": {
+      "claim_search": "backplate/polarization filtering",
+      "meaning": "passive final b-to-g bypass, no audio feedback to backplate",
+      "refs": [
+        "Rback",
+        "Cbackfilter"
+      ]
+    },
+    "bjt_charge": {
+      "claim_search": "charge/reset",
+      "meaning": "bipolar differential sensing with direct feedback C and continuous resistive reset",
+      "refs": [
+        "XQinput",
+        "XQreference",
+        "Cfeedback",
+        "Rfeedbacka",
+        "Rfeedbackb"
+      ]
+    },
+    "carrier": {
+      "claim_search": "RF bridge/synchronous detection/floating sensing",
+      "meaning": "ideal floating anti-phase carrier bridge, ideal voltage buffers, product demodulator, passive lowpass, ideal differential output",
+      "refs": [
+        "Bcarrier",
+        "Banti",
+        "Cexcite",
+        "Cbridgef",
+        "Cbridger",
+        "Efront",
+        "Erear",
+        "Bdemod",
+        "Rfilter1",
+        "Rfilter2",
+        "Eoutp",
+        "Eoutn"
+      ]
+    },
+    "cmos_charge": {
+      "claim_search": "charge/reset",
+      "meaning": "CMOS inverting charge sensing with direct feedback C and continuous resistive reset",
+      "refs": [
+        "XUinput",
+        "Cfeedback",
+        "Rfeedback"
+      ]
+    },
+    "differential_output": {
+      "claim_search": "differential output and impedance balance",
+      "meaning": "discrete driven two-leg audio output, not a single driven leg with a dummy impedance",
+      "refs": [
+        "XQoutp",
+        "XQoutn",
+        "Routp",
+        "Routn"
+      ]
+    },
+    "fixed_bias": {
+      "claim_search": "fixed bias/source degeneration",
+      "meaning": "fixed loaded gate divider and source degeneration",
+      "refs": [
+        "Rgatetop0",
+        "Rgatebottom",
+        "Rbias",
+        "XJinput",
+        "Rsource"
+      ]
+    },
+    "guard_bootstrap": {
+      "claim_search": "guard/bootstrap/electrometer",
+      "meaning": "separate CMOS guard follower, modeled guard capacitance/leakage and AC-bootstrapped bias return",
+      "refs": [
+        "XUinput",
+        "XUguard",
+        "Cboot",
+        "Rbootdc",
+        "Rbias",
+        "Cguard",
+        "Rguardleak"
+      ]
+    },
+    "regulation": {
+      "claim_search": "power/bias/filter",
+      "meaning": "loaded raw divider and NPN emitter-follower rail; mid reference; passive polarization chain",
+      "refs": [
+        "Rregtop",
+        "Rregbottom",
+        "XQreg",
+        "Crail",
+        "Rmidtop",
+        "Rmidbottom",
+        "Rpolar0",
+        "Rback"
+      ]
+    },
+    "source_servo": {
+      "claim_search": "DC/source-current servo; not collapse detector",
+      "meaning": "source-voltage/current control using slow divider, reference error pair and gate bias",
+      "refs": [
+        "Rservosense0",
+        "Cservoslow",
+        "XQservoerror",
+        "XQservoref",
+        "Rservoout",
+        "Rbias",
+        "Rsource"
+      ]
+    }
+  },
+  "observations": "Current candidate bytes hashed at reporting; original source records remain intact",
+  "project": "M100 Meridian MIC-34-M/MIC-34-C; K47FRB under P48",
+  "schema_version": 1,
+  "shared_activity_matrix": {
+    "manufacture": {
+      "scenario": "DE self-build and possible outside-DE PCB/assembly/component manufacture are scenarios only; country, provider, process and quantity unresolved; no manufacture authorized",
+      "territory": null
+    },
+    "private_use": {
+      "scenario": "Intended private noncommercial finished microphone; precise circumstances/actors require review; no automatic exemption or clearance assumed",
+      "territory": "DE"
+    },
+    "publication": {
+      "scenario": "Possible internet build/implementation guidance; destination users, hosting and inducement/supply questions unresolved; no external publication authorized",
+      "territory": null
+    },
+    "research": {
+      "scenario": "Private internal numerical/documentary research currently authorized; no new hardware act authorized",
+      "territory": "DE"
+    },
+    "supply_import": {
+      "scenario": "Delivery/import into DE and possible kits/boards/sale/distribution to other states unresolved; intended consumer/customer destinations must be defined",
+      "territory": null
+    }
+  }
+}

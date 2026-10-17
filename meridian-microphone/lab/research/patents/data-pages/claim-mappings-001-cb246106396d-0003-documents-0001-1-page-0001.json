@@ -1,0 +1,171 @@
+{
+  "activities": [
+    "private DE manufacture/use scenario",
+    "supply/import scenario with territories unresolved",
+    "implementation/build-publication scenario for professional review"
+  ],
+  "application_id": "EP15176472.7",
+  "claim_version": "EP2955936B1 as published; no assertion that this is the latest amended/litigated version",
+  "earliest_identified_priority": null,
+  "elements": [
+    {
+      "cases": [
+        {
+          "assessment": "demonstrated_present",
+          "basis": "0012/0024 outa inverts input f through bipolar pair;0014 XUinput uses f as inverting input, chargeout output. Other candidates have no claimed charge feedback loop.",
+          "candidate_ids": [
+            "candidate_0012",
+            "candidate_0024",
+            "candidate_0014"
+          ],
+          "exact_versions": {
+            "candidate_0012": "f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968",
+            "candidate_0014": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+            "candidate_0024": "65bab5628d9b477584e38c3afb3d7cafef3012a7a2f2198de4886374a617e9f8"
+          },
+          "netlist_references": [
+            "XQinput",
+            "XQreference",
+            "XUinput"
+          ],
+          "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+        }
+      ],
+      "claim_numbers": [
+        1,
+        13
+      ],
+      "id": "inverting_amplifier",
+      "requirement_paraphrase": "Inverting input-to-output amplification"
+    },
+    {
+      "cases": [
+        {
+          "assessment": "apparent_absence",
+          "basis": "For0012/0024: outa -> Cf -> f; capsule f-b. For0014: chargeout -> Cf -> f; capsule f-b. There is no out -> Cf -> b -> capsule -> f feedback path. Voltage and carrier candidates do not add it. Construction/equivalents unresolved.",
+          "candidate_ids": [
+            "candidate_0010",
+            "candidate_0012",
+            "candidate_0013",
+            "candidate_0014",
+            "candidate_0017",
+            "candidate_0019",
+            "candidate_0023",
+            "candidate_0024",
+            "candidate_0025"
+          ],
+          "exact_versions": {
+            "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9",
+            "candidate_0012": "f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968",
+            "candidate_0013": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015",
+            "candidate_0014": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+            "candidate_0017": "06d104a8f60e29e4214fe42130a8109dd0e870e26ce30e64bdce9fd525495922",
+            "candidate_0019": "1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da",
+            "candidate_0023": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+            "candidate_0024": "65bab5628d9b477584e38c3afb3d7cafef3012a7a2f2198de4886374a617e9f8",
+            "candidate_0025": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+          },
+          "netlist_references": [
+            "Cfeedback",
+            "Cfeedbackseries",
+            "Rback"
+          ],
+          "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+        }
+      ],
+      "claim_numbers": [
+        1,
+        13
+      ],
+      "id": "sensor_in_series_with_feedback_C",
+      "requirement_paraphrase": "Sensor and feedback capacitor connect amplifier output to signal input through their series feedback path"
+    },
+    {
+      "cases": [
+        {
+          "assessment": "demonstrated_present_different_relationship",
+          "basis": "Passive raw-to-pol-to-b bias exists, but b is not the claimed intermediate node of the series feedback path; f is the sensing node shared by Cf and capsule.",
+          "candidate_ids": [
+            "candidate_0012",
+            "candidate_0024",
+            "candidate_0014"
+          ],
+          "exact_versions": {
+            "candidate_0012": "f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968",
+            "candidate_0014": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+            "candidate_0024": "65bab5628d9b477584e38c3afb3d7cafef3012a7a2f2198de4886374a617e9f8"
+          },
+          "netlist_references": [
+            "Rpolar0",
+            "Cpol",
+            "Rback"
+          ],
+          "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+        }
+      ],
+      "claim_numbers": [
+        1,
+        13
+      ],
+      "id": "voltage_source_at_intermediate_node",
+      "requirement_paraphrase": "Voltage source connected to node between sensor and feedback capacitor"
+    },
+    {
+      "cases": [
+        {
+          "assessment": "apparent_absence",
+          "basis": "P48 resistor extraction and emitter-follower rail are not an implemented charge pump.0013 behavioral RF excitation is not a power charge pump.",
+          "candidate_ids": [
+            "candidate_0010",
+            "candidate_0012",
+            "candidate_0013",
+            "candidate_0014",
+            "candidate_0017",
+            "candidate_0019",
+            "candidate_0023",
+            "candidate_0024",
+            "candidate_0025"
+          ],
+          "exact_versions": {
+            "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9",
+            "candidate_0012": "f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968",
+            "candidate_0013": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015",
+            "candidate_0014": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+            "candidate_0017": "06d104a8f60e29e4214fe42130a8109dd0e870e26ce30e64bdce9fd525495922",
+            "candidate_0019": "1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da",
+            "candidate_0023": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+            "candidate_0024": "65bab5628d9b477584e38c3afb3d7cafef3012a7a2f2198de4886374a617e9f8",
+            "candidate_0025": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+          },
+          "netlist_references": [
+            "Rharvestp",
+            "Rharvestn",
+            "XQreg",
+            "Rback"
+          ],
+          "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+        }
+      ],
+      "claim_numbers": [
+        1,
+        13
+      ],
+      "id": "charge_pump_and_connection",
+      "requirement_paraphrase": "Voltage-source arrangement between feedback node and reference or output and comprising a charge pump"
+    }
+  ],
+  "family_chain": [
+    "EP12171634.4 / EP2675188A1,B1",
+    "EP15176472.7 / EP2955936A1,B1",
+    "EP17165959.2 / EP3229493A1,B1",
+    "EP19153027.8 / EP3509323A1,B1",
+    "WO2013185988A1 is a discovery lead; WIPO national-phase chain not verified"
+  ],
+  "filing_date_as_printed": "2012-06-12",
+  "grant_number": "EP2955936B1",
+  "independent_claims_inspected": [
+    1,
+    13
+  ],
+  "interpretation_hold": "Description/drawings were considered; literal circuit distinctions do not decide claim construction or equivalents. No legal non-infringement opinion. Holds remain."
+}

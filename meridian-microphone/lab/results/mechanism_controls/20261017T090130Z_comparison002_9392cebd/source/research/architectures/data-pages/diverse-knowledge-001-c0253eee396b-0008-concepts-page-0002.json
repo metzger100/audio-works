@@ -1,0 +1,179 @@
+[
+  {
+    "analysis_backend_prerequisite": "Grounded and translated DC/current/CM",
+    "assumption_inverted": null,
+    "conversion_principle": "Capsule voltage",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "mosfet",
+      "no_jfet",
+      "high_feedback"
+    ],
+    "id": "concept_0005",
+    "independent_analytical_oracle": "Complete terminal gauge invariance",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "high_feedback"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Balanced line driver",
+      "dc_bias": "Filtered midrail and feedback",
+      "expected_dominant_distortion": "Input common-mode and output crossover",
+      "expected_dominant_noise": "MOS 1/f and input current noise",
+      "fastest_falsification": "Noise/SOA/current across vendor limits and temperature",
+      "gain_or_impedance_transformation": "Closed-loop CMOS amplifier",
+      "likely_fatal_flaw": "CMOS macro model omits leakage/noise or exceeds P48 budget",
+      "loading_control": "Documented CMOS input C and leakage, guard if justified",
+      "sensed_quantity": "Capsule voltage"
+    },
+    "real_part_dependencies": "OPA197/OPA928 or separately qualified CMOS + rail",
+    "role": "Inventor",
+    "scientific_transfer": false,
+    "smallest_experiment": "Noise/SOA/current across vendor limits and temperature",
+    "source_links": [
+      "https://www.ti.com/lit/ds/symlink/opa197.pdf"
+    ],
+    "sources": [],
+    "status": "proposed_not_simulated",
+    "title": "CMOS-input voltage amplifier"
+  },
+  {
+    "analysis_backend_prerequisite": "Device capacitance/current noise before integration",
+    "assumption_inverted": "The capsule must be voltage sensed",
+    "conversion_principle": "Capsule displacement current",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "mosfet",
+      "current",
+      "no_jfet"
+    ],
+    "id": "concept_0006",
+    "independent_analytical_oracle": "I=sQ, current conveyor compliance",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "current"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Current-to-differential conversion",
+      "dc_bias": "Controlled drain current and gate-voltage loop",
+      "expected_dominant_distortion": "Source-voltage compliance and body effect",
+      "expected_dominant_noise": "Channel current noise and gate-control noise",
+      "fastest_falsification": "Noise referred to pressure at 20 Hz and large-signal input compliance",
+      "gain_or_impedance_transformation": "Current conveyor then integration",
+      "likely_fatal_flaw": "Current noise plus pressure differentiation loses LF SNR",
+      "loading_control": "Low input impedance defines the electrical boundary",
+      "sensed_quantity": "Capsule displacement current"
+    },
+    "real_part_dependencies": "Documented small-signal MOS + bias/current-copy devices",
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "smallest_experiment": "Noise referred to pressure at 20 Hz and large-signal input compliance",
+    "source_links": [
+      "https://arxiv.org/pdf/2007.00615"
+    ],
+    "sources": [
+      "S07"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Common-gate MOS displacement-current input"
+  },
+  {
+    "analysis_backend_prerequisite": "DC authority, measured base/flicker noise",
+    "assumption_inverted": "The first device must be a FET",
+    "conversion_principle": "Electrode charge",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "no_fet",
+      "charge",
+      "instrumentation"
+    ],
+    "id": "concept_0007",
+    "independent_analytical_oracle": "Finite charge/reset KCL and base shot floor",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "charge",
+      "instrumentation"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Differential output buffer",
+      "dc_bias": "Slow offset/leakage servo",
+      "expected_dominant_distortion": "Input/base-current modulation",
+      "expected_dominant_noise": "Base-current shot noise and feedback resistor noise",
+      "fastest_falsification": "Integrate pressure-referred shot-noise envelope before detailed construction",
+      "gain_or_impedance_transformation": "BJT error amplifier and capacitor feedback",
+      "likely_fatal_flaw": "BJT current noise exceeds the entire LF budget",
+      "loading_control": "Virtual-node charge summation with feedback C",
+      "sensed_quantity": "Electrode charge"
+    },
+    "real_part_dependencies": "BC846B emitter-r1 diagnostic; independent low-current BJT needed",
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "smallest_experiment": "Integrate pressure-referred shot-noise envelope before detailed construction",
+    "source_links": [
+      "https://www.ti.com/lit/an/sloa033a/sloa033a.pdf"
+    ],
+    "sources": [
+      "S05",
+      "S07"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Bipolar charge-feedback amplifier"
+  },
+  {
+    "analysis_backend_prerequisite": "Seeded periodic calibration and real dynamic-power model",
+    "assumption_inverted": "The first device must be a FET",
+    "conversion_principle": "Capacitance modulation of an analog carrier",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "no_fet",
+      "instrumentation",
+      "differential"
+    ],
+    "id": "concept_0008",
+    "independent_analytical_oracle": "Bridge sidebands plus G S G* covariance",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "instrumentation",
+      "differential"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Differential detector/driver",
+      "dc_bias": "Zero-mean carrier with separately researched safe DC bias",
+      "expected_dominant_distortion": "Demodulation and electrostatic back-action",
+      "expected_dominant_noise": "Carrier oscillator phase/amplitude noise and detector noise",
+      "fastest_falsification": "Carrier sidebands, demodulated noise and nonlinear C/voltage force model",
+      "gain_or_impedance_transformation": "BJT synchronous detector and audio gain",
+      "likely_fatal_flaw": "RF power or carrier force destabilizes diaphragm",
+      "loading_control": "Bridge balance and controlled excitation",
+      "sensed_quantity": "Capacitance modulation of an analog carrier"
+    },
+    "real_part_dependencies": "Real bipolar oscillator/buffers/mixer and RF-safe sensor",
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "smallest_experiment": "Carrier sidebands, demodulated noise and nonlinear C/voltage force model",
+    "source_links": [
+      "https://designers-guide.org/theory/cyclo-paper.pdf"
+    ],
+    "sources": [
+      "S09"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Bipolar carrier capacitance bridge"
+  }
+]

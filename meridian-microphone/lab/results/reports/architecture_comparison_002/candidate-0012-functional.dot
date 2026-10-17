@@ -1,0 +1,17 @@
+digraph functional {
+rankdir=LR;graph[bgcolor="white",pad=.2,nodesep=.4,ranksep=.6];
+node[shape=box,style="rounded,filled",fillcolor="#edf3f5",fontname="sans",fontsize=11];
+edge[fontname="sans",fontsize=9];
+label="candidate_0012: functional research view; full connectivity supplied separately";labelloc=t;
+power[label="P48 pins 2/3 → two 2.2kΩ paths\nFiltered raw; divider/NPN rail; midpoint"];
+capsule[label="K47FRB electrical scenario\nFront/backplate/rear; mechanics and safe bias unknown"];
+polar[label="Raw → resistor chain/filter → Rback\nBackplate bias; rear return to local ground"];
+input[label="BJT differential charge stage\n100nF feedback; parallel 1MΩ reset paths"];
+output[label="Opposed pair outputs → two NPN followers\nAC coupling to pins 2/3"];
+power->polar[label="raw"];
+polar->capsule[label="simulated DC"];
+input->input[label="finite charge/reset feedback"];
+capsule->input[label="electrical conversion"];
+input->output[label="signal"];
+power->output[label="loaded rail/reference"];
+}

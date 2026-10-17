@@ -1,0 +1,22 @@
+digraph functional {
+rankdir=LR;graph[bgcolor="white",pad=.2,nodesep=.4,ranksep=.6];
+node[shape=box,style="rounded,filled",fillcolor="#edf3f5",fontname="sans",fontsize=11];
+edge[fontname="sans",fontsize=9];
+label="candidate_0025: functional research view; full connectivity supplied separately";labelloc=t;
+power[label="P48 pins 2/3 → two 2.2kΩ paths\nFiltered raw; divider/NPN rail; midpoint"];
+capsule[label="K47FRB electrical scenario\nFront/backplate/rear; mechanics and safe bias unknown"];
+polar[label="Raw → resistor chain/filter → Rback\nBackplate bias; rear return to local ground"];
+input[label="JFE150 source follower\nNo selection or hidden trimming"];
+bias[label="Two-BJT source-voltage servo → 1GΩ gate return\n1kΩ source degeneration; finite authority"];
+output[label="AC coupling; inverter + two NPN drivers\n47Ω legs; parallel 47µF output capacitors"];
+filter[label="Final backplate → local ground\n100nF PP; IR/ESR/assumed ESL"];
+power->polar[label="raw"];
+polar->capsule[label="simulated DC"];
+bias->input[label="bias return"];
+power->bias[label="rail/reference"];
+input->bias[label="source sense"];
+polar->filter[label="backplate branch"];
+capsule->input[label="electrical conversion"];
+input->output[label="signal"];
+power->output[label="loaded rail/reference"];
+}

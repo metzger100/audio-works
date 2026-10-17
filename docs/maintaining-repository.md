@@ -43,6 +43,6 @@ python3 tools/project.py evidence restore --source /path/to/backup-directory --d
 
 The optional `--independent` flag still verifies separate persistent storage; a same-device copy cannot receive that classification. Neither an upload nor a restored archive creates missing original bytes. Preserve completeness declarations and never claim that ignored files are on GitHub. Commands do not contact suppliers, accept licences or publish data.
 
-Historical audits remain in preserved history. Capture/restore reports distinguish captured-byte integrity from original-evidence completeness. Default searches include maintained source/proposals; add `--include-generated`, `--include-evidence` or `--include-history` deliberately.
+Historical audits remain in preserved history. Capture/restore reports distinguish captured-byte integrity from original-evidence completeness. Default discovery includes maintained sources/proposals, excluding internal data pages. [Discovery options](start-here.md) explain explicit data/evidence/history access and scoped search.
 
 Quality/tooling changes require a [dated decision](decisions/INDEX.md) and a regression fixture reproducing the defect. Use `audit` to identify the next focused improvement; update an authoritative record, fix the cause and repeat the completion sequence. No scheduled jobs or separate issue ledger are needed. Configure the CI job `repository-quality` as a required GitHub status check when remote settings changes are authorized. See [mechanical rules](quality-rules.md).

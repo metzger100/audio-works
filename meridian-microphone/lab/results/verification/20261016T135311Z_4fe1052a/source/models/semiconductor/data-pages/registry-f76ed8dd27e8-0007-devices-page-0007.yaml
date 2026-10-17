@@ -1,0 +1,209 @@
+- id: bav199
+  manufacturer: Nexperia
+  exact_variant: BAV199,215
+  family: series_dual_diode
+  package: SOT-23
+  circuit_roles:
+  - protection
+  lifecycle:
+    status: current_catalogue_present_exact_lifecycle_not_fully_verified
+    checked_date: '2026-10-09'
+    source_url: https://www.nexperia.com/product/BAV199
+  models:
+  - id: bav199_vendor
+    path: semiconductor/vendor/bav199.lib
+    sha256: 37ca9619403894293238c41fbe05a9748c1d4d7d0a17b71ddde6dc2a8ba104e6
+    version: extraction date unspecified in vendor header
+    source_url: https://assets.nexperia.com/documents/spice-model/BAV199.txt?download=1
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: native .model
+    subcircuit: BAV199
+    primitive: D
+    parent_model_id: null
+    ngspice_behavior: ps
+    pin_order: native D A K one diode; package D1 A1 K3 and D2 A3 K2
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: not_yet_tested
+    behavior_validation: not_yet_characterized
+  - id: bav199_syntax_r1
+    path: semiconductor/vendor/bav199_metadata_r1.lib
+    sha256: ed3a4386d3632c91917c88cbd5d168b943cfd1f5a16133cd0bc6c145cac3f1cc
+    version: extraction date unspecified in vendor header; authored metadata r1
+    source_url: https://assets.nexperia.com/documents/spice-model/BAV199.txt?download=1
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: native .model
+    subcircuit: BAV199
+    primitive: D
+    parent_model_id: bav199_vendor
+    ngspice_behavior: ps
+    pin_order: native D A K one diode; package D1 A1 K3 and D2 A3 K2
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: all_planned_jobs_run
+    behavior_validation: scoped_agreement
+    validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      bav199_syntax_r1:
+      - behavior: reverse_leak
+        status: pass
+        evidence: guaranteed_limit
+        condition: BAV199 VR75V 25C one diode
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: cap
+        status: pass
+        evidence: guaranteed_limit
+        condition: BAV199 VR0 f1MHz table
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  procurement_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  readiness: research_only_no_blanket_behavior_qualification
+  patent_status: technical_feature_flags_only_exact_claim_status_screen_incomplete
+  validation_report: research/parts_database_expansion_001.md
+  unqualified_behavior:
+  - production correlated variation
+  - model omissions are not zero
+  - candidate combination
+  - physical P48 implementation
+  - capsule coupling
+  represented_behavior:
+    scope: model equations/header inspected; behavior evidence is independent from
+      loading
+  datasheet:
+    url: https://assets.nexperia.com/documents/data-sheet/BAV199.pdf
+    version: current public sheet; revision in original PDF
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_bav199.pdf
+    sha256: ab2f26d003e3c1d8f7e4e7ac674ae055849970bf7b392a7d5d31eca443aab9e2
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+- id: opa928
+  manufacturer: Texas Instruments
+  exact_variant: OPA928DT
+  family: cmos_electrometer_guard_amplifier
+  package: SOIC-8 D
+  circuit_roles:
+  - guard_servo
+  lifecycle:
+    status: active_catalogue_observed
+    checked_date: '2026-10-09'
+    source_url: https://www.ti.com/product/OPA928
+  models:
+  - id: opa928_vendor
+    path: semiconductor/vendor/opa928.lib
+    sha256: f4f9d38efc4aa2a31676c84a351d2ee9379baad88abab8b5afad550c7f99c616
+    version: 1.1 01Apr2024
+    source_url: https://www.ti.com/lit/zip/sbomcc0a
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: self-contained public subcircuit; dialect compatibility unverified
+    subcircuit: OPAX928
+    primitive: X
+    parent_model_id: null
+    ngspice_behavior: ps
+    pin_order: IN+ IN- V+ V- OUT GRD1 GRD2; physical 4 5 6 3 1 2 7; NC8
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: scoped_success_with_retained_disagreements
+    behavior_validation: only conditioned accepted rows; omissions unresolved
+    validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+    load_record: results/device_models/20261009T145346Z_parts2_742caaa3/results.json
+  - id: opa928_reference_v10
+    path: semiconductor/vendor/opa928_reference_v10.lib
+    sha256: a542ad37e016c9f1020df14c3ba1546dc92f79f70c9b78e2b30020b57be6e3f5
+    version: 1.0 07DEC2022 SBOMCD9
+    source_url: https://www.ti.com/lit/zip/sbomcd9
+    retrieved_date: '2026-10-09'
+    acquisition_status: valid_spice
+    syntax: self-contained public subcircuit; dialect compatibility unverified
+    subcircuit: OPAX928
+    primitive: X
+    parent_model_id: null
+    ngspice_behavior: ps
+    pin_order: IN+ IN- V+ V- OUT GRD1 GRD2; physical 4 5 6 3 1 2 7; NC8
+    redistribution:
+      status: not_established_do_not_redistribute
+      evidence: Original notices and archive/PDF retained privately; public availability
+        is not redistribution permission.
+      acquisition: models/semiconductor/acquire.py; private receipt and acquisition.yaml
+    runnability: uncharacterized_historical_manufacturer_variant
+    behavior_validation: none_assigned
+    validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+    load_record: null
+    variant_scope: Separate manufacturer revision; not a repair, equivalent choice
+      or independent device. Never pool with current model.
+  evidence_states:
+    investigated: true
+    acquired: true
+    characterized: true
+    behavior_validated:
+      opa928_vendor:
+      - behavior: en_5
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: datasheet conditioned common mode, RL10k 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: ib_5
+        status: pass
+        evidence: guaranteed_limit
+        condition: RH<50percent; nominal grounded simulation does not model humidity
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: iq_5
+        status: pass
+        evidence: guaranteed_limit
+        condition: no-load output; model Iq fixed275u; no variation proof
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: en_16
+        status: pass
+        evidence: typical_accuracy_screen
+        condition: datasheet conditioned common mode, RL10k 25C
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: ib_16
+        status: pass
+        evidence: guaranteed_limit
+        condition: RH<50percent; nominal grounded simulation does not model humidity
+        scope: point/screen only; never a production distribution or zero-effect law
+      - behavior: iq_16
+        status: pass
+        evidence: guaranteed_limit
+        condition: no-load output; model Iq fixed275u; no variation proof
+        scope: point/screen only; never a production distribution or zero-effect law
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  procurement_register: research/procurement/parts_expansion_001_2026-10-09.yaml
+  readiness: research_only_no_blanket_behavior_qualification
+  patent_status: technical_feature_flags_only_exact_claim_status_screen_incomplete
+  validation_report: research/parts_database_expansion_001.md
+  unqualified_behavior:
+  - production correlated variation
+  - model omissions are not zero
+  - candidate combination
+  - physical P48 implementation
+  - capsule coupling
+  represented_behavior:
+    scope: model equations/header inspected; behavior evidence is independent from
+      loading
+  datasheet:
+    url: https://www.ti.com/lit/ds/symlink/opa928.pdf
+    version: SBOSA77A April2024
+    retrieved_date: '2026-10-09'
+    local_path: models/semiconductor/vendor/evidence/parts001_opa928.pdf
+    sha256: 06ab87dcd0ffd4d319b164f763bee44707a40593c6df60930d3e1f1fe5a936ad
+  validation_record: results/device_models/20261009T133651Z_parts_d3c30763/results.json
+  additional_validation_records:
+  - results/device_models/20261009T145346Z_parts2_742caaa3/results.json

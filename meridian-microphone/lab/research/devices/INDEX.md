@@ -3,6 +3,7 @@
 
 Device findings, manufacturer-source conditions, role matrices, isolated controls and acquisition/validation receipts.
 
+- [README.md](README.md) — active
 - [device-model-comparison.png](device-model-comparison.png) — active
 - [device-model-decisions.md](device-model-decisions.md) — active
 - [device-model-integrity.json](device-model-integrity.json) — active

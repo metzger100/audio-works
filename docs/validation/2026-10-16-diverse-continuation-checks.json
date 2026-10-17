@@ -1,0 +1,405 @@
+{
+  "date": "2026-10-16",
+  "scope": "Completed Prompt10 evidence audit and active protocol equation correction; no candidate/model/BOM/backend changes",
+  "doctor": {
+    "root": "/home/leobareth/Dokumente/Hardware/audio-works/meridian-microphone/lab",
+    "spec_sha256": "f5201295bef7855bced5157cf9727f95d057c2b17589f9f55b8fd6fb17445bbd",
+    "versions": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "numpy": "2.4.2",
+      "scipy": "1.17.1",
+      "pandas": "3.0.1",
+      "matplotlib": "3.10.8",
+      "yaml": "6.0.3",
+      "ngspice": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Wed Aug 19 09:38:31 UTC 2026\n******"
+    }
+  },
+  "laboratory_verification": {
+    "file": "meridian-microphone/lab/results/verification/20261016T135311Z_4fe1052a/verification.json",
+    "tests_passed": 109,
+    "exit_code": 0,
+    "status": "pass",
+    "source_unchanged": true,
+    "frozen_source_entries_verified": 1163,
+    "raw_entries_verified": 71,
+    "hash_failures": []
+  },
+  "repository_regression": {
+    "command": "python3 -m unittest discover -s tests/project",
+    "tests_passed": 40,
+    "exit_code": 0,
+    "output": "........................................\n----------------------------------------------------------------------\nRan 40 tests in 89.515s\n\nOK\n"
+  },
+  "initial_audit_failure_retained": {
+    "status": "fail",
+    "errors": [
+      "Reading route reporting: 50120 > 50000 characters; scope references through hubs"
+    ],
+    "organization": "fail",
+    "reading_sizes": {
+      "branding": 31691,
+      "device-models": 46891,
+      "documentation": 28054,
+      "optimization": 46418,
+      "orientation": 14817,
+      "qualification": 43182,
+      "reporting": 50120,
+      "topology": 48453
+    },
+    "repeated_prose": [],
+    "nested_data_partitions": [],
+    "noncanonical_page_directories": [],
+    "folders": {
+      "maintained": 177,
+      "original_only": 22761,
+      "page_containers": 64,
+      "data_page_containers": 61,
+      "navigation_page_containers": 3,
+      "by_root": {
+        ".githooks": 1,
+        ".github": 2,
+        "LICENSES": 1,
+        "branding": 5,
+        "docs": 9,
+        "meridian-microphone": 154,
+        "tests": 3,
+        "tools": 2
+      }
+    },
+    "maximum_maintained_directory_depth": 7,
+    "generated_files": 212,
+    "enforcement": {
+      "hooks": [
+        "pre-commit",
+        "pre-merge-commit",
+        "pre-applypatch",
+        "pre-push"
+      ],
+      "installed": true,
+      "ci": true,
+      "selected_content": "working",
+      "character_limit": 15000,
+      "onboarding_limit": 15000,
+      "route_limit": 50000
+    },
+    "common_characters": 14817,
+    "estimated_tokens": 3704,
+    "current_words": 108,
+    "context_status": "pass",
+    "hook_installed": true,
+    "continued_quality": "pass",
+    "stale_generated": [],
+    "oversized": [],
+    "unreachable": [],
+    "maintained_text_files": 1909,
+    "indexed_maintained_files": 1990,
+    "preserved_original_files": 65445,
+    "preservation": {
+      "status": "configured",
+      "authority": "github",
+      "repository": "https://github.com/metzger100/audio-works",
+      "scope": "versioned_repository",
+      "private_backups": "optional",
+      "remote_sync": "not_checked",
+      "note": "GitHub is canonical for committed files. This local gate does not verify remote synchronization or preservation of ignored evidence."
+    },
+    "note": "Repository checks do not establish scientific, procurement or legal qualification; character counts estimate tokens."
+  },
+  "correction": "Shorten the D040 index summary and retain its full linked rationale; no reading limit or scientific requirement changes",
+  "root_gates": {
+    "audit": {
+      "status": "pass",
+      "errors": [],
+      "organization": "pass",
+      "reading_sizes": {
+        "branding": 31691,
+        "device-models": 46767,
+        "documentation": 28054,
+        "optimization": 46294,
+        "orientation": 14817,
+        "qualification": 43058,
+        "reporting": 49996,
+        "topology": 48329
+      },
+      "repeated_prose": [],
+      "nested_data_partitions": [],
+      "noncanonical_page_directories": [],
+      "folders": {
+        "maintained": 177,
+        "original_only": 23049,
+        "page_containers": 64,
+        "data_page_containers": 61,
+        "navigation_page_containers": 3,
+        "by_root": {
+          ".githooks": 1,
+          ".github": 2,
+          "LICENSES": 1,
+          "branding": 5,
+          "docs": 9,
+          "meridian-microphone": 154,
+          "tests": 3,
+          "tools": 2
+        }
+      },
+      "maximum_maintained_directory_depth": 7,
+      "generated_files": 212,
+      "enforcement": {
+        "hooks": [
+          "pre-commit",
+          "pre-merge-commit",
+          "pre-applypatch",
+          "pre-push"
+        ],
+        "installed": true,
+        "ci": true,
+        "selected_content": "working",
+        "character_limit": 15000,
+        "onboarding_limit": 15000,
+        "route_limit": 50000
+      },
+      "common_characters": 14817,
+      "estimated_tokens": 3704,
+      "current_words": 108,
+      "context_status": "pass",
+      "hook_installed": true,
+      "continued_quality": "pass",
+      "stale_generated": [],
+      "oversized": [],
+      "unreachable": [],
+      "maintained_text_files": 1909,
+      "indexed_maintained_files": 1990,
+      "preserved_original_files": 66468,
+      "preservation": {
+        "status": "configured",
+        "authority": "github",
+        "repository": "https://github.com/metzger100/audio-works",
+        "scope": "versioned_repository",
+        "private_backups": "optional",
+        "remote_sync": "not_checked",
+        "note": "GitHub is canonical for committed files. This local gate does not verify remote synchronization or preservation of ignored evidence."
+      },
+      "note": "Repository checks do not establish scientific, procurement or legal qualification; character counts estimate tokens."
+    },
+    "check": {
+      "status": "pass",
+      "errors": [],
+      "organization": "pass",
+      "reading_sizes": {
+        "branding": 31691,
+        "device-models": 46767,
+        "documentation": 28054,
+        "optimization": 46294,
+        "orientation": 14817,
+        "qualification": 43058,
+        "reporting": 49996,
+        "topology": 48329
+      },
+      "repeated_prose": [],
+      "nested_data_partitions": [],
+      "noncanonical_page_directories": [],
+      "folders": {
+        "maintained": 177,
+        "original_only": 23049,
+        "page_containers": 64,
+        "data_page_containers": 61,
+        "navigation_page_containers": 3,
+        "by_root": {
+          ".githooks": 1,
+          ".github": 2,
+          "LICENSES": 1,
+          "branding": 5,
+          "docs": 9,
+          "meridian-microphone": 154,
+          "tests": 3,
+          "tools": 2
+        }
+      },
+      "maximum_maintained_directory_depth": 7,
+      "generated_files": 212,
+      "enforcement": {
+        "hooks": [
+          "pre-commit",
+          "pre-merge-commit",
+          "pre-applypatch",
+          "pre-push"
+        ],
+        "installed": true,
+        "ci": true,
+        "selected_content": "working",
+        "character_limit": 15000,
+        "onboarding_limit": 15000,
+        "route_limit": 50000
+      },
+      "common_characters": 14817,
+      "estimated_tokens": 3704,
+      "current_words": 108,
+      "context_status": "pass",
+      "hook_installed": true,
+      "continued_quality": "pass",
+      "stale_generated": [],
+      "oversized": [],
+      "unreachable": [],
+      "maintained_text_files": 1909,
+      "indexed_maintained_files": 1990,
+      "preserved_original_files": 66468,
+      "preservation": {
+        "status": "configured",
+        "authority": "github",
+        "repository": "https://github.com/metzger100/audio-works",
+        "scope": "versioned_repository",
+        "private_backups": "optional",
+        "remote_sync": "not_checked",
+        "note": "GitHub is canonical for committed files. This local gate does not verify remote synchronization or preservation of ignored evidence."
+      },
+      "note": "Repository checks do not establish scientific, procurement or legal qualification; character counts estimate tokens.",
+      "fast_checks": {
+        "status": "pass",
+        "checks": [
+          {
+            "check": "import importlib.metadata as m; expected={'ruff': '0.16.10', 'PyYAML': '6.0.3', 'markdown-it-py': '4.2.0', 'mdurl': '0.1.2'}; assert all(m.version(k)==v for k,v in expected.items()), 'Install the pinned quality dependencies before using the gate'",
+            "status": "pass",
+            "output": ""
+          },
+          {
+            "check": "ruff check --no-cache",
+            "status": "pass",
+            "output": "All checks passed!\n"
+          },
+          {
+            "check": "ruff format --check",
+            "status": "pass",
+            "output": "137 files already formatted\n"
+          },
+          {
+            "check": "unittest discover -s",
+            "status": "pass",
+            "output": "----------------------------------------------------------------------\nRan 23 tests in 1.939s\n\nOK\n"
+          }
+        ]
+      }
+    },
+    "check_staged": {
+      "status": "pass",
+      "errors": [],
+      "organization": "pass",
+      "reading_sizes": {
+        "branding": 31691,
+        "device-models": 46638,
+        "documentation": 28054,
+        "optimization": 46165,
+        "orientation": 14817,
+        "qualification": 42929,
+        "reporting": 49623,
+        "topology": 47956
+      },
+      "repeated_prose": [],
+      "nested_data_partitions": [],
+      "noncanonical_page_directories": [],
+      "folders": {
+        "maintained": 177,
+        "original_only": 22761,
+        "page_containers": 64,
+        "data_page_containers": 61,
+        "navigation_page_containers": 3,
+        "by_root": {
+          ".githooks": 1,
+          ".github": 2,
+          "LICENSES": 1,
+          "branding": 5,
+          "docs": 9,
+          "meridian-microphone": 154,
+          "tests": 3,
+          "tools": 2
+        }
+      },
+      "maximum_maintained_directory_depth": 7,
+      "generated_files": 212,
+      "enforcement": {
+        "hooks": [
+          "pre-commit",
+          "pre-merge-commit",
+          "pre-applypatch",
+          "pre-push"
+        ],
+        "installed": true,
+        "ci": true,
+        "selected_content": "index",
+        "character_limit": 15000,
+        "onboarding_limit": 15000,
+        "route_limit": 50000
+      },
+      "common_characters": 14817,
+      "estimated_tokens": 3704,
+      "current_words": 108,
+      "context_status": "pass",
+      "hook_installed": true,
+      "continued_quality": "pass",
+      "stale_generated": [],
+      "oversized": [],
+      "unreachable": [],
+      "maintained_text_files": 1904,
+      "indexed_maintained_files": 1985,
+      "preserved_original_files": 65445,
+      "preservation": {
+        "status": "configured",
+        "authority": "github",
+        "repository": "https://github.com/metzger100/audio-works",
+        "scope": "versioned_repository",
+        "private_backups": "optional",
+        "remote_sync": "not_checked",
+        "note": "GitHub is canonical for committed files. This local gate does not verify remote synchronization or preservation of ignored evidence."
+      },
+      "note": "Repository checks do not establish scientific, procurement or legal qualification; character counts estimate tokens.",
+      "fast_checks": {
+        "status": "pass",
+        "checks": [
+          {
+            "check": "import importlib.metadata as m; expected={'ruff': '0.16.10', 'PyYAML': '6.0.3', 'markdown-it-py': '4.2.0', 'mdurl': '0.1.2'}; assert all(m.version(k)==v for k,v in expected.items()), 'Install the pinned quality dependencies before using the gate'",
+            "status": "pass",
+            "output": ""
+          },
+          {
+            "check": "ruff check --no-cache",
+            "status": "pass",
+            "output": "All checks passed!\n"
+          },
+          {
+            "check": "ruff format --check",
+            "status": "pass",
+            "output": "137 files already formatted\n"
+          },
+          {
+            "check": "unittest discover -s",
+            "status": "pass",
+            "output": "----------------------------------------------------------------------\nRan 23 tests in 2.054s\n\nOK\n"
+          }
+        ]
+      }
+    }
+  },
+  "new_inventory": {
+    "status": "pass",
+    "new_files": 71,
+    "inventory": "meridian-microphone/lab/results/evidence-20261016T135535Z-d67db6e3.sha256",
+    "verified_entries": 71,
+    "hash_failures": []
+  },
+  "prior_experiment_integrity": {
+    "primary_and_successor_entries": 1033,
+    "source_and_preflight_entries": 57,
+    "failures": []
+  },
+  "original_evidence": {
+    "receipt": "docs/validation/2026-10-16-diverse-continuation-preservation.json",
+    "missing_historical_originals": 89,
+    "new_missing_originals": 0,
+    "damaged": 0,
+    "uninventoried": 0,
+    "historical_gap_set_unchanged": true
+  },
+  "new_prerequisite_simulator_attempts": 0,
+  "optimizer_vectors": 0,
+  "new_realized_candidates": [],
+  "no_commit_push_purchase_contact_payment_licence_acceptance_or_external_publication": true,
+  "no_candidate_qualification_or_physical_promotion": true
+}

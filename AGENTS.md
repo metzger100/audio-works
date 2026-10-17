@@ -1,7 +1,7 @@
 # Repository agent instructions
 
-Run `python3 tools/project.py context <route>`; read its policies, relevant project description and decisions before changes. Always read [COMPONENTS.md](COMPONENTS.md), [PATENTS.md](PATENTS.md), [QUALITY.md](QUALITY.md) and [CONTRIBUTING.md](CONTRIBUTING.md). Meridian engineering follows its [instructions](meridian-microphone/lab/AGENTS.md), complete scientific contract and all required evidence.
+Before changes, run `python3 tools/project.py context <route>`. Read its project description/decisions and [components](COMPONENTS.md), [patents](PATENTS.md), [quality](QUALITY.md), [contributing](CONTRIBUTING.md). Meridian engineering also requires [lab instructions](meridian-microphone/lab/AGENTS.md), the full scientific contract and required evidence.
 
-Follow the contributor completion sequence; install hooks in every new checkout. GitHub is canonical for committed files; private backups are optional. Preserve failures, parents, snapshots, hashes and frozen bytes. Inventory and verify new batches; report original-evidence limitations separately from repository status. Never invent sourcing, prices or clearance, or weaken scientific requirements for a pass. Invariant/budget changes require explicit owner direction, dated rationale and measured impact. Report checks and unknowns honestly.
+Follow contributor instructions. Never invent sourcing/prices/clearance or weaken science for a pass. Invariant/budget changes need explicit owner direction, dated rationale and measured impact. Report checks/unknowns honestly; separate original-evidence limits from repository status.
 
 No purchase, contact, payment, licence acceptance or external publication is authorized here.

@@ -1,0 +1,225 @@
+{
+  "activities": [
+    "private DE manufacture/use scenario",
+    "supply/import scenario with territories unresolved",
+    "implementation/build-publication scenario for professional review"
+  ],
+  "application_id": "EP07712718.1",
+  "claim_version": "EP2002273B1 as published; no assertion that this is the latest amended/litigated version",
+  "earliest_identified_priority": {
+    "date": "2006-03-21",
+    "id": "GB0605717"
+  },
+  "elements": [
+    {
+      "cases": [
+        {
+          "assessment": "unresolved_construction",
+          "basis": "Capsule electrode sensing and a CMOS follower are modeled; application of sample-under-test/electrode terminology requires interpretation, not a microphone-label dismissal.",
+          "candidate_ids": [
+            "candidate_0010"
+          ],
+          "exact_versions": {
+            "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9"
+          },
+          "netlist_references": [
+            "f",
+            "b",
+            "XUinput"
+          ],
+          "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+        }
+      ],
+      "claim_numbers": [
+        1
+      ],
+      "id": "detection_and_amplification",
+      "requirement_paraphrase": "Capacitively coupled detection electrode and sensor amplifier with inverting/non-inverting inputs and output"
+    },
+    {
+      "cases": [
+        {
+          "assessment": "demonstrated_generic_function",
+          "basis": "AC-bootstrapped bias return and separately driven guard are concrete; exact required relationship to a discrete preamplifier remains unproven.",
+          "candidate_ids": [
+            "candidate_0010"
+          ],
+          "exact_versions": {
+            "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9"
+          },
+          "netlist_references": [
+            "XUguard",
+            "Cboot",
+            "Rbootdc",
+            "Rbias"
+          ],
+          "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+        }
+      ],
+      "claim_numbers": [
+        1
+      ],
+      "id": "impedance_bootstrap",
+      "requirement_paraphrase": "Impedance-enhancing bootstrap from sensor output to discrete preamplifier input"
+    },
+    {
+      "cases": [
+        {
+          "assessment": "apparent_absence_top_level",
+          "basis": "Two OPA197 macros; no separately inserted discrete FET stage. Internal CMOS transistors/equivalents cannot be dismissed without construction.",
+          "candidate_ids": [
+            "candidate_0010"
+          ],
+          "exact_versions": {
+            "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9"
+          },
+          "netlist_references": [
+            "XUinput",
+            "XUguard"
+          ],
+          "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+        }
+      ],
+      "claim_numbers": [
+        1
+      ],
+      "id": "discrete_FET_preamplifier",
+      "requirement_paraphrase": "Discrete source/drain/gate preamplifier between detection electrode and sensor amplifier to reduce input capacitance"
+    },
+    {
+      "cases": [
+        {
+          "assessment": "apparent_absence_top_level",
+          "basis": "No explicit drain bootstrap or cascode preamplifier; tracking guard alone does not demonstrate these conjunctions.",
+          "candidate_ids": [
+            "candidate_0010"
+          ],
+          "exact_versions": {
+            "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9"
+          },
+          "netlist_references": [
+            "XUinput",
+            "XUguard",
+            "Cboot"
+          ],
+          "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+        }
+      ],
+      "claim_numbers": [
+        1
+      ],
+      "id": "drain_bootstrap_and_cascode",
+      "requirement_paraphrase": "Discrete preamplifier additionally drain-bootstrapped and transistor internally source-bootstrapped using cascode connection"
+    }
+  ],
+  "family_chain": [
+    "PCT/GB2007/000490",
+    "WO2007107689A1; EP2002273B1; other national members not fully screened"
+  ],
+  "filing_date_as_printed": "2007-02-13",
+  "grant_number": "EP2002273B1",
+  "independent_claims_inspected": [
+    1
+  ],
+  "interpretation_hold": "Description/drawings were considered; literal circuit distinctions do not decide claim construction or equivalents. No legal non-infringement opinion. Holds remain.",
+  "material_dependent_limitations": [
+    {
+      "cases": [
+        {
+          "assessment": "mixed",
+          "basis": "Driven guard and bias bootstrap present; no separately implemented neutralisation circuit identified; full claim1 remains required.",
+          "candidate_ids": [
+            "candidate_0010"
+          ],
+          "exact_versions": {
+            "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9"
+          },
+          "netlist_references": [
+            "Cguard",
+            "Rguardleak",
+            "Cboot"
+          ],
+          "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+        }
+      ],
+      "claim_numbers": [
+        4
+      ],
+      "id": "guard_neutralisation",
+      "requirement_paraphrase": "Guard, bootstrap and neutralisation circuits together"
+    },
+    {
+      "cases": [
+        {
+          "assessment": "apparent_absence",
+          "basis": "No discrete-stage DC-restorer path. Rbootdc is a bias-return anchor, not a demonstrated restorer.",
+          "candidate_ids": [
+            "candidate_0010"
+          ],
+          "exact_versions": {
+            "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9"
+          },
+          "netlist_references": [
+            "XUinput",
+            "XUguard"
+          ],
+          "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+        }
+      ],
+      "claim_numbers": [
+        8
+      ],
+      "id": "restorer",
+      "requirement_paraphrase": "Discrete preamplifier output supplied through DC-level restorer"
+    },
+    {
+      "cases": [
+        {
+          "assessment": "unresolved_or_unimplemented",
+          "basis": "No physical electrode/thermal-zone design; no HEMT/discrete-stage implementation. Generic FET internals do not prove claim1.",
+          "candidate_ids": [
+            "candidate_0010"
+          ],
+          "exact_versions": {
+            "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9"
+          },
+          "netlist_references": [
+            "Cguard",
+            "XUguard"
+          ],
+          "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+        }
+      ],
+      "claim_numbers": [
+        2,
+        3,
+        5,
+        6,
+        7
+      ],
+      "id": "other_dependents",
+      "requirement_paraphrase": "Zero-reference adjacent electrode; output topology; separate thermal zone; HEMT/FET stage"
+    }
+  ],
+  "official_original_verified": true,
+  "priority_limit": "Only printed identified priority/filing and linked official records inspected; earlier/further family priorities not exhaustively excluded",
+  "publication_date_as_printed": "2014-08-20",
+  "publication_number": "EP2002273B1",
+  "publication_sha256": "1063e8ec5e2655a9e232b6fdc8a88e2f6019cf639e0d161e919defc062752f52",
+  "screening_state": "partial_official_claim_inspection_and_scoped_DE_record",
+  "source_id": "EP2002273B1",
+  "status_of_other_territories": "Unresolved; no worldwide conclusion",
+  "technical_context_read": "Relevant description including enhanced-bootstrap/restorer embodiments; Figs1/2 visually inspected, later cascode/bootstrap figures and claim1 continuation read across columns.",
+  "territorial_status_record": "DPMA-2002273",
+  "wording_reference": {
+    "claims": [
+      1
+    ],
+    "printed_pages": [
+      7,
+      8
+    ],
+    "reference_rule": "Read entire numbered claim in the exact hashed PDF; table entries paraphrase limitations, not substitutes for claim wording",
+    "source": "https://data.epo.org/publication-server/rest/v1.2/patents/EP2002273NWB1/document.pdf"
+  }
+}

@@ -1,0 +1,359 @@
+[
+  {
+    "candidate": "candidate_0014",
+    "check": "temperature",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0014",
+    "check": "semiconductor_corners",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0014",
+    "check": "monte_carlo",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0014",
+    "check": "loading",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0014",
+    "check": "startup",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0014",
+    "check": "stability",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0017",
+    "check": "operating_point",
+    "coverage": "DC feasibility screen; device safe operating area remains a separate evidence gate",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0017",
+    "check": "frequency_response",
+    "coverage": "1 Hz to 10 MHz, nominal environment; electrical model only",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0017",
+    "check": "noise",
+    "coverage": "Resistive fixture noise; conditional capsule sensitivity. Semiconductor and capsule mechanical noise unresolved.",
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0017",
+    "check": "distortion",
+    "coverage": null,
+    "reason": "SimulationError: ngspice exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0017",
+    "check": "headroom",
+    "coverage": null,
+    "reason": "No valid distortion bracket",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0017",
+    "check": "output_impedance",
+    "coverage": null,
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0017",
+    "check": "balance",
+    "coverage": null,
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0017",
+    "check": "phantom_supply",
+    "coverage": "8 DC/AC supply/feed extremes. Noise/distortion/abuse at corners pending.",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0017",
+    "check": "temperature",
+    "coverage": "3 electrical temperatures; no validated mechanical or leakage temperature law",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0017",
+    "check": "semiconductor_corners",
+    "coverage": null,
+    "reason": "No manufacturer-bounded semiconductor corners; ideal fixtures cannot demonstrate no-selection yield",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0017",
+    "check": "monte_carlo",
+    "coverage": null,
+    "reason": "Initial Monte Carlo runs DC/AC screens only; all-requirement manufacturing yield is not established",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0017",
+    "check": "loading",
+    "coverage": "Electrical loading and 16 assumed capsule corners; not an acoustic polar or mechanical model",
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0017",
+    "check": "startup",
+    "coverage": "Symmetric cold turn-on PWL. Hot-plug, asymmetric pin connection, disconnect, RF/ESD pending.",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0017",
+    "check": "stability",
+    "coverage": "HF and cable/load screening",
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0019",
+    "check": "operating_point",
+    "coverage": "DC feasibility screen; device safe operating area remains a separate evidence gate",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0019",
+    "check": "frequency_response",
+    "coverage": "1 Hz to 10 MHz, nominal environment; electrical model only",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0019",
+    "check": "noise",
+    "coverage": "Resistive fixture noise; conditional capsule sensitivity. Semiconductor and capsule mechanical noise unresolved.",
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0019",
+    "check": "distortion",
+    "coverage": null,
+    "reason": "SimulationError: ngspice exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0019",
+    "check": "headroom",
+    "coverage": null,
+    "reason": "No valid distortion bracket",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0019",
+    "check": "output_impedance",
+    "coverage": null,
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0019",
+    "check": "balance",
+    "coverage": null,
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0019",
+    "check": "phantom_supply",
+    "coverage": "8 DC/AC supply/feed extremes. Noise/distortion/abuse at corners pending.",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0019",
+    "check": "temperature",
+    "coverage": "3 electrical temperatures; no validated mechanical or leakage temperature law",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0019",
+    "check": "semiconductor_corners",
+    "coverage": null,
+    "reason": "No manufacturer-bounded semiconductor corners; ideal fixtures cannot demonstrate no-selection yield",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0019",
+    "check": "monte_carlo",
+    "coverage": null,
+    "reason": "Initial Monte Carlo runs DC/AC screens only; all-requirement manufacturing yield is not established",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0019",
+    "check": "loading",
+    "coverage": "Electrical loading and 16 assumed capsule corners; not an acoustic polar or mechanical model",
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0019",
+    "check": "startup",
+    "coverage": "Symmetric cold turn-on PWL. Hot-plug, asymmetric pin connection, disconnect, RF/ESD pending.",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0019",
+    "check": "stability",
+    "coverage": "HF and cable/load screening",
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0023",
+    "check": "operating_point",
+    "coverage": "DC feasibility screen; device safe operating area remains a separate evidence gate",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0023",
+    "check": "frequency_response",
+    "coverage": "1 Hz to 10 MHz, nominal environment; electrical model only",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0023",
+    "check": "noise",
+    "coverage": "Resistive fixture noise; conditional capsule sensitivity. Semiconductor and capsule mechanical noise unresolved.",
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0023",
+    "check": "distortion",
+    "coverage": null,
+    "reason": "SimulationError: ngspice exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0023",
+    "check": "headroom",
+    "coverage": null,
+    "reason": "No valid distortion bracket",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0023",
+    "check": "output_impedance",
+    "coverage": null,
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0023",
+    "check": "balance",
+    "coverage": null,
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0023",
+    "check": "phantom_supply",
+    "coverage": "8 DC/AC supply/feed extremes. Noise/distortion/abuse at corners pending.",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0023",
+    "check": "temperature",
+    "coverage": "3 electrical temperatures; no validated mechanical or leakage temperature law",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0023",
+    "check": "semiconductor_corners",
+    "coverage": null,
+    "reason": "No manufacturer-bounded semiconductor corners; ideal fixtures cannot demonstrate no-selection yield",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0023",
+    "check": "monte_carlo",
+    "coverage": null,
+    "reason": "Initial Monte Carlo runs DC/AC screens only; all-requirement manufacturing yield is not established",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0023",
+    "check": "loading",
+    "coverage": "Electrical loading and 16 assumed capsule corners; not an acoustic polar or mechanical model",
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0023",
+    "check": "startup",
+    "coverage": "Symmetric cold turn-on PWL. Hot-plug, asymmetric pin connection, disconnect, RF/ESD pending.",
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0023",
+    "check": "stability",
+    "coverage": "HF and cable/load screening",
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0025",
+    "check": "operating_point",
+    "coverage": "DC feasibility screen; device safe operating area remains a separate evidence gate",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0025",
+    "check": "frequency_response",
+    "coverage": "1 Hz to 10 MHz, nominal environment; electrical model only",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0025",
+    "check": "noise",
+    "coverage": "Resistive fixture noise; conditional capsule sensitivity. Semiconductor and capsule mechanical noise unresolved.",
+    "reason": null,
+    "status": "fail"
+  }
+]

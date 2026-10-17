@@ -1,0 +1,114 @@
+{
+  "contributions": {
+    "capsule Johnson surrogate (excluded)": {
+      "output_v_rms": 7.84244765774033e-11,
+      "pressure_a_pa_rms": 2.0724989133336673e-06,
+      "pressure_pa_rms": 8.231604623856576e-06,
+      "roots": [
+        "onoise_r.xcap.rfront",
+        "onoise_r.xcap.rrear"
+      ]
+    },
+    "environment (excluded)": {
+      "output_v_rms": 6.746590117858362e-08,
+      "pressure_a_pa_rms": 0.0018698875442546025,
+      "pressure_pa_rms": 0.0027424902326379902,
+      "roots": [
+        "onoise_r.xenv.rfeedn",
+        "onoise_r.xenv.rfeedp",
+        "onoise_r.xenv.rinn",
+        "onoise_r.xenv.rinp",
+        "onoise_r.xenv.rshield",
+        "onoise_r.xenv.rwiren",
+        "onoise_r.xenv.rwirep"
+      ]
+    },
+    "input bias, reset and degeneration": {
+      "output_v_rms": 2.2849547541214113e-06,
+      "pressure_a_pa_rms": 0.06341848005221065,
+      "pressure_pa_rms": 0.07610817977727534,
+      "roots": [
+        "onoise_r.xdut.rcollector1",
+        "onoise_r.xdut.rcollector2",
+        "onoise_r.xdut.remitter1",
+        "onoise_r.xdut.remitter2",
+        "onoise_r.xdut.rfeedbacka",
+        "onoise_r.xdut.rfeedbackb",
+        "onoise_r.xdut.rrear",
+        "onoise_r.xdut.rrefbottom",
+        "onoise_r.xdut.rreftop",
+        "onoise_r.xdut.rtail"
+      ]
+    },
+    "input semiconductor": {
+      "output_v_rms": 8.418777847302501e-07,
+      "pressure_a_pa_rms": 0.02240475293911165,
+      "pressure_pa_rms": 0.06087720967939275,
+      "roots": [
+        "onoise_d.xdut.xqinput.d1",
+        "onoise_d.xdut.xqreference.d1",
+        "onoise_q.xdut.xqinput.q1",
+        "onoise_q.xdut.xqinput.q2",
+        "onoise_q.xdut.xqreference.q1",
+        "onoise_q.xdut.xqreference.q2",
+        "onoise_r.xdut.xqinput.rq",
+        "onoise_r.xdut.xqreference.rq"
+      ]
+    },
+    "output drive and coupling": {
+      "output_v_rms": 1.678030021845894e-06,
+      "pressure_a_pa_rms": 0.04657163222083716,
+      "pressure_pa_rms": 0.05526920352172769,
+      "roots": [
+        "onoise_d.xdut.xqoutn.d1",
+        "onoise_d.xdut.xqoutp.d1",
+        "onoise_q.xdut.xqoutn.q1",
+        "onoise_q.xdut.xqoutn.q2",
+        "onoise_q.xdut.xqoutp.q1",
+        "onoise_q.xdut.xqoutp.q2",
+        "onoise_r.xdut.routloadn",
+        "onoise_r.xdut.routloadp",
+        "onoise_r.xdut.routn",
+        "onoise_r.xdut.routp",
+        "onoise_r.xdut.xqoutn.rq",
+        "onoise_r.xdut.xqoutp.rq"
+      ]
+    },
+    "polarization network": {
+      "output_v_rms": 3.654245102022889e-08,
+      "pressure_a_pa_rms": 0.0008808919984644713,
+      "pressure_pa_rms": 0.0009225901224583544,
+      "roots": [
+        "onoise_r.xdut.rback",
+        "onoise_r.xdut.rpolar0",
+        "onoise_r.xdut.rpolar1",
+        "onoise_r.xdut.rpolar2",
+        "onoise_r.xdut.rpolar3",
+        "onoise_r.xdut.rpolar4",
+        "onoise_r.xdut.rpolar5",
+        "onoise_r.xdut.rpolar6",
+        "onoise_r.xdut.rpolar7",
+        "onoise_r.xdut.rpolar8",
+        "onoise_r.xdut.rpolar9"
+      ]
+    },
+    "power and midpoint": {
+      "output_v_rms": 9.599256575924717e-08,
+      "pressure_a_pa_rms": 0.003157645275644785,
+      "pressure_pa_rms": 0.011774597534429804,
+      "roots": [
+        "onoise_d.xdut.xqreg.d1",
+        "onoise_q.xdut.xqreg.q1",
+        "onoise_q.xdut.xqreg.q2",
+        "onoise_r.xdut.rharvestn",
+        "onoise_r.xdut.rharvestp",
+        "onoise_r.xdut.rmidbottom",
+        "onoise_r.xdut.rmidtop",
+        "onoise_r.xdut.rregbottom",
+        "onoise_r.xdut.rregtop",
+        "onoise_r.xdut.xqreg.rq"
+      ]
+    }
+  },
+  "noise_scope": "conditional stationary modeled sources; incomplete physical spectra"
+}

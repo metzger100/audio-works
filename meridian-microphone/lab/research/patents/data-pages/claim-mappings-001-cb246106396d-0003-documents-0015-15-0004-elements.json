@@ -1,0 +1,199 @@
+[
+  {
+    "cases": [
+      {
+        "assessment": "demonstrated_present_model",
+        "basis": "Assumed K47FRB model.",
+        "candidate_ids": [
+          "candidate_0010",
+          "candidate_0012",
+          "candidate_0013",
+          "candidate_0014",
+          "candidate_0017",
+          "candidate_0019",
+          "candidate_0023",
+          "candidate_0024",
+          "candidate_0025"
+        ],
+        "exact_versions": {
+          "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9",
+          "candidate_0012": "f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968",
+          "candidate_0013": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015",
+          "candidate_0014": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+          "candidate_0017": "06d104a8f60e29e4214fe42130a8109dd0e870e26ce30e64bdce9fd525495922",
+          "candidate_0019": "1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da",
+          "candidate_0023": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+          "candidate_0024": "65bab5628d9b477584e38c3afb3d7cafef3012a7a2f2198de4886374a617e9f8",
+          "candidate_0025": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+        },
+        "netlist_references": [
+          "f",
+          "b"
+        ],
+        "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+      }
+    ],
+    "claim_numbers": [
+      1,
+      11,
+      16
+    ],
+    "id": "capsule",
+    "requirement_paraphrase": "Capacitor capsule"
+  },
+  {
+    "cases": [
+      {
+        "assessment": "apparent_absence_top_level",
+        "basis": "Single capsule voltage/charge front end;0012/24 second BJT is a reference input, not a second independently sensed capsule terminal.",
+        "candidate_ids": [
+          "candidate_0010",
+          "candidate_0012",
+          "candidate_0014",
+          "candidate_0017",
+          "candidate_0019",
+          "candidate_0023",
+          "candidate_0024",
+          "candidate_0025"
+        ],
+        "exact_versions": {
+          "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9",
+          "candidate_0012": "f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968",
+          "candidate_0014": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+          "candidate_0017": "06d104a8f60e29e4214fe42130a8109dd0e870e26ce30e64bdce9fd525495922",
+          "candidate_0019": "1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da",
+          "candidate_0023": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+          "candidate_0024": "65bab5628d9b477584e38c3afb3d7cafef3012a7a2f2198de4886374a617e9f8",
+          "candidate_0025": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+        },
+        "netlist_references": [
+          "XJinput",
+          "XQinput",
+          "XQreference",
+          "XUinput"
+        ],
+        "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+      }
+    ],
+    "claim_numbers": [
+      1,
+      11,
+      16
+    ],
+    "id": "two_input_converters",
+    "requirement_paraphrase": "Two impedance converters connected differentially to two terminals of the capacitor capsule"
+  },
+  {
+    "cases": [
+      {
+        "assessment": "potentially_relevant_ideal_function",
+        "basis": "Two ideal voltage buffers exist on front/rear electrodes. Two separate K47 diaphragms versus terminals of one claimed capsule and ideal-to-physical converter meaning require construction; no FET absence shortcut for broad1/16.",
+        "candidate_ids": [
+          "candidate_0013"
+        ],
+        "exact_versions": {
+          "candidate_0013": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015"
+        },
+        "netlist_references": [
+          "Efront",
+          "Erear"
+        ],
+        "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+      }
+    ],
+    "claim_numbers": [
+      1,
+      11,
+      16
+    ],
+    "id": "carrier_two_buffers",
+    "requirement_paraphrase": "Two differential capsule impedance converter paths"
+  },
+  {
+    "cases": [
+      {
+        "assessment": "generic_overlap",
+        "basis": "Differential output and P48 modeled;0013 buffers/outputs ideal and not powered as real devices.",
+        "candidate_ids": [
+          "candidate_0010",
+          "candidate_0012",
+          "candidate_0013",
+          "candidate_0014",
+          "candidate_0017",
+          "candidate_0019",
+          "candidate_0023",
+          "candidate_0024",
+          "candidate_0025"
+        ],
+        "exact_versions": {
+          "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9",
+          "candidate_0012": "f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968",
+          "candidate_0013": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015",
+          "candidate_0014": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+          "candidate_0017": "06d104a8f60e29e4214fe42130a8109dd0e870e26ce30e64bdce9fd525495922",
+          "candidate_0019": "1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da",
+          "candidate_0023": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+          "candidate_0024": "65bab5628d9b477584e38c3afb3d7cafef3012a7a2f2198de4886374a617e9f8",
+          "candidate_0025": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+        },
+        "netlist_references": [
+          "XQoutp",
+          "XQoutn",
+          "Eoutp",
+          "Eoutn",
+          "Rharvestp",
+          "Rharvestn"
+        ],
+        "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+      }
+    ],
+    "claim_numbers": [
+      1,
+      11,
+      16
+    ],
+    "id": "two_output_buffers_and_phantom",
+    "requirement_paraphrase": "Two buffers differential to console balanced input and phantom power"
+  },
+  {
+    "cases": [
+      {
+        "assessment": "apparent_absence_of_full_combination",
+        "basis": "No two FET input converters with paired bootstrap/current-source networks. Broad1 and16 still need separate assessment.",
+        "candidate_ids": [
+          "candidate_0010",
+          "candidate_0012",
+          "candidate_0013",
+          "candidate_0014",
+          "candidate_0017",
+          "candidate_0019",
+          "candidate_0023",
+          "candidate_0024",
+          "candidate_0025"
+        ],
+        "exact_versions": {
+          "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9",
+          "candidate_0012": "f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968",
+          "candidate_0013": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015",
+          "candidate_0014": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+          "candidate_0017": "06d104a8f60e29e4214fe42130a8109dd0e870e26ce30e64bdce9fd525495922",
+          "candidate_0019": "1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da",
+          "candidate_0023": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+          "candidate_0024": "65bab5628d9b477584e38c3afb3d7cafef3012a7a2f2198de4886374a617e9f8",
+          "candidate_0025": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+        },
+        "netlist_references": [
+          "XJinput",
+          "Cboot",
+          "XQoutp"
+        ],
+        "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+      }
+    ],
+    "claim_numbers": [
+      11
+    ],
+    "id": "FET_bootstrap_current_followers",
+    "requirement_paraphrase": "FET gates at respective capsule terminals, each bootstrap capacitor/current source, BJT emitter follower buffers"
+  }
+]

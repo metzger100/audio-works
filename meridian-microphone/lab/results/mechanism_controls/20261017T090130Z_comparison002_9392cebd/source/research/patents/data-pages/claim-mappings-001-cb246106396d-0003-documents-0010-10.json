@@ -1,0 +1,247 @@
+{
+  "activities": [
+    "private DE manufacture/use scenario",
+    "supply/import scenario with territories unresolved",
+    "implementation/build-publication scenario for professional review"
+  ],
+  "application_id": "EP10165571.0",
+  "claim_version": "EP2330831A1 as published; no assertion that this is the latest amended/litigated version",
+  "earliest_identified_priority": {
+    "date": "2009-11-03",
+    "id": "EP09306053"
+  },
+  "elements": [
+    {
+      "cases": [
+        {
+          "assessment": "unresolved_construction",
+          "basis": "JFET gate senses capsule directly; Caudio AC-couples source output to following stage. Claim context concerns an ECM interface, not automatically a distinct capsule-only device.",
+          "candidate_ids": [
+            "candidate_0023",
+            "candidate_0025"
+          ],
+          "exact_versions": {
+            "candidate_0023": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+            "candidate_0025": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+          },
+          "netlist_references": [
+            "XJinput",
+            "Caudio",
+            "Rsignal"
+          ],
+          "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+        }
+      ],
+      "claim_numbers": [
+        1,
+        16
+      ],
+      "id": "direct_mic_interface",
+      "requirement_paraphrase": "Microphone interface directly couples microphone to preamplifier"
+    },
+    {
+      "cases": [
+        {
+          "assessment": "potentially_relevant_uncertain",
+          "basis": "Source current inferred from Rsource, slow error pair adjusts gate bias via1G. Whether mic includes JFET and whether described AC ground/path reads onto this topology requires professional construction. Fixed0019/17 lack servo.",
+          "candidate_ids": [
+            "candidate_0023",
+            "candidate_0025"
+          ],
+          "exact_versions": {
+            "candidate_0023": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+            "candidate_0025": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+          },
+          "netlist_references": [
+            "Rsource",
+            "Rservosense0",
+            "Cservoslow",
+            "XQservoerror",
+            "XQservoref",
+            "Rbias",
+            "Caudio"
+          ],
+          "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+        }
+      ],
+      "claim_numbers": [
+        1
+      ],
+      "id": "bias_DC_servo_and_AC_path",
+      "requirement_paraphrase": "DC servo supplies microphone bias-current path; AC ground supplies separate AC output path"
+    },
+    {
+      "cases": [
+        {
+          "assessment": "apparent_absence_of_full_combination",
+          "basis": "Discrete NPN error pair; no integrated preamp-opamp/servo-opamp circuit, and following audio path has Caudio.",
+          "candidate_ids": [
+            "candidate_0023",
+            "candidate_0025"
+          ],
+          "exact_versions": {
+            "candidate_0023": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+            "candidate_0025": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+          },
+          "netlist_references": [
+            "XQservoerror",
+            "XQservoref",
+            "Caudio"
+          ],
+          "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+        }
+      ],
+      "claim_numbers": [
+        7
+      ],
+      "id": "IC_capacitorless_opamp_transistor",
+      "requirement_paraphrase": "Integrated circuit with preamp opamp, servo opamp and servo transistor providing capacitorless coupling and varying microphone bias"
+    },
+    {
+      "cases": [
+        {
+          "assessment": "apparent_absence",
+          "basis": "No digital offset-control module.",
+          "candidate_ids": [
+            "candidate_0010",
+            "candidate_0012",
+            "candidate_0013",
+            "candidate_0014",
+            "candidate_0017",
+            "candidate_0019",
+            "candidate_0023",
+            "candidate_0024",
+            "candidate_0025"
+          ],
+          "exact_versions": {
+            "candidate_0010": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9",
+            "candidate_0012": "f99b52316c8432a060d862e6df6f50a02ea5b1a5466a765ce4e55d38b36a0968",
+            "candidate_0013": "7234e162137651e9aed2e4ba33056a5a7aa08d541071e65ab860a254f7063015",
+            "candidate_0014": "cb9c764bd9d062b2973d36f44ede7f5808b21448da7215dfc17126e3dc526bb6",
+            "candidate_0017": "06d104a8f60e29e4214fe42130a8109dd0e870e26ce30e64bdce9fd525495922",
+            "candidate_0019": "1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da",
+            "candidate_0023": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+            "candidate_0024": "65bab5628d9b477584e38c3afb3d7cafef3012a7a2f2198de4886374a617e9f8",
+            "candidate_0025": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+          },
+          "netlist_references": [
+            "Cservoslow"
+          ],
+          "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+        }
+      ],
+      "claim_numbers": [
+        16
+      ],
+      "id": "digital_offset_control",
+      "requirement_paraphrase": "Digital control module eliminates DC offset in directly coupled interface"
+    }
+  ],
+  "family_chain": [
+    "WO2011054671A1 / PCT/EP2010/065816 discovery link; WIPO detail challenge",
+    "US9392361B2 discovered successor, official claims/status not obtained",
+    "EP09306053 priority application not screened; DE/EP-family coverage incomplete"
+  ],
+  "filing_date_as_printed": "2010-06-10",
+  "grant_number": null,
+  "independent_claims_inspected": [
+    1,
+    7,
+    16
+  ],
+  "interpretation_hold": "Description/drawings were considered; literal circuit distinctions do not decide claim construction or equivalents. No legal non-infringement opinion. Holds remain.",
+  "material_dependent_limitations": [
+    {
+      "cases": [
+        {
+          "assessment": "potentially_relevant_uncertain",
+          "basis": "Generic current sensing/control present; exact microphone boundary and AC/DC relationship unresolved.",
+          "candidate_ids": [
+            "candidate_0023",
+            "candidate_0025"
+          ],
+          "exact_versions": {
+            "candidate_0023": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+            "candidate_0025": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+          },
+          "netlist_references": [
+            "XQservoerror",
+            "XQservoref",
+            "Rsource",
+            "Caudio"
+          ],
+          "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+        }
+      ],
+      "claim_numbers": [
+        2,
+        3,
+        4
+      ],
+      "id": "servo_dependents",
+      "requirement_paraphrase": "Controlled DC source; bias-current sensing; equality of DC preamp inputs; AC path to preamp"
+    },
+    {
+      "cases": [
+        {
+          "assessment": "mixed_or_unimplemented",
+          "basis": "Analog bandwidth-limiting capacitor exists; digital/pin/EMI/mic-switch/slew/calibration structures unimplemented. Dependent device examples confer no blanket microphone exclusion.",
+          "candidate_ids": [
+            "candidate_0023",
+            "candidate_0025"
+          ],
+          "exact_versions": {
+            "candidate_0023": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+            "candidate_0025": "cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf"
+          },
+          "netlist_references": [
+            "Cservoslow",
+            "XQservoerror"
+          ],
+          "version_binding": "candidate-versions-001.json exact candidate circuit/expanded BOM/source-file hashes"
+        }
+      ],
+      "claim_numbers": [
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "id": "digital_slew_dependents",
+      "requirement_paraphrase": "Digital offset/slew boost; pin-limited IC paths; mic selection; EMI receptor; AC-ground noise routing; calibration/counters; device context"
+    }
+  ],
+  "official_original_verified": true,
+  "priority_limit": "Only printed identified priority/filing and linked official records inspected; earlier/further family priorities not exhaustively excluded",
+  "publication_date_as_printed": "2011-06-08",
+  "publication_number": "EP2330831A1",
+  "publication_sha256": "799a406854779184665a4c30a4e0f7d9784a8d13dba1a5bb88952fd019594af4",
+  "screening_state": "partial_official_claim_inspection_and_scoped_DE_record",
+  "source_id": "EP2330831A1",
+  "status_of_other_territories": "Unresolved; no worldwide conclusion",
+  "technical_context_read": "Relevant A1 description paras0001–0065, direct ECM coupling and Figs1–4; withdrawn/lapsed EP record is not the US national grant.",
+  "territorial_status_record": "DPMA-2330831",
+  "wording_reference": {
+    "claims": [
+      1,
+      7,
+      16
+    ],
+    "printed_pages": [
+      8,
+      9
+    ],
+    "reference_rule": "Read entire numbered claim in the exact hashed PDF; table entries paraphrase limitations, not substitutes for claim wording",
+    "source": "https://data.epo.org/publication-server/rest/v1.2/patents/EP2330831NWA1/document.pdf"
+  }
+}

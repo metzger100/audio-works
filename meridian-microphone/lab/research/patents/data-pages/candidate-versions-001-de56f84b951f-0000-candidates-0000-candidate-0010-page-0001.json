@@ -1,0 +1,418 @@
+{
+  "activities_ref": "shared_activity_matrix",
+  "bom_expanded_sha256": "a015dc4f6c5cd362a5b699e5ad6a7966e378ec53935627992e7e1aa208119e2c",
+  "bom_path": "candidates/candidate_0010/bom.yaml",
+  "candidate_id": "candidate_0010",
+  "circuit_path": "candidates/candidate_0010/circuit.cir",
+  "circuit_sha256": "72312902d0401807a07ddf19feccdce92ea8e4f3b3be11699b6e46a90ca1fbe9",
+  "feature_ids": [
+    "P48",
+    "regulation",
+    "differential_output",
+    "guard_bootstrap"
+  ],
+  "gate_holds": [
+    "prototype_selection",
+    "manufacture",
+    "implementation_build_publication"
+  ],
+  "implementation_sha256": "8ed58145e2e230f1e4fff186207cc2299d110e603fb4280237fc01a86965f21b",
+  "mechanical_manufacture": "Purchased K47FRB assumed; no custom capsule manufacture/geometry implemented; acoustic/electrode/mount construction unknown",
+  "netlist_elements": {
+    "Cboot": {
+      "line": 45,
+      "text": "Cboot guard boot {CBOOT_VALUE}"
+    },
+    "Cguard": {
+      "line": 46,
+      "text": "Cguard f guard {CGUARD_VALUE}"
+    },
+    "Crail": {
+      "line": 14,
+      "text": "Crail rail g {CRAIL_VALUE}"
+    },
+    "Craw": {
+      "line": 6,
+      "text": "Craw raw g {CRAW_VALUE}"
+    },
+    "Rback": {
+      "line": 29,
+      "text": "Rback pol b {RBACK_VALUE}"
+    },
+    "Rbias": {
+      "line": 30,
+      "text": "Rbias f boot {RBIAS_VALUE}"
+    },
+    "Rbootdc": {
+      "line": 32,
+      "text": "Rbootdc boot mid {RBOOTDC_VALUE}"
+    },
+    "Rguardleak": {
+      "line": 47,
+      "text": "Rguardleak f guard {RGUARDLEAK_VALUE}"
+    },
+    "Rharvestn": {
+      "line": 5,
+      "text": "Rharvestn n raw {RHARVESTN_VALUE}"
+    },
+    "Rharvestp": {
+      "line": 4,
+      "text": "Rharvestp p raw {RHARVESTP_VALUE}"
+    },
+    "Rmidbottom": {
+      "line": 16,
+      "text": "Rmidbottom mid g {RMIDBOTTOM_VALUE}"
+    },
+    "Rmidtop": {
+      "line": 15,
+      "text": "Rmidtop rail mid {RMIDTOP_VALUE}"
+    },
+    "Routn": {
+      "line": 50,
+      "text": "Routn outn cn {ROUTN_VALUE}"
+    },
+    "Routp": {
+      "line": 49,
+      "text": "Routp outp cp {ROUTP_VALUE}"
+    },
+    "Rpolar0": {
+      "line": 18,
+      "text": "Rpolar0 raw pol_0 {RPOLAR0_VALUE}"
+    },
+    "Rregbottom": {
+      "line": 8,
+      "text": "Rregbottom regbase g {RREGBOTTOM_VALUE}"
+    },
+    "Rregtop": {
+      "line": 7,
+      "text": "Rregtop raw regbase {RREGTOP_VALUE}"
+    },
+    "XQoutn": {
+      "line": 66,
+      "text": "XQoutn Qoutn_t0 Qoutn_t1 Qoutn_t2 BC846B"
+    },
+    "XQoutp": {
+      "line": 56,
+      "text": "XQoutp Qoutp_t0 Qoutp_t1 Qoutp_t2 BC846B"
+    },
+    "XQreg": {
+      "line": 13,
+      "text": "XQreg Qreg_t0 Qreg_t1 Qreg_t2 BC846B"
+    },
+    "XUguard": {
+      "line": 44,
+      "text": "XUguard Uguard_t0 Uguard_t1 Uguard_t2 Uguard_t3 Uguard_t4 OPAx197"
+    },
+    "XUinput": {
+      "line": 38,
+      "text": "XUinput Uinput_t0 Uinput_t1 Uinput_t2 Uinput_t3 Uinput_t4 OPAx197"
+    }
+  },
+  "parents": [
+    "candidate_0003"
+  ],
+  "patent_screening": "partial scoped claim inspection; holds retained",
+  "physical_part_references": [
+    {
+      "part_id": "RC0603FR-072K2L",
+      "quantity": 1,
+      "reference": "Rharvestp",
+      "unit": "ohm",
+      "value": 2200
+    },
+    {
+      "part_id": "RC0603FR-072K2L",
+      "quantity": 1,
+      "reference": "Rharvestn",
+      "unit": "ohm",
+      "value": 2200
+    },
+    {
+      "part_id": "EEU-FR1J470",
+      "quantity": 1,
+      "reference": "Craw",
+      "unit": "F",
+      "value": 4.7e-05
+    },
+    {
+      "part_id": "RC0603FR-07100KL",
+      "quantity": 1,
+      "reference": "Rregtop",
+      "unit": "ohm",
+      "value": 100000
+    },
+    {
+      "part_id": "RC0603FR-07100KL",
+      "quantity": 1,
+      "reference": "Rregbottom",
+      "unit": "ohm",
+      "value": 100000
+    },
+    {
+      "part_id": "R82EC4100DQ70J",
+      "quantity": 1,
+      "reference": "Cregbase",
+      "unit": "F",
+      "value": 1e-06
+    },
+    {
+      "part_id": "BC846B,215",
+      "quantity": 1,
+      "reference": "Qreg",
+      "unit": "device",
+      "value": "BC846B"
+    },
+    {
+      "part_id": "EEU-FR1J470",
+      "quantity": 1,
+      "reference": "Crail",
+      "unit": "F",
+      "value": 4.7e-05
+    },
+    {
+      "part_id": "AC0603FR-0710KL",
+      "quantity": 1,
+      "reference": "Rmidtop",
+      "unit": "ohm",
+      "value": 10000
+    },
+    {
+      "part_id": "AC0603FR-0710KL",
+      "quantity": 1,
+      "reference": "Rmidbottom",
+      "unit": "ohm",
+      "value": 10000
+    },
+    {
+      "part_id": "EEU-FR1J470",
+      "quantity": 1,
+      "reference": "Cmid",
+      "unit": "F",
+      "value": 4.7e-05
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar0",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar1",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar2",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar3",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar4",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar5",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar6",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar7",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar8",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rpolar9",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "R82EC3100DQ70J",
+      "quantity": 1,
+      "reference": "Cpol",
+      "unit": "F",
+      "value": 1e-07
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rback",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "HVA12JA1G00",
+      "quantity": 1,
+      "reference": "Rbias",
+      "unit": "ohm",
+      "value": 1000000000.0
+    },
+    {
+      "part_id": "RC0603FR-071ML",
+      "quantity": 1,
+      "reference": "Rbootdc",
+      "unit": "ohm",
+      "value": 1000000
+    },
+    {
+      "part_id": "OPA197IDBVR",
+      "quantity": 1,
+      "reference": "Uinput",
+      "unit": "device",
+      "value": "OPAx197"
+    },
+    {
+      "part_id": "OPA197IDBVR",
+      "quantity": 1,
+      "reference": "Uguard",
+      "unit": "device",
+      "value": "OPAx197"
+    },
+    {
+      "part_id": "R82EC4100DQ70J",
+      "quantity": 1,
+      "reference": "Cboot",
+      "unit": "F",
+      "value": 1e-06
+    },
+    {
+      "part_id": "RC0603FR-071KL",
+      "quantity": 1,
+      "reference": "Rrear",
+      "unit": "ohm",
+      "value": 1000
+    },
+    {
+      "part_id": "RC0603FR-0747RL",
+      "quantity": 1,
+      "reference": "Routp",
+      "unit": "ohm",
+      "value": 47
+    },
+    {
+      "part_id": "RC0603FR-0747RL",
+      "quantity": 1,
+      "reference": "Routn",
+      "unit": "ohm",
+      "value": 47
+    },
+    {
+      "part_id": "EEU-FR1J470",
+      "quantity": 1,
+      "reference": "Coutp",
+      "unit": "F",
+      "value": 4.7e-05
+    },
+    {
+      "part_id": "EEU-FR1J470",
+      "quantity": 1,
+      "reference": "Coutn",
+      "unit": "F",
+      "value": 4.7e-05
+    },
+    {
+      "part_id": "BC846B,215",
+      "quantity": 1,
+      "reference": "Qoutp",
+      "unit": "device",
+      "value": "BC846B"
+    },
+    {
+      "part_id": "BC846B,215",
+      "quantity": 1,
+      "reference": "Qinvert",
+      "unit": "device",
+      "value": "BC846B"
+    },
+    {
+      "part_id": "AC0603FR-0710KL",
+      "quantity": 1,
+      "reference": "Rinvemitter",
+      "unit": "ohm",
+      "value": 10000
+    },
+    {
+      "part_id": "AC0603FR-0710KL",
+      "quantity": 1,
+      "reference": "Rinvcollector",
+      "unit": "ohm",
+      "value": 10000
+    },
+    {
+      "part_id": "BC846B,215",
+      "quantity": 1,
+      "reference": "Qoutn",
+      "unit": "device",
+      "value": "BC846B"
+    },
+    {
+      "part_id": "AC0603FR-0710KL",
+      "quantity": 1,
+      "reference": "Routloadp",
+      "unit": "ohm",
+      "value": 10000
+    },
+    {
+      "part_id": "AC0603FR-0710KL",
+      "quantity": 1,
+      "reference": "Routloadn",
+      "unit": "ohm",
+      "value": 10000
+    }
+  ],
+  "protection": "No top-level external clamp/reset switch/protection circuit; internal IC structures are not resolved by this schematic.",
+  "qualification": "All unqualified; existing engineering evidence unchanged; no electrical test run in this documentary task",
+  "referenced_semiconductor_models": [
+    {
+      "id": "bc846b_emitter_r1",
+      "path": "models/semiconductor/vendor/bc846b_emitter_r1.lib",
+      "registry_expected_sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "subcircuit": "BC846B",
+      "version": "project structural child r1; Q2 emitter 33 -> 3"
+    },
+    {
+      "id": "opa197_pspice",
+      "path": "models/semiconductor/vendor/opa197.lib",
+      "registry_expected_sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "sha256": "fc5b020e63346e511bd808bf41c856b0150b000bcf8a41fe00eeececb1f422a5",
+      "subcircuit": "OPAx197",
+      "version": "Final 1.3; 23JUN2022; SBOMA34D"
+    }
+  ],
+  "semantic_hash_method": "SHA256 of UTF-8 JSON, sorted keys, ensure_ascii=False, separators comma/colon; explicit includes resolved with meridian_lab.core.read_yaml"
+}

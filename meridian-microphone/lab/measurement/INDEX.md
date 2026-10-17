@@ -5,6 +5,7 @@ Prioritized calibrated measurements, safe prerequisites, interchange and version
 
 - [README.md](README.md) — active
 - [compare.py](compare.py) — active
+- [comparison-002-handoff.md](comparison-002-handoff.md) — active
 - [priority-plan.md](priority-plan.md) — active
 - [priority-procedures.md](priority-procedures.md) — active
 - [result.schema.json](result.schema.json) — active

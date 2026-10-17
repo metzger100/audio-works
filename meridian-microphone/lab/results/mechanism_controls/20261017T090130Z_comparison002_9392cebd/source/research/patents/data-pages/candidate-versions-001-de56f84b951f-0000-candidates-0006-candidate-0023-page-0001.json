@@ -1,0 +1,170 @@
+{
+  "activities_ref": "shared_activity_matrix",
+  "bom_expanded_sha256": "3015212a2893578e33dc3bd8ebdf41294792f678d61484e2c4dc402bd0c8d200",
+  "bom_path": "candidates/candidate_0023/bom.yaml",
+  "candidate_id": "candidate_0023",
+  "circuit_path": "candidates/candidate_0023/circuit.cir",
+  "circuit_sha256": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+  "combined_implementation_context_sha256": "90cb3e03cf22014a448b40ac35ab3de0fd8abd19c22cb065f5f3a838c0f21256",
+  "feature_ids": [
+    "P48",
+    "regulation",
+    "differential_output",
+    "source_servo"
+  ],
+  "gate_holds": [
+    "prototype_selection",
+    "manufacture",
+    "implementation_build_publication"
+  ],
+  "implementation_sha256": "046979740af128a357d920ade34fe43f83fac5c3835af24254a79d7cf469e8cf",
+  "mechanical_manufacture": "Purchased K47FRB assumed; no custom capsule manufacture/geometry implemented; acoustic/electrode/mount construction unknown",
+  "netlist_elements": {
+    "Crail": {
+      "line": 14,
+      "text": "Crail rail g {CRAIL_VALUE}"
+    },
+    "Craw": {
+      "line": 6,
+      "text": "Craw raw g {CRAW_VALUE}"
+    },
+    "Cservoslow": {
+      "line": 65,
+      "text": "Cservoslow slow g {CSERVOSLOW_VALUE}"
+    },
+    "Rback": {
+      "line": 29,
+      "text": "Rback pol b {RBACK_VALUE}"
+    },
+    "Rbias": {
+      "line": 30,
+      "text": "Rbias f servo {RBIAS_VALUE}"
+    },
+    "Rharvestn": {
+      "line": 5,
+      "text": "Rharvestn n raw {RHARVESTN_VALUE}"
+    },
+    "Rharvestp": {
+      "line": 4,
+      "text": "Rharvestp p raw {RHARVESTP_VALUE}"
+    },
+    "Rmidbottom": {
+      "line": 16,
+      "text": "Rmidbottom mid g {RMIDBOTTOM_VALUE}"
+    },
+    "Rmidtop": {
+      "line": 15,
+      "text": "Rmidtop rail mid {RMIDTOP_VALUE}"
+    },
+    "Routn": {
+      "line": 43,
+      "text": "Routn outn cn {ROUTN_VALUE}"
+    },
+    "Routp": {
+      "line": 42,
+      "text": "Routp outp cp {ROUTP_VALUE}"
+    },
+    "Rpolar0": {
+      "line": 18,
+      "text": "Rpolar0 raw pol_0 {RPOLAR0_VALUE}"
+    },
+    "Rregbottom": {
+      "line": 8,
+      "text": "Rregbottom regbase g {RREGBOTTOM_VALUE}"
+    },
+    "Rregtop": {
+      "line": 7,
+      "text": "Rregtop raw regbase {RREGTOP_VALUE}"
+    },
+    "Rservoout": {
+      "line": 75,
+      "text": "Rservoout rail servo {RSERVOOUT_VALUE}"
+    },
+    "Rservosense0": {
+      "line": 61,
+      "text": "Rservosense0 source sense_div0 {RSERVOSENSE0_VALUE}"
+    },
+    "Rsource": {
+      "line": 39,
+      "text": "Rsource source g {RSOURCE_VALUE}"
+    },
+    "XQoutn": {
+      "line": 89,
+      "text": "XQoutn Qoutn_t0 Qoutn_t1 Qoutn_t2 BC846B"
+    },
+    "XQoutp": {
+      "line": 79,
+      "text": "XQoutp Qoutp_t0 Qoutp_t1 Qoutp_t2 BC846B"
+    },
+    "XQreg": {
+      "line": 13,
+      "text": "XQreg Qreg_t0 Qreg_t1 Qreg_t2 BC846B"
+    },
+    "XQservoerror": {
+      "line": 69,
+      "text": "XQservoerror Qservoerror_t0 Qservoerror_t1 Qservoerror_t2 BC846B"
+    },
+    "XQservoref": {
+      "line": 73,
+      "text": "XQservoref Qservoref_t0 Qservoref_t1 Qservoref_t2 BC846B"
+    }
+  },
+  "parents": [
+    "candidate_0008"
+  ],
+  "patent_screening": "partial scoped claim inspection; holds retained",
+  "physical_part_references": {
+    "$include": "candidate-versions-001-de56f84b951f-0000-candidates-0006-candidate-0023-0013-physical-part-references.json"
+  },
+  "protection": "No top-level external protection circuit. Device-internal protection is not thereby absent; JFE150DBVR has VCH/VCL terminals connected by XJinput to rail/g. Die/internal claims and package provenance remain unassessed.",
+  "qualification": "All unqualified; existing engineering evidence unchanged; no electrical test run in this documentary task",
+  "referenced_semiconductor_models": [
+    {
+      "id": "bc846b_emitter_r1",
+      "path": "models/semiconductor/vendor/bc846b_emitter_r1.lib",
+      "registry_expected_sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "sha256": "55c70791f338fe882c652ced258d28990827988e62c929f302d5f1193565411d",
+      "subcircuit": "BC846B",
+      "version": "project structural child r1; Q2 emitter 33 -> 3"
+    },
+    {
+      "id": "jfe150_pspice",
+      "path": "models/semiconductor/vendor/jfe150_pspice.lib",
+      "registry_expected_sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "sha256": "6d8772027157841c7f659cf2c1f72f0818155e204c74158f7f52710609a61ef6",
+      "subcircuit": "JFE150",
+      "version": "Final 1.2; SLPM349I"
+    }
+  ],
+  "semantic_hash_method": "SHA256 of UTF-8 JSON, sorted keys, ensure_ascii=False, separators comma/colon; explicit includes resolved with meridian_lab.core.read_yaml",
+  "source_files": {
+    "candidates/candidate_0023/INDEX.md": "43acb75f04000a8e3d65f7c4a36cc0bba8e778b215452a4dca1857cd87f79538",
+    "candidates/candidate_0023/bom.yaml": "263776f4a0ca381d7978c8128de6f465f72c13f191c11928ad9cd638df550fe6",
+    "candidates/candidate_0023/circuit.cir": "d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816",
+    "candidates/candidate_0023/data-pages/INDEX.md": "69e065693edf3b5d254dd3aa942bdb3177b3b4508e2d1b8ed77f867431427a34",
+    "candidates/candidate_0023/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0001.yaml": "d983ec2a454e29d597c2fa54b56ee9396225bfeb3dc6957d9aec02d00516a93f",
+    "candidates/candidate_0023/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0002.yaml": "f5fbfd53877bf0a0af48977585939e56fe9e4327f6d826545fb8f7f27993b4d2",
+    "candidates/candidate_0023/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0003.yaml": "f8ef2729511b38b60076c141b94be3bf6496435f77b6e49de88277cc5dc4ae8a",
+    "candidates/candidate_0023/data-pages/bom-9c5f3963535c-0005-physical-parts-page-0004.yaml": "f9b2129b24ffbc2f147eb4c0b705e65b5e4c906bd09201ab65ec2ae55093ec8b",
+    "candidates/candidate_0023/data-pages/bom-9c5f3963535c-0005-physical-parts.yaml": "9b8b68e7aa2cdaa616a169e990affd02acc286fc207fa034f2fd938364ada424",
+    "candidates/candidate_0023/data-pages/bom-9c5f3963535c-page-0001.yaml": "121b017297ac42e08dd38ef24807e38aca75ceff5b4888aaa90c02e89cd56d78",
+    "candidates/candidate_0023/data-pages/topology-dac33064b494-0004-parameters-page-0001.yaml": "1a12227c7c6dca85fb9dffad0360e7a8dfa34724c6f14e60553f15dc8c31f1a5",
+    "candidates/candidate_0023/data-pages/topology-dac33064b494-0004-parameters-page-0002.yaml": "6d208718e772405a907754af1af8caea4fc12adbe4adb96112cc059e8f34df1d",
+    "candidates/candidate_0023/data-pages/topology-dac33064b494-0004-parameters.yaml": "ce1e555f3af1429217664bb8723fb5387f58aeb7a3b0b1bc75d5531049b28fab",
+    "candidates/candidate_0023/data-pages/topology-dac33064b494-0005-population-page-0001.yaml": "8336c3014aa3311424c76f23e525a2e44ca01ba0c36f3a5943bb8826686d8c73",
+    "candidates/candidate_0023/data-pages/topology-dac33064b494-0005-population-page-0002.yaml": "31ee331a7c42bb4ca30e6cfb821d936aff6c4cd493ed7a448fa6e6e5d801fa0b",
+    "candidates/candidate_0023/data-pages/topology-dac33064b494-0005-population-page-0003.yaml": "dae4fa9b78eecb870d26318f8e478dcca2d87c8dc79d785a77d432ebc6829917",
+    "candidates/candidate_0023/data-pages/topology-dac33064b494-0005-population.yaml": "792f7324c494969333b2178250e085d41e224c672f7dd435d59159fb1da49803",
+    "candidates/candidate_0023/data-pages/topology-dac33064b494-page-0001.yaml": "2912b725fd6399c318aaa7e023d2acd42ba4336eda982acf3995bcbe5d313673",
+    "candidates/candidate_0023/hypothesis.md": "29bdfa0689b6b48f3d110b2a8b94b637ce204694a81ecc3c15194c813e23168d",
+    "candidates/candidate_0023/notes.md": "00381ec55d860b2fd121b8e38ab8bd2cf3dcb072efa2dea3b048fb4748ca224e",
+    "candidates/candidate_0023/topology.yaml": "a2dd2d74e37fb610572a6286d642a2e0f247f594c6d7fde70349dfd4b6a0f2d9"
+  },
+  "territorial_scope": [
+    "DE",
+    "relevant EP national/possible unitary rights: incomplete",
+    "US/WO family discovery: incomplete",
+    "all other manufacture/supply/publication territories unresolved"
+  ],
+  "topology_expanded_sha256": "81fa9c731f108771b166979f55396d15d91fc5cfac9f04bf6b6fd1dd0b4138a9"
+}

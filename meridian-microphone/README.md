@@ -8,9 +8,9 @@ Condenser-microphone research for private DIY in Germany. Use and sonic goals: [
 
 > **Not released.** Build BOM, PCB, assembly and physical validation remain absent.
 
-K47FRB is the owner-specified simulation capsule. Purchase, safe polarization and prototype selection remain unresolved.
+K47FRB is the simulation capsule; purchase, safe bias and prototype selection remain unresolved.
 
-[Architecture comparison](lab/research/architectures/architecture-comparison-001.md) and [measurement priorities](lab/measurement/priority-plan.md): all candidates remain unqualified.
+[Architecture comparison](lab/research/architectures/architecture-comparison-002.md) and [measurement priorities](lab/measurement/priority-plan.md): all candidates remain unqualified.
 
 ## Design goals
 
@@ -20,6 +20,6 @@ The [specification](lab/spec/microphone-spec.yaml) records balanced XLR/P48, noi
 
 [Capsule history](lab/research/capsules/README.md) · [measurement handoff](lab/measurement/README.md).
 
-Follow [components](../COMPONENTS.md), [Germany procurement](lab/research/procurement/germany.md), [patents](../PATENTS.md), the [scientific contract](lab/CONTRACT.md) and [completion gate](../CONTRIBUTING.md#complete-a-change). Preserve sources, assumptions, failures and decisions.
+Follow [components](../COMPONENTS.md), [procurement](lab/research/procurement/germany.md), [patents](../PATENTS.md), [contract](lab/CONTRACT.md) and [completion](../CONTRIBUTING.md#complete-a-change); preserve evidence and failures.
 
 See [build conventions](../CONTRIBUTING.md#documenting-a-hardware-project) and [licence scope](../LICENSE).

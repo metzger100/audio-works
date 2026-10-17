@@ -1,0 +1,359 @@
+[
+  {
+    "candidate": "candidate_0010",
+    "check": "operating_point",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0010",
+    "check": "frequency_response",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0010",
+    "check": "noise",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0010",
+    "check": "distortion",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0010",
+    "check": "headroom",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0010",
+    "check": "output_impedance",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0010",
+    "check": "balance",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0010",
+    "check": "phantom_supply",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0010",
+    "check": "temperature",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0010",
+    "check": "semiconductor_corners",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0010",
+    "check": "monte_carlo",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0010",
+    "check": "loading",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0010",
+    "check": "startup",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0010",
+    "check": "stability",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0012",
+    "check": "operating_point",
+    "coverage": "DC feasibility screen; device safe operating area remains a separate evidence gate",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0012",
+    "check": "frequency_response",
+    "coverage": "1 Hz to 10 MHz, nominal environment; electrical model only",
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0012",
+    "check": "noise",
+    "coverage": "Resistive fixture noise; conditional capsule sensitivity. Semiconductor and capsule mechanical noise unresolved.",
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0012",
+    "check": "distortion",
+    "coverage": null,
+    "reason": "SimulationError: Simulator process-group timeout after60s; partial solver log and waveforms retained",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0012",
+    "check": "headroom",
+    "coverage": null,
+    "reason": "No valid distortion bracket",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0012",
+    "check": "output_impedance",
+    "coverage": null,
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0012",
+    "check": "balance",
+    "coverage": null,
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0012",
+    "check": "phantom_supply",
+    "coverage": "8 DC/AC supply/feed extremes. Noise/distortion/abuse at corners pending.",
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0012",
+    "check": "temperature",
+    "coverage": "3 electrical temperatures; no validated mechanical or leakage temperature law",
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0012",
+    "check": "semiconductor_corners",
+    "coverage": null,
+    "reason": "No manufacturer-bounded semiconductor corners; ideal fixtures cannot demonstrate no-selection yield",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0012",
+    "check": "monte_carlo",
+    "coverage": null,
+    "reason": "Initial Monte Carlo runs DC/AC screens only; all-requirement manufacturing yield is not established",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0012",
+    "check": "loading",
+    "coverage": "Electrical loading and 16 assumed capsule corners; not an acoustic polar or mechanical model",
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0012",
+    "check": "startup",
+    "coverage": "Symmetric cold turn-on PWL. Hot-plug, asymmetric pin connection, disconnect, RF/ESD pending.",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0012",
+    "check": "stability",
+    "coverage": "HF and cable/load screening",
+    "reason": null,
+    "status": "fail"
+  },
+  {
+    "candidate": "candidate_0013",
+    "check": "operating_point",
+    "coverage": "DC feasibility screen; device safe operating area remains a separate evidence gate",
+    "reason": null,
+    "status": "pass"
+  },
+  {
+    "candidate": "candidate_0013",
+    "check": "carrier_mechanism",
+    "coverage": null,
+    "reason": "SimulationError: ngspice exit 0: \ndoAnalyses: TRAN:  Timestep too small",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0013",
+    "check": "frequency_response",
+    "coverage": null,
+    "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0013",
+    "check": "noise",
+    "coverage": null,
+    "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0013",
+    "check": "distortion",
+    "coverage": null,
+    "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0013",
+    "check": "headroom",
+    "coverage": null,
+    "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0013",
+    "check": "output_impedance",
+    "coverage": null,
+    "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0013",
+    "check": "balance",
+    "coverage": null,
+    "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0013",
+    "check": "phantom_supply",
+    "coverage": null,
+    "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0013",
+    "check": "temperature",
+    "coverage": null,
+    "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0013",
+    "check": "semiconductor_corners",
+    "coverage": null,
+    "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0013",
+    "check": "monte_carlo",
+    "coverage": null,
+    "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0013",
+    "check": "loading",
+    "coverage": null,
+    "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0013",
+    "check": "startup",
+    "coverage": null,
+    "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0013",
+    "check": "stability",
+    "coverage": null,
+    "reason": "Periodic architecture: ordinary DC-linearized audio/noise screens do not qualify demodulated behavior",
+    "status": "incomplete"
+  },
+  {
+    "candidate": "candidate_0014",
+    "check": "operating_point",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0014",
+    "check": "frequency_response",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0014",
+    "check": "noise",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0014",
+    "check": "distortion",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0014",
+    "check": "headroom",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0014",
+    "check": "output_impedance",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0014",
+    "check": "balance",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  },
+  {
+    "candidate": "candidate_0014",
+    "check": "phantom_supply",
+    "coverage": null,
+    "reason": "ngspice exit 0: Warning",
+    "status": "error"
+  }
+]

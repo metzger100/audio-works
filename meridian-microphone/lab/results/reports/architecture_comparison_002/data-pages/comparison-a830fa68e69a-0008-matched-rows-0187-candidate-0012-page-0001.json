@@ -1,0 +1,129 @@
+{
+  "candidate": "candidate_0012",
+  "contributions": {
+    "capsule Johnson surrogate (excluded)": {
+      "output_v_rms": 6.02091840904225e-10,
+      "pressure_a_pa_rms": 3.274974387649755e-05,
+      "pressure_pa_rms": 0.00013550398832130848,
+      "roots": [
+        "onoise_r.xcap.rfront",
+        "onoise_r.xcap.rrear"
+      ]
+    },
+    "environment (excluded)": {
+      "output_v_rms": 1.0259749326347908e-07,
+      "pressure_a_pa_rms": 0.00571980272577862,
+      "pressure_pa_rms": 0.007298691104476816,
+      "roots": [
+        "onoise_r.xenv.rfeedn",
+        "onoise_r.xenv.rfeedp",
+        "onoise_r.xenv.rinn",
+        "onoise_r.xenv.rinp",
+        "onoise_r.xenv.rshield",
+        "onoise_r.xenv.rwiren",
+        "onoise_r.xenv.rwirep"
+      ]
+    },
+    "input bias, reset and degeneration": {
+      "output_v_rms": 2.5143831312260747e-06,
+      "pressure_a_pa_rms": 0.14028292108921145,
+      "pressure_pa_rms": 0.1747089736875213,
+      "roots": [
+        "onoise_r.xdut.rcollector1",
+        "onoise_r.xdut.rcollector2",
+        "onoise_r.xdut.remitter1",
+        "onoise_r.xdut.remitter2",
+        "onoise_r.xdut.rfeedbacka",
+        "onoise_r.xdut.rfeedbackb",
+        "onoise_r.xdut.rrear",
+        "onoise_r.xdut.rrefbottom",
+        "onoise_r.xdut.rreftop",
+        "onoise_r.xdut.rtail"
+      ]
+    },
+    "input semiconductor": {
+      "output_v_rms": 9.230346002380005e-07,
+      "pressure_a_pa_rms": 0.04932466320890352,
+      "pressure_pa_rms": 0.1485186655427384,
+      "roots": [
+        "onoise_d.xdut.xqinput.d1",
+        "onoise_d.xdut.xqreference.d1",
+        "onoise_q.xdut.xqinput.q1",
+        "onoise_q.xdut.xqinput.q2",
+        "onoise_q.xdut.xqreference.q1",
+        "onoise_q.xdut.xqreference.q2",
+        "onoise_r.xdut.xqinput.rq",
+        "onoise_r.xdut.xqreference.rq"
+      ]
+    },
+    "output drive and coupling": {
+      "output_v_rms": 1.8379732653182046e-06,
+      "pressure_a_pa_rms": 0.10255905885447901,
+      "pressure_pa_rms": 0.12606769466631754,
+      "roots": [
+        "onoise_d.xdut.xqoutn.d1",
+        "onoise_d.xdut.xqoutp.d1",
+        "onoise_q.xdut.xqoutn.q1",
+        "onoise_q.xdut.xqoutn.q2",
+        "onoise_q.xdut.xqoutp.q1",
+        "onoise_q.xdut.xqoutp.q2",
+        "onoise_r.xdut.routloadn",
+        "onoise_r.xdut.routloadp",
+        "onoise_r.xdut.routn",
+        "onoise_r.xdut.routp",
+        "onoise_r.xdut.xqoutn.rq",
+        "onoise_r.xdut.xqoutp.rq"
+      ]
+    },
+    "polarization network": {
+      "output_v_rms": 3.512609991780736e-08,
+      "pressure_a_pa_rms": 0.0016014341185571113,
+      "pressure_pa_rms": 0.0016736802481568433,
+      "roots": [
+        "onoise_r.xdut.rback",
+        "onoise_r.xdut.rpolar0",
+        "onoise_r.xdut.rpolar1",
+        "onoise_r.xdut.rpolar2",
+        "onoise_r.xdut.rpolar3",
+        "onoise_r.xdut.rpolar4",
+        "onoise_r.xdut.rpolar5",
+        "onoise_r.xdut.rpolar6",
+        "onoise_r.xdut.rpolar7",
+        "onoise_r.xdut.rpolar8",
+        "onoise_r.xdut.rpolar9"
+      ]
+    },
+    "power and midpoint": {
+      "output_v_rms": 1.1170469903778574e-07,
+      "pressure_a_pa_rms": 0.00773368809384803,
+      "pressure_pa_rms": 0.029684239128985556,
+      "roots": [
+        "onoise_d.xdut.xqreg.d1",
+        "onoise_q.xdut.xqreg.q1",
+        "onoise_q.xdut.xqreg.q2",
+        "onoise_r.xdut.rharvestn",
+        "onoise_r.xdut.rharvestp",
+        "onoise_r.xdut.rmidbottom",
+        "onoise_r.xdut.rmidtop",
+        "onoise_r.xdut.rregbottom",
+        "onoise_r.xdut.rregtop",
+        "onoise_r.xdut.xqreg.rq"
+      ]
+    }
+  },
+  "current_a": 0.004388336323156153,
+  "declared": {
+    "$include": "comparison-a830fa68e69a-0008-matched-rows-0187-candidate-0012-0001-holdout-05.json"
+  },
+  "density": 64,
+  "holdout": true,
+  "noise_a_pa_rms": 0.18081193385913213,
+  "noise_pa_rms": 0.26335914337319394,
+  "noise_partition_closure": 6.605472229087419e-16,
+  "noise_scope": "conditional stationary modeled sources; incomplete physical spectra",
+  "original_record": "results/mechanism_controls/20261017T090130Z_comparison002_9392cebd/matched/candidate_0012/holdout_05/result.json",
+  "original_status": "fail",
+  "response_deviation_db": 21.232982865569397,
+  "scenario": "holdout_05",
+  "status": "fail"
+}

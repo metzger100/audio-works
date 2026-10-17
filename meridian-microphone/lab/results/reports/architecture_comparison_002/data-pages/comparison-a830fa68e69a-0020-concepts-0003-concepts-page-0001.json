@@ -1,0 +1,235 @@
+[
+  {
+    "assumption_inverted": null,
+    "balanced_output": "Differential or impedance-balanced driver",
+    "dc_bias": "Source degeneration and ordinary device bounds",
+    "expected_dominant_distortion": "JFET curvature and output swing",
+    "expected_dominant_noise": "Gate/bias-network current noise and channel voltage noise",
+    "families": [
+      "conventional_jfet"
+    ],
+    "fastest_falsification": "DC/noise/distortion sweep across manufacturer JFET bounds",
+    "gain_or_impedance_transformation": "JFET buffer and separate driver",
+    "id": "concept_0001",
+    "likely_fatal_flaw": "Idss/VTO spread exceeds self-bias authority",
+    "loading_control": "Low input C and high bias R",
+    "nonconventional_jfet_buffer": false,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": false,
+    "sensed_quantity": "Open-circuit capsule voltage",
+    "sources": [],
+    "status": "proposed_not_simulated",
+    "title": "Conventional self-biased JFET voltage reference"
+  },
+  {
+    "assumption_inverted": null,
+    "balanced_output": "Resistor-defined differential driver",
+    "dc_bias": "Controlled current and local DC feedback",
+    "expected_dominant_distortion": "Finite loop gain and drain modulation",
+    "expected_dominant_noise": "Input channel noise and feedback/bias noise",
+    "families": [
+      "unconventional_jfet",
+      "high_feedback"
+    ],
+    "fastest_falsification": "Extract input admittance, gain and return ratio across capacitance corners",
+    "gain_or_impedance_transformation": "Common-source gain inside feedback",
+    "id": "concept_0002",
+    "likely_fatal_flaw": "Feedback increases input C or oscillates",
+    "loading_control": "Feedback and a controlled drain voltage reduce Miller effects",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": false,
+    "sensed_quantity": "Capsule voltage error",
+    "sources": [],
+    "status": "proposed_not_simulated",
+    "title": "JFET closed-loop common-source conversion"
+  },
+  {
+    "assumption_inverted": null,
+    "balanced_output": "Independent low-impedance line stage",
+    "dc_bias": "Source degeneration, drain-voltage servo",
+    "expected_dominant_distortion": "Cascode nonlinearity and bootstrap error",
+    "expected_dominant_noise": "JFET 1/f and guard amplifier noise",
+    "families": [
+      "unconventional_jfet",
+      "bootstrap",
+      "instrumentation"
+    ],
+    "fastest_falsification": "Sweep guard delay, Cgd and parasitic coupling, including return ratio",
+    "gain_or_impedance_transformation": "JFET transconductance plus cascode",
+    "id": "concept_0003",
+    "likely_fatal_flaw": "Guard noise or positive feedback dominates",
+    "loading_control": "Track drain and surrounding guard to reduce displacement/loading",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "sensed_quantity": "Capsule voltage",
+    "sources": [
+      "S06"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "JFET cascode with driven drain/guard"
+  },
+  {
+    "assumption_inverted": null,
+    "balanced_output": "Early differential representation drives line outputs",
+    "dc_bias": "Individual current loops and common-mode servo",
+    "expected_dominant_distortion": "Unequal device nonlinearities",
+    "expected_dominant_noise": "Two input devices plus current-control noise",
+    "families": [
+      "unconventional_jfet",
+      "differential",
+      "servo"
+    ],
+    "fastest_falsification": "Two-electrode admittance and uncorrelated device-corner sweeps",
+    "gain_or_impedance_transformation": "Degenerated differential conversion",
+    "id": "concept_0004",
+    "likely_fatal_flaw": "Common backplate or unequal sensitivities defeats differential benefit",
+    "loading_control": "Two high-impedance ports with finite mutual C",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": false,
+    "sensed_quantity": "Front/rear electrode voltages",
+    "sources": [],
+    "status": "proposed_not_simulated",
+    "title": "Differential JFET sensing without pair selection"
+  },
+  {
+    "assumption_inverted": null,
+    "balanced_output": "Balanced line driver",
+    "dc_bias": "Filtered midrail and feedback",
+    "expected_dominant_distortion": "Input common-mode and output crossover",
+    "expected_dominant_noise": "MOS 1/f and input current noise",
+    "families": [
+      "mosfet",
+      "no_jfet",
+      "high_feedback"
+    ],
+    "fastest_falsification": "Noise/SOA/current across vendor limits and temperature",
+    "gain_or_impedance_transformation": "Closed-loop CMOS amplifier",
+    "id": "concept_0005",
+    "likely_fatal_flaw": "CMOS macro model omits leakage/noise or exceeds P48 budget",
+    "loading_control": "Documented CMOS input C and leakage, guard if justified",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": false,
+    "sensed_quantity": "Capsule voltage",
+    "sources": [],
+    "status": "proposed_not_simulated",
+    "title": "CMOS-input voltage amplifier"
+  },
+  {
+    "assumption_inverted": "The capsule must be voltage sensed",
+    "balanced_output": "Current-to-differential conversion",
+    "dc_bias": "Controlled drain current and gate-voltage loop",
+    "expected_dominant_distortion": "Source-voltage compliance and body effect",
+    "expected_dominant_noise": "Channel current noise and gate-control noise",
+    "families": [
+      "mosfet",
+      "current",
+      "no_jfet"
+    ],
+    "fastest_falsification": "Noise referred to pressure at 20 Hz and large-signal input compliance",
+    "gain_or_impedance_transformation": "Current conveyor then integration",
+    "id": "concept_0006",
+    "likely_fatal_flaw": "Current noise plus pressure differentiation loses LF SNR",
+    "loading_control": "Low input impedance defines the electrical boundary",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "sensed_quantity": "Capsule displacement current",
+    "sources": [
+      "S07"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Common-gate MOS displacement-current input"
+  },
+  {
+    "assumption_inverted": "The first device must be a FET",
+    "balanced_output": "Differential output buffer",
+    "dc_bias": "Slow offset/leakage servo",
+    "expected_dominant_distortion": "Input/base-current modulation",
+    "expected_dominant_noise": "Base-current shot noise and feedback resistor noise",
+    "families": [
+      "no_fet",
+      "charge",
+      "instrumentation"
+    ],
+    "fastest_falsification": "Integrate pressure-referred shot-noise envelope before detailed construction",
+    "gain_or_impedance_transformation": "BJT error amplifier and capacitor feedback",
+    "id": "concept_0007",
+    "likely_fatal_flaw": "BJT current noise exceeds the entire LF budget",
+    "loading_control": "Virtual-node charge summation with feedback C",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "sensed_quantity": "Electrode charge",
+    "sources": [
+      "S05",
+      "S07"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Bipolar charge-feedback amplifier"
+  },
+  {
+    "assumption_inverted": "The first device must be a FET",
+    "balanced_output": "Differential detector/driver",
+    "dc_bias": "Zero-mean carrier with separately researched safe DC bias",
+    "expected_dominant_distortion": "Demodulation and electrostatic back-action",
+    "expected_dominant_noise": "Carrier oscillator phase/amplitude noise and detector noise",
+    "families": [
+      "no_fet",
+      "instrumentation",
+      "differential"
+    ],
+    "fastest_falsification": "Carrier sidebands, demodulated noise and nonlinear C/voltage force model",
+    "gain_or_impedance_transformation": "BJT synchronous detector and audio gain",
+    "id": "concept_0008",
+    "likely_fatal_flaw": "RF power or carrier force destabilizes diaphragm",
+    "loading_control": "Bridge balance and controlled excitation",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "sensed_quantity": "Capacitance modulation of an analog carrier",
+    "sources": [
+      "S09"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Bipolar carrier capacitance bridge"
+  },
+  {
+    "assumption_inverted": "The first device must be a FET",
+    "balanced_output": "Balanced transformer secondary or line buffer",
+    "dc_bias": "Carrier transformer isolation plus independent DC bias",
+    "expected_dominant_distortion": "Core/carrier nonlinearity",
+    "expected_dominant_noise": "Winding loss and detector noise",
+    "families": [
+      "no_fet",
+      "minimal",
+      "instrumentation"
+    ],
+    "fastest_falsification": "Lossy coupled-inductor bridge across C/cable/temperature",
+    "gain_or_impedance_transformation": "Passive transformer then BJT detector",
+    "id": "concept_0009",
+    "likely_fatal_flaw": "Useful bandwidth and carrier-noise rejection are incompatible",
+    "loading_control": "Resonant impedance transformation and symmetric coupling",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "sensed_quantity": "Capacitance-induced bridge imbalance",
+    "sources": [
+      "S09"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Transformer resonant bridge with bipolar detector"
+  }
+]

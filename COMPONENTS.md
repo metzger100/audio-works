@@ -1,33 +1,34 @@
 # Standard parts and availability
 
-Owner requirement, 2026-10-05; restated 2026-10-09. Applies repository-wide to instructions, topology, optimization, comparisons and builds. Projects may strengthen it; never silently relax it.
+Repository-wide owner requirement, 2026-10-05/2026-10-09. Strengthen if needed; never silently relax.
 
 ## Repeatable construction
 
-Use off-the-shelf passives, documented current-production semiconductors and practical packages. Specify manufacturer/MPN, value, technology, ratings, tolerance and package wherever behavior depends on them. Prefer supported parts, dependable supply and substitutes/additional sources.
+Use off-the-shelf passives, documented current-production semiconductors and practical packages. Specify behavior-relevant manufacturer/MPN, value, technology, ratings, tolerance and package. Prefer supported parts, dependable supply and substitutes/additional sources.
 
-Builds must not depend on NOS/discontinued stock, unidentified marketplace parts, selected specimens, hand matching or undocumented individual characteristics. Label ideal/historical parts as research controls. Determine performance through topology, feedback, resistor ratios, controlled bias and tolerance to documented variation. Meridian forbids selection, matching and hidden per-unit trimming, including selection batches.
+Prohibited build dependencies: NOS/discontinued stock, unidentified marketplace parts, selected specimens, hand matching or undocumented individual traits. Label ideal/historical parts as research controls. Performance must tolerate documented variation through topology, feedback, resistor ratios and controlled bias. Meridian forbids selection batches, matching and hidden per-unit trimming.
 
-Precision/low-leakage parts need a measurable function, documented need, realistic variation, price and obtainable exact variant. Brand prestige proves no benefit. Arienne remains Meridian's research capsule; custom PCBs, enclosures and acoustics need separate fabrication decisions and do not excuse inaccessible electronics.
+Precision/low-leakage parts need measurable function, documented need, realistic variation, price and obtainable exact variant; prestige proves nothing. Arienne remains Meridian's research capsule. Custom PCB/enclosure/acoustic fabrication needs separate decisions and cannot excuse inaccessible electronics.
 
 ## Dated sourcing
 
-Build parts must be privately orderable in required small quantities for Germany delivery. German/EU and international retail routes remain eligible regardless of manufacturing country.
+Require private small-quantity Germany delivery. German/EU/international retail qualifies regardless of manufacturing country. Record:
 
-Record exact variant/package, supplier URL, lifecycle, stock/orderability, private-customer access, Germany delivery, MOQ, pack size, lead time and observation date. Catalogue listings and typical SPICE models are insufficient. Seek independent sources or qualified substitutes where feasible; disclose single-source risks and unknowns. Similar names do not validate substitution.
+- Exact variant/package, supplier URL, lifecycle, stock/orderability and observation date.
+- Private-customer access, Germany delivery, MOQ, pack size and lead time.
 
-Refresh availability before purchase recommendations/build release. Preserve architectures with sourcing gaps as procurement-unverified research; resolve unavailable, obsolete or undocumented dependencies before prototype selection/build recommendations; retain their families.
+Listings/typical SPICE models are insufficient. Seek independent sources or qualified substitutes where feasible; disclose single-source risks/unknowns. Similar names prove no substitution. Refresh availability before purchase recommendations/build release. Preserve procurement-unverified research/families; resolve unavailable/obsolete/undocumented dependencies before prototype selection/build recommendations.
 
 ## Realized BOMs
 
-Convert continuous proposals into obtainable nominal parts/combinations before calling them buildable. Prefer practical standard series; tolerance, voltage, package and technology must also be obtainable. Simulation precision is no parts specification.
+Realize continuous proposals into obtainable nominal parts/combinations before calling them buildable. Prefer practical standard series; tolerance/voltage/package/technology must be obtainable. Simulation precision specifies no part.
 
-Preserve the continuous parent and traceable implementation revision. Repeat the complete applicable suite using actual values, documented variation, parasitics, leakage, noise and temperature behavior. Requalify substitutes/combinations, including count, cost and layout effects. Untested BOMs and missing behavior remain unqualified.
+Retain continuous parents/traceable revisions. Rerun the complete applicable suite with actual values, documented variation, parasitics, leakage, noise and temperature behavior. Requalify substitutes/combinations, including count/cost/layout. Untested BOMs/missing behavior remain unqualified.
 
 ## Delivered cost and intended use
 
-Compare intended-equipment quantities in EUR, including actual packs/MOQs, basket shipping, applicable taxes/import costs and fees. Disclose unknown charges and avoid bulk-price assumptions. Seek inexpensive precision without losing performance/reproducibility. Cost is separate from merit; no numerical spending ceiling exists.
+Compare intended-equipment EUR costs: actual packs/MOQs, basket shipping, applicable taxes/import costs/fees. Disclose unknown charges; avoid bulk pricing. Seek inexpensive precision without losing performance/reproducibility. Cost is separate from merit; no spending ceiling.
 
-Follow [Germany procurement](meridian-microphone/lab/research/procurement/germany.md). Purchases must serve finished equipment. Unused comparison parts, selection batches or extra capsules require a concrete intended use and owner decision. Research/documentation authorize no purchase, supplier contact or payment.
+Follow [Germany procurement](meridian-microphone/lab/research/procurement/germany.md). Purchases serve finished equipment. Unused comparison parts, selection batches or extra capsules need concrete intended use and owner decision.
 
-Simulation, procurement, [patent screening](PATENTS.md) and physical qualification remain separate. Availability, affordability and simulation establish no clearance and cannot override prerequisites. This policy certifies no BOM or stock: qualification needs dated candidate-linked availability, cost and realized-part evidence.
+Simulation/procurement/[patents](PATENTS.md)/physical qualification stay separate. Availability/affordability/simulation confer no clearance or prerequisite waiver. This policy certifies no BOM/stock: qualification needs dated candidate-linked availability, cost and realized-part evidence.

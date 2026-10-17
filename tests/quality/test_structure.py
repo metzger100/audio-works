@@ -118,6 +118,19 @@ class StructureTests(unittest.TestCase):
         self.assertTrue(valid_component("research-memory", directory=True))
         self.assertTrue(valid_component("measurements.raw.csv"))
 
+    def test_owner_requested_comparison_output_path_is_exactly_scoped(self):
+        from repo_quality.structure import valid_component
+
+        permitted = "meridian-microphone/lab/results/reports/architecture_comparison_002/data.json"
+        content = {"docs/INDEX.md": f"# Hub\n\n[Output](../{permitted})\n", permitted: "{}\n"}
+        self.assertFalse(any("Invalid maintained filename" in e for e in report(content)["errors"]))
+        self.assertFalse(valid_component("architecture_comparison_002", directory=True))
+        for path in ["docs/architecture_comparison_002/data.json", permitted.replace("002", "003")]:
+            content = {"docs/INDEX.md": f"# Hub\n\n[Output](../{path})\n", path: "{}\n"}
+            self.assertTrue(
+                any("Invalid maintained filename" in e for e in report(content)["errors"])
+            )
+
     def test_quality_decisions_require_valid_dates_and_existing_regressions(self):
         from repo_quality.checks import quality_metadata
 

@@ -1,0 +1,143 @@
+[
+  {
+    "assumption_inverted": "The capsule must be voltage sensed",
+    "balanced_output": "Charge output then differential buffer",
+    "dc_bias": "Ultra-slow continuous reset rather than abrupt switching",
+    "expected_dominant_distortion": "Reset nonlinearity leaking into audio",
+    "expected_dominant_noise": "Reset element excess noise and voltage-noise gain",
+    "families": [
+      "instrumentation",
+      "charge",
+      "servo",
+      "no_jfet"
+    ],
+    "fastest_falsification": "Reset-element noise injection and audio sidebands over leakage extremes",
+    "gain_or_impedance_transformation": "Electrometer error amplifier",
+    "id": "concept_0018",
+    "likely_fatal_flaw": "Reset/servo noise worse than passive bleed",
+    "loading_control": "Virtual node and feedback C with guarded leakage paths",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "sensed_quantity": "Continuous motional charge",
+    "sources": [
+      "S06",
+      "S08"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Continuous-reset electrometer charge front end"
+  },
+  {
+    "assumption_inverted": "The first device must be a FET",
+    "balanced_output": "Differential synchronous detector plus low-pass driver",
+    "dc_bias": "Carrier zero mean, separate controlled polarization",
+    "expected_dominant_distortion": "Charge injection and detector compression",
+    "expected_dominant_noise": "Switch shot noise and carrier feedthrough",
+    "families": [
+      "instrumentation",
+      "no_fet",
+      "floating"
+    ],
+    "fastest_falsification": "Periodic steady-state surrogate/time-domain carrier simulation and noise folding study",
+    "gain_or_impedance_transformation": "Analog bipolar switching/detection",
+    "id": "concept_0019",
+    "likely_fatal_flaw": "Carrier residue or flicker folding exceeds noise budget",
+    "loading_control": "Floating excitation and differential parasitic rejection",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "sensed_quantity": "Carrier-synchronous capacitance change",
+    "sources": [
+      "S09"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Bipolar synchronous capacitive bridge"
+  },
+  {
+    "assumption_inverted": "The first device must be a FET",
+    "balanced_output": "Balanced audio driver after discriminator",
+    "dc_bias": "Carrier amplitude servo and separately verified DC bias",
+    "expected_dominant_distortion": "Oscillator pulling and discriminator curvature",
+    "expected_dominant_noise": "Oscillator phase noise and amplitude-to-frequency noise",
+    "families": [
+      "no_fet",
+      "instrumentation",
+      "minimal"
+    ],
+    "fastest_falsification": "Sideband sensitivity and phase-noise envelope across realistic C/leakage",
+    "gain_or_impedance_transformation": "Oscillator plus all-analog frequency discriminator",
+    "id": "concept_0020",
+    "likely_fatal_flaw": "Audible phase noise or excessive electrostatic back-action",
+    "loading_control": "Low carrier voltage limits electrical force; resonant transformation",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "sensed_quantity": "Capacitance-to-frequency modulation",
+    "sources": [
+      "S09"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Bipolar capacitance-controlled oscillator readout"
+  },
+  {
+    "assumption_inverted": "The capsule must be voltage sensed",
+    "balanced_output": "Differential current-output transformation",
+    "dc_bias": "Independent low-bandwidth polarization/leakage loop",
+    "expected_dominant_distortion": "Loop crossover intermodulation and finite authority",
+    "expected_dominant_noise": "Loop crossover/reference and charge amplifier noise",
+    "families": [
+      "charge",
+      "floating",
+      "servo",
+      "high_feedback"
+    ],
+    "fastest_falsification": "AC/DC return ratios, slow ramps, leakage steps and audio injection together",
+    "gain_or_impedance_transformation": "Capacitive audio feedback plus DC loop",
+    "id": "concept_0021",
+    "likely_fatal_flaw": "Two loops fight at LF or violate safe electrode bias",
+    "loading_control": "AC virtual potential, DC reference floats as needed",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "sensed_quantity": "AC charge while DC electrode voltage is independently regulated",
+    "sources": [
+      "S05",
+      "S06"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Separate AC charge loop and DC electrode-voltage loop"
+  },
+  {
+    "assumption_inverted": "The first device must be a FET",
+    "balanced_output": "Complementary differential output currents",
+    "dc_bias": "Degenerated current conveyor and slow offset loop",
+    "expected_dominant_distortion": "Current-copy nonlinearity and Early effect",
+    "expected_dominant_noise": "Base-current fluctuations, mirror/current-copy noise",
+    "families": [
+      "no_fet",
+      "current",
+      "instrumentation",
+      "high_feedback"
+    ],
+    "fastest_falsification": "Current-noise floor and transimpedance linearity before complete output design",
+    "gain_or_impedance_transformation": "Current copying then charge integration",
+    "id": "concept_0022",
+    "likely_fatal_flaw": "Current copying amplifies shot noise and loses LF charge",
+    "loading_control": "Feedback makes controlled input potential; remote capacitor sets gain",
+    "nonconventional_jfet_buffer": true,
+    "performance_claim": false,
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "sensed_quantity": "Capsule displacement current translated to a remote integration node",
+    "sources": [
+      "S07",
+      "S08"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Bipolar current-conveyor charge translator"
+  }
+]

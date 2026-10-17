@@ -8,6 +8,7 @@ import re
 from .base import MAX_ROUTE
 from .register import classify
 from .structure import MD, original
+from .discovery import discovery_sizes
 
 
 def folder_inventory(view, register):
@@ -104,6 +105,7 @@ def inspect(view, register):
     return {
         "errors": errors,
         "reading_sizes": sizes,
+        "discovery": discovery_sizes(view, register),
         "repeated_prose": repeated,
         "nested_data_partitions": nested,
         "noncanonical_page_directories": noncanonical,

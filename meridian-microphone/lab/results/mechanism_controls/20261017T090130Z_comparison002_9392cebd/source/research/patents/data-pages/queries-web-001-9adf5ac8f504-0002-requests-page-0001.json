@@ -1,0 +1,212 @@
+[
+  {
+    "accessible_result_urls": [
+      "https://patentscope.wipo.int/",
+      "https://www.dpma.de/english/search/depatisnet/index.html",
+      "https://www.dpma.de/english/search/dpmaregister/index.html",
+      "https://www.epo.org/en/searching-for-patents",
+      "https://www.uspto.gov/patents/search"
+    ],
+    "actual_request": {
+      "open": [
+        {
+          "ref_id": "https://www.dpma.de/english/search/depatisnet/index.html"
+        },
+        {
+          "ref_id": "https://www.dpma.de/english/search/dpmaregister/index.html"
+        },
+        {
+          "ref_id": "https://www.epo.org/en/searching-for-patents"
+        },
+        {
+          "ref_id": "https://patentscope.wipo.int/"
+        },
+        {
+          "ref_id": "https://www.uspto.gov/patents/search"
+        }
+      ],
+      "response_length": "long"
+    },
+    "argument_alias": "click.link_id means tool argument click.id; exact request preserved in raw receipt",
+    "database": "web.run discovery/source fetch; underlying search engine not exposed",
+    "filters": "Only the explicit request filters; no unstated time, status or territory restriction",
+    "id": "web-001",
+    "observed_utc": "2026-10-16 14:00:27 UTC",
+    "private_raw_response": "research/architecture_sources/local/patent-screening-001/web-001.json",
+    "result_state": "provider returned merged response; per-query counts unavailable; errors/negative-looking responses are not official negative patent findings",
+    "sha256": "fc43178e9e1608ab634bff64f3d39585ac4e0e06f1a10899fc27da1bfb98c001"
+  },
+  {
+    "accessible_result_urls": [
+      "https://arxiv.org/abs/1204.1950",
+      "https://arxiv.org/abs/1511.04328",
+      "https://arxiv.org/abs/2604.18969",
+      "https://data.epo.org/publication-server/rest/v1.0/publication-dates/19981216/patents/EP0783795NWB1/document.pdf",
+      "https://data.epo.org/publication-server/rest/v1.2/patents/EP0562738NWA2/document.pdf",
+      "https://data.epo.org/publication-server/rest/v1.2/publication-dates/20151209/patents/EP2174416NWB1/document.pdf",
+      "https://en.wikipedia.org/wiki/Charge_amplifier",
+      "https://en.wikipedia.org/wiki/Driven_guard",
+      "https://en.wikipedia.org/wiki/Phantom_circuit",
+      "https://en.wikipedia.org/wiki/Phantom_power",
+      "https://patentimages.storage.googleapis.com/2a/7d/bc/a023895acd1e17/US8861765.pdf",
+      "https://patentimages.storage.googleapis.com/7f/da/ee/a29f69ca53a37a/US9332369.pdf",
+      "https://patentimages.storage.googleapis.com/c4/cc/e1/efbf86d550c1c5/US9681229.pdf",
+      "https://patents.glgoo.top/patent/US20140004905A1/en",
+      "https://patents.google.com/patent/EP2974369B1/en",
+      "https://patents.google.com/patent/EP3192278A1/en",
+      "https://patents.google.com/patent/US10003875B2/en",
+      "https://patents.google.com/patent/US20060078152A1/en",
+      "https://patents.google.com/patent/US20060291672A1/en",
+      "https://patents.google.com/patent/US20090086992A1/en",
+      "https://patents.google.com/patent/US20150104056A1/en",
+      "https://patents.google.com/patent/US7542578B2/en",
+      "https://patents.google.com/patent/WO2013090184A1/en",
+      "https://pt.wikipedia.org/wiki/Phantom_power",
+      "https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%BD%D1%82%D0%BE%D0%BC%D0%BD%D0%BE%D0%B5_%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5",
+      "https://service.shure.com/articles/en_US/Knowledge/what-is-phantom-power",
+      "https://www.freepatentsonline.com/3870968.html",
+      "https://www.reddit.com/r/AskElectronics/comments/lwrnrp",
+      "https://www.reddit.com/r/LocationSound/comments/1bl35vh"
+    ],
+    "actual_request": {
+      "response_length": "long",
+      "search_query": [
+        {
+          "q": "patent condenser microphone phantom power current source balanced output servo"
+        },
+        {
+          "q": "patent electrostatic microphone charge amplifier reset capacitive feedback"
+        },
+        {
+          "q": "patent electrometer driven guard bootstrapping capacitive sensor"
+        },
+        {
+          "q": "patent microphone RF bridge synchronous demodulation anti phase"
+        }
+      ]
+    },
+    "argument_alias": "click.link_id means tool argument click.id; exact request preserved in raw receipt",
+    "database": "web.run discovery/source fetch; underlying search engine not exposed",
+    "filters": "Only the explicit request filters; no unstated time, status or territory restriction",
+    "id": "web-002",
+    "observed_utc": "2026-10-16 14:00:39 UTC",
+    "private_raw_response": "research/architecture_sources/local/patent-screening-001/web-002.json",
+    "result_state": "provider returned merged response; per-query counts unavailable; errors/negative-looking responses are not official negative patent findings",
+    "sha256": "39d03cf1fc58ed1474c98bd8e87e8f38f0688245281adbb71c337765f5f47128"
+  },
+  {
+    "accessible_result_urls": [
+      "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=index&content=index&space=menu&switchToLang=en&window=1",
+      "https://register.dpma.de/DPMAregister/Uebersicht?lang=en",
+      "https://www.epo.org/en/searching-for-patents/legal/register",
+      "https://www.epo.org/en/searching-for-patents/technical/espacenet"
+    ],
+    "actual_request": {
+      "click": [
+        {
+          "link_id": 6,
+          "ref_id": "turn0view0"
+        },
+        {
+          "link_id": 5,
+          "ref_id": "turn0view1"
+        },
+        {
+          "link_id": 4,
+          "ref_id": "turn0view2"
+        },
+        {
+          "link_id": 8,
+          "ref_id": "turn0view2"
+        }
+      ],
+      "response_length": "short"
+    },
+    "argument_alias": "click.link_id means tool argument click.id; exact request preserved in raw receipt",
+    "database": "web.run discovery/source fetch; underlying search engine not exposed",
+    "filters": "Only the explicit request filters; no unstated time, status or territory restriction",
+    "id": "web-003",
+    "observed_utc": "2026-10-16 14:00:54 UTC",
+    "private_raw_response": "research/architecture_sources/local/patent-screening-001/web-003.json",
+    "result_state": "provider returned merged response; per-query counts unavailable; errors/negative-looking responses are not official negative patent findings",
+    "sha256": "247413f0f79a6e830632f165743f5ddbed60838497c97b12497224f9a35bb70f"
+  },
+  {
+    "accessible_result_urls": [
+      "https://patents.google.com/patent/CN101350140B/en",
+      "https://patents.google.com/patent/CN113286216A/en",
+      "https://patents.google.com/patent/CN120750981A/en",
+      "https://patents.google.com/patent/JP3154994U/en",
+      "https://patents.google.com/patent/US11218804B2/en",
+      "https://patents.google.com/patent/US20060078152A1/en",
+      "https://patents.google.com/patent/US20110067082A1/en",
+      "https://patents.google.com/patent/US20140033904A1/en",
+      "https://patents.google.com/patent/US20150365752",
+      "https://patents.google.com/patent/US20230113703A1/en",
+      "https://patents.google.com/patent/US7970154B2",
+      "https://patents.google.com/patent/US8248141B2/en"
+    ],
+    "actual_request": {
+      "response_length": "long",
+      "search_query": [
+        {
+          "q": "site:patents.google.com/patent microphone \"phantom\" \"current\" \"US7970154\""
+        },
+        {
+          "q": "site:patents.google.com/patent \"microphone\" \"synchronous\" \"bridge\""
+        },
+        {
+          "q": "site:patents.google.com/patent \"microphone\" \"source current\" servo"
+        },
+        {
+          "q": "site:patents.google.com/patent \"microphone\" \"impedance balanced\""
+        }
+      ]
+    },
+    "argument_alias": "click.link_id means tool argument click.id; exact request preserved in raw receipt",
+    "database": "web.run discovery/source fetch; underlying search engine not exposed",
+    "filters": "Only the explicit request filters; no unstated time, status or territory restriction",
+    "id": "web-004",
+    "observed_utc": "2026-10-16 14:01:14 UTC",
+    "private_raw_response": "research/architecture_sources/local/patent-screening-001/web-004.json",
+    "result_state": "provider returned merged response; per-query counts unavailable; errors/negative-looking responses are not official negative patent findings",
+    "sha256": "9cdcb61e732a2ee9f490195ff139139e8f99da72cecb25fef25c8dcbd0e0e0db"
+  },
+  {
+    "accessible_result_urls": [
+      "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=basis&switchToLang=en",
+      "https://ppubs.uspto.gov/pubwebapp/",
+      "https://register.dpma.de/DPMAregister/pat/basis",
+      "https://register.epo.org/espacenet/application?number=EP12171634&tab=main"
+    ],
+    "actual_request": {
+      "click": [
+        {
+          "link_id": 0,
+          "ref_id": "turn2view0"
+        },
+        {
+          "link_id": 0,
+          "ref_id": "turn2view1"
+        }
+      ],
+      "open": [
+        {
+          "ref_id": "https://register.epo.org/espacenet/application?number=EP12171634&tab=main"
+        },
+        {
+          "ref_id": "https://ppubs.uspto.gov/pubwebapp/"
+        }
+      ],
+      "response_length": "short"
+    },
+    "argument_alias": "click.link_id means tool argument click.id; exact request preserved in raw receipt",
+    "database": "web.run discovery/source fetch; underlying search engine not exposed",
+    "filters": "Only the explicit request filters; no unstated time, status or territory restriction",
+    "id": "web-005",
+    "observed_utc": "2026-10-16 14:01:41 UTC",
+    "private_raw_response": "research/architecture_sources/local/patent-screening-001/web-005.json",
+    "result_state": "provider returned merged response; per-query counts unavailable; errors/negative-looking responses are not official negative patent findings",
+    "sha256": "a489d9c14bf70d3e5d6087b4485374096d23ee923fd50a8d0c420c2cbcffeb8b"
+  }
+]

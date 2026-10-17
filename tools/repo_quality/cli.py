@@ -16,6 +16,7 @@ from .backup import create_backup, restore_backup
 from .register import classify, load_register
 from .navigation import render
 from .evidence import new_inventory, verify_evidence
+from .discovery import select_paths, search
 
 
 def main(argv=None):
@@ -24,13 +25,19 @@ def main(argv=None):
     sub = parser.add_subparsers(dest="command", required=True)
     context = sub.add_parser("context")
     context.add_argument("route", choices=sorted(ROUTES))
+    context.add_argument("--format", choices=("json", "text"), default="json")
     for cmd in ("files", "search"):
         p = sub.add_parser(cmd)
         p.add_argument("--include-evidence", action="store_true")
         p.add_argument("--include-history", action="store_true")
         p.add_argument("--include-generated", action="store_true")
+        p.add_argument("--include-data-pages", action="store_true")
+        p.add_argument(
+            "--path", help="Repository-relative file or directory; role filters still apply"
+        )
         if cmd == "search":
             p.add_argument("pattern")
+            p.add_argument("--files-with-matches", action="store_true")
     sub.add_parser("refresh")
     p = sub.add_parser("check")
     p.add_argument("--staged", action="store_true")
@@ -124,20 +131,39 @@ def main(argv=None):
                         else "Read this entry material and additional relevant evidence before affected work."
                     ),
                 }
-            elif args.command in {"files", "search"}:
-                paths = [
-                    p
-                    for p in sorted(view.paths)
-                    if (classify(p, r) != "evidence" or args.include_evidence)
-                    and (classify(p, r) != "historical" or args.include_history)
-                    and (classify(p, r) != "generated" or args.include_generated)
-                ]
-                if args.command == "files":
-                    print("\n".join(paths))
+                if args.format == "text":
+                    print(f"Route: {result['route']}")
+                    print(f"Characters: {result['route_characters']} / {result['route_limit']}")
+                    print(
+                        f"Common: {common_count}; estimated tokens: {result['estimated_common_tokens']}"
+                    )
+                    for group, title in ((True, "Mandatory reading"), (False, "Task reading")):
+                        rows = [
+                            row
+                            for row in result["reading"]
+                            if (row["path"] in r["common"]) == group
+                        ]
+                        if rows:
+                            print(f"\n{title}:")
+                            for row in rows:
+                                print(f"{row['path']} ({row['characters']})")
+                    print("\n" + result["note"])
                     return 0
-                if not paths:
-                    return 1
-                return subprocess.run(["rg", "-n", "--", args.pattern, *paths], cwd=root).returncode
+            elif args.command in {"files", "search"}:
+                paths = select_paths(
+                    view,
+                    r,
+                    include_evidence=args.include_evidence,
+                    include_history=args.include_history,
+                    include_generated=args.include_generated,
+                    include_data_pages=args.include_data_pages,
+                    path=args.path,
+                )
+                if args.command == "files":
+                    if paths:
+                        print("\n".join(paths))
+                    return 0
+                return search(root, paths, args.pattern, files_with_matches=args.files_with_matches)
             elif args.command == "evidence":
                 result = (
                     verify_evidence(root, view)
@@ -158,4 +184,4 @@ def main(argv=None):
         print(
             json.dumps({"status": "fail", "error": str(error)}, ensure_ascii=False), file=sys.stderr
         )
-        return 1
+        return 2 if args.command == "search" else 1

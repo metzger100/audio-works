@@ -1,0 +1,89 @@
+schema_version: 1
+date: '2026-10-11'
+scope: Early A/B/C feature inspection,not complete Phase8
+candidate_versions:
+- candidate: candidate_0019
+  sha256: 1fef5a2021b4c396a30f8dca7605e710a38dc230deca2a240bee53bf3ee404da
+  features:
+  - P48 two2.2k resistive harvest paths
+  - follower/inverter/follower balanced output;four47uF per conductor
+  - source degeneration3.3k;loaded30k/10k fixed bias
+  - final-backplate passive filter
+  gates: prototype/manufacture/build publication hold
+- candidate: candidate_0023
+  sha256: d251a442c09835dab574d778a24e27796c75021a82a5b3ee08a51661b1706816
+  features:
+  - P48 two2.2k resistive harvest paths
+  - follower/inverter/follower balanced output;four47uF per conductor
+  - source degeneration1k;discrete300k/100k source servo
+  - unfiltered final backplate path
+  gates: prototype/manufacture/build publication hold
+- candidate: candidate_0025
+  sha256: cc607ebd7e74975052c2a8c6fb8e9d940405b3ce54a288ef3b57437e6e3e2cbf
+  features:
+  - P48 two2.2k resistive harvest paths
+  - follower/inverter/follower balanced output;four47uF per conductor
+  - source degeneration1k;discrete300k/100k source servo
+  - final-backplate passive filter
+  gates: prototype/manufacture/build publication hold
+territories:
+- DE
+- relevantEPstates
+- USWOasfamilyleads
+activities: internal research;no manufacture/use/publication release
+official_grant_inspection:
+- publication: EP1585365B1
+  application: '04450073.4'
+  filing_date: '2004-03-30'
+  priority_date: null
+  grant_publication: '2011-08-10'
+  official_url: https://data.epo.org/publication-server/rest/v1.2/patents/EP1585365NWB1/document.pdf
+  claims:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  independent_claim_mapping:
+    microphone_capsule: present
+    analog_polarization_regulation: Aservo regulates source rather than actualbackplate;Bpassive
+      filter
+    digital_control_loop_with_correction_factors_and_feedback: absent in all three
+    phantom_dependent_claim2: P48present but underlyingclaim1 elements require review
+  conclusion: Preliminary literal feature distinctions;equivalents/family/amendments/status
+    unresolved,no clearance
+  current_official_status: null
+  status_source_failure: EPOregister HTTPfailure and earlier wrong application-number
+    lead;no inferred expiry
+- publication: EP2590434B1
+  application: '11450137.2'
+  filing_date: '2011-11-04'
+  priority_date: null
+  grant_publication: '2016-01-27'
+  official_url: https://data.epo.org/publication-server/rest/v1.2/publication-dates/20160127/patents/EP2590434NWB1/document.pdf
+  claims:
+  - 1
+  - 8
+  independent_claim_mapping:
+    dynamic_microphone: absent;K47FRBcondenser assumed
+    audio_transformer_two_coil_pairs: absent
+    active_filter_summing_polarity_section: absent;BpassivebackplateRCdistinct
+    balanced_output: present genericfeature,not coverage conclusion
+  conclusion: Unrelated filter-search hit under this limited literal mapping;not global
+    FTO
+  current_official_status: null
+uninspected_output_leads:
+- US20170064449A1
+- US7970154B2
+- US6577187B1
+- US20170346450A1
+classifications:
+- H04R19/04
+- H04R3/06
+- H04R3/04
+- H03H9/00
+queries: ../architectures/focused-queries-001.json
+family_status_complete: false
+professional_review_required_for_material_uncertainty: true
+affected_gate_hold: true
+clearance: null

@@ -1,0 +1,214 @@
+{
+  "carrier": {
+    "carrier_off_ratio": 0.00012516876428094828,
+    "deterministic_oracle_pass": true,
+    "native_periodic_noise_supported": false,
+    "physical_integration_cohort": "candidate0013 prior integrated P48 failure; no pooled ideal result",
+    "recovery_ratios": [
+      1.0035033087236995,
+      1.0052778465120358
+    ],
+    "relative_timestep_change": 0.00177453778833625,
+    "seeded": [
+      {
+        "color": "white",
+        "finite_screen_pass": true,
+        "fs_hz": 800000,
+        "independent_seed_95percent_interval": [
+          0.9228523561775493,
+          1.080476767406448
+        ],
+        "mean_ratio": 1.0016645617919986,
+        "samples": 131072
+      },
+      {
+        "color": "colored_10khz",
+        "finite_screen_pass": true,
+        "fs_hz": 800000,
+        "independent_seed_95percent_interval": [
+          0.9532848965719259,
+          1.0702066334589073
+        ],
+        "mean_ratio": 1.0117457650154167,
+        "samples": 131072
+      },
+      {
+        "color": "white",
+        "finite_screen_pass": true,
+        "fs_hz": 800000,
+        "independent_seed_95percent_interval": [
+          0.9676920455467225,
+          1.043630009019069
+        ],
+        "mean_ratio": 1.0056610272828959,
+        "samples": 262144
+      },
+      {
+        "color": "colored_10khz",
+        "finite_screen_pass": true,
+        "fs_hz": 800000,
+        "independent_seed_95percent_interval": [
+          0.938282530868456,
+          1.0693769676424796
+        ],
+        "mean_ratio": 1.0038297492554678,
+        "samples": 262144
+      },
+      {
+        "color": "white",
+        "finite_screen_pass": true,
+        "fs_hz": 1600000,
+        "independent_seed_95percent_interval": [
+          0.9740541732786875,
+          1.0855819575906176
+        ],
+        "mean_ratio": 1.0298180654346525,
+        "samples": 131072
+      },
+      {
+        "color": "colored_10khz",
+        "finite_screen_pass": true,
+        "fs_hz": 1600000,
+        "independent_seed_95percent_interval": [
+          0.9451650237201134,
+          1.0515690652773493
+        ],
+        "mean_ratio": 0.9983670444987314,
+        "samples": 131072
+      },
+      {
+        "color": "white",
+        "finite_screen_pass": true,
+        "fs_hz": 1600000,
+        "independent_seed_95percent_interval": [
+          0.8946127892422401,
+          1.0722477370963963
+        ],
+        "mean_ratio": 0.9834302631693181,
+        "samples": 262144
+      },
+      {
+        "color": "colored_10khz",
+        "finite_screen_pass": true,
+        "fs_hz": 1600000,
+        "independent_seed_95percent_interval": [
+          0.9426908412589667,
+          1.0336831752129103
+        ],
+        "mean_ratio": 0.9881870082359385,
+        "samples": 262144
+      }
+    ],
+    "zero_ratio": 2.5421353984964006e-11
+  },
+  "coverage": [
+    {
+      "behavior": "BJT finite charge conversion",
+      "missing": "Actual open-stage two-port/capacitance population",
+      "state": "12 ideal KCL controls pass"
+    },
+    {
+      "behavior": "BJT reset authority",
+      "missing": "Real actuator and measured base/flicker noise; full no-selection envelope",
+      "state": "2 ideal reset controls; exact parents replay and KCL"
+    },
+    {
+      "behavior": "CMOS floating reference",
+      "missing": "Full translation/nonlinear validity; no internal rewrite",
+      "state": "OPA197 -20V local pass; +20V fails both; OPA928 -20V fails"
+    },
+    {
+      "behavior": "CMOS guard",
+      "missing": "CMOS noise, complete loops, translation and P48 loading",
+      "state": "Grounded OPA928 two-stage AC/load diagnostic"
+    },
+    {
+      "behavior": "CMOS charge/reset",
+      "missing": "Grounded charge macro validation precedes structural child",
+      "state": "Both grounded/translated charge fixtures unsupported; reset unsupported"
+    },
+    {
+      "behavior": "Carrier deterministic",
+      "missing": "Integrated P48 demodulation, RF safety and real hardware",
+      "state": "Recovery/zero/off/refinement controls pass after retained timeout"
+    },
+    {
+      "behavior": "Carrier ideal stochastic",
+      "missing": "Native periodically biased device spectra/cross correlations/oscillator AM-PM",
+      "state": "32 seeded LPTV cells; covariance/PSD/Parseval and source calibration"
+    },
+    {
+      "behavior": "Realized hardware and qualification",
+      "missing": "Complete applicable suite after actual structural realization; procurement/patents/physical gates",
+      "state": "No new implementation/BOM or qualified front"
+    }
+  ],
+  "execution_errors": 15,
+  "followup_cohort": "20261016T131328Z_diverse_followup_2834cfe4",
+  "integrity": {
+    "20261016T130909Z_diverse_00c8217a": {
+      "checked": 730,
+      "failures": []
+    },
+    "20261016T131328Z_diverse_followup_2834cfe4": {
+      "checked": 303,
+      "failures": []
+    }
+  },
+  "job_count": 53,
+  "main_cohort": "20261016T130909Z_diverse_00c8217a",
+  "parent_kcl": [
+    {
+      "candidate": "candidate_0012",
+      "disclaimer": "Macro base current is observed boundary data; KCL does not independently validate semiconductor laws",
+      "kcl_pass": true,
+      "maximum_relative_input_kcl_residual": 9.428727231124802e-13,
+      "motional_charge_c_per_pa": 5.205840926782019e-13,
+      "polarization_v": 22.310746829065796,
+      "response_deviation_db": 20.92655982166391,
+      "sensitivity_1khz_v_per_pa": 1.3223320864780096e-05,
+      "signal_conversion_1khz_v_per_c": 25400931.47439691
+    },
+    {
+      "candidate": "candidate_0024",
+      "disclaimer": "Macro base current is observed boundary data; KCL does not independently validate semiconductor laws",
+      "kcl_pass": true,
+      "maximum_relative_input_kcl_residual": 2.835158916923314e-14,
+      "motional_charge_c_per_pa": 5.205840926798092e-13,
+      "polarization_v": 22.31074682913468,
+      "response_deviation_db": 32.82286854165916,
+      "sensitivity_1khz_v_per_pa": 0.0014590305946416045,
+      "signal_conversion_1khz_v_per_c": 2802679941.9301443
+    }
+  ],
+  "prior": {
+    "$include": "diverse-analysis-001-828ba53dabcf-0009-prior.json"
+  },
+  "qualified_front": [],
+  "spec_changes": false,
+  "translations": [
+    {
+      "model": "opa197_pspice",
+      "shift_v": 20,
+      "status": "unsupported_execution"
+    },
+    {
+      "finite_screen_pass": true,
+      "maximum_supply_current_delta_a": 2.557954065576795e-12,
+      "model": "opa197_pspice",
+      "relative_output_delta_v": 1.3387779773665898e-09,
+      "shift_v": -20,
+      "status": "supported_execution"
+    },
+    {
+      "model": "opa928_vendor",
+      "shift_v": 20,
+      "status": "unsupported_execution"
+    },
+    {
+      "model": "opa928_vendor",
+      "shift_v": -20,
+      "status": "unsupported_execution"
+    }
+  ]
+}

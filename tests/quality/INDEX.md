@@ -4,6 +4,7 @@
 Immediate contents and child hubs.
 
 - [test_data.py](test_data.py) — active
+- [test_discovery.py](test_discovery.py) — active
 - [test_efficiency.py](test_efficiency.py) — active
 - [test_originals.py](test_originals.py) — active
 - [test_structure.py](test_structure.py) — active

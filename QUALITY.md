@@ -1,13 +1,13 @@
 # Repository quality contract
 
-[Contributing](CONTRIBUTING.md) · [Rules](docs/quality-rules.md) · [Validation](docs/validation.md) · [Owner decision](docs/decisions/2026-10-09-repository-structure.md)
+Owner-directed, 2026-10-09; repository-wide. Component/patent/scientific contracts govern; checks confer no project readiness.
 
-Owner-directed, 2026-10-09; applies repository-wide. Component/patent/scientific contracts retain authority. Repository checks establish no project readiness.
+Mandatory: [mechanical rules](docs/quality-rules.md), [contributor sequence](CONTRIBUTING.md). [Decision](docs/decisions/2026-10-09-repository-structure.md).
 
-`project.json` owns facts/evidence; configuration owns modules/routes/classifications. Decisions retain rationale/originals. Records retain observations, failures, parents, cohorts and hashes; generated views reproduce them without inventing unknowns.
+Facts/evidence belong in `project.json`; modules/routes/classifications in configuration. Retain decision rationale/originals and record observations/failures/parents/cohorts/hashes; generated views invent nothing.
 
-Maintained UTF-8 text (including code, configuration and generated views) and shared onboarding have a **15,000-character** ceiling. Onboarding includes all mandatory policies. Current state stays below 300 words; entry routes within 50,000 characters. Extra required evidence is unrestricted; scientific correctness takes priority. Media and hash-protected originals/licence material retain their scope; no general waiver exists.
+Maintained UTF-8 text (code/configuration/generated views included): **15,000 characters** per file. Shared onboarding: **15,000 characters**, including all mandatory policies. Current state: <300 words; routes: ≤50,000 characters. Required evidence is unbounded; science takes priority. Media/hash-protected originals/licences retain their scope; no general waiver.
 
-Follow the contributor completion sequence. Quality/tooling changes need dated decisions/regressions; recurring defects become fixtures. Audit existing records without scheduled jobs or extra ledgers. Commit/merge/patch/push gates inspect selected content with pinned lint/fast regressions, without rewriting, staging or downloading. One CI workflow repeats checks without private originals/simulations.
+Quality/tooling needs dated decisions/regressions; recurring defects become fixtures. Audit existing records; no scheduled jobs/extra ledgers. Preserve scientific entry points, full lab qualification, thresholds, budgets, all 14 families, backup compatibility, frozen bytes and failures. Invariant/budget changes follow [agent rules](AGENTS.md).
 
-Preserve scientific entry points, full lab qualification, thresholds, budgets, all 14 families and backup compatibility. Never rewrite frozen bytes, hide failures or weaken scientific requirements. Invariant/budget changes need explicit owner direction, dated rationale and measured impact. [GitHub is canonical](docs/decisions/2026-10-11-github-canonical.md) for committed files; private backups are optional. New batches need inventories and integrity checks. Original-evidence completeness is separate from repository status; ignored files are outside GitHub's coverage. Reruns create new evidence. [Private procedures](docs/maintaining-repository.md#private-evidence) reject unsafe/changing inputs and exclude credentials/caches.
+[GitHub](docs/decisions/2026-10-11-github-canonical.md) owns committed files; private backups are optional. Inventory/verify new batches; reruns create new evidence. Ignored bytes stay outside GitHub coverage. [Private procedures](docs/maintaining-repository.md#private-evidence) reject unsafe/changing inputs and credentials/caches.

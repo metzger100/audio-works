@@ -22,4 +22,10 @@ Current implications; dated observations and full conditions remain in [original
 
 Next scientific work follows the [task hub](../prompts/README.md). New evidence updates its original records and relevant current summary; do not copy complete reports into memory. Preserve all 14 families, original failures and [rejected approaches](rejected-ideas.md).
 
+[Comparison002](../architectures/architecture-comparison-002.md),17October2026: eight frozen suites and203 matched cells retain all qualification failures.0025 controls the tested rear/case/cross response cases and reduces its parent's conditional nominal noise65.50%;1GΩ authority still fails. Paired artificial holdouts are not yield.82 optional node-lookup errors have separate saved-trace successors; eight simulator failures remain. No family, topology or prototype is selected.
+
 [Independent diverse prerequisites001](../architectures/diverse-prerequisites-001.md),16October2026: charge/reset KCL separates conversion from electrode voltage; smaller feedback C moves the unchanged reset pole into audio. OPA197 translation is asymmetric; failure is macro-scoped. Seeded correlated mixer noise closes an ideal oracle only. All families and the primary JFET investigation remain.
+
+[Continuation audit](../architectures/diverse-continuation-audit-001.md),16October2026: anti-phase carrier excitation doubles the modulation derivative relative to a single driven electrode. The active protocol now agrees with the existing executable and independent charge-conservation regression; frozen originals and acceptance screens remain unchanged.
+
+[Patent screening001](../patents/candidate-screening-001.md),17October2026: nine exact implementations now have scoped claim mappings;13 official German observations are dated16October. Charge-family divisionals have different mandatory limitations. A1/mirrored US leads and generic feature flags are not complete screening. All implementation holds remain; no electrical evidence or qualification changed.

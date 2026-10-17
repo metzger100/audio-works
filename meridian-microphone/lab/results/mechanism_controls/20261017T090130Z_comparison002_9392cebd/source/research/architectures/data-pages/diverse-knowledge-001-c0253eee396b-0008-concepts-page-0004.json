@@ -1,0 +1,174 @@
+[
+  {
+    "analysis_backend_prerequisite": "Mutual-C plus arbitrary pressure phase, no polar claim",
+    "assumption_inverted": "The capsule must be voltage sensed",
+    "conversion_principle": "Independent front/rear charges",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "differential",
+      "charge",
+      "instrumentation"
+    ],
+    "id": "concept_0013",
+    "independent_analytical_oracle": "2×2 electrode charge/admittance matrix",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "differential",
+      "charge",
+      "instrumentation"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Analog sum/difference into balanced line driver",
+      "dc_bias": "Two slow DC loops and controlled backplate",
+      "expected_dominant_distortion": "Mismatch and interchannel feedback",
+      "expected_dominant_noise": "Two front ends and backplate-reference noise",
+      "fastest_falsification": "Verify electrical isolation and sweep arbitrary front/rear phase/correlation",
+      "gain_or_impedance_transformation": "Two charge conversion loops",
+      "likely_fatal_flaw": "Electrode access or acoustic correlation differs from assumed model",
+      "loading_control": "Separate virtual nodes, account for shared backplate",
+      "sensed_quantity": "Independent front/rear charges"
+    },
+    "real_part_dependencies": "Two charge stages; verified accessible electrodes",
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "smallest_experiment": "Verify electrical isolation and sweep arbitrary front/rear phase/correlation",
+    "source_links": [
+      "https://www.ti.com/lit/an/sloa033a/sloa033a.pdf"
+    ],
+    "sources": [
+      "S05",
+      "S09"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Dual front/rear charge channels"
+  },
+  {
+    "analysis_backend_prerequisite": "Shot/flicker and guard positive-feedback control",
+    "assumption_inverted": "The first device must be a FET",
+    "conversion_principle": "Capsule voltage",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "bootstrap",
+      "no_fet"
+    ],
+    "id": "concept_0014",
+    "independent_analytical_oracle": "Base-current PSD survives mean cancellation",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "bootstrap"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Impedance-balanced line driver",
+      "dc_bias": "Controlled base current and slow cancellation",
+      "expected_dominant_distortion": "Bootstrap tracking and base-emitter curvature",
+      "expected_dominant_noise": "Base shot noise; cancellation may not remove fluctuations",
+      "fastest_falsification": "Noise with cancellation on/off plus guard loop stability",
+      "gain_or_impedance_transformation": "Degenerated bipolar follower with auxiliary guard loop",
+      "likely_fatal_flaw": "Bias cancellation removes mean but leaves excessive shot noise",
+      "loading_control": "Drive bias/guard to reduce effective capacitance and DC loading",
+      "sensed_quantity": "Capsule voltage"
+    },
+    "real_part_dependencies": "Bipolar buffer, base actuator and guard driver",
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "smallest_experiment": "Noise with cancellation on/off plus guard loop stability",
+    "source_links": [
+      "https://www.analog.com/media/en/technical-documentation/data-sheets/ada4530-1.pdf"
+    ],
+    "sources": [
+      "S06"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "Bootstrapped bipolar voltage input"
+  },
+  {
+    "analysis_backend_prerequisite": "Bilateral loops and negative-authority requirement",
+    "assumption_inverted": null,
+    "conversion_principle": "Capsule voltage",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "servo",
+      "unconventional_jfet"
+    ],
+    "id": "concept_0015",
+    "independent_analytical_oracle": "Loaded servo KCL and actuator saturation",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": true,
+    "patent_feature_flags": [
+      "servo"
+    ],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Feedback-controlled line stage",
+      "dc_bias": "Servo adjusts source current/DC voltage",
+      "expected_dominant_distortion": "Servo modulation and finite audio feedback",
+      "expected_dominant_noise": "JFET noise and servo leakage/sidebands",
+      "fastest_falsification": "Leakage/device spread, startup and audio/servo loop interaction",
+      "gain_or_impedance_transformation": "JFET transconductance and local feedback",
+      "likely_fatal_flaw": "Servo actuator injects noise or cannot start reliably",
+      "loading_control": "High-impedance audio node; DC loop filtered far below audio",
+      "sensed_quantity": "Capsule voltage"
+    },
+    "real_part_dependencies": "JFE150 + ordinary BJT differential servo",
+    "role": "Inventor",
+    "scientific_transfer": true,
+    "smallest_experiment": "Leakage/device spread, startup and audio/servo loop interaction",
+    "source_links": [
+      "https://www.ti.com/lit/ds/symlink/jfe150.pdf"
+    ],
+    "sources": [
+      "S06"
+    ],
+    "status": "proposed_not_simulated",
+    "title": "JFET audio path with separate ultra-slow bias servo"
+  },
+  {
+    "analysis_backend_prerequisite": "DC endpoints then LF flux/headroom; transformer acquisition",
+    "assumption_inverted": null,
+    "conversion_principle": "Capsule voltage",
+    "dynamic_power_gap": "Bias/servo/guard/output or carrier loading and transient currents require actual parts and P48 integration",
+    "evidence_state": "Proposed mechanism; representative controls are linked in diverse-prerequisites-001, no promoted performance",
+    "families": [
+      "minimal",
+      "conventional_jfet"
+    ],
+    "id": "concept_0016",
+    "independent_analytical_oracle": "Single-device gain into lossy transformer",
+    "nominal_power_state": "Unimplemented concept; no result inherited from a representative",
+    "nominal_power_w": null,
+    "nonconventional_jfet_buffer": false,
+    "patent_feature_flags": [],
+    "performance_claim": false,
+    "physical_questions": {
+      "balanced_output": "Transformer with DC-separated P48 extraction",
+      "dc_bias": "Source degeneration without specimen selection",
+      "expected_dominant_distortion": "Device curvature and transformer magnetic behavior",
+      "expected_dominant_noise": "Input device and transformer loss",
+      "fastest_falsification": "Device corners then lossy transformer headroom and LF response",
+      "gain_or_impedance_transformation": "One JFET gain/current stage",
+      "likely_fatal_flaw": "No-selection bias or required transformer drive fails",
+      "loading_control": "Low-C input with passive bias",
+      "sensed_quantity": "Capsule voltage"
+    },
+    "real_part_dependencies": "One unselected JFET, actual transformer",
+    "role": "Inventor",
+    "scientific_transfer": false,
+    "smallest_experiment": "Device corners then lossy transformer headroom and LF response",
+    "source_links": [
+      "https://www.ti.com/lit/ds/symlink/jfe150.pdf"
+    ],
+    "sources": [],
+    "status": "proposed_not_simulated",
+    "title": "Single active JFET with passive balanced transformation"
+  }
+]

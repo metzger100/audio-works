@@ -9,7 +9,9 @@ Immediate contents and child hubs.
 - [checks.py](checks.py) — active
 - [cli.py](cli.py) — active
 - [data.py](data.py) — active
+- [discovery.py](discovery.py) — active
 - [efficiency.py](efficiency.py) — active
+- [entry.py](entry.py) — active
 - [evidence.py](evidence.py) — active
 - [navigation.py](navigation.py) — active
 - [originals.py](originals.py) — active

@@ -1,0 +1,302 @@
+- manufacturer: onsemi
+  package: TO-92
+  primary_route: https://www.onsemi.com/
+  reason: J113 switch/chopper class; exact lifecycle and original model unresolved;
+    not the MMBFJ113 package
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+  exact_mpn: J113-D74Z
+  roles:
+  - high_impedance
+- manufacturer: onsemi
+  package: SOT-23
+  primary_route: https://www.onsemi.com/
+  reason: Manufacturer catalogue lead, no acquired exact model/noise or Germany route
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+  exact_mpn: MMBFJ201
+  roles:
+  - high_impedance
+- manufacturer: InterFET
+  package: package/order suffix unresolved
+  primary_route: https://www.interfet.com/
+  reason: Independent specialist; noise campaign uses5mA/3V or0.8Idss forA; blocked
+    PDFs; no transfer to100uA
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+  exact_mpn: IF170
+  roles:
+  - high_impedance
+- manufacturer: InterFET
+  package: TO-78
+  primary_route: https://www.interfet.com/
+  reason: Dual high-current specialist; noise/capacitance/power tradeoff,403 evidence
+    retained; no model
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+  exact_mpn: IF3602T78
+  roles:
+  - high_impedance
+- manufacturer: onsemi
+  package: TO-92
+  primary_route: https://www.onsemi.com/
+  reason: Ordinary NPN exact suffix lead; base unsuffixed2N5551 distributor obsolete
+    does not decideBU lifecycle; no acquired model
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+  exact_mpn: 2N5551BU
+  roles:
+  - p48_power
+- manufacturer: onsemi
+  package: SOT-23
+  primary_route: https://www.onsemi.com/
+  reason: Active indexed retail alternative, manufacturer status and original model
+    pending
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+  exact_mpn: MMBT5551LT1G
+  roles:
+  - p48_power
+- manufacturer: Diodes Incorporated
+  package: SOT-23
+  primary_route: https://www.diodes.com/part/view/MMBT5551
+  reason: 160V NPN documented current catalogue/PCNs; public model filename indexed
+    but attemptedroutes404; private stockzero
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+  exact_mpn: MMBT5551-7-F
+  roles:
+  - p48_power
+- manufacturer: onsemi
+  package: TO-92
+  primary_route: https://www.onsemi.com/
+  reason: Ordinary PNP; original model and exact lifecycle/current Germany route pending
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+  exact_mpn: 2N5401YBU
+  roles:
+  - balanced_output
+- manufacturer: onsemi
+  package: SOT-23
+  primary_route: https://www.onsemi.com/
+  reason: Independent ordinary PNP; differing250/300mW/current grades require own
+    datasheet/temperature/model
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+  exact_mpn: MMBT5401LT1G
+  roles:
+  - balanced_output
+- manufacturer: Diotec Semiconductor
+  package: SOT-23
+  primary_route: https://diotec.com/en/product/MMBT5401.html
+  reason: Primaryactive, factoryMOQ3000 stock0; page600mA headline/200mA field conflict;
+    originaldatasheet governs; no modellink
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+  exact_mpn: MMBT5401
+  roles:
+  - balanced_output
+- manufacturer: Analog Devices
+  package: SOIC-8
+  primary_route: https://www.analog.com/en/products/ada4530-1.html
+  reason: Guard electrometer; model route requires explicit licence acceptance, not
+    authorized; no acquired model/performance simulation
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+  exact_mpn: ADA4530-1ARZ
+  roles:
+  - guard_servo
+- manufacturer: Texas Instruments
+  package: TSSOP-16
+  primary_route: https://www.ti.com/product/CD74HC4053
+  reason: Ordinary tripleanalogmux; no acquired analog periodic-noise model; chargeinjection/leak/current/rail
+    limits needed
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+  exact_mpn: CD74HC4053PWR
+  roles:
+  - carrier
+- manufacturer: Analog Devices
+  package: SOIC-20
+  primary_route: https://www.analog.com/en/products/ad630.html
+  reason: Balancedmodulator/demodulator; no acquired model or periodic-noise validation;
+    not a proven low-power P48 solution
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+  exact_mpn: AD630ARZ
+  roles:
+  - carrier
+- manufacturer: Infineon
+  package: PG-SOT23-3
+  primary_route: https://www.infineon.com/part/BSS139
+  reason: Active/preferred ordinary250V depletionMOS exactH6327 lead; avoid H6906
+    sorted-VGS service. Directdatasheet404 retained, primaryweb sheet available. No
+    acquired model/low-current noise/leakage law/retailGermany cost.
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+  exact_mpn: BSS139H6327XTSA1
+  roles:
+  - p48_power
+- manufacturer: Microchip Technology
+  package: TO-92
+  primary_route: https://www.microchip.com/en-us/product/LND150
+  reason: 500V depletionDMOS document acquired; primary AND16 current-source mechanism
+    lead. No original model acquired; no simulated current/noise/charge performance.
+    Factory1000bag not required retail pack; privateGermany route not verified.
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: {}
+    physical_owned_stock: null
+    candidate_combination_qualified: false
+  simulated_performance: null
+  current_lifecycle: see explicit evidence; do not infer from name
+  delivered_cost_eur: null
+  exact_mpn: LND150N3-G
+  roles:
+  - p48_power
+- exact_mpn: TMUX1102DCKR
+  manufacturer: Texas Instruments
+  roles:
+  - carrier
+  primary_route: https://www.ti.com/product/TMUX1102
+  reason: SC70-5 active-lowSPST,1.08–5.5V. Sheet SCDS410D2024 has explicitQ=C_L deltaV
+    test, not an acquired analog/periodic noise model.
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: []
+    candidate_combination_qualified: false
+    physical_owned_stock: null
+  simulated_performance: null
+  delivered_cost_eur: null
+- exact_mpn: RX-1M1007FE
+  manufacturer: Ohmite
+  roles:
+  - high_r
+  primary_route: https://www.ohmite.com/catalog/rx-1m-hi-meg/RX-1M1007FE/
+  reason: Exact1G1percent catalogue lead; manufacturer datasheet URL returnedHTML200.
+    Glass/hermetic headline is not excess-noise, VCR/TCR or liveGermany sourcing evidence.
+  states:
+    investigated: true
+    acquired: false
+    characterized: false
+    behavior_validated: []
+    candidate_combination_qualified: false
+    physical_owned_stock: null
+  simulated_performance: null
+  delivered_cost_eur: null
